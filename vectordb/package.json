@@ -1,0 +1,24 @@
+{
+  "name": "examlms-vectordb-scripts",
+  "version": "0.1.0",
+  "description": "Standalone ingestion / embedding / index-management scripts for the pgvector-backed question store",
+  "scripts": {
+    "seed": "ts-node scripts/seed-neet-kcet.ts",
+    "ingest": "ts-node scripts/ingest-questions.ts",
+    "embed": "ts-node scripts/create-embeddings.ts",
+    "index": "ts-node scripts/index-management.ts",
+    "extract-scans": "ts-node scripts/extract-scanned-questions.ts"
+  },
+  "dependencies": {
+    "@langchain/openai": "^0.3.11",
+    "dotenv": "^16.4.5",
+    "openai": "^4.68.4",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/pg": "^8.11.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

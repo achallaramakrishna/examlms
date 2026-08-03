@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+
+# Docker volumes (data lives in named volumes, not bind mounts, but just in case)
+postgres_data/
+redis_data/
+
+# Stray tsc output when running `tsc -b` directly against tsconfig.node.json
+# for verification — vite.config.ts is the only source of truth
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Scanned question-paper source images and extracted diagrams — often
+# copyrighted exam content, never commit it
+backend/public/question-images/*
+!backend/public/question-images/.gitkeep
+vectordb/data/scans/**/*
+!vectordb/data/scans/**/.gitkeep
+vectordb/data/extracted/*
+!vectordb/data/extracted/.gitkeep
