@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
+import { MathText } from '../components/MathText';
 import { getSelectedExamType } from '../utils/examType';
 
 interface Subject {
@@ -137,7 +138,7 @@ export function Practice() {
             {result && (
               <div className={`practice-feedback ${result.isCorrect ? 'correct' : 'incorrect'}`}>
                 <strong>{result.isCorrect ? 'Correct!' : 'Not quite.'}</strong>
-                {result.explanation && <p>{result.explanation}</p>}
+                {result.explanation && <MathText as="p" text={result.explanation} />}
               </div>
             )}
 

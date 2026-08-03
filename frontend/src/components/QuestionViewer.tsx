@@ -1,3 +1,5 @@
+import { MathText } from './MathText';
+
 export interface QuestionOption {
   label: string;
   text: string;
@@ -25,7 +27,7 @@ export function QuestionViewer({
 }: QuestionViewerProps) {
   return (
     <div className="question-viewer">
-      <p className="question-text">{questionText}</p>
+      <MathText as="p" className="question-text" text={questionText} />
       {questionImageUrl && (
         <img className="question-image" src={questionImageUrl} alt="Question diagram" />
       )}
@@ -51,7 +53,8 @@ export function QuestionViewer({
                 disabled={showAnswer}
               >
                 <span className="question-option-body">
-                  <strong>{option.label}.</strong> {option.text}
+                  <strong>{option.label}.</strong>{' '}
+                  <MathText text={option.text} />
                   {option.imageUrl && (
                     <img className="option-image" src={option.imageUrl} alt={`Option ${option.label} diagram`} />
                   )}
