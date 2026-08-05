@@ -29,8 +29,8 @@ export function ChooseExam() {
         <h1>Which exam are you working with?</h1>
         <p className="subtitle">
           {admin
-            ? "Sets the default filter for managing questions. You still have access to everything — you can change it anytime."
-            : "This decides which subjects and mock tests you'll see. You can change it anytime."}
+            ? 'Pick NEET or KCET first — subjects and exams will filter to match. You can change it anytime.'
+            : 'Select NEET or KCET first, then browse subjects and chapters. You can change it anytime.'}
         </p>
       </div>
 

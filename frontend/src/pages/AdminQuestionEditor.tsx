@@ -136,7 +136,7 @@ export function EditQuestionsTab({ exams, subjects }: { exams: Exam[]; subjects:
                 setSubjectId('');
               }}
             >
-              <option value="">All exam types</option>
+              <option value="">Select NEET or KCET first</option>
               <option value="NEET">NEET</option>
               <option value="KCET">KCET</option>
               <option value="JEE">JEE</option>
@@ -144,8 +144,13 @@ export function EditQuestionsTab({ exams, subjects }: { exams: Exam[]; subjects:
           </div>
           <div>
             <label htmlFor="filter-exam">Exam</label>
-            <select id="filter-exam" value={examId} onChange={(e) => setExamId(e.target.value)}>
-              <option value="">All exams</option>
+            <select
+              id="filter-exam"
+              value={examId}
+              onChange={(e) => setExamId(e.target.value)}
+              disabled={!examTypeFilter}
+            >
+              <option value="">{examTypeFilter ? 'All exams' : 'Choose exam type first'}</option>
               {exams
                 .filter((exam) => !examTypeFilter || exam.examType === examTypeFilter)
                 .map((exam) => (
@@ -159,10 +164,15 @@ export function EditQuestionsTab({ exams, subjects }: { exams: Exam[]; subjects:
         <div className="admin-grid-2">
           <div>
             <label htmlFor="filter-subject">Subject</label>
-            <select id="filter-subject" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-              <option value="">All subjects</option>
+            <select
+              id="filter-subject"
+              value={subjectId}
+              onChange={(e) => setSubjectId(e.target.value)}
+              disabled={!examTypeFilter}
+            >
+              <option value="">{examTypeFilter ? 'All subjects' : 'Choose exam type first'}</option>
               {subjects
-                .filter((s) => !examTypeFilter || s.examTypes.includes(examTypeFilter))
+                .filter((s) => examTypeFilter && s.examTypes.includes(examTypeFilter))
                 .map((s) => (
                   <option key={s.id} value={s.id}>
                     {s.name}

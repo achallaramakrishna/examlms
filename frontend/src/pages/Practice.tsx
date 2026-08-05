@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
 import { getSelectedExamType } from '../utils/examType';
@@ -158,14 +159,27 @@ export function Practice() {
     );
   }
 
+  const examType = getSelectedExamType();
+
   return (
     <div className="practice-picker">
       <div className="page-header">
         <h1>Practice by Chapter</h1>
-        <p className="subtitle">Pick a subject and chapter — instant feedback, no time pressure.</p>
+        <p className="subtitle">
+          {examType ? (
+            <>
+              Browsing <strong>{examType}</strong> — pick a subject, then a chapter.{' '}
+              <Link to="/choose-exam">Change exam</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/choose-exam">Choose NEET or KCET</Link>, then pick a subject and chapter.
+            </>
+          )}
+        </p>
       </div>
 
-      <div className="subject-tabs">
+      <div className="subject-tabs" role="tablist" aria-label="Subjects">
         {subjects.map((s) => (
           <button
             key={s.id}

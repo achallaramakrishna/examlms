@@ -1,9 +1,9 @@
 export type ExamType = 'NEET' | 'KCET' | 'JEE';
 
 export const EXAM_TYPES: { value: ExamType; label: string; description: string }[] = [
-  { value: 'NEET', label: 'NEET', description: 'Physics, Chemistry, Botany, Zoology' },
-  { value: 'KCET', label: 'KCET', description: 'Physics, Chemistry, plus Biology or Mathematics' },
-  { value: 'JEE', label: 'JEE', description: 'Physics, Chemistry, Mathematics' },
+  { value: 'NEET', label: 'NEET', description: 'Then browse by subject: Physics, Chemistry, Biology' },
+  { value: 'KCET', label: 'KCET', description: 'Then browse by subject: Physics, Chemistry, Biology or Mathematics' },
+  { value: 'JEE', label: 'JEE', description: 'Then browse by subject: Physics, Chemistry, Mathematics' },
 ];
 
 const STORAGE_KEY = 'examType';
