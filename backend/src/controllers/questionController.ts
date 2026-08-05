@@ -56,8 +56,63 @@ export async function updateQuestion(req: Request, res: Response, next: NextFunc
     if (!question) throw new ApiError(404, 'Question not found');
 
     const textChanged = req.body.questionText !== undefined && req.body.questionText !== question.questionText;
-    Object.assign(question, req.body as DeepPartial<Question>);
+
+    const body = req.body as {
+      questionText?: string;
+      questionImageUrl?: string | null;
+      explanation?: string | null;
+      correctOption?: string;
+      difficulty?: Question['difficulty'];
+      options?: { label: string; text: string; imageUrl?: string | null }[];
+    };
+
+    if (body.questionText !== undefined) question.questionText = body.questionText;
+    if (body.correctOption !== undefined) question.correctOption = body.correctOption;
+    if (body.difficulty !== undefined) question.difficulty = body.difficulty;
+    if (body.explanation !== undefined) {
+      // Empty string / null both clear the column.
+      question.explanation = body.explanation ? body.explanation : undefined;
+    }
+    if (body.options !== undefined) {
+      question.options = body.options.map((o) => ({
+        label: o.label,
+        text: o.text,
+        ...(o.imageUrl ? { imageUrl: o.imageUrl } : {}),
+      }));
+    }
+
+    // Persist first, then force-null image if the client explicitly cleared it.
+    // TypeORM entity fields typed as `string | undefined` often skip writing NULL
+    // on save when set to undefined, so an explicit update is required.
     await questionRepo.save(question);
+    if (body.questionImageUrl !== undefined) {
+      if (!body.questionImageUrl) {
+        await questionRepo
+          .createQueryBuilder()
+          .update(Question)
+          .set({ questionImageUrl: () => 'NULL' })
+          .where('id = :id', { id: question.id })
+          .execute();
+        question.questionImageUrl = undefined;
+      } else {
+        await questionRepo
+          .createQueryBuilder()
+          .update(Question)
+          .set({ questionImageUrl: body.questionImageUrl })
+          .where('id = :id', { id: question.id })
+          .execute();
+        question.questionImageUrl = body.questionImageUrl;
+      }
+    }
+    if (body.explanation !== undefined && !body.explanation) {
+      await questionRepo
+        .createQueryBuilder()
+        .update(Question)
+        .set({ explanation: () => 'NULL' })
+        .where('id = :id', { id: question.id })
+        .execute();
+      question.explanation = undefined;
+    }
 
     if (textChanged) await indexQuestion(question);
 

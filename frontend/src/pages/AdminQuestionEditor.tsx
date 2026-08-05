@@ -19,7 +19,8 @@ interface Topic {
 interface QuestionOption {
   label: string;
   text: string;
-  imageUrl?: string;
+  /** null clears a previously saved option image on save */
+  imageUrl?: string | null;
 }
 interface QuestionRow {
   id: string;
@@ -27,7 +28,8 @@ interface QuestionRow {
   subjectId: string;
   topicId?: string;
   questionText: string;
-  questionImageUrl?: string;
+  /** null clears a previously saved question image on save */
+  questionImageUrl?: string | null;
   options: QuestionOption[];
   correctOption: string;
   explanation?: string;
@@ -368,8 +370,9 @@ function ImageField({
   onChange,
 }: {
   label: string;
-  imageUrl?: string;
-  onChange: (url: string | undefined) => void;
+  imageUrl?: string | null;
+  /** Pass null to clear; undefined is omitted from JSON and would not persist a removal. */
+  onChange: (url: string | null) => void;
 }) {
   const [uploading, setUploading] = useState(false);
 
@@ -393,7 +396,7 @@ function ImageField({
       {imageUrl && <img src={imageUrl} alt={label} style={{ maxHeight: 60, border: '1px solid var(--color-border)', borderRadius: 4 }} />}
       <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleFile} disabled={uploading} style={{ fontSize: 12 }} />
       {imageUrl && (
-        <button type="button" className="btn-outline" style={{ padding: '2px 8px', fontSize: 12 }} onClick={() => onChange(undefined)}>
+        <button type="button" className="btn-outline" style={{ padding: '2px 8px', fontSize: 12 }} onClick={() => onChange(null)}>
           Remove
         </button>
       )}
@@ -428,12 +431,18 @@ function QuestionEditForm({
     setSaving(true);
     setError(null);
     try {
+      // Send null (not undefined) for cleared images so JSON includes the field and
+      // the backend can write NULL — undefined is dropped by JSON.stringify.
       const { data } = await api.put<{ question: QuestionRow }>(`/questions/${question.id}`, {
         questionText,
-        questionImageUrl,
-        options,
+        questionImageUrl: questionImageUrl ?? null,
+        options: options.map((o) => ({
+          label: o.label,
+          text: o.text,
+          imageUrl: o.imageUrl ?? null,
+        })),
         correctOption,
-        explanation: explanation || undefined,
+        explanation: explanation || null,
         difficulty,
       });
       onSaved({ ...data.question, subject: question.subject, topic: question.topic });
