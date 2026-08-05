@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
-import { getSelectedExamType } from '../utils/examType';
+import { getSelectedExamType, examTypeLabel } from '../utils/examType';
 
 interface ExamSubject {
   id: string;
@@ -64,12 +64,12 @@ export function ExamList() {
         <p className="subtitle">
           {examType ? (
             <>
-              Browsing <strong>{examType}</strong> — pick a subject, then start a mock test.{' '}
-              <Link to="/choose-exam">Change exam</Link>
+              Showing <strong>{examTypeLabel(examType)}</strong> only — pick a subject, then start a mock test.{' '}
+              <Link to="/choose-exam">Switch exam</Link>
             </>
           ) : (
             <>
-              <Link to="/choose-exam">Choose NEET or KCET</Link> to see exams by subject.
+              <Link to="/choose-exam">Choose your exam</Link> to see mock tests for that track.
             </>
           )}
         </p>

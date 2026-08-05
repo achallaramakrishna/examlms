@@ -11,7 +11,7 @@ import { AdminPanel } from './pages/AdminPanel';
 import { ChooseExam, syncExamTypeFromProfile } from './pages/ChooseExam';
 import { AppLayout } from './components/AppLayout';
 import { isAdmin } from './utils/auth';
-import { getSelectedExamType } from './utils/examType';
+import { getSelectedExamType, clearSelectedExamType, isExamTypeAvailable } from './utils/examType';
 
 function RequireAuth({ children }: { children: JSX.Element }) {
   const token = localStorage.getItem('accessToken');
@@ -22,18 +22,27 @@ function RequireAdmin({ children }: { children: JSX.Element }) {
   return isAdmin() ? children : <Navigate to="/dashboard" replace />;
 }
 
-/** Everyone — including admins — picks a working exam type at login. For
- * admins this just sets the default for the Edit Questions filter; it
- * doesn't restrict what they can see or manage. */
+/** Pick an available exam track before using Exams / Practice / etc. */
 function RequireExamType({ children }: { children: JSX.Element }) {
   const [status, setStatus] = useState<'checking' | 'ready' | 'needs-selection'>('checking');
 
   useEffect(() => {
-    if (getSelectedExamType()) {
+    const local = getSelectedExamType();
+    if (local && isExamTypeAvailable(local)) {
       setStatus('ready');
       return;
     }
-    syncExamTypeFromProfile().then((type) => setStatus(type ? 'ready' : 'needs-selection'));
+    if (local && !isExamTypeAvailable(local)) {
+      clearSelectedExamType();
+    }
+    syncExamTypeFromProfile().then((type) => {
+      if (type && isExamTypeAvailable(type)) {
+        setStatus('ready');
+      } else {
+        if (type && !isExamTypeAvailable(type)) clearSelectedExamType();
+        setStatus('needs-selection');
+      }
+    });
   }, []);
 
   if (status === 'checking') return <p className="loading-state">Loading...</p>;
@@ -44,7 +53,7 @@ function RequireExamType({ children }: { children: JSX.Element }) {
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/dashboard" replace />} />
+      <Route path="/" element={<Navigate to="/choose-exam" replace />} />
       <Route path="/login" element={<Login />} />
       <Route
         path="/choose-exam"

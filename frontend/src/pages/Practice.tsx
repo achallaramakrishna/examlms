@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
-import { getSelectedExamType } from '../utils/examType';
+import { getSelectedExamType, examTypeLabel } from '../utils/examType';
 
 interface Subject {
   id: string;
@@ -108,7 +108,7 @@ export function Practice() {
         <div className="page-header">
           <h1>Practice by Chapter</h1>
           <p className="subtitle">
-            <Link to="/choose-exam">Choose NEET or KCET</Link> first, then pick a subject and chapter.
+            <Link to="/choose-exam">Choose your exam</Link> first — then subjects and chapters appear for that track only.
           </p>
         </div>
       </div>
@@ -178,50 +178,61 @@ export function Practice() {
     );
   }
 
+  const chaptersWithQuestions = topics.filter((t) => t.questionCount > 0);
+
   return (
     <div className="practice-picker">
       <div className="page-header">
         <h1>Practice by Chapter</h1>
         <p className="subtitle">
-          Browsing <strong>{examType}</strong> — pick a subject, then a chapter.{' '}
-          <Link to="/choose-exam">Change exam</Link>
+          Showing <strong>{examTypeLabel(examType)}</strong> only — pick a subject, then a chapter.{' '}
+          <Link to="/choose-exam">Switch exam</Link>
         </p>
       </div>
 
-      <div className="subject-tabs" role="tablist" aria-label="Subjects">
-        {subjects.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={s.id === subjectId ? 'active' : ''}
-            onClick={() => setSubjectId(s.id)}
-          >
-            {s.name}
-          </button>
-        ))}
-      </div>
-
-      {loadingTopics ? (
-        <p className="loading-state">Loading chapters...</p>
-      ) : (
-        <div className="chapter-grid">
-          {topics.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              className="chapter-card"
-              disabled={t.questionCount === 0}
-              onClick={() => startChapter(t)}
-            >
-              <span className="chapter-name">{t.name}</span>
-              <span className="chapter-count">
-                {t.questionCount === 0
-                  ? `No ${examType} questions yet`
-                  : `${t.questionCount} ${examType} question${t.questionCount === 1 ? '' : 's'}`}
-              </span>
-            </button>
-          ))}
+      {subjects.length === 0 ? (
+        <div className="card empty-state">
+          No {examTypeLabel(examType)} subjects with questions yet. Switch exam or check back later.
         </div>
+      ) : (
+        <>
+          <div className="subject-tabs" role="tablist" aria-label="Subjects">
+            {subjects.map((s) => (
+              <button
+                key={s.id}
+                type="button"
+                className={s.id === subjectId ? 'active' : ''}
+                onClick={() => setSubjectId(s.id)}
+              >
+                {s.name}
+              </button>
+            ))}
+          </div>
+
+          {loadingTopics ? (
+            <p className="loading-state">Loading chapters...</p>
+          ) : chaptersWithQuestions.length === 0 ? (
+            <div className="card empty-state">
+              No chapters with {examTypeLabel(examType)} questions in this subject yet.
+            </div>
+          ) : (
+            <div className="chapter-grid">
+              {chaptersWithQuestions.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  className="chapter-card"
+                  onClick={() => startChapter(t)}
+                >
+                  <span className="chapter-name">{t.name}</span>
+                  <span className="chapter-count">
+                    {t.questionCount} question{t.questionCount === 1 ? '' : 's'}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

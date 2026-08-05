@@ -19,7 +19,7 @@ export function Login() {
       localStorage.setItem('accessToken', data.accessToken);
       localStorage.setItem('refreshToken', data.refreshToken);
       localStorage.setItem('user', JSON.stringify(data.user));
-      navigate('/dashboard');
+      navigate('/choose-exam');
     } catch (err: any) {
       setError(err.response?.data?.error ?? 'Login failed');
     } finally {

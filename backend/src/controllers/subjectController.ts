@@ -10,7 +10,25 @@ export async function listSubjects(req: Request, res: Response, next: NextFuncti
   try {
     const { examType } = req.query as { examType?: string };
     const subjects = await AppDataSource.getRepository(Subject).find({ order: { name: 'ASC' } });
-    const filtered = examType ? subjects.filter((s) => s.examTypes.includes(examType as ExamType)) : subjects;
+    let filtered = examType
+      ? subjects.filter((s) => s.examTypes.includes(examType as ExamType))
+      : subjects;
+
+    // For practice browsing, only show subjects that actually have questions
+    // for the selected exam track — avoids empty Botany/Zoology tabs.
+    if (examType) {
+      const rows = await AppDataSource.getRepository(Question)
+        .createQueryBuilder('q')
+        .innerJoin('q.exam', 'e')
+        .select('DISTINCT q.subject_id', 'subjectId')
+        .where('q.is_deleted = false')
+        .andWhere('e.is_deleted = false')
+        .andWhere('e.exam_type = :examType', { examType })
+        .getRawMany<{ subjectId: string }>();
+      const withContent = new Set(rows.map((r) => r.subjectId));
+      filtered = filtered.filter((s) => withContent.has(s.id));
+    }
+
     res.json({ subjects: filtered });
   } catch (err) {
     next(err);

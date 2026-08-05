@@ -1,22 +1,31 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
+import { ThemeToggle } from '../components/ThemeToggle';
 import { isAdmin } from '../utils/auth';
-import { EXAM_TYPES, ExamType, setSelectedExamType } from '../utils/examType';
+import {
+  EXAM_TYPES,
+  ExamType,
+  examTypeLabel,
+  getSelectedExamType,
+  setSelectedExamType,
+} from '../utils/examType';
 
 export function ChooseExam() {
   const navigate = useNavigate();
   const admin = isAdmin();
+  const current = getSelectedExamType();
   const [saving, setSaving] = useState<ExamType | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleSelect(examType: ExamType) {
+  async function handleSelect(examType: ExamType, comingSoon?: boolean) {
+    if (comingSoon) return;
     setSaving(examType);
     setError(null);
     try {
       await api.patch('/students/profile', { targetExamType: examType });
       setSelectedExamType(examType);
-      navigate(admin ? '/admin' : '/dashboard');
+      navigate(admin ? '/admin' : '/practice');
     } catch (err: any) {
       setError(err.response?.data?.error ?? 'Failed to save your selection');
       setSaving(null);
@@ -24,35 +33,59 @@ export function ChooseExam() {
   }
 
   return (
-    <div className="page">
-      <div className="page-header">
-        <h1>Which exam are you working with?</h1>
-        <p className="subtitle">
-          {admin
-            ? 'Pick NEET or KCET first — subjects and exams will filter to match. You can change it anytime.'
-            : 'Select NEET or KCET first, then browse subjects and chapters. You can change it anytime.'}
-        </p>
+    <div className="exam-gate">
+      <div className="exam-gate-top">
+        <div className="topbar-brand">ExamLMS</div>
+        <ThemeToggle />
       </div>
 
-      {error && <p className="error">{error}</p>}
-
-      <div className="admin-grid">
-        {EXAM_TYPES.map((exam) => (
-          <button
-            key={exam.value}
-            type="button"
-            className="card"
-            style={{ textAlign: 'left', cursor: 'pointer' }}
-            disabled={saving !== null}
-            onClick={() => handleSelect(exam.value)}
-          >
-            <h2 style={{ marginBottom: 8 }}>{exam.label}</h2>
-            <p className="subtitle" style={{ margin: 0 }}>
-              {exam.description}
+      <div className="exam-gate-body">
+        <div className="page-header">
+          <h1>Choose your exam</h1>
+          <p className="subtitle">
+            Pick one exam track first. Exams, Practice, and Study Plan will only show content for that track.
+          </p>
+          {current && (
+            <p className="subtitle" style={{ marginTop: 8 }}>
+              Currently selected: <strong>{examTypeLabel(current)}</strong>
             </p>
-            {saving === exam.value && <p style={{ marginTop: 8 }}>Saving...</p>}
-          </button>
-        ))}
+          )}
+        </div>
+
+        {error && <p className="error">{error}</p>}
+
+        <div className="exam-gate-grid">
+          {EXAM_TYPES.map((exam) => {
+            const selected = current === exam.value;
+            const disabled = !!exam.comingSoon || saving !== null;
+            return (
+              <button
+                key={exam.value}
+                type="button"
+                className={`exam-gate-card${selected ? ' selected' : ''}${exam.comingSoon ? ' coming-soon' : ''}`}
+                disabled={disabled && !selected}
+                onClick={() => handleSelect(exam.value, exam.comingSoon)}
+              >
+                <div className="exam-gate-card-head">
+                  <h2>{exam.label}</h2>
+                  {exam.comingSoon ? (
+                    <span className="badge badge-warning">Coming soon</span>
+                  ) : selected ? (
+                    <span className="badge badge-success">Selected</span>
+                  ) : (
+                    <span className="badge badge-neutral">Available</span>
+                  )}
+                </div>
+                <p>{exam.description}</p>
+                {!exam.comingSoon && (
+                  <span className="exam-gate-cta">
+                    {saving === exam.value ? 'Opening…' : selected ? 'Continue' : 'Select & continue'}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { getStoredUser } from '../utils/auth';
-import { getSelectedExamType } from '../utils/examType';
+import { clearSelectedExamType, examTypeLabel, getSelectedExamType } from '../utils/examType';
 import { ThemeToggle } from './ThemeToggle';
 
 export function AppLayout() {
@@ -12,13 +12,17 @@ export function AppLayout() {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
     localStorage.removeItem('user');
+    clearSelectedExamType();
     navigate('/login');
   }
 
   return (
     <div className="app-shell">
       <header className="topbar">
-        <div className="topbar-brand">ExamLMS</div>
+        <div className="topbar-brand">
+          ExamLMS
+          {examType && <span className="topbar-exam-pill">{examTypeLabel(examType)}</span>}
+        </div>
         <nav className="topbar-nav">
           <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'active' : '')}>
             Dashboard
@@ -43,11 +47,9 @@ export function AppLayout() {
         </nav>
         <div className="topbar-user">
           <ThemeToggle />
-          {examType && (
-            <NavLink to="/choose-exam" className="badge badge-neutral" title="Change exam">
-              {examType}
-            </NavLink>
-          )}
+          <NavLink to="/choose-exam" className="btn-outline topbar-switch-exam" title="Change exam track">
+            Switch exam
+          </NavLink>
           <span>{user?.fullName ?? user?.email ?? 'Student'}</span>
           {user?.role === 'admin' && <span className="badge badge-warning">Admin</span>}
           <button onClick={handleLogout}>Log out</button>
