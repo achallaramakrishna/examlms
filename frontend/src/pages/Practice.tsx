@@ -30,6 +30,7 @@ interface CheckResult {
 }
 
 export function Practice() {
+  const examType = getSelectedExamType();
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [subjectId, setSubjectId] = useState<string | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -44,25 +45,30 @@ export function Practice() {
   const [tally, setTally] = useState({ correct: 0, attempted: 0 });
 
   useEffect(() => {
-    const examType = getSelectedExamType();
-    api.get<{ subjects: Subject[] }>('/subjects', { params: examType ? { examType } : undefined }).then((res) => {
+    if (!examType) {
+      setSubjects([]);
+      setSubjectId(null);
+      return;
+    }
+    api.get<{ subjects: Subject[] }>('/subjects', { params: { examType } }).then((res) => {
       setSubjects(res.data.subjects);
-      if (res.data.subjects.length > 0) setSubjectId(res.data.subjects[0].id);
+      setSubjectId(res.data.subjects[0]?.id ?? null);
     });
-  }, []);
+  }, [examType]);
 
   useEffect(() => {
-    if (!subjectId) return;
+    if (!subjectId || !examType) return;
     setLoadingTopics(true);
     api
-      .get<{ topics: Topic[] }>(`/subjects/${subjectId}/topics`)
+      .get<{ topics: Topic[] }>(`/subjects/${subjectId}/topics`, { params: { examType } })
       .then((res) => setTopics(res.data.topics))
       .finally(() => setLoadingTopics(false));
-  }, [subjectId]);
+  }, [subjectId, examType]);
 
   async function startChapter(topic: Topic) {
     const { data } = await api.get<{ questions: PracticeQuestion[] }>(
-      `/subjects/${subjectId}/topics/${topic.id}/questions`
+      `/subjects/${subjectId}/topics/${topic.id}/questions`,
+      { params: examType ? { examType } : undefined }
     );
     setActiveTopic(topic);
     setQuestions(data.questions);
@@ -94,6 +100,19 @@ export function Practice() {
     setIndex((i) => i + 1);
     setSelectedOption(undefined);
     setResult(null);
+  }
+
+  if (!examType) {
+    return (
+      <div className="practice-picker">
+        <div className="page-header">
+          <h1>Practice by Chapter</h1>
+          <p className="subtitle">
+            <Link to="/choose-exam">Choose NEET or KCET</Link> first, then pick a subject and chapter.
+          </p>
+        </div>
+      </div>
+    );
   }
 
   if (activeTopic) {
@@ -159,23 +178,13 @@ export function Practice() {
     );
   }
 
-  const examType = getSelectedExamType();
-
   return (
     <div className="practice-picker">
       <div className="page-header">
         <h1>Practice by Chapter</h1>
         <p className="subtitle">
-          {examType ? (
-            <>
-              Browsing <strong>{examType}</strong> — pick a subject, then a chapter.{' '}
-              <Link to="/choose-exam">Change exam</Link>
-            </>
-          ) : (
-            <>
-              <Link to="/choose-exam">Choose NEET or KCET</Link>, then pick a subject and chapter.
-            </>
-          )}
+          Browsing <strong>{examType}</strong> — pick a subject, then a chapter.{' '}
+          <Link to="/choose-exam">Change exam</Link>
         </p>
       </div>
 
@@ -206,7 +215,9 @@ export function Practice() {
             >
               <span className="chapter-name">{t.name}</span>
               <span className="chapter-count">
-                {t.questionCount === 0 ? 'No questions yet' : `${t.questionCount} question${t.questionCount === 1 ? '' : 's'}`}
+                {t.questionCount === 0
+                  ? `No ${examType} questions yet`
+                  : `${t.questionCount} ${examType} question${t.questionCount === 1 ? '' : 's'}`}
               </span>
             </button>
           ))}

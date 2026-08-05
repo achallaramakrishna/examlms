@@ -19,20 +19,28 @@ export async function listSubjects(req: Request, res: Response, next: NextFuncti
 
 export async function listTopicsForSubject(req: Request, res: Response, next: NextFunction) {
   try {
+    const { examType } = req.query as { examType?: string };
     const topics = await AppDataSource.getRepository(TopicHierarchy).find({
       where: { subjectId: req.params.subjectId },
       order: { orderIndex: 'ASC', name: 'ASC' },
     });
 
-    const counts = await AppDataSource.getRepository(Question)
+    const countsQb = AppDataSource.getRepository(Question)
       .createQueryBuilder('q')
       .select('q.topic_id', 'topicId')
       .addSelect('COUNT(*)', 'count')
       .where('q.subject_id = :subjectId', { subjectId: req.params.subjectId })
       .andWhere('q.is_deleted = false')
-      .andWhere('q.topic_id IS NOT NULL')
-      .groupBy('q.topic_id')
-      .getRawMany<{ topicId: string; count: string }>();
+      .andWhere('q.topic_id IS NOT NULL');
+
+    if (examType) {
+      countsQb
+        .innerJoin('q.exam', 'e')
+        .andWhere('e.exam_type = :examType', { examType })
+        .andWhere('e.is_deleted = false');
+    }
+
+    const counts = await countsQb.groupBy('q.topic_id').getRawMany<{ topicId: string; count: string }>();
 
     const countByTopic = new Map(counts.map((c) => [c.topicId, Number(c.count)]));
     const topicsWithCounts = topics.map((t) => ({ ...t, questionCount: countByTopic.get(t.id) ?? 0 }));
@@ -47,14 +55,24 @@ export async function listTopicsForSubject(req: Request, res: Response, next: Ne
 export async function listTopicQuestions(req: Request, res: Response, next: NextFunction) {
   try {
     const { subjectId, topicId } = req.params;
+    const { examType } = req.query as { examType?: string };
     const topic = await AppDataSource.getRepository(TopicHierarchy).findOneBy({ id: topicId, subjectId });
     if (!topic) throw new ApiError(404, 'Chapter not found');
 
-    const questions = await AppDataSource.getRepository(Question).find({
-      where: { topicId, subjectId, isDeleted: false },
-      order: { createdAt: 'ASC' },
-    });
+    const qb = AppDataSource.getRepository(Question)
+      .createQueryBuilder('q')
+      .where('q.topic_id = :topicId', { topicId })
+      .andWhere('q.subject_id = :subjectId', { subjectId })
+      .andWhere('q.is_deleted = false')
+      .orderBy('q.created_at', 'ASC');
 
+    if (examType) {
+      qb.innerJoin('q.exam', 'e')
+        .andWhere('e.exam_type = :examType', { examType })
+        .andWhere('e.is_deleted = false');
+    }
+
+    const questions = await qb.getMany();
     const safeQuestions = questions.map(({ correctOption, explanation, ...safe }) => safe);
 
     res.json({ topic, questions: safeQuestions });
