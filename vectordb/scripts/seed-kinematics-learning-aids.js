@@ -544,7 +544,7 @@ function classify(q) {
   ) {
     return 'free_fall';
   }
-  if (/acceleration of a particle changes when|identify the vector quantity/.test(t)) {
+  if (/acceleration of a particle changes when|identify the vector quantity among/.test(t)) {
     return 'vector_basics_recall';
   }
   if (/one dimension|distance vs|displacement/.test(blob) && !/\d/.test(t.slice(0, 80))) {
