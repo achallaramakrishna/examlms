@@ -202,6 +202,7 @@ export async function checkAnswer(req: Request, res: Response, next: NextFunctio
       isCorrect: selectedOption === question.correctOption,
       correctOption: question.correctOption,
       explanation: question.explanation ?? null,
+      learningAid: question.learningAid ?? null,
     });
   } catch (err) {
     next(err);

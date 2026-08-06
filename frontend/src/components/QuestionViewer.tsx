@@ -1,3 +1,6 @@
+import { HighlightedStem } from './PracticeCoach';
+import type { StemHighlight } from '../types/practiceCoach';
+
 export interface QuestionOption {
   label: string;
   text: string;
@@ -12,6 +15,7 @@ export interface QuestionViewerProps {
   correctOption?: string;
   showAnswer?: boolean;
   onSelect?: (label: string) => void;
+  stemHighlights?: StemHighlight[];
 }
 
 export function QuestionViewer({
@@ -22,10 +26,15 @@ export function QuestionViewer({
   correctOption,
   showAnswer = false,
   onSelect,
+  stemHighlights,
 }: QuestionViewerProps) {
   return (
     <div className="question-viewer">
-      <p className="question-text">{questionText}</p>
+      {stemHighlights?.length ? (
+        <HighlightedStem text={questionText} highlights={stemHighlights} />
+      ) : (
+        <p className="question-text">{questionText}</p>
+      )}
       {questionImageUrl && (
         <img className="question-image" src={questionImageUrl} alt="Question diagram" />
       )}

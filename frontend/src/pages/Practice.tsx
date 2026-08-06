@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
+import { PracticeCoach } from '../components/PracticeCoach';
 import { getSelectedExamType } from '../utils/examType';
+import type { PracticeLearningAid } from '../types/practiceCoach';
 
 interface Subject {
   id: string;
@@ -20,12 +22,14 @@ interface PracticeQuestion {
   questionImageUrl?: string;
   options: QuestionOption[];
   difficulty: string;
+  learningAid?: PracticeLearningAid | null;
 }
 
 interface CheckResult {
   isCorrect: boolean;
   correctOption: string;
   explanation: string | null;
+  learningAid?: PracticeLearningAid | null;
 }
 
 export function Practice() {
@@ -84,6 +88,11 @@ export function Practice() {
       const { data } = await api.post<CheckResult>(`/questions/${current.id}/check`, { selectedOption });
       setResult(data);
       setTally((t) => ({ correct: t.correct + (data.isCorrect ? 1 : 0), attempted: t.attempted + 1 }));
+      if (data.learningAid) {
+        setQuestions((qs) =>
+          qs.map((q, i) => (i === index ? { ...q, learningAid: data.learningAid } : q))
+        );
+      }
     } finally {
       setChecking(false);
     }
@@ -99,6 +108,7 @@ export function Practice() {
     const current = questions[index];
     const isLast = index === questions.length - 1;
     const isDone = index >= questions.length;
+    const aid = (result?.learningAid || current?.learningAid) ?? null;
 
     return (
       <div className="practice-session">
@@ -132,7 +142,10 @@ export function Practice() {
               correctOption={result?.correctOption}
               showAnswer={!!result}
               onSelect={(label) => !result && setSelectedOption(label)}
+              stemHighlights={aid?.stemHighlights}
             />
+
+            {aid && <PracticeCoach aid={aid} revealed={!!result} />}
 
             {result && (
               <div className={`practice-feedback ${result.isCorrect ? 'correct' : 'incorrect'}`}>
@@ -162,7 +175,10 @@ export function Practice() {
     <div className="practice-picker">
       <div className="page-header">
         <h1>Practice by Chapter</h1>
-        <p className="subtitle">Pick a subject and chapter — instant feedback, no time pressure.</p>
+        <p className="subtitle">
+          Pick a subject and chapter — instant feedback, with solve coach when a learning aid is
+          available.
+        </p>
       </div>
 
       <div className="subject-tabs">
@@ -192,7 +208,9 @@ export function Practice() {
             >
               <span className="chapter-name">{t.name}</span>
               <span className="chapter-count">
-                {t.questionCount === 0 ? 'No questions yet' : `${t.questionCount} question${t.questionCount === 1 ? '' : 's'}`}
+                {t.questionCount === 0
+                  ? 'No questions yet'
+                  : `${t.questionCount} question${t.questionCount === 1 ? '' : 's'}`}
               </span>
             </button>
           ))}
