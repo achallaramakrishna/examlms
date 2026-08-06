@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { ChatWithAI } from '../components/ChatWithAI';
 import { useVectorSearch } from '../hooks/useVectorSearch';
+import { MathText } from '../components/MathText';
 
 export function AIAssistant() {
   const [query, setQuery] = useState('');
@@ -47,7 +48,7 @@ export function AIAssistant() {
                   {r.subjectName}
                   {r.topicName ? ` / ${r.topicName}` : ''}
                 </strong>
-                <p>{r.questionText}</p>
+                <MathText as="p" text={r.questionText} />
               </li>
             ))}
           </ul>

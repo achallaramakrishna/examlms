@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { getSelectedExamType } from '../utils/examType';
+import { MathText } from '../components/MathText';
 
 interface Exam {
   id: string;
@@ -315,7 +316,7 @@ function QuestionReviewCard({ question, onEdit }: { question: QuestionRow; onEdi
         </button>
       </div>
 
-      <p style={{ marginTop: 8, whiteSpace: 'pre-wrap' }}>{question.questionText}</p>
+      <MathText as="p" className="question-text" text={question.questionText} />
       {question.questionImageUrl && (
         <img
           src={question.questionImageUrl}
@@ -341,7 +342,7 @@ function QuestionReviewCard({ question, onEdit }: { question: QuestionRow; onEdi
               }}
             >
               <strong>{o.label}.</strong>
-              <span>{o.text}</span>
+              <MathText text={o.text} />
               {o.imageUrl && <img src={o.imageUrl} alt={`Option ${o.label}`} style={{ maxHeight: 50, borderRadius: 4 }} />}
               {isCorrect && <span style={{ marginLeft: 'auto', fontSize: 12, color: 'var(--color-success, #2e7d32)' }}>&#10003; Correct</span>}
             </div>
@@ -352,7 +353,7 @@ function QuestionReviewCard({ question, onEdit }: { question: QuestionRow; onEdi
       {question.explanation && (
         <div style={{ marginTop: 12 }}>
           <strong style={{ fontSize: 13 }}>Explanation</strong>
-          <p style={{ marginTop: 4, whiteSpace: 'pre-wrap' }}>{question.explanation}</p>
+          <MathText as="p" text={question.explanation} />
         </div>
       )}
 

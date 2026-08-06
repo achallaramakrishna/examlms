@@ -459,6 +459,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .practice-feedback.correct { background: var(--color-success-soft); color: var(--color-success); }
 .practice-feedback.incorrect { background: var(--color-danger-soft); color: var(--color-danger); }
 .practice-feedback p { color: var(--color-text); margin: 0; }
+.practice-feedback .katex { font-size: 1.05em; }
+.question-viewer .katex { font-size: 1.05em; }
+.question-option-body .katex { font-size: 1em; }
 
 /* ---- Mock test / questions ---- */
 .test-progress {
