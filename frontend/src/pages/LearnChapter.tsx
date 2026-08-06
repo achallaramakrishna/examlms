@@ -4,7 +4,9 @@ import { MathBlock, MathText } from '../components/MathText'
 import {
   deleteLearnFigure,
   fetchFigureOverrides,
+  fetchPracticePatterns,
   uploadLearnFigure,
+  type PracticePatternsResponse,
 } from '../services/ncertRevisionApi'
 import type {
   Difficulty,
@@ -329,14 +331,126 @@ function FlashcardDeck({ cards }: { cards: RevisionFlashcard[] }) {
   )
 }
 
+function PracticeGrownPatterns({ patternsData }: { patternsData: PracticePatternsResponse | null }) {
+  const [open, setOpen] = useState<string | null>(null)
+  if (!patternsData) {
+    return <p className="muted">Loading patterns from Practice…</p>
+  }
+  if (patternsData.patterns.length === 0) {
+    return (
+      <div className="practice-grown">
+        <h3>From Practice bank</h3>
+        <p className="muted">
+          No solve patterns yet. When admins upload Practice questions with a{' '}
+          <code>learningAid</code> (different method / formula ladder), they appear here
+          automatically — so this ladder gets richer over time.
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="practice-grown">
+      <h3>From Practice bank</h3>
+      <p className="lede">
+        {patternsData.patternCount} solve method{patternsData.patternCount === 1 ? '' : 's'} from{' '}
+        {patternsData.questionCountWithAid} coached question
+        {patternsData.questionCountWithAid === 1 ? '' : 's'}
+        {patternsData.topics?.length ? ` · topics: ${patternsData.topics.join(', ')}` : ''}. New
+        uploads with a different method enrich this list.
+      </p>
+      <div className="ladder-list">
+        {patternsData.patterns.map((p) => {
+          const isOpen = open === p.key
+          return (
+            <article key={p.key} className="ladder-item practice-pattern-card">
+              <div className="ladder-item-head">
+                <div>
+                  <p>
+                    <strong>{p.examPattern}</strong>
+                  </p>
+                  <p className="muted">
+                    {p.questionCount} question{p.questionCount === 1 ? '' : 's'}
+                    {p.conceptTags?.length ? ` · ${p.conceptTags.slice(0, 4).join(', ')}` : ''}
+                  </p>
+                </div>
+                <div className="ladder-item-actions">
+                  {p.solutionAudio && (
+                    <SpeakButton text={p.solutionAudio} label="Listen method" />
+                  )}
+                  <button
+                    type="button"
+                    className="btn"
+                    onClick={() => setOpen(isOpen ? null : p.key)}
+                  >
+                    {isOpen ? 'Hide ladder' : 'Show formula ladder'}
+                  </button>
+                </div>
+              </div>
+              {isOpen && (
+                <div className="ladder-reveal">
+                  {p.sampleQuestions?.[0] && (
+                    <>
+                      <h4>Example from Practice</h4>
+                      <p>
+                        <MathText>{p.sampleQuestions[0].stem}</MathText>
+                      </p>
+                    </>
+                  )}
+                  <h4>Formula / solve ladder</h4>
+                  <ol className="formula-ladder">
+                    {(p.formulaLadder || []).map((rung) => (
+                      <li key={`${p.key}-${rung.rung}`}>
+                        <strong>
+                          {rung.rung}. {rung.title}
+                        </strong>
+                        <p>{rung.detail}</p>
+                        {rung.latex && <MathBlock>{rung.latex}</MathBlock>}
+                      </li>
+                    ))}
+                  </ol>
+                  {(p.solutionSteps?.length ?? 0) > 0 && (
+                    <>
+                      <h4>Steps</h4>
+                      <ol>
+                        {p.solutionSteps.map((s) => (
+                          <li key={s}>
+                            <MathText>{s}</MathText>
+                          </li>
+                        ))}
+                      </ol>
+                    </>
+                  )}
+                  {p.commonMistake && (
+                    <p className="coach-mistake">
+                      <strong>Common mistake:</strong> {p.commonMistake}
+                    </p>
+                  )}
+                  {p.examTransferTip && (
+                    <p className="coach-transfer">
+                      <strong>Exam tip:</strong> {p.examTransferTip}
+                    </p>
+                  )}
+                </div>
+              )}
+            </article>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 function Ladder({
   basic,
   intermediate,
   advanced,
+  practicePatterns,
 }: {
   basic: LadderItem[]
   intermediate: LadderItem[]
   advanced: LadderItem[]
+  practicePatterns: PracticePatternsResponse | null
 }) {
   const [open, setOpen] = useState<string | null>(null)
   const sections: { title: string; items: LadderItem[]; tone: Difficulty }[] = [
@@ -347,6 +461,9 @@ function Ladder({
 
   return (
     <div className="ladder">
+      <PracticeGrownPatterns patternsData={practicePatterns} />
+
+      <h3 className="ladder-ncert-heading">NCERT pack ladder</h3>
       {sections.map((sec) => (
         <section key={sec.title} className="ladder-section">
           <h3>
@@ -469,6 +586,7 @@ export function LearnChapter() {
   const [view, setView] = useState<ViewId>('cheat')
   const [busyId, setBusyId] = useState<string | null>(null)
   const [uploadError, setUploadError] = useState<string | null>(null)
+  const [practicePatterns, setPracticePatterns] = useState<PracticePatternsResponse | null>(null)
   const admin = isAdmin()
 
   useEffect(() => {
@@ -476,6 +594,7 @@ export function LearnChapter() {
     setPack(null)
     setError('')
     setUploadError(null)
+    setPracticePatterns(null)
     setView('cheat')
     stopSpeaking()
     Promise.all([
@@ -484,8 +603,9 @@ export function LearnChapter() {
         return r.json()
       }),
       fetchFigureOverrides(slug).catch((): Record<string, { src: string }> => ({})),
+      fetchPracticePatterns(slug).catch(() => null),
     ])
-      .then(([data, overrides]) => {
+      .then(([data, overrides, patterns]) => {
         if (cancelled) return
         const normalized = normalizePack(data)
         const overrideMap = overrides as Record<string, { src: string }>
@@ -494,6 +614,7 @@ export function LearnChapter() {
           src: overrideMap[f.id]?.src || f.src || null,
         }))
         setPack({ ...normalized, figures })
+        setPracticePatterns(patterns)
       })
       .catch((e: Error) => {
         if (!cancelled) setError(e.message || 'Failed to load chapter pack')
@@ -760,14 +881,19 @@ export function LearnChapter() {
         )}
 
         {view === 'formulas' && (
-          <FormulaStudio
-            formulas={pack.formulas || []}
-            figures={pack.figures || []}
-            admin={admin}
-            busyId={busyId}
-            onUpload={(id, file) => void handleFigureUpload(id, file)}
-            onRemove={(id) => void handleFigureRemove(id)}
-          />
+          <>
+            <FormulaStudio
+              formulas={pack.formulas || []}
+              figures={pack.figures || []}
+              admin={admin}
+              busyId={busyId}
+              onUpload={(id, file) => void handleFigureUpload(id, file)}
+              onRemove={(id) => void handleFigureRemove(id)}
+            />
+            <div className="formula-practice-grown">
+              <PracticeGrownPatterns patternsData={practicePatterns} />
+            </div>
+          </>
         )}
 
         {view === 'flashcards' && <FlashcardDeck cards={pack.flashcards || []} />}
@@ -777,6 +903,7 @@ export function LearnChapter() {
             basic={pack.problemLadder?.basic || []}
             intermediate={pack.problemLadder?.intermediate || []}
             advanced={pack.problemLadder?.advanced || []}
+            practicePatterns={practicePatterns}
           />
         )}
 

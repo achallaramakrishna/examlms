@@ -6,6 +6,7 @@ import * as ncertRevisionController from '../controllers/ncertRevisionController
 const router = Router();
 
 router.get('/:track/:slug/figures', requireAuth, ncertRevisionController.getFigureOverrides);
+router.get('/:track/:slug/practice-patterns', requireAuth, ncertRevisionController.getPracticePatterns);
 router.post(
   '/:track/:slug/figures/:figureId',
   requireAuth,

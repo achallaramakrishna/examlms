@@ -22,6 +22,9 @@ You are an expert NEET coach for Physics, Chemistry, and Biology. Build a **lear
 | **Exam transfer tip** | After attempt | “Same pattern in exam looks like…” |
 | **Common mistake** | After attempt | One high-yield error to avoid |
 | **Quick check** | After attempt | Units / limiting case / NCERT line |
+| **Learn · Problem / Formula ladder (grows)** | Learn chapter pages | Unique `meta.examPattern` + `formulaLadder` from uploaded Practice questions are aggregated into “From Practice bank” — so new solution methods enrich the chapter over time |
+
+**Important for richness:** set a clear, stable `meta.examPattern` (e.g. “Lift / elevator apparent weight”, not a one-off sentence). Different methods → different pattern names → they show as separate ladders on Learn.
 
 Subject-specific extras (include when relevant):
 

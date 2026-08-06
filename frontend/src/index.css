@@ -448,13 +448,22 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .chapter-card .chapter-name { font-weight: 700; font-size: 14.5px; color: var(--color-text); }
 .chapter-card .chapter-count { font-size: 12.5px; color: var(--color-text-muted); }
 
-.practice-coach {
-  margin: 18px 0 8px;
+.practice-grown {
+  margin: 0 0 28px;
   padding: 14px 16px;
   border: 1px solid var(--color-primary);
   border-radius: 12px;
   background: var(--color-primary-soft);
 }
+.practice-grown h3 { margin: 0 0 8px; font-size: 16px; }
+.practice-grown .lede { margin: 0 0 12px; }
+.practice-pattern-card { background: var(--color-surface, transparent); }
+.ladder-ncert-heading {
+  margin: 8px 0 14px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+.formula-practice-grown { margin-top: 28px; }
 .coach-missing {
   margin: 14px 0 0;
   font-size: 13px;
