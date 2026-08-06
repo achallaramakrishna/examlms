@@ -13,42 +13,42 @@
       "number": 2,
       "title": "Motion in a Straight Line",
       "slug": "ch02-motion-in-a-straight-line",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph102"
     },
     {
       "number": 3,
       "title": "Motion in a Plane",
       "slug": "ch03-motion-in-a-plane",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph103"
     },
     {
       "number": 4,
       "title": "Laws of Motion",
       "slug": "ch04-laws-of-motion",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph104"
     },
     {
       "number": 5,
       "title": "Work, Energy and Power",
       "slug": "ch05-work-energy-and-power",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph105"
     },
     {
       "number": 6,
       "title": "System of Particles and Rotational Motion",
       "slug": "ch06-system-of-particles",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph106"
     },
     {
       "number": 7,
       "title": "Gravitation",
       "slug": "ch07-gravitation",
-      "status": "coming_soon",
+      "status": "ready",
       "ncertCode": "keph107"
     }
   ]

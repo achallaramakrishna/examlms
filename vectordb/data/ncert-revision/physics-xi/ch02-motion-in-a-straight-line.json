@@ -1,0 +1,1103 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 2,
+    "chapterTitle": "Motion in a Straight Line",
+    "ncertCode": "keph102",
+    "topicIdHint": "Motion in a Straight Line",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Motion in a Straight Line",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Distinguish path length, displacement, speed and velocity.",
+    "Interpret x–t and v–t graphs (slope and area).",
+    "Apply kinematic equations for constant acceleration.",
+    "Solve free-fall / vertical throw problems with sign convention.",
+    "Use stopping distance and reaction-time ideas in numericals."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Rectilinear motion: velocity from dx/dt, acceleration from dv/dt; for constant a use the three kinematic equations with careful signs.",
+    "mustKnowBullets": [
+      "Motion along a straight line is rectilinear motion; treat bodies as point objects when size ≪ distance moved.",
+      "Path length ≥ |displacement|; average speed ≥ |average velocity|.",
+      "Instantaneous velocity v = dx/dt = slope of x–t graph; speed = |v|.",
+      "Instantaneous acceleration a = dv/dt = slope of v–t graph.",
+      "Area under v–t curve = displacement in that interval.",
+      "For constant a: v = v0 + at; x = v0 t + (1/2)at²; v² = v0² + 2ax (if x0 = 0).",
+      "If start at x0: replace x by (x − x0).",
+      "Free fall near Earth: a = −g if upward is positive (g ≈ 9.8 m s⁻²).",
+      "Zero velocity at an instant does NOT imply zero acceleration (e.g. top of throw).",
+      "Kinematic equations hold only for constant acceleration; definitions of v and a always hold."
+    ],
+    "keyTables": [
+      {
+        "title": "Graph meanings (NCERT)",
+        "rows": [
+          [
+            "Graph",
+            "Slope means",
+            "Area means"
+          ],
+          [
+            "x–t",
+            "velocity",
+            "—"
+          ],
+          [
+            "v–t",
+            "acceleration",
+            "displacement"
+          ],
+          [
+            "a–t (const a)",
+            "0 (horizontal)",
+            "Δv"
+          ]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "2.1",
+      "text": "Motion is change in position of an object with time.",
+      "whyItMatters": "Opening definition for kinematics MCQs.",
+      "neetRelevance": "medium"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "2.1",
+      "text": "In Kinematics, we study ways to describe motion without going into the causes of motion.",
+      "whyItMatters": "Separates Ch 2–3 from Laws of Motion (Ch 4).",
+      "neetRelevance": "medium"
+    },
+    {
+      "id": "h3",
+      "type": "definition",
+      "section": "2.2",
+      "text": "Instantaneous velocity is the limit of average velocity as Δt → 0; v = dx/dt.",
+      "whyItMatters": "Core definition; graph slope questions.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "statement",
+      "section": "2.2",
+      "text": "Instantaneous speed at an instant equals the magnitude of instantaneous velocity at that instant.",
+      "whyItMatters": "Speed vs velocity trap in assertion-reason.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "definition",
+      "section": "2.3",
+      "text": "Average acceleration is change in velocity divided by the time interval; a_avg = Δv/Δt.",
+      "whyItMatters": "First step in many numericals.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "statement",
+      "section": "2.3",
+      "text": "The area under the velocity–time curve equals the displacement over that time interval.",
+      "whyItMatters": "Extremely common NEET graph question.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h7",
+      "type": "formula_intro",
+      "section": "2.4",
+      "text": "For uniformly accelerated rectilinear motion: v = v0 + at; x = v0 t + ½ at²; v² = v0² + 2ax.",
+      "whyItMatters": "The three equations every student must automate.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h8",
+      "type": "caution",
+      "section": "Points to ponder",
+      "text": "The sign of acceleration does not by itself tell whether speed is increasing or decreasing — compare directions of v and a.",
+      "whyItMatters": "Classic misconception; free-fall sign questions.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h9",
+      "type": "caution",
+      "section": "Points to ponder",
+      "text": "Zero velocity at an instant does not imply zero acceleration (particle at top of trajectory).",
+      "whyItMatters": "Very frequent true/false / assertion item.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h10",
+      "type": "caution",
+      "section": "Points to ponder",
+      "text": "Kinematic equations are true only when magnitude and direction of acceleration are constant.",
+      "whyItMatters": "Stops misuse of SUVAT for variable a.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h11",
+      "type": "summary",
+      "section": "Summary",
+      "text": "Average speed over an interval is ≥ magnitude of average velocity over the same interval.",
+      "whyItMatters": "Market walk / go-and-return numericals.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h12",
+      "type": "statement",
+      "section": "2.4",
+      "text": "Stopping distance ds = v0² / (2a) for deceleration a (with v = 0).",
+      "whyItMatters": "Road-safety / braking numericals.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Rectilinear motion",
+      "definition": "Motion of an object along a straight line.",
+      "section": "2.1"
+    },
+    {
+      "id": "d2",
+      "term": "Displacement",
+      "definition": "Change in position vector; for 1D, x2 − x1 with sign.",
+      "section": "2.2"
+    },
+    {
+      "id": "d3",
+      "term": "Path length",
+      "definition": "Total length of the path actually travelled (always ≥ 0).",
+      "section": "2.2"
+    },
+    {
+      "id": "d4",
+      "term": "Average velocity",
+      "definition": "Displacement / time interval.",
+      "section": "2.2"
+    },
+    {
+      "id": "d5",
+      "term": "Average speed",
+      "definition": "Total path length / total time.",
+      "section": "2.2"
+    },
+    {
+      "id": "d6",
+      "term": "Instantaneous velocity",
+      "definition": "Limit of Δx/Δt as Δt → 0; equal to dx/dt.",
+      "section": "2.2"
+    },
+    {
+      "id": "d7",
+      "term": "Instantaneous speed",
+      "definition": "Magnitude of instantaneous velocity.",
+      "section": "2.2"
+    },
+    {
+      "id": "d8",
+      "term": "Acceleration",
+      "definition": "Rate of change of velocity with time; a = dv/dt.",
+      "section": "2.3"
+    },
+    {
+      "id": "d9",
+      "term": "Uniform acceleration",
+      "definition": "Acceleration constant in magnitude and direction.",
+      "section": "2.4"
+    },
+    {
+      "id": "d10",
+      "term": "Free fall",
+      "definition": "Motion under gravity alone (air resistance neglected); a = −g if up is positive.",
+      "section": "2.4"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-2-1",
+      "kind": "graph",
+      "label": "Fig. 2.1",
+      "ncertPage": 2,
+      "section": "2.2",
+      "caption": "Determining velocity from position–time graph (slope of tangent).",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 2 · Fig. 2.1",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 2"
+    },
+    {
+      "id": "fig-2-2",
+      "kind": "graph",
+      "label": "Fig. 2.2",
+      "ncertPage": 4,
+      "section": "2.3",
+      "caption": "Position–time graphs for positive, negative and zero acceleration.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 4 · Fig. 2.2",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 4"
+    },
+    {
+      "id": "fig-2-3",
+      "kind": "graph",
+      "label": "Fig. 2.3",
+      "ncertPage": 4,
+      "section": "2.3",
+      "caption": "Velocity–time graphs for constant acceleration (four cases).",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 4 · Fig. 2.3",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 4"
+    },
+    {
+      "id": "fig-2-4",
+      "kind": "graph",
+      "label": "Fig. 2.4",
+      "ncertPage": 5,
+      "section": "2.3",
+      "caption": "Area under v–t curve equals displacement.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 5 · Fig. 2.4",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 5"
+    },
+    {
+      "id": "fig-2-5",
+      "kind": "graph",
+      "label": "Fig. 2.5",
+      "ncertPage": 5,
+      "section": "2.4",
+      "caption": "Area under v–t for uniform acceleration → kinematic equations.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 5 · Fig. 2.5",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 5"
+    },
+    {
+      "id": "fig-2-6",
+      "kind": "figure",
+      "label": "Fig. 2.6",
+      "ncertPage": 7,
+      "section": "2.4",
+      "caption": "Ball thrown upward from a multistorey building.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 7 · Fig. 2.6",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 7"
+    },
+    {
+      "id": "fig-2-7",
+      "kind": "graph",
+      "label": "Fig. 2.7",
+      "ncertPage": 8,
+      "section": "2.4",
+      "caption": "Free-fall: a–t, v–t, y–t sketches.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 8 · Fig. 2.7",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 8"
+    },
+    {
+      "id": "fig-2-8",
+      "kind": "figure",
+      "label": "Fig. 2.8",
+      "ncertPage": 9,
+      "section": "2.4",
+      "caption": "Measuring reaction time with a falling ruler.",
+      "placeholderText": "NCERT Physics XI · Ch 2 · Page 9 · Fig. 2.8",
+      "src": null,
+      "uploadHint": "Crop from keph102.pdf page 9"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Instantaneous velocity",
+      "latex": "v = \\dfrac{dx}{dt} = \\lim_{\\Delta t \\to 0}\\dfrac{\\Delta x}{\\Delta t}",
+      "plain": "velocity = rate of change of position",
+      "symbols": [
+        {
+          "symbol": "x",
+          "meaning": "position"
+        },
+        {
+          "symbol": "t",
+          "meaning": "time"
+        }
+      ],
+      "whenToUse": "When position is given as a function of time, or as slope of x–t graph.",
+      "commonMistakes": [
+        "Confusing average velocity with instantaneous velocity",
+        "Forgetting sign of v"
+      ],
+      "figureIds": [
+        "fig-2-1"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Differentiate x(t)",
+          "howToInterpret": "x given as polynomial in t → find v at an instant.",
+          "howItConnectsToFormula": "Compute dx/dt and substitute t.",
+          "exampleStem": "x = 2t³ − 3t; find v at t = 1 s.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Slope of x–t",
+          "howToInterpret": "Graph given; velocity = slope of tangent at that instant.",
+          "howItConnectsToFormula": "Read rise/run of the tangent at the required time.",
+          "exampleStem": "From an x–t curve, estimate v at t = 4 s.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Instantaneous velocity is how fast position is changing right now. On a position–time graph, that is the slope of the tangent. If you have a formula for x of t, differentiate it."
+    },
+    {
+      "id": "F2",
+      "name": "Average velocity and speed",
+      "latex": "v_{\\mathrm{avg}} = \\dfrac{\\Delta x}{\\Delta t},\\quad \\mathrm{speed}_{\\mathrm{avg}} = \\dfrac{\\text{path length}}{\\Delta t}",
+      "plain": "average velocity uses displacement; average speed uses path length",
+      "symbols": [
+        {
+          "symbol": "Δx",
+          "meaning": "displacement"
+        },
+        {
+          "symbol": "Δt",
+          "meaning": "time interval"
+        }
+      ],
+      "whenToUse": "Go-and-return trips, drunkard walk, market problems.",
+      "commonMistakes": [
+        "Using path length in average velocity",
+        "Saying average speed is zero on a round trip"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Round trip",
+          "howToInterpret": "Net displacement may be zero while path length is not.",
+          "howItConnectsToFormula": "v_avg = 0 if back to start; speed_avg = total path / time.",
+          "exampleStem": "Walk 2.5 km to market and back; find average velocity and average speed for full trip.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Partial interval",
+          "howToInterpret": "Need displacement and path for a sub-interval of the journey.",
+          "howItConnectsToFormula": "Compute x(t) positions at interval ends; sum path segments.",
+          "exampleStem": "Man walks to market at 5 km/h and returns at 7.5 km/h; find averages for 0–40 min.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Average velocity cares only about where you started and ended. Average speed cares about every metre you walked. On a round trip, average velocity can be zero while average speed is not."
+    },
+    {
+      "id": "F3",
+      "name": "Instantaneous acceleration",
+      "latex": "a = \\dfrac{dv}{dt} = \\lim_{\\Delta t \\to 0}\\dfrac{\\Delta v}{\\Delta t}",
+      "plain": "acceleration = rate of change of velocity",
+      "symbols": [
+        {
+          "symbol": "v",
+          "meaning": "velocity"
+        },
+        {
+          "symbol": "t",
+          "meaning": "time"
+        }
+      ],
+      "whenToUse": "Slope of v–t graph; differentiating v(t).",
+      "commonMistakes": [
+        "Thinking a = 0 whenever v = 0",
+        "Mixing sign of a with 'speeding up'"
+      ],
+      "figureIds": [
+        "fig-2-3"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Slope of v–t",
+          "howToInterpret": "Constant slope means constant a.",
+          "howItConnectsToFormula": "a = Δv/Δt from the straight v–t line.",
+          "exampleStem": "v increases from 0 to 20 m/s in 4 s uniformly; find a.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "v = 0 but a ≠ 0",
+          "howToInterpret": "At highest point of a throw, v = 0 but a = −g.",
+          "howItConnectsToFormula": "Acceleration is slope of v–t, still −g.",
+          "exampleStem": "A ball thrown up: acceleration at the topmost point?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Acceleration tells how velocity is changing. On a velocity–time graph it is the slope. A particle can be momentarily at rest and still accelerating — think of a ball at the top of its path."
+    },
+    {
+      "id": "F4",
+      "name": "Displacement from v–t area",
+      "latex": "x = \\text{area under } v\\text{–}t \\text{ curve}",
+      "plain": "displacement equals area under velocity–time graph",
+      "symbols": [
+        {
+          "symbol": "v",
+          "meaning": "velocity"
+        },
+        {
+          "symbol": "t",
+          "meaning": "time"
+        }
+      ],
+      "whenToUse": "Any v–t graph question asking distance/displacement.",
+      "commonMistakes": [
+        "Treating area below t-axis as positive path without care",
+        "Confusing distance with signed displacement"
+      ],
+      "figureIds": [
+        "fig-2-4",
+        "fig-2-5"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Rectangle / triangle area",
+          "howToInterpret": "Constant v or uniformly changing v → simple geometry.",
+          "howItConnectsToFormula": "Area = base × height or ½ base × height.",
+          "exampleStem": "v = 10 m/s for 5 s; find displacement.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Signed areas",
+          "howToInterpret": "Motion reverses; net displacement is algebraic sum of areas.",
+          "howItConnectsToFormula": "Areas below axis are negative displacement.",
+          "exampleStem": "v–t graph goes positive then negative; find net displacement.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "The area between the velocity–time curve and the time axis is displacement. Above the axis means positive displacement; below means negative. For distance travelled, add absolute areas."
+    },
+    {
+      "id": "F5",
+      "name": "Kinematic set (constant a)",
+      "latex": "v = v_0 + at,\\quad x = v_0 t + \\tfrac{1}{2}at^2,\\quad v^2 = v_0^2 + 2ax",
+      "plain": "three equations linking v0, v, a, t, x for constant acceleration",
+      "symbols": [
+        {
+          "symbol": "v0",
+          "meaning": "initial velocity"
+        },
+        {
+          "symbol": "v",
+          "meaning": "final velocity"
+        },
+        {
+          "symbol": "a",
+          "meaning": "constant acceleration"
+        },
+        {
+          "symbol": "t",
+          "meaning": "time"
+        },
+        {
+          "symbol": "x",
+          "meaning": "displacement from origin (or use x−x0)"
+        }
+      ],
+      "whenToUse": "Uniform acceleration along a straight line — braking, free fall, inclined with const a.",
+      "commonMistakes": [
+        "Using equations when a is not constant",
+        "Wrong sign for a or v0",
+        "Mixing g = 9.8 vs 10 inconsistently"
+      ],
+      "figureIds": [
+        "fig-2-5"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find v without t",
+          "howToInterpret": "t unknown → use v² = v0² + 2ax.",
+          "howItConnectsToFormula": "Pick the equation missing the unknown you do not have.",
+          "exampleStem": "Car brakes from 20 m/s with a = −4 m/s²; find stopping distance.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Vertical throw",
+          "howToInterpret": "Choose +up; a = −g; split or use one quadratic in t.",
+          "howItConnectsToFormula": "Same three equations with signed quantities.",
+          "exampleStem": "Ball thrown up at 20 m/s from 25 m height; time to hit ground?",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "For constant acceleration you get three friends: v equals v zero plus a t; x equals v zero t plus half a t squared; and v squared equals v zero squared plus two a x. Choose the equation that avoids the quantity you do not know. Always fix your positive direction first."
+    },
+    {
+      "id": "F6",
+      "name": "Free fall",
+      "latex": "a = -g,\\quad v = -gt,\\quad y = -\\tfrac{1}{2}gt^2 \\quad (v_0=0,\\ \\text{up}+)",
+      "plain": "released from rest: downward if up is positive uses minus g",
+      "symbols": [
+        {
+          "symbol": "g",
+          "meaning": "≈ 9.8 m/s²"
+        },
+        {
+          "symbol": "y",
+          "meaning": "vertical position"
+        }
+      ],
+      "whenToUse": "Objects dropped or thrown near Earth, air neglected.",
+      "commonMistakes": [
+        "Taking g positive downward while also taking up as positive inconsistently"
+      ],
+      "figureIds": [
+        "fig-2-7"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Drop from height",
+          "howToInterpret": "v0 = 0, find t or speed on hitting ground.",
+          "howItConnectsToFormula": "y = −½gt² or v² = −2gy with signs.",
+          "exampleStem": "Drop a ball from 45 m; find time to ground (g = 10).",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Reaction time ruler",
+          "howToInterpret": "Ruler falls distance d before catch; find tr.",
+          "howItConnectsToFormula": "d = ½ g tr² → tr = √(2d/g).",
+          "exampleStem": "Ruler falls 21 cm before you catch it; estimate reaction time.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "In free fall we ignore air resistance. If upward is positive, acceleration is minus g. From rest, speed grows as g t and distance fallen is half g t squared."
+    },
+    {
+      "id": "F7",
+      "name": "Stopping distance",
+      "latex": "d_s = \\dfrac{v_0^2}{2a}\\quad (v=0,\\ a>0 \\text{ as magnitude of deceleration})",
+      "plain": "stopping distance proportional to square of initial speed",
+      "symbols": [
+        {
+          "symbol": "v0",
+          "meaning": "initial speed"
+        },
+        {
+          "symbol": "a",
+          "meaning": "braking deceleration magnitude"
+        }
+      ],
+      "whenToUse": "Vehicles braking to rest; speed-limit reasoning.",
+      "commonMistakes": [
+        "Thinking doubling speed doubles stopping distance (it quadruples)"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find ds",
+          "howToInterpret": "v = 0, known v0 and a.",
+          "howItConnectsToFormula": "From 0 = v0² − 2a ds.",
+          "exampleStem": "Bike at 72 km/h brakes at 5 m/s²; find stopping distance.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Scale with speed",
+          "howToInterpret": "Compare ds at two speeds.",
+          "howItConnectsToFormula": "ds ∝ v0².",
+          "exampleStem": "If speed doubles at same deceleration, how does stopping distance change?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "When brakes bring you to rest, stopping distance is v zero squared over two a. Double the speed and stopping distance becomes four times larger — that is why speed limits matter."
+    },
+    {
+      "id": "F8",
+      "name": "Average velocity (const a)",
+      "latex": "v_{\\mathrm{avg}} = \\dfrac{v_0 + v}{2}\\quad (\\text{constant } a \\text{ only})",
+      "plain": "for constant acceleration, average velocity is arithmetic mean of initial and final velocities",
+      "symbols": [
+        {
+          "symbol": "v0",
+          "meaning": "initial velocity"
+        },
+        {
+          "symbol": "v",
+          "meaning": "final velocity"
+        }
+      ],
+      "whenToUse": "Shortcut: x = v_avg × t when a is constant.",
+      "commonMistakes": [
+        "Using (v0+v)/2 when acceleration is not constant"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Displacement shortcut",
+          "howToInterpret": "Know v0, v, t under const a.",
+          "howItConnectsToFormula": "x = ((v0+v)/2) t.",
+          "exampleStem": "Speed rises uniformly from 10 to 30 m/s in 4 s; find displacement.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "When not to use",
+          "howToInterpret": "Variable acceleration — formula fails.",
+          "howItConnectsToFormula": "Must integrate or use area under actual v–t curve.",
+          "exampleStem": "Why is (u+v)/2 invalid for arbitrary v–t shapes?",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Only when acceleration is constant is average velocity the simple average of initial and final velocities. Otherwise use displacement over time from the actual motion."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8",
+      "d9",
+      "d10"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "velocity"
+      ],
+      "stages": {
+        "question": "What is instantaneous velocity?",
+        "interpretation": "Definition in calculus / graph language.",
+        "formula": "v = dx/dt",
+        "solutionSteps": [
+          "Average velocity = Δx/Δt",
+          "Take limit Δt → 0",
+          "That limit is instantaneous velocity"
+        ],
+        "answer": "Rate of change of position with time; slope of x–t tangent."
+      },
+      "audioScript": "Instantaneous velocity is the limit of average velocity as the time interval shrinks to zero. On a graph, read the slope of the tangent."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "speed"
+      ],
+      "stages": {
+        "question": "Is instantaneous speed always equal to |instantaneous velocity|?",
+        "interpretation": "Compare definitions at one instant.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Speed is magnitude of velocity",
+          "At one instant they match",
+          "Over an interval, average speed ≥ |average velocity|"
+        ],
+        "answer": "Yes at an instant; averages over an interval may differ."
+      },
+      "audioScript": "At a single instant, speed is just the size of velocity. Over a longer trip, average speed can be larger than the magnitude of average velocity."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": [
+        "acceleration"
+      ],
+      "stages": {
+        "question": "SI unit of acceleration?",
+        "interpretation": "From a = Δv/Δt.",
+        "formula": "[a] = \\mathrm{m\\,s^{-2}}",
+        "solutionSteps": [
+          "Velocity unit m/s",
+          "Divide by time in s",
+          "Get m/s²"
+        ],
+        "answer": "m s⁻²"
+      },
+      "audioScript": "Acceleration is change in velocity per second, so metres per second squared."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "graphs"
+      ],
+      "stages": {
+        "question": "What does the area under a v–t graph represent?",
+        "interpretation": "NCERT geometric meaning of the graph.",
+        "formula": "displacement = area under v–t",
+        "solutionSteps": [
+          "For constant v, area = vT = displacement",
+          "Generally the same via integration"
+        ],
+        "answer": "Displacement in that time interval (signed)."
+      },
+      "audioScript": "Area under the velocity–time curve is displacement. Watch signs if the curve dips below the time axis."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": [
+        "kinematics"
+      ],
+      "stages": {
+        "question": "Car goes from rest to 20 m/s in 5 s with constant a. Find a and distance.",
+        "interpretation": "Const a from rest → use v = at and x = ½at².",
+        "formula": "v=at,\\ x=\\tfrac12 at^2",
+        "solutionSteps": [
+          "a = v/t = 20/5 = 4 m/s²",
+          "x = ½×4×25 = 50 m"
+        ],
+        "answer": "a = 4 m/s²; x = 50 m"
+      },
+      "audioScript": "From rest, acceleration is final speed over time: 4 metres per second squared. Distance is half a t squared: 50 metres."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": [
+        "stopping"
+      ],
+      "stages": {
+        "question": "Why does doubling speed (same brakes) multiply stopping distance by 4?",
+        "interpretation": "ds = v0²/(2a).",
+        "formula": "d_s \\propto v_0^2",
+        "solutionSteps": [
+          "From v² = v0² − 2a ds with v=0",
+          "ds = v0²/(2a)",
+          "v0 → 2v0 ⇒ ds → 4 ds"
+        ],
+        "answer": "Because stopping distance depends on the square of initial speed."
+      },
+      "audioScript": "Stopping distance goes as speed squared. Twice the speed needs four times the distance to stop at the same deceleration."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": [
+        "free fall"
+      ],
+      "stages": {
+        "question": "Ball thrown upward: acceleration at the highest point?",
+        "interpretation": "v = 0 there but gravity still acts.",
+        "formula": "a = -g",
+        "solutionSteps": [
+          "Gravity continuous",
+          "Choose up positive → a = −g",
+          "Velocity is zero only instantaneously"
+        ],
+        "answer": "a = −g (upward positive), not zero."
+      },
+      "audioScript": "At the top the ball is briefly at rest, but gravity has not switched off. Acceleration remains g downward."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": [
+        "signs"
+      ],
+      "stages": {
+        "question": "A particle has negative acceleration. Is it necessarily slowing down?",
+        "interpretation": "Compare directions of v and a.",
+        "formula": "none — concept",
+        "solutionSteps": [
+          "If v and a same sign → speeding up",
+          "If opposite signs → slowing down",
+          "Sign of a alone is not enough"
+        ],
+        "answer": "No — it depends on the sign of velocity relative to a."
+      },
+      "audioScript": "Negative acceleration only means acceleration points toward the negative axis. If velocity is also negative, the particle is speeding up."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "advanced",
+      "tags": [
+        "vertical"
+      ],
+      "stages": {
+        "question": "Ball thrown up at 20 m/s from a 25 m tower (g=10). Time to hit ground?",
+        "interpretation": "One quadratic with y=0, y0=25, v0=20, a=−10.",
+        "formula": "y = y_0 + v_0 t + \\tfrac12 a t^2",
+        "solutionSteps": [
+          "0 = 25 + 20t − 5t²",
+          "t² − 4t − 5 = 0",
+          "t = 5 s (physical root)"
+        ],
+        "answer": "5 s"
+      },
+      "audioScript": "Place origin at ground, up positive. Then zero equals 25 plus 20 t minus 5 t squared. The positive root is 5 seconds."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definitions"
+      ],
+      "stages": {
+        "question": "Path length versus displacement for a round trip back to start?",
+        "interpretation": "Geometry of the path.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Displacement = 0",
+          "Path length = total walked > 0"
+        ],
+        "answer": "Displacement 0; path length equals total distance walked."
+      },
+      "audioScript": "Coming back home, your displacement is zero but you still walked a long path length."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "intermediate",
+      "tags": [
+        "reaction time"
+      ],
+      "stages": {
+        "question": "Ruler falls d = 21 cm before catch. Estimate reaction time (g=9.8).",
+        "interpretation": "Free fall from rest: d = ½gt².",
+        "formula": "t_r = \\sqrt{2d/g}",
+        "solutionSteps": [
+          "d = 0.21 m",
+          "tr = √(2×0.21/9.8) ≈ √0.043 ≈ 0.21 s"
+        ],
+        "answer": "About 0.21 s"
+      },
+      "audioScript": "The ruler falls freely. Distance is half g t squared, so reaction time is square root of two d over g — roughly point two one seconds for 21 centimetres."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "advanced",
+      "tags": [
+        "graphs"
+      ],
+      "stages": {
+        "question": "For uniform acceleration, shape of x–t and v–t graphs?",
+        "interpretation": "Integrate constant a.",
+        "formula": "x = v_0 t + \\tfrac12 at^2",
+        "solutionSteps": [
+          "a const ⇒ v–t is straight line",
+          "x is quadratic in t ⇒ parabola on x–t"
+        ],
+        "answer": "v–t: straight line; x–t: parabola."
+      },
+      "audioScript": "Constant acceleration makes velocity change linearly with time — a straight v–t graph — while position follows a parabola on the x–t graph."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Can average speed be less than |average velocity|?",
+      "Does v = 0 imply a = 0?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "A particle’s position is x = 5 + 2t (x in m, t in s). Find velocity at t = 3 s.",
+        "interpretation": "Linear x(t) → constant velocity.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "v = dx/dt = 2 m/s",
+          "Independent of t"
+        ],
+        "answer": "2 m/s",
+        "audioScript": "Differentiate x with respect to t. The slope is 2, so velocity is constantly 2 metres per second."
+      },
+      {
+        "id": "pb2",
+        "question": "Average speed if you walk 100 m east in 50 s and 100 m west in 50 s?",
+        "interpretation": "Path 200 m in 100 s; displacement 0.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Path length = 200 m",
+          "Time = 100 s",
+          "Average speed = 2 m/s; average velocity = 0"
+        ],
+        "answer": "2 m/s (velocity average = 0)",
+        "audioScript": "You walked two hundred metres in one hundred seconds, so average speed is 2 metres per second. Net displacement is zero, so average velocity is zero."
+      },
+      {
+        "id": "pb3",
+        "question": "Speed rises uniformly from 0 to 30 m/s in 6 s. Find acceleration.",
+        "interpretation": "Const a = Δv/Δt.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "a = 30/6 = 5 m/s²"
+        ],
+        "answer": "5 m/s²",
+        "audioScript": "Change in velocity over time is 30 divided by 6, so acceleration is 5 metres per second squared."
+      },
+      {
+        "id": "pb4",
+        "question": "Using v = v0 + at: v0 = 10 m/s, a = 2 m/s², t = 4 s. Find v.",
+        "interpretation": "Direct plug-in.",
+        "formulaIds": [
+          "F5"
+        ],
+        "steps": [
+          "v = 10 + 2×4 = 18 m/s"
+        ],
+        "answer": "18 m/s",
+        "audioScript": "Final velocity is initial plus a t: 10 plus 8 equals 18 metres per second."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "A car moving at 20 m/s brakes with a = −5 m/s². Find stopping distance.",
+        "interpretation": "v = 0; use v² = v0² + 2ax.",
+        "formulaIds": [
+          "F5",
+          "F7"
+        ],
+        "steps": [
+          "0 = 20² + 2(−5)x",
+          "0 = 400 − 10x",
+          "x = 40 m"
+        ],
+        "answer": "40 m",
+        "audioScript": "Set final speed zero. Four hundred equals 10 x, so stopping distance is 40 metres."
+      },
+      {
+        "id": "pi2",
+        "question": "Object dropped from rest from 80 m (g=10). Find time to hit ground and impact speed.",
+        "interpretation": "Free fall; up positive or down positive consistently.",
+        "formulaIds": [
+          "F6"
+        ],
+        "steps": [
+          "Take down positive: y = ½gt² → 80 = 5t² → t = 4 s",
+          "v = gt = 40 m/s"
+        ],
+        "answer": "t = 4 s; v = 40 m/s",
+        "audioScript": "From rest, distance is half g t squared. With g = 10, t is 4 seconds and impact speed is 40 metres per second."
+      },
+      {
+        "id": "pi3",
+        "question": "v–t graph: 0 to 10 m/s linearly in 2 s, then constant 10 m/s for 3 s. Find displacement.",
+        "interpretation": "Area under v–t.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Triangle area = ½×2×10 = 10 m",
+          "Rectangle = 10×3 = 30 m",
+          "Total = 40 m"
+        ],
+        "answer": "40 m",
+        "audioScript": "Add the triangular area of 10 metres to the rectangular area of 30 metres to get 40 metres displacement."
+      },
+      {
+        "id": "pi4",
+        "question": "Reaction time: ruler falls 20 cm. Take g = 10 m/s². Find tr.",
+        "interpretation": "d = ½ g tr².",
+        "formulaIds": [
+          "F6"
+        ],
+        "steps": [
+          "0.20 = ½×10×tr²",
+          "tr² = 0.04",
+          "tr = 0.2 s"
+        ],
+        "answer": "0.2 s",
+        "audioScript": "Twenty centimetres is 0.2 metres. Half of 10 times t squared equals 0.2, so t is 0.2 seconds."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Ball thrown upward at 20 m/s from a 25 m high building. Take g = 10. Find (a) max rise above launch and (b) time to hit ground.",
+        "interpretation": "NCERT Example 2.3 style; signs with up positive.",
+        "formulaIds": [
+          "F5",
+          "F6"
+        ],
+        "steps": [
+          "(a) 0 = 20² + 2(−10)h → h = 20 m above launch",
+          "(b) 0 = 25 + 20t − 5t² → t = 5 s"
+        ],
+        "answer": "(a) 20 m; (b) 5 s",
+        "audioScript": "At the top, speed is zero so height above launch is 20 metres. From ground as origin, solve the quadratic; time to hit ground is 5 seconds."
+      },
+      {
+        "id": "pa2",
+        "question": "Show distances fallen in successive equal times from rest are in ratio 1 : 3 : 5 : …",
+        "interpretation": "Galileo’s odd-number rule; y = ½gt².",
+        "formulaIds": [
+          "F6"
+        ],
+        "steps": [
+          "Positions after nτ: yn ∝ n²",
+          "Distance in nth interval ∝ n² − (n−1)² = 2n−1",
+          "Ratios 1, 3, 5, …"
+        ],
+        "answer": "1 : 3 : 5 : 7 : …",
+        "audioScript": "From rest, position grows as time squared. The extra distance in each equal tick is the next odd number — Galileo’s law."
+      },
+      {
+        "id": "pa3",
+        "question": "x = 0.08 t³ (t in s, x in m). Estimate v at t = 4 s using Δt → 0 idea (or exact derivative).",
+        "interpretation": "NCERT Table 2.1 style / Example 2.1 related.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "v = dx/dt = 0.24 t²",
+          "At t = 4, v = 0.24×16 = 3.84 m/s"
+        ],
+        "answer": "3.84 m/s",
+        "audioScript": "Differentiate 0.08 t cubed to get 0.24 t squared. At 4 seconds that is 3.84 metres per second — the limiting slope of the position graph."
+      },
+      {
+        "id": "pa4",
+        "question": "A drunkard takes 5 steps forward and 3 back, each step 1 m and 1 s. How long to fall in a pit 13 m away?",
+        "interpretation": "Net +2 m every 8 s; then final approach.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Each cycle of 8 steps: net +2 m in 8 s",
+          "After 5 cycles: 10 m in 40 s",
+          "Need 3 m more: 3 forward steps (cannot use full cycle)",
+          "Total time = 40 + 3 = 43 s"
+        ],
+        "answer": "43 s",
+        "audioScript": "Every eight seconds he gains only two metres. After forty seconds he is ten metres along; three more forward steps take him into the pit at 43 seconds."
+      }
+    ],
+    "transferPrompt": "Invent one new NEET-style MCQ that needs both a v–t area argument and a kinematic equation with constant a."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 2: Motion in a Straight Line only.\n\nSession flow:\n1) Ask my goal: revise concepts / formula drill / weak area (graphs, free fall, signs, braking).\n2) Quiz definitions first (displacement vs path length, instantaneous v and a, area under v–t) — no heavy calculation.\n3) Basic numericals: one formula at a time (v=dx/dt, a=dv/dt, SUVAT plug-ins).\n4) Intermediate: graph areas, stopping distance, free-fall timing.\n5) Advanced: vertical throw with building height, odd-number rule, drunkard/pit, sign-convention traps.\n6) After each wrong answer show: Interpretation → Formula link → Steps.\n7) Offer flashcard mode (Q → interpretation → formula → steps → answer) and formula-view mode.\n8) Stay inside this chapter unless I ask to link to Laws of Motion or 2D motion.\n\nStart by asking my goal and one warm-up: “Does zero velocity mean zero acceleration? Why?”\n",
+  "selfCheck": [
+    {
+      "q": "Average speed ≥ |average velocity| — always?",
+      "a": "Yes for the same interval."
+    },
+    {
+      "q": "When is (v0+v)/2 the average velocity?",
+      "a": "Only for constant acceleration."
+    },
+    {
+      "q": "Acceleration at top of a vertical throw?",
+      "a": "g downward (not zero)."
+    }
+  ]
+}

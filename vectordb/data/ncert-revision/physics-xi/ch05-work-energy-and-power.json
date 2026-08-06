@@ -1,0 +1,873 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 5,
+    "chapterTitle": "Work, Energy and Power",
+    "ncertCode": "keph105",
+    "topicIdHint": "Work, Energy and Power",
+    "estimatedRevisionMinutes": 50,
+    "chapter": "Work, Energy and Power",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Recall core definitions of Work, Energy and Power.",
+    "Use the chapter’s key formulas with correct assumptions.",
+    "Solve basic → intermediate → advanced NEET-style problems.",
+    "Avoid common sign/unit/assumption traps."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Work–energy theorem, conservation of mechanical energy, collisions, power.",
+    "mustKnowBullets": [
+      "Work W = F·s = Fs cosθ (const F).",
+      "Kinetic energy K = ½ mv²; work–energy: W_net = ΔK.",
+      "Potential energy for gravity near Earth: U = mgh; spring: U = ½ kx².",
+      "Conservative forces: W independent of path; mechanical energy conserved if only conservative forces do work.",
+      "Power P = dW/dt = F·v; average P = W/t.",
+      "Collisions: momentum conserved if no external force; elastic also conserves KE.",
+      "Coefficient of restitution e = relative speed after / before (separation/approach).",
+      "Variable force: W = ∫ F·dx (area under F–x graph)."
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "5",
+      "text": "Scalar W = F·s for constant force.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "5",
+      "text": "Work W = F·s = Fs cosθ (const F).",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "5",
+      "text": "Kinetic energy K = ½ mv²; work–energy: W_net = ΔK.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "formula_intro",
+      "section": "5",
+      "text": "Potential energy for gravity near Earth: U = mgh; spring: U = ½ kx².",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "caution",
+      "section": "5",
+      "text": "Apply sign convention and assumptions before substituting.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "summary",
+      "section": "5",
+      "text": "Work–energy theorem, conservation of mechanical energy, collisions, power.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Work",
+      "definition": "Scalar W = F·s for constant force.",
+      "section": "5"
+    },
+    {
+      "id": "d2",
+      "term": "Kinetic energy",
+      "definition": "Energy due to motion; ½ mv².",
+      "section": "5"
+    },
+    {
+      "id": "d3",
+      "term": "Potential energy",
+      "definition": "Energy stored due to configuration/position.",
+      "section": "5"
+    },
+    {
+      "id": "d4",
+      "term": "Conservative force",
+      "definition": "Work independent of path; equals −ΔU.",
+      "section": "5"
+    },
+    {
+      "id": "d5",
+      "term": "Power",
+      "definition": "Rate of doing work.",
+      "section": "5"
+    },
+    {
+      "id": "d6",
+      "term": "Elastic collision",
+      "definition": "Both momentum and kinetic energy conserved.",
+      "section": "5"
+    },
+    {
+      "id": "d7",
+      "term": "Inelastic collision",
+      "definition": "Momentum conserved; KE not fully conserved.",
+      "section": "5"
+    },
+    {
+      "id": "d8",
+      "term": "Coefficient of restitution",
+      "definition": "e = (speed of separation)/(speed of approach) along line of impact.",
+      "section": "5"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-5-1",
+      "kind": "figure",
+      "label": "Fig. 5.1",
+      "ncertPage": 1,
+      "section": "5",
+      "caption": "Work by a constant force",
+      "placeholderText": "NCERT Physics XI · Ch 5 · Fig. 5.1 — Work by a constant force",
+      "src": null,
+      "uploadHint": "Crop from keph105.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-5-2",
+      "kind": "graph",
+      "label": "Fig. 5.2",
+      "ncertPage": 2,
+      "section": "5",
+      "caption": "F–x graph area = work",
+      "placeholderText": "NCERT Physics XI · Ch 5 · Fig. 5.2 — F–x graph area = work",
+      "src": null,
+      "uploadHint": "Crop from keph105.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-5-3",
+      "kind": "figure",
+      "label": "Fig. 5.3",
+      "ncertPage": 3,
+      "section": "5",
+      "caption": "Spring potential energy",
+      "placeholderText": "NCERT Physics XI · Ch 5 · Fig. 5.3 — Spring potential energy",
+      "src": null,
+      "uploadHint": "Crop from keph105.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-5-4",
+      "kind": "figure",
+      "label": "Fig. 5.4",
+      "ncertPage": 4,
+      "section": "5",
+      "caption": "Collision along a line",
+      "placeholderText": "NCERT Physics XI · Ch 5 · Fig. 5.4 — Collision along a line",
+      "src": null,
+      "uploadHint": "Crop from keph105.pdf (match figure in chapter)"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Work (const F)",
+      "latex": "W = Fs\\cos\\theta",
+      "plain": "dot product",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Work (const F)",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Work (const F) and substitute.",
+          "exampleStem": "NEET-style numerical using Work (const F).",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Work (const F)",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Work (const F).",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Work (const F): dot product. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F2",
+      "name": "Kinetic energy",
+      "latex": "K = \\tfrac12 mv^2",
+      "plain": "KE",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Kinetic energy",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Kinetic energy and substitute.",
+          "exampleStem": "NEET-style numerical using Kinetic energy.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Kinetic energy",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Kinetic energy.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Kinetic energy: KE. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F3",
+      "name": "Work–energy theorem",
+      "latex": "W_{\\mathrm{net}} = \\Delta K",
+      "plain": "net work",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Work–energy theorem",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Work–energy theorem and substitute.",
+          "exampleStem": "NEET-style numerical using Work–energy theorem.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Work–energy theorem",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Work–energy theorem.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Work–energy theorem: net work. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F4",
+      "name": "Gravitational PE",
+      "latex": "U = mgh",
+      "plain": "near Earth",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Gravitational PE",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Gravitational PE and substitute.",
+          "exampleStem": "NEET-style numerical using Gravitational PE.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Gravitational PE",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Gravitational PE.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Gravitational PE: near Earth. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F5",
+      "name": "Spring PE",
+      "latex": "U = \\tfrac12 kx^2",
+      "plain": "Hooke spring",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Spring PE",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Spring PE and substitute.",
+          "exampleStem": "NEET-style numerical using Spring PE.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Spring PE",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Spring PE.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Spring PE: Hooke spring. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F6",
+      "name": "Mechanical energy",
+      "latex": "K + U = \\mathrm{const}",
+      "plain": "conservative only",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Mechanical energy",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Mechanical energy and substitute.",
+          "exampleStem": "NEET-style numerical using Mechanical energy.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Mechanical energy",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Mechanical energy.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Mechanical energy: conservative only. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F7",
+      "name": "Power",
+      "latex": "P = \\vec F\\cdot\\vec v",
+      "plain": "instantaneous",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Power",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Power and substitute.",
+          "exampleStem": "NEET-style numerical using Power.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Power",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Power.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Power: instantaneous. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F8",
+      "name": "Restitution",
+      "latex": "e = \\dfrac{v_2-v_1}{u_1-u_2}",
+      "plain": "1D collision",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Work, Energy and Power.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Restitution",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Restitution and substitute.",
+          "exampleStem": "NEET-style numerical using Restitution.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Restitution",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Restitution.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Restitution: 1D collision. Use it when the problem matches its assumptions in Work, Energy and Power."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "work"
+      ],
+      "stages": {
+        "question": "State / recall: Work (const F)",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "W = Fs\\cos\\theta",
+        "solutionSteps": [
+          "Write Work (const F)",
+          "Identify symbols",
+          "Meaning: dot product"
+        ],
+        "answer": "dot product"
+      },
+      "audioScript": "Recall Work (const F): dot product."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "kinetic"
+      ],
+      "stages": {
+        "question": "State / recall: Kinetic energy",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "K = \\tfrac12 mv^2",
+        "solutionSteps": [
+          "Write Kinetic energy",
+          "Identify symbols",
+          "Meaning: KE"
+        ],
+        "answer": "KE"
+      },
+      "audioScript": "Recall Kinetic energy: KE."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": [
+        "work–energy"
+      ],
+      "stages": {
+        "question": "State / recall: Work–energy theorem",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "W_{\\mathrm{net}} = \\Delta K",
+        "solutionSteps": [
+          "Write Work–energy theorem",
+          "Identify symbols",
+          "Meaning: net work"
+        ],
+        "answer": "net work"
+      },
+      "audioScript": "Recall Work–energy theorem: net work."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "gravitational"
+      ],
+      "stages": {
+        "question": "State / recall: Gravitational PE",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "U = mgh",
+        "solutionSteps": [
+          "Write Gravitational PE",
+          "Identify symbols",
+          "Meaning: near Earth"
+        ],
+        "answer": "near Earth"
+      },
+      "audioScript": "Recall Gravitational PE: near Earth."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "advanced",
+      "tags": [
+        "spring"
+      ],
+      "stages": {
+        "question": "State / recall: Spring PE",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "U = \\tfrac12 kx^2",
+        "solutionSteps": [
+          "Write Spring PE",
+          "Identify symbols",
+          "Meaning: Hooke spring"
+        ],
+        "answer": "Hooke spring"
+      },
+      "audioScript": "Recall Spring PE: Hooke spring."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "advanced",
+      "tags": [
+        "mechanical"
+      ],
+      "stages": {
+        "question": "State / recall: Mechanical energy",
+        "interpretation": "Core relation in Work, Energy and Power.",
+        "formula": "K + U = \\mathrm{const}",
+        "solutionSteps": [
+          "Write Mechanical energy",
+          "Identify symbols",
+          "Meaning: conservative only"
+        ],
+        "answer": "conservative only"
+      },
+      "audioScript": "Recall Mechanical energy: conservative only."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Work",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Scalar W = F·s for constant force."
+      },
+      "audioScript": "Work: Scalar W = F·s for constant force."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Kinetic energy",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Energy due to motion; ½ mv²."
+      },
+      "audioScript": "Kinetic energy: Energy due to motion; ½ mv²."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Potential energy",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Energy stored due to configuration/position."
+      },
+      "audioScript": "Potential energy: Energy stored due to configuration/position."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Conservative force",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Work independent of path; equals −ΔU."
+      },
+      "audioScript": "Conservative force: Work independent of path; equals −ΔU."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Power",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Rate of doing work."
+      },
+      "audioScript": "Power: Rate of doing work."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Elastic collision",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Both momentum and kinetic energy conserved."
+      },
+      "audioScript": "Elastic collision: Both momentum and kinetic energy conserved."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the key idea of Work, Energy and Power?",
+      "Name one formula you must not mix up."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Basic drill: apply Work (const F) with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Work (const F) directly after listing knowns."
+      },
+      {
+        "id": "pb2",
+        "question": "Basic drill: apply Kinetic energy with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Kinetic energy directly after listing knowns."
+      },
+      {
+        "id": "pb3",
+        "question": "Basic drill: apply Work–energy theorem with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Work–energy theorem directly after listing knowns."
+      },
+      {
+        "id": "pb4",
+        "question": "Basic drill: apply Gravitational PE with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Gravitational PE directly after listing knowns."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Intermediate: two-step problem involving Work (const F).",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Work (const F) with one extra relation from the chapter."
+      },
+      {
+        "id": "pi2",
+        "question": "Intermediate: two-step problem involving Kinetic energy.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Kinetic energy with one extra relation from the chapter."
+      },
+      {
+        "id": "pi3",
+        "question": "Intermediate: two-step problem involving Work–energy theorem.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Work–energy theorem with one extra relation from the chapter."
+      },
+      {
+        "id": "pi4",
+        "question": "Intermediate: two-step problem involving Gravitational PE.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Gravitational PE with one extra relation from the chapter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Advanced NEET-style mix using Work (const F).",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Work (const F): watch assumptions and option traps."
+      },
+      {
+        "id": "pa2",
+        "question": "Advanced NEET-style mix using Kinetic energy.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Kinetic energy: watch assumptions and option traps."
+      },
+      {
+        "id": "pa3",
+        "question": "Advanced NEET-style mix using Work–energy theorem.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Work–energy theorem: watch assumptions and option traps."
+      },
+      {
+        "id": "pa4",
+        "question": "Advanced NEET-style mix using Gravitational PE.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Gravitational PE: watch assumptions and option traps."
+      }
+    ],
+    "transferPrompt": "Invent one NEET MCQ that uses two formulas from Work, Energy and Power."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 5: Work, Energy and Power only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Work (const F), Kinetic energy, Work–energy theorem, Gravitational PE, Spring PE, Mechanical energy, Power, Restitution.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "selfCheck": [
+    {
+      "q": "State Work (const F)",
+      "a": "dot product"
+    },
+    {
+      "q": "Define Work",
+      "a": "Scalar W = F·s for constant force."
+    }
+  ]
+}
