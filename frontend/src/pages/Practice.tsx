@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
 import { MathText } from '../components/MathText';
-import { getSelectedExamType } from '../utils/examType';
+import { getSelectedExamType, examTypeLabel } from '../utils/examType';
 
 interface Subject {
   id: string;
@@ -30,6 +31,7 @@ interface CheckResult {
 }
 
 export function Practice() {
+  const examType = getSelectedExamType();
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [subjectId, setSubjectId] = useState<string | null>(null);
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -44,25 +46,30 @@ export function Practice() {
   const [tally, setTally] = useState({ correct: 0, attempted: 0 });
 
   useEffect(() => {
-    const examType = getSelectedExamType();
-    api.get<{ subjects: Subject[] }>('/subjects', { params: examType ? { examType } : undefined }).then((res) => {
+    if (!examType) {
+      setSubjects([]);
+      setSubjectId(null);
+      return;
+    }
+    api.get<{ subjects: Subject[] }>('/subjects', { params: { examType } }).then((res) => {
       setSubjects(res.data.subjects);
-      if (res.data.subjects.length > 0) setSubjectId(res.data.subjects[0].id);
+      setSubjectId(res.data.subjects[0]?.id ?? null);
     });
-  }, []);
+  }, [examType]);
 
   useEffect(() => {
-    if (!subjectId) return;
+    if (!subjectId || !examType) return;
     setLoadingTopics(true);
     api
-      .get<{ topics: Topic[] }>(`/subjects/${subjectId}/topics`)
+      .get<{ topics: Topic[] }>(`/subjects/${subjectId}/topics`, { params: { examType } })
       .then((res) => setTopics(res.data.topics))
       .finally(() => setLoadingTopics(false));
-  }, [subjectId]);
+  }, [subjectId, examType]);
 
   async function startChapter(topic: Topic) {
     const { data } = await api.get<{ questions: PracticeQuestion[] }>(
-      `/subjects/${subjectId}/topics/${topic.id}/questions`
+      `/subjects/${subjectId}/topics/${topic.id}/questions`,
+      { params: examType ? { examType } : undefined }
     );
     setActiveTopic(topic);
     setQuestions(data.questions);
@@ -94,6 +101,19 @@ export function Practice() {
     setIndex((i) => i + 1);
     setSelectedOption(undefined);
     setResult(null);
+  }
+
+  if (!examType) {
+    return (
+      <div className="practice-picker">
+        <div className="page-header">
+          <h1>Practice by Chapter</h1>
+          <p className="subtitle">
+            <Link to="/choose-exam">Choose your exam</Link> first — then subjects and chapters appear for that track only.
+          </p>
+        </div>
+      </div>
+    );
   }
 
   if (activeTopic) {
@@ -159,45 +179,61 @@ export function Practice() {
     );
   }
 
+  const chaptersWithQuestions = topics.filter((t) => t.questionCount > 0);
+
   return (
     <div className="practice-picker">
       <div className="page-header">
         <h1>Practice by Chapter</h1>
-        <p className="subtitle">Pick a subject and chapter — instant feedback, no time pressure.</p>
+        <p className="subtitle">
+          Showing <strong>{examTypeLabel(examType)}</strong> only — pick a subject, then a chapter.{' '}
+          <Link to="/choose-exam">Switch exam</Link>
+        </p>
       </div>
 
-      <div className="subject-tabs">
-        {subjects.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={s.id === subjectId ? 'active' : ''}
-            onClick={() => setSubjectId(s.id)}
-          >
-            {s.name}
-          </button>
-        ))}
-      </div>
-
-      {loadingTopics ? (
-        <p className="loading-state">Loading chapters...</p>
-      ) : (
-        <div className="chapter-grid">
-          {topics.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              className="chapter-card"
-              disabled={t.questionCount === 0}
-              onClick={() => startChapter(t)}
-            >
-              <span className="chapter-name">{t.name}</span>
-              <span className="chapter-count">
-                {t.questionCount === 0 ? 'No questions yet' : `${t.questionCount} question${t.questionCount === 1 ? '' : 's'}`}
-              </span>
-            </button>
-          ))}
+      {subjects.length === 0 ? (
+        <div className="card empty-state">
+          No {examTypeLabel(examType)} subjects with questions yet. Switch exam or check back later.
         </div>
+      ) : (
+        <>
+          <div className="subject-tabs" role="tablist" aria-label="Subjects">
+            {subjects.map((s) => (
+              <button
+                key={s.id}
+                type="button"
+                className={s.id === subjectId ? 'active' : ''}
+                onClick={() => setSubjectId(s.id)}
+              >
+                {s.name}
+              </button>
+            ))}
+          </div>
+
+          {loadingTopics ? (
+            <p className="loading-state">Loading chapters...</p>
+          ) : chaptersWithQuestions.length === 0 ? (
+            <div className="card empty-state">
+              No chapters with {examTypeLabel(examType)} questions in this subject yet.
+            </div>
+          ) : (
+            <div className="chapter-grid">
+              {chaptersWithQuestions.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  className="chapter-card"
+                  onClick={() => startChapter(t)}
+                >
+                  <span className="chapter-name">{t.name}</span>
+                  <span className="chapter-count">
+                    {t.questionCount} question{t.questionCount === 1 ? '' : 's'}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

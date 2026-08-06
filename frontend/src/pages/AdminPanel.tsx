@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { api } from '../services/api';
+import { getSelectedExamType } from '../utils/examType';
 import { EditQuestionsTab } from './AdminQuestionEditor';
 
 interface Exam {
@@ -144,14 +145,24 @@ function ExamsTab({ exams, onCreated }: { exams: Exam[]; onCreated: () => void }
           <p className="empty-state">No exams yet.</p>
         ) : (
           <div className="metric-list">
-            {exams.map((exam) => (
-              <div className="metric-row" key={exam.id}>
-                <span className="metric-name">{exam.name}</span>
-                <span className="metric-score">
-                  {exam.examType} &middot; {exam.totalQuestions} questions
-                </span>
-              </div>
-            ))}
+            {(['NEET', 'KCET', 'JEE'] as const).map((type) => {
+              const group = exams.filter((e) => e.examType === type);
+              if (group.length === 0) return null;
+              return (
+                <div key={type} style={{ marginBottom: 12 }}>
+                  <div className="metric-row" style={{ background: 'transparent', border: 'none', padding: '4px 0' }}>
+                    <span className="metric-name">{type}</span>
+                    <span className="metric-score">{group.length} exam{group.length === 1 ? '' : 's'}</span>
+                  </div>
+                  {group.map((exam) => (
+                    <div className="metric-row" key={exam.id}>
+                      <span className="metric-name">{exam.name}</span>
+                      <span className="metric-score">{exam.totalQuestions} questions</span>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -160,6 +171,9 @@ function ExamsTab({ exams, onCreated }: { exams: Exam[]; onCreated: () => void }
 }
 
 function QuestionsTab({ exams, subjects }: { exams: Exam[]; subjects: Subject[] }) {
+  const [examType, setExamType] = useState<'NEET' | 'KCET' | 'JEE' | ''>(
+    (getSelectedExamType() as 'NEET' | 'KCET' | 'JEE' | null) ?? ''
+  );
   const [examId, setExamId] = useState('');
   const [subjectId, setSubjectId] = useState('');
   const [topics, setTopics] = useState<Topic[]>([]);
@@ -172,6 +186,11 @@ function QuestionsTab({ exams, subjects }: { exams: Exam[]; subjects: Subject[] 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+
+  const filteredExams = examType ? exams.filter((e) => e.examType === examType) : exams;
+  const filteredSubjects = examType
+    ? subjects.filter((s) => s.examTypes.includes(examType))
+    : subjects;
 
   useEffect(() => {
     if (!subjectId) {
@@ -219,14 +238,42 @@ function QuestionsTab({ exams, subjects }: { exams: Exam[]; subjects: Subject[] 
       {success && <p className="success-message">{success}</p>}
 
       <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="q-examtype">Exam Type</label>
+          <select
+            id="q-examtype"
+            value={examType}
+            onChange={(e) => {
+              setExamType(e.target.value as 'NEET' | 'KCET' | 'JEE' | '');
+              setExamId('');
+              setSubjectId('');
+              setTopicId('');
+            }}
+            required
+          >
+            <option value="" disabled>
+              Select NEET or KCET first
+            </option>
+            <option value="NEET">NEET</option>
+            <option value="KCET">KCET</option>
+            <option value="JEE">JEE</option>
+          </select>
+        </div>
+
         <div className="admin-grid-2">
           <div>
             <label htmlFor="q-exam">Exam</label>
-            <select id="q-exam" value={examId} onChange={(e) => setExamId(e.target.value)} required>
+            <select
+              id="q-exam"
+              value={examId}
+              onChange={(e) => setExamId(e.target.value)}
+              required
+              disabled={!examType}
+            >
               <option value="" disabled>
-                Select an exam
+                {examType ? 'Select an exam' : 'Choose exam type first'}
               </option>
-              {exams.map((exam) => (
+              {filteredExams.map((exam) => (
                 <option key={exam.id} value={exam.id}>
                   {exam.name}
                 </option>
@@ -235,11 +282,17 @@ function QuestionsTab({ exams, subjects }: { exams: Exam[]; subjects: Subject[] 
           </div>
           <div>
             <label htmlFor="q-subject">Subject</label>
-            <select id="q-subject" value={subjectId} onChange={(e) => setSubjectId(e.target.value)} required>
+            <select
+              id="q-subject"
+              value={subjectId}
+              onChange={(e) => setSubjectId(e.target.value)}
+              required
+              disabled={!examType}
+            >
               <option value="" disabled>
-                Select a subject
+                {examType ? 'Select a subject' : 'Choose exam type first'}
               </option>
-              {subjects.map((s) => (
+              {filteredSubjects.map((s) => (
                 <option key={s.id} value={s.id}>
                   {s.name}
                 </option>
