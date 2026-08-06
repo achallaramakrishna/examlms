@@ -1,0 +1,1016 @@
+{
+  "meta": {
+    "chapter": "Units and Measurement",
+    "class": "11",
+    "subject": "Physics",
+    "board": "NCERT",
+    "year": "2026-27",
+    "examTrack": "NEET",
+    "classLevel": "XI",
+    "chapterNumber": 1,
+    "chapterTitle": "Units and Measurement",
+    "ncertCode": "keph101",
+    "estimatedRevisionMinutes": 45
+  },
+  "learningOutcomes": [
+    "Understand the concept of units and measurements.",
+    "Learn the significance of SI units and their applications.",
+    "Apply the rules of significant figures in calculations.",
+    "Use dimensional analysis for checking the consistency of equations.",
+    "Develop problem-solving skills using dimensional analysis."
+  ],
+  "cheatSheet": {
+    "mustKnowBullets": [
+      "SI units are the standard units used for scientific measurements.",
+      "There are seven base units in the SI system.",
+      "Significant figures indicate the precision of a measurement.",
+      "Dimensional analysis helps in checking the correctness of equations.",
+      "Plane angle is measured in radians, solid angle in steradians.",
+      "Relative error is the ratio of the absolute error to the true value.",
+      "Percentage error is the relative error expressed as a percentage.",
+      "In multiplication/division, the result should have as many significant figures as the least precise measurement.",
+      "In addition/subtraction, the result should have as many decimal places as the least precise measurement.",
+      "Dimensional formulae represent the dimensions of a physical quantity in terms of base quantities."
+    ],
+    "oneLiner": "Master SI units, significant figures, errors, and dimensional analysis — the toolkit every Physics chapter uses."
+  },
+  "highlights": [
+    {
+      "type": "definition",
+      "id": "h1",
+      "text": "Units for the fundamental or base quantities are called fundamental or base units.",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "definition",
+      "id": "h2",
+      "text": "Derived units are combinations of the base units.",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "caution",
+      "id": "h3",
+      "text": "Significant figures reflect the precision of a measurement.",
+      "whyItMatters": "Common trap in numericals and assertion-reason questions.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "summary",
+      "id": "h4",
+      "text": "Dimensional analysis checks the consistency of equations.",
+      "whyItMatters": "High-yield NCERT line for quick revision before MCQs.",
+      "neetRelevance": "medium"
+    },
+    {
+      "type": "definition",
+      "id": "h5",
+      "text": "The SI unit for plane angle is radian (rad).",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "definition",
+      "id": "h6",
+      "text": "The SI unit for solid angle is steradian (sr).",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "definition",
+      "id": "h7",
+      "text": "Relative error is the ratio of the absolute error to the true value.",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "summary",
+      "id": "h8",
+      "text": "In multiplication/division, use the least number of significant figures from the measurements.",
+      "whyItMatters": "High-yield NCERT line for quick revision before MCQs.",
+      "neetRelevance": "medium"
+    },
+    {
+      "type": "summary",
+      "id": "h9",
+      "text": "In addition/subtraction, use the least number of decimal places from the measurements.",
+      "whyItMatters": "High-yield NCERT line for quick revision before MCQs.",
+      "neetRelevance": "medium"
+    },
+    {
+      "type": "definition",
+      "id": "h10",
+      "text": "Dimensional formulae express the dimensions of a physical quantity in terms of base quantities.",
+      "whyItMatters": "Definitions are frequent 1-mark / assertion stems in NEET.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "caution",
+      "id": "h11",
+      "text": "Dimensional analysis cannot determine dimensionless constants.",
+      "whyItMatters": "Common trap in numericals and assertion-reason questions.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "summary",
+      "id": "h12",
+      "text": "Dimensional consistency is necessary but not sufficient for correctness.",
+      "whyItMatters": "High-yield NCERT line for quick revision before MCQs.",
+      "neetRelevance": "medium"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Base Units",
+      "definition": "Units for the fundamental or base quantities.",
+      "id": "d1"
+    },
+    {
+      "term": "Derived Units",
+      "definition": "Units obtained from combinations of base units.",
+      "id": "d2"
+    },
+    {
+      "term": "Significant Figures",
+      "definition": "Digits in a measurement that are known reliably plus the first uncertain digit.",
+      "id": "d3"
+    },
+    {
+      "term": "Plane Angle",
+      "definition": "Measured in radians, it is the ratio of the length of an arc to its radius.",
+      "id": "d4"
+    },
+    {
+      "term": "Solid Angle",
+      "definition": "Measured in steradians, it is the ratio of the intercepted area of a spherical surface to the square of its radius.",
+      "id": "d5"
+    },
+    {
+      "term": "Relative Error",
+      "definition": "The ratio of the absolute error to the true value.",
+      "id": "d6"
+    },
+    {
+      "term": "Percentage Error",
+      "definition": "The relative error expressed as a percentage.",
+      "id": "d7"
+    },
+    {
+      "term": "Dimensional Formula",
+      "definition": "Expression showing how base quantities represent the dimensions of a physical quantity.",
+      "id": "d8"
+    },
+    {
+      "term": "Dimensional Equation",
+      "definition": "Equation obtained by equating a physical quantity with its dimensional formula.",
+      "id": "d9"
+    },
+    {
+      "term": "Dimensional Analysis",
+      "definition": "A method to check the consistency of equations and deduce relations among physical quantities.",
+      "id": "d10"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "SI Relation",
+      "latex": "1 \\text{ m} = 100 \\text{ cm}",
+      "plain": "1 meter equals 100 centimeters",
+      "symbols": [
+        "m",
+        "cm"
+      ],
+      "whenToUse": "Converting units within the SI system.",
+      "commonMistakes": [
+        "Incorrect conversion factor."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Conversion",
+          "howToInterpret": "Convert meters to centimeters.",
+          "howItConnectsToFormula": "Use the conversion factor 1 m = 100 cm.",
+          "exampleStem": "Convert 5 meters to centimeters.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Advanced Conversion",
+          "howToInterpret": "Convert complex units using the conversion factor.",
+          "howItConnectsToFormula": "Apply conversion factor in multi-step problems.",
+          "exampleStem": "Convert 0.005 kilometers to centimeters.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The relation between meters and centimeters is 1 meter equals 100 centimeters."
+    },
+    {
+      "id": "F2",
+      "name": "Plane Angle",
+      "latex": "\\theta = \\frac{l}{r}",
+      "plain": "theta equals arc length divided by radius",
+      "symbols": [
+        "\\theta",
+        "l",
+        "r"
+      ],
+      "whenToUse": "Calculating plane angles in radians.",
+      "commonMistakes": [
+        "Confusing arc length with radius."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Angle Calculation",
+          "howToInterpret": "Find the angle given arc length and radius.",
+          "howItConnectsToFormula": "Use the formula theta equals arc length over radius.",
+          "exampleStem": "Find the angle in radians for an arc length of 5 cm and radius of 10 cm.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Intermediate Angle Problem",
+          "howToInterpret": "Solve for unknowns using the angle formula.",
+          "howItConnectsToFormula": "Rearrange formula to solve for missing quantities.",
+          "exampleStem": "Given an angle of 0.5 rad and radius of 4 cm, find the arc length.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The formula for plane angle in radians is theta equals arc length divided by radius."
+    },
+    {
+      "id": "F3",
+      "name": "Solid Angle",
+      "latex": "\\Omega = \\frac{A}{r^2}",
+      "plain": "Omega equals area divided by radius squared",
+      "symbols": [
+        "\\Omega",
+        "A",
+        "r"
+      ],
+      "whenToUse": "Calculating solid angles in steradians.",
+      "commonMistakes": [
+        "Using diameter instead of radius."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Solid Angle Calculation",
+          "howToInterpret": "Find the solid angle given area and radius.",
+          "howItConnectsToFormula": "Use the formula Omega equals area over radius squared.",
+          "exampleStem": "Calculate the solid angle for an area of 10 cm^2 and radius of 5 cm.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Advanced Solid Angle Problem",
+          "howToInterpret": "Solve for unknowns using the solid angle formula.",
+          "howItConnectsToFormula": "Rearrange formula to find missing quantities.",
+          "exampleStem": "Given a solid angle of 2 sr and radius of 3 cm, find the area.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The formula for solid angle in steradians is Omega equals area divided by radius squared."
+    },
+    {
+      "id": "F4",
+      "name": "Relative Error",
+      "latex": "\\text{Relative Error} = \\frac{\\Delta x}{x}",
+      "plain": "Relative error equals change in x divided by x",
+      "symbols": [
+        "\\Delta x",
+        "x"
+      ],
+      "whenToUse": "Calculating the relative error of a measurement.",
+      "commonMistakes": [
+        "Confusing absolute error with relative error."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Relative Error",
+          "howToInterpret": "Find the relative error given change and true value.",
+          "howItConnectsToFormula": "Use the formula relative error equals change over true value.",
+          "exampleStem": "Calculate the relative error for a change of 0.2 and true value of 10.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Intermediate Relative Error Problem",
+          "howToInterpret": "Solve for unknowns using the relative error formula.",
+          "howItConnectsToFormula": "Rearrange formula to find missing quantities.",
+          "exampleStem": "Given a relative error of 0.05 and true value of 20, find the change.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The formula for relative error is the change in x divided by the true value of x."
+    },
+    {
+      "id": "F5",
+      "name": "Percentage Error",
+      "latex": "\\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\%",
+      "plain": "Percentage error equals relative error times 100 percent",
+      "symbols": [
+        "\\Delta x",
+        "x"
+      ],
+      "whenToUse": "Expressing relative error as a percentage.",
+      "commonMistakes": [
+        "Forgetting to multiply by 100."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Percentage Error",
+          "howToInterpret": "Convert relative error to percentage.",
+          "howItConnectsToFormula": "Multiply relative error by 100 to get percentage error.",
+          "exampleStem": "Calculate the percentage error for a relative error of 0.1.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Advanced Percentage Error Problem",
+          "howToInterpret": "Solve for unknowns using the percentage error formula.",
+          "howItConnectsToFormula": "Rearrange formula to find missing quantities.",
+          "exampleStem": "Given a percentage error of 5% and true value of 50, find the change.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The formula for percentage error is the relative error multiplied by 100 percent."
+    },
+    {
+      "id": "F6",
+      "name": "Combination Error - Sum/Difference",
+      "latex": "\\Delta z = \\Delta x + \\Delta y",
+      "plain": "Error in sum or difference equals sum of individual errors",
+      "symbols": [
+        "\\Delta z",
+        "\\Delta x",
+        "\\Delta y"
+      ],
+      "whenToUse": "Calculating error in sum or difference of measurements.",
+      "commonMistakes": [
+        "Incorrectly subtracting errors."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Sum/Difference Error",
+          "howToInterpret": "Find error in sum or difference of two measurements.",
+          "howItConnectsToFormula": "Add individual errors to find total error.",
+          "exampleStem": "Calculate the error in the sum of 5 ± 0.1 and 3 ± 0.2.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Intermediate Sum/Difference Error Problem",
+          "howToInterpret": "Solve for unknowns using the sum/difference error formula.",
+          "howItConnectsToFormula": "Rearrange formula to find missing errors.",
+          "exampleStem": "Given total error of 0.5 and one error of 0.3, find the other error.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The error in the sum or difference of measurements is the sum of the individual errors."
+    },
+    {
+      "id": "F7",
+      "name": "Combination Error - Product/Quotient",
+      "latex": "\\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y}",
+      "plain": "Relative error in product or quotient equals sum of relative errors",
+      "symbols": [
+        "\\Delta z",
+        "z",
+        "\\Delta x",
+        "x",
+        "\\Delta y",
+        "y"
+      ],
+      "whenToUse": "Calculating error in product or quotient of measurements.",
+      "commonMistakes": [
+        "Not using relative errors."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Product/Quotient Error",
+          "howToInterpret": "Find relative error in product or quotient of two measurements.",
+          "howItConnectsToFormula": "Add relative errors to find total relative error.",
+          "exampleStem": "Calculate the relative error in the product of 5 ± 0.1 and 3 ± 0.2.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Intermediate Product/Quotient Error Problem",
+          "howToInterpret": "Solve for unknowns using the product/quotient error formula.",
+          "howItConnectsToFormula": "Rearrange formula to find missing relative errors.",
+          "exampleStem": "Given relative error of 0.05 and one relative error of 0.03, find the other relative error.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The relative error in the product or quotient of measurements is the sum of the relative errors."
+    },
+    {
+      "id": "F8",
+      "name": "Dimensional Equation Form",
+      "latex": "[Q] = [M^a L^b T^c]",
+      "plain": "Dimensions of Q equals M raised to a, L raised to b, T raised to c",
+      "symbols": [
+        "Q",
+        "M",
+        "L",
+        "T",
+        "a",
+        "b",
+        "c"
+      ],
+      "whenToUse": "Expressing dimensions of a physical quantity.",
+      "commonMistakes": [
+        "Incorrectly assigning powers to dimensions."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Dimensional Analysis",
+          "howToInterpret": "Find dimensions of a given physical quantity.",
+          "howItConnectsToFormula": "Use the formula to express dimensions in terms of M, L, T.",
+          "exampleStem": "Find the dimensions of force.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Advanced Dimensional Problem",
+          "howToInterpret": "Use dimensional analysis to check consistency of equations.",
+          "howItConnectsToFormula": "Apply dimensions to verify equation correctness.",
+          "exampleStem": "Check if the equation F = ma is dimensionally consistent.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "The dimensional equation form is used to express the dimensions of a physical quantity in terms of base quantities."
+    }
+  ],
+  "views": {
+    "flashcards": [
+      {
+        "question": "What is the SI unit for length?",
+        "interpretation": "Identify the standard unit used for measuring length in the SI system.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "The SI unit for length is the meter (m).",
+        "audioScript": "The SI unit for length is the meter, represented by the symbol m.",
+        "difficulty": "basic",
+        "tags": [
+          "SI Units",
+          "Length"
+        ]
+      },
+      {
+        "question": "Define significant figures.",
+        "interpretation": "Explain what significant figures represent in a measurement.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "Significant figures are the digits in a measurement that are known reliably plus the first uncertain digit.",
+        "audioScript": "Significant figures include all reliable digits in a measurement plus the first uncertain digit.",
+        "difficulty": "basic",
+        "tags": [
+          "Significant Figures",
+          "Precision"
+        ]
+      },
+      {
+        "question": "What is the formula for calculating relative error?",
+        "interpretation": "State the formula used to determine the relative error of a measurement.",
+        "formula": "\\text{Relative Error} = \\frac{\\Delta x}{x}",
+        "solutionSteps": [],
+        "answer": "Relative error is calculated using the formula: Relative Error = Change in x divided by x.",
+        "audioScript": "Relative error is calculated as the change in x divided by the true value of x.",
+        "difficulty": "intermediate",
+        "tags": [
+          "Error Analysis",
+          "Relative Error"
+        ]
+      },
+      {
+        "question": "How do you express percentage error?",
+        "interpretation": "Explain how to convert relative error into percentage error.",
+        "formula": "\\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\%",
+        "solutionSteps": [],
+        "answer": "Percentage error is expressed by multiplying the relative error by 100 percent.",
+        "audioScript": "To express percentage error, multiply the relative error by 100 percent.",
+        "difficulty": "intermediate",
+        "tags": [
+          "Error Analysis",
+          "Percentage Error"
+        ]
+      },
+      {
+        "question": "What is the dimensional formula for force?",
+        "interpretation": "Identify the dimensions of force in terms of base quantities.",
+        "formula": "[F] = [M L T^{-2}]",
+        "solutionSteps": [],
+        "answer": "The dimensional formula for force is [M L T^{-2}].",
+        "audioScript": "The dimensions of force are represented as mass times length divided by time squared.",
+        "difficulty": "intermediate",
+        "tags": [
+          "Dimensional Analysis",
+          "Force"
+        ]
+      },
+      {
+        "question": "Explain the principle of dimensional homogeneity.",
+        "interpretation": "Describe the requirement for equations to be dimensionally consistent.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "The principle of dimensional homogeneity states that all terms in a physical equation must have the same dimensions.",
+        "audioScript": "Dimensional homogeneity requires that all terms in an equation have the same dimensions.",
+        "difficulty": "advanced",
+        "tags": [
+          "Dimensional Analysis",
+          "Consistency"
+        ]
+      },
+      {
+        "question": "What is the unit for plane angle?",
+        "interpretation": "Identify the unit used for measuring plane angles in the SI system.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "The unit for plane angle is the radian (rad).",
+        "audioScript": "The SI unit for measuring plane angles is the radian.",
+        "difficulty": "basic",
+        "tags": [
+          "SI Units",
+          "Plane Angle"
+        ]
+      },
+      {
+        "question": "How do you calculate the solid angle?",
+        "interpretation": "State the formula used to determine the solid angle in steradians.",
+        "formula": "\\Omega = \\frac{A}{r^2}",
+        "solutionSteps": [],
+        "answer": "The solid angle is calculated using the formula: Omega equals area divided by radius squared.",
+        "audioScript": "To calculate the solid angle, divide the area by the radius squared.",
+        "difficulty": "intermediate",
+        "tags": [
+          "Solid Angle",
+          "Steradians"
+        ]
+      },
+      {
+        "question": "What is the SI unit for luminous intensity?",
+        "interpretation": "Identify the standard unit used for measuring luminous intensity in the SI system.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "The SI unit for luminous intensity is the candela (cd).",
+        "audioScript": "The SI unit for luminous intensity is the candela, represented by the symbol cd.",
+        "difficulty": "basic",
+        "tags": [
+          "SI Units",
+          "Luminous Intensity"
+        ]
+      },
+      {
+        "question": "Define dimensional formula.",
+        "interpretation": "Explain what a dimensional formula represents.",
+        "formula": "",
+        "solutionSteps": [],
+        "answer": "A dimensional formula shows how and which base quantities represent the dimensions of a physical quantity.",
+        "audioScript": "A dimensional formula expresses the dimensions of a physical quantity in terms of base quantities.",
+        "difficulty": "basic",
+        "tags": [
+          "Dimensional Analysis",
+          "Formula"
+        ]
+      }
+    ]
+  },
+  "problemLadder": {
+    "basic": [
+      {
+        "id": "P1",
+        "question": "Convert 2 meters to centimeters.",
+        "interpretation": "Use the SI conversion factor to convert meters to centimeters.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Identify the conversion factor: 1 m = 100 cm.",
+          "Multiply 2 meters by 100 to convert to centimeters."
+        ],
+        "answer": "200 cm",
+        "audioScript": "To convert 2 meters to centimeters, multiply by 100 to get 200 centimeters."
+      },
+      {
+        "id": "P2",
+        "question": "Find the plane angle for an arc length of 8 cm and radius of 4 cm.",
+        "interpretation": "Calculate the angle in radians using the plane angle formula.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Use the formula \\( \\theta = \\frac{l}{r} \\).",
+          "Substitute the values: \\( \\theta = \\frac{8}{4} \\).",
+          "Calculate the result: \\( \\theta = 2 \\text{ rad} \\)."
+        ],
+        "answer": "2 rad",
+        "audioScript": "The plane angle for an arc length of 8 cm and radius of 4 cm is 2 radians."
+      },
+      {
+        "id": "P3",
+        "question": "Calculate the relative error for a change of 0.05 and true value of 2.",
+        "interpretation": "Use the relative error formula to find the error.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Use the formula \\( \\text{Relative Error} = \\frac{\\Delta x}{x} \\).",
+          "Substitute the values: \\( \\frac{0.05}{2} \\).",
+          "Calculate the result: \\( 0.025 \\)."
+        ],
+        "answer": "0.025",
+        "audioScript": "The relative error for a change of 0.05 and true value of 2 is 0.025."
+      },
+      {
+        "id": "P4",
+        "question": "Express a percentage error for a relative error of 0.02.",
+        "interpretation": "Convert the relative error to percentage error.",
+        "formulaIds": [
+          "F5"
+        ],
+        "steps": [
+          "Use the formula \\( \\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\% \\).",
+          "Substitute the relative error: \\( 0.02 \\times 100 \\% \\).",
+          "Calculate the result: \\( 2\\% \\)."
+        ],
+        "answer": "2%",
+        "audioScript": "The percentage error for a relative error of 0.02 is 2 percent."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "P5",
+        "question": "Find the solid angle for an area of 20 cm^2 and radius of 5 cm.",
+        "interpretation": "Calculate the solid angle in steradians using the formula.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Use the formula \\( \\Omega = \\frac{A}{r^2} \\).",
+          "Substitute the values: \\( \\Omega = \\frac{20}{5^2} \\).",
+          "Calculate the result: \\( \\Omega = 0.8 \\text{ sr} \\)."
+        ],
+        "answer": "0.8 sr",
+        "audioScript": "The solid angle for an area of 20 cm squared and radius of 5 cm is 0.8 steradians."
+      },
+      {
+        "id": "P6",
+        "question": "Calculate the error in the sum of 7 ± 0.2 and 5 ± 0.1.",
+        "interpretation": "Use the combination error formula for sum.",
+        "formulaIds": [
+          "F6"
+        ],
+        "steps": [
+          "Use the formula \\( \\Delta z = \\Delta x + \\Delta y \\).",
+          "Substitute the errors: \\( \\Delta z = 0.2 + 0.1 \\).",
+          "Calculate the result: \\( \\Delta z = 0.3 \\)."
+        ],
+        "answer": "0.3",
+        "audioScript": "The error in the sum of 7 ± 0.2 and 5 ± 0.1 is 0.3."
+      },
+      {
+        "id": "P7",
+        "question": "Determine the relative error in the product of 4 ± 0.1 and 6 ± 0.2.",
+        "interpretation": "Use the combination error formula for product.",
+        "formulaIds": [
+          "F7"
+        ],
+        "steps": [
+          "Use the formula \\( \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} \\).",
+          "Calculate individual relative errors: \\( \\frac{0.1}{4} = 0.025 \\), \\( \\frac{0.2}{6} = 0.0333 \\).",
+          "Add the relative errors: \\( 0.025 + 0.0333 = 0.0583 \\)."
+        ],
+        "answer": "0.0583",
+        "audioScript": "The relative error in the product of 4 ± 0.1 and 6 ± 0.2 is 0.0583."
+      },
+      {
+        "id": "P8",
+        "question": "Check if the equation F = ma is dimensionally consistent.",
+        "interpretation": "Use dimensional analysis to verify the equation.",
+        "formulaIds": [
+          "F8"
+        ],
+        "steps": [
+          "Write the dimensions of force: [F] = [M L T^{-2}].",
+          "Write the dimensions of mass times acceleration: [M][L T^{-2}] = [M L T^{-2}].",
+          "Compare dimensions: Both sides have the same dimensions."
+        ],
+        "answer": "Dimensionally consistent",
+        "audioScript": "The equation F equals ma is dimensionally consistent as both sides have the same dimensions."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "P9",
+        "question": "Derive the dimensional formula for energy.",
+        "interpretation": "Use the relation between energy and other physical quantities.",
+        "formulaIds": [
+          "F8"
+        ],
+        "steps": [
+          "Energy is work done, which is force times distance.",
+          "Force has dimensions [M L T^{-2}], and distance has dimensions [L].",
+          "Multiply dimensions: [M L T^{-2}] [L] = [M L^2 T^{-2}]."
+        ],
+        "answer": "[M L^2 T^{-2}]",
+        "audioScript": "The dimensional formula for energy is derived as mass times length squared divided by time squared."
+      },
+      {
+        "id": "P10",
+        "question": "Find the error in the quotient of 10 ± 0.5 divided by 2 ± 0.1.",
+        "interpretation": "Use the combination error formula for quotient.",
+        "formulaIds": [
+          "F7"
+        ],
+        "steps": [
+          "Use the formula \\( \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} \\).",
+          "Calculate individual relative errors: \\( \\frac{0.5}{10} = 0.05 \\), \\( \\frac{0.1}{2} = 0.05 \\).",
+          "Add the relative errors: \\( 0.05 + 0.05 = 0.1 \\).",
+          "Multiply by quotient: \\( 5 \\times 0.1 = 0.5 \\)."
+        ],
+        "answer": "0.5",
+        "audioScript": "The error in the quotient of 10 ± 0.5 divided by 2 ± 0.1 is 0.5."
+      },
+      {
+        "id": "P11",
+        "question": "Use dimensional analysis to deduce the formula for the period of a pendulum.",
+        "interpretation": "Apply dimensional analysis to find the relationship between period, length, and gravity.",
+        "formulaIds": [
+          "F8"
+        ],
+        "steps": [
+          "Assume T = k l^a g^b.",
+          "Write dimensions: [T] = [L]^a [L T^{-2}]^b.",
+          "Equate dimensions: [T] = [L]^{a+b} [T]^{-2b}.",
+          "Solve for a and b: a+b=0, -2b=1, so a=1/2, b=-1/2.",
+          "Result: T = k \\sqrt{l/g}."
+        ],
+        "answer": "T = k \\sqrt{l/g}",
+        "audioScript": "Using dimensional analysis, the period of a pendulum is proportional to the square root of length over gravity."
+      },
+      {
+        "id": "P12",
+        "question": "Verify if the equation v^2 = u^2 + 2as is dimensionally correct.",
+        "interpretation": "Use dimensional analysis to check the equation.",
+        "formulaIds": [
+          "F8"
+        ],
+        "steps": [
+          "Write dimensions of each term: [v^2] = [L^2 T^{-2}], [u^2] = [L^2 T^{-2}], [2as] = [L T^{-2}][L] = [L^2 T^{-2}].",
+          "Compare dimensions: All terms have dimensions [L^2 T^{-2}]."
+        ],
+        "answer": "Dimensionally correct",
+        "audioScript": "The equation v squared equals u squared plus 2as is dimensionally correct as all terms have the same dimensions."
+      }
+    ]
+  },
+  "studentTutorPrompt": "Welcome to your AI tutor session on NCERT Physics Class 11 Chapter 1: Units and Measurement! This chapter is fundamental as it lays the groundwork for understanding how we quantify and interpret the physical world. Let's dive into the key concepts, build formula fluency, and tackle problems ranging from basic to advanced NEET level.\n\n### Concepts\n\n1. **Physical Quantities and Units**: Understand the difference between fundamental and derived quantities. Fundamental quantities like length, mass, and time have standard units (meter, kilogram, second). Derived quantities are combinations of fundamental ones (e.g., speed = distance/time).\n\n2. **Systems of Units**: Familiarize yourself with different systems such as the International System of Units (SI), the CGS system, and the FPS system. SI units are the most widely used and standardized.\n\n3. **Measurement and Uncertainty**: Learn about accuracy, precision, and significant figures. Understand how to express measurements with appropriate uncertainty and how to perform calculations that maintain this uncertainty.\n\n4. **Dimensional Analysis**: This is a powerful tool for checking the consistency of equations and converting units. Remember, dimensions of a physical quantity are represented using the basic dimensions (M for mass, L for length, T for time).\n\n5. **Errors in Measurement**: Differentiate between systematic and random errors. Learn techniques to minimize errors and how to report them correctly.\n\n### Formula Fluency\n\n- **Dimensional Formula**: Practice writing the dimensional formula of various physical quantities. E.g., Velocity [LT^-1], Force [MLT^-2].\n- **Conversion of Units**: Master converting units using conversion factors. E.g., converting km/hr to m/s.\n- **Error Calculation**: Learn formulas for absolute error, relative error, and percentage error.\n\n### Problem Solving Practice\n\n#### Basic Level\n\n1. **Unit Conversion**: Convert 5 km into meters. (Hint: 1 km = 1000 m)\n2. **Dimensional Analysis**: Check the dimensional consistency of the equation \\( v = u + at \\).\n\n#### Intermediate Level\n\n1. **Significant Figures**: Calculate the result of \\( 3.25 \\times 4.1 \\) and express it with the correct number of significant figures.\n2. **Error Analysis**: If the length of a rod is measured as 5.25 m with an error of ±0.05 m, calculate the percentage error.\n\n#### Advanced NEET Level\n\n1. **Complex Unit Conversion**: Convert 75 miles per hour to meters per second. (Hint: 1 mile = 1609.34 meters)\n2. **Dimensional Consistency**: Determine if the equation \\( E = \\frac{1}{2} mv^2 \\) is dimensionally consistent.\n\n### Modes of Practice\n\n#### Formula View\n\n- Use this mode to see all relevant formulas at a glance. This is useful for quick revisions and ensuring you have all the necessary tools for problem-solving.\n\n#### Flashcards\n\n- Create flashcards for units, dimensional formulas, and key concepts. This mode helps reinforce memory through repetition and active recall.\n\n#### Interpretation Practice\n\n- Work on interpreting measurement results and error analysis. Practice problems that require you to explain why certain units are used or how errors impact the final result.\n\n### Tips for Success\n\n- **Practice Regularly**: Consistent practice helps in retaining concepts and improving problem-solving speed.\n- **Understand, Don’t Memorize**: Focus on understanding the 'why' behind each concept instead of rote memorization.\n- **Use Real-World Examples**: Relating concepts to real-world scenarios can enhance understanding and retention.\n\nBy mastering these foundational concepts, you'll be well-prepared for more complex topics in physics. Remember, practice is key, and don’t hesitate to revisit concepts whenever necessary. Happy learning!",
+  "selfCheck": [
+    {
+      "question": "What are the seven base units in the SI system?",
+      "options": [
+        "Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela",
+        "Meter, Gram, Second, Ampere, Kelvin, Mole, Candela"
+      ],
+      "answer": "Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela"
+    },
+    {
+      "question": "How do you calculate the percentage error?",
+      "options": [
+        "(Relative Error) x 100%",
+        "(Absolute Error) x 100%"
+      ],
+      "answer": "(Relative Error) x 100%"
+    },
+    {
+      "question": "What is the dimensional formula for velocity?",
+      "options": [
+        "[M^0 L T^{-1}]",
+        "[M L T^{-2}]"
+      ],
+      "answer": "[M^0 L T^{-1}]"
+    },
+    {
+      "question": "What is the unit for solid angle?",
+      "options": [
+        "Steradian",
+        "Radian"
+      ],
+      "answer": "Steradian"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "SI units"
+      ],
+      "stages": {
+        "question": "What is the SI unit of length?",
+        "interpretation": "Identify the standard international unit used to measure length.",
+        "formula": "none",
+        "solutionSteps": [
+          "Recall the base units in the International System of Units (SI).",
+          "Identify the unit associated with measuring length."
+        ],
+        "answer": "The SI unit of length is the meter (m)."
+      },
+      "audioScript": "In the International System of Units, also known as SI, the base unit for measuring length is the meter. This is a fundamental unit used worldwide in scientific and everyday measurements."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "significant figures"
+      ],
+      "stages": {
+        "question": "How many significant figures are in the number 0.00456?",
+        "interpretation": "Determine the number of meaningful digits in the given number.",
+        "formula": "none",
+        "solutionSteps": [
+          "Identify the non-zero digits in the number.",
+          "Count all non-zero digits and any zeros between them."
+        ],
+        "answer": "There are three significant figures in 0.00456."
+      },
+      "audioScript": "To find the significant figures in a number like 0.00456, you count all the non-zero digits. Here, the digits four, five, and six are significant, giving us three significant figures."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": [
+        "errors"
+      ],
+      "stages": {
+        "question": "Define absolute error.",
+        "interpretation": "Explain the concept of absolute error in measurements.",
+        "formula": "none",
+        "solutionSteps": [
+          "Understand that absolute error is the difference between the measured value and the true value.",
+          "Express this difference in the same units as the measurement."
+        ],
+        "answer": "Absolute error is the difference between the measured value and the true value of a quantity."
+      },
+      "audioScript": "Absolute error is a measure of how much a measured value deviates from the true value. It's expressed in the same units as the measurement itself, highlighting the accuracy of the measurement."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "basic",
+      "tags": [
+        "dimensional analysis"
+      ],
+      "stages": {
+        "question": "What is the dimensional formula for velocity?",
+        "interpretation": "Express velocity in terms of its fundamental dimensions.",
+        "formula": "[Q] = [M^a L^b T^c]",
+        "solutionSteps": [
+          "Recall that velocity is distance per unit time.",
+          "Express distance in terms of length (L) and time as (T).",
+          "Combine these to form the dimensional formula."
+        ],
+        "answer": "The dimensional formula for velocity is [M^0 L^1 T^-1]."
+      },
+      "audioScript": "Velocity is defined as the rate of change of position with respect to time. In dimensional terms, it's represented as length divided by time, giving us the formula [M^0 L^1 T^-1]."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": [
+        "SI units"
+      ],
+      "stages": {
+        "question": "Convert 5 meters to centimeters.",
+        "interpretation": "Use the conversion factor between meters and centimeters.",
+        "formula": "1 \\text{ m} = 100 \\text{ cm}",
+        "solutionSteps": [
+          "Recall the conversion factor: 1 meter equals 100 centimeters.",
+          "Multiply 5 meters by 100 to convert to centimeters."
+        ],
+        "answer": "5 meters is equal to 500 centimeters."
+      },
+      "audioScript": "To convert meters to centimeters, remember that one meter equals one hundred centimeters. So, multiplying five meters by one hundred gives us five hundred centimeters."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": [
+        "significant figures"
+      ],
+      "stages": {
+        "question": "Round 3.1467 to three significant figures.",
+        "interpretation": "Round the number while maintaining the correct number of significant digits.",
+        "formula": "none",
+        "solutionSteps": [
+          "Identify the first three significant figures: 3, 1, and 4.",
+          "Look at the next digit (6) to decide whether to round up.",
+          "Since 6 is greater than 5, round up the last significant figure."
+        ],
+        "answer": "3.1467 rounded to three significant figures is 3.15."
+      },
+      "audioScript": "When rounding to three significant figures, focus on the first three digits. If the next digit is five or more, round up the last significant figure. So, 3.1467 becomes 3.15."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": [
+        "errors"
+      ],
+      "stages": {
+        "question": "Calculate the relative error if the measured value is 9.8 and the true value is 10.",
+        "interpretation": "Find the ratio of the absolute error to the true value.",
+        "formula": "\\text{Relative Error} = \\frac{\\Delta x}{x}",
+        "solutionSteps": [
+          "Calculate the absolute error: 10 - 9.8 = 0.2.",
+          "Divide the absolute error by the true value: 0.2 / 10."
+        ],
+        "answer": "The relative error is 0.02."
+      },
+      "audioScript": "To find the relative error, first determine the absolute error by subtracting the measured value from the true value. Then, divide this by the true value. Here, the relative error is zero point zero two."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "intermediate",
+      "tags": [
+        "dimensional analysis"
+      ],
+      "stages": {
+        "question": "Determine the dimensions of force.",
+        "interpretation": "Express force in terms of fundamental dimensions using Newton's second law.",
+        "formula": "[Q] = [M^a L^b T^c]",
+        "solutionSteps": [
+          "Recall Newton's second law: Force = mass × acceleration.",
+          "Mass has dimensions [M], and acceleration is [L T^-2].",
+          "Combine these to find the dimensions of force."
+        ],
+        "answer": "The dimensions of force are [M^1 L^1 T^-2]."
+      },
+      "audioScript": "Force is calculated as mass times acceleration. Mass has the dimension M, and acceleration has dimensions of length over time squared, giving us the dimensional formula [M^1 L^1 T^-2]."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "advanced",
+      "tags": [
+        "SI units"
+      ],
+      "stages": {
+        "question": "What is the SI unit of luminous intensity?",
+        "interpretation": "Identify the standard international unit for measuring luminous intensity.",
+        "formula": "none",
+        "solutionSteps": [
+          "Recall the base units in the International System of Units (SI).",
+          "Identify the unit associated with measuring luminous intensity."
+        ],
+        "answer": "The SI unit of luminous intensity is the candela (cd)."
+      },
+      "audioScript": "In the SI system, the unit for measuring luminous intensity is the candela. This unit quantifies the perceived power of light as emitted by a source in a particular direction."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "advanced",
+      "tags": [
+        "significant figures"
+      ],
+      "stages": {
+        "question": "Express 0.000456 in scientific notation with two significant figures.",
+        "interpretation": "Convert the given number to scientific notation while maintaining two significant figures.",
+        "formula": "none",
+        "solutionSteps": [
+          "Identify the significant figures: 4 and 5.",
+          "Express the number in scientific notation: 4.5 × 10^-4."
+        ],
+        "answer": "0.000456 in scientific notation with two significant figures is 4.5 × 10^-4."
+      },
+      "audioScript": "To express a number like zero point zero zero zero four five six in scientific notation with two significant figures, identify the first two significant digits and place them in the form of a decimal multiplied by a power of ten. This results in four point five times ten to the power of negative four."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "advanced",
+      "tags": [
+        "errors"
+      ],
+      "stages": {
+        "question": "If Δx = 0.1 and Δy = 0.2, find Δz for z = x + y.",
+        "interpretation": "Use the formula for error combination in addition.",
+        "formula": "Δz = Δx + Δy",
+        "solutionSteps": [
+          "Use the formula for error in sum: Δz = Δx + Δy.",
+          "Substitute the given values: Δz = 0.1 + 0.2."
+        ],
+        "answer": "Δz = 0.3"
+      },
+      "audioScript": "When combining errors for addition, simply add the individual errors together. So, if delta x is zero point one and delta y is zero point two, delta z will be zero point three."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "advanced",
+      "tags": [
+        "dimensional analysis"
+      ],
+      "stages": {
+        "question": "Verify the dimensional consistency of the equation s = ut + 0.5at^2.",
+        "interpretation": "Check if both sides of the equation have the same dimensions.",
+        "formula": "[Q] = [M^a L^b T^c]",
+        "solutionSteps": [
+          "Identify dimensions of each term: s is [L], ut is [L], and 0.5at^2 is [L].",
+          "Verify that all terms have the same dimensions."
+        ],
+        "answer": "The equation is dimensionally consistent."
+      },
+      "audioScript": "To check dimensional consistency, ensure each term in the equation has the same dimensions. In the equation s equals ut plus zero point five at squared, each term represents length, confirming dimensional consistency."
+    }
+  ]
+}

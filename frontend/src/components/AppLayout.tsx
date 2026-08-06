@@ -26,6 +26,9 @@ export function AppLayout() {
           <NavLink to="/exams" className={({ isActive }) => (isActive ? 'active' : '')}>
             Exams
           </NavLink>
+          <NavLink to="/learn" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Learn
+          </NavLink>
           <NavLink to="/practice" className={({ isActive }) => (isActive ? 'active' : '')}>
             Practice
           </NavLink>

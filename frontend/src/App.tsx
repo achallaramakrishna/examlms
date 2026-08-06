@@ -9,6 +9,8 @@ import { StudyPlan } from './pages/StudyPlan';
 import { AIAssistant } from './pages/AIAssistant';
 import { AdminPanel } from './pages/AdminPanel';
 import { ChooseExam, syncExamTypeFromProfile } from './pages/ChooseExam';
+import { LearnHome } from './pages/LearnHome';
+import { LearnChapter } from './pages/LearnChapter';
 import { AppLayout } from './components/AppLayout';
 import { isAdmin } from './utils/auth';
 import { getSelectedExamType } from './utils/examType';
@@ -66,6 +68,8 @@ export function App() {
       >
         <Route path="/dashboard" element={<div className="page"><Dashboard /></div>} />
         <Route path="/exams" element={<div className="page"><ExamList /></div>} />
+        <Route path="/learn" element={<div className="page"><LearnHome /></div>} />
+        <Route path="/learn/:slug" element={<div className="page"><LearnChapter /></div>} />
         <Route path="/practice" element={<div className="page"><Practice /></div>} />
         <Route path="/mock-test/:examId" element={<div className="page"><MockTest /></div>} />
         <Route path="/study-plan" element={<div className="page"><StudyPlan /></div>} />
