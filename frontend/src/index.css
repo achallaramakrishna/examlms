@@ -451,9 +451,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .practice-coach {
   margin: 18px 0 8px;
   padding: 14px 16px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: 12px;
   background: var(--color-primary-soft);
+}
+.coach-missing {
+  margin: 14px 0 0;
+  font-size: 13px;
 }
 .practice-coach-head {
   display: flex;

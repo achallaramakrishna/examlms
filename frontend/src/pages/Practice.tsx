@@ -145,7 +145,14 @@ export function Practice() {
               stemHighlights={aid?.stemHighlights}
             />
 
-            {aid && <PracticeCoach aid={aid} revealed={!!result} />}
+            {aid ? (
+              <PracticeCoach aid={aid} revealed={!!result} />
+            ) : (
+              <p className="muted coach-missing">
+                Solve coach not added for this question yet — answer key / explanation still work after
+                Check.
+              </p>
+            )}
 
             {result && (
               <div className={`practice-feedback ${result.isCorrect ? 'correct' : 'incorrect'}`}>

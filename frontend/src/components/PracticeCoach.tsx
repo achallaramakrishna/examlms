@@ -122,8 +122,8 @@ export function PracticeCoach({
 
       {!revealed && (
         <p className="muted coach-hint">
-          Hover underlined words for meanings. Attempt the question first — then open the formula
-          ladder and full solution audio.
+          Dashed underlined words are tappable glossary terms. Use <strong>Listen: read question</strong>{' '}
+          first. After you check your answer, the formula ladder and full solution audio unlock here.
         </p>
       )}
 
