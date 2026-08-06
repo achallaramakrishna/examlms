@@ -383,7 +383,7 @@ function PracticeGrownPatterns({ patternsData }: { patternsData: PracticePattern
                     className="btn"
                     onClick={() => setOpen(isOpen ? null : p.key)}
                   >
-                    {isOpen ? 'Hide ladder' : 'Show formula ladder'}
+                    {isOpen ? 'Hide path' : 'Show solve path'}
                   </button>
                 </div>
               </div>
@@ -397,7 +397,7 @@ function PracticeGrownPatterns({ patternsData }: { patternsData: PracticePattern
                       </p>
                     </>
                   )}
-                  <h4>Formula / solve ladder</h4>
+                  <h4>Solve / method path</h4>
                   <ol className="formula-ladder">
                     {(p.formulaLadder || []).map((rung) => (
                       <li key={`${p.key}-${rung.rung}`}>

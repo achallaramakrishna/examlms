@@ -1,5 +1,8 @@
 export type CoachDifficulty = 'easy' | 'medium' | 'hard';
 
+/** Explicit UI mode for Practice solve coach. Prefer setting this when generating aids. */
+export type CoachMode = 'recall' | 'formula' | 'concept' | 'reaction' | 'process';
+
 export interface StemHighlight {
   term: string;
   aliases?: string[];
@@ -19,6 +22,8 @@ export interface PracticeLearningAid {
     subject?: string;
     chapter?: string;
     questionType?: string;
+    /** Drives UI: recall skips formula ladder; formula/concept/reaction/process show a path. */
+    coachMode?: CoachMode;
     examPattern?: string;
     difficulty?: CoachDifficulty;
     neetRelevance?: 'high' | 'medium' | 'low';

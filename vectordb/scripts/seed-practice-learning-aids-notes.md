@@ -1,9 +1,11 @@
-# Seeding Practice learning aids
+# Seeding Practice `learning_aid`
 
-1. Use prompt: `vectordb/prompts/practice-learning-aid-prompt.md` for high-quality per-question JSON (preferred for flagship chapters).
-2. Pattern-based batch seed (Laws of Motion done on prod): export questions with `learning_aid IS NULL`, generate JSON, `UPDATE questions SET learning_aid = ...`.
-3. UI: Practice shows hover glossary + listen before check; formula ladder after check.
-
-Status:
-- Laws of Motion: 101/101 aids seeded on production (2026-08-06).
-- Next chapters: Motion in a Straight Line, Work Energy Power, etc.
+1. Prefer per-question LLM generation using `vectordb/prompts/practice-learning-aid-prompt.md`.
+2. Always set `meta.coachMode`:
+   - `recall` — fact / unit / definition MCQs → empty `formulaLadder`
+   - `formula` — numerical / apply equation
+   - `concept` — short reasoning path
+   - `reaction` / `process` — Chem / Bio
+3. Pattern-based batch seed (Laws of Motion / Physics and Measurement done on prod): export questions with `learning_aid IS NULL`, generate JSON, `UPDATE questions SET learning_aid = ...`.
+4. After pattern seeds, run `backend/migrations/manual/20260806_tag_learning_aid_coach_mode.sql` so conceptual fact MCQs become `recall` and drop fake formula ladders.
+5. Learn “From Practice bank” only aggregates non-`recall` aids with a real path.

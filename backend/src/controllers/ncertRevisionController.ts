@@ -59,6 +59,62 @@ function normalizePatternKey(name: string): string {
     .trim();
 }
 
+type CoachMode = 'recall' | 'formula' | 'concept' | 'reaction' | 'process';
+
+/** Mirror of frontend resolveCoachMode — keep in sync for Learn aggregation. */
+function resolveCoachModeFromAid(aid: Record<string, unknown>): CoachMode {
+  const meta = (aid.meta || {}) as Record<string, unknown>;
+  const explicit = String(meta.coachMode || '').toLowerCase();
+  if (
+    explicit === 'recall' ||
+    explicit === 'formula' ||
+    explicit === 'concept' ||
+    explicit === 'reaction' ||
+    explicit === 'process'
+  ) {
+    return explicit;
+  }
+
+  const qtype = String(meta.questionType || '').toLowerCase();
+  const subject = String(meta.subject || '').toLowerCase();
+  const ladder = Array.isArray(aid.formulaLadder)
+    ? (aid.formulaLadder as { latex?: string | null }[])
+    : [];
+  const hasLatex = ladder.some((r) => typeof r.latex === 'string' && r.latex.trim().length > 0);
+
+  if (qtype === 'numerical_mcq') return hasLatex ? 'formula' : 'concept';
+  if (qtype === 'reaction') return 'reaction';
+  if (qtype === 'process') return 'process';
+
+  if (subject === 'biology') {
+    const bio = (aid.subjectExtras as { biology?: { processOrder?: unknown[] } } | undefined)?.biology;
+    if (Array.isArray(bio?.processOrder) && bio.processOrder.length > 0) return 'process';
+    return 'recall';
+  }
+
+  if (subject === 'chemistry') {
+    const chem = (aid.subjectExtras as { chemistry?: { mechanismRungs?: unknown[] } } | undefined)
+      ?.chemistry;
+    if (Array.isArray(chem?.mechanismRungs) && chem.mechanismRungs.length > 0) return 'reaction';
+    if (hasLatex) return 'formula';
+    if (qtype === 'conceptual' || qtype === 'assertion_reason' || qtype === 'match') {
+      return 'recall';
+    }
+    return 'concept';
+  }
+
+  if (
+    qtype === 'conceptual' ||
+    qtype === 'assertion_reason' ||
+    qtype === 'match' ||
+    qtype === 'diagram'
+  ) {
+    return hasLatex ? 'concept' : 'recall';
+  }
+  if (hasLatex) return 'formula';
+  return 'concept';
+}
+
 /** GET — figure src overrides for a revision pack (students + admins). */
 export async function getFigureOverrides(req: Request, res: Response, next: NextFunction) {
   try {
@@ -204,6 +260,10 @@ export async function getPracticePatterns(req: Request, res: Response, next: Nex
     for (const q of questions) {
       const aid = (q.learningAid || {}) as Record<string, unknown>;
       const meta = (aid.meta || {}) as Record<string, unknown>;
+      const coachMode = resolveCoachModeFromAid(aid);
+      // Fact-recall MCQs must not pollute Learn formula / method ladders
+      if (coachMode === 'recall') continue;
+
       const examPattern =
         String(meta.examPattern || '').trim() ||
         String((aid as { find?: string }).find || '').trim() ||
@@ -212,6 +272,8 @@ export async function getPracticePatterns(req: Request, res: Response, next: Nex
       const ladder = Array.isArray(aid.formulaLadder)
         ? (aid.formulaLadder as PatternAgg['formulaLadder'])
         : [];
+      // Skip empty generic ladders
+      if (ladder.length === 0) continue;
       const steps = Array.isArray(aid.solutionSteps) ? (aid.solutionSteps as string[]) : [];
       const tags = Array.isArray(aid.conceptTags) ? (aid.conceptTags as string[]) : [];
 
@@ -259,7 +321,7 @@ export async function getPracticePatterns(req: Request, res: Response, next: Nex
       questionCountWithAid: questions.length,
       patternCount: patterns.length,
       patterns,
-      note: 'Patterns grow as Practice questions with learning_aid (different solve methods) are uploaded.',
+      note: 'Formula / method patterns grow from Practice aids with coachMode formula|concept|reaction|process (recall fact-MCQs are excluded).',
     });
   } catch (err) {
     next(err);

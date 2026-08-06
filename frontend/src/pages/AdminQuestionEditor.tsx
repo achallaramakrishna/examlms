@@ -55,7 +55,13 @@ const BULK_JSON_EXAMPLE = `[
     "source": "PMT/NEET (optional)",
     "previousYear": 1998,
     "learningAid": {
-      "meta": { "examPattern": "Vertical throw / free fall (optional but enrich Learn ladders)", "subject": "Physics", "chapter": "..." },
+      "meta": {
+        "examPattern": "Vertical throw / free fall (optional but enrich Learn ladders)",
+        "subject": "Physics",
+        "chapter": "...",
+        "questionType": "numerical_mcq",
+        "coachMode": "formula"
+      },
       "stemHighlights": [{ "term": "acceleration", "meaning": "..." }],
       "formulaLadder": [
         { "rung": 1, "title": "...", "detail": "...", "latex": "v = u + at" }

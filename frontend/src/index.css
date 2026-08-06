@@ -498,7 +498,20 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 .coach-why,
 .coach-mistake,
-.coach-transfer { margin: 10px 0 0; font-size: 14px; }
+.coach-transfer,
+.coach-ncert,
+.coach-extra { margin: 10px 0 0; font-size: 14px; }
+.coach-why-lead {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-soft, rgba(59, 130, 246, 0.08));
+  border-radius: 0 6px 6px 0;
+}
+.coach-mode-recall .coach-pattern { font-size: 13px; }
+.practice-coach.coach-mode-recall {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
 .highlighted-stem { line-height: 1.55; }
 .stem-term-wrap { position: relative; display: inline; }
 .stem-term {
