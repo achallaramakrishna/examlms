@@ -61,6 +61,19 @@ You are an expert NEET / Class 11 Physics teacher and instructional designer. Bu
   "definitions": [
     { "id": "d1", "term": "...", "definition": "...", "section": "1.1" }
   ],
+  "figures": [
+    {
+      "id": "fig-1-1a",
+      "kind": "figure" | "table" | "graph",
+      "label": "Fig. 1.1(a)",
+      "ncertPage": 2,
+      "section": "1.2",
+      "caption": "Short caption from NCERT",
+      "placeholderText": "NCERT Physics XI · Ch 1 · Page 2 · Fig. 1.1(a)",
+      "src": null,
+      "uploadHint": "Crop from keph1XX.pdf page N"
+    }
+  ],
   "formulas": [
     {
       "id": "f1",

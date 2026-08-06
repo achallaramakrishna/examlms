@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { MathBlock, MathText } from '../components/MathText'
 import type {
   Difficulty,
   LadderItem,
+  RevisionFigure,
   RevisionFlashcard,
   RevisionFormula,
   RevisionPack,
@@ -13,6 +15,7 @@ type ViewId =
   | 'cheat'
   | 'lines'
   | 'definitions'
+  | 'figures'
   | 'formulas'
   | 'flashcards'
   | 'ladder'
@@ -22,6 +25,7 @@ const VIEWS: { id: ViewId; label: string }[] = [
   { id: 'cheat', label: 'Cheat sheet' },
   { id: 'lines', label: 'NCERT lines' },
   { id: 'definitions', label: 'Definitions' },
+  { id: 'figures', label: 'Figures' },
   { id: 'formulas', label: 'Formula studio' },
   { id: 'flashcards', label: 'Flashcards' },
   { id: 'ladder', label: 'Problem ladder' },
@@ -45,12 +49,51 @@ function symbolLine(formula: RevisionFormula): string {
     .join(' · ')
 }
 
-function FormulaStudio({ formulas }: { formulas: RevisionFormula[] }) {
+function figureSrc(src: string | null | undefined): string | null {
+  if (!src) return null
+  if (/^https?:\/\//i.test(src) || src.startsWith('/')) return src
+  return `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`
+}
+
+function FigureCard({ figure }: { figure: RevisionFigure }) {
+  const src = figureSrc(figure.src)
+  return (
+    <article className="figure-card">
+      <div className="figure-meta">
+        <span className="badge badge-neutral">{figure.kind}</span>
+        <strong>{figure.label}</strong>
+        <span className="muted">NCERT p.{figure.ncertPage}</span>
+        {figure.section && <span className="ref">§{figure.section}</span>}
+      </div>
+      {src ? (
+        <img className="figure-img" src={src} alt={figure.caption || figure.label} />
+      ) : (
+        <div className="figure-placeholder" role="img" aria-label={figure.placeholderText}>
+          <div className="figure-placeholder-page">Page {figure.ncertPage}</div>
+          <div className="figure-placeholder-label">{figure.label}</div>
+          <div className="figure-placeholder-hint">{figure.placeholderText}</div>
+          {figure.uploadHint && <p className="muted">{figure.uploadHint}</p>}
+          <p className="figure-upload-note">Placeholder — replace via Admin / upload image, then set src</p>
+        </div>
+      )}
+      <p className="figure-caption">{figure.caption}</p>
+    </article>
+  )
+}
+
+function FormulaStudio({
+  formulas,
+  figures,
+}: {
+  formulas: RevisionFormula[]
+  figures: RevisionFigure[]
+}) {
   const [activeId, setActiveId] = useState(formulas[0]?.id ?? '')
   const formula = formulas.find((f) => f.id === activeId) ?? formulas[0]
   if (!formula) return <p className="muted">No formulas in this pack.</p>
 
   const patterns = formula.questionPatterns ?? []
+  const linked = figures.filter((f) => formula.figureIds?.includes(f.id))
 
   return (
     <div className="formula-studio">
@@ -77,11 +120,11 @@ function FormulaStudio({ formulas }: { formulas: RevisionFormula[] }) {
             }
           />
         </div>
-        <div className="formula-latex">{formula.latex}</div>
-        {formula.plain && <p>{formula.plain}</p>}
+        <MathBlock>{formula.latex}</MathBlock>
+        {formula.plain && <p className="formula-plain">{formula.plain}</p>}
         {symbolLine(formula) && (
           <p className="muted">
-            <strong>Variables:</strong> {symbolLine(formula)}
+            <strong>Variables:</strong> <MathText>{symbolLine(formula)}</MathText>
           </p>
         )}
         {formula.whenToUse && (
@@ -98,6 +141,17 @@ function FormulaStudio({ formulas }: { formulas: RevisionFormula[] }) {
         )}
       </article>
 
+      {linked.length > 0 && (
+        <div className="formula-figures">
+          <h4>NCERT figure</h4>
+          <div className="figure-grid">
+            {linked.map((fig) => (
+              <FigureCard key={fig.id} figure={fig} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="pattern-grid">
         {patterns.map((p, idx) => (
           <article key={`${formula.id}-p${idx}`} className="pattern-card">
@@ -109,11 +163,17 @@ function FormulaStudio({ formulas }: { formulas: RevisionFormula[] }) {
               />
             </div>
             <h4>Question</h4>
-            <p>{p.exampleStem}</p>
+            <p>
+              <MathText>{p.exampleStem}</MathText>
+            </p>
             <h4>Interpretation</h4>
-            <p>{p.howToInterpret}</p>
+            <p>
+              <MathText>{p.howToInterpret}</MathText>
+            </p>
             <h4>Connect to formula</h4>
-            <p>{p.howItConnectsToFormula}</p>
+            <p>
+              <MathText>{p.howItConnectsToFormula}</MathText>
+            </p>
           </article>
         ))}
       </div>
@@ -142,6 +202,7 @@ function FlashcardDeck({ cards }: { cards: RevisionFlashcard[] }) {
   ]
 
   const current = phases[Math.min(phase, phases.length - 1)]
+  const isFormulaPhase = current.key === 'formula' && current.body !== 'none' && !current.body.startsWith('none')
 
   return (
     <div className="flash-deck">
@@ -162,11 +223,17 @@ function FlashcardDeck({ cards }: { cards: RevisionFlashcard[] }) {
         {current.list ? (
           <ol>
             {current.list.map((s) => (
-              <li key={s}>{s}</li>
+              <li key={s}>
+                <MathText>{s}</MathText>
+              </li>
             ))}
           </ol>
+        ) : isFormulaPhase ? (
+          <MathBlock>{current.body}</MathBlock>
         ) : (
-          <p className="flash-body">{current.body}</p>
+          <p className="flash-body">
+            <MathText>{current.body}</MathText>
+          </p>
         )}
       </article>
       <div className="flash-actions">
@@ -225,7 +292,9 @@ function Ladder({
               return (
                 <article key={item.id} className="ladder-item">
                   <div className="ladder-item-head">
-                    <p>{item.question}</p>
+                    <p>
+                      <MathText>{item.question}</MathText>
+                    </p>
                     <div className="ladder-item-actions">
                       <SpeakButton
                         text={
@@ -245,7 +314,9 @@ function Ladder({
                   {isOpen && (
                     <div className="ladder-reveal">
                       <h4>Interpretation</h4>
-                      <p>{item.interpretation}</p>
+                      <p>
+                        <MathText>{item.interpretation}</MathText>
+                      </p>
                       {(item.formulaIds?.length ?? 0) > 0 && (
                         <>
                           <h4>Formula link</h4>
@@ -255,11 +326,13 @@ function Ladder({
                       <h4>Steps</h4>
                       <ol>
                         {(item.steps || []).map((s) => (
-                          <li key={s}>{s}</li>
+                          <li key={s}>
+                            <MathText>{s}</MathText>
+                          </li>
                         ))}
                       </ol>
                       <p className="answer-line">
-                        <strong>Answer:</strong> {item.answer}
+                        <strong>Answer:</strong> <MathText>{item.answer}</MathText>
                       </p>
                     </div>
                   )}
@@ -311,7 +384,7 @@ function normalizePack(raw: RevisionPack & Record<string, unknown>): RevisionPac
       }
     }),
     definitions: (raw.definitions || []).map((d, i) => {
-      const anyD = d as { id?: string; term: string; definition: string; section?: string; examNote?: string }
+      const anyD = d as { id?: string; term: string; definition: string; section?: string }
       return {
         id: anyD.id || `d${i + 1}`,
         term: anyD.term,
@@ -319,6 +392,7 @@ function normalizePack(raw: RevisionPack & Record<string, unknown>): RevisionPac
         section: anyD.section,
       }
     }),
+    figures: raw.figures || [],
   }
 }
 
@@ -367,6 +441,11 @@ export function LearnChapter() {
     pack?.cheatSheet?.mustKnowBullets ||
     (Array.isArray(pack?.cheatSheet) ? (pack!.cheatSheet as unknown as string[]) : [])
 
+  const views = useMemo(() => {
+    if ((pack?.figures?.length ?? 0) === 0) return VIEWS.filter((v) => v.id !== 'figures')
+    return VIEWS
+  }, [pack])
+
   if (error) {
     return (
       <div className="learn-page">
@@ -404,7 +483,7 @@ export function LearnChapter() {
       </div>
 
       <div className="view-tabs" role="tablist">
-        {VIEWS.map((v) => (
+        {views.map((v) => (
           <button
             key={v.id}
             type="button"
@@ -430,7 +509,9 @@ export function LearnChapter() {
             <ul>
               {cheatBullets.map((line) => (
                 <li key={line}>
-                  <span>{line}</span>
+                  <span>
+                    <MathText>{line}</MathText>
+                  </span>
                   <SpeakButton text={line} label="" />
                 </li>
               ))}
@@ -441,10 +522,32 @@ export function LearnChapter() {
                 <ul>
                   {pack.formulas.map((f) => (
                     <li key={f.id}>
-                      <strong>{f.name}:</strong> <code>{f.latex}</code>
+                      <strong>{f.name}:</strong> <MathText>{f.latex}</MathText>
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+            {(pack.cheatSheet?.keyTables?.length ?? 0) > 0 && (
+              <div className="cheat-tables">
+                {pack.cheatSheet!.keyTables!.map((t) => (
+                  <div key={t.title} className="key-table">
+                    <h3>{t.title}</h3>
+                    <table>
+                      <tbody>
+                        {t.rows.map((row, ri) => (
+                          <tr key={ri}>
+                            {row.map((cell, ci) => (
+                              <td key={ci}>
+                                <MathText>{cell}</MathText>
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ))}
               </div>
             )}
           </div>
@@ -466,7 +569,9 @@ export function LearnChapter() {
                         text={`${h.text}${h.whyItMatters ? `. Why it matters: ${h.whyItMatters}` : ''}`}
                       />
                     </div>
-                    <p className="highlight-text">{h.text}</p>
+                    <p className="highlight-text">
+                      <MathText>{h.text}</MathText>
+                    </p>
                     {h.whyItMatters && <p className="muted">{h.whyItMatters}</p>}
                     {h.section && <p className="ref">NCERT §{h.section}</p>}
                   </article>
@@ -484,14 +589,32 @@ export function LearnChapter() {
                   <h3>{d.term}</h3>
                   <SpeakButton text={`${d.term}. ${d.definition}`} />
                 </div>
-                <p>{d.definition}</p>
+                <p>
+                  <MathText>{d.definition}</MathText>
+                </p>
                 {d.section && <p className="ref">§{d.section}</p>}
               </article>
             ))}
           </div>
         )}
 
-        {view === 'formulas' && <FormulaStudio formulas={pack.formulas || []} />}
+        {view === 'figures' && (
+          <div className="figures-view">
+            <p className="lede">
+              NCERT figures/tables for this chapter. Placeholders show the textbook page — upload the
+              real image in Admin later and set <code>src</code> on the figure.
+            </p>
+            <div className="figure-grid">
+              {(pack.figures || []).map((fig) => (
+                <FigureCard key={fig.id} figure={fig} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {view === 'formulas' && (
+          <FormulaStudio formulas={pack.formulas || []} figures={pack.figures || []} />
+        )}
 
         {view === 'flashcards' && <FlashcardDeck cards={pack.flashcards || []} />}
 

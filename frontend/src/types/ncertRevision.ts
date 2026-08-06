@@ -1,6 +1,19 @@
 export type NeetRelevance = 'high' | 'medium' | 'low';
 export type Difficulty = 'basic' | 'intermediate' | 'advanced';
 
+export interface RevisionFigure {
+  id: string;
+  kind: 'figure' | 'table' | 'graph' | 'diagram';
+  label: string;
+  ncertPage: number;
+  section?: string;
+  caption: string;
+  placeholderText: string;
+  /** Relative to site base, e.g. ncert-revision/physics-xi/images/ch01/fig-1-1a.png */
+  src?: string | null;
+  uploadHint?: string;
+}
+
 export interface RevisionFormula {
   id: string;
   name: string;
@@ -9,6 +22,7 @@ export interface RevisionFormula {
   symbols?: Array<string | { symbol: string; meaning: string }>;
   whenToUse?: string;
   commonMistakes?: string[];
+  figureIds?: string[];
   questionPatterns?: {
     patternName: string;
     howToInterpret: string;
@@ -68,6 +82,7 @@ export interface RevisionPack {
     neetRelevance?: NeetRelevance;
   }[];
   definitions?: { id: string; term: string; definition: string; section?: string }[];
+  figures?: RevisionFigure[];
   formulas: RevisionFormula[];
   flashcards?: RevisionFlashcard[];
   problemLadder?: {

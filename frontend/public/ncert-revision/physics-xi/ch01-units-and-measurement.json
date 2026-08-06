@@ -32,7 +32,54 @@
       "In addition/subtraction, the result should have as many decimal places as the least precise measurement.",
       "Dimensional formulae represent the dimensions of a physical quantity in terms of base quantities."
     ],
-    "oneLiner": "Master SI units, significant figures, errors, and dimensional analysis — the toolkit every Physics chapter uses."
+    "oneLiner": "Master SI units, significant figures, errors, and dimensional analysis — the toolkit every Physics chapter uses.",
+    "keyTables": [
+      {
+        "title": "Table 1.1 — SI Base Quantities and Units (NCERT p.2)",
+        "rows": [
+          [
+            "Base quantity",
+            "Name",
+            "Symbol"
+          ],
+          [
+            "Length",
+            "metre",
+            "m"
+          ],
+          [
+            "Mass",
+            "kilogram",
+            "kg"
+          ],
+          [
+            "Time",
+            "second",
+            "s"
+          ],
+          [
+            "Electric current",
+            "ampere",
+            "A"
+          ],
+          [
+            "Thermodynamic temperature",
+            "kelvin",
+            "K"
+          ],
+          [
+            "Amount of substance",
+            "mole",
+            "mol"
+          ],
+          [
+            "Luminous intensity",
+            "candela",
+            "cd"
+          ]
+        ]
+      }
+    ]
   },
   "highlights": [
     {
@@ -176,8 +223,8 @@
     {
       "id": "F1",
       "name": "SI Relation",
-      "latex": "1 \\text{ m} = 100 \\text{ cm}",
-      "plain": "1 meter equals 100 centimeters",
+      "latex": "1\\,\\mathrm{m} = 100\\,\\mathrm{cm}",
+      "plain": "1 metre = 100 centimetres",
       "symbols": [
         "m",
         "cm"
@@ -207,8 +254,8 @@
     {
       "id": "F2",
       "name": "Plane Angle",
-      "latex": "\\theta = \\frac{l}{r}",
-      "plain": "theta equals arc length divided by radius",
+      "latex": "\\theta = \\dfrac{l}{r}",
+      "plain": "plane angle θ = arc length / radius",
       "symbols": [
         "\\theta",
         "l",
@@ -234,13 +281,16 @@
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "The formula for plane angle in radians is theta equals arc length divided by radius."
+      "audioScript": "The formula for plane angle in radians is theta equals arc length divided by radius.",
+      "figureIds": [
+        "fig-1-1a"
+      ]
     },
     {
       "id": "F3",
       "name": "Solid Angle",
-      "latex": "\\Omega = \\frac{A}{r^2}",
-      "plain": "Omega equals area divided by radius squared",
+      "latex": "\\Omega = \\dfrac{A}{r^{2}}",
+      "plain": "solid angle Ω = area / radius²",
       "symbols": [
         "\\Omega",
         "A",
@@ -266,13 +316,16 @@
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "The formula for solid angle in steradians is Omega equals area divided by radius squared."
+      "audioScript": "The formula for solid angle in steradians is Omega equals area divided by radius squared.",
+      "figureIds": [
+        "fig-1-1b"
+      ]
     },
     {
       "id": "F4",
       "name": "Relative Error",
-      "latex": "\\text{Relative Error} = \\frac{\\Delta x}{x}",
-      "plain": "Relative error equals change in x divided by x",
+      "latex": "\\delta x_{\\mathrm{rel}} = \\dfrac{\\Delta x}{x}",
+      "plain": "relative error = absolute error / true value",
       "symbols": [
         "\\Delta x",
         "x"
@@ -302,8 +355,8 @@
     {
       "id": "F5",
       "name": "Percentage Error",
-      "latex": "\\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\%",
-      "plain": "Percentage error equals relative error times 100 percent",
+      "latex": "\\delta x_{\\%} = \\dfrac{\\Delta x}{x}\\times 100\\%",
+      "plain": "percentage error = (Δx / x) × 100%",
       "symbols": [
         "\\Delta x",
         "x"
@@ -333,8 +386,8 @@
     {
       "id": "F6",
       "name": "Combination Error - Sum/Difference",
-      "latex": "\\Delta z = \\Delta x + \\Delta y",
-      "plain": "Error in sum or difference equals sum of individual errors",
+      "latex": "\\Delta z = \\Delta x + \\Delta y \\quad (z = x \\pm y)",
+      "plain": "for z = x ± y, absolute error adds",
       "symbols": [
         "\\Delta z",
         "\\Delta x",
@@ -365,8 +418,8 @@
     {
       "id": "F7",
       "name": "Combination Error - Product/Quotient",
-      "latex": "\\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y}",
-      "plain": "Relative error in product or quotient equals sum of relative errors",
+      "latex": "\\dfrac{\\Delta z}{z} = \\dfrac{\\Delta x}{x} + \\dfrac{\\Delta y}{y} \\quad (z = xy\\ \\mathrm{or}\\ x/y)",
+      "plain": "for product/quotient, relative errors add",
       "symbols": [
         "\\Delta z",
         "z",
@@ -400,8 +453,8 @@
     {
       "id": "F8",
       "name": "Dimensional Equation Form",
-      "latex": "[Q] = [M^a L^b T^c]",
-      "plain": "Dimensions of Q equals M raised to a, L raised to b, T raised to c",
+      "latex": "[Q] = \\mathrm{M}^{a}\\mathrm{L}^{b}\\mathrm{T}^{c}",
+      "plain": "dimensional formula of quantity Q",
       "symbols": [
         "Q",
         "M",
@@ -592,9 +645,9 @@
           "F2"
         ],
         "steps": [
-          "Use the formula \\( \\theta = \\frac{l}{r} \\).",
-          "Substitute the values: \\( \\theta = \\frac{8}{4} \\).",
-          "Calculate the result: \\( \\theta = 2 \\text{ rad} \\)."
+          "Use the formula $ \\theta = \\frac{l}{r} $.",
+          "Substitute the values: $ \\theta = \\frac{8}{4} $.",
+          "Calculate the result: $ \\theta = 2 \\text{ rad} $."
         ],
         "answer": "2 rad",
         "audioScript": "The plane angle for an arc length of 8 cm and radius of 4 cm is 2 radians."
@@ -607,9 +660,9 @@
           "F4"
         ],
         "steps": [
-          "Use the formula \\( \\text{Relative Error} = \\frac{\\Delta x}{x} \\).",
-          "Substitute the values: \\( \\frac{0.05}{2} \\).",
-          "Calculate the result: \\( 0.025 \\)."
+          "Use the formula $ \\text{Relative Error} = \\frac{\\Delta x}{x} $.",
+          "Substitute the values: $ \\frac{0.05}{2} $.",
+          "Calculate the result: $ 0.025 $."
         ],
         "answer": "0.025",
         "audioScript": "The relative error for a change of 0.05 and true value of 2 is 0.025."
@@ -622,9 +675,9 @@
           "F5"
         ],
         "steps": [
-          "Use the formula \\( \\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\% \\).",
-          "Substitute the relative error: \\( 0.02 \\times 100 \\% \\).",
-          "Calculate the result: \\( 2\\% \\)."
+          "Use the formula $ \\text{Percentage Error} = \\left(\\frac{\\Delta x}{x}\\right) \\times 100\\% $.",
+          "Substitute the relative error: $ 0.02 \\times 100 \\% $.",
+          "Calculate the result: $ 2\\% $."
         ],
         "answer": "2%",
         "audioScript": "The percentage error for a relative error of 0.02 is 2 percent."
@@ -639,9 +692,9 @@
           "F3"
         ],
         "steps": [
-          "Use the formula \\( \\Omega = \\frac{A}{r^2} \\).",
-          "Substitute the values: \\( \\Omega = \\frac{20}{5^2} \\).",
-          "Calculate the result: \\( \\Omega = 0.8 \\text{ sr} \\)."
+          "Use the formula $ \\Omega = \\frac{A}{r^2} $.",
+          "Substitute the values: $ \\Omega = \\frac{20}{5^2} $.",
+          "Calculate the result: $ \\Omega = 0.8 \\text{ sr} $."
         ],
         "answer": "0.8 sr",
         "audioScript": "The solid angle for an area of 20 cm squared and radius of 5 cm is 0.8 steradians."
@@ -654,9 +707,9 @@
           "F6"
         ],
         "steps": [
-          "Use the formula \\( \\Delta z = \\Delta x + \\Delta y \\).",
-          "Substitute the errors: \\( \\Delta z = 0.2 + 0.1 \\).",
-          "Calculate the result: \\( \\Delta z = 0.3 \\)."
+          "Use the formula $ \\Delta z = \\Delta x + \\Delta y $.",
+          "Substitute the errors: $ \\Delta z = 0.2 + 0.1 $.",
+          "Calculate the result: $ \\Delta z = 0.3 $."
         ],
         "answer": "0.3",
         "audioScript": "The error in the sum of 7 ± 0.2 and 5 ± 0.1 is 0.3."
@@ -669,9 +722,9 @@
           "F7"
         ],
         "steps": [
-          "Use the formula \\( \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} \\).",
-          "Calculate individual relative errors: \\( \\frac{0.1}{4} = 0.025 \\), \\( \\frac{0.2}{6} = 0.0333 \\).",
-          "Add the relative errors: \\( 0.025 + 0.0333 = 0.0583 \\)."
+          "Use the formula $ \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} $.",
+          "Calculate individual relative errors: $ \\frac{0.1}{4} = 0.025 $, $ \\frac{0.2}{6} = 0.0333 $.",
+          "Add the relative errors: $ 0.025 + 0.0333 = 0.0583 $."
         ],
         "answer": "0.0583",
         "audioScript": "The relative error in the product of 4 ± 0.1 and 6 ± 0.2 is 0.0583."
@@ -716,10 +769,10 @@
           "F7"
         ],
         "steps": [
-          "Use the formula \\( \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} \\).",
-          "Calculate individual relative errors: \\( \\frac{0.5}{10} = 0.05 \\), \\( \\frac{0.1}{2} = 0.05 \\).",
-          "Add the relative errors: \\( 0.05 + 0.05 = 0.1 \\).",
-          "Multiply by quotient: \\( 5 \\times 0.1 = 0.5 \\)."
+          "Use the formula $ \\frac{\\Delta z}{z} = \\frac{\\Delta x}{x} + \\frac{\\Delta y}{y} $.",
+          "Calculate individual relative errors: $ \\frac{0.5}{10} = 0.05 $, $ \\frac{0.1}{2} = 0.05 $.",
+          "Add the relative errors: $ 0.05 + 0.05 = 0.1 $.",
+          "Multiply by quotient: $ 5 \\times 0.1 = 0.5 $."
         ],
         "answer": "0.5",
         "audioScript": "The error in the quotient of 10 ± 0.5 divided by 2 ± 0.1 is 0.5."
@@ -757,7 +810,7 @@
       }
     ]
   },
-  "studentTutorPrompt": "Welcome to your AI tutor session on NCERT Physics Class 11 Chapter 1: Units and Measurement! This chapter is fundamental as it lays the groundwork for understanding how we quantify and interpret the physical world. Let's dive into the key concepts, build formula fluency, and tackle problems ranging from basic to advanced NEET level.\n\n### Concepts\n\n1. **Physical Quantities and Units**: Understand the difference between fundamental and derived quantities. Fundamental quantities like length, mass, and time have standard units (meter, kilogram, second). Derived quantities are combinations of fundamental ones (e.g., speed = distance/time).\n\n2. **Systems of Units**: Familiarize yourself with different systems such as the International System of Units (SI), the CGS system, and the FPS system. SI units are the most widely used and standardized.\n\n3. **Measurement and Uncertainty**: Learn about accuracy, precision, and significant figures. Understand how to express measurements with appropriate uncertainty and how to perform calculations that maintain this uncertainty.\n\n4. **Dimensional Analysis**: This is a powerful tool for checking the consistency of equations and converting units. Remember, dimensions of a physical quantity are represented using the basic dimensions (M for mass, L for length, T for time).\n\n5. **Errors in Measurement**: Differentiate between systematic and random errors. Learn techniques to minimize errors and how to report them correctly.\n\n### Formula Fluency\n\n- **Dimensional Formula**: Practice writing the dimensional formula of various physical quantities. E.g., Velocity [LT^-1], Force [MLT^-2].\n- **Conversion of Units**: Master converting units using conversion factors. E.g., converting km/hr to m/s.\n- **Error Calculation**: Learn formulas for absolute error, relative error, and percentage error.\n\n### Problem Solving Practice\n\n#### Basic Level\n\n1. **Unit Conversion**: Convert 5 km into meters. (Hint: 1 km = 1000 m)\n2. **Dimensional Analysis**: Check the dimensional consistency of the equation \\( v = u + at \\).\n\n#### Intermediate Level\n\n1. **Significant Figures**: Calculate the result of \\( 3.25 \\times 4.1 \\) and express it with the correct number of significant figures.\n2. **Error Analysis**: If the length of a rod is measured as 5.25 m with an error of ±0.05 m, calculate the percentage error.\n\n#### Advanced NEET Level\n\n1. **Complex Unit Conversion**: Convert 75 miles per hour to meters per second. (Hint: 1 mile = 1609.34 meters)\n2. **Dimensional Consistency**: Determine if the equation \\( E = \\frac{1}{2} mv^2 \\) is dimensionally consistent.\n\n### Modes of Practice\n\n#### Formula View\n\n- Use this mode to see all relevant formulas at a glance. This is useful for quick revisions and ensuring you have all the necessary tools for problem-solving.\n\n#### Flashcards\n\n- Create flashcards for units, dimensional formulas, and key concepts. This mode helps reinforce memory through repetition and active recall.\n\n#### Interpretation Practice\n\n- Work on interpreting measurement results and error analysis. Practice problems that require you to explain why certain units are used or how errors impact the final result.\n\n### Tips for Success\n\n- **Practice Regularly**: Consistent practice helps in retaining concepts and improving problem-solving speed.\n- **Understand, Don’t Memorize**: Focus on understanding the 'why' behind each concept instead of rote memorization.\n- **Use Real-World Examples**: Relating concepts to real-world scenarios can enhance understanding and retention.\n\nBy mastering these foundational concepts, you'll be well-prepared for more complex topics in physics. Remember, practice is key, and don’t hesitate to revisit concepts whenever necessary. Happy learning!",
+  "studentTutorPrompt": "Welcome to your AI tutor session on NCERT Physics Class 11 Chapter 1: Units and Measurement! This chapter is fundamental as it lays the groundwork for understanding how we quantify and interpret the physical world. Let's dive into the key concepts, build formula fluency, and tackle problems ranging from basic to advanced NEET level.\n\n### Concepts\n\n1. **Physical Quantities and Units**: Understand the difference between fundamental and derived quantities. Fundamental quantities like length, mass, and time have standard units (meter, kilogram, second). Derived quantities are combinations of fundamental ones (e.g., speed = distance/time).\n\n2. **Systems of Units**: Familiarize yourself with different systems such as the International System of Units (SI), the CGS system, and the FPS system. SI units are the most widely used and standardized.\n\n3. **Measurement and Uncertainty**: Learn about accuracy, precision, and significant figures. Understand how to express measurements with appropriate uncertainty and how to perform calculations that maintain this uncertainty.\n\n4. **Dimensional Analysis**: This is a powerful tool for checking the consistency of equations and converting units. Remember, dimensions of a physical quantity are represented using the basic dimensions (M for mass, L for length, T for time).\n\n5. **Errors in Measurement**: Differentiate between systematic and random errors. Learn techniques to minimize errors and how to report them correctly.\n\n### Formula Fluency\n\n- **Dimensional Formula**: Practice writing the dimensional formula of various physical quantities. E.g., Velocity [LT^-1], Force [MLT^-2].\n- **Conversion of Units**: Master converting units using conversion factors. E.g., converting km/hr to m/s.\n- **Error Calculation**: Learn formulas for absolute error, relative error, and percentage error.\n\n### Problem Solving Practice\n\n#### Basic Level\n\n1. **Unit Conversion**: Convert 5 km into meters. (Hint: 1 km = 1000 m)\n2. **Dimensional Analysis**: Check the dimensional consistency of the equation $ v = u + at $.\n\n#### Intermediate Level\n\n1. **Significant Figures**: Calculate the result of $ 3.25 \\times 4.1 $ and express it with the correct number of significant figures.\n2. **Error Analysis**: If the length of a rod is measured as 5.25 m with an error of ±0.05 m, calculate the percentage error.\n\n#### Advanced NEET Level\n\n1. **Complex Unit Conversion**: Convert 75 miles per hour to meters per second. (Hint: 1 mile = 1609.34 meters)\n2. **Dimensional Consistency**: Determine if the equation $ E = \\frac{1}{2} mv^2 $ is dimensionally consistent.\n\n### Modes of Practice\n\n#### Formula View\n\n- Use this mode to see all relevant formulas at a glance. This is useful for quick revisions and ensuring you have all the necessary tools for problem-solving.\n\n#### Flashcards\n\n- Create flashcards for units, dimensional formulas, and key concepts. This mode helps reinforce memory through repetition and active recall.\n\n#### Interpretation Practice\n\n- Work on interpreting measurement results and error analysis. Practice problems that require you to explain why certain units are used or how errors impact the final result.\n\n### Tips for Success\n\n- **Practice Regularly**: Consistent practice helps in retaining concepts and improving problem-solving speed.\n- **Understand, Don’t Memorize**: Focus on understanding the 'why' behind each concept instead of rote memorization.\n- **Use Real-World Examples**: Relating concepts to real-world scenarios can enhance understanding and retention.\n\nBy mastering these foundational concepts, you'll be well-prepared for more complex topics in physics. Remember, practice is key, and don’t hesitate to revisit concepts whenever necessary. Happy learning!",
   "selfCheck": [
     {
       "question": "What are the seven base units in the SI system?",
@@ -1011,6 +1064,52 @@
         "answer": "The equation is dimensionally consistent."
       },
       "audioScript": "To check dimensional consistency, ensure each term in the equation has the same dimensions. In the equation s equals ut plus zero point five at squared, each term represents length, confirming dimensional consistency."
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-1-1a",
+      "kind": "figure",
+      "label": "Fig. 1.1(a)",
+      "ncertPage": 2,
+      "section": "1.2",
+      "caption": "Description of plane angle dθ = ds / r",
+      "placeholderText": "NCERT Physics XI · Ch 1 · Page 2 · Fig. 1.1(a)",
+      "src": null,
+      "uploadHint": "Replace with scanned/cropped image of Fig. 1.1(a) from keph101.pdf page 2"
+    },
+    {
+      "id": "fig-1-1b",
+      "kind": "figure",
+      "label": "Fig. 1.1(b)",
+      "ncertPage": 2,
+      "section": "1.2",
+      "caption": "Description of solid angle dΩ = dA / r²",
+      "placeholderText": "NCERT Physics XI · Ch 1 · Page 2 · Fig. 1.1(b)",
+      "src": null,
+      "uploadHint": "Replace with scanned/cropped image of Fig. 1.1(b) from keph101.pdf page 2"
+    },
+    {
+      "id": "table-1-1",
+      "kind": "table",
+      "label": "Table 1.1",
+      "ncertPage": 2,
+      "section": "1.2",
+      "caption": "SI Base Quantities and Units",
+      "placeholderText": "NCERT Physics XI · Ch 1 · Page 2 · Table 1.1",
+      "src": null,
+      "uploadHint": "Optional: upload Table 1.1 as an image, or fill keyTables in cheatSheet"
+    },
+    {
+      "id": "table-1-2",
+      "kind": "table",
+      "label": "Table 1.2",
+      "ncertPage": 3,
+      "section": "1.2",
+      "caption": "Some units retained for general use (though outside SI)",
+      "placeholderText": "NCERT Physics XI · Ch 1 · Page 3 · Table 1.2",
+      "src": null,
+      "uploadHint": "Optional: upload Table 1.2 image from keph101.pdf page 3"
     }
   ]
 }
