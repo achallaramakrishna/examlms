@@ -1,11 +1,14 @@
 # Frontend production deploy (robodynamics.in)
 
-App is served at **`/examlms/`**. Always build with the base path:
+App is served at **`/examlms/`**, API at **`/examlms-api/`**. Always build with both:
 
 ```bash
 cd frontend
-VITE_BASE_PATH=/examlms/ npm run build
+VITE_BASE_PATH=/examlms/ VITE_API_BASE_URL=/examlms-api/api npm run build
 # then sync dist/ → /opt/examlms/frontend-dist/ on the server
 ```
 
-If you build without `VITE_BASE_PATH`, `index.html` points at `/assets/...` and the site renders blank (404 on JS/CSS).
+| Missing env | Symptom |
+|-------------|---------|
+| `VITE_BASE_PATH=/examlms/` | White screen — JS/CSS 404 at `/assets/...` |
+| `VITE_API_BASE_URL=/examlms-api/api` | Shell loads but Practice/Exams/Learn data empty — calls hit `/api` (404) |
