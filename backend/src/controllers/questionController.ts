@@ -159,6 +159,8 @@ interface BulkQuestionInput {
   options: { label: string; text: string; imageUrl?: string }[];
   correctOption: string;
   explanation?: string;
+  /** Optional solve-coach payload — also enriches Learn problem/formula ladders over time */
+  learningAid?: Record<string, unknown>;
   difficulty?: 'easy' | 'medium' | 'hard';
   source?: string;
   previousYear?: number;
@@ -209,6 +211,7 @@ export async function bulkCreateQuestions(req: Request, res: Response, next: Nex
           options: item.options,
           correctOption: item.correctOption,
           explanation: item.explanation,
+          learningAid: item.learningAid,
           difficulty: item.difficulty ?? 'medium',
           source: item.source,
           previousYear: item.previousYear,
@@ -257,6 +260,7 @@ export async function checkAnswer(req: Request, res: Response, next: NextFunctio
       isCorrect: selectedOption === question.correctOption,
       correctOption: question.correctOption,
       explanation: question.explanation ?? null,
+      learningAid: question.learningAid ?? null,
     });
   } catch (err) {
     next(err);

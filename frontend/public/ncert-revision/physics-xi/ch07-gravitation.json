@@ -1,0 +1,873 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 7,
+    "chapterTitle": "Gravitation",
+    "ncertCode": "keph107",
+    "topicIdHint": "Gravitation",
+    "estimatedRevisionMinutes": 50,
+    "chapter": "Gravitation",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Recall core definitions of Gravitation.",
+    "Use the chapter’s key formulas with correct assumptions.",
+    "Solve basic → intermediate → advanced NEET-style problems.",
+    "Avoid common sign/unit/assumption traps."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Newton’s gravity, g variation, satellites, Kepler’s laws, escape speed.",
+    "mustKnowBullets": [
+      "Newton’s law: F = G m1 m2 / r² (attractive).",
+      "g = GM/R² on surface; varies with height and depth.",
+      "Gravitational potential V = −GM/r; U = mV.",
+      "Escape speed v_esc = √(2GM/R) from surface.",
+      "Orbital speed for circular orbit v_o = √(GM/r); T² ∝ r³ (Kepler 3).",
+      "Total energy of circular orbit E = −GMm/(2r).",
+      "Weightlessness in satellite: effective g ≈ 0 in frame of satellite.",
+      "Kepler: orbits are ellipses; equal areas in equal times; T² ∝ a³."
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "7",
+      "text": "6.67×10⁻¹¹ N m² kg⁻².",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "7",
+      "text": "Newton’s law: F = G m1 m2 / r² (attractive).",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "7",
+      "text": "g = GM/R² on surface; varies with height and depth.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "formula_intro",
+      "section": "7",
+      "text": "Gravitational potential V = −GM/r; U = mV.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "caution",
+      "section": "7",
+      "text": "Apply sign convention and assumptions before substituting.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "summary",
+      "section": "7",
+      "text": "Newton’s gravity, g variation, satellites, Kepler’s laws, escape speed.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Gravitational constant G",
+      "definition": "6.67×10⁻¹¹ N m² kg⁻².",
+      "section": "7"
+    },
+    {
+      "id": "d2",
+      "term": "Acceleration due to gravity g",
+      "definition": "Gravitational field strength near Earth surface.",
+      "section": "7"
+    },
+    {
+      "id": "d3",
+      "term": "Gravitational potential",
+      "definition": "Work per unit mass from infinity to the point (V ≤ 0).",
+      "section": "7"
+    },
+    {
+      "id": "d4",
+      "term": "Escape speed",
+      "definition": "Minimum launch speed to reach infinity.",
+      "section": "7"
+    },
+    {
+      "id": "d5",
+      "term": "Satellite",
+      "definition": "Body orbiting a planet under gravity.",
+      "section": "7"
+    },
+    {
+      "id": "d6",
+      "term": "Weightlessness",
+      "definition": "Apparent weight zero when normal reaction vanishes.",
+      "section": "7"
+    },
+    {
+      "id": "d7",
+      "term": "Kepler’s second law",
+      "definition": "Area swept by radius vector per time is constant.",
+      "section": "7"
+    },
+    {
+      "id": "d8",
+      "term": "Geostationary satellite",
+      "definition": "Equatorial orbit with T = 24 h, appears fixed.",
+      "section": "7"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-7-1",
+      "kind": "figure",
+      "label": "Fig. 7.1",
+      "ncertPage": 1,
+      "section": "7",
+      "caption": "Gravitational force between two masses",
+      "placeholderText": "NCERT Physics XI · Ch 7 · Fig. 7.1 — Gravitational force between two masses",
+      "src": null,
+      "uploadHint": "Crop from keph107.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-7-2",
+      "kind": "graph",
+      "label": "Fig. 7.2",
+      "ncertPage": 2,
+      "section": "7",
+      "caption": "Variation of g with height/depth (sketch)",
+      "placeholderText": "NCERT Physics XI · Ch 7 · Fig. 7.2 — Variation of g with height/depth (sketch)",
+      "src": null,
+      "uploadHint": "Crop from keph107.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-7-3",
+      "kind": "figure",
+      "label": "Fig. 7.3",
+      "ncertPage": 3,
+      "section": "7",
+      "caption": "Satellite in circular orbit",
+      "placeholderText": "NCERT Physics XI · Ch 7 · Fig. 7.3 — Satellite in circular orbit",
+      "src": null,
+      "uploadHint": "Crop from keph107.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-7-4",
+      "kind": "figure",
+      "label": "Fig. 7.4",
+      "ncertPage": 4,
+      "section": "7",
+      "caption": "Elliptical orbit / Kepler illustration",
+      "placeholderText": "NCERT Physics XI · Ch 7 · Fig. 7.4 — Elliptical orbit / Kepler illustration",
+      "src": null,
+      "uploadHint": "Crop from keph107.pdf (match figure in chapter)"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Newton gravity",
+      "latex": "F = \\dfrac{G m_1 m_2}{r^2}",
+      "plain": "inverse square",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Newton gravity",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Newton gravity and substitute.",
+          "exampleStem": "NEET-style numerical using Newton gravity.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Newton gravity",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Newton gravity.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Newton gravity: inverse square. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F2",
+      "name": "Surface g",
+      "latex": "g = \\dfrac{GM}{R^2}",
+      "plain": "planet surface",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Surface g",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Surface g and substitute.",
+          "exampleStem": "NEET-style numerical using Surface g.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Surface g",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Surface g.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Surface g: planet surface. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F3",
+      "name": "g at height",
+      "latex": "g_h = \\dfrac{GM}{(R+h)^2}",
+      "plain": "above surface",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic g at height",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in g at height and substitute.",
+          "exampleStem": "NEET-style numerical using g at height.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed g at height",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving g at height.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "g at height: above surface. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F4",
+      "name": "Potential",
+      "latex": "V = -\\dfrac{GM}{r}",
+      "plain": "from infinity",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Potential",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Potential and substitute.",
+          "exampleStem": "NEET-style numerical using Potential.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Potential",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Potential.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Potential: from infinity. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F5",
+      "name": "Escape speed",
+      "latex": "v_{\\mathrm{esc}} = \\sqrt{\\dfrac{2GM}{R}}",
+      "plain": "from surface",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Escape speed",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Escape speed and substitute.",
+          "exampleStem": "NEET-style numerical using Escape speed.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Escape speed",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Escape speed.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Escape speed: from surface. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F6",
+      "name": "Orbital speed",
+      "latex": "v_o = \\sqrt{\\dfrac{GM}{r}}",
+      "plain": "circular",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Orbital speed",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Orbital speed and substitute.",
+          "exampleStem": "NEET-style numerical using Orbital speed.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Orbital speed",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Orbital speed.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Orbital speed: circular. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F7",
+      "name": "Kepler 3",
+      "latex": "T^2 = \\dfrac{4\\pi^2}{GM}a^3",
+      "plain": "period–semi-major",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Kepler 3",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Kepler 3 and substitute.",
+          "exampleStem": "NEET-style numerical using Kepler 3.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Kepler 3",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Kepler 3.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Kepler 3: period–semi-major. Use it when the problem matches its assumptions in Gravitation."
+    },
+    {
+      "id": "F8",
+      "name": "Orbit energy",
+      "latex": "E = -\\dfrac{GMm}{2r}",
+      "plain": "circular orbit",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Gravitation.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Orbit energy",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Orbit energy and substitute.",
+          "exampleStem": "NEET-style numerical using Orbit energy.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Orbit energy",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Orbit energy.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Orbit energy: circular orbit. Use it when the problem matches its assumptions in Gravitation."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "newton"
+      ],
+      "stages": {
+        "question": "State / recall: Newton gravity",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "F = \\dfrac{G m_1 m_2}{r^2}",
+        "solutionSteps": [
+          "Write Newton gravity",
+          "Identify symbols",
+          "Meaning: inverse square"
+        ],
+        "answer": "inverse square"
+      },
+      "audioScript": "Recall Newton gravity: inverse square."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "surface"
+      ],
+      "stages": {
+        "question": "State / recall: Surface g",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "g = \\dfrac{GM}{R^2}",
+        "solutionSteps": [
+          "Write Surface g",
+          "Identify symbols",
+          "Meaning: planet surface"
+        ],
+        "answer": "planet surface"
+      },
+      "audioScript": "Recall Surface g: planet surface."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": [
+        "g"
+      ],
+      "stages": {
+        "question": "State / recall: g at height",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "g_h = \\dfrac{GM}{(R+h)^2}",
+        "solutionSteps": [
+          "Write g at height",
+          "Identify symbols",
+          "Meaning: above surface"
+        ],
+        "answer": "above surface"
+      },
+      "audioScript": "Recall g at height: above surface."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "potential"
+      ],
+      "stages": {
+        "question": "State / recall: Potential",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "V = -\\dfrac{GM}{r}",
+        "solutionSteps": [
+          "Write Potential",
+          "Identify symbols",
+          "Meaning: from infinity"
+        ],
+        "answer": "from infinity"
+      },
+      "audioScript": "Recall Potential: from infinity."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "advanced",
+      "tags": [
+        "escape"
+      ],
+      "stages": {
+        "question": "State / recall: Escape speed",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "v_{\\mathrm{esc}} = \\sqrt{\\dfrac{2GM}{R}}",
+        "solutionSteps": [
+          "Write Escape speed",
+          "Identify symbols",
+          "Meaning: from surface"
+        ],
+        "answer": "from surface"
+      },
+      "audioScript": "Recall Escape speed: from surface."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "advanced",
+      "tags": [
+        "orbital"
+      ],
+      "stages": {
+        "question": "State / recall: Orbital speed",
+        "interpretation": "Core relation in Gravitation.",
+        "formula": "v_o = \\sqrt{\\dfrac{GM}{r}}",
+        "solutionSteps": [
+          "Write Orbital speed",
+          "Identify symbols",
+          "Meaning: circular"
+        ],
+        "answer": "circular"
+      },
+      "audioScript": "Recall Orbital speed: circular."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Gravitational constant G",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "6.67×10⁻¹¹ N m² kg⁻²."
+      },
+      "audioScript": "Gravitational constant G: 6.67×10⁻¹¹ N m² kg⁻²."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Acceleration due to gravity g",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Gravitational field strength near Earth surface."
+      },
+      "audioScript": "Acceleration due to gravity g: Gravitational field strength near Earth surface."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Gravitational potential",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Work per unit mass from infinity to the point (V ≤ 0)."
+      },
+      "audioScript": "Gravitational potential: Work per unit mass from infinity to the point (V ≤ 0)."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Escape speed",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Minimum launch speed to reach infinity."
+      },
+      "audioScript": "Escape speed: Minimum launch speed to reach infinity."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Satellite",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Body orbiting a planet under gravity."
+      },
+      "audioScript": "Satellite: Body orbiting a planet under gravity."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Weightlessness",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Apparent weight zero when normal reaction vanishes."
+      },
+      "audioScript": "Weightlessness: Apparent weight zero when normal reaction vanishes."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the key idea of Gravitation?",
+      "Name one formula you must not mix up."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Basic drill: apply Newton gravity with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Newton gravity directly after listing knowns."
+      },
+      {
+        "id": "pb2",
+        "question": "Basic drill: apply Surface g with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Surface g directly after listing knowns."
+      },
+      {
+        "id": "pb3",
+        "question": "Basic drill: apply g at height with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use g at height directly after listing knowns."
+      },
+      {
+        "id": "pb4",
+        "question": "Basic drill: apply Potential with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Potential directly after listing knowns."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Intermediate: two-step problem involving Newton gravity.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Newton gravity with one extra relation from the chapter."
+      },
+      {
+        "id": "pi2",
+        "question": "Intermediate: two-step problem involving Surface g.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Surface g with one extra relation from the chapter."
+      },
+      {
+        "id": "pi3",
+        "question": "Intermediate: two-step problem involving g at height.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to g at height with one extra relation from the chapter."
+      },
+      {
+        "id": "pi4",
+        "question": "Intermediate: two-step problem involving Potential.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Potential with one extra relation from the chapter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Advanced NEET-style mix using Newton gravity.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Newton gravity: watch assumptions and option traps."
+      },
+      {
+        "id": "pa2",
+        "question": "Advanced NEET-style mix using Surface g.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Surface g: watch assumptions and option traps."
+      },
+      {
+        "id": "pa3",
+        "question": "Advanced NEET-style mix using g at height.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of g at height: watch assumptions and option traps."
+      },
+      {
+        "id": "pa4",
+        "question": "Advanced NEET-style mix using Potential.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Potential: watch assumptions and option traps."
+      }
+    ],
+    "transferPrompt": "Invent one NEET MCQ that uses two formulas from Gravitation."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 7: Gravitation only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Newton gravity, Surface g, g at height, Potential, Escape speed, Orbital speed, Kepler 3, Orbit energy.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "selfCheck": [
+    {
+      "q": "State Newton gravity",
+      "a": "inverse square"
+    },
+    {
+      "q": "Define Gravitational constant G",
+      "a": "6.67×10⁻¹¹ N m² kg⁻²."
+    }
+  ]
+}

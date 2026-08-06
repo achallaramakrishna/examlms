@@ -1,0 +1,873 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 4,
+    "chapterTitle": "Laws of Motion",
+    "ncertCode": "keph104",
+    "topicIdHint": "Laws of Motion",
+    "estimatedRevisionMinutes": 50,
+    "chapter": "Laws of Motion",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Recall core definitions of Laws of Motion.",
+    "Use the chapter’s key formulas with correct assumptions.",
+    "Solve basic → intermediate → advanced NEET-style problems.",
+    "Avoid common sign/unit/assumption traps."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Newton’s laws, friction, circular motion dynamics — forces cause acceleration.",
+    "mustKnowBullets": [
+      "First law: inertia; net force zero ⇒ constant velocity.",
+      "Second law: F_net = dp/dt; for const mass, F = ma.",
+      "Third law: action–reaction pairs act on different bodies.",
+      "Momentum p = mv; impulse = Δp = F_avg Δt.",
+      "Friction: f_s ≤ μ_s N; f_k = μ_k N; opposes relative tendency/motion.",
+      "Banking / skidding: on level road v_max = √(μrg).",
+      "Pseudo force in non-inertial frames: −ma_frame.",
+      "Connected bodies: common acceleration; tension from free-body diagrams."
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "4",
+      "text": "Tendency of a body to resist change in its state of motion.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "4",
+      "text": "First law: inertia; net force zero ⇒ constant velocity.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "4",
+      "text": "Second law: F_net = dp/dt; for const mass, F = ma.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "formula_intro",
+      "section": "4",
+      "text": "Third law: action–reaction pairs act on different bodies.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "caution",
+      "section": "4",
+      "text": "Apply sign convention and assumptions before substituting.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "summary",
+      "section": "4",
+      "text": "Newton’s laws, friction, circular motion dynamics — forces cause acceleration.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Inertia",
+      "definition": "Tendency of a body to resist change in its state of motion.",
+      "section": "4"
+    },
+    {
+      "id": "d2",
+      "term": "Momentum",
+      "definition": "p = mv; vector in direction of velocity.",
+      "section": "4"
+    },
+    {
+      "id": "d3",
+      "term": "Impulse",
+      "definition": "Change in momentum; equal to ∫F dt.",
+      "section": "4"
+    },
+    {
+      "id": "d4",
+      "term": "Static friction",
+      "definition": "Friction when surfaces tend to slide but do not.",
+      "section": "4"
+    },
+    {
+      "id": "d5",
+      "term": "Kinetic friction",
+      "definition": "Friction during sliding; usually μ_k N.",
+      "section": "4"
+    },
+    {
+      "id": "d6",
+      "term": "Free-body diagram",
+      "definition": "Sketch of one body with all forces on it.",
+      "section": "4"
+    },
+    {
+      "id": "d7",
+      "term": "Centripetal force",
+      "definition": "Net force toward centre: mv²/r.",
+      "section": "4"
+    },
+    {
+      "id": "d8",
+      "term": "Inertial frame",
+      "definition": "Frame where Newton’s laws hold without pseudo forces.",
+      "section": "4"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-4-1",
+      "kind": "figure",
+      "label": "Fig. 4.1",
+      "ncertPage": 1,
+      "section": "4",
+      "caption": "Action–reaction illustration",
+      "placeholderText": "NCERT Physics XI · Ch 4 · Fig. 4.1 — Action–reaction illustration",
+      "src": null,
+      "uploadHint": "Crop from keph104.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-4-2",
+      "kind": "figure",
+      "label": "Fig. 4.2",
+      "ncertPage": 2,
+      "section": "4",
+      "caption": "Free-body diagram examples",
+      "placeholderText": "NCERT Physics XI · Ch 4 · Fig. 4.2 — Free-body diagram examples",
+      "src": null,
+      "uploadHint": "Crop from keph104.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-4-3",
+      "kind": "figure",
+      "label": "Fig. 4.3",
+      "ncertPage": 3,
+      "section": "4",
+      "caption": "Friction on an incline",
+      "placeholderText": "NCERT Physics XI · Ch 4 · Fig. 4.3 — Friction on an incline",
+      "src": null,
+      "uploadHint": "Crop from keph104.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-4-4",
+      "kind": "figure",
+      "label": "Fig. 4.4",
+      "ncertPage": 4,
+      "section": "4",
+      "caption": "Vehicle on banked / level circular road",
+      "placeholderText": "NCERT Physics XI · Ch 4 · Fig. 4.4 — Vehicle on banked / level circular road",
+      "src": null,
+      "uploadHint": "Crop from keph104.pdf (match figure in chapter)"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Second law",
+      "latex": "\\vec F = m\\vec a",
+      "plain": "const mass",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Second law",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Second law and substitute.",
+          "exampleStem": "NEET-style numerical using Second law.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Second law",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Second law.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Second law: const mass. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F2",
+      "name": "Momentum",
+      "latex": "\\vec p = m\\vec v",
+      "plain": "linear momentum",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Momentum",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Momentum and substitute.",
+          "exampleStem": "NEET-style numerical using Momentum.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Momentum",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Momentum.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Momentum: linear momentum. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F3",
+      "name": "Impulse",
+      "latex": "\\vec J = \\Delta\\vec p = \\vec F_{\\mathrm{avg}}\\Delta t",
+      "plain": "impulse–momentum",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Impulse",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Impulse and substitute.",
+          "exampleStem": "NEET-style numerical using Impulse.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Impulse",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Impulse.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Impulse: impulse–momentum. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F4",
+      "name": "Static friction max",
+      "latex": "f_s^{\\max} = \\mu_s N",
+      "plain": "limiting friction",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Static friction max",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Static friction max and substitute.",
+          "exampleStem": "NEET-style numerical using Static friction max.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Static friction max",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Static friction max.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Static friction max: limiting friction. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F5",
+      "name": "Kinetic friction",
+      "latex": "f_k = \\mu_k N",
+      "plain": "sliding",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Kinetic friction",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Kinetic friction and substitute.",
+          "exampleStem": "NEET-style numerical using Kinetic friction.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Kinetic friction",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Kinetic friction.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Kinetic friction: sliding. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F6",
+      "name": "Skidding level curve",
+      "latex": "v_{\\max} = \\sqrt{\\mu r g}",
+      "plain": "friction = centripetal",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Skidding level curve",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Skidding level curve and substitute.",
+          "exampleStem": "NEET-style numerical using Skidding level curve.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Skidding level curve",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Skidding level curve.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Skidding level curve: friction = centripetal. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F7",
+      "name": "Banking no friction",
+      "latex": "v = \\sqrt{r g\\tan\\theta}",
+      "plain": "ideal speed",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Banking no friction",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Banking no friction and substitute.",
+          "exampleStem": "NEET-style numerical using Banking no friction.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Banking no friction",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Banking no friction.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Banking no friction: ideal speed. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F8",
+      "name": "Connected two masses",
+      "latex": "a = \\dfrac{(m_1-m_2)g}{m_1+m_2}",
+      "plain": "Atwood-style vertical",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Laws of Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Connected two masses",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Connected two masses and substitute.",
+          "exampleStem": "NEET-style numerical using Connected two masses.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Connected two masses",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Connected two masses.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Connected two masses: Atwood-style vertical. Use it when the problem matches its assumptions in Laws of Motion."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "second"
+      ],
+      "stages": {
+        "question": "State / recall: Second law",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "\\vec F = m\\vec a",
+        "solutionSteps": [
+          "Write Second law",
+          "Identify symbols",
+          "Meaning: const mass"
+        ],
+        "answer": "const mass"
+      },
+      "audioScript": "Recall Second law: const mass."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "momentum"
+      ],
+      "stages": {
+        "question": "State / recall: Momentum",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "\\vec p = m\\vec v",
+        "solutionSteps": [
+          "Write Momentum",
+          "Identify symbols",
+          "Meaning: linear momentum"
+        ],
+        "answer": "linear momentum"
+      },
+      "audioScript": "Recall Momentum: linear momentum."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": [
+        "impulse"
+      ],
+      "stages": {
+        "question": "State / recall: Impulse",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "\\vec J = \\Delta\\vec p = \\vec F_{\\mathrm{avg}}\\Delta t",
+        "solutionSteps": [
+          "Write Impulse",
+          "Identify symbols",
+          "Meaning: impulse–momentum"
+        ],
+        "answer": "impulse–momentum"
+      },
+      "audioScript": "Recall Impulse: impulse–momentum."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "static"
+      ],
+      "stages": {
+        "question": "State / recall: Static friction max",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "f_s^{\\max} = \\mu_s N",
+        "solutionSteps": [
+          "Write Static friction max",
+          "Identify symbols",
+          "Meaning: limiting friction"
+        ],
+        "answer": "limiting friction"
+      },
+      "audioScript": "Recall Static friction max: limiting friction."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "advanced",
+      "tags": [
+        "kinetic"
+      ],
+      "stages": {
+        "question": "State / recall: Kinetic friction",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "f_k = \\mu_k N",
+        "solutionSteps": [
+          "Write Kinetic friction",
+          "Identify symbols",
+          "Meaning: sliding"
+        ],
+        "answer": "sliding"
+      },
+      "audioScript": "Recall Kinetic friction: sliding."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "advanced",
+      "tags": [
+        "skidding"
+      ],
+      "stages": {
+        "question": "State / recall: Skidding level curve",
+        "interpretation": "Core relation in Laws of Motion.",
+        "formula": "v_{\\max} = \\sqrt{\\mu r g}",
+        "solutionSteps": [
+          "Write Skidding level curve",
+          "Identify symbols",
+          "Meaning: friction = centripetal"
+        ],
+        "answer": "friction = centripetal"
+      },
+      "audioScript": "Recall Skidding level curve: friction = centripetal."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Inertia",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Tendency of a body to resist change in its state of motion."
+      },
+      "audioScript": "Inertia: Tendency of a body to resist change in its state of motion."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Momentum",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "p = mv; vector in direction of velocity."
+      },
+      "audioScript": "Momentum: p = mv; vector in direction of velocity."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Impulse",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Change in momentum; equal to ∫F dt."
+      },
+      "audioScript": "Impulse: Change in momentum; equal to ∫F dt."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Static friction",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Friction when surfaces tend to slide but do not."
+      },
+      "audioScript": "Static friction: Friction when surfaces tend to slide but do not."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Kinetic friction",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Friction during sliding; usually μ_k N."
+      },
+      "audioScript": "Kinetic friction: Friction during sliding; usually μ_k N."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Free-body diagram",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Sketch of one body with all forces on it."
+      },
+      "audioScript": "Free-body diagram: Sketch of one body with all forces on it."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the key idea of Laws of Motion?",
+      "Name one formula you must not mix up."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Basic drill: apply Second law with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Second law directly after listing knowns."
+      },
+      {
+        "id": "pb2",
+        "question": "Basic drill: apply Momentum with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Momentum directly after listing knowns."
+      },
+      {
+        "id": "pb3",
+        "question": "Basic drill: apply Impulse with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Impulse directly after listing knowns."
+      },
+      {
+        "id": "pb4",
+        "question": "Basic drill: apply Static friction max with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Static friction max directly after listing knowns."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Intermediate: two-step problem involving Second law.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Second law with one extra relation from the chapter."
+      },
+      {
+        "id": "pi2",
+        "question": "Intermediate: two-step problem involving Momentum.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Momentum with one extra relation from the chapter."
+      },
+      {
+        "id": "pi3",
+        "question": "Intermediate: two-step problem involving Impulse.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Impulse with one extra relation from the chapter."
+      },
+      {
+        "id": "pi4",
+        "question": "Intermediate: two-step problem involving Static friction max.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Static friction max with one extra relation from the chapter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Advanced NEET-style mix using Second law.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Second law: watch assumptions and option traps."
+      },
+      {
+        "id": "pa2",
+        "question": "Advanced NEET-style mix using Momentum.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Momentum: watch assumptions and option traps."
+      },
+      {
+        "id": "pa3",
+        "question": "Advanced NEET-style mix using Impulse.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Impulse: watch assumptions and option traps."
+      },
+      {
+        "id": "pa4",
+        "question": "Advanced NEET-style mix using Static friction max.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Static friction max: watch assumptions and option traps."
+      }
+    ],
+    "transferPrompt": "Invent one NEET MCQ that uses two formulas from Laws of Motion."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 4: Laws of Motion only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Second law, Momentum, Impulse, Static friction max, Kinetic friction, Skidding level curve, Banking no friction, Connected two masses.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "selfCheck": [
+    {
+      "q": "State Second law",
+      "a": "const mass"
+    },
+    {
+      "q": "Define Inertia",
+      "a": "Tendency of a body to resist change in its state of motion."
+    }
+  ]
+}

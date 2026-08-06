@@ -1,0 +1,873 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 6,
+    "chapterTitle": "System of Particles and Rotational Motion",
+    "ncertCode": "keph106",
+    "topicIdHint": "System of Particles and Rotational Motion",
+    "estimatedRevisionMinutes": 50,
+    "chapter": "System of Particles and Rotational Motion",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Recall core definitions of System of Particles and Rotational Motion.",
+    "Use the chapter’s key formulas with correct assumptions.",
+    "Solve basic → intermediate → advanced NEET-style problems.",
+    "Avoid common sign/unit/assumption traps."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Centre of mass, torque, angular momentum, rigid-body rotation about a fixed axis.",
+    "mustKnowBullets": [
+      "CM: R_cm = Σ m_i r_i / M; for continuous bodies use integrals / symmetry.",
+      "External F_net = M a_cm.",
+      "Torque τ = r × F; τ = Iα about fixed axis.",
+      "Moment of inertia I = Σ m r²; parallel-axis: I = I_cm + Md².",
+      "Angular momentum L = r × p; for rigid body about fixed axis L = Iω.",
+      "τ_ext = dL/dt; if τ_ext = 0, L conserved.",
+      "Rolling without slipping: v = ωR; a = αR.",
+      "Rotational KE = ½ Iω²; total KE rolling = ½ mv² + ½ Iω²."
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "6",
+      "text": "Point that moves as if all mass and net external force acted there.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "6",
+      "text": "CM: R_cm = Σ m_i r_i / M; for continuous bodies use integrals / symmetry.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "6",
+      "text": "External F_net = M a_cm.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "formula_intro",
+      "section": "6",
+      "text": "Torque τ = r × F; τ = Iα about fixed axis.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "caution",
+      "section": "6",
+      "text": "Apply sign convention and assumptions before substituting.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "summary",
+      "section": "6",
+      "text": "Centre of mass, torque, angular momentum, rigid-body rotation about a fixed axis.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Centre of mass",
+      "definition": "Point that moves as if all mass and net external force acted there.",
+      "section": "6"
+    },
+    {
+      "id": "d2",
+      "term": "Torque",
+      "definition": "Turning effect of force; τ = rF sinθ.",
+      "section": "6"
+    },
+    {
+      "id": "d3",
+      "term": "Moment of inertia",
+      "definition": "Measure of rotational inertia about an axis.",
+      "section": "6"
+    },
+    {
+      "id": "d4",
+      "term": "Angular momentum",
+      "definition": "L = r × p; rotational analogue of momentum.",
+      "section": "6"
+    },
+    {
+      "id": "d5",
+      "term": "Rigid body",
+      "definition": "Body with fixed relative distances between particles.",
+      "section": "6"
+    },
+    {
+      "id": "d6",
+      "term": "Rolling without slipping",
+      "definition": "Point of contact instantaneously at rest relative to surface.",
+      "section": "6"
+    },
+    {
+      "id": "d7",
+      "term": "Parallel axis theorem",
+      "definition": "I = I_cm + Md² for axis parallel to one through CM.",
+      "section": "6"
+    },
+    {
+      "id": "d8",
+      "term": "Angular acceleration",
+      "definition": "α = dω/dt.",
+      "section": "6"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-6-1",
+      "kind": "figure",
+      "label": "Fig. 6.1",
+      "ncertPage": 1,
+      "section": "6",
+      "caption": "Centre of mass of a system",
+      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.1 — Centre of mass of a system",
+      "src": null,
+      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-6-2",
+      "kind": "figure",
+      "label": "Fig. 6.2",
+      "ncertPage": 2,
+      "section": "6",
+      "caption": "Torque as r × F",
+      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.2 — Torque as r × F",
+      "src": null,
+      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-6-3",
+      "kind": "table",
+      "label": "Fig. 6.3",
+      "ncertPage": 3,
+      "section": "6",
+      "caption": "Moment of inertia of common bodies",
+      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.3 — Moment of inertia of common bodies",
+      "src": null,
+      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-6-4",
+      "kind": "figure",
+      "label": "Fig. 6.4",
+      "ncertPage": 4,
+      "section": "6",
+      "caption": "Rolling without slipping",
+      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.4 — Rolling without slipping",
+      "src": null,
+      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Centre of mass",
+      "latex": "\\vec R_{\\mathrm{cm}} = \\dfrac{\\sum m_i\\vec r_i}{M}",
+      "plain": "discrete system",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Centre of mass",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Centre of mass and substitute.",
+          "exampleStem": "NEET-style numerical using Centre of mass.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Centre of mass",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Centre of mass.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Centre of mass: discrete system. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F2",
+      "name": "Torque",
+      "latex": "\\vec\\tau = \\vec r\\times\\vec F",
+      "plain": "moment of force",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Torque",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Torque and substitute.",
+          "exampleStem": "NEET-style numerical using Torque.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Torque",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Torque.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Torque: moment of force. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F3",
+      "name": "Newton 2 rotation",
+      "latex": "\\tau = I\\alpha",
+      "plain": "fixed axis",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Newton 2 rotation",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Newton 2 rotation and substitute.",
+          "exampleStem": "NEET-style numerical using Newton 2 rotation.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Newton 2 rotation",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Newton 2 rotation.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Newton 2 rotation: fixed axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F4",
+      "name": "Moment of inertia",
+      "latex": "I = \\sum m_i r_i^2",
+      "plain": "definition",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Moment of inertia",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Moment of inertia and substitute.",
+          "exampleStem": "NEET-style numerical using Moment of inertia.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Moment of inertia",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Moment of inertia.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Moment of inertia: definition. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F5",
+      "name": "Parallel axis",
+      "latex": "I = I_{\\mathrm{cm}} + Md^2",
+      "plain": "parallel axes",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Parallel axis",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Parallel axis and substitute.",
+          "exampleStem": "NEET-style numerical using Parallel axis.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Parallel axis",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Parallel axis.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Parallel axis: parallel axes. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F6",
+      "name": "Angular momentum",
+      "latex": "L = I\\omega",
+      "plain": "rigid, fixed axis",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Angular momentum",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Angular momentum and substitute.",
+          "exampleStem": "NEET-style numerical using Angular momentum.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Angular momentum",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Angular momentum.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Angular momentum: rigid, fixed axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F7",
+      "name": "Rolling condition",
+      "latex": "v = \\omega R",
+      "plain": "no slip",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Rolling condition",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Rolling condition and substitute.",
+          "exampleStem": "NEET-style numerical using Rolling condition.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Rolling condition",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Rolling condition.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Rolling condition: no slip. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    },
+    {
+      "id": "F8",
+      "name": "Rotational KE",
+      "latex": "K = \\tfrac12 I\\omega^2",
+      "plain": "about axis",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Rotational KE",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Rotational KE and substitute.",
+          "exampleStem": "NEET-style numerical using Rotational KE.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Rotational KE",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Rotational KE.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Rotational KE: about axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "centre"
+      ],
+      "stages": {
+        "question": "State / recall: Centre of mass",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "\\vec R_{\\mathrm{cm}} = \\dfrac{\\sum m_i\\vec r_i}{M}",
+        "solutionSteps": [
+          "Write Centre of mass",
+          "Identify symbols",
+          "Meaning: discrete system"
+        ],
+        "answer": "discrete system"
+      },
+      "audioScript": "Recall Centre of mass: discrete system."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "torque"
+      ],
+      "stages": {
+        "question": "State / recall: Torque",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "\\vec\\tau = \\vec r\\times\\vec F",
+        "solutionSteps": [
+          "Write Torque",
+          "Identify symbols",
+          "Meaning: moment of force"
+        ],
+        "answer": "moment of force"
+      },
+      "audioScript": "Recall Torque: moment of force."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": [
+        "newton"
+      ],
+      "stages": {
+        "question": "State / recall: Newton 2 rotation",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "\\tau = I\\alpha",
+        "solutionSteps": [
+          "Write Newton 2 rotation",
+          "Identify symbols",
+          "Meaning: fixed axis"
+        ],
+        "answer": "fixed axis"
+      },
+      "audioScript": "Recall Newton 2 rotation: fixed axis."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "moment"
+      ],
+      "stages": {
+        "question": "State / recall: Moment of inertia",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "I = \\sum m_i r_i^2",
+        "solutionSteps": [
+          "Write Moment of inertia",
+          "Identify symbols",
+          "Meaning: definition"
+        ],
+        "answer": "definition"
+      },
+      "audioScript": "Recall Moment of inertia: definition."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "advanced",
+      "tags": [
+        "parallel"
+      ],
+      "stages": {
+        "question": "State / recall: Parallel axis",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "I = I_{\\mathrm{cm}} + Md^2",
+        "solutionSteps": [
+          "Write Parallel axis",
+          "Identify symbols",
+          "Meaning: parallel axes"
+        ],
+        "answer": "parallel axes"
+      },
+      "audioScript": "Recall Parallel axis: parallel axes."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "advanced",
+      "tags": [
+        "angular"
+      ],
+      "stages": {
+        "question": "State / recall: Angular momentum",
+        "interpretation": "Core relation in System of Particles and Rotational Motion.",
+        "formula": "L = I\\omega",
+        "solutionSteps": [
+          "Write Angular momentum",
+          "Identify symbols",
+          "Meaning: rigid, fixed axis"
+        ],
+        "answer": "rigid, fixed axis"
+      },
+      "audioScript": "Recall Angular momentum: rigid, fixed axis."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Centre of mass",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Point that moves as if all mass and net external force acted there."
+      },
+      "audioScript": "Centre of mass: Point that moves as if all mass and net external force acted there."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Torque",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Turning effect of force; τ = rF sinθ."
+      },
+      "audioScript": "Torque: Turning effect of force; τ = rF sinθ."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Moment of inertia",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Measure of rotational inertia about an axis."
+      },
+      "audioScript": "Moment of inertia: Measure of rotational inertia about an axis."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Angular momentum",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "L = r × p; rotational analogue of momentum."
+      },
+      "audioScript": "Angular momentum: L = r × p; rotational analogue of momentum."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Rigid body",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Body with fixed relative distances between particles."
+      },
+      "audioScript": "Rigid body: Body with fixed relative distances between particles."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Rolling without slipping",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Point of contact instantaneously at rest relative to surface."
+      },
+      "audioScript": "Rolling without slipping: Point of contact instantaneously at rest relative to surface."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the key idea of System of Particles and Rotational Motion?",
+      "Name one formula you must not mix up."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Basic drill: apply Centre of mass with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Centre of mass directly after listing knowns."
+      },
+      {
+        "id": "pb2",
+        "question": "Basic drill: apply Torque with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Torque directly after listing knowns."
+      },
+      {
+        "id": "pb3",
+        "question": "Basic drill: apply Newton 2 rotation with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Newton 2 rotation directly after listing knowns."
+      },
+      {
+        "id": "pb4",
+        "question": "Basic drill: apply Moment of inertia with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Moment of inertia directly after listing knowns."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Intermediate: two-step problem involving Centre of mass.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Centre of mass with one extra relation from the chapter."
+      },
+      {
+        "id": "pi2",
+        "question": "Intermediate: two-step problem involving Torque.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Torque with one extra relation from the chapter."
+      },
+      {
+        "id": "pi3",
+        "question": "Intermediate: two-step problem involving Newton 2 rotation.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Newton 2 rotation with one extra relation from the chapter."
+      },
+      {
+        "id": "pi4",
+        "question": "Intermediate: two-step problem involving Moment of inertia.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Moment of inertia with one extra relation from the chapter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Advanced NEET-style mix using Centre of mass.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Centre of mass: watch assumptions and option traps."
+      },
+      {
+        "id": "pa2",
+        "question": "Advanced NEET-style mix using Torque.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Torque: watch assumptions and option traps."
+      },
+      {
+        "id": "pa3",
+        "question": "Advanced NEET-style mix using Newton 2 rotation.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Newton 2 rotation: watch assumptions and option traps."
+      },
+      {
+        "id": "pa4",
+        "question": "Advanced NEET-style mix using Moment of inertia.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Moment of inertia: watch assumptions and option traps."
+      }
+    ],
+    "transferPrompt": "Invent one NEET MCQ that uses two formulas from System of Particles and Rotational Motion."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 6: System of Particles and Rotational Motion only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Centre of mass, Torque, Newton 2 rotation, Moment of inertia, Parallel axis, Angular momentum, Rolling condition, Rotational KE.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "selfCheck": [
+    {
+      "q": "State Centre of mass",
+      "a": "discrete system"
+    },
+    {
+      "q": "Define Centre of mass",
+      "a": "Point that moves as if all mass and net external force acted there."
+    }
+  ]
+}

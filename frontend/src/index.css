@@ -555,7 +555,107 @@ a.topbar-switch-exam:hover {
 .chapter-card .chapter-name { font-weight: 700; font-size: 14.5px; color: var(--color-text); }
 .chapter-card .chapter-count { font-size: 12.5px; color: var(--color-text-muted); }
 
-.practice-session .page-header { display: flex; align-items: center; justify-content: space-between; }
+.practice-grown {
+  margin: 0 0 28px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  background: var(--color-primary-soft);
+}
+.practice-grown h3 { margin: 0 0 8px; font-size: 16px; }
+.practice-grown .lede { margin: 0 0 12px; }
+.practice-pattern-card { background: var(--color-surface, transparent); }
+.ladder-ncert-heading {
+  margin: 8px 0 14px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+.formula-practice-grown { margin-top: 28px; }
+.coach-missing {
+  margin: 14px 0 0;
+  font-size: 13px;
+}
+.practice-coach-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.practice-coach-head h3 { margin: 0; font-size: 15px; }
+.practice-coach-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.coach-pattern { margin: 0 0 8px; }
+.coach-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.coach-hint { margin: 0; font-size: 13px; }
+.coach-toggle { margin: 8px 0; }
+.formula-ladder {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+.formula-ladder li { margin-bottom: 12px; }
+.formula-ladder p { margin: 4px 0 6px; font-size: 14px; }
+.coach-steps h4,
+.coach-traps h4 {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+.coach-why,
+.coach-mistake,
+.coach-transfer,
+.coach-ncert,
+.coach-extra { margin: 10px 0 0; font-size: 14px; }
+.coach-why-lead {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-soft, rgba(59, 130, 246, 0.08));
+  border-radius: 0 6px 6px 0;
+}
+.coach-mode-recall .coach-pattern { font-size: 13px; }
+.practice-coach.coach-mode-recall {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+.highlighted-stem { line-height: 1.55; }
+.stem-term-wrap { position: relative; display: inline; }
+.stem-term {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px dashed var(--color-primary);
+  background: transparent;
+  color: inherit;
+  cursor: help;
+  font: inherit;
+}
+.stem-term.active,
+.stem-term:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+.stem-tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 5;
+  min-width: 220px;
+  max-width: 320px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface, #111827);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: normal;
+}
 .practice-feedback {
   margin-top: 16px;
   padding: 14px 18px;
@@ -741,8 +841,353 @@ a.topbar-switch-exam:hover {
   color: var(--color-primary);
 }
 
+/* —— NCERT Learn / revision packs —— */
+.learn-home .chapter-grid { margin-top: 8px; }
+.learn-chapter-card.coming-soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.learn-page .eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.learn-page .lede {
+  margin: 8px 0 0;
+  color: var(--color-text-muted);
+  max-width: 62ch;
+}
+.learn-page .back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.learn-page .muted { color: var(--color-text-muted); font-size: 13.5px; }
+.learn-page .ref { font-size: 12px; color: var(--color-text-muted); margin: 4px 0 0; }
+.learn-speak {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface, #fff);
+  color: var(--color-text-muted);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.learn-speak:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 20px 0 16px;
+}
+.view-tab {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.view-tab.active,
+.view-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+.view-panel { margin-top: 4px; }
+.cheat-sheet ul,
+.cheat-formulas ul { list-style: none; padding: 0; margin: 12px 0 0; }
+.cheat-sheet li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14.5px;
+}
+.cheat-formulas { margin-top: 24px; }
+.cheat-formulas code {
+  font-size: 13px;
+  background: var(--color-primary-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.highlight-groups section { margin-bottom: 28px; }
+.highlight-groups h3 { text-transform: capitalize; margin-bottom: 10px; }
+.highlight-card,
+.def-card,
+.pattern-card,
+.formula-hero,
+.flash-card,
+.ladder-item {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: var(--color-surface, transparent);
+}
+.highlight-top,
+.def-top,
+.formula-hero-top,
+.flash-card-top,
+.pattern-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.highlight-text { font-size: 15px; margin: 0; }
+.def-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.def-card h3 { margin: 0; font-size: 15px; }
+.formula-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.pill {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 12.5px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+.pill.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+.formula-latex {
+  font-size: 1.25rem;
+  padding: 14px 16px;
+  margin: 8px 0 12px;
+  background: var(--color-primary-soft);
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+.formula-latex .katex-display { margin: 0; }
+.formula-plain { margin: 0 0 8px; color: var(--color-text-muted); font-size: 14px; }
+.math-text .katex { font-size: 1.05em; }
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.figure-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--color-surface, transparent);
+}
+.figure-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.figure-img {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #0b0f14;
+}
+.figure-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 180px;
+  padding: 20px 16px;
+  border: 2px dashed var(--color-border);
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(59,130,246,0.08), rgba(15,23,42,0.35));
+  text-align: center;
+}
+.figure-placeholder-page {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.figure-placeholder-label {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.figure-placeholder-hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  max-width: 28ch;
+}
+.figure-upload-note {
+  margin: 8px 0 0;
+  font-size: 11.5px;
+  color: var(--color-warning);
+}
+.figure-caption {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+.formula-figures { margin: 16px 0; }
+.formula-figures > h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+.cheat-tables { margin-top: 24px; }
+.key-table { margin-bottom: 18px; overflow-x: auto; }
+.key-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+.key-table td {
+  border: 1px solid var(--color-border);
+  padding: 8px 10px;
+}
+.key-table tr:first-child td { font-weight: 700; background: var(--color-primary-soft); }
+.mistake-list { margin: 8px 0 0; padding-left: 18px; color: var(--color-danger); font-size: 13px; }
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.pattern-card h4,
+.ladder-reveal h4 { margin: 10px 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-muted); }
+.pattern-name { font-weight: 600; font-size: 13px; }
+.badge-basic { background: var(--color-success-soft); color: var(--color-success); }
+.badge-intermediate { background: var(--color-warning-soft); color: var(--color-warning); }
+.badge-advanced { background: var(--color-danger-soft); color: var(--color-danger); }
+.flash-deck { max-width: 640px; }
+.flash-meta { font-size: 13px; color: var(--color-text-muted); margin-bottom: 8px; }
+.flash-body { font-size: 16px; line-height: 1.5; margin: 0; white-space: pre-wrap; }
+.flash-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.learn-page .btn {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.learn-page .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.learn-page .btn.primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.ladder-section { margin-bottom: 28px; }
+.ladder-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+.ladder-item-head > p { margin: 0; flex: 1; }
+.ladder-item-actions { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; }
+.ladder-reveal { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--color-border); }
+.answer-line { margin-top: 10px; }
+.prompt-box {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--color-primary-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  max-height: 420px;
+  overflow: auto;
+  margin: 12px 0;
+}
+.transfer-note { margin-top: 12px; }
+.learn-practice-cta { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--color-border); }
+
+.figure-admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.figure-placeholder.compact {
+  min-height: 100px;
+  padding: 12px;
+}
+.admin-figure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+.admin-figure-row {
+  display: grid;
+  grid-template-columns: 1.4fr 160px auto;
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.admin-figure-preview img {
+  width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.admin-figure-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 360px;
+  margin: 12px 0;
+  font-size: 13.5px;
+}
+.admin-field select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+}
+.success { color: var(--color-success); }
+
 @media (max-width: 640px) {
   .topbar { padding: 0 14px; }
   .topbar-nav { display: none; }
   .page { padding: 24px 16px 60px; }
+  .ladder-item-head { flex-direction: column; }
+  .admin-figure-row { grid-template-columns: 1fr; }
 }

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, type ReactNode } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 // Registers \ce (chemical equations) and \pu (physical units) on the katex instance.
@@ -208,15 +208,39 @@ export function renderMathHtml(text: string): string {
   return html.replace(/\n/g, '<br/>');
 }
 
+/**
+ * Two calling conventions are used across the app:
+ *   <MathText as="p" className="…" text={someString} />        — question/option/explanation text
+ *   <MathText>{someString}</MathText>                            — Learn-page prose (children form)
+ * Both go through the same renderMathHtml pipeline above.
+ */
 export function MathText({
   text,
+  children,
   as: Tag = 'span',
+  display = false,
   className,
 }: {
-  text: string;
+  text?: string;
+  children?: ReactNode;
   as?: 'span' | 'p' | 'div';
+  display?: boolean;
   className?: string;
 }) {
-  const html = useMemo(() => renderMathHtml(text), [text]);
-  return <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+  const raw = text ?? (typeof children === 'string' ? children : '');
+  const html = useMemo(() => renderMathHtml(raw), [raw]);
+  if (!raw) return null;
+  const ResolvedTag = display ? 'div' : Tag;
+  return <ResolvedTag className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+/** Block formula (centered / display style), used throughout the Learn pages. */
+export function MathBlock({ children, className }: { children: string; className?: string }) {
+  return (
+    <MathText
+      text={children}
+      as="div"
+      className={className ? `formula-latex ${className}` : 'formula-latex'}
+    />
+  );
 }

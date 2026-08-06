@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { QuestionViewer, QuestionOption } from '../components/QuestionViewer';
 import { MathText } from '../components/MathText';
+import { PracticeCoach } from '../components/PracticeCoach';
 import { getSelectedExamType, examTypeLabel } from '../utils/examType';
+import type { PracticeLearningAid } from '../types/practiceCoach';
 
 interface Subject {
   id: string;
@@ -22,12 +24,14 @@ interface PracticeQuestion {
   questionImageUrl?: string;
   options: QuestionOption[];
   difficulty: string;
+  learningAid?: PracticeLearningAid | null;
 }
 
 interface CheckResult {
   isCorrect: boolean;
   correctOption: string;
   explanation: string | null;
+  learningAid?: PracticeLearningAid | null;
 }
 
 export function Practice() {
@@ -92,6 +96,11 @@ export function Practice() {
       const { data } = await api.post<CheckResult>(`/questions/${current.id}/check`, { selectedOption });
       setResult(data);
       setTally((t) => ({ correct: t.correct + (data.isCorrect ? 1 : 0), attempted: t.attempted + 1 }));
+      if (data.learningAid) {
+        setQuestions((qs) =>
+          qs.map((q, i) => (i === index ? { ...q, learningAid: data.learningAid } : q))
+        );
+      }
     } finally {
       setChecking(false);
     }
@@ -120,6 +129,7 @@ export function Practice() {
     const current = questions[index];
     const isLast = index === questions.length - 1;
     const isDone = index >= questions.length;
+    const aid = (result?.learningAid || current?.learningAid) ?? null;
 
     return (
       <div className="practice-session">
@@ -153,7 +163,17 @@ export function Practice() {
               correctOption={result?.correctOption}
               showAnswer={!!result}
               onSelect={(label) => !result && setSelectedOption(label)}
+              stemHighlights={aid?.stemHighlights}
             />
+
+            {aid ? (
+              <PracticeCoach aid={aid} revealed={!!result} />
+            ) : (
+              <p className="muted coach-missing">
+                Solve coach not added for this question yet — answer key / explanation still work after
+                Check.
+              </p>
+            )}
 
             {result && (
               <div className={`practice-feedback ${result.isCorrect ? 'correct' : 'incorrect'}`}>
@@ -187,7 +207,8 @@ export function Practice() {
         <h1>Practice by Chapter</h1>
         <p className="subtitle">
           Showing <strong>{examTypeLabel(examType)}</strong> only — pick a subject, then a chapter.{' '}
-          <Link to="/choose-exam">Switch exam</Link>
+          <Link to="/choose-exam">Switch exam</Link> Solve coach appears when a learning aid is
+          available.
         </p>
       </div>
 

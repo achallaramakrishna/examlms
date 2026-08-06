@@ -91,7 +91,22 @@ export async function listTopicQuestions(req: Request, res: Response, next: Next
     }
 
     const questions = await qb.getMany();
-    const safeQuestions = questions.map(({ correctOption, explanation, ...safe }) => safe);
+    const safeQuestions = questions.map(({ correctOption, explanation, learningAid, ...safe }) => {
+      // Before the student answers, only send non-spoiling coach fields.
+      let preview: Record<string, unknown> | null = null;
+      if (learningAid && typeof learningAid === 'object') {
+        const aid = learningAid as Record<string, unknown>;
+        preview = {
+          meta: aid.meta,
+          stemHighlights: aid.stemHighlights,
+          readQuestionAudio: aid.readQuestionAudio,
+          conceptTags: aid.conceptTags,
+          given: aid.given,
+          find: aid.find,
+        };
+      }
+      return { ...safe, learningAid: preview };
+    });
 
     res.json({ topic, questions: safeQuestions });
   } catch (err) {

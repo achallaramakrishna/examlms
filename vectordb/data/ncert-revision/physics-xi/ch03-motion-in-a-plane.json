@@ -1,0 +1,873 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 3,
+    "chapterTitle": "Motion in a Plane",
+    "ncertCode": "keph103",
+    "topicIdHint": "Motion in a Plane",
+    "estimatedRevisionMinutes": 50,
+    "chapter": "Motion in a Plane",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Recall core definitions of Motion in a Plane.",
+    "Use the chapter’s key formulas with correct assumptions.",
+    "Solve basic → intermediate → advanced NEET-style problems.",
+    "Avoid common sign/unit/assumption traps."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Vectors, projectile motion, and uniform circular motion — 2D kinematics for NEET.",
+    "mustKnowBullets": [
+      "Scalars have magnitude only; vectors have magnitude and direction.",
+      "Vector addition: parallelogram / triangle law; resolve into components.",
+      "A · B = AB cosθ; A × B = AB sinθ n̂ (right-hand rule).",
+      "Projectile: ax=0, ay=−g; R = (u² sin2θ)/g; H = (u² sin²θ)/(2g); T = (2u sinθ)/g.",
+      "Maximum range on level ground at θ = 45°.",
+      "Uniform circular motion: a = v²/r toward centre; ω = 2π/T; v = ωr.",
+      "Relative velocity in plane: v_AB = v_A − v_B.",
+      "Position, velocity, acceleration are vectors; use unit vectors î, ĵ."
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "3",
+      "text": "Quantity with magnitude only (mass, time, distance).",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "statement",
+      "section": "3",
+      "text": "Scalars have magnitude only; vectors have magnitude and direction.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "3",
+      "text": "Vector addition: parallelogram / triangle law; resolve into components.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "formula_intro",
+      "section": "3",
+      "text": "A · B = AB cosθ; A × B = AB sinθ n̂ (right-hand rule).",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "caution",
+      "section": "3",
+      "text": "Apply sign convention and assumptions before substituting.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "summary",
+      "section": "3",
+      "text": "Vectors, projectile motion, and uniform circular motion — 2D kinematics for NEET.",
+      "whyItMatters": "High-yield for NEET revision.",
+      "neetRelevance": "high"
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "Scalar",
+      "definition": "Quantity with magnitude only (mass, time, distance).",
+      "section": "3"
+    },
+    {
+      "id": "d2",
+      "term": "Vector",
+      "definition": "Quantity with magnitude and direction (displacement, velocity, force).",
+      "section": "3"
+    },
+    {
+      "id": "d3",
+      "term": "Unit vector",
+      "definition": "Vector of magnitude 1 used to specify direction.",
+      "section": "3"
+    },
+    {
+      "id": "d4",
+      "term": "Projectile motion",
+      "definition": "Motion under gravity alone after projection (air neglected).",
+      "section": "3"
+    },
+    {
+      "id": "d5",
+      "term": "Time of flight",
+      "definition": "Total time projectile is in air.",
+      "section": "3"
+    },
+    {
+      "id": "d6",
+      "term": "Range",
+      "definition": "Horizontal distance between projection and landing points.",
+      "section": "3"
+    },
+    {
+      "id": "d7",
+      "term": "Centripetal acceleration",
+      "definition": "a = v²/r directed to centre of circular path.",
+      "section": "3"
+    },
+    {
+      "id": "d8",
+      "term": "Angular speed",
+      "definition": "ω = dθ/dt; for UCM, ω = 2π/T.",
+      "section": "3"
+    }
+  ],
+  "figures": [
+    {
+      "id": "fig-3-1",
+      "kind": "graph",
+      "label": "Fig. 3.1",
+      "ncertPage": 1,
+      "section": "3",
+      "caption": "Resolution of a vector into components",
+      "placeholderText": "NCERT Physics XI · Ch 3 · Fig. 3.1 — Resolution of a vector into components",
+      "src": null,
+      "uploadHint": "Crop from keph103.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-3-2",
+      "kind": "figure",
+      "label": "Fig. 3.2",
+      "ncertPage": 2,
+      "section": "3",
+      "caption": "Parallelogram law of vector addition",
+      "placeholderText": "NCERT Physics XI · Ch 3 · Fig. 3.2 — Parallelogram law of vector addition",
+      "src": null,
+      "uploadHint": "Crop from keph103.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-3-3",
+      "kind": "graph",
+      "label": "Fig. 3.3",
+      "ncertPage": 3,
+      "section": "3",
+      "caption": "Projectile trajectory sketch",
+      "placeholderText": "NCERT Physics XI · Ch 3 · Fig. 3.3 — Projectile trajectory sketch",
+      "src": null,
+      "uploadHint": "Crop from keph103.pdf (match figure in chapter)"
+    },
+    {
+      "id": "fig-3-4",
+      "kind": "figure",
+      "label": "Fig. 3.4",
+      "ncertPage": 4,
+      "section": "3",
+      "caption": "Uniform circular motion — centripetal acceleration",
+      "placeholderText": "NCERT Physics XI · Ch 3 · Fig. 3.4 — Uniform circular motion — centripetal acceleration",
+      "src": null,
+      "uploadHint": "Crop from keph103.pdf (match figure in chapter)"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "F1",
+      "name": "Vector magnitude",
+      "latex": "|\\vec A| = \\sqrt{A_x^2 + A_y^2}",
+      "plain": "magnitude from components",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Vector magnitude",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Vector magnitude and substitute.",
+          "exampleStem": "NEET-style numerical using Vector magnitude.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Vector magnitude",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Vector magnitude.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Vector magnitude: magnitude from components. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F2",
+      "name": "Dot product",
+      "latex": "\\vec A\\cdot\\vec B = AB\\cos\\theta = A_xB_x + A_yB_y",
+      "plain": "scalar product",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Dot product",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Dot product and substitute.",
+          "exampleStem": "NEET-style numerical using Dot product.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Dot product",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Dot product.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Dot product: scalar product. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F3",
+      "name": "Cross product magnitude",
+      "latex": "|\\vec A\\times\\vec B| = AB\\sin\\theta",
+      "plain": "area of parallelogram",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Cross product magnitude",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Cross product magnitude and substitute.",
+          "exampleStem": "NEET-style numerical using Cross product magnitude.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Cross product magnitude",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Cross product magnitude.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Cross product magnitude: area of parallelogram. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F4",
+      "name": "Projectile range",
+      "latex": "R = \\dfrac{u^2\\sin 2\\theta}{g}",
+      "plain": "level ground",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Projectile range",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Projectile range and substitute.",
+          "exampleStem": "NEET-style numerical using Projectile range.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Projectile range",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Projectile range.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Projectile range: level ground. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F5",
+      "name": "Max height",
+      "latex": "H = \\dfrac{u^2\\sin^2\\theta}{2g}",
+      "plain": "peak of trajectory",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Max height",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Max height and substitute.",
+          "exampleStem": "NEET-style numerical using Max height.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Max height",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Max height.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Max height: peak of trajectory. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F6",
+      "name": "Time of flight",
+      "latex": "T = \\dfrac{2u\\sin\\theta}{g}",
+      "plain": "level ground",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Time of flight",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Time of flight and substitute.",
+          "exampleStem": "NEET-style numerical using Time of flight.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Time of flight",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Time of flight.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Time of flight: level ground. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F7",
+      "name": "Centripetal acceleration",
+      "latex": "a_c = \\dfrac{v^2}{r} = \\omega^2 r",
+      "plain": "UCM",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Centripetal acceleration",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Centripetal acceleration and substitute.",
+          "exampleStem": "NEET-style numerical using Centripetal acceleration.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Centripetal acceleration",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Centripetal acceleration.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Centripetal acceleration: UCM. Use it when the problem matches its assumptions in Motion in a Plane."
+    },
+    {
+      "id": "F8",
+      "name": "Relative velocity",
+      "latex": "\\vec v_{AB} = \\vec v_A - \\vec v_B",
+      "plain": "A relative to B",
+      "symbols": [],
+      "whenToUse": "Core NCERT formula for Motion in a Plane.",
+      "commonMistakes": [
+        "Wrong units/signs",
+        "Using formula outside its assumptions"
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Basic Relative velocity",
+          "howToInterpret": "Identify given quantities and the unknown.",
+          "howItConnectsToFormula": "Map symbols in Relative velocity and substitute.",
+          "exampleStem": "NEET-style numerical using Relative velocity.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Mixed Relative velocity",
+          "howToInterpret": "May need a second relation from the chapter.",
+          "howItConnectsToFormula": "Combine with another formula from this chapter.",
+          "exampleStem": "Two-step problem involving Relative velocity.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Relative velocity: A relative to B. Use it when the problem matches its assumptions in Motion in a Plane."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "F6",
+      "F7",
+      "F8"
+    ],
+    "definitionViewOrder": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8"
+    ],
+    "cheatSheetFocus": [
+      "mustKnowBullets",
+      "formulas"
+    ]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": [
+        "vector"
+      ],
+      "stages": {
+        "question": "State / recall: Vector magnitude",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "|\\vec A| = \\sqrt{A_x^2 + A_y^2}",
+        "solutionSteps": [
+          "Write Vector magnitude",
+          "Identify symbols",
+          "Meaning: magnitude from components"
+        ],
+        "answer": "magnitude from components"
+      },
+      "audioScript": "Recall Vector magnitude: magnitude from components."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": [
+        "dot"
+      ],
+      "stages": {
+        "question": "State / recall: Dot product",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "\\vec A\\cdot\\vec B = AB\\cos\\theta = A_xB_x + A_yB_y",
+        "solutionSteps": [
+          "Write Dot product",
+          "Identify symbols",
+          "Meaning: scalar product"
+        ],
+        "answer": "scalar product"
+      },
+      "audioScript": "Recall Dot product: scalar product."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": [
+        "cross"
+      ],
+      "stages": {
+        "question": "State / recall: Cross product magnitude",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "|\\vec A\\times\\vec B| = AB\\sin\\theta",
+        "solutionSteps": [
+          "Write Cross product magnitude",
+          "Identify symbols",
+          "Meaning: area of parallelogram"
+        ],
+        "answer": "area of parallelogram"
+      },
+      "audioScript": "Recall Cross product magnitude: area of parallelogram."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": [
+        "projectile"
+      ],
+      "stages": {
+        "question": "State / recall: Projectile range",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "R = \\dfrac{u^2\\sin 2\\theta}{g}",
+        "solutionSteps": [
+          "Write Projectile range",
+          "Identify symbols",
+          "Meaning: level ground"
+        ],
+        "answer": "level ground"
+      },
+      "audioScript": "Recall Projectile range: level ground."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "advanced",
+      "tags": [
+        "max"
+      ],
+      "stages": {
+        "question": "State / recall: Max height",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "H = \\dfrac{u^2\\sin^2\\theta}{2g}",
+        "solutionSteps": [
+          "Write Max height",
+          "Identify symbols",
+          "Meaning: peak of trajectory"
+        ],
+        "answer": "peak of trajectory"
+      },
+      "audioScript": "Recall Max height: peak of trajectory."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "advanced",
+      "tags": [
+        "time"
+      ],
+      "stages": {
+        "question": "State / recall: Time of flight",
+        "interpretation": "Core relation in Motion in a Plane.",
+        "formula": "T = \\dfrac{2u\\sin\\theta}{g}",
+        "solutionSteps": [
+          "Write Time of flight",
+          "Identify symbols",
+          "Meaning: level ground"
+        ],
+        "answer": "level ground"
+      },
+      "audioScript": "Recall Time of flight: level ground."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Scalar",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Quantity with magnitude only (mass, time, distance)."
+      },
+      "audioScript": "Scalar: Quantity with magnitude only (mass, time, distance)."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Vector",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Quantity with magnitude and direction (displacement, velocity, force)."
+      },
+      "audioScript": "Vector: Quantity with magnitude and direction (displacement, velocity, force)."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Unit vector",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Vector of magnitude 1 used to specify direction."
+      },
+      "audioScript": "Unit vector: Vector of magnitude 1 used to specify direction."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Projectile motion",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Motion under gravity alone after projection (air neglected)."
+      },
+      "audioScript": "Projectile motion: Motion under gravity alone after projection (air neglected)."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Time of flight",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Total time projectile is in air."
+      },
+      "audioScript": "Time of flight: Total time projectile is in air."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "basic",
+      "tags": [
+        "definition"
+      ],
+      "stages": {
+        "question": "Define: Range",
+        "interpretation": "NCERT definition check.",
+        "formula": "none — definition",
+        "solutionSteps": [
+          "Recall NCERT wording",
+          "State essential features"
+        ],
+        "answer": "Horizontal distance between projection and landing points."
+      },
+      "audioScript": "Range: Horizontal distance between projection and landing points."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the key idea of Motion in a Plane?",
+      "Name one formula you must not mix up."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Basic drill: apply Vector magnitude with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Vector magnitude directly after listing knowns."
+      },
+      {
+        "id": "pb2",
+        "question": "Basic drill: apply Dot product with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Dot product directly after listing knowns."
+      },
+      {
+        "id": "pb3",
+        "question": "Basic drill: apply Cross product magnitude with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Cross product magnitude directly after listing knowns."
+      },
+      {
+        "id": "pb4",
+        "question": "Basic drill: apply Projectile range with clean numbers.",
+        "interpretation": "Single-formula substitution.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "List given",
+          "Write formula",
+          "Substitute",
+          "Check units"
+        ],
+        "answer": "Numerical as per data",
+        "audioScript": "Use Projectile range directly after listing knowns."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Intermediate: two-step problem involving Vector magnitude.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Vector magnitude with one extra relation from the chapter."
+      },
+      {
+        "id": "pi2",
+        "question": "Intermediate: two-step problem involving Dot product.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Dot product with one extra relation from the chapter."
+      },
+      {
+        "id": "pi3",
+        "question": "Intermediate: two-step problem involving Cross product magnitude.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Cross product magnitude with one extra relation from the chapter."
+      },
+      {
+        "id": "pi4",
+        "question": "Intermediate: two-step problem involving Projectile range.",
+        "interpretation": "Need an intermediate quantity first.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Find intermediate",
+          "Apply main formula",
+          "Interpret result"
+        ],
+        "answer": "As computed",
+        "audioScript": "Bridge to Projectile range with one extra relation from the chapter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Advanced NEET-style mix using Vector magnitude.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F1"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Vector magnitude: watch assumptions and option traps."
+      },
+      {
+        "id": "pa2",
+        "question": "Advanced NEET-style mix using Dot product.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F2"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Dot product: watch assumptions and option traps."
+      },
+      {
+        "id": "pa3",
+        "question": "Advanced NEET-style mix using Cross product magnitude.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F3"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Cross product magnitude: watch assumptions and option traps."
+      },
+      {
+        "id": "pa4",
+        "question": "Advanced NEET-style mix using Projectile range.",
+        "interpretation": "Trap options + concept check.",
+        "formulaIds": [
+          "F4"
+        ],
+        "steps": [
+          "Spot assumptions",
+          "Choose formula set",
+          "Eliminate traps"
+        ],
+        "answer": "Correct option after analysis",
+        "audioScript": "Advanced use of Projectile range: watch assumptions and option traps."
+      }
+    ],
+    "transferPrompt": "Invent one NEET MCQ that uses two formulas from Motion in a Plane."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 3: Motion in a Plane only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Vector magnitude, Dot product, Cross product magnitude, Projectile range, Max height, Time of flight, Centripetal acceleration, Relative velocity.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "selfCheck": [
+    {
+      "q": "State Vector magnitude",
+      "a": "magnitude from components"
+    },
+    {
+      "q": "Define Scalar",
+      "a": "Quantity with magnitude only (mass, time, distance)."
+    }
+  ]
+}

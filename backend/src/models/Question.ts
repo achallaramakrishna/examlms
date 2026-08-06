@@ -60,6 +60,13 @@ export class Question {
   @Column({ type: 'text', nullable: true })
   explanation?: string;
 
+  /**
+   * Optional structured coaching payload (formula ladder, glossary, audio scripts).
+   * Generated via vectordb/prompts/practice-learning-aid-prompt.md
+   */
+  @Column({ name: 'learning_aid', type: 'jsonb', nullable: true })
+  learningAid?: Record<string, unknown>;
+
   @Column({ type: 'varchar', default: 'medium' })
   difficulty!: QuestionDifficulty;
 
