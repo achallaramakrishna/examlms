@@ -32,7 +32,13 @@ frontend/vite.config.d.ts
 # copyrighted exam content, never commit it
 backend/public/question-images/*
 !backend/public/question-images/.gitkeep
+backend/public/ncert-revision-images/*
+!backend/public/ncert-revision-images/.gitkeep
 vectordb/data/scans/**/*
 !vectordb/data/scans/**/.gitkeep
 vectordb/data/extracted/*
 !vectordb/data/extracted/.gitkeep
+
+# Raw NCERT source PDFs — only the generated JSON revision packs are
+# committed; re-download from ncert.nic.in if the PDFs are needed again
+vectordb/data/ncert-revision/**/*.pdf
