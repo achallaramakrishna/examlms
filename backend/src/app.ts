@@ -30,6 +30,12 @@ export function createApp(): Express {
     express.static(path.join(__dirname, '../public/question-images'))
   );
 
+  app.use(
+    '/ncert-revision-images',
+    helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }),
+    express.static(path.join(__dirname, '../public/ncert-revision-images'))
+  );
+
   app.use('/api', routes);
 
   app.use(notFoundHandler);

@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { EditQuestionsTab } from './AdminQuestionEditor';
+import { LearnFiguresTab } from './AdminLearnFigures';
 
 interface Exam {
   id: string;
@@ -19,7 +20,7 @@ interface Topic {
   name: string;
 }
 
-type Tab = 'exams' | 'questions' | 'edit-questions';
+type Tab = 'exams' | 'questions' | 'edit-questions' | 'learn-figures';
 
 export function AdminPanel() {
   const [tab, setTab] = useState<Tab>('exams');
@@ -39,7 +40,7 @@ export function AdminPanel() {
     <div className="admin-panel">
       <div className="page-header">
         <h1>Admin</h1>
-        <p className="subtitle">Manage exams and the question bank.</p>
+        <p className="subtitle">Manage exams, question bank, and Learn chapter figures.</p>
       </div>
 
       <div className="admin-tabs">
@@ -64,11 +65,19 @@ export function AdminPanel() {
         >
           Edit Questions
         </button>
+        <button
+          type="button"
+          className={tab === 'learn-figures' ? '' : 'btn-outline'}
+          onClick={() => setTab('learn-figures')}
+        >
+          Learn figures
+        </button>
       </div>
 
       {tab === 'exams' && <ExamsTab exams={exams} onCreated={refreshExams} />}
       {tab === 'questions' && <QuestionsTab exams={exams} subjects={subjects} />}
       {tab === 'edit-questions' && <EditQuestionsTab exams={exams} subjects={subjects} />}
+      {tab === 'learn-figures' && <LearnFiguresTab />}
     </div>
   );
 }

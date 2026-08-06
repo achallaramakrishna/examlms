@@ -6,6 +6,7 @@ import subjectRoutes from './subjectRoutes';
 import studentRoutes from './studentRoutes';
 import performanceRoutes from './performanceRoutes';
 import aiRoutes from './aiRoutes';
+import ncertRevisionRoutes from './ncertRevisionRoutes';
 
 const router = Router();
 
@@ -16,5 +17,6 @@ router.use('/subjects', subjectRoutes);
 router.use('/students', studentRoutes);
 router.use('/performance', performanceRoutes);
 router.use('/ai', aiRoutes);
+router.use('/ncert-revision', ncertRevisionRoutes);
 
 export default router;

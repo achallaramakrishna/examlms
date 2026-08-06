@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { MathBlock, MathText } from '../components/MathText'
+import {
+  deleteLearnFigure,
+  fetchFigureOverrides,
+  uploadLearnFigure,
+} from '../services/ncertRevisionApi'
 import type {
   Difficulty,
   LadderItem,
@@ -9,6 +14,7 @@ import type {
   RevisionFormula,
   RevisionPack,
 } from '../types/ncertRevision'
+import { isAdmin } from '../utils/auth'
 import { speakText, stopSpeaking } from '../utils/speech'
 
 type ViewId =
@@ -55,7 +61,19 @@ function figureSrc(src: string | null | undefined): string | null {
   return `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}`
 }
 
-function FigureCard({ figure }: { figure: RevisionFigure }) {
+function FigureCard({
+  figure,
+  admin,
+  busy,
+  onUpload,
+  onRemove,
+}: {
+  figure: RevisionFigure
+  admin?: boolean
+  busy?: boolean
+  onUpload?: (file: File) => void
+  onRemove?: () => void
+}) {
   const src = figureSrc(figure.src)
   return (
     <article className="figure-card">
@@ -73,10 +91,37 @@ function FigureCard({ figure }: { figure: RevisionFigure }) {
           <div className="figure-placeholder-label">{figure.label}</div>
           <div className="figure-placeholder-hint">{figure.placeholderText}</div>
           {figure.uploadHint && <p className="muted">{figure.uploadHint}</p>}
-          <p className="figure-upload-note">Placeholder — replace via Admin / upload image, then set src</p>
+          <p className="figure-upload-note">
+            {admin ? 'Placeholder — upload the cropped NCERT page image below' : 'Image coming soon'}
+          </p>
         </div>
       )}
-      <p className="figure-caption">{figure.caption}</p>
+      <p className="figure-caption">
+        <MathText>{figure.caption}</MathText>
+      </p>
+      {admin && (
+        <div className="figure-admin-actions">
+          <label className="btn">
+            {busy ? 'Uploading…' : src ? 'Replace image' : 'Upload image'}
+            <input
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+              hidden
+              disabled={busy}
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                e.target.value = ''
+                if (file && onUpload) onUpload(file)
+              }}
+            />
+          </label>
+          {src && (
+            <button type="button" className="btn" disabled={busy} onClick={() => onRemove?.()}>
+              Remove
+            </button>
+          )}
+        </div>
+      )}
     </article>
   )
 }
@@ -84,9 +129,17 @@ function FigureCard({ figure }: { figure: RevisionFigure }) {
 function FormulaStudio({
   formulas,
   figures,
+  admin,
+  busyId,
+  onUpload,
+  onRemove,
 }: {
   formulas: RevisionFormula[]
   figures: RevisionFigure[]
+  admin?: boolean
+  busyId?: string | null
+  onUpload?: (figureId: string, file: File) => void
+  onRemove?: (figureId: string) => void
 }) {
   const [activeId, setActiveId] = useState(formulas[0]?.id ?? '')
   const formula = formulas.find((f) => f.id === activeId) ?? formulas[0]
@@ -146,7 +199,14 @@ function FormulaStudio({
           <h4>NCERT figure</h4>
           <div className="figure-grid">
             {linked.map((fig) => (
-              <FigureCard key={fig.id} figure={fig} />
+              <FigureCard
+                key={fig.id}
+                figure={fig}
+                admin={admin}
+                busy={busyId === fig.id}
+                onUpload={(file) => onUpload?.(fig.id, file)}
+                onRemove={() => onRemove?.(fig.id)}
+              />
             ))}
           </div>
         </div>
@@ -401,20 +461,33 @@ export function LearnChapter() {
   const [pack, setPack] = useState<RevisionPack | null>(null)
   const [error, setError] = useState('')
   const [view, setView] = useState<ViewId>('cheat')
+  const [busyId, setBusyId] = useState<string | null>(null)
+  const [uploadError, setUploadError] = useState<string | null>(null)
+  const admin = isAdmin()
 
   useEffect(() => {
     let cancelled = false
     setPack(null)
     setError('')
+    setUploadError(null)
     setView('cheat')
     stopSpeaking()
-    fetch(`${import.meta.env.BASE_URL}ncert-revision/physics-xi/${slug}.json`)
-      .then(async (r) => {
+    Promise.all([
+      fetch(`${import.meta.env.BASE_URL}ncert-revision/physics-xi/${slug}.json`).then(async (r) => {
         if (!r.ok) throw new Error(`Pack not found (${r.status})`)
         return r.json()
-      })
-      .then((data) => {
-        if (!cancelled) setPack(normalizePack(data))
+      }),
+      fetchFigureOverrides(slug).catch((): Record<string, { src: string }> => ({})),
+    ])
+      .then(([data, overrides]) => {
+        if (cancelled) return
+        const normalized = normalizePack(data)
+        const overrideMap = overrides as Record<string, { src: string }>
+        const figures = (normalized.figures || []).map((f) => ({
+          ...f,
+          src: overrideMap[f.id]?.src || f.src || null,
+        }))
+        setPack({ ...normalized, figures })
       })
       .catch((e: Error) => {
         if (!cancelled) setError(e.message || 'Failed to load chapter pack')
@@ -424,6 +497,48 @@ export function LearnChapter() {
       stopSpeaking()
     }
   }, [slug])
+
+  async function handleFigureUpload(figureId: string, file: File) {
+    setBusyId(figureId)
+    setUploadError(null)
+    try {
+      const data = await uploadLearnFigure(slug, figureId, file)
+      setPack((prev) => {
+        if (!prev) return prev
+        return {
+          ...prev,
+          figures: (prev.figures || []).map((f) =>
+            f.id === figureId ? { ...f, src: data.src } : f
+          ),
+        }
+      })
+    } catch (err: any) {
+      setUploadError(err.response?.data?.error ?? err.message ?? 'Upload failed')
+    } finally {
+      setBusyId(null)
+    }
+  }
+
+  async function handleFigureRemove(figureId: string) {
+    setBusyId(figureId)
+    setUploadError(null)
+    try {
+      await deleteLearnFigure(slug, figureId)
+      setPack((prev) => {
+        if (!prev) return prev
+        return {
+          ...prev,
+          figures: (prev.figures || []).map((f) =>
+            f.id === figureId ? { ...f, src: null } : f
+          ),
+        }
+      })
+    } catch (err: any) {
+      setUploadError(err.response?.data?.error ?? err.message ?? 'Remove failed')
+    } finally {
+      setBusyId(null)
+    }
+  }
 
   const highlightGroups = useMemo(() => {
     if (!pack?.highlights) return []
@@ -601,19 +716,36 @@ export function LearnChapter() {
         {view === 'figures' && (
           <div className="figures-view">
             <p className="lede">
-              NCERT figures/tables for this chapter. Placeholders show the textbook page — upload the
-              real image in Admin later and set <code>src</code> on the figure.
+              NCERT figures/tables for this chapter. Placeholders show the textbook page
+              {admin
+                ? ' — upload a crop here or from Admin → Learn figures.'
+                : '.'}
             </p>
+            {uploadError && <p className="error">{uploadError}</p>}
             <div className="figure-grid">
               {(pack.figures || []).map((fig) => (
-                <FigureCard key={fig.id} figure={fig} />
+                <FigureCard
+                  key={fig.id}
+                  figure={fig}
+                  admin={admin}
+                  busy={busyId === fig.id}
+                  onUpload={(file) => void handleFigureUpload(fig.id, file)}
+                  onRemove={() => void handleFigureRemove(fig.id)}
+                />
               ))}
             </div>
           </div>
         )}
 
         {view === 'formulas' && (
-          <FormulaStudio formulas={pack.formulas || []} figures={pack.figures || []} />
+          <FormulaStudio
+            formulas={pack.formulas || []}
+            figures={pack.figures || []}
+            admin={admin}
+            busyId={busyId}
+            onUpload={(id, file) => void handleFigureUpload(id, file)}
+            onRemove={(id) => void handleFigureRemove(id)}
+          />
         )}
 
         {view === 'flashcards' && <FlashcardDeck cards={pack.flashcards || []} />}
