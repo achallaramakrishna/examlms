@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { ChapterIndex, RevisionFigure, RevisionPack } from '../types/ncertRevision';
 import {
   deleteLearnFigure,
@@ -8,6 +8,49 @@ import {
   type FigureOverrideMap,
 } from '../services/ncertRevisionApi';
 
+function FigureUploadControls({
+  hasImage,
+  busy,
+  onUpload,
+  onRemove,
+}: {
+  hasImage: boolean;
+  busy: boolean;
+  onUpload: (file: File) => void;
+  onRemove: () => void;
+}) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  return (
+    <div className="admin-figure-actions">
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        hidden
+        onChange={(e) => {
+          const file = e.target.files?.[0];
+          e.target.value = '';
+          if (file) onUpload(file);
+        }}
+      />
+      <button
+        type="button"
+        className="btn"
+        disabled={busy}
+        onClick={() => inputRef.current?.click()}
+      >
+        {busy ? 'Working…' : hasImage ? 'Replace' : 'Upload'}
+      </button>
+      {hasImage && (
+        <button type="button" className="btn-outline" disabled={busy} onClick={onRemove}>
+          Remove
+        </button>
+      )}
+    </div>
+  );
+}
+
 export function LearnFiguresTab() {
   const [index, setIndex] = useState<ChapterIndex | null>(null);
   const [slug, setSlug] = useState('');
@@ -16,6 +59,7 @@ export function LearnFiguresTab() {
   const [error, setError] = useState<string | null>(null);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [previewTick, setPreviewTick] = useState(0);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}ncert-revision/${LEARN_TRACK}/index.json`)
@@ -56,14 +100,15 @@ export function LearnFiguresTab() {
     };
   }, [slug]);
 
-  async function handleUpload(figureId: string, file: File | undefined) {
-    if (!file || !slug) return;
+  async function handleUpload(figureId: string, file: File) {
+    if (!slug) return;
     setBusyId(figureId);
     setError(null);
     setMessage(null);
     try {
       const data = await uploadLearnFigure(slug, figureId, file);
-      setOverrides(data.figures);
+      setOverrides({ ...data.figures });
+      setPreviewTick((t) => t + 1);
       setMessage(`Uploaded image for ${figureId}`);
     } catch (err: any) {
       setError(err.response?.data?.error ?? err.message ?? 'Upload failed');
@@ -77,12 +122,25 @@ export function LearnFiguresTab() {
     setBusyId(figureId);
     setError(null);
     setMessage(null);
+    // Optimistic clear so the preview disappears immediately
+    setOverrides((prev) => {
+      const next = { ...prev };
+      delete next[figureId];
+      return next;
+    });
+    setPreviewTick((t) => t + 1);
     try {
       const figuresMap = await deleteLearnFigure(slug, figureId);
-      setOverrides(figuresMap);
-      setMessage(`Removed image for ${figureId}`);
+      setOverrides({ ...figuresMap });
+      setMessage(`Removed image for ${figureId}. You can upload a new one.`);
     } catch (err: any) {
       setError(err.response?.data?.error ?? err.message ?? 'Remove failed');
+      // Reload authoritative state
+      try {
+        setOverrides(await fetchFigureOverrides(slug));
+      } catch {
+        /* ignore */
+      }
     } finally {
       setBusyId(null);
     }
@@ -91,8 +149,8 @@ export function LearnFiguresTab() {
   return (
     <div className="learn-admin-tab">
       <p className="subtitle">
-        Upload NCERT figure/table crops for Learn chapters. Students see them on the Figures tab and
-        in Formula studio.
+        Upload NCERT figure/table crops for Learn chapters. Use <strong>Replace</strong> to change an
+        image, or <strong>Remove</strong> then <strong>Upload</strong> again.
       </p>
 
       <label className="admin-field">
@@ -115,7 +173,7 @@ export function LearnFiguresTab() {
 
       <div className="admin-figure-list">
         {figures.map((fig) => {
-          const src = overrides[fig.id]?.src || fig.src || null;
+          const src = overrides[fig.id]?.src || null;
           return (
             <article key={fig.id} className="admin-figure-row">
               <div>
@@ -127,7 +185,7 @@ export function LearnFiguresTab() {
               </div>
               <div className="admin-figure-preview">
                 {src ? (
-                  <img src={src} alt={fig.label} />
+                  <img key={`${fig.id}-${src}-${previewTick}`} src={src} alt={fig.label} />
                 ) : (
                   <div className="figure-placeholder compact">
                     <span>Page {fig.ncertPage}</span>
@@ -135,32 +193,12 @@ export function LearnFiguresTab() {
                   </div>
                 )}
               </div>
-              <div className="admin-figure-actions">
-                <label className="btn">
-                  {busyId === fig.id ? 'Working…' : 'Upload'}
-                  <input
-                    type="file"
-                    accept="image/png,image/jpeg,image/webp"
-                    hidden
-                    disabled={busyId === fig.id}
-                    onChange={(e) => {
-                      const file = e.target.files?.[0];
-                      e.target.value = '';
-                      void handleUpload(fig.id, file);
-                    }}
-                  />
-                </label>
-                {src && (
-                  <button
-                    type="button"
-                    className="btn-outline"
-                    disabled={busyId === fig.id}
-                    onClick={() => void handleRemove(fig.id)}
-                  >
-                    Remove
-                  </button>
-                )}
-              </div>
+              <FigureUploadControls
+                hasImage={Boolean(src)}
+                busy={busyId === fig.id}
+                onUpload={(file) => void handleUpload(fig.id, file)}
+                onRemove={() => void handleRemove(fig.id)}
+              />
             </article>
           );
         })}

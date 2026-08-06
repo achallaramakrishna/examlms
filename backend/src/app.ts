@@ -33,7 +33,14 @@ export function createApp(): Express {
   app.use(
     '/ncert-revision-images',
     helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }),
-    express.static(path.join(__dirname, '../public/ncert-revision-images'))
+    express.static(path.join(__dirname, '../public/ncert-revision-images'), {
+      etag: false,
+      lastModified: false,
+      setHeaders: (res) => {
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+      },
+    })
   );
 
   app.use('/api', routes);

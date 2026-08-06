@@ -33,8 +33,8 @@ function writeOverrides(track: string, slug: string, data: FigureOverrides): voi
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n', 'utf8');
 }
 
-function publicUrl(track: string, slug: string, filename: string): string {
-  return `${env.publicAssetBaseUrl}/ncert-revision-images/${safeSeg(track)}/${safeSeg(slug)}/${filename}`;
+function publicUrl(track: string, slug: string, filename: string, version: string): string {
+  return `${env.publicAssetBaseUrl}/ncert-revision-images/${safeSeg(track)}/${safeSeg(slug)}/${filename}?v=${encodeURIComponent(version)}`;
 }
 
 /** GET — figure src overrides for a revision pack (students + admins). */
@@ -44,6 +44,7 @@ export async function getFigureOverrides(req: Request, res: Response, next: Next
     const slug = safeSeg(String(req.params.slug));
     if (!track || !slug) throw new ApiError(400, 'track and slug are required');
     const figures = readOverrides(track, slug);
+    res.setHeader('Cache-Control', 'no-store');
     res.json({ track, slug, figures });
   } catch (err) {
     next(err);
@@ -59,21 +60,33 @@ export async function uploadFigure(req: Request, res: Response, next: NextFuncti
     const figureId = safeSeg(String(req.params.figureId));
     if (!track || !slug || !figureId) throw new ApiError(400, 'track, slug, and figureId are required');
 
-    const src = publicUrl(track, slug, req.file.filename);
-    const overrides = readOverrides(track, slug);
-    // Remove older files for this figureId with a different extension
+    const version = String(Date.now());
     const dir = path.join(NCERT_REVISION_IMAGES_DIR, track, slug);
-    if (fs.existsSync(dir)) {
-      for (const name of fs.readdirSync(dir)) {
-        if (name.startsWith(`${figureId}.`) && name !== req.file.filename) {
-          try {
-            fs.unlinkSync(path.join(dir, name));
-          } catch {
-            /* ignore */
-          }
+    fs.mkdirSync(dir, { recursive: true });
+
+    // Always use a versioned filename so browsers never keep a stale crop.
+    const ext = path.extname(req.file.filename).toLowerCase() || path.extname(req.file.originalname).toLowerCase() || '.png';
+    const versionedName = `${figureId}-${version}${ext}`;
+    const versionedPath = path.join(dir, versionedName);
+    // Multer already wrote req.file.path — rename into versioned name.
+    if (req.file.path !== versionedPath) {
+      fs.renameSync(req.file.path, versionedPath);
+    }
+
+    // Remove any previous files for this figure id
+    for (const name of fs.readdirSync(dir)) {
+      if (name === versionedName) continue;
+      if (name === figureId || name.startsWith(`${figureId}.`) || name.startsWith(`${figureId}-`)) {
+        try {
+          fs.unlinkSync(path.join(dir, name));
+        } catch {
+          /* ignore */
         }
       }
     }
+
+    const src = publicUrl(track, slug, versionedName, version);
+    const overrides = readOverrides(track, slug);
     overrides[figureId] = { src, updatedAt: new Date().toISOString() };
     writeOverrides(track, slug, overrides);
 
@@ -92,21 +105,23 @@ export async function deleteFigure(req: Request, res: Response, next: NextFuncti
     if (!track || !slug || !figureId) throw new ApiError(400, 'track, slug, and figureId are required');
 
     const overrides = readOverrides(track, slug);
-    const existing = overrides[figureId];
-    if (existing?.src) {
-      const filename = path.basename(existing.src);
-      const filePath = path.join(NCERT_REVISION_IMAGES_DIR, track, slug, filename);
-      if (fs.existsSync(filePath)) {
-        try {
-          fs.unlinkSync(filePath);
-        } catch {
-          /* ignore */
+    const dir = path.join(NCERT_REVISION_IMAGES_DIR, track, slug);
+    if (fs.existsSync(dir)) {
+      for (const name of fs.readdirSync(dir)) {
+        if (name === figureId || name.startsWith(`${figureId}.`) || name.startsWith(`${figureId}-`)) {
+          try {
+            fs.unlinkSync(path.join(dir, name));
+          } catch {
+            /* ignore */
+          }
         }
       }
     }
     delete overrides[figureId];
     writeOverrides(track, slug, overrides);
-    res.json({ figureId, figures: overrides });
+    // Disable caching of this JSON response
+    res.setHeader('Cache-Control', 'no-store');
+    res.json({ figureId, removed: true, figures: overrides });
   } catch (err) {
     next(err);
   }

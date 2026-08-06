@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { MathBlock, MathText } from '../components/MathText'
 import {
@@ -74,6 +74,7 @@ function FigureCard({
   onUpload?: (file: File) => void
   onRemove?: () => void
 }) {
+  const inputRef = useRef<HTMLInputElement>(null)
   const src = figureSrc(figure.src)
   return (
     <article className="figure-card">
@@ -84,7 +85,7 @@ function FigureCard({
         {figure.section && <span className="ref">§{figure.section}</span>}
       </div>
       {src ? (
-        <img className="figure-img" src={src} alt={figure.caption || figure.label} />
+        <img key={src} className="figure-img" src={src} alt={figure.caption || figure.label} />
       ) : (
         <div className="figure-placeholder" role="img" aria-label={figure.placeholderText}>
           <div className="figure-placeholder-page">Page {figure.ncertPage}</div>
@@ -101,20 +102,25 @@ function FigureCard({
       </p>
       {admin && (
         <div className="figure-admin-actions">
-          <label className="btn">
+          <input
+            ref={inputRef}
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            hidden
+            onChange={(e) => {
+              const file = e.target.files?.[0]
+              e.target.value = ''
+              if (file && onUpload) onUpload(file)
+            }}
+          />
+          <button
+            type="button"
+            className="btn"
+            disabled={busy}
+            onClick={() => inputRef.current?.click()}
+          >
             {busy ? 'Uploading…' : src ? 'Replace image' : 'Upload image'}
-            <input
-              type="file"
-              accept="image/png,image/jpeg,image/webp"
-              hidden
-              disabled={busy}
-              onChange={(e) => {
-                const file = e.target.files?.[0]
-                e.target.value = ''
-                if (file && onUpload) onUpload(file)
-              }}
-            />
-          </label>
+          </button>
           {src && (
             <button type="button" className="btn" disabled={busy} onClick={() => onRemove?.()}>
               Remove
@@ -522,19 +528,35 @@ export function LearnChapter() {
   async function handleFigureRemove(figureId: string) {
     setBusyId(figureId)
     setUploadError(null)
+    // Optimistic clear
+    setPack((prev) => {
+      if (!prev) return prev
+      return {
+        ...prev,
+        figures: (prev.figures || []).map((f) =>
+          f.id === figureId ? { ...f, src: null } : f
+        ),
+      }
+    })
     try {
       await deleteLearnFigure(slug, figureId)
-      setPack((prev) => {
-        if (!prev) return prev
-        return {
-          ...prev,
-          figures: (prev.figures || []).map((f) =>
-            f.id === figureId ? { ...f, src: null } : f
-          ),
-        }
-      })
     } catch (err: any) {
       setUploadError(err.response?.data?.error ?? err.message ?? 'Remove failed')
+      try {
+        const overrides = await fetchFigureOverrides(slug)
+        setPack((prev) => {
+          if (!prev) return prev
+          return {
+            ...prev,
+            figures: (prev.figures || []).map((f) => ({
+              ...f,
+              src: overrides[f.id]?.src || null,
+            })),
+          }
+        })
+      } catch {
+        /* ignore */
+      }
     } finally {
       setBusyId(null)
     }
