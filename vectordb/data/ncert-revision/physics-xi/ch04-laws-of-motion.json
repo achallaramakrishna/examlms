@@ -27,7 +27,10 @@
       "Third law: action–reaction pairs act on different bodies.",
       "Momentum p = mv; impulse = Δp = F_avg Δt.",
       "Friction: f_s ≤ μ_s N; f_k = μ_k N; opposes relative tendency/motion.",
-      "Banking / skidding: on level road v_max = √(μrg).",
+      "Banking / skidding: on level road v_max = √(μrg); banked WITHOUT friction v₀=√(Rg tanθ); banked WITH friction v_max=√[Rg(μs+tanθ)/(1−μs tanθ)].",
+      "Angle of repose: the maximum incline angle θ_max at which a block just remains on the verge of sliding satisfies tanθ_max = μs — numerically equal to the angle of friction.",
+      "Spring (restoring) force: F = −kx, where k is the force constant; negative sign shows the force opposes the displacement from the natural length.",
+      "Law of conservation of momentum: in an isolated system (no external force), total momentum before = total momentum after — a direct consequence of Newton's second and third laws together.",
       "Pseudo force in non-inertial frames: −ma_frame.",
       "Connected bodies: common acceleration; tension from free-body diagrams."
     ]
@@ -80,6 +83,38 @@
       "text": "Newton’s laws, friction, circular motion dynamics — forces cause acceleration.",
       "whyItMatters": "High-yield for NEET revision.",
       "neetRelevance": "high"
+    },
+    {
+      "id": "h7",
+      "type": "formula_intro",
+      "section": "4.7",
+      "text": "The total momentum of an isolated system of interacting particles is conserved: pA + pB = p'A + p'B, a direct consequence of Newton's second and third laws applied to a collision (F_AB Δt = p'A−pA and F_BA Δt = p'B−pB, with F_AB=−F_BA).",
+      "whyItMatters": "The Law of Conservation of Momentum — a distinct named law, foundational for the collisions chapter, but its own testable statement here.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h8b",
+      "type": "formula_intro",
+      "section": "4.9",
+      "text": "The spring (restoring) force is F = −kx, where k is the spring's force constant and x is the displacement from its natural (unstretched) length.",
+      "whyItMatters": "Reused constantly in later chapters (oscillations, elastic PE) — the force law that defines SHM.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h9b",
+      "type": "formula_intro",
+      "section": "4.9.1",
+      "text": "Angle of repose: as the incline of a plane is increased, a resting block begins to slide exactly when tanθ_max = μs (the coefficient of static friction). This maximum angle is independent of the mass of the block.",
+      "whyItMatters": "One of the most frequently tested static-friction results — numerically identical to the 'angle of friction'.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h10b",
+      "type": "formula_intro",
+      "section": "4.10",
+      "text": "For a car on a banked road WITH friction, the maximum safe speed is v_max = √[Rg(μs+tanθ)/(1−μs tanθ)], and the optimum speed (needing zero friction) is v₀=√(Rg tanθ).",
+      "whyItMatters": "The general banked-curve formula — distinct from and more complete than the simpler frictionless-banking or flat-road-with-friction special cases.",
+      "neetRelevance": "high"
     }
   ],
   "definitions": [
@@ -130,6 +165,24 @@
       "term": "Inertial frame",
       "definition": "Frame where Newton’s laws hold without pseudo forces.",
       "section": "4"
+    },
+    {
+      "id": "d9",
+      "term": "Law of conservation of momentum",
+      "definition": "In an isolated system with no external force, the total momentum before an interaction equals the total momentum after — a direct consequence of Newton's second and third laws.",
+      "section": "4.7"
+    },
+    {
+      "id": "d10",
+      "term": "Angle of repose",
+      "definition": "The maximum angle of incline at which a block resting on it is on the verge of sliding; tanθ_max = μs, independent of the block's mass.",
+      "section": "4.9.1"
+    },
+    {
+      "id": "d11",
+      "term": "Spring force / force constant",
+      "definition": "The restoring force exerted by a stretched or compressed spring, F=−kx, where k (the force constant) characterises the spring's stiffness.",
+      "section": "4.9"
     }
   ],
   "figures": [
@@ -410,6 +463,55 @@
         }
       ],
       "audioScript": "Connected two masses: Atwood-style vertical. Use it when the problem matches its assumptions in Laws of Motion."
+    },
+    {
+      "id": "F9",
+      "name": "Conservation of momentum",
+      "latex": "p_A + p_B = p'_A + p'_B \\quad \\text{(no external force)}",
+      "plain": "total momentum before an interaction = total momentum after, for an isolated system",
+      "symbols": [
+        { "symbol": "p_A, p_B", "meaning": "initial momenta of the two bodies" },
+        { "symbol": "p'_A, p'_B", "meaning": "final momenta after the interaction" }
+      ],
+      "whenToUse": "Collisions, explosions, recoil (gun-bullet) problems — any isolated system with no net external force.",
+      "commonMistakes": [
+        "Forgetting momentum is a VECTOR — components must be conserved separately along each axis, not just magnitudes.",
+        "Applying this when an external force (like friction from the ground) actually acts on the system during the interaction."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Recoil of a gun firing a bullet",
+          "howToInterpret": "System starts at rest (zero total momentum); after firing, bullet and gun momenta must be equal and opposite.",
+          "howItConnectsToFormula": "0 = p_bullet + p_gun ⟹ p_gun = −p_bullet.",
+          "exampleStem": "A gun of mass 3 kg fires a 0.03 kg bullet at 500 m/s. Find the recoil speed of the gun.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is really just Newton's third law dressed up in momentum language — since the two interacting bodies always push back on each other with equal and opposite force for the same time, their momentum changes must exactly cancel, leaving the total unchanged."
+    },
+    {
+      "id": "F10",
+      "name": "Banked road with friction (general case)",
+      "latex": "v_{max} = \\sqrt{\\dfrac{Rg(\\mu_s+\\tan\\theta)}{1-\\mu_s\\tan\\theta}}",
+      "plain": "maximum safe speed on a banked, frictional curve",
+      "symbols": [
+        { "symbol": "θ", "meaning": "banking angle" },
+        { "symbol": "μ_s", "meaning": "coefficient of static friction between tyres and road" }
+      ],
+      "whenToUse": "A banked curve where friction ALSO contributes to the centripetal force (the general, most realistic case) — reduces to v₀=√(Rg tanθ) when μs=0.",
+      "commonMistakes": [
+        "Using the simpler frictionless-banking formula when the problem explicitly gives a coefficient of friction — that formula only gives the single 'optimum' speed, not the full safe range."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Maximum speed on a banked, frictional racetrack",
+          "howToInterpret": "Identify R, θ, and μs; substitute directly.",
+          "howItConnectsToFormula": "v_max=√[Rg(μs+tanθ)/(1−μs tanθ)].",
+          "exampleStem": "A racetrack of radius 300 m is banked at 15°. If μs between tyres and road is 0.2, find the maximum permissible speed to avoid slipping.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This is the fully general banked-curve formula — friction and banking work together, so it correctly reduces to the simple frictionless case when there's no friction at all, and to the flat-road case when the banking angle is zero."
     }
   ],
   "views": {
@@ -421,7 +523,9 @@
       "F5",
       "F6",
       "F7",
-      "F8"
+      "F8",
+      "F9",
+      "F10"
     ],
     "definitionViewOrder": [
       "d1",
@@ -431,7 +535,10 @@
       "d5",
       "d6",
       "d7",
-      "d8"
+      "d8",
+      "d9",
+      "d10",
+      "d11"
     ],
     "cheatSheetFocus": [
       "mustKnowBullets",
