@@ -50,6 +50,55 @@
       "slug": "ch07-gravitation",
       "status": "ready",
       "ncertCode": "keph107"
+    },
+    {
+      "number": 8,
+      "title": "Mechanical Properties of Solids",
+      "slug": "ch08-mechanical-properties-of-solids",
+      "status": "ready",
+      "ncertCode": "keph201"
+    },
+    {
+      "number": 9,
+      "title": "Mechanical Properties of Fluids",
+      "slug": "ch09-mechanical-properties-of-fluids",
+      "status": "ready",
+      "ncertCode": "keph202"
+    },
+    {
+      "number": 10,
+      "title": "Thermal Properties of Matter",
+      "slug": "ch10-thermal-properties-of-matter",
+      "status": "ready",
+      "ncertCode": "keph203"
+    },
+    {
+      "number": 11,
+      "title": "Thermodynamics",
+      "slug": "ch11-thermodynamics",
+      "status": "ready",
+      "ncertCode": "keph204"
+    },
+    {
+      "number": 12,
+      "title": "Kinetic Theory",
+      "slug": "ch12-kinetic-theory",
+      "status": "ready",
+      "ncertCode": "keph205"
+    },
+    {
+      "number": 13,
+      "title": "Oscillations",
+      "slug": "ch13-oscillations",
+      "status": "ready",
+      "ncertCode": "keph206"
+    },
+    {
+      "number": 14,
+      "title": "Waves",
+      "slug": "ch14-waves",
+      "status": "ready",
+      "ncertCode": "keph207"
     }
   ]
 }

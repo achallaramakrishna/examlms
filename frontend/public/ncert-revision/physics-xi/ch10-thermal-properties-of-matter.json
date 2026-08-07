@@ -1,0 +1,532 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 10,
+    "chapterTitle": "Thermal Properties of Matter",
+    "ncertCode": "keph203",
+    "topicIdHint": "Thermodynamics",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Thermal Properties of Matter",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Convert between Celsius, Fahrenheit and Kelvin temperature scales and apply the ideal-gas equation.",
+    "Compute linear, area and volume thermal expansion, and know water's anomalous behaviour near 4°C.",
+    "Apply specific/molar heat capacity and solve calorimetry problems (heat lost = heat gained).",
+    "Use latent heat for melting/vaporisation and read a temperature-vs-heat graph through phase changes.",
+    "Apply the conduction formula, Stefan-Boltzmann law, Wien's displacement law and Newton's law of cooling."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Temperature scales & gas law → thermal expansion → heat capacity & calorimetry → latent heat & phase change → conduction, radiation, Newton's cooling.",
+    "mustKnowBullets": [
+      "T(Kelvin) = t(Celsius) + 273.15; (t_F − 32)/180 = t_C/100.",
+      "Ideal gas equation: PV = μRT, with R = 8.31 J mol⁻¹ K⁻¹.",
+      "α_area = 2α_linear; α_volume = 3α_linear (for the same material).",
+      "Water is anomalous: it CONTRACTS on heating from 0°C to 4°C, and has maximum density at 4°C — this is why lakes freeze top-down, not bottom-up.",
+      "Specific heat capacity s = ΔQ/(mΔT); molar heat capacity C = ΔQ/(μΔT).",
+      "Calorimetry principle: heat lost by the hotter body = heat gained by the colder body (isolated system).",
+      "Latent heat Q = mL — temperature stays CONSTANT during a phase change even though heat keeps flowing in.",
+      "Water: L_fusion = 3.33×10⁵ J/kg, L_vaporisation = 22.6×10⁵ J/kg — vaporisation needs ~7× more energy than melting.",
+      "Conduction: H = KA(T_C−T_D)/L (steady state, K = thermal conductivity).",
+      "Stefan-Boltzmann law: H = eσAT⁴ (σ = 5.67×10⁻⁸ W m⁻² K⁻⁴); net radiative loss H = eσA(T⁴−T_s⁴).",
+      "Wien's displacement law: λ_m T = constant (2.9×10⁻³ m K) — hotter objects glow at SHORTER wavelengths.",
+      "Newton's law of cooling: rate of cooling ∝ (T − T_surroundings), valid only for SMALL temperature differences."
+    ],
+    "keyTables": [
+      {
+        "title": "Three modes of heat transfer",
+        "rows": [
+          ["Mode", "Needs a medium?", "Key formula"],
+          ["Conduction", "Yes", "H = KA ΔT/L"],
+          ["Convection", "Yes (fluid bulk motion)", "No single formula — bulk transport"],
+          ["Radiation", "No — works through vacuum", "H = eσAT⁴ (Stefan-Boltzmann)"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "10.2", "text": "Heat is the form of energy transferred between two (or more) systems or a system and its surroundings by virtue of temperature difference. The SI unit of heat transferred is joule (J).", "whyItMatters": "Base definition distinguishing heat (energy in transit) from temperature (a state variable).", "neetRelevance": "high" },
+    { "id": "h2", "type": "formula_intro", "section": "10.4", "text": "Ideal-gas equation: PV = μRT, where μ is the number of moles and R = 8.31 J mol⁻¹ K⁻¹ is the universal gas constant.", "whyItMatters": "Foundational formula reused heavily in the next chapter (Thermodynamics) and Kinetic Theory.", "neetRelevance": "high" },
+    { "id": "h3", "type": "caution", "section": "10.5", "text": "Water exhibits anomalous behaviour: it contracts on heating between 0°C and 4°C. The density of water is maximum at 4°C.", "whyItMatters": "Explains why lakes freeze at the top first, preserving aquatic life underneath — a classic applied-reasoning question.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "10.6", "text": "Specific heat capacity is the amount of heat per unit mass absorbed or given off by a substance to change its temperature by one unit. Water has one of the highest specific heat capacities of common substances.", "whyItMatters": "Explains coastal climate moderation and why water is used as a coolant — frequently tested applied reasoning.", "neetRelevance": "high" },
+    { "id": "h5", "type": "caution", "section": "10.8", "text": "Both the solid and liquid states of a substance coexist in thermal equilibrium during a change of state, and the temperature remains constant throughout the change even though heat is continuously supplied.", "whyItMatters": "Key idea for reading temperature-vs-heat graphs — flat plateaus = phase changes, not 'no heat flow'.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "10.9.1", "text": "Conduction: the rate of heat flow H = KA(T_C−T_D)/L, where K is the thermal conductivity of the material.", "whyItMatters": "Direct numerical formula; series/parallel rod problems are a NEET staple.", "neetRelevance": "high" },
+    { "id": "h7", "type": "formula_intro", "section": "10.9.4", "text": "Stefan-Boltzmann law: for a perfect radiator (blackbody), the energy radiated per unit time is H = AσT⁴. For a body with emissivity e, H = eσAT⁴.", "whyItMatters": "Direct-recall numerical; also used to compute net heat loss H = eσA(T⁴−T_s⁴).", "neetRelevance": "high" },
+    { "id": "h8", "type": "formula_intro", "section": "10.9.4", "text": "Wien's Displacement Law: λ_m T = constant (Wien's constant = 2.9×10⁻³ m K), where λ_m is the wavelength at which emission is maximum.", "whyItMatters": "Used to estimate the surface temperature of stars — a classic NEET astrophysics-adjacent question.", "neetRelevance": "high" },
+    { "id": "h9", "type": "caution", "section": "10.10", "text": "Newton's law of cooling holds good only for a small difference of temperature between the body and its surroundings.", "whyItMatters": "Common assumption-check assertion-reason trap — the law is an approximation, not exact.", "neetRelevance": "medium" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Heat", "definition": "The form of energy transferred between two systems (or a system and its surroundings) by virtue of a temperature difference; SI unit joule.", "section": "10.2" },
+    { "id": "d2", "term": "Absolute zero", "definition": "The theoretical minimum temperature, −273.15°C or 0 K, obtained by extrapolating the pressure-vs-temperature line of an ideal gas to zero pressure.", "section": "10.4" },
+    { "id": "d3", "term": "Coefficient of linear expansion (α_l)", "definition": "The fractional change in length per unit rise in temperature: Δl/l = α_l ΔT.", "section": "10.5" },
+    { "id": "d4", "term": "Specific heat capacity", "definition": "The amount of heat per unit mass absorbed or given off by a substance to change its temperature by one unit; s = ΔQ/(mΔT), SI unit J kg⁻¹ K⁻¹.", "section": "10.6" },
+    { "id": "d5", "term": "Calorimetry", "definition": "The measurement of heat, based on the principle that in an isolated system, heat lost by the hotter part equals heat gained by the colder part.", "section": "10.7" },
+    { "id": "d6", "term": "Latent heat", "definition": "The amount of heat per unit mass transferred during a change of state at constant temperature; Q = mL, SI unit J kg⁻¹.", "section": "10.8.1" },
+    { "id": "d7", "term": "Sublimation", "definition": "The direct change of state from solid to vapour without passing through the liquid state (e.g. dry ice, iodine).", "section": "10.8" },
+    { "id": "d8", "term": "Thermal conductivity (K)", "definition": "The constant of proportionality in H = KA ΔT/L, characterising how rapidly a material conducts heat; SI unit W m⁻¹ K⁻¹.", "section": "10.9.1" },
+    { "id": "d9", "term": "Blackbody / emissivity", "definition": "A blackbody is a perfect radiator/absorber (emissivity e=1). Real bodies emit only a fraction e (0<e<1) of the blackbody rate at the same temperature.", "section": "10.9.4" },
+    { "id": "d10", "term": "Newton's law of cooling", "definition": "The rate of loss of heat of a body is directly proportional to the difference in temperature between the body and its surroundings, valid only for small temperature differences.", "section": "10.10" }
+  ],
+  "figures": [
+    { "id": "fig-10-9", "kind": "graph", "label": "Fig. 10.9", "ncertPage": 210, "section": "10.8", "caption": "A plot of temperature versus time showing the changes in state of ice on heating — flat plateaus mark phase changes.", "placeholderText": "NCERT Physics XI · Ch 10 · Page 210 · Fig. 10.9", "src": null, "uploadHint": "Crop from keph203.pdf page 8" },
+    { "id": "fig-10-13", "kind": "figure", "label": "Fig. 10.13", "ncertPage": 214, "section": "10.9", "caption": "Heating by conduction, convection and radiation — the three distinct modes of heat transfer.", "placeholderText": "NCERT Physics XI · Ch 10 · Page 214 · Fig. 10.13", "src": null, "uploadHint": "Crop from keph203.pdf page 12" },
+    { "id": "fig-10-18", "kind": "graph", "label": "Fig. 10.18", "ncertPage": 218, "section": "10.9.4", "caption": "Energy emitted versus wavelength for a blackbody at different temperatures, illustrating Wien's displacement law.", "placeholderText": "NCERT Physics XI · Ch 10 · Page 218 · Fig. 10.18", "src": null, "uploadHint": "Crop from keph203.pdf page 16" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Temperature scale conversions",
+      "latex": "\\dfrac{t_F-32}{180} = \\dfrac{t_C}{100}, \\qquad T(\\text{K}) = t_C + 273.15",
+      "plain": "Fahrenheit-Celsius conversion; Kelvin = Celsius + 273.15",
+      "symbols": [{ "symbol": "t_F, t_C", "meaning": "temperature in Fahrenheit and Celsius" }, { "symbol": "T", "meaning": "absolute (Kelvin) temperature" }],
+      "whenToUse": "Converting between any of the three temperature scales.",
+      "derivedFrom": "NCERT Eq. 10.1, 10.3",
+      "commonMistakes": ["Using 273 instead of 273.15 in careful numericals (usually 273 is an acceptable rounding, but note the exact value).", "Mixing up the Fahrenheit slope (9/5=1.8, or equivalently 180/100) direction."],
+      "questionPatterns": [
+        {
+          "patternName": "Convert a given temperature between scales",
+          "howToInterpret": "Identify the given scale and target scale, substitute directly.",
+          "howItConnectsToFormula": "Rearrange (t_F−32)/180 = t_C/100 as needed, or T = t_C + 273.15 for Kelvin.",
+          "exampleStem": "Convert 98.6°F (normal human body temperature) to Celsius and Kelvin.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "These are just linear conversions between three ways of labelling the same physical hotness. Kelvin is the simplest — just add 273.15 to Celsius, since Kelvin starts counting from absolute zero instead of the freezing point of water."
+    },
+    {
+      "id": "f2",
+      "name": "Ideal gas equation",
+      "latex": "PV = \\mu R T",
+      "plain": "pressure × volume = number of moles × gas constant × absolute temperature",
+      "symbols": [{ "symbol": "μ", "meaning": "number of moles" }, { "symbol": "R", "meaning": "universal gas constant, 8.31 J mol⁻¹ K⁻¹" }],
+      "whenToUse": "Any problem relating P, V, T for a low-density (ideal) gas — this chapter's version of Boyle's + Charles' laws combined.",
+      "derivedFrom": "NCERT Eq. 10.2",
+      "commonMistakes": ["Using Celsius temperature instead of Kelvin (absolute) temperature — always convert to K first."],
+      "questionPatterns": [
+        {
+          "patternName": "Find one gas variable given the others",
+          "howToInterpret": "Identify which of P, V, T, μ is unknown; substitute the rest.",
+          "howItConnectsToFormula": "Direct substitution or ratio method (P₁V₁/T₁ = P₂V₂/T₂ for a fixed amount of gas).",
+          "exampleStem": "A gas at 27°C and 1 atm occupies 2 L. Find its volume at 127°C and the same pressure.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is the master gas law — always convert temperature to Kelvin first, since this formula only works with absolute temperature, not Celsius."
+    },
+    {
+      "id": "f3",
+      "name": "Thermal expansion (linear, area, volume)",
+      "latex": "\\dfrac{\\Delta l}{l}=\\alpha_l \\Delta T, \\quad \\dfrac{\\Delta A}{A}=\\alpha_A \\Delta T, \\quad \\dfrac{\\Delta V}{V}=\\alpha_V \\Delta T; \\quad \\alpha_A=2\\alpha_l,\\ \\alpha_V=3\\alpha_l",
+      "plain": "fractional change in length/area/volume = expansion coefficient × temperature change",
+      "symbols": [{ "symbol": "α_l, α_A, α_V", "meaning": "coefficients of linear, area, and volume expansion" }],
+      "whenToUse": "Any rod/plate/solid or liquid heated or cooled — fitting rings, thermal stress, expansion-gap problems.",
+      "derivedFrom": "NCERT Eq. 10.4–10.9",
+      "commonMistakes": ["Using the same α value for area or volume expansion as for linear — remember the factor of 2 and 3 relationships.", "Forgetting a rod rigidly clamped at both ends develops thermal STRESS (not free expansion) — use Y×α×ΔT for that."],
+      "questionPatterns": [
+        {
+          "patternName": "Fit a ring/plate by heating",
+          "howToInterpret": "Find the temperature change needed to expand one dimension to match another, using L₂ = L₁[1+α(T₂−T₁)].",
+          "howItConnectsToFormula": "Solve for T₂ given the ring's initial and required final length.",
+          "exampleStem": "A blacksmith must fit an iron ring (diameter 5.231 m at 27°C) onto a wooden wheel rim (diameter 5.243 m). To what temperature should the ring be heated?",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Thermal stress in a clamped rod",
+          "howItConnectsToFormula": "Combine α_l ΔT (thermal strain) with Young's modulus Y to get stress = Y α_l ΔT, then force = stress × A.",
+          "howToInterpret": "Recognize the rod cannot expand, so all the 'would-be' strain becomes actual stress instead.",
+          "exampleStem": "A steel rail of length 5 m and cross-section 40 cm² is prevented from expanding while its temperature rises by 10°C. Find the thermal stress and the compressive force developed.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Area expansion is always double, and volume expansion always triple, the linear expansion coefficient of the same material — this comes straight from how length, area and volume scale geometrically."
+    },
+    {
+      "id": "f4",
+      "name": "Specific and molar heat capacity",
+      "latex": "s = \\dfrac{1}{m}\\dfrac{\\Delta Q}{\\Delta T}, \\qquad C = \\dfrac{1}{\\mu}\\dfrac{\\Delta Q}{\\Delta T}",
+      "plain": "specific heat capacity = heat absorbed / (mass × temperature change); molar version uses moles instead of mass",
+      "symbols": [{ "symbol": "s", "meaning": "specific heat capacity (J kg⁻¹ K⁻¹)" }, { "symbol": "C", "meaning": "molar specific heat capacity (J mol⁻¹ K⁻¹)" }],
+      "whenToUse": "Heating/cooling a substance WITHOUT a phase change.",
+      "derivedFrom": "NCERT Eq. 10.11–10.12",
+      "commonMistakes": ["Applying this formula across a phase change — specific heat capacity only applies when temperature is actually changing, not during melting/boiling (use latent heat there instead)."],
+      "questionPatterns": [
+        {
+          "patternName": "Find the heat needed to change temperature",
+          "howToInterpret": "Direct substitution once mass, s, and ΔT are known.",
+          "howItConnectsToFormula": "ΔQ = m s ΔT.",
+          "exampleStem": "Find the heat required to raise the temperature of 2 kg of water from 20°C to 80°C. (s_water = 4186 J kg⁻¹ K⁻¹)",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Specific heat capacity tells you how much energy it takes to warm up one kilogram of a substance by one degree. Water's value is unusually high, which is why it's such a good coolant and climate moderator."
+    },
+    {
+      "id": "f5",
+      "name": "Latent heat",
+      "latex": "Q = mL",
+      "plain": "heat during a phase change = mass × latent heat",
+      "symbols": [{ "symbol": "L", "meaning": "latent heat of fusion or vaporisation (J/kg)" }],
+      "whenToUse": "Melting, freezing, boiling, or condensation — any change of STATE at constant temperature.",
+      "derivedFrom": "NCERT Eq. 10.13",
+      "commonMistakes": ["Forgetting the temperature stays constant during this heat transfer — don't apply s×m×ΔT here."],
+      "questionPatterns": [
+        {
+          "patternName": "Multi-stage heating problem (solid → liquid → gas)",
+          "howToInterpret": "Break the total heat into stages: heat the solid, melt it, heat the liquid, vaporise it — add each contribution.",
+          "howItConnectsToFormula": "Q_total = ms_solid ΔT₁ + mL_fusion + ms_liquid ΔT₂ + mL_vaporisation.",
+          "exampleStem": "Calculate the heat required to convert 3 kg of ice at −12°C to steam at 100°C.",
+          "difficulty": "advanced"
+        },
+        {
+          "patternName": "Mixture calorimetry with a phase change",
+          "howToInterpret": "Set heat lost by the hotter substance equal to heat gained by the colder, where the colder side includes a latent-heat term if ice must melt.",
+          "howItConnectsToFormula": "Heat lost = heat to melt ice + heat to warm the melted ice to final temperature.",
+          "exampleStem": "0.15 kg of ice at 0°C is mixed with 0.30 kg of water at 50°C in a container; the final temperature is 6.7°C. Find the latent heat of fusion of ice.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "During a phase change, every joule you add goes into breaking or forming molecular bonds, not raising temperature — that's why the thermometer stalls at 0°C while ice melts, even as heat keeps flowing in."
+    },
+    {
+      "id": "f6",
+      "name": "Thermal conduction",
+      "latex": "H = KA\\dfrac{T_C-T_D}{L}",
+      "plain": "rate of heat flow = thermal conductivity × area × temperature difference / length",
+      "symbols": [{ "symbol": "K", "meaning": "thermal conductivity" }, { "symbol": "T_C, T_D", "meaning": "temperatures at the two ends (T_C > T_D)" }],
+      "whenToUse": "Steady-state heat flow through a rod/slab of uniform cross-section.",
+      "derivedFrom": "NCERT Eq. 10.14",
+      "commonMistakes": ["Forgetting that in steady state, the SAME heat current H flows through every cross-section — this is what lets you equate H across two rods joined end to end."],
+      "questionPatterns": [
+        {
+          "patternName": "Junction temperature of two joined rods",
+          "howToInterpret": "Equal heat current through both rods in steady state — set H₁ = H₂ and solve for the junction temperature.",
+          "howItConnectsToFormula": "K₁A₁(T₁−T₀)/L₁ = K₂A₂(T₀−T₂)/L₂, solve for T₀.",
+          "exampleStem": "A steel rod and a copper rod, of given lengths and equal cross-sections, are joined end to end with the free ends at 300°C and 0°C. Find the junction temperature in steady state.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "In steady state, whatever heat flows into one end of a rod must flow out the other end — no accumulation. That's the key idea that lets you equate the heat current through two joined rods to find their common junction temperature."
+    },
+    {
+      "id": "f7",
+      "name": "Stefan-Boltzmann law",
+      "latex": "H = e\\sigma A T^4, \\qquad H_{net} = e\\sigma A (T^4 - T_s^4)",
+      "plain": "radiated power = emissivity × Stefan-Boltzmann constant × area × (absolute temperature)⁴",
+      "symbols": [{ "symbol": "σ", "meaning": "Stefan-Boltzmann constant, 5.67×10⁻⁸ W m⁻² K⁻⁴" }, { "symbol": "e", "meaning": "emissivity (e=1 for a perfect blackbody)" }],
+      "whenToUse": "Radiative heat loss/gain — works even through vacuum, unlike conduction/convection.",
+      "derivedFrom": "NCERT Eq. 10.16–10.18",
+      "commonMistakes": ["Forgetting temperature must be in KELVIN (absolute), since this is a fourth-power law and Celsius would give wildly wrong answers.", "Using H=AσT⁴ (gross radiation) when the question wants NET heat loss, which requires subtracting the surroundings' T_s⁴ term."],
+      "questionPatterns": [
+        {
+          "patternName": "Net rate of heat loss from a body to its surroundings",
+          "howToInterpret": "Identify the body's temperature, the surroundings' temperature, its emissivity and surface area.",
+          "howItConnectsToFormula": "H_net = eσA(T⁴ − T_s⁴).",
+          "exampleStem": "Estimate the rate of heat loss from a person's skin (area 1.9 m², emissivity 0.97, skin temperature 28°C) to a room at 22°C.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This is a fourth-power law, so always convert to Kelvin before plugging in — a small change in absolute temperature has an outsized effect on radiated power. And remember, a real object only radiates net heat once you subtract what its surroundings radiate back."
+    },
+    {
+      "id": "f8",
+      "name": "Wien's displacement law",
+      "latex": "\\lambda_m T = \\text{constant} = 2.9\\times10^{-3}\\ \\text{m K}",
+      "plain": "peak emission wavelength × absolute temperature = a universal constant",
+      "symbols": [{ "symbol": "λ_m", "meaning": "wavelength at which emission is maximum" }],
+      "whenToUse": "Estimating the surface temperature of a hot object (a star, a filament, molten metal) from its emitted colour/spectrum peak.",
+      "derivedFrom": "NCERT Eq. 10.15",
+      "commonMistakes": ["Forgetting this is an INVERSE relationship — hotter objects peak at SHORTER wavelengths, not longer (hence 'blue-hot' is hotter than 'red-hot')."],
+      "questionPatterns": [
+        {
+          "patternName": "Estimate a star's/object's temperature from its emission peak",
+          "howToInterpret": "Given λ_m, solve directly for T using Wien's constant.",
+          "howItConnectsToFormula": "T = (2.9×10⁻³ m K)/λ_m.",
+          "exampleStem": "Sunlight has an emission maximum at about 4753 Å. Estimate the surface temperature of the Sun.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This law explains why heating a piece of iron makes it glow dull red, then orange, then white as it gets hotter — the peak wavelength of its glow shifts to shorter and shorter wavelengths as temperature rises."
+    },
+    {
+      "id": "f9",
+      "name": "Newton's law of cooling",
+      "latex": "-\\dfrac{dQ}{dt} = k(T_2-T_1), \\qquad T_2 = T_1 + C' e^{-Kt}",
+      "plain": "rate of heat loss is proportional to the temperature difference from the surroundings",
+      "symbols": [{ "symbol": "T_1", "meaning": "surroundings temperature" }, { "symbol": "T_2", "meaning": "body's temperature" }, { "symbol": "k, K", "meaning": "proportionality constants depending on the body" }],
+      "whenToUse": "A hot body cooling in a room — valid only for small temperature differences between the body and its surroundings.",
+      "derivedFrom": "NCERT Eq. 10.19–10.23",
+      "commonMistakes": ["Applying this law for large temperature differences, where it breaks down (radiation there follows Stefan-Boltzmann's T⁴ dependence instead)."],
+      "questionPatterns": [
+        {
+          "patternName": "Time to cool between two temperature ranges",
+          "howToInterpret": "Use the AVERAGE temperature excess over each interval, since the exact instantaneous rate changes continuously; set up a ratio between two cooling intervals.",
+          "howItConnectsToFormula": "(ΔT₁/time₁)/(ΔT₂/time₂) = (T_avg1 − T_s)/(T_avg2 − T_s), solve for the unknown time.",
+          "exampleStem": "A pan cools from 94°C to 86°C in 2 minutes when room temperature is 20°C. How long will it take to cool from 71°C to 69°C?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The trick with Newton's law of cooling problems is to work with average temperatures over each time interval, not instantaneous ones, then set up a ratio between two cooling scenarios so the unknown constant K cancels out."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],
+    "definitionViewOrder": ["d1", "d3", "d4", "d5", "d6", "d8", "d9", "d10"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["temperature scales"],
+      "stages": {
+        "question": "Convert 98.6°F (normal body temperature) to Celsius.",
+        "interpretation": "Direct Fahrenheit-to-Celsius conversion.",
+        "formula": "(t_F−32)/180 = t_C/100",
+        "solutionSteps": ["(98.6−32)/180 = t_C/100", "66.6/180 = t_C/100", "t_C = 37.0°C"],
+        "answer": "37°C"
+      },
+      "audioScript": "Subtract 32 first to zero out the Fahrenheit offset, then rescale by the ratio of the two scales' spans, 100 over 180."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["water anomaly", "conceptual"],
+      "stages": {
+        "question": "Why do lakes freeze from the top down rather than the bottom up?",
+        "interpretation": "Tests understanding of water's anomalous density-temperature behaviour.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Water has maximum density at 4°C, not at 0°C", "As surface water cools toward 4°C it sinks (denser); below 4°C it becomes LESS dense and stays near the surface", "The coldest water (near 0°C, about to freeze) therefore stays at the top"],
+        "answer": "Because water's density is maximum at 4°C — water colder than 4°C is less dense and floats, so the surface reaches freezing first while the bottom stays near 4°C, protecting aquatic life."
+      },
+      "audioScript": "This is entirely due to water's anomalous expansion — unlike most substances, water gets LESS dense as it cools below 4°C, so the coldest water floats to the top and freezes there first."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["specific heat", "numerical"],
+      "stages": {
+        "question": "Find the heat required to raise the temperature of 2 kg of water from 20°C to 80°C. (s_water=4186 J/kg K)",
+        "interpretation": "Direct specific-heat calculation, no phase change involved.",
+        "formula": "ΔQ = ms ΔT",
+        "solutionSteps": ["ΔT = 80−20 = 60°C", "ΔQ = 2 × 4186 × 60 = 502320 J"],
+        "answer": "≈ 5.02 × 10⁵ J"
+      },
+      "audioScript": "No phase change here, so it's a straightforward multiply: mass times specific heat times the temperature rise."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["thermal expansion", "numerical"],
+      "stages": {
+        "question": "An iron ring of diameter 5.231 m at 27°C must expand to fit a wooden rim of diameter 5.243 m. To what temperature must it be heated? (α_iron = 1.20×10⁻⁵ K⁻¹)",
+        "interpretation": "Apply the linear expansion formula treating diameter as a length.",
+        "formula": "L₂ = L₁[1+α(T₂−T₁)]",
+        "solutionSteps": [
+          "5.243 = 5.231[1 + 1.20×10⁻⁵(T₂−27)]",
+          "5.243/5.231 = 1 + 1.20×10⁻⁵(T₂−27)",
+          "1.002294 − 1 = 1.20×10⁻⁵(T₂−27)",
+          "T₂−27 = 191.2 ⟹ T₂ ≈ 218°C"
+        ],
+        "answer": "≈ 218°C"
+      },
+      "audioScript": "Treat the diameter just like any length for expansion purposes, set the expanded length equal to the target size, and solve for the temperature."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["latent heat", "phase change graph"],
+      "stages": {
+        "question": "On a temperature-vs-heat graph for water being heated from ice at -10°C to steam at 110°C, how many distinct flat (plateau) regions are there, and what do they represent?",
+        "interpretation": "Tests reading of a phase-change graph.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["First plateau: at 0°C, ice melting into water (latent heat of fusion)", "Second plateau: at 100°C, water boiling into steam (latent heat of vaporisation)", "Between and outside these plateaus, temperature rises smoothly as heat raises the temperature of a single phase"],
+        "answer": "Two plateaus: at 0°C (melting) and at 100°C (boiling) — each represents a phase change where added heat does not raise temperature."
+      },
+      "audioScript": "Every time the graph goes flat, heat is still flowing in, but it's being spent breaking molecular bonds for a phase change instead of raising the temperature — that's the signature of melting or boiling."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["conduction", "junction temperature"],
+      "stages": {
+        "question": "A steel rod (L=15 cm, K=50.2) and a copper rod (L=10 cm, K=385) of equal cross-sectional area are joined end to end, with the steel end at 300°C and the copper end at 0°C. Find the junction temperature in steady state.",
+        "interpretation": "Equal heat current through both rods in steady state.",
+        "formula": "K₁(T₁−T₀)/L₁ = K₂(T₀−T₂)/L₂",
+        "solutionSteps": [
+          "50.2×(300−T₀)/15 = 385×(T₀−0)/10",
+          "3.347×(300−T₀) = 38.5×T₀",
+          "1004.1 − 3.347T₀ = 38.5T₀",
+          "1004.1 = 41.85T₀ ⟹ T₀ ≈ 24.0°C"
+        ],
+        "answer": "≈ 24°C (copper's much higher conductivity keeps the junction close to the cold end's temperature)"
+      },
+      "audioScript": "Set the heat current through each rod equal, since in steady state whatever flows through one section flows through every other section too, then solve the resulting linear equation for the junction temperature."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["stefan-boltzmann", "numerical"],
+      "stages": {
+        "question": "Estimate the rate of heat loss from a person's skin: area 1.9 m², emissivity 0.97, skin temperature 28°C (301 K), room temperature 22°C (295 K).",
+        "interpretation": "Net radiative loss using the Stefan-Boltzmann law with both temperatures raised to the fourth power.",
+        "formula": "H_net = eσA(T⁴−T_s⁴)",
+        "solutionSteps": [
+          "T⁴ = 301⁴ ≈ 8.209×10⁹, T_s⁴ = 295⁴ ≈ 7.573×10⁹",
+          "H = 5.67×10⁻⁸ × 1.9 × 0.97 × (8.209×10⁹−7.573×10⁹)",
+          "= 5.67×10⁻⁸×1.9×0.97×6.36×10⁸ ≈ 66.7 W"
+        ],
+        "answer": "≈ 66–67 W — more than half a resting person's total energy production (~120 W)"
+      },
+      "audioScript": "Because this is a fourth-power law, even a small temperature difference between skin and room produces a big net radiative loss — this single mechanism accounts for over half the body's heat loss at rest."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["newton's cooling", "ratio method"],
+      "stages": {
+        "question": "A pan cools from 94°C to 86°C in 2 minutes when room temperature is 20°C. How long will it take to cool from 71°C to 69°C?",
+        "interpretation": "Use the ratio method with average temperature excess in each interval, since K stays the same for both.",
+        "formula": "(ΔT/time) = K(T_avg − T_room)",
+        "solutionSteps": [
+          "First interval: avg = (94+86)/2 = 90°C, excess = 90−20 = 70°C, rate = 8°C/2min",
+          "Second interval: avg = (71+69)/2 = 70°C, excess = 70−20 = 50°C, rate = 2°C/time",
+          "(8/2)/(70) = (2/time)/(50) — cross-multiplying: (8/2)×50 = (2/time)×70",
+          "200 = 140/time ⟹ time = 140/200 = 0.7 min = 42 s"
+        ],
+        "answer": "42 seconds"
+      },
+      "audioScript": "Since the proportionality constant K is the same body cooling in the same room, set up a ratio between the two cooling scenarios using their average excess temperatures — the K cancels out, leaving just algebra."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why must temperature always be converted to Kelvin before using the ideal gas equation or Stefan-Boltzmann law?",
+      "What is the relationship between the coefficients of linear, area, and volume expansion for the same material?",
+      "Why does the temperature stay constant while a substance changes state, even as heat keeps flowing in?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Convert absolute zero (−273.15°C) to the Fahrenheit scale.",
+        "interpretation": "Chain two conversions: Celsius to Fahrenheit.",
+        "formulaIds": ["f1"],
+        "steps": ["(t_F−32)/180 = (−273.15)/100", "t_F−32 = −491.67", "t_F = −459.67°F"],
+        "answer": "≈ −459.67°F",
+        "audioScript": "Just plug the Celsius value directly into the conversion formula and solve for Fahrenheit."
+      },
+      {
+        "id": "pb2",
+        "question": "A gas occupies 4 L at 300 K and 1 atm. Find its volume at 600 K if the pressure is held constant.",
+        "interpretation": "Direct application of the ideal gas law at constant pressure (Charles' law case).",
+        "formulaIds": ["f2"],
+        "steps": ["At constant P: V/T = constant", "V₂ = V₁×(T₂/T₁) = 4×(600/300) = 8 L"],
+        "answer": "8 L",
+        "audioScript": "With pressure fixed, volume and absolute temperature are directly proportional — doubling the Kelvin temperature exactly doubles the volume."
+      },
+      {
+        "id": "pb3",
+        "question": "The surface of the Moon is estimated to have a maximum emission wavelength of about 14 μm. Estimate the Moon's surface temperature using Wien's law.",
+        "interpretation": "Direct substitution into Wien's displacement law.",
+        "formulaIds": ["f8"],
+        "steps": ["T = (2.9×10⁻³)/λ_m = (2.9×10⁻³)/(14×10⁻⁶)"],
+        "answer": "T ≈ 207 K (close to the NCERT-quoted estimate of about 200 K)",
+        "audioScript": "Simply divide Wien's constant by the given peak wavelength to estimate the temperature."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "A sphere of 0.047 kg aluminium at 100°C is dropped into a 0.14 kg copper calorimeter containing 0.25 kg water at 20°C. The final steady temperature is 23°C. Find the specific heat capacity of aluminium. (s_water=4186, s_copper=386 J/kg K)",
+        "interpretation": "Set heat lost by the aluminium sphere equal to heat gained by the water and calorimeter together.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "Heat lost by Al = 0.047 × s_Al × (100−23) = 0.047 × s_Al × 77",
+          "Heat gained = (0.25×4186 + 0.14×386) × (23−20) = (1046.5+54.04) × 3 = 3301.6 J",
+          "0.047 × 77 × s_Al = 3301.6 ⟹ s_Al = 3301.6/3.619 ≈ 912 J/kg K"
+        ],
+        "answer": "s_Al ≈ 912 J kg⁻¹ K⁻¹",
+        "audioScript": "This is classic calorimetry — include BOTH the water and the calorimeter vessel itself in the 'heat gained' side, since the metal calorimeter also warms up."
+      },
+      {
+        "id": "pi2",
+        "question": "A rigid bar experiences thermal stress when a steel rail of length 5 m and cross-section 40 cm² is prevented from expanding while its temperature rises by 10°C. Find the compressive force developed. (α_steel=1.2×10⁻⁵ K⁻¹, Y_steel=2×10¹¹ N/m²)",
+        "interpretation": "Thermal strain converts entirely to elastic stress since expansion is blocked.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "Thermal strain (if free) = αΔT = 1.2×10⁻⁵×10 = 1.2×10⁻⁴",
+          "Stress = Y × strain = 2×10¹¹ × 1.2×10⁻⁴ = 2.4×10⁷ N/m²",
+          "Force = stress × A = 2.4×10⁷ × 40×10⁻⁴ = 9.6×10⁴ N"
+        ],
+        "answer": "≈ 9.6 × 10⁴ N (96 kN)",
+        "audioScript": "Since the rod physically cannot expand, the strain it 'would have had' becomes real internal stress instead — multiply by Young's modulus to get stress, then by area to get the force."
+      },
+      {
+        "id": "pi3",
+        "question": "Water rises 2.98 cm in a fine capillary. If the same tube is used to measure how much heat is needed to convert 500 g of water at 100°C entirely to steam, find that heat. (L_vaporisation=22.6×10⁵ J/kg)",
+        "interpretation": "A simple latent-heat application (the capillary detail is a distractor, not needed for this calculation).",
+        "formulaIds": ["f5"],
+        "steps": ["Q = mL = 0.5 × 22.6×10⁵"],
+        "answer": "Q = 11.3 × 10⁵ J",
+        "steps_note": "Watch for distractor details in NEET questions that aren't needed for the actual calculation.",
+        "audioScript": "Don't be misled by extra details in a question stem that aren't actually needed — here, only the mass and the latent heat of vaporisation matter."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Calculate the total heat required to convert 3 kg of ice at −12°C to steam at 100°C. (s_ice=2100, s_water=4186 J/kg K; L_fusion=3.35×10⁵, L_vap=2.256×10⁶ J/kg)",
+        "interpretation": "Four-stage calculation: warm the ice, melt it, warm the water, vaporise it.",
+        "formulaIds": ["f4", "f5"],
+        "steps": [
+          "Q1 (warm ice −12°C→0°C) = 3×2100×12 = 75600 J",
+          "Q2 (melt ice) = 3×3.35×10⁵ = 1005000 J",
+          "Q3 (warm water 0°C→100°C) = 3×4186×100 = 1255800 J",
+          "Q4 (vaporise) = 3×2.256×10⁶ = 6768000 J",
+          "Total = 75600+1005000+1255800+6768000 = 9,104,400 J"
+        ],
+        "answer": "≈ 9.1 × 10⁶ J",
+        "audioScript": "Break this into four separate stages and add them — this multi-stage pattern, warming then melting then warming then vaporising, is one of the most common NEET numericals in this chapter."
+      },
+      {
+        "id": "pa2",
+        "question": "An iron bar (L=0.1 m, A=0.02 m², K=79 W/mK) and a brass bar (same L and A, K=109 W/mK) are soldered end to end, with free ends at 373 K and 273 K. Find (i) the junction temperature, (ii) the equivalent thermal conductivity of the compound bar.",
+        "interpretation": "Two-rod series conduction problem with different K values but equal L and A.",
+        "formulaIds": ["f6"],
+        "steps": [
+          "Junction temp: T₀ = (K₁T₁+K₂T₂)/(K₁+K₂) = (79×373+109×273)/(79+109)",
+          "= (29467+29757)/188 = 59224/188 ≈ 315 K",
+          "Equivalent K for compound bar (length 2L): K_eq = 2K₁K₂/(K₁+K₂) = 2×79×109/188 ≈ 91.6 W/mK"
+        ],
+        "answer": "T₀ ≈ 315 K; K_eq ≈ 91.6 W m⁻¹ K⁻¹",
+        "audioScript": "For rods of equal length and area, there's a neat shortcut: the junction temperature is a K-weighted average of the two end temperatures, and the equivalent conductivity of the whole compound bar is the harmonic-mean-like combination 2K₁K₂ over K₁+K₂."
+      },
+      {
+        "id": "pa3",
+        "question": "A tungsten filament lamp at 3000 K has surface area 0.3 cm² and emissivity 0.4. Find the power it radiates, and compare it to a perfect blackbody radiator of the same size and temperature.",
+        "interpretation": "Direct Stefan-Boltzmann application, then compare against e=1.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "H = eσAT⁴ = 0.4 × 5.67×10⁻⁸ × 0.3×10⁻⁴ × (3000)⁴",
+          "(3000)⁴ = 8.1×10¹³",
+          "H = 0.4×5.67×10⁻⁸×0.3×10⁻⁴×8.1×10¹³ ≈ 55.1 W (NCERT rounds this to ≈60 W)",
+          "For a perfect blackbody (e=1): H would be 2.5× larger, ≈137.8 W"
+        ],
+        "answer": "≈ 60 W actual (e=0.4); a perfect blackbody of the same size/temperature would radiate ≈150 W",
+        "audioScript": "Emissivity acts as a simple scaling factor on the ideal blackbody radiation rate — a real filament at e=0.4 radiates less than half of what a perfect blackbody at the same temperature would."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines thermal expansion (a clamped rod) with Young's modulus from Chapter 8, and one that combines Newton's law of cooling with a calorimetry setup (e.g. a hot object cooling in water rather than air)."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 10 — Thermal Properties of Matter. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (temperature scales & gas law, thermal expansion, heat capacity & calorimetry, latent heat & phase change, or conduction/radiation/Newton's cooling). First quiz me on definitions and formulas with NO calculation involved — heat vs temperature, the three expansion coefficients and their 1:2:3 ratio, specific vs latent heat, and the three modes of heat transfer. Then move to basic numericals tied to a single formula (temperature conversion, ideal gas law, simple specific-heat problems). Then intermediate problems requiring two steps (calorimetry with a calorimeter vessel included, thermal stress in a clamped rod, junction temperature of two conducting rods). Then advanced multi-stage problems (full ice-to-steam heating calculation, compound-bar conduction, Stefan-Boltzmann net heat loss). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 9 formulas with when-to-use notes). Stay within this chapter's scope (temperature, gas law, expansion, heat capacity, latent heat, conduction, radiation, Newton's cooling) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "What is the relationship between the coefficients of linear, area and volume expansion of the same material?", "a": "α_area = 2α_linear and α_volume = 3α_linear." },
+    { "q": "Why does water have an anomalous thermal expansion behaviour near 0-4°C?", "a": "Water contracts (rather than expands) on heating from 0°C to 4°C, and has its maximum density exactly at 4°C, before expanding normally above 4°C." },
+    { "q": "Which of the three heat-transfer modes can occur through a vacuum, and why?", "a": "Radiation — it transfers energy via electromagnetic waves, which need no material medium, unlike conduction and convection." },
+    { "q": "Why must absolute (Kelvin) temperature be used in the ideal gas equation and the Stefan-Boltzmann law?", "a": "Both are physical laws derived from molecular/thermodynamic first principles referenced to absolute zero — using Celsius would introduce an arbitrary offset that breaks the proportionality." },
+    { "q": "Under what condition does Newton's law of cooling hold accurately?", "a": "Only for small temperature differences between the body and its surroundings." }
+  ]
+}

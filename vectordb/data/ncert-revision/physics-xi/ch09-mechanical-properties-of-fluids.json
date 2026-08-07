@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 9,
+    "chapterTitle": "Mechanical Properties of Fluids",
+    "ncertCode": "keph202",
+    "topicIdHint": "Properties of Solids and Liquids",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Mechanical Properties of Fluids",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Define pressure, state Pascal's law and derive how pressure varies with depth.",
+    "Apply hydraulic-lift and hydraulic-brake reasoning using Pascal's law.",
+    "State the equation of continuity and Bernoulli's equation, and apply them to venturi/aerofoil/Torricelli-law problems.",
+    "Define viscosity, apply Stokes' law and compute terminal velocity.",
+    "Define surface tension and surface energy; compute excess pressure in drops/bubbles and capillary rise.",
+    "Distinguish which quantities are scalars (pressure, viscosity, surface tension) vs which behave differently at points vs surfaces."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Pressure & Pascal's law → continuity & Bernoulli → viscosity & Stokes' law → surface tension, drops/bubbles, capillary rise.",
+    "mustKnowBullets": [
+      "Pressure P = F/A is a SCALAR — no direction, despite force being a vector.",
+      "Pascal's law: pressure in a fluid at rest is the same at all points at the same height; applied pressure is transmitted undiminished in all directions.",
+      "Pressure with depth: P = P_a + ρgh (increases linearly with depth).",
+      "Hydraulic lift mechanical advantage: F₂/F₁ = A₂/A₁.",
+      "Equation of continuity: A₁v₁ = A₂v₂ = constant (mass conservation for incompressible flow) — narrower pipe ⇒ faster flow.",
+      "Bernoulli's equation: P + ½ρv² + ρgh = constant along a streamline (energy conservation for non-viscous, incompressible, steady flow).",
+      "Torricelli's law: efflux speed v = √(2gh) — same as a freely falling body.",
+      "Viscosity η = (F/A)/(v/l); SI unit poiseuille (Pa·s); liquids get LESS viscous as temperature rises, gases get MORE viscous.",
+      "Stokes' law: F = 6πηav; terminal velocity v_t = 2a²(ρ−σ)g/(9η) — depends on radius SQUARED.",
+      "Excess pressure: drop/cavity = 2S/r; soap bubble (2 surfaces) = 4S/r.",
+      "Capillary rise: h = 2S cosθ/(ρga) — smaller tube radius ⇒ greater rise."
+    ],
+    "keyTables": [
+      {
+        "title": "Fluid-mechanics formulas at a glance",
+        "rows": [
+          ["Quantity", "Formula", "Notes"],
+          ["Pressure at depth", "P = P_a + ρgh", "Scalar, same at every point at same depth"],
+          ["Continuity", "A₁v₁ = A₂v₂", "Mass conservation, incompressible flow"],
+          ["Bernoulli", "P + ½ρv² + ρgh = const", "Energy conservation along a streamline"],
+          ["Terminal velocity", "v_t = 2a²(ρ−σ)g/(9η)", "∝ r², used with Stokes' law"],
+          ["Excess pressure (bubble)", "ΔP = 4S/r", "Two liquid-air surfaces, double the drop's 2S/r"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "9.2", "text": "The normal force exerted by the fluid at a point, per unit area, defines the average pressure: P_av = F/A.", "whyItMatters": "Base definition; pressure is scalar even though force in the numerator is a vector.", "neetRelevance": "high" },
+    { "id": "h2", "type": "caution", "section": "9.2.2", "text": "Hydrostatic pressure is a scalar quantity. The force against any area within a fluid at rest is normal to the area, regardless of the orientation of the area.", "whyItMatters": "Very commonly tested assertion-reason trap: pressure has no direction, unlike the force it produces.", "neetRelevance": "high" },
+    { "id": "h3", "type": "formula_intro", "section": "9.2.2", "text": "P = P_a + ρgh — the pressure at depth h below the surface of a liquid open to the atmosphere.", "whyItMatters": "Direct-recall formula tested constantly, including submarine/lake-depth problems.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "9.2.4", "text": "Whenever external pressure is applied on any part of a fluid contained in a vessel, it is transmitted undiminished and equally in all directions — this is Pascal's law and underlies hydraulic lifts and brakes.", "whyItMatters": "Explains hydraulic-machine numericals (F₂ = F₁ × A₂/A₁).", "neetRelevance": "high" },
+    { "id": "h5", "type": "formula_intro", "section": "9.3", "text": "The equation of continuity, A₁v₁ = A₂v₂, is a statement of conservation of mass for the flow of incompressible fluids.", "whyItMatters": "Explains why fluid speeds up where a pipe narrows — foundational for Bernoulli problems.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "9.4", "text": "Bernoulli's equation: P + ½ρv² + ρgh = constant along a streamline — as we move along a streamline, the sum of pressure, kinetic energy per unit volume and potential energy per unit volume remains constant.", "whyItMatters": "The single most tested formula in this chapter — venturi meters, aerofoils, Torricelli's law all derive from it.", "neetRelevance": "high" },
+    { "id": "h7", "type": "caution", "section": "9.4", "text": "Bernoulli's equation ideally applies to fluids with zero viscosity (non-viscous), and assumes the flow is incompressible and steady (non-turbulent). It does not hold for viscous or turbulent flows.", "whyItMatters": "Assumption-checking assertion-reason favourite.", "neetRelevance": "medium" },
+    { "id": "h8", "type": "formula_intro", "section": "9.4.1", "text": "Torricelli's law: the speed of efflux from a small hole in a tank open to the atmosphere is v₁ = √(2gh), identical to the speed of a freely falling body dropped from height h.", "whyItMatters": "A direct application of Bernoulli's equation — commonly tested as a standalone recall.", "neetRelevance": "high" },
+    { "id": "h9", "type": "definition", "section": "9.5", "text": "The coefficient of viscosity η is defined as the ratio of shearing stress to the strain rate (rate of change of strain): η = (F/A)/(v/l).", "whyItMatters": "Distinguishes viscosity numericals from solid-shear-modulus numericals — here it's stress over STRAIN RATE, not strain.", "neetRelevance": "high" },
+    { "id": "h10", "type": "caution", "section": "9.5", "text": "The viscosity of liquids decreases with temperature, while the viscosity of gases INCREASES with temperature.", "whyItMatters": "Opposite trends for liquids vs gases — a classic NEET trap.", "neetRelevance": "high" },
+    { "id": "h11", "type": "formula_intro", "section": "9.5.1", "text": "Stokes' law: the viscous drag force on a sphere of radius a moving with velocity v through a fluid of viscosity η is F = 6πηav.", "whyItMatters": "Leads directly to the terminal velocity formula, a NEET numerical staple.", "neetRelevance": "high" },
+    { "id": "h12", "type": "formula_intro", "section": "9.5.1", "text": "Terminal velocity v_t = 2a²(ρ−σ)g/(9η), reached when the net force on a falling sphere becomes zero (weight = viscous drag + buoyancy).", "whyItMatters": "v_t ∝ a² — doubling the radius quadruples the terminal velocity, a common trap.", "neetRelevance": "high" },
+    { "id": "h13", "type": "definition", "section": "9.6", "text": "Surface tension is a force per unit length (or surface energy per unit area) acting in the plane of the interface between a liquid and any other substance; it is the extra energy molecules at the interface have compared to molecules in the interior.", "whyItMatters": "Direct-recall NCERT one-liner tested often as an assertion-reason.", "neetRelevance": "high" },
+    { "id": "h14", "type": "formula_intro", "section": "9.6.4", "text": "Excess pressure inside a liquid drop or cavity: (P_i − P_o) = 2S/r. For a soap bubble, which has TWO liquid-air surfaces, the excess pressure is doubled: (P_i − P_o) = 4S/r.", "whyItMatters": "The factor-of-2 difference between a drop and a bubble is one of the most commonly tested distinctions in this chapter.", "neetRelevance": "high" },
+    { "id": "h15", "type": "formula_intro", "section": "9.6.5", "text": "Capillary rise: h = 2S cosθ/(ρga), where θ is the angle of contact. If θ is obtuse (as for mercury on glass) the liquid level is LOWER in the capillary, not higher.", "whyItMatters": "Explains why water rises in a capillary but mercury is depressed — a classic contrast question.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Pressure", "definition": "The normal force exerted by a fluid per unit area; P = F/A. It is a scalar quantity with SI unit pascal (Pa) and dimensions [ML⁻¹T⁻²].", "section": "9.2" },
+    { "id": "d2", "term": "Pascal's law", "definition": "The pressure in a fluid at rest is the same at all points at the same height, and pressure applied to an enclosed fluid is transmitted undiminished to every point of the fluid and the walls of the container.", "section": "9.2.1" },
+    { "id": "d3", "term": "Gauge pressure", "definition": "The excess of pressure over atmospheric pressure at a given point, P − P_a = ρgh.", "section": "9.2.3" },
+    { "id": "d4", "term": "Streamline", "definition": "The path taken by a fluid particle under steady flow; a curve whose tangent at any point is in the direction of the fluid velocity at that point. Streamlines never cross.", "section": "9.3" },
+    { "id": "d5", "term": "Equation of continuity", "definition": "For steady, incompressible flow, Av = constant along a tube of flow — the volume flux is the same at every cross-section.", "section": "9.3" },
+    { "id": "d6", "term": "Bernoulli's principle", "definition": "For steady, non-viscous, incompressible flow, the sum P + ½ρv² + ρgh remains constant along a streamline.", "section": "9.4" },
+    { "id": "d7", "term": "Viscosity", "definition": "The internal friction between layers of a fluid in relative motion, characterised by the coefficient η = (F/A)/(v/l); SI unit poiseuille (Pa s).", "section": "9.5" },
+    { "id": "d8", "term": "Terminal velocity", "definition": "The constant velocity reached by an object falling through a viscous fluid, when the net force (gravity − viscous drag − buoyancy) becomes zero.", "section": "9.5.1" },
+    { "id": "d9", "term": "Surface tension", "definition": "The force per unit length (equivalently, surface energy per unit area) acting in the plane of a liquid's free surface, arising from the extra potential energy of surface molecules.", "section": "9.6.2" },
+    { "id": "d10", "term": "Angle of contact", "definition": "The angle between the tangent to the liquid surface at the point of contact and the solid surface, measured inside the liquid; determines whether a liquid wets a solid (acute) or not (obtuse).", "section": "9.6.3" },
+    { "id": "d11", "term": "Capillary rise", "definition": "The rise (or fall) of a liquid in a narrow tube due to surface tension, given by h = 2S cosθ/(ρga).", "section": "9.6.5" }
+  ],
+  "figures": [
+    { "id": "fig-9-3", "kind": "figure", "label": "Fig. 9.3", "ncertPage": 183, "section": "9.2.2", "caption": "Fluid under gravity — pressure on a vertical cylindrical column, used to derive P = P_a + ρgh.", "placeholderText": "NCERT Physics XI · Ch 9 · Page 183 · Fig. 9.3", "src": null, "uploadHint": "Crop from keph202.pdf page 3" },
+    { "id": "fig-9-9", "kind": "figure", "label": "Fig. 9.9", "ncertPage": 187, "section": "9.4", "caption": "Flow of an ideal fluid in a pipe of varying cross-section, used to derive Bernoulli's equation.", "placeholderText": "NCERT Physics XI · Ch 9 · Page 187 · Fig. 9.9", "src": null, "uploadHint": "Crop from keph202.pdf page 7" },
+    { "id": "fig-9-18", "kind": "figure", "label": "Fig. 9.18", "ncertPage": 196, "section": "9.6.4", "caption": "Drop, cavity and bubble of radius r — used to compare excess pressure 2S/r vs 4S/r.", "placeholderText": "NCERT Physics XI · Ch 9 · Page 196 · Fig. 9.18", "src": null, "uploadHint": "Crop from keph202.pdf page 16" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Pressure",
+      "latex": "P = \\dfrac{F}{A}",
+      "plain": "pressure = normal force / area",
+      "symbols": [{ "symbol": "F", "meaning": "normal force exerted by the fluid" }, { "symbol": "A", "meaning": "area" }],
+      "whenToUse": "Whenever computing the force a fluid exerts on a surface, or vice versa.",
+      "derivedFrom": "NCERT Eq. 9.1–9.2",
+      "commonMistakes": ["Treating pressure as a vector — it is a scalar, even though force is a vector."],
+      "questionPatterns": [
+        {
+          "patternName": "Average pressure from a supported load",
+          "howToInterpret": "Given a weight supported over a known area, find the average pressure.",
+          "howItConnectsToFormula": "Direct substitution P = F/A.",
+          "exampleStem": "Two thighbones of cross-sectional area 10 cm² each support the upper body of mass 40 kg. Estimate the average pressure sustained by the femurs.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Pressure is just force divided by area, but remember — unlike force, pressure itself has no direction. It's a scalar."
+    },
+    {
+      "id": "f2",
+      "name": "Pressure with depth / Pascal's law",
+      "latex": "P = P_a + \\rho g h",
+      "plain": "pressure at depth = atmospheric pressure + density × g × depth",
+      "symbols": [{ "symbol": "P_a", "meaning": "atmospheric (surface) pressure" }, { "symbol": "ρ", "meaning": "density of the fluid" }, { "symbol": "h", "meaning": "depth below the surface" }],
+      "whenToUse": "Any problem involving pressure at a depth in a liquid open to the atmosphere — lakes, oceans, tanks.",
+      "derivedFrom": "NCERT Eq. 9.6–9.7",
+      "commonMistakes": ["Forgetting to add atmospheric pressure when 'absolute pressure' is asked, vs. gauge pressure P−P_a = ρgh which excludes it."],
+      "questionPatterns": [
+        {
+          "patternName": "Pressure at a given depth",
+          "howToInterpret": "Identify depth h and fluid density, decide if the question wants absolute or gauge pressure.",
+          "howItConnectsToFormula": "Absolute: P = P_a + ρgh. Gauge: P − P_a = ρgh.",
+          "exampleStem": "What is the pressure on a swimmer 10 m below the surface of a lake?",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Force on a submarine window at depth",
+          "howToInterpret": "Find gauge pressure at depth, then multiply by window area to get net force (since inside is at atmospheric pressure).",
+          "howItConnectsToFormula": "F = (gauge pressure) × A = ρgh × A.",
+          "exampleStem": "At a depth of 1000 m in the ocean, find the force acting on a 20 cm × 20 cm submarine window, given the interior is maintained at sea-level pressure.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Pressure grows linearly with depth — just density times g times depth, added on top of whatever's pushing down from above, usually atmospheric pressure. Watch for whether the question wants absolute pressure or just the gauge pressure, which excludes the atmosphere's contribution."
+    },
+    {
+      "id": "f3",
+      "name": "Hydraulic lift / Pascal's law application",
+      "latex": "\\dfrac{F_2}{F_1} = \\dfrac{A_2}{A_1}",
+      "plain": "output force / input force = output area / input area",
+      "symbols": [{ "symbol": "F_1, A_1", "meaning": "force and area at the small piston" }, { "symbol": "F_2, A_2", "meaning": "force and area at the large piston" }],
+      "whenToUse": "Hydraulic lifts, hydraulic brakes, car jacks — any device using Pascal's law to multiply force.",
+      "derivedFrom": "NCERT Eq. 9.4 / hydraulic lift discussion",
+      "commonMistakes": ["Forgetting the volume of liquid displaced must be equal at both pistons: L₁A₁ = L₂A₂, so the SMALL piston must move a LARGER distance."],
+      "questionPatterns": [
+        {
+          "patternName": "Force multiplication in a hydraulic lift",
+          "howToInterpret": "Given the two piston areas (or diameters) and one force, find the other.",
+          "howItConnectsToFormula": "F₂ = F₁ × (A₂/A₁).",
+          "exampleStem": "In a car lift, compressed air exerts a force on a small piston of radius 5.0 cm; this is transmitted to a second piston of radius 15 cm supporting a 1350 kg car. Find the required force on the small piston.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "A hydraulic lift multiplies force in exact proportion to the ratio of the piston areas — push on the small piston, get a much bigger push out on the large one. But that means the small piston has to travel much further, since the volume of liquid pushed is the same on both sides."
+    },
+    {
+      "id": "f4",
+      "name": "Equation of continuity",
+      "latex": "A_1 v_1 = A_2 v_2 = \\text{constant}",
+      "plain": "area × velocity is constant along a tube of flow",
+      "symbols": [{ "symbol": "A", "meaning": "cross-sectional area of the pipe" }, { "symbol": "v", "meaning": "flow speed at that cross-section" }],
+      "whenToUse": "Any incompressible steady flow through a pipe/tube of varying cross-section.",
+      "derivedFrom": "NCERT Eq. 9.10",
+      "commonMistakes": ["Assuming velocity is the same everywhere in a non-uniform pipe — it changes inversely with area."],
+      "questionPatterns": [
+        {
+          "patternName": "Find speed in a narrower/wider section",
+          "howToInterpret": "Given speed and area at one section, find speed at another section with a different area.",
+          "howItConnectsToFormula": "v₂ = v₁ × (A₁/A₂).",
+          "exampleStem": "Water flows through a pipe that narrows from area 4 cm² to 1 cm². If the speed in the wider section is 2 m/s, find the speed in the narrower section.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is just conservation of mass for a flowing incompressible fluid — wherever the pipe narrows, the fluid must speed up to keep the same volume flowing per second."
+    },
+    {
+      "id": "f5",
+      "name": "Bernoulli's equation",
+      "latex": "P + \\tfrac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}",
+      "plain": "pressure + kinetic energy density + potential energy density = constant along a streamline",
+      "symbols": [{ "symbol": "P", "meaning": "pressure at a point" }, { "symbol": "v", "meaning": "flow speed at that point" }, { "symbol": "h", "meaning": "height of that point" }],
+      "whenToUse": "Comparing pressure/speed/height between two points along the same streamline in non-viscous, incompressible, steady flow.",
+      "derivedFrom": "NCERT Eq. 9.12–9.13",
+      "commonMistakes": ["Applying Bernoulli's equation to viscous or turbulent flow, where it does not hold.", "Forgetting it's an ENERGY conservation statement, analogous to work-energy theorem for fluids."],
+      "questionPatterns": [
+        {
+          "patternName": "Pressure difference from speed difference (same height)",
+          "howToInterpret": "When h₁ = h₂ (e.g. horizontal pipe, or aircraft wing), Bernoulli reduces to P₁ + ½ρv₁² = P₂ + ½ρv₂².",
+          "howItConnectsToFormula": "ΔP = ½ρ(v₂² − v₁²).",
+          "exampleStem": "A Boeing aircraft of mass 3.3×10⁵ kg with wing area 500 m² flies level at 960 km/h. Estimate the pressure difference between the lower and upper wing surfaces needed to support its weight.",
+          "difficulty": "advanced"
+        },
+        {
+          "patternName": "Venturi-meter style speed comparison",
+          "howToInterpret": "Combine continuity (to relate v₁, v₂) with Bernoulli (to relate P₁, P₂) at the same height.",
+          "howItConnectsToFormula": "Use A₁v₁=A₂v₂ first, then substitute into Bernoulli.",
+          "exampleStem": "Water flows through a horizontal venturi tube; given the area ratio and a measured pressure difference, find the flow speed.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Bernoulli's equation is just energy conservation applied to a moving fluid: pressure energy, kinetic energy, and potential energy per unit volume all add up to the same constant along a streamline. Wherever the fluid speeds up, the pressure must drop to compensate — that's the whole secret behind aerofoil lift."
+    },
+    {
+      "id": "f6",
+      "name": "Torricelli's law (speed of efflux)",
+      "latex": "v_1 = \\sqrt{2gh}",
+      "plain": "efflux speed from a small hole = speed of a body freely falling through height h",
+      "symbols": [{ "symbol": "h", "meaning": "height of liquid surface above the hole" }],
+      "whenToUse": "A small hole in the side of an open tank, with the tank's cross-section much larger than the hole's (so the surface descends negligibly slowly).",
+      "derivedFrom": "NCERT Eq. 9.15",
+      "commonMistakes": ["Applying this formula when the container is NOT open to the atmosphere (pressurized tanks need the full Eq. 9.14 with the P−P_a term)."],
+      "questionPatterns": [
+        {
+          "patternName": "Efflux speed from a tank",
+          "howToInterpret": "Identify h as the height of liquid above the hole, apply directly.",
+          "howItConnectsToFormula": "v = √(2gh), same form as free-fall speed.",
+          "exampleStem": "Water leaks from a small hole 5 m below the water surface in an open tank. Find the speed of efflux.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Torricelli's law says liquid leaking from a hole shoots out exactly as fast as an object would be falling after dropping the same height — it's Bernoulli's equation in disguise."
+    },
+    {
+      "id": "f7",
+      "name": "Coefficient of viscosity",
+      "latex": "\\eta = \\dfrac{F/A}{v/l}",
+      "plain": "viscosity = shearing stress / strain rate",
+      "symbols": [{ "symbol": "η", "meaning": "coefficient of viscosity (Pa·s or poiseuille)" }, { "symbol": "v/l", "meaning": "velocity gradient (strain rate)" }],
+      "whenToUse": "Fluid flow between plates or through a pipe, where adjacent layers move at different speeds.",
+      "derivedFrom": "NCERT Eq. 9.16",
+      "commonMistakes": ["Confusing this with the SOLID shear modulus formula — here the denominator is a RATE of strain (v/l), not strain itself, since strain in a flowing fluid grows continuously with time."],
+      "questionPatterns": [
+        {
+          "patternName": "Find viscosity from a measured drag force",
+          "howToInterpret": "Given the force needed to move a plate/block at constant velocity over a fluid film, find η.",
+          "howItConnectsToFormula": "η = (F/A)/(v/l) — rearrange as needed.",
+          "exampleStem": "A metal block of area 0.10 m² is pulled at constant speed 0.085 m/s over a liquid film of thickness 0.30 mm by a hanging 0.010 kg mass via a pulley. Find the coefficient of viscosity.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Viscosity measures a fluid's internal friction — how much shearing stress it takes to make layers slide past each other at a given rate. Notice it's stress over a RATE of strain, not strain itself, because fluids keep deforming continuously as long as force is applied."
+    },
+    {
+      "id": "f8",
+      "name": "Stokes' law and terminal velocity",
+      "latex": "F = 6\\pi\\eta a v, \\qquad v_t = \\dfrac{2a^2(\\rho-\\sigma)g}{9\\eta}",
+      "plain": "viscous drag = 6π × viscosity × radius × velocity; terminal velocity = 2×radius²×(density difference)×g / (9×viscosity)",
+      "symbols": [{ "symbol": "a", "meaning": "radius of the falling sphere" }, { "symbol": "ρ, σ", "meaning": "density of the sphere and of the fluid respectively" }],
+      "whenToUse": "A small sphere falling through a viscous fluid (raindrop in air, ball bearing in oil).",
+      "derivedFrom": "NCERT Eq. 9.17–9.18",
+      "commonMistakes": ["Forgetting v_t ∝ a² — doubling the radius QUADRUPLES the terminal velocity, not doubles it.", "Sign error if ρ < σ (the object is less dense than the fluid) — it would rise, not fall."],
+      "questionPatterns": [
+        {
+          "patternName": "Find viscosity from a measured terminal velocity",
+          "howToInterpret": "Given the terminal velocity, radius, and densities, solve for η.",
+          "howItConnectsToFormula": "Rearrange v_t formula: η = 2a²(ρ−σ)g/(9v_t).",
+          "exampleStem": "A copper ball of radius 2.0 mm reaches terminal velocity 6.5 cm/s falling through oil at 20°C. Given the densities of oil and copper, find the viscosity of the oil.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Stokes' law gives the drag force on a small falling sphere. Set that drag, plus buoyancy, equal to gravity, and you get the terminal velocity — which depends on the SQUARE of the radius, so bigger drops fall proportionally much faster."
+    },
+    {
+      "id": "f9",
+      "name": "Surface tension",
+      "latex": "S = \\dfrac{F}{2l}",
+      "plain": "surface tension = force / (2 × length), accounting for the film's two surfaces",
+      "symbols": [{ "symbol": "S", "meaning": "surface tension (N/m)" }, { "symbol": "l", "meaning": "length of the sliding bar/edge" }],
+      "whenToUse": "Measuring or computing the force needed to stretch a liquid film, or the force at a liquid-air interface.",
+      "derivedFrom": "NCERT Eq. 9.19–9.21",
+      "commonMistakes": ["Forgetting a film has TWO surfaces (top and bottom), so the factor of 2 in S = F/2l — easy to drop in a rushed calculation."],
+      "questionPatterns": [
+        {
+          "patternName": "Surface tension from a measuring-balance setup",
+          "howToInterpret": "Given the extra weight needed to just detach a plate from a liquid surface, find S.",
+          "howItConnectsToFormula": "S = mg/(2l) where l is the plate's edge length (both faces contribute).",
+          "exampleStem": "A glass plate of edge length 10 cm requires an extra 2 g of weight to pull it off a water surface. Find the surface tension of water.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Surface tension is force per unit length along a liquid surface. Remember a stretched film — like a soap film on a wire frame — has two faces, so the total restoring force is twice S times the length."
+    },
+    {
+      "id": "f10",
+      "name": "Excess pressure in a drop and a bubble",
+      "latex": "\\Delta P_{drop} = \\dfrac{2S}{r}, \\qquad \\Delta P_{bubble} = \\dfrac{4S}{r}",
+      "plain": "excess pressure inside a drop = 2S/r; inside a soap bubble (two surfaces) = 4S/r",
+      "symbols": [{ "symbol": "r", "meaning": "radius of the drop/bubble" }],
+      "whenToUse": "Any problem about pressure inside a spherical liquid drop, gas cavity, or soap bubble.",
+      "derivedFrom": "NCERT Eq. 9.25–9.26",
+      "commonMistakes": ["Using 2S/r for a soap bubble instead of 4S/r — bubbles have TWO liquid-air interfaces (inner and outer surface of the thin film), drops/cavities have only ONE."]
+      ,
+      "questionPatterns": [
+        {
+          "patternName": "Find excess pressure given surface tension and radius",
+          "howToInterpret": "Identify whether it's a drop/cavity (single surface) or a bubble (double surface), then apply the correct formula.",
+          "howItConnectsToFormula": "ΔP = 2S/r (drop) or 4S/r (bubble).",
+          "exampleStem": "Find the excess pressure inside a soap bubble of radius 1 cm, given the surface tension of the soap solution is 0.03 N/m.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Pressure required to blow a bubble at the end of a submerged capillary",
+          "howToInterpret": "Total pressure needed = atmospheric + hydrostatic (depth of the capillary tip) + excess pressure from surface tension.",
+          "howItConnectsToFormula": "P_required = P_a + hρg + 2S/r (a hemispherical bubble at a tube mouth has one curved surface, so use 2S/r here, not 4S/r).",
+          "exampleStem": "The lower end of a capillary tube of diameter 2.00 mm is dipped 8.00 cm below a water surface. Find the pressure required to blow a hemispherical bubble at its end.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "A drop or a gas cavity has just one curved surface, so its excess pressure is 2S over r. A soap bubble is a thin film with two surfaces — inside and outside — so its excess pressure doubles to 4S over r. This factor-of-two distinction is one of the most tested details in the whole chapter."
+    },
+    {
+      "id": "f11",
+      "name": "Capillary rise",
+      "latex": "h = \\dfrac{2S\\cos\\theta}{\\rho g a}",
+      "plain": "capillary rise = 2 × surface tension × cos(contact angle) / (density × g × tube radius)",
+      "symbols": [{ "symbol": "a", "meaning": "radius of the capillary tube" }, { "symbol": "θ", "meaning": "angle of contact" }],
+      "whenToUse": "A narrow tube dipped into a liquid — predicting how far the liquid rises (or is depressed).",
+      "derivedFrom": "NCERT Eq. 9.29",
+      "commonMistakes": ["Forgetting that an obtuse contact angle (cos θ < 0, e.g. mercury on glass) gives a NEGATIVE h — meaning the liquid is depressed below the outside level, not raised."],
+      "questionPatterns": [
+        {
+          "patternName": "Find capillary rise given tube radius and surface tension",
+          "howToInterpret": "Identify a (tube radius), S, θ (often taken as 0° for water on clean glass, so cos θ =1), then substitute.",
+          "howItConnectsToFormula": "h = 2S cosθ/(ρga).",
+          "exampleStem": "Water rises to a height of 2.98 cm in a capillary tube of radius 0.05 cm. Verify this using the surface tension of water, S = 0.073 N/m.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Capillary rise comes directly from balancing the upward pull of surface tension against the weight of the raised liquid column. Narrower tubes give a bigger rise — that's why capillary action is so dramatic in hair-thin tubes."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d6", "d7", "d8", "d9", "d10"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["pressure", "conceptual"],
+      "stages": {
+        "question": "Is hydrostatic pressure a vector or a scalar quantity, even though it is defined as force per unit area?",
+        "interpretation": "Tests the scalar nature of pressure despite the vector force in its definition.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Pressure acts equally in all directions at a point in a fluid at rest", "The force ON an area is normal to that area and depends on the area's orientation, but pressure ITSELF has no preferred direction"],
+        "answer": "Pressure is a scalar quantity."
+      },
+      "audioScript": "Even though force is a vector, pressure at a point in a fluid pushes equally in every direction — that's exactly why it's classified as a scalar, not a vector."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["pressure", "depth", "numerical"],
+      "stages": {
+        "question": "What is the pressure on a swimmer 10 m below the surface of a lake? (ρ=1000 kg/m³, g=10 m/s², P_a=1.01×10⁵ Pa)",
+        "interpretation": "Direct substitution into P = P_a + ρgh.",
+        "formula": "P = P_a + ρgh",
+        "solutionSteps": ["P = 1.01×10⁵ + (1000)(10)(10)", "= 1.01×10⁵ + 1.0×10⁵", "= 2.01×10⁵ Pa ≈ 2 atm"],
+        "answer": "≈ 2.01 × 10⁵ Pa, about 2 atmospheres"
+      },
+      "audioScript": "Just add the atmospheric pressure at the surface to the extra hydrostatic pressure from the water column above the swimmer."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["continuity", "numerical"],
+      "stages": {
+        "question": "Water flows at 2 m/s through a pipe of area 4 cm², which narrows to 1 cm². Find the speed in the narrow section.",
+        "interpretation": "Direct application of the equation of continuity.",
+        "formula": "A₁v₁ = A₂v₂",
+        "solutionSteps": ["4 × 2 = 1 × v₂", "v₂ = 8 m/s"],
+        "answer": "8 m/s"
+      },
+      "audioScript": "The pipe area shrinks by a factor of four, so by continuity, the speed must grow by exactly the same factor of four."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["bernoulli", "numerical"],
+      "stages": {
+        "question": "In a horizontal pipe, water flows at 1 m/s where the pressure is 2×10⁵ Pa. At a narrower section, the speed increases to 3 m/s. Find the pressure there. (ρ_water=1000 kg/m³)",
+        "interpretation": "Same-height Bernoulli: P₁+½ρv₁² = P₂+½ρv₂².",
+        "formula": "P₁ + ½ρv₁² = P₂ + ½ρv₂²",
+        "solutionSteps": [
+          "2×10⁵ + ½(1000)(1)² = P₂ + ½(1000)(3)²",
+          "2×10⁵ + 500 = P₂ + 4500",
+          "P₂ = 2.0005×10⁵ − 4500 ≈ 1.955×10⁵ Pa"
+        ],
+        "answer": "≈ 1.96 × 10⁵ Pa (pressure drops where speed increases)"
+      },
+      "audioScript": "Since the pipe is horizontal, the height terms cancel, leaving a simple trade-off between pressure and speed — faster flow means lower pressure, exactly as Bernoulli predicts."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["surface tension", "drop vs bubble"],
+      "stages": {
+        "question": "Why is the excess pressure inside a soap bubble twice that inside a liquid drop of the same radius and surface tension?",
+        "interpretation": "Tests understanding of the geometric difference between a drop (one surface) and a soap film bubble (two surfaces).",
+        "formula": "ΔP(drop)=2S/r, ΔP(bubble)=4S/r",
+        "solutionSteps": ["A drop has a single liquid-air interface", "A soap bubble is a thin film with an inner AND an outer liquid-air surface", "Each surface contributes 2S/r of restoring tension, so the two surfaces together give 4S/r"],
+        "answer": "A soap bubble has two liquid-air surfaces (inner and outer film faces) instead of one, doubling the excess pressure to 4S/r."
+      },
+      "audioScript": "Picture the soap film as two back-to-back liquid surfaces sandwiched together — each one independently contributes its own 2S over r, so the total doubles for a bubble compared to a single-surfaced drop."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["viscosity", "terminal velocity"],
+      "stages": {
+        "question": "If the radius of a raindrop doubles, by what factor does its terminal velocity in air increase (assuming Stokes' law still applies)?",
+        "interpretation": "Tests the a² dependence in the terminal velocity formula.",
+        "formula": "v_t = 2a²(ρ−σ)g/(9η)",
+        "solutionSteps": ["v_t ∝ a²", "Doubling a: v_t,new/v_t,old = (2a)²/a² = 4"],
+        "answer": "Terminal velocity increases by a factor of 4."
+      },
+      "audioScript": "Terminal velocity depends on the square of the radius, not the radius itself — so doubling the size of a falling drop quadruples how fast it ultimately falls, not just doubles it."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["bernoulli", "aerofoil", "numerical"],
+      "stages": {
+        "question": "A Boeing aircraft of mass 3.3×10⁵ kg has wing area 500 m², flying level at 960 km/h. Estimate the pressure difference between the lower and upper wing surfaces. (g=9.8 m/s²)",
+        "interpretation": "The weight of the plane is supported by the net upward force from the pressure difference across the wings.",
+        "formula": "ΔP × A = mg",
+        "solutionSteps": [
+          "Weight = 3.3×10⁵ × 9.8 = 3.234×10⁶ N",
+          "ΔP = Weight/A = 3.234×10⁶/500 = 6.47×10³ N/m²"
+        ],
+        "answer": "ΔP ≈ 6.5 × 10³ N m⁻² (the wing's lower surface has higher pressure than the upper surface)"
+      },
+      "audioScript": "The whole weight of the aircraft is ultimately held up by the pressure difference pushing up on the wings — set the net upward force from that pressure difference equal to gravity, and solve directly."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["capillary rise", "numerical"],
+      "stages": {
+        "question": "Derive the capillary rise formula h = 2S cosθ/(ρga) starting from the pressure difference across a curved meniscus, (P_i−P_o)=2S/(a secθ).",
+        "interpretation": "Derivation question linking the meniscus excess-pressure formula to the hydrostatic balance that determines rise height.",
+        "formula": "(P_i-P_o) = 2S cosθ/a; also (P_i-P_o) = hρg",
+        "solutionSteps": [
+          "The meniscus radius of curvature R relates to tube radius a by R = a/cosθ, so excess pressure = 2S/R = 2Scosθ/a",
+          "This pressure difference must be balanced hydrostatically by the raised column: (P_i−P_o) = hρg",
+          "Equating: hρg = 2Scosθ/a ⟹ h = 2Scosθ/(ρga)"
+        ],
+        "answer": "h = 2S cosθ/(ρga)"
+      },
+      "audioScript": "The trick is recognizing the curved meniscus has a radius of curvature related to the tube's actual radius through the contact angle. Once you have that excess pressure, just balance it against the weight of the risen column to solve for the height."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why is pressure a scalar quantity even though force is a vector?",
+      "State the equation of continuity and explain physically why fluid speeds up in a narrower pipe.",
+      "Why does the viscosity of a gas increase with temperature while a liquid's viscosity decreases?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "The two thigh bones (femurs), each of cross-sectional area 10 cm², support the upper body of mass 40 kg. Estimate the average pressure sustained by the femurs. (g=10 m/s²)",
+        "interpretation": "Direct P=F/A with combined area of both femurs.",
+        "formulaIds": ["f1"],
+        "steps": ["Total area = 2×10 cm² = 20×10⁻⁴ m²", "F = 40×10 = 400 N", "P = F/A = 400/(20×10⁻⁴) = 2×10⁵ N/m²"],
+        "answer": "2 × 10⁵ N m⁻²",
+        "audioScript": "Combine both femurs' areas since they share the load together, then just divide the total weight by that combined area."
+      },
+      {
+        "id": "pb2",
+        "question": "Find the excess pressure inside a soap bubble of radius 1 cm, given the surface tension of the soap solution is 0.03 N/m.",
+        "interpretation": "Direct application of the bubble excess-pressure formula (double surface).",
+        "formulaIds": ["f10"],
+        "steps": ["ΔP = 4S/r = 4×0.03/0.01"],
+        "answer": "ΔP = 12 N/m² = 12 Pa",
+        "audioScript": "Remember the factor of 4, not 2, since a soap bubble has two surfaces."
+      },
+      {
+        "id": "pb3",
+        "question": "Two syringes with piston diameters 1.0 cm and 3.0 cm are connected by a water-filled tube. A 10 N force is applied to the smaller piston. Find the force on the larger piston.",
+        "interpretation": "Hydraulic force multiplication using the ratio of piston areas.",
+        "formulaIds": ["f3"],
+        "steps": ["A ∝ d², so A₂/A₁ = (3.0/1.0)² = 9", "F₂ = F₁ × (A₂/A₁) = 10 × 9 = 90 N"],
+        "answer": "90 N",
+        "audioScript": "Since area scales with diameter squared, tripling the diameter gives nine times the area — and hence nine times the force."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "At a depth of 1000 m in the ocean, find (a) the absolute pressure, (b) the gauge pressure. (ρ_seawater=1.03×10³ kg/m³, g=10 m/s², P_a=1.01×10⁵ Pa)",
+        "interpretation": "Two-part application of the pressure-depth formula.",
+        "formulaIds": ["f2"],
+        "steps": [
+          "Gauge pressure = ρgh = 1.03×10³ × 10 × 1000 = 1.03×10⁷ Pa",
+          "Absolute pressure = P_a + ρgh = 1.01×10⁵ + 1.03×10⁷ ≈ 1.04×10⁷ Pa"
+        ],
+        "answer": "Absolute ≈ 1.04×10⁷ Pa (~103 atm); Gauge ≈ 1.03×10⁷ Pa (~102 atm)",
+        "audioScript": "Gauge pressure ignores the atmosphere and counts only the extra push from the water column; absolute pressure adds the atmosphere back on top."
+      },
+      {
+        "id": "pi2",
+        "question": "A metal block of area 0.10 m² is connected via a string over a pulley to a hanging 0.010 kg mass, and slides over a 0.30 mm liquid film at a constant speed of 0.085 m/s. Find the coefficient of viscosity of the liquid. (g=9.8 m/s²)",
+        "interpretation": "Constant velocity means the shear force equals the string tension, which equals the hanging weight.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "F = mg = 0.010×9.8 = 9.8×10⁻² N",
+          "Shear stress = F/A = 9.8×10⁻²/0.10 = 0.98 N/m²",
+          "Strain rate = v/l = 0.085/(0.30×10⁻³) = 283 s⁻¹",
+          "η = stress/strain rate = 0.98/283 ≈ 3.46×10⁻³ Pa·s"
+        ],
+        "answer": "η ≈ 3.46 × 10⁻³ Pa s"
+      },
+      {
+        "id": "pi3",
+        "question": "The lower end of a capillary tube of diameter 2.00 mm is dipped 8.00 cm below the surface of water in a beaker. Find the pressure required to blow a hemispherical bubble at its end, given S(water)=7.30×10⁻² N/m, P_a=1.01×10⁵ Pa, g=9.80 m/s².",
+        "interpretation": "Total required pressure = atmospheric + hydrostatic (depth) + excess pressure from the single curved bubble surface at the tube mouth.",
+        "formulaIds": ["f2", "f10"],
+        "steps": [
+          "P_o (outside the bubble, at the tube tip) = P_a + hρg = 1.01×10⁵ + 0.08×1000×9.8 = 1.01784×10⁵ Pa",
+          "Excess pressure (single hemispherical surface, radius = tube radius = 1.0×10⁻³ m) = 2S/r = 2×7.3×10⁻²/1.0×10⁻³ = 146 Pa",
+          "P_inside = P_o + 2S/r = 1.01784×10⁵ + 146 ≈ 1.02×10⁵ Pa"
+        ],
+        "answer": "P_inside ≈ 1.02 × 10⁵ Pa; excess pressure ≈ 146 Pa",
+        "audioScript": "Layer the three contributions one at a time: start from atmospheric pressure, add the hydrostatic pressure from the 8 cm depth, then add the extra curvature pressure from the bubble's single exposed surface."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "A copper ball of radius 2.0 mm falling through a tank of oil at 20°C reaches a terminal velocity of 6.5 cm/s. Given density of oil = 1.5×10³ kg/m³, density of copper = 8.9×10³ kg/m³, g=9.8 m/s², find the viscosity of the oil.",
+        "interpretation": "Rearrange the terminal velocity formula to solve for η.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "v_t = 2a²(ρ−σ)g/(9η) ⟹ η = 2a²(ρ−σ)g/(9v_t)",
+          "η = 2×(2×10⁻³)²×(8.9×10³−1.5×10³)×9.8 / (9×6.5×10⁻²)",
+          "= 2×4×10⁻⁶×7.4×10³×9.8 / 0.585",
+          "≈ 5.80×10⁻¹/0.585 ≈ 0.99 Pa·s"
+        ],
+        "answer": "η ≈ 0.99 Pa s (≈ 9.9 × 10⁻¹ kg m⁻¹ s⁻¹)",
+        "audioScript": "This is the terminal velocity formula run backwards — plug in the known densities, radius and terminal speed, and solve algebraically for the one unknown, viscosity."
+      },
+      {
+        "id": "pa2",
+        "question": "A fully loaded aircraft of mass 3.3×10⁵ kg has wing area 500 m² and flies at 960 km/h with air density 1.2 kg/m³. Estimate the fractional increase in air speed on the upper wing surface compared to the lower surface needed to generate the required lift.",
+        "interpretation": "Combine the pressure-difference (from lift) with Bernoulli's equation relating that ΔP to a speed difference, using the average speed to simplify.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "ΔP = weight/area = (3.3×10⁵×9.8)/500 ≈ 6.47×10³ N/m²",
+          "ΔP = ½ρ(v₂²−v₁²) = ½ρ(v₂−v₁)(v₂+v₁) ≈ ρ×v_av×(v₂−v₁), using v_av=(v₁+v₂)/2",
+          "v_av = 960 km/h ≈ 267 m/s",
+          "(v₂−v₁)/v_av = ΔP/(ρv_av²) = 6.47×10³/(1.2×267²) ≈ 0.076"
+        ],
+        "answer": "≈ 8% higher speed needed on the upper surface compared to the lower surface",
+        "audioScript": "This is a classic 'linearize Bernoulli' trick — since the speed difference is small compared to the average speed, factor the squared-speed difference into a product involving the average speed, which turns the algebra into simple division."
+      },
+      {
+        "id": "pa3",
+        "question": "Water flows through a horizontal pipe that narrows from radius 5 cm to radius 2 cm. If the pressure in the wider section is 3×10⁵ Pa and the flow speed there is 1 m/s, find the pressure in the narrower section. (ρ_water=1000 kg/m³)",
+        "interpretation": "First use continuity to find the speed in the narrow section (from the AREA ratio, not radius ratio directly — remember A∝r²), then apply Bernoulli.",
+        "formulaIds": ["f4", "f5"],
+        "steps": [
+          "A₁/A₂ = r₁²/r₂² = 5²/2² = 6.25",
+          "v₂ = v₁ × (A₁/A₂) = 1 × 6.25 = 6.25 m/s",
+          "P₁+½ρv₁² = P₂+½ρv₂² (same height)",
+          "P₂ = 3×10⁵ + ½(1000)(1² − 6.25²) = 3×10⁵ + 500×(1−39.06) = 3×10⁵ − 19031 ≈ 2.81×10⁵ Pa"
+        ],
+        "answer": "P₂ ≈ 2.81 × 10⁵ Pa",
+        "audioScript": "This problem chains two formulas — first find the new speed from continuity, remembering that area scales with radius squared, then feed that speed into Bernoulli's equation to get the new pressure."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the equation of continuity with Bernoulli's equation in a real-world scenario (e.g. a garden hose nozzle, or an airplane wing), and one that combines Stokes' law with surface tension (e.g. a small bubble rising through a viscous liquid)."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 9 — Mechanical Properties of Fluids. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (pressure & Pascal's law, continuity & Bernoulli, viscosity & Stokes' law, or surface tension & capillarity). First quiz me on definitions and formulas with NO calculation involved — pressure, Pascal's law, the equation of continuity, Bernoulli's equation, viscosity, surface tension, and the drop-vs-bubble excess pressure distinction. Then move to basic numericals tied to a single formula (e.g. pressure at a depth, excess pressure in a bubble). Then intermediate problems requiring two steps (e.g. hydraulic lift force ratios, viscosity from a measured terminal velocity, capillary tube bubble-blowing pressure). Then advanced problems that chain two formulas together (continuity + Bernoulli for a venturi-style pipe, or Bernoulli applied to aerofoil lift). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula(s) connect to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 11 formulas with when-to-use notes). Stay within this chapter's scope (pressure, Pascal's law, continuity, Bernoulli, viscosity, Stokes' law, surface tension, capillarity) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "Why is pressure classified as a scalar even though it comes from a force divided by area?", "a": "Because the force a fluid exerts on any surface at a point is always normal to that surface, whatever its orientation — pressure itself has no assignable direction." },
+    { "q": "What happens to flow speed when a pipe narrows, and which principle explains this?", "a": "Speed increases — explained by the equation of continuity (A₁v₁=A₂v₂), a statement of mass conservation for incompressible flow." },
+    { "q": "Why is the excess pressure in a soap bubble twice that in a liquid drop of the same size?", "a": "A soap bubble has two liquid-air surfaces (inner and outer film faces) while a drop has only one, so the bubble's excess pressure is 4S/r instead of 2S/r." },
+    { "q": "How does terminal velocity depend on the radius of a falling sphere?", "a": "It is proportional to the SQUARE of the radius (v_t ∝ a²), from Stokes' law combined with the weight and buoyancy balance." },
+    { "q": "Does the viscosity of water increase or decrease as temperature rises, and is this the same for air?", "a": "Water's (a liquid's) viscosity DECREASES with temperature; air's (a gas's) viscosity INCREASES with temperature — opposite trends." }
+  ]
+}

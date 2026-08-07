@@ -1,0 +1,519 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 14,
+    "chapterTitle": "Waves",
+    "ncertCode": "keph207",
+    "topicIdHint": "Oscillations and Waves",
+    "estimatedRevisionMinutes": 60,
+    "chapter": "Waves",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Distinguish transverse and longitudinal waves, and identify which media support each.",
+    "Write and interpret the displacement equation y(x,t)=a sin(kx−ωt+φ) for a travelling wave.",
+    "Apply v=ω/k=νλ and compute the speed of transverse waves on a string and sound waves in solids/liquids/gases (including the Laplace correction).",
+    "Apply the principle of superposition to interference, reflection (phase change at rigid vs open boundaries), and standing waves.",
+    "Find the normal modes (harmonics) of a string fixed at both ends and an air column open/closed at one end.",
+    "Compute beat frequency from two close frequencies."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Transverse vs longitudinal → travelling wave equation → wave speed formulas → superposition → reflection & standing waves → normal modes → beats.",
+    "mustKnowBullets": [
+      "Transverse waves need shear elasticity — only solids support them; longitudinal waves need bulk elasticity — solids, liquids AND gases all support them.",
+      "Travelling wave: y(x,t)=a sin(kx−ωt+φ); k=2π/λ (angular wave number), ω=2π/T=2πν.",
+      "Wave speed: v = ω/k = νλ = λ/T — the speed at which a fixed PHASE point moves, not the speed of any medium particle.",
+      "Speed of transverse wave on a string: v=√(T/μ), T=tension, μ=mass per unit length.",
+      "Speed of sound: v=√(B/ρ) in general; v=√(Y/ρ) in a solid bar; v=√(γP/ρ) in a gas (Laplace's correction — sound compressions are adiabatic, not isothermal, giving γP instead of Newton's original P).",
+      "Principle of superposition: net displacement = algebraic sum of individual wave displacements — waves pass through each other unchanged.",
+      "Reflection: a wave suffers a phase change of π at a RIGID boundary, and NO phase change at a FREE/open boundary.",
+      "Standing wave on a string fixed at both ends: y=2a sin(kx)cos(ωt) — nodes (zero amplitude) and antinodes (max amplitude) are FIXED in space; normal-mode frequencies ν_n=nv/(2L), n=1,2,3,... (ALL harmonics present).",
+      "Air column closed at one end (open at other): only ODD harmonics: ν_n=(n+½)v/(2L), n=0,1,2,... i.e. ν, 3ν, 5ν, ...",
+      "Beats arise from superposing two close frequencies: ν_beat = |ν₁−ν₂|."
+    ],
+    "keyTables": [
+      {
+        "title": "Standing wave normal modes",
+        "rows": [
+          ["Boundary condition", "Harmonics present", "Fundamental frequency", "General formula"],
+          ["String, both ends fixed", "All (1st, 2nd, 3rd, ...)", "v/2L", "ν_n = nv/2L, n=1,2,3,..."],
+          ["Pipe, both ends open", "All", "v/2L", "ν_n = nv/2L, n=1,2,3,..."],
+          ["Pipe, one end closed", "Odd only (1st, 3rd, 5th, ...)", "v/4L", "ν_n = (n+½)v/2L, n=0,1,2,..."]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "statement", "section": "14.2", "text": "If the constituents of the medium oscillate perpendicular to the direction of wave propagation, we call the wave a transverse wave. If they oscillate along the direction of wave propagation, we call it a longitudinal wave.", "whyItMatters": "The fundamental classification of mechanical waves — tested constantly with 'which medium supports which wave' questions.", "neetRelevance": "high" },
+    { "id": "h2", "type": "caution", "section": "14.2", "text": "Transverse waves can be propagated only in media which can sustain shearing stress, such as solids — not fluids. Fluids as well as solids can sustain compressive strain; therefore, longitudinal waves can be propagated in all elastic media, including liquids and gases.", "whyItMatters": "Explains why sound in air/water is always longitudinal, while a wave on a string is transverse.", "neetRelevance": "high" },
+    { "id": "h3", "type": "formula_intro", "section": "14.3", "text": "A sinusoidal travelling wave is described by y(x,t) = a sin(kx−ωt+φ), where a is the amplitude, k the angular wave number, ω the angular frequency, and φ the initial phase.", "whyItMatters": "The master equation of this chapter — every wave-parameter question starts by matching to this form.", "neetRelevance": "high" },
+    { "id": "h4", "type": "definition", "section": "14.3.2", "text": "The minimum distance between two points having the same phase is called the wavelength λ. It is related to the angular wave number by k=2π/λ.", "whyItMatters": "Direct-recall relation used to convert between k and λ in nearly every problem.", "neetRelevance": "high" },
+    { "id": "h5", "type": "caution", "section": "14.4", "text": "The speed of a mechanical wave is determined by the inertial (mass density) and elastic (restoring-force) properties of the MEDIUM — it does NOT depend on the wavelength or frequency of the wave itself, nor on the velocity of the source.", "whyItMatters": "A very common trap — students sometimes think a higher-frequency source produces a faster wave; it doesn't, in a non-dispersive medium.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "14.4.1", "text": "The speed of transverse waves on a stretched string is v=√(T/μ), where T is the tension and μ is the mass per unit length (linear mass density).", "whyItMatters": "Direct-recall numerical formula, foundational for musical-instrument-string problems.", "neetRelevance": "high" },
+    { "id": "h7", "type": "formula_intro", "section": "14.4.2", "text": "The general formula for the speed of longitudinal waves in a medium is v=√(B/ρ), where B is the bulk modulus and ρ the density. For a solid bar, B is replaced by Young's modulus Y.", "whyItMatters": "Explains the general elastic-modulus/density pattern across solids, liquids and gases.", "neetRelevance": "high" },
+    { "id": "h8", "type": "caution", "section": "14.4.2", "text": "Newton assumed pressure variations during sound propagation are isothermal, giving v=√(P/ρ) — but this underestimates the speed of sound in air by about 15%. Laplace corrected this: sound compressions are so fast that they are adiabatic, giving B=γP and hence v=√(γP/ρ), which matches experiment.", "whyItMatters": "A classic 'history of physics' NEET question — know both Newton's original (wrong) formula and Laplace's correction.", "neetRelevance": "high" },
+    { "id": "h9", "type": "statement", "section": "14.5", "text": "The principle of superposition: if two or more waves traverse the same region simultaneously, the net displacement at any point is the algebraic sum of the displacements due to each individual wave, and each wave continues as if the others were not present.", "whyItMatters": "Foundational for interference, standing waves, and beats — all three phenomena derive directly from this principle.", "neetRelevance": "high" },
+    { "id": "h10", "type": "caution", "section": "14.6", "text": "A travelling wave suffers a phase change of π (180°) on reflection at a RIGID boundary (net displacement stays zero there at all times), but suffers NO phase change on reflection at an open/free boundary.", "whyItMatters": "Determines whether a node or antinode forms at each end of a standing-wave system — critical for the harmonic-series formulas.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "14.6.1", "text": "Standing (stationary) waves are characterised by fixed locations of zero displacement called nodes, and fixed locations of maximum displacement called antinodes. Unlike a travelling wave, the terms kx and ωt appear separately, not combined — the wave pattern doesn't move left or right.", "whyItMatters": "Key conceptual distinction between travelling and standing waves.", "neetRelevance": "high" },
+    { "id": "h12", "type": "formula_intro", "section": "14.7", "text": "Beats arise from the superposition of two harmonic waves of close (but not equal) frequencies. The beat frequency is ν_beat = ν₁ − ν₂ (the difference in the two close frequencies), heard as a waxing and waning of intensity.", "whyItMatters": "Direct-recall formula, and the classic 'sitar tuning' application in NCERT.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Transverse wave", "definition": "A wave in which the constituents of the medium oscillate perpendicular to the direction of wave propagation; requires a medium with shear elasticity (solids only).", "section": "14.2" },
+    { "id": "d2", "term": "Longitudinal wave", "definition": "A wave in which the constituents of the medium oscillate parallel to the direction of wave propagation; possible in solids, liquids and gases.", "section": "14.2" },
+    { "id": "d3", "term": "Wavelength (λ)", "definition": "The minimum distance between two points on a wave having the same phase; k=2π/λ.", "section": "14.3.2" },
+    { "id": "d4", "term": "Angular wave number (k)", "definition": "The propagation constant of a wave, k=2π/λ; SI unit rad/m.", "section": "14.3.2" },
+    { "id": "d5", "term": "Principle of superposition", "definition": "When two or more waves traverse a region simultaneously, the net displacement is the algebraic sum of the individual displacements due to each wave.", "section": "14.5" },
+    { "id": "d6", "term": "Interference", "definition": "The phenomenon arising from superposition of two waves — constructive (amplitudes add, φ=0) or destructive (amplitudes cancel, φ=π).", "section": "14.5" },
+    { "id": "d7", "term": "Standing (stationary) wave", "definition": "The pattern y(x,t)=2a sin(kx)cos(ωt) formed by superposing two identical waves travelling in opposite directions; has fixed nodes and antinodes, and does not itself propagate.", "section": "14.6.1" },
+    { "id": "d8", "term": "Node / Antinode", "definition": "A node is a point of zero amplitude (no motion) in a standing wave; an antinode is a point of maximum amplitude. Consecutive nodes (or antinodes) are separated by λ/2.", "section": "14.6.1" },
+    { "id": "d9", "term": "Normal modes / Harmonics", "definition": "The discrete set of natural frequencies at which a bounded system (string, air column) can sustain standing waves; the lowest is the fundamental (first harmonic).", "section": "14.6.1" },
+    { "id": "d10", "term": "Beats", "definition": "The periodic waxing and waning of intensity heard when two sound waves of close (not equal) frequencies interfere; beat frequency = |ν₁−ν₂|.", "section": "14.7" }
+  ],
+  "figures": [
+    { "id": "fig-14-3", "kind": "figure", "label": "Fig. 14.3", "ncertPage": 280, "section": "14.2", "caption": "A harmonic (sinusoidal) transverse wave travelling along a stretched string.", "placeholderText": "NCERT Physics XI · Ch 14 · Page 280 · Fig. 14.3", "src": null, "uploadHint": "Crop from keph207.pdf page 2" },
+    { "id": "fig-14-13", "kind": "figure", "label": "Fig. 14.13", "ncertPage": 291, "section": "14.6.1", "caption": "The first six harmonics of vibration of a stretched string fixed at both ends, showing nodes (N) and antinodes (A).", "placeholderText": "NCERT Physics XI · Ch 14 · Page 291 · Fig. 14.13", "src": null, "uploadHint": "Crop from keph207.pdf page 13" },
+    { "id": "fig-14-16", "kind": "graph", "label": "Fig. 14.16", "ncertPage": 294, "section": "14.7", "caption": "Superposition of two harmonic waves of frequency 11 Hz and 9 Hz, producing beats of frequency 2 Hz.", "placeholderText": "NCERT Physics XI · Ch 14 · Page 294 · Fig. 14.16", "src": null, "uploadHint": "Crop from keph207.pdf page 16" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Travelling wave equation",
+      "latex": "y(x,t) = a\\sin(kx - \\omega t + \\phi)",
+      "plain": "displacement = amplitude × sine of (wave number × position − angular frequency × time + phase)",
+      "symbols": [{ "symbol": "a", "meaning": "amplitude" }, { "symbol": "k", "meaning": "angular wave number, 2π/λ" }],
+      "whenToUse": "Describing or interpreting any sinusoidal travelling wave — reading off amplitude, wavelength, frequency, and direction.",
+      "derivedFrom": "NCERT Eq. 14.2",
+      "commonMistakes": ["Confusing +ωt (wave travelling in −x direction) with −ωt (wave travelling in +x direction).", "Forgetting to compare coefficients carefully when the given equation isn't in exactly this standard form."],
+      "questionPatterns": [
+        {
+          "patternName": "Extract amplitude, wavelength, period, frequency from a given wave equation",
+          "howToInterpret": "Match the given equation to the standard form and read off a, k, ω directly, then convert to λ, T, ν.",
+          "howItConnectsToFormula": "λ=2π/k; T=2π/ω; ν=1/T.",
+          "exampleStem": "A wave is described by y(x,t)=0.005 sin(80.0x−3.0t) in SI units. Find the amplitude, wavelength, period and frequency.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This equation is the DNA of a travelling wave — once you match a given equation to this standard form, every other property, wavelength, period, frequency, direction, falls right out of the coefficients."
+    },
+    {
+      "id": "f2",
+      "name": "Wave speed",
+      "latex": "v = \\dfrac{\\omega}{k} = \\nu\\lambda = \\dfrac{\\lambda}{T}",
+      "plain": "wave speed = angular frequency / wave number = frequency × wavelength",
+      "symbols": [{ "symbol": "v", "meaning": "wave (phase) speed" }],
+      "whenToUse": "Relating any two of speed, frequency, and wavelength.",
+      "derivedFrom": "NCERT Eq. 14.12, 14.15",
+      "commonMistakes": ["Confusing wave speed v with the speed of a medium PARTICLE (which oscillates, doesn't propagate) — these are completely different quantities."],
+      "questionPatterns": [
+        {
+          "patternName": "Find wavelength given speed and frequency (or vice versa)",
+          "howToInterpret": "Direct substitution once the wave's speed (determined by the medium) and source frequency are known.",
+          "howItConnectsToFormula": "λ = v/ν.",
+          "exampleStem": "A source produces a sound wave of frequency 500 Hz that travels at 340 m/s in air. Find its wavelength.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Wave speed is fixed by the medium — it's the source that determines frequency, and once you know both, wavelength is simply forced by this relation."
+    },
+    {
+      "id": "f3",
+      "name": "Speed of a transverse wave on a string",
+      "latex": "v = \\sqrt{\\dfrac{T}{\\mu}}",
+      "plain": "wave speed = root of (tension / mass per unit length)",
+      "symbols": [{ "symbol": "T", "meaning": "tension in the string" }, { "symbol": "μ", "meaning": "linear mass density, mass/length" }],
+      "whenToUse": "Any transverse wave on a stretched string, wire, or rope.",
+      "derivedFrom": "NCERT Eq. 14.14",
+      "commonMistakes": ["Confusing this T (tension, a force) with T (period, a time) — same symbol, very different quantities."],
+      "questionPatterns": [
+        {
+          "patternName": "Find wave speed given tension and linear mass density",
+          "howToInterpret": "Find μ=mass/length if not given directly, then substitute.",
+          "howItConnectsToFormula": "Direct substitution.",
+          "exampleStem": "A steel wire 0.72 m long has mass 5.0×10⁻³ kg, under tension 60 N. Find the speed of transverse waves on it.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "A tauter string, or a lighter string, both make waves travel faster — exactly what this formula captures, tension in the numerator, mass density in the denominator."
+    },
+    {
+      "id": "f4",
+      "name": "Speed of sound (longitudinal waves)",
+      "latex": "v = \\sqrt{\\dfrac{B}{\\rho}}\\ \\text{(general)}, \\quad v=\\sqrt{\\dfrac{Y}{\\rho}}\\ \\text{(solid bar)}, \\quad v=\\sqrt{\\dfrac{\\gamma P}{\\rho}}\\ \\text{(gas, Laplace)}",
+      "plain": "speed = root of (elastic modulus / density) — bulk modulus generally, Young's modulus for a solid bar, gamma×pressure for a gas",
+      "symbols": [{ "symbol": "B", "meaning": "bulk modulus" }, { "symbol": "γ", "meaning": "ratio of specific heats, Cp/Cv" }],
+      "whenToUse": "Speed of sound (or any longitudinal wave) in solids, liquids, or gases.",
+      "derivedFrom": "NCERT Eq. 14.19, 14.20, 14.24",
+      "commonMistakes": ["Using Newton's formula v=√(P/ρ) instead of Laplace's corrected v=√(γP/ρ) — Newton's gives a value ~15% too low for air.", "Forgetting solids generally have the HIGHEST sound speed despite their high density, because their elastic modulus increases even more."],
+      "questionPatterns": [
+        {
+          "patternName": "Estimate speed of sound in air using the ideal gas density",
+          "howToInterpret": "Find air density from PV=NkT (or molar mass/molar volume), then apply the Laplace formula.",
+          "howItConnectsToFormula": "v=√(γP/ρ), with γ=7/5 for air (diatomic).",
+          "exampleStem": "Estimate the speed of sound in air at STP, given the mass of 1 mole of air is 29.0×10⁻³ kg.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Explain temperature/pressure/humidity dependence of sound speed",
+          "howToInterpret": "Use v=√(γP/ρ) together with the ideal gas law (P/ρ ∝ T) to reason about dependence.",
+          "howItConnectsToFormula": "Since P/ρ=RT/M (from ideal gas law), v=√(γRT/M) — independent of P alone, but increases with √T.",
+          "exampleStem": "Explain why the speed of sound in air (a) is independent of pressure, (b) increases with temperature, (c) increases with humidity.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "The formula looks the same everywhere, elastic modulus over density, square-rooted — what changes is which modulus you use. And the crucial historical fix here is Laplace realizing sound compressions happen too fast for heat to escape, so they're adiabatic, not isothermal like Newton assumed."
+    },
+    {
+      "id": "f5",
+      "name": "Superposition and interference (amplitude of resultant)",
+      "latex": "y(x,t) = 2a\\cos\\!\\left(\\tfrac{\\phi}{2}\\right)\\sin\\!\\left(kx-\\omega t+\\tfrac{\\phi}{2}\\right)",
+      "plain": "resultant of two equal-amplitude waves with phase difference φ has amplitude 2a·cos(φ/2)",
+      "symbols": [{ "symbol": "φ", "meaning": "phase difference between the two constituent waves" }],
+      "whenToUse": "Two waves of the same frequency and amplitude overlapping — finding the resultant wave's amplitude.",
+      "derivedFrom": "NCERT Eq. 14.31–14.34",
+      "commonMistakes": ["Forgetting φ=0 gives CONSTRUCTIVE interference (amplitude 2a, maximum) while φ=π gives DESTRUCTIVE interference (amplitude 0) — these are the two extremes of a continuous range."],
+      "questionPatterns": [
+        {
+          "patternName": "Find resultant amplitude given phase difference",
+          "howToInterpret": "Direct substitution into 2a·cos(φ/2).",
+          "howItConnectsToFormula": "A(φ)=2a cos(φ/2).",
+          "exampleStem": "Two waves of amplitude 3 cm each interfere with a phase difference of 2π/3. Find the amplitude of the resultant wave.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The resultant amplitude smoothly varies between full reinforcement, when the waves are perfectly in step, and complete cancellation, when they're exactly out of step by half a cycle — everything in between is governed by this cosine factor."
+    },
+    {
+      "id": "f6",
+      "name": "Standing wave on a string fixed at both ends (normal modes)",
+      "latex": "y(x,t) = 2a\\sin(kx)\\cos(\\omega t), \\qquad \\nu_n = \\dfrac{nv}{2L},\\ n=1,2,3,\\ldots",
+      "plain": "standing wave pattern; normal mode frequencies = n × wave speed / (2 × length)",
+      "symbols": [{ "symbol": "L", "meaning": "length of the string" }, { "symbol": "n", "meaning": "harmonic number (1=fundamental)" }],
+      "whenToUse": "A string fixed at both ends (guitar, sitar, violin string) — finding its natural (resonant) frequencies.",
+      "derivedFrom": "NCERT Eq. 14.37, 14.42",
+      "commonMistakes": ["Forgetting BOTH ends must be nodes, so only wavelengths satisfying L=nλ/2 fit — ALL integer harmonics (1,2,3...) are allowed, unlike a pipe closed at one end."],
+      "questionPatterns": [
+        {
+          "patternName": "Find the fundamental frequency of a stretched string",
+          "howToInterpret": "Find wave speed v from T and μ, then apply n=1.",
+          "howItConnectsToFormula": "ν₁ = v/(2L).",
+          "exampleStem": "A string of length 1.5 m and mass 0.01 kg is stretched under tension 90 N. Find its fundamental frequency.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Since both ends are fixed, they must always be nodes — this constraint only allows a wavelength to fit if the string length is a whole number of half-wavelengths, giving the complete harmonic series with no gaps."
+    },
+    {
+      "id": "f7",
+      "name": "Air column normal modes (open vs closed pipe)",
+      "latex": "\\text{Open pipe: } \\nu_n = \\dfrac{nv}{2L},\\ n=1,2,3,\\ldots \\qquad \\text{Closed pipe: } \\nu_n = \\left(n+\\tfrac{1}{2}\\right)\\dfrac{v}{2L},\\ n=0,1,2,\\ldots",
+      "plain": "open-both-ends pipe: all harmonics, nv/2L; closed-one-end pipe: only odd harmonics, (n+1/2)v/2L",
+      "symbols": [{ "symbol": "v", "meaning": "speed of sound in the air column" }],
+      "whenToUse": "Wind instruments, resonance tubes — finding which frequencies an air column will resonate at.",
+      "derivedFrom": "NCERT Eq. 14.42, 14.44",
+      "commonMistakes": ["Applying the OPEN-pipe formula (all harmonics) to a CLOSED pipe, which only supports ODD harmonics — a very common mix-up.", "Forgetting a closed pipe's fundamental is v/4L, HALF the open pipe's fundamental v/2L, for the same length."],
+      "questionPatterns": [
+        {
+          "patternName": "Identify which harmonic resonates with a given source frequency",
+          "howToInterpret": "Find the fundamental frequency for the given end condition, then check which integer (or odd integer) multiple matches the source frequency.",
+          "howItConnectsToFormula": "Compare source frequency to nν₁ (open) or (2n+1)ν₁ (closed, using ν₁=v/4L).",
+          "exampleStem": "A pipe 30.0 cm long is open at both ends. Which harmonic resonates with a 1.1 kHz source? (v=330 m/s)",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "A closed end must be a node, an open end must be an antinode — work out which end conditions apply, and that tells you immediately whether you get the full harmonic series or only the odd ones."
+    },
+    {
+      "id": "f8",
+      "name": "Beat frequency",
+      "latex": "\\nu_{beat} = |\\nu_1 - \\nu_2|",
+      "plain": "beat frequency = absolute difference between the two close frequencies",
+      "symbols": [{ "symbol": "ν₁, ν₂", "meaning": "the two close (but unequal) frequencies" }],
+      "whenToUse": "Two sound sources of nearly equal frequency sounding together, producing an audible waxing-waning intensity.",
+      "derivedFrom": "NCERT Eq. 14.48",
+      "commonMistakes": ["Forgetting beat frequency alone cannot tell you whether ν₁>ν₂ or ν₁<ν₂ — extra information (like the effect of adjusting one source) is needed to determine which is higher."],
+      "questionPatterns": [
+        {
+          "patternName": "Find the unknown frequency from beat information and a tuning adjustment",
+          "howToInterpret": "Use the FIRST beat frequency to narrow down two candidate frequencies, then use the change in beat frequency after adjusting one source to determine which candidate is correct.",
+          "howItConnectsToFormula": "ν_beat=|ν₁−ν₂|; reasoning about which candidate is consistent with the observed change.",
+          "exampleStem": "Two sitar strings A and B produce 5 beats/s. When B's tension is increased, the beat frequency decreases to 3 Hz. If A's frequency is 427 Hz, find B's original frequency.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "The beat frequency alone is ambiguous — it only tells you HOW far apart the two frequencies are, not which one is higher. That's why these problems always include a clue, like what happens to the beat rate after nudging one source, to break the tie."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d5", "d6", "d7", "d8", "d9", "d10"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["wave types", "conceptual"],
+      "stages": {
+        "question": "Can transverse waves travel through water? Can longitudinal waves?",
+        "interpretation": "Tests which wave types each state of matter can support.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Transverse waves require shear elasticity — fluids (including water) cannot sustain shearing stress", "Longitudinal waves require only bulk (compressive) elasticity — all fluids can sustain this"],
+        "answer": "No, transverse waves cannot travel through water (or any fluid). Yes, longitudinal waves (like sound) can travel through water."
+      },
+      "audioScript": "The dividing line is shear elasticity — only solids can resist being skewed sideways, so only solids carry transverse waves. But squeezing works on fluids too, which is exactly why sound travels fine through water."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["wave equation", "numerical"],
+      "stages": {
+        "question": "A wave is described by y(x,t)=0.005 sin(80.0x−3.0t), SI units. Find the amplitude, wavelength, period and frequency.",
+        "interpretation": "Match to the standard wave equation and read off k, ω directly.",
+        "formula": "y=a sin(kx−ωt); λ=2π/k; T=2π/ω",
+        "solutionSteps": [
+          "a=0.005 m, k=80.0 rad/m, ω=3.0 rad/s",
+          "λ = 2π/80.0 ≈ 0.0785 m = 7.85 cm",
+          "T = 2π/3.0 ≈ 2.09 s",
+          "ν = 1/T ≈ 0.48 Hz"
+        ],
+        "answer": "a=5mm, λ≈7.85cm, T≈2.09s, ν≈0.48Hz"
+      },
+      "audioScript": "This is pure pattern-matching — line up the given equation against the standard form, and every wave parameter is sitting right there in the coefficients."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["string wave speed", "numerical"],
+      "stages": {
+        "question": "A steel wire 0.72 m long has mass 5.0×10⁻³ kg, under tension 60 N. Find the speed of transverse waves on it.",
+        "interpretation": "Find μ from mass/length, then apply the string wave-speed formula.",
+        "formula": "v = √(T/μ)",
+        "solutionSteps": ["μ = 5.0×10⁻³/0.72 ≈ 6.9×10⁻³ kg/m", "v = √(60/6.9×10⁻³) = √8696 ≈ 93 m/s"],
+        "answer": "v ≈ 93 m/s"
+      },
+      "audioScript": "First convert mass and length into a mass-per-unit-length, then it's a direct substitution into the tension-over-density-under-a-square-root formula."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["speed of sound", "numerical"],
+      "stages": {
+        "question": "Estimate the speed of sound in air at STP, given the mass of 1 mole of air is 29.0×10⁻³ kg, and γ=1.4.",
+        "interpretation": "Find air density from molar mass/molar volume, then apply Laplace's formula.",
+        "formula": "v = √(γP/ρ); ρ = M/V_molar",
+        "solutionSteps": [
+          "ρ = (29.0×10⁻³ kg)/(22.4×10⁻³ m³) ≈ 1.29 kg/m³",
+          "v = √(1.4×1.01×10⁵/1.29) = √(1.096×10⁵) ≈ 331 m/s"
+        ],
+        "answer": "v ≈ 331 m/s (matches the experimentally measured value closely)"
+      },
+      "audioScript": "This calculation is the historical payoff of Laplace's correction — using the adiabatic gamma-P-over-rho formula instead of Newton's isothermal version gives almost exact agreement with the measured speed of sound."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["standing waves", "string fundamental"],
+      "stages": {
+        "question": "A string of length 1.5 m and mass 0.01 kg is stretched under tension 90 N. Find its fundamental frequency.",
+        "interpretation": "Find wave speed from T and μ, then apply n=1 in the fixed-string normal-mode formula.",
+        "formula": "v=√(T/μ); ν₁=v/(2L)",
+        "solutionSteps": [
+          "μ = 0.01/1.5 ≈ 6.67×10⁻³ kg/m",
+          "v = √(90/6.67×10⁻³) ≈ √13494 ≈ 116 m/s",
+          "ν₁ = 116/(2×1.5) ≈ 38.7 Hz"
+        ],
+        "answer": "ν₁ ≈ 38.7 Hz"
+      },
+      "audioScript": "Two formulas chained together — first find how fast waves actually travel on this particular string, then apply the fixed-both-ends boundary condition to get the lowest natural frequency it can ring at."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["interference", "numerical"],
+      "stages": {
+        "question": "Two waves of amplitude 3 cm each interfere with a phase difference of 2π/3. Find the resultant amplitude.",
+        "interpretation": "Direct application of the two-wave interference amplitude formula.",
+        "formula": "A(φ) = 2a cos(φ/2)",
+        "solutionSteps": ["A = 2×3×cos(π/3) = 6×0.5"],
+        "answer": "A = 3 cm"
+      },
+      "audioScript": "Halve the phase difference, take its cosine, and scale by twice the individual amplitude — that's the whole recipe for finding how two overlapping waves combine."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["pipe resonance", "numerical"],
+      "stages": {
+        "question": "A pipe 30.0 cm long is open at both ends. Which harmonic resonates with a 1.1 kHz source? Would resonance occur if one end were closed instead? (v=330 m/s)",
+        "interpretation": "Find the open-pipe fundamental, check which multiple matches 1.1kHz; then check if 1.1kHz is an odd multiple of the (different) closed-pipe fundamental.",
+        "formula": "Open: ν_n=nv/2L; Closed: ν_n=(n+½)v/2L",
+        "solutionSteps": [
+          "Open pipe fundamental: ν₁=330/(2×0.30)=550 Hz",
+          "1100/550 = 2, so 1.1kHz is the 2nd harmonic of the open pipe — resonance occurs",
+          "Closed pipe fundamental: ν₁'=330/(4×0.30)=275 Hz; closed pipe only supports odd multiples: 275, 825, 1375 Hz...",
+          "1100 Hz is not an odd multiple of 275 Hz (1100/275=4, an even multiple) — so NO resonance would occur with one end closed"
+        ],
+        "answer": "Open pipe: resonates at the 2nd harmonic (1100 Hz). If closed at one end: NO resonance at 1.1 kHz, since only odd harmonics of 275 Hz are supported.",
+        "audioScript": "Closing one end doesn't just shift the fundamental down an octave — it also throws out every even harmonic entirely, so a frequency that resonated beautifully in the open pipe can completely miss every allowed mode once one end is closed."
+      }
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["beats", "tuning"],
+      "stages": {
+        "question": "Two sitar strings A and B produce 5 beats/s. When the tension of B is slightly increased, the beat frequency decreases to 3 Hz. If A's frequency is 427 Hz, find B's original frequency.",
+        "interpretation": "Increasing tension increases frequency. Since increasing B's frequency DECREASED the beat frequency, B's original frequency must have been LOWER than A's (moving B closer to A reduces the gap).",
+        "formula": "ν_beat = |ν_A − ν_B|",
+        "solutionSteps": [
+          "If ν_B > ν_A, increasing ν_B further would INCREASE the beat frequency — contradicts the given decrease",
+          "So ν_B < ν_A, meaning increasing ν_B moves it closer to ν_A, decreasing the beat frequency — consistent with what's observed",
+          "ν_A − ν_B = 5 Hz (original beat frequency), and ν_A = 427 Hz",
+          "ν_B = 427 − 5 = 422 Hz"
+        ],
+        "answer": "ν_B = 422 Hz"
+      },
+      "audioScript": "The beat frequency alone can't tell you which string is higher-pitched — you need the extra clue of what happens when you deliberately raise one string's tension, and reasoning through whether that motion should increase or decrease the gap."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why can sound travel through water but a transverse wave on a string cannot?",
+      "Why does wave speed depend on the medium's properties but not on the wave's own frequency?",
+      "Why does a string fixed at both ends support ALL harmonics, while a pipe closed at one end supports only ODD harmonics?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "A string of mass 2.50 kg is under tension 200 N. The stretched string's length is 20.0 m. If a transverse jerk is struck at one end, how long does the disturbance take to reach the other end?",
+        "interpretation": "Find μ, then wave speed, then use time=distance/speed.",
+        "formulaIds": ["f3"],
+        "steps": ["μ = 2.50/20.0 = 0.125 kg/m", "v = √(200/0.125) = √1600 = 40 m/s", "time = 20.0/40 = 0.5 s"],
+        "answer": "0.5 s",
+        "audioScript": "Once you have the wave speed on this string, the travel time is just simple distance over speed, exactly like any constant-velocity motion problem."
+      },
+      {
+        "id": "pb2",
+        "question": "A source produces a sound wave of frequency 500 Hz travelling at 340 m/s in air. Find its wavelength.",
+        "interpretation": "Direct application of v=νλ.",
+        "formulaIds": ["f2"],
+        "steps": ["λ = v/ν = 340/500"],
+        "answer": "λ = 0.68 m",
+        "audioScript": "Speed divided by frequency gives wavelength directly — one of the most frequently used one-line calculations in this entire chapter."
+      },
+      {
+        "id": "pb3",
+        "question": "A stone is dropped from the top of a 300 m tower into water below. When is the splash heard at the top, given g=9.8 m/s² and speed of sound in air=340 m/s?",
+        "interpretation": "Total time = time to fall (kinematics) + time for sound to travel back up (constant speed).",
+        "formulaIds": ["f2"],
+        "steps": [
+          "Fall time: 300=½×9.8×t² ⟹ t²=61.2 ⟹ t≈7.82 s",
+          "Sound travel time back up: 300/340 ≈ 0.88 s",
+          "Total = 7.82+0.88 ≈ 8.7 s"
+        ],
+        "answer": "≈ 8.7 s after the stone is dropped",
+        "audioScript": "This problem stitches together two completely different chapters — free-fall kinematics for the stone's descent, then constant-speed wave travel for the sound's return trip — always add both times together."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "A steel wire has length 12.0 m and mass 2.10 kg. What tension should it be under so that the speed of a transverse wave on it equals the speed of sound in dry air at 20°C (343 m/s)?",
+        "interpretation": "Set the string wave-speed formula equal to the given target speed and solve for tension.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "μ = 2.10/12.0 = 0.175 kg/m",
+          "v=√(T/μ) ⟹ T = v²μ = (343)²×0.175",
+          "T ≈ 117649×0.175 ≈ 20589 N"
+        ],
+        "answer": "T ≈ 2.06 × 10⁴ N",
+        "audioScript": "Just rearrange the wave-speed formula to isolate tension, then plug in the target speed you're matching — squaring the speed is the key step people sometimes forget."
+      },
+      {
+        "id": "pi2",
+        "question": "Explain, using v=√(γP/ρ), why the speed of sound in air (a) is independent of pressure, (b) increases with temperature.",
+        "interpretation": "Substitute the ideal gas law to re-express P/ρ in terms of temperature, revealing what the speed formula actually depends on.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "From PV=NkT (or PM=ρRT for one mole), P/ρ = RT/M",
+          "So v=√(γRT/M) — pressure P has fully cancelled out of the final expression",
+          "(a) Since P doesn't appear at all (only T does), v is independent of pressure at fixed temperature",
+          "(b) v ∝ √T, so speed increases as temperature rises"
+        ],
+        "answer": "(a) P cancels out when P/ρ is rewritten via the ideal gas law, leaving no explicit pressure dependence. (b) v∝√T, so higher temperature directly increases sound speed.",
+        "audioScript": "The trick is to not stop at v equals root gamma P over rho — substitute the ideal gas law in for P over rho, and pressure disappears entirely, leaving temperature as the only variable that actually matters."
+      },
+      {
+        "id": "pi3",
+        "question": "A pipe, 30.0 cm long, is closed at one end. What is its fundamental frequency, and what are the next two harmonics present? (v=330 m/s)",
+        "interpretation": "Apply the closed-pipe fundamental formula, then find only the ODD multiples.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "ν₁ = v/(4L) = 330/(4×0.30) = 275 Hz",
+          "Only odd harmonics: 3rd harmonic = 3×275 = 825 Hz",
+          "5th harmonic = 5×275 = 1375 Hz"
+        ],
+        "answer": "Fundamental: 275 Hz; next two harmonics present: 825 Hz (3rd) and 1375 Hz (5th) — the 2nd and 4th harmonics are absent entirely",
+        "audioScript": "Don't forget to skip the even harmonics completely for a closed pipe — after the fundamental, the very next resonance is already three times higher, not twice."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Two sitar strings A and B playing the note 'Dha' are slightly out of tune, producing 5 beats/s. The tension of string B is slightly increased, and the beat frequency decreases to 3 Hz. If the frequency of A is 427 Hz, find the original frequency of B, and explain your reasoning about which string was higher.",
+        "interpretation": "Same as flashcard fc8, but now demands the full reasoning chain about why ν_B<ν_A must be true, not just the answer.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "Increasing tension in B always increases its frequency (frequency ∝ √tension for a fixed string)",
+          "If ν_B had originally been GREATER than ν_A, increasing ν_B further would move it even further from ν_A, INCREASING the beat frequency — contradicts the observed decrease",
+          "So ν_B must originally have been LESS than ν_A, so that increasing it moves B's frequency closer to A's, correctly decreasing the beats",
+          "ν_A−ν_B=5 ⟹ ν_B=427−5=422 Hz"
+        ],
+        "answer": "ν_B = 422 Hz (originally lower than A's 427 Hz)",
+        "audioScript": "This entire problem hinges on one clean piece of logical deduction: since raising B's tension shrank the beat gap, B must have started out below A in frequency — that's the only way raising it could bring the two strings closer together."
+      },
+      {
+        "id": "pa2",
+        "question": "Two waves y₁=a sin(ωt) and y₂=a sin(ωt+φ) travel along a string in the SAME direction and superpose. Show the resultant is also simple harmonic with the same frequency, and find its amplitude in terms of a and φ.",
+        "interpretation": "Direct trigonometric derivation using the sum-to-product identity, connecting interference back to the general resultant-amplitude formula.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "y = y₁+y₂ = a sin(ωt) + a sin(ωt+φ)",
+          "Using sinA+sinB = 2 sin[(A+B)/2] cos[(A−B)/2]:",
+          "y = 2a sin(ωt+φ/2) cos(φ/2)",
+          "This has the form (Amplitude)×sin(ωt+φ/2), confirming SHM at the same ω, with amplitude 2a cos(φ/2)"
+        ],
+        "answer": "Resultant amplitude = 2a cos(φ/2) — matches the general interference formula exactly",
+        "audioScript": "This derivation is exactly where the interference amplitude formula comes from in the first place — a direct application of the sum-to-product trig identity, converting a sum of two sine waves into a single sine wave with a phase-dependent amplitude."
+      },
+      {
+        "id": "pa3",
+        "question": "A cylindrical tube, closed at one end, contains air. A tuning fork of frequency 340 Hz is held near the open end and the water level is slowly lowered, creating increasing air-column lengths. Find the first THREE lengths at which resonance occurs. (v=340 m/s)",
+        "interpretation": "This is the classic 'resonance tube' setup — a closed pipe (water surface = closed end) whose length changes as water is lowered; find lengths corresponding to the odd harmonics.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "Resonance occurs when the water-to-open-end length is an odd multiple of λ/4",
+          "λ = v/ν = 340/340 = 1.0 m, so λ/4 = 0.25 m",
+          "First resonance (fundamental, n=0): L₁ = λ/4 = 0.25 m",
+          "Second resonance (n=1, 3rd harmonic): L₂ = 3λ/4 = 0.75 m",
+          "Third resonance (n=2, 5th harmonic): L₃ = 5λ/4 = 1.25 m"
+        ],
+        "answer": "L₁=0.25 m, L₂=0.75 m, L₃=1.25 m — consecutive resonance lengths differ by exactly λ/2=0.5 m",
+        "audioScript": "This is exactly how the classic resonance-tube experiment measures the speed of sound in a lab — each time you find a new resonance length, the difference between consecutive lengths is always half a wavelength, giving you a direct, simple way to measure lambda."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the string wave-speed formula with the standing-wave normal-mode formula (e.g. finding what tension is needed for a given fundamental frequency), and one that combines beats with the Doppler-adjacent idea of a moving source (conceptually, without needing the Doppler formula itself)."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 14 — Waves. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (transverse/longitudinal waves, the travelling wave equation, wave speed formulas, superposition & interference, standing waves & normal modes, or beats). First quiz me on definitions and formulas with NO calculation involved — transverse vs longitudinal and which media support each, the standard wave equation and its parameters, why wave speed doesn't depend on frequency, and the node/antinode pattern for different boundary conditions. Then move to basic numericals tied to a single formula (reading parameters off a wave equation, v=νλ, basic string wave speed). Then intermediate problems requiring two steps (Laplace speed-of-sound calculations, string fundamental frequency from tension and mass, interference amplitude). Then advanced problems that chain multiple ideas (pipe resonance harmonic identification, beat-frequency tuning-direction reasoning, resonance-tube experiments). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 8 formulas with when-to-use notes). Stay within this chapter's scope (wave types, the wave equation, wave speed, superposition, reflection, standing waves, normal modes, beats) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "Why can transverse waves not propagate through gases or liquids?", "a": "Transverse waves require the medium to sustain shearing stress, which only solids can do — fluids offer no resistance to shear." },
+    { "q": "What phase change occurs when a wave reflects off a rigid boundary, versus an open/free boundary?", "a": "A phase change of π (180°) at a rigid boundary; no phase change at an open/free boundary." },
+    { "q": "Why does a string fixed at both ends support all harmonics, but a pipe closed at one end supports only odd harmonics?", "a": "Both ends of the fixed string must be nodes, which allows any integer number of half-wavelengths to fit (all harmonics). A pipe closed at one end needs a node there and an antinode at the open end — this asymmetric condition only allows odd multiples of the fundamental to fit." },
+    { "q": "Newton's original formula for the speed of sound in a gas underestimated the actual value by how much, and why?", "a": "By about 15% — because Newton assumed sound-wave pressure changes are isothermal, when they are actually adiabatic (too fast for heat exchange), which Laplace later corrected by replacing B with γP." },
+    { "q": "If two tuning forks produce 4 beats per second, and loading one fork with wax (which always lowers its frequency) increases the beat frequency, what does this tell you about their original frequencies?", "a": "Loading with wax lowers the loaded fork's frequency. Since this INCREASED the beat frequency (moved the two frequencies further apart), the loaded fork must have originally had the LOWER frequency of the two." }
+  ]
+}

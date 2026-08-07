@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 13,
+    "chapterTitle": "Oscillations",
+    "ncertCode": "keph206",
+    "topicIdHint": "Oscillations and Waves",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Oscillations",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Distinguish periodic, oscillatory, and simple harmonic motion, and compute period/frequency/angular frequency.",
+    "Write the SHM displacement equation x(t)=A cos(ωt+φ) and connect SHM to uniform circular motion (reference circle method).",
+    "Derive and apply velocity v(t)=−ωA sin(ωt+φ) and acceleration a(t)=−ω²x(t) for SHM.",
+    "Apply the force law F=−kx and find ω, T for a spring-mass system.",
+    "Compute kinetic, potential, and total energy of a particle in SHM, and show total energy is constant.",
+    "Derive and apply the simple pendulum period formula T=2π√(L/g)."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Periodic vs SHM → x(t)=Acos(ωt+φ) via the reference circle → velocity/acceleration → force law F=−kx → energy → simple pendulum.",
+    "mustKnowBullets": [
+      "Every SHM is periodic, but NOT every periodic motion is SHM — e.g. uniform circular motion is periodic but not oscillatory/SHM.",
+      "T=1/ν (period = 1/frequency); ω=2πν=2π/T (angular frequency, rad/s).",
+      "SHM displacement: x(t)=A cos(ωt+φ) — A is amplitude, (ωt+φ) is the phase, φ is the phase constant (value of phase at t=0).",
+      "SHM is the projection of uniform circular motion onto a diameter — the 'reference circle' method.",
+      "v(t)=−ωA sin(ωt+φ) = dx/dt; a(t)=−ω²A cos(ωt+φ) = −ω²x(t) — acceleration is always proportional to displacement and directed toward the mean position.",
+      "Force law: F=−kx (Hooke's law form) defines SHM; k=mω², so ω=√(k/m) and T=2π√(m/k).",
+      "Energy: K=½mω²A²sin²(ωt+φ), U=½kx²=½kA²cos²(ωt+φ); Total E=K+U=½kA² — CONSTANT, independent of time (energy conservation for a conservative force).",
+      "Both K and U oscillate with period T/2 (twice the frequency of x itself), since they depend on sin²/cos², not sin/cos directly.",
+      "Simple pendulum: T=2π√(L/g) — valid only for SMALL angular displacements (so sinθ≈θ); period is independent of the mass and amplitude."
+    ],
+    "keyTables": [
+      {
+        "title": "Displacement, velocity, acceleration in SHM — amplitudes and phase",
+        "rows": [
+          ["Quantity", "Formula", "Amplitude", "Phase relative to x(t)"],
+          ["Displacement x(t)", "A cos(ωt+φ)", "A", "reference (0)"],
+          ["Velocity v(t)", "−ωA sin(ωt+φ)", "ωA", "leads x by π/2"],
+          ["Acceleration a(t)", "−ω²A cos(ωt+φ)", "ω²A", "opposite to x (differs by π)"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "statement", "section": "13.2", "text": "A motion that repeats itself at regular intervals of time is called periodic motion. Every oscillatory motion is periodic, but every periodic motion need not be oscillatory. Circular motion is a periodic motion, but it is not oscillatory.", "whyItMatters": "One of the most frequently tested distinctions in this chapter — a classic assertion-reason setup.", "neetRelevance": "high" },
+    { "id": "h2", "type": "definition", "section": "13.2.1", "text": "The smallest interval of time after which the motion is repeated is called its period, T. The reciprocal of T gives the frequency ν = 1/T, measured in hertz (Hz).", "whyItMatters": "Direct-recall relation, used in virtually every numerical in this chapter.", "neetRelevance": "high" },
+    { "id": "h3", "type": "statement", "section": "13.3", "text": "This oscillatory motion is said to be simple harmonic if the displacement x of the particle from the origin varies with time as x(t) = A cos(ωt+φ). Simple harmonic motion (SHM) is not any periodic motion but one in which displacement is a sinusoidal function of time.", "whyItMatters": "The precise defining equation of SHM — every problem in this chapter builds from this.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "13.4", "text": "The projection of uniform circular motion on a diameter of the circle follows simple harmonic motion. The particle P and the circle on which it moves are sometimes referred to as the reference particle and the reference circle.", "whyItMatters": "A powerful visualisation tool used to derive velocity, acceleration and phase relationships geometrically.", "neetRelevance": "medium" },
+    { "id": "h5", "type": "caution", "section": "13.5", "text": "Despite the geometric connection between SHM and uniform circular motion, the force acting on a particle in linear SHM is very different from the centripetal force needed for uniform circular motion.", "whyItMatters": "Common misconception trap — don't confuse the reference-circle analogy with an actual physical force equivalence.", "neetRelevance": "medium" },
+    { "id": "h6", "type": "formula_intro", "section": "13.6", "text": "Using Newton's second law and the SHM acceleration a(t)=−ω²x(t), the force acting on a particle of mass m in SHM is F(t) = −mω²x(t) = −kx(t), where k=mω².", "whyItMatters": "This is the FORCE-LAW definition of SHM, equivalent to but distinct from the displacement-equation definition — NEET questions test both.", "neetRelevance": "high" },
+    { "id": "h7", "type": "caution", "section": "13.6", "text": "A particle oscillating under a linearly-restoring force (F∝−x) is called a linear harmonic oscillator. If the force contains additional terms proportional to x², x³, etc., these are called non-linear oscillators — and are NOT simple harmonic.", "whyItMatters": "Tests whether a given force law actually produces SHM — a common 'identify SHM' question pattern.", "neetRelevance": "high" },
+    { "id": "h8", "type": "statement", "section": "13.7", "text": "The total mechanical energy of a harmonic oscillator, E=K+U=½kA², is independent of time — as expected for motion under a conservative force. Both K and U are always positive and vary periodically with period T/2 (twice the frequency of the oscillation itself).", "whyItMatters": "Direct-recall formula, and the 'T/2 period for energy' detail is a favourite NEET trap.", "neetRelevance": "high" },
+    { "id": "h9", "type": "formula_intro", "section": "13.8", "text": "For small angular displacements, the motion of a simple pendulum is simple harmonic, with time period T = 2π√(L/g).", "whyItMatters": "One of the most tested formulas in all of NEET Physics — appears across many chapters and real-world contexts.", "neetRelevance": "high" },
+    { "id": "h10", "type": "caution", "section": "13.8", "text": "The approximation sinθ≈θ (in radians) that makes the pendulum's motion simple harmonic is valid only for SMALL angles — at 20°, sinθ and θ already differ.", "whyItMatters": "Explains why the T=2π√(L/g) formula breaks down for large-amplitude pendulum swings.", "neetRelevance": "medium" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Periodic motion", "definition": "Motion that repeats itself at regular intervals of time.", "section": "13.2" },
+    { "id": "d2", "term": "Period (T)", "definition": "The smallest interval of time after which a periodic motion repeats; SI unit second.", "section": "13.2.1" },
+    { "id": "d3", "term": "Frequency (ν)", "definition": "The number of repetitions per unit time, ν=1/T; SI unit hertz (Hz) = 1 oscillation per second.", "section": "13.2.1" },
+    { "id": "d4", "term": "Simple harmonic motion (SHM)", "definition": "Oscillatory motion in which the displacement x(t) is a sinusoidal function of time: x(t)=A cos(ωt+φ).", "section": "13.3" },
+    { "id": "d5", "term": "Amplitude (A)", "definition": "The magnitude of maximum displacement of the particle from its equilibrium position in SHM.", "section": "13.3" },
+    { "id": "d6", "term": "Phase, Phase constant (φ)", "definition": "The time-dependent quantity (ωt+φ) is called the phase of the motion. Its value at t=0 is φ, the phase constant (or phase angle).", "section": "13.3" },
+    { "id": "d7", "term": "Angular frequency (ω)", "definition": "ω=2π/T=2πν, the rate of change of phase; SI unit rad/s.", "section": "13.3" },
+    { "id": "d8", "term": "Linear harmonic oscillator", "definition": "A particle oscillating under a linearly-restoring force F=−kx; k is the force constant.", "section": "13.6" },
+    { "id": "d9", "term": "Simple pendulum", "definition": "A small bob of mass m tied to an inextensible massless string of length L, fixed at the other end, that executes approximately SHM for small angular displacements.", "section": "13.8" }
+  ],
+  "figures": [
+    { "id": "fig-13-3", "kind": "figure", "label": "Fig. 13.3", "ncertPage": 262, "section": "13.3", "caption": "A particle vibrating back and forth about the origin of the x-axis, between the limits +A and −A.", "placeholderText": "NCERT Physics XI · Ch 13 · Page 262 · Fig. 13.3", "src": null, "uploadHint": "Crop from keph206.pdf page 4" },
+    { "id": "fig-13-10", "kind": "figure", "label": "Fig. 13.10", "ncertPage": 265, "section": "13.4", "caption": "The reference circle — projection of a uniformly-rotating particle P onto the x-axis executes SHM.", "placeholderText": "NCERT Physics XI · Ch 13 · Page 265 · Fig. 13.10", "src": null, "uploadHint": "Crop from keph206.pdf page 7" },
+    { "id": "fig-13-17", "kind": "figure", "label": "Fig. 13.17", "ncertPage": 270, "section": "13.8", "caption": "Free-body diagram of a simple pendulum bob, showing the tension T and the tangential restoring component mg sinθ.", "placeholderText": "NCERT Physics XI · Ch 13 · Page 270 · Fig. 13.17", "src": null, "uploadHint": "Crop from keph206.pdf page 12" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Period, frequency, angular frequency",
+      "latex": "\\nu = \\dfrac{1}{T}, \\qquad \\omega = 2\\pi\\nu = \\dfrac{2\\pi}{T}",
+      "plain": "frequency = 1/period; angular frequency = 2π × frequency = 2π/period",
+      "symbols": [{ "symbol": "ν", "meaning": "frequency (Hz)" }, { "symbol": "ω", "meaning": "angular frequency (rad/s)" }],
+      "whenToUse": "Converting between period, frequency, and angular frequency — the entry point for almost every SHM problem.",
+      "derivedFrom": "NCERT Eq. 13.1, 13.7",
+      "commonMistakes": ["Forgetting the factor of 2π when converting between ν and ω."],
+      "questionPatterns": [
+        {
+          "patternName": "Convert given period/frequency to angular frequency",
+          "howToInterpret": "Direct substitution.",
+          "howItConnectsToFormula": "ω=2π/T or ω=2πν.",
+          "exampleStem": "A human heart beats 75 times per minute. Find its frequency and period.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "These three quantities describe the same repeating motion from different angles — period is how long one cycle takes, frequency is how many cycles per second, and angular frequency just rescales frequency by two pi to work naturally inside sine and cosine."
+    },
+    {
+      "id": "f2",
+      "name": "SHM displacement equation",
+      "latex": "x(t) = A \\cos(\\omega t + \\phi)",
+      "plain": "displacement = amplitude × cosine of (angular frequency × time + phase constant)",
+      "symbols": [{ "symbol": "A", "meaning": "amplitude" }, { "symbol": "φ", "meaning": "phase constant (phase at t=0)" }],
+      "whenToUse": "The defining equation for any SHM — describing a particle's position at any instant.",
+      "derivedFrom": "NCERT Eq. 13.4",
+      "commonMistakes": ["Forgetting φ is determined by the INITIAL conditions (position and velocity at t=0), not a free constant to ignore."],
+      "questionPatterns": [
+        {
+          "patternName": "Find amplitude and phase from initial position and velocity",
+          "howToInterpret": "Use x(0)=Acos(φ) and v(0)=−ωAsin(φ) as two equations to solve for A and φ.",
+          "howItConnectsToFormula": "Substitute t=0 into x(t) and v(t).",
+          "exampleStem": "A particle executes SHM with x(t)=Acos(ωt+φ). If at t=0 the position is 1 cm and velocity is ω cm/s, with ω=π/s, find A and φ.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This single equation packs in everything about the motion — how far it swings, how fast it oscillates, and where exactly it was at the starting instant."
+    },
+    {
+      "id": "f3",
+      "name": "Velocity and acceleration in SHM",
+      "latex": "v(t) = -\\omega A \\sin(\\omega t+\\phi), \\qquad a(t) = -\\omega^2 A \\cos(\\omega t+\\phi) = -\\omega^2 x(t)",
+      "plain": "velocity = −ωA sin(phase); acceleration = −ω² × displacement",
+      "symbols": [{ "symbol": "v(t), a(t)", "meaning": "instantaneous velocity and acceleration" }],
+      "whenToUse": "Finding speed or acceleration of an SHM particle at any given time or position.",
+      "derivedFrom": "NCERT Eq. 13.9–13.11",
+      "commonMistakes": ["Forgetting velocity is MAXIMUM at the mean position (x=0) and ZERO at the extremes, while acceleration is the exact opposite — zero at the mean position, maximum at the extremes."],
+      "questionPatterns": [
+        {
+          "patternName": "Find velocity/acceleration at a given time or displacement",
+          "howToInterpret": "Either substitute t directly, or use a(t)=−ω²x(t) if displacement is already known.",
+          "howItConnectsToFormula": "Direct substitution into either formula.",
+          "exampleStem": "A body oscillates with x=5cos[2πt+π/4] (SI units). At t=1.5s, find the displacement, speed, and acceleration.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Notice acceleration is always exactly proportional to displacement but pointing the opposite way — that single relationship, a equals minus omega squared times x, is really the mathematical fingerprint of SHM."
+    },
+    {
+      "id": "f4",
+      "name": "Force law for SHM (Hooke's law form)",
+      "latex": "F = -kx, \\qquad \\omega = \\sqrt{\\dfrac{k}{m}}, \\qquad T = 2\\pi\\sqrt{\\dfrac{m}{k}}",
+      "plain": "restoring force = −k × displacement; angular frequency = root(k/m); period = 2π root(m/k)",
+      "symbols": [{ "symbol": "k", "meaning": "force constant (spring constant), N/m" }],
+      "whenToUse": "A spring-mass system, or ANY system where you can show the restoring force is proportional to displacement.",
+      "derivedFrom": "NCERT Eq. 13.13–13.14",
+      "commonMistakes": ["Using the wrong effective k for combined-spring systems (springs in series vs parallel combine differently)."],
+      "questionPatterns": [
+        {
+          "patternName": "Find period given mass and spring constant",
+          "howToInterpret": "Direct substitution.",
+          "howItConnectsToFormula": "T=2π√(m/k).",
+          "exampleStem": "A 3 kg mass is attached to a spring of constant 1200 N/m and displaced by 2 cm. Find the frequency of oscillation.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Two-spring systems (series/parallel effective k)",
+          "howToInterpret": "Identify whether springs act in parallel (forces add, k_eff=k₁+k₂) or in series (k_eff=k₁k₂/(k₁+k₂)), then substitute into T=2π√(m/k_eff).",
+          "howItConnectsToFormula": "Determine k_eff first, then apply the standard formula.",
+          "exampleStem": "Two identical springs of constant k are attached to a block on either side, both fixed to walls. Show the block executes SHM and find the period.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This is the force-based definition of SHM, completely equivalent to the displacement equation — whichever a problem gives you, you can always get to the other one using the relationship omega equals root of k over m."
+    },
+    {
+      "id": "f5",
+      "name": "Energy in SHM",
+      "latex": "K = \\tfrac{1}{2}kA^2\\sin^2(\\omega t+\\phi), \\quad U = \\tfrac{1}{2}kx^2, \\quad E = K+U = \\tfrac{1}{2}kA^2",
+      "plain": "kinetic energy varies with sin²; potential energy is half k x squared; total energy is constant, half k A squared",
+      "symbols": [{ "symbol": "K, U, E", "meaning": "kinetic, potential, and total mechanical energy" }],
+      "whenToUse": "Any energy-based SHM problem — total energy is always conserved and easiest to compute from the amplitude alone.",
+      "derivedFrom": "NCERT Eq. 13.15–13.18",
+      "commonMistakes": ["Forgetting both K and U oscillate with period T/2 (double the frequency of x itself), since they depend on squared sine/cosine terms.", "Trying to use E=½kA² with the WRONG k if the system's effective spring constant differs from a single spring's k (e.g. two-spring combinations)."],
+      "questionPatterns": [
+        {
+          "patternName": "Find KE, PE, and total energy at a given displacement",
+          "howToInterpret": "Find ω from k/m, then compute each energy term at the specified x.",
+          "howItConnectsToFormula": "U=½kx² directly; K=E−U using total energy E=½kA².",
+          "exampleStem": "A 1 kg block on a spring (k=50 N/m) is pulled to x=10cm and released from rest. Find KE, PE, and total energy when it is 5 cm from the mean position.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The beauty of this result is that total energy never depends on time at all — it only depends on the amplitude, which makes it usually the fastest way into a problem: find E from the amplitude first, then split it into kinetic and potential at whatever point you need."
+    },
+    {
+      "id": "f6",
+      "name": "Simple pendulum period",
+      "latex": "T = 2\\pi\\sqrt{\\dfrac{L}{g}}",
+      "plain": "period = 2π × root(length / gravitational acceleration)",
+      "symbols": [{ "symbol": "L", "meaning": "length of the pendulum string" }, { "symbol": "g", "meaning": "acceleration due to gravity" }],
+      "whenToUse": "Any simple pendulum problem with SMALL angular displacement.",
+      "derivedFrom": "NCERT Eq. 13.26",
+      "commonMistakes": ["Applying this formula for large-angle swings, where sinθ≈θ no longer holds.", "Forgetting the period is independent of both mass and amplitude (for small angles) — only L and g matter."],
+      "questionPatterns": [
+        {
+          "patternName": "Find pendulum length given a desired period",
+          "howToInterpret": "Rearrange for L.",
+          "howItConnectsToFormula": "L = gT²/(4π²).",
+          "exampleStem": "What is the length of a simple pendulum that ticks seconds (T=2s) on Earth? (g=9.8 m/s²)",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Pendulum on a different gravitational field (Moon, accelerating lift, etc.)",
+          "howToInterpret": "Substitute the effective g for that environment.",
+          "howItConnectsToFormula": "T=2π√(L/g_effective).",
+          "exampleStem": "A pendulum has period 3.5 s on Earth. Find its period on the Moon, where g is 1.7 m/s².",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This is one of the most-used formulas in all of NEET physics — notice it doesn't care about the mass of the bob at all, only the string length and the local gravity."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6"],
+    "definitionViewOrder": ["d1", "d3", "d4", "d5", "d6", "d7", "d8", "d9"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["periodic vs SHM", "conceptual"],
+      "stages": {
+        "question": "Is uniform circular motion periodic? Is it simple harmonic?",
+        "interpretation": "Tests the periodic-vs-oscillatory-vs-SHM hierarchy.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Uniform circular motion repeats at regular intervals — so it IS periodic", "But it doesn't oscillate back and forth about a mean position along a line — so it is NOT SHM (or even oscillatory)"],
+        "answer": "Yes, it is periodic; No, it is not simple harmonic (or even oscillatory) — SHM requires back-and-forth motion about a mean position."
+      },
+      "audioScript": "Every periodic motion repeats, but only oscillatory back-and-forth motion about a fixed point can ever be simple harmonic — circular motion repeats without ever reversing direction, so it fails that test."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["shm displacement", "numerical"],
+      "stages": {
+        "question": "A body oscillates with x(t)=5cos(2πt+π/4) in SI units. Find the displacement at t=1.5s.",
+        "interpretation": "Direct substitution into the SHM displacement equation.",
+        "formula": "x(t) = A cos(ωt+φ)",
+        "solutionSteps": ["x(1.5) = 5cos(2π×1.5+π/4) = 5cos(3π+π/4)", "= 5×cos(3.927 rad) ≈ 5×(−0.707) = −3.54 m"],
+        "answer": "x ≈ −3.54 m"
+      },
+      "audioScript": "Just plug the given time directly into the equation — the only thing to be careful of is keeping the angle argument in radians throughout."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["simple pendulum", "numerical"],
+      "stages": {
+        "question": "What is the length of a simple pendulum that ticks seconds, i.e. has a period of 2 s, on Earth? (g=9.8 m/s²)",
+        "interpretation": "Rearrange the pendulum period formula to solve for length.",
+        "formula": "L = gT²/(4π²)",
+        "solutionSteps": ["L = (9.8×2²)/(4π²) = 39.2/39.48"],
+        "answer": "L ≈ 1 m"
+      },
+      "audioScript": "This is a classic recall-and-rearrange problem — square the given period, multiply by g, divide by four pi squared."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["energy in SHM", "numerical"],
+      "stages": {
+        "question": "A 1 kg block on a spring (k=50 N/m) is pulled to x=10 cm and released from rest. Find the total energy, and the KE and PE when it is 5 cm from the mean position.",
+        "interpretation": "Total energy from amplitude, then split into KE/PE using U=½kx² at the given point.",
+        "formula": "E=½kA²; U=½kx²; K=E−U",
+        "solutionSteps": [
+          "E = ½×50×(0.10)² = 0.25 J",
+          "At x=0.05m: U = ½×50×(0.05)² = 0.0625 J",
+          "K = E−U = 0.25−0.0625 = 0.1875 J"
+        ],
+        "answer": "E=0.25 J (total, constant); at x=5cm: U≈0.0625 J, K≈0.1875 J"
+      },
+      "audioScript": "Always start with total energy from the amplitude alone — it's the same at every point in the motion — then find potential energy at your specific location and subtract to get kinetic energy."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["shm initial conditions"],
+      "stages": {
+        "question": "A particle executes SHM x(t)=Acos(ωt+φ) with ω=π rad/s. At t=0, position is 1 cm and velocity is π cm/s. Find A and φ.",
+        "interpretation": "Use x(0) and v(0) as two simultaneous equations.",
+        "formula": "x(0)=Acosφ; v(0)=−ωAsinφ",
+        "solutionSteps": [
+          "1 = Acosφ",
+          "π = −π×A×sinφ ⟹ −1 = Asinφ",
+          "Square and add: A²cos²φ+A²sin²φ = 1²+(−1)² = 2 ⟹ A²=2 ⟹ A=√2 cm",
+          "tanφ = sinφ/cosφ = −1/1 = −1 ⟹ φ = −π/4 (or 3π/4, chosen to match signs: cosφ>0, sinφ<0 ⟹ φ=−π/4)"
+        ],
+        "answer": "A = √2 cm ≈ 1.414 cm; φ = −π/4"
+      },
+      "audioScript": "Two initial conditions — position and velocity at t=0 — give you exactly two equations, which is exactly enough to pin down the two unknowns, amplitude and phase, using the classic square-and-add trick."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["spring constant", "numerical"],
+      "stages": {
+        "question": "A spring having force constant 1200 N/m is mounted horizontally, with a 3 kg mass attached. The mass is pulled to 2.0 cm and released. Find (i) the frequency, (ii) maximum acceleration, (iii) maximum speed.",
+        "interpretation": "Chain three formulas: ω from k/m, then a_max=ω²A, v_max=ωA.",
+        "formula": "ω=√(k/m); a_max=ω²A; v_max=ωA",
+        "solutionSteps": [
+          "ω = √(1200/3) = √400 = 20 rad/s",
+          "ν = ω/2π = 20/6.28 ≈ 3.18 Hz",
+          "a_max = ω²A = 400×0.02 = 8 m/s²",
+          "v_max = ωA = 20×0.02 = 0.4 m/s"
+        ],
+        "answer": "ν≈3.18 Hz; a_max=8 m/s²; v_max=0.4 m/s"
+      },
+      "audioScript": "Find angular frequency first from the spring constant and mass — everything else, maximum acceleration and maximum speed, follows directly by multiplying it (or its square) by the amplitude."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["two springs", "shm derivation"],
+      "stages": {
+        "question": "Two identical springs of constant k are attached to a block on either side, both fixed to rigid walls (block between them). Show the motion is SHM when displaced, and find the period.",
+        "interpretation": "Both springs act on the mass simultaneously when displaced — one stretches, one compresses, and BOTH forces point the same way (restoring).",
+        "formula": "F_net = −2kx; T=2π√(m/k_eff)",
+        "solutionSteps": [
+          "Displace the block by x to the right: left spring stretches by x (pulls left, F₁=−kx), right spring compresses by x (pushes left, F₂=−kx)",
+          "Net force F = F₁+F₂ = −2kx — proportional to −x, confirming SHM",
+          "Effective k_eff = 2k",
+          "T = 2π√(m/2k)"
+        ],
+        "answer": "T = 2π√(m/2k) — the two springs act like a single spring of double the stiffness",
+        "audioScript": "Both springs cooperate to push the mass back toward the centre regardless of which way it's displaced — so their forces add directly, doubling the effective spring constant and making the system oscillate faster than either spring alone."
+      }
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["pendulum in accelerating frame"],
+      "stages": {
+        "question": "A simple pendulum is suspended in a car moving on a circular track of radius R with uniform speed v. If the pendulum makes small oscillations in a radial direction about its new equilibrium, what will its time period be?",
+        "interpretation": "In the car's (non-inertial) frame, the pendulum bob experiences an effective gravity combining real gravity g and the centrifugal 'pseudo-force' v²/R (radially outward).",
+        "formula": "g_eff = √(g² + (v²/R)²); T=2π√(L/g_eff)",
+        "solutionSteps": [
+          "The two acceleration components (downward g, radially outward v²/R) are perpendicular to each other",
+          "Combine them as vectors: g_eff = √(g² + (v²/R)²)",
+          "T = 2π√(L/g_eff)"
+        ],
+        "answer": "T = 2π√[L / √(g² + (v²/R)²)]",
+        "audioScript": "In an accelerating reference frame, gravity effectively gets a companion pseudo-force — here the centripetal requirement shows up as an outward pull, and since it's perpendicular to real gravity, you combine the two like sides of a right triangle to get the effective 'down' direction the pendulum actually swings against."
+      }
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why is every SHM periodic, but not every periodic motion SHM?",
+      "At what point in an oscillation is velocity maximum, and at what point is acceleration maximum?",
+      "Why is the period of a simple pendulum independent of its mass and amplitude (for small angles)?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "On average, a human heart beats 75 times a minute. Find its frequency and period.",
+        "interpretation": "Convert beats per minute into a frequency in Hz, then find the period.",
+        "formulaIds": ["f1"],
+        "steps": ["ν = 75/(60 s) = 1.25 Hz", "T = 1/ν = 1/1.25 = 0.8 s"],
+        "answer": "ν = 1.25 Hz; T = 0.8 s",
+        "audioScript": "Convert the given rate into a per-second frequency first, then just take the reciprocal to get the period."
+      },
+      {
+        "id": "pb2",
+        "question": "A spring balance has a scale reading from 0 to 50 kg, and the scale length is 20 cm. A body suspended from it, when displaced and released, oscillates with a period of 0.6 s. Find the weight of the body.",
+        "interpretation": "First find the spring constant k from the scale's range (50 kg over 20 cm gives the force-per-unit-extension), then use T=2π√(m/k) to find the mass.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "k = Force/extension = (50×9.8 N)/(0.20 m) = 2450 N/m",
+          "T² = 4π²m/k ⟹ m = kT²/(4π²) = 2450×(0.6)²/(4π²) ≈ 882/39.48 ≈ 22.3 kg",
+          "Weight = mg = 22.3×9.8 ≈ 218.6 N"
+        ],
+        "answer": "Weight ≈ 218.6 N (mass ≈ 22.3 kg)",
+        "audioScript": "The scale itself IS the spring — use its full-scale reading and length to find its spring constant first, then treat the oscillating body exactly like a standard spring-mass SHM problem."
+      },
+      {
+        "id": "pb3",
+        "question": "The piston in a locomotive cylinder has a stroke (twice the amplitude) of 1.0 m and moves with SHM at angular frequency 200 rad/min. What is its maximum speed?",
+        "interpretation": "Convert stroke to amplitude, and angular frequency to rad/s if needed (or keep units consistent), then apply v_max=ωA.",
+        "formulaIds": ["f3"],
+        "steps": ["Amplitude A = stroke/2 = 0.5 m", "v_max = ωA = 200×0.5 = 100 m/min"],
+        "answer": "v_max = 100 m/min (≈1.67 m/s)",
+        "audioScript": "Remember stroke is the full swing from one extreme to the other, so amplitude — the distance from the centre — is exactly half of that."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "The acceleration due to gravity on the Moon is 1.7 m/s². If a pendulum's period on Earth is 3.5 s (g=9.8 m/s²), find its period on the Moon.",
+        "interpretation": "Same pendulum (same L), different g — take the ratio of the two period formulas.",
+        "formulaIds": ["f6"],
+        "steps": [
+          "T_moon/T_earth = √(g_earth/g_moon) = √(9.8/1.7) ≈ √5.76 ≈ 2.4",
+          "T_moon = 3.5×2.4 ≈ 8.4 s"
+        ],
+        "answer": "T_moon ≈ 8.4 s",
+        "audioScript": "Since it's the same pendulum, length cancels out of the ratio, leaving just the square root of the ratio of the two gravitational accelerations — weaker gravity means a noticeably longer period."
+      },
+      {
+        "id": "pi2",
+        "question": "A cylindrical piece of cork of density ρ, base area A and height h floats in a liquid of density ρ_l. Show it executes SHM when depressed slightly and released, and find the period.",
+        "interpretation": "Find the restoring force from the extra buoyant force when displaced, show it's proportional to −x, then read off ω.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "At equilibrium, weight = buoyant force: ρAhg = ρ_l A h₀ g (h₀ = submerged depth)",
+          "If pushed down by extra x, extra buoyant force = ρ_l A x g (upward, restoring)",
+          "Net restoring force F = −ρ_l A g x, so this is SHM with 'k' = ρ_l A g",
+          "Mass of cork = ρAh, so ω² = k/m = (ρ_l A g)/(ρAh)",
+          "T = 2π√(m/k) = 2π√(ρAh/(ρ_l A g)) = 2π√(hρ/(ρ_l g))"
+        ],
+        "answer": "T = 2π√(hρ/(ρ_l g)) — matches the standard NCERT result",
+        "audioScript": "The restoring force here comes from extra buoyancy each time the cork is pushed deeper — once you show that extra force is proportional to the displacement, you've proven it's SHM, and the 'spring constant' just falls out of the buoyancy formula."
+      },
+      {
+        "id": "pi3",
+        "question": "A particle is in linear SHM between two points A and B, 10 cm apart. Taking A to B as positive direction, what are the signs of velocity, acceleration and force on the particle at B, moving TOWARDS A?",
+        "interpretation": "At extreme B: momentarily at rest (about to reverse), but acceleration/force always point toward the mean position.",
+        "formulaIds": ["f3", "f4"],
+        "steps": [
+          "At point B (positive extreme), velocity = 0 at the instant of reversal",
+          "Acceleration always points toward the mean position — at B, that's in the negative direction (from B toward A)",
+          "Force F=ma has the same sign as acceleration"
+        ],
+        "answer": "Velocity: zero (momentarily); Acceleration: negative; Force: negative",
+        "audioScript": "At the extreme points of SHM, the particle is instantaneously at rest, but that doesn't mean nothing's happening — acceleration and force are actually at their MAXIMUM magnitude there, always pointing back toward the centre."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "A spring of force constant k is clamped rigidly at one end with a mass m at its free end (Case A). The same spring, with both ends free, has a mass m attached to EACH end (Case B). If both cases are stretched by the same force F, find (a) the maximum extension of the spring in each case, and (b) the period of oscillation in each case when released.",
+        "interpretation": "Case A: standard single-mass spring system. Case B: by symmetry, the midpoint of the spring doesn't move, so each half (with spring constant 2k) oscillates independently against its own mass.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "(a) Extension: in BOTH cases, the spring experiences the same tension F throughout, so the extension is the same: x=F/k for both",
+          "(b) Case A: T_A = 2π√(m/k)",
+          "(b) Case B: by symmetry the centre doesn't move; each mass sees an effective half-spring of constant 2k (since a spring cut in half has double the stiffness), so T_B = 2π√(m/2k)"
+        ],
+        "answer": "Same extension F/k in both cases; T_A=2π√(m/k), T_B=2π√(m/2k) = T_A/√2 — Case B oscillates faster",
+        "audioScript": "The key insight for Case B is symmetry — since both masses and both ends are identical, the exact centre of the spring can't move at all, which means each mass effectively sees only half the spring, and a half-spring is twice as stiff as the whole one."
+      },
+      {
+        "id": "pa2",
+        "question": "One end of a U-tube containing mercury is connected to a suction pump, maintaining a small pressure difference between the two columns. Show that when the pump is removed, the mercury column executes SHM.",
+        "interpretation": "When displaced from equilibrium by x, the height difference between the two columns is 2x, creating a restoring pressure/force proportional to x.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "Let the mercury be displaced by x from equilibrium in one arm (so the other arm rises by x too, cross-sectional area A, density ρ)",
+          "Height difference between the two columns = 2x",
+          "Restoring force = weight of the unbalanced mercury column = ρ×A×(2x)×g, acting to restore equilibrium",
+          "F = −2ρAgx — proportional to −x, confirming SHM, with effective k=2ρAg",
+          "Total oscillating mass = ρAL (L = total length of mercury in the tube)",
+          "T = 2π√(m/k) = 2π√(ρAL/(2ρAg)) = 2π√(L/2g)"
+        ],
+        "answer": "T = 2π√(L/2g), where L is the total length of the mercury column",
+        "audioScript": "The restoring force here comes purely from gravity acting on the unbalanced weight of mercury once the two arms are at different heights — exactly analogous to the cork-in-liquid problem, but now within a tube instead of open liquid."
+      },
+      {
+        "id": "pa3",
+        "question": "The motion of a particle executing SHM is x(t)=A cos(ωt+φ). If the initial position is 1 cm and initial velocity is ω cm/s, with ω=π rad/s, find A and φ. If we instead use the sine function x=B sin(ωt+β) to describe the SAME motion, what are B and β?",
+        "interpretation": "Since sin and cos differ by a phase of π/2, the same physical motion can be written in either form with an adjusted phase constant, but amplitude stays the same.",
+        "formulaIds": ["f2"],
+        "steps": [
+          "From the cosine form (worked earlier in flashcard fc5): A=√2 cm, φ=−π/4",
+          "Since cos(θ)=sin(θ+π/2), we have Acos(ωt+φ)=Asin(ωt+φ+π/2)",
+          "So B=A=√2 cm, and β=φ+π/2=−π/4+π/2=π/4"
+        ],
+        "answer": "B = √2 cm (same as A); β = π/4",
+        "audioScript": "Sine and cosine describe exactly the same wiggle, just measured from a different starting point — converting between them only ever shifts the phase constant by a quarter turn, never changes the amplitude."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the energy formulas with a spring-block system on an incline, and one that combines the simple pendulum formula with an accelerating reference frame (like an elevator or a car turning a corner)."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 13 — Oscillations. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (periodic motion & SHM basics, the SHM equations of motion, force law & spring systems, energy in SHM, or the simple pendulum). First quiz me on definitions and formulas with NO calculation involved — periodic vs oscillatory vs SHM, the SHM displacement/velocity/acceleration equations, and why the pendulum period is independent of mass. Then move to basic numericals tied to a single formula (period-frequency conversions, basic pendulum length, basic spring period). Then intermediate problems requiring two steps (finding A and φ from initial conditions, energy split between KE and PE at a given point, pendulum on the Moon). Then advanced problems that require deriving the SHM nature of a novel system first (floating cork, U-tube mercury, two-spring combinations) before finding the period. After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (periodic motion, SHM equations, force law, energy, simple pendulum) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "Is every periodic motion simple harmonic? Give an example of a periodic motion that is not SHM.", "a": "No. Uniform circular motion is periodic but not SHM, since SHM requires oscillatory (back-and-forth) motion about a mean position with a sinusoidal displacement." },
+    { "q": "At the mean position of SHM, what are the values of velocity and acceleration?", "a": "Velocity is MAXIMUM (=ωA) and acceleration is ZERO at the mean position — the opposite is true at the extreme positions." },
+    { "q": "How does the period of oscillation of kinetic energy in SHM compare to the period of the displacement itself?", "a": "Kinetic energy (and potential energy) oscillate with period T/2 — twice the frequency of the displacement — since they depend on sin² or cos², not sin or cos directly." },
+    { "q": "Why does the simple pendulum formula T=2π√(L/g) fail for large-amplitude swings?", "a": "The derivation relies on the small-angle approximation sinθ≈θ (in radians), which breaks down as θ grows — at larger angles, the restoring torque is no longer exactly proportional to angular displacement." },
+    { "q": "What determines the amplitude and phase constant of an SHM, if the angular frequency ω is already fixed by the system (e.g. a given spring and mass)?", "a": "The initial conditions — the particle's position and velocity at t=0 — uniquely determine both A and φ." }
+  ]
+}

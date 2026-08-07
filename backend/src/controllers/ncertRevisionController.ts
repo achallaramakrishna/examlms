@@ -19,6 +19,13 @@ const SLUG_TO_TOPICS: Record<string, string[]> = {
   'ch05-work-energy-and-power': ['Work, Energy and Power'],
   'ch06-system-of-particles': ['System of Particles and Rotational Motion', 'Rotational Motion'],
   'ch07-gravitation': ['Gravitation'],
+  'ch08-mechanical-properties-of-solids': ['Properties of Solids and Liquids', 'Mechanical Properties of Solids'],
+  'ch09-mechanical-properties-of-fluids': ['Properties of Solids and Liquids', 'Mechanical Properties of Fluids'],
+  'ch10-thermal-properties-of-matter': ['Thermodynamics', 'Thermal Properties of Matter', 'Kinetic Theory of Gases'],
+  'ch11-thermodynamics': ['Thermodynamics'],
+  'ch12-kinetic-theory': ['Kinetic Theory of Gases', 'Kinetic Theory'],
+  'ch13-oscillations': ['Oscillations and Waves', 'Oscillations'],
+  'ch14-waves': ['Oscillations and Waves', 'Waves'],
 };
 
 type FigureOverrides = Record<string, { src: string; updatedAt: string }>;

@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 12,
+    "chapterTitle": "Kinetic Theory",
+    "ncertCode": "keph205",
+    "topicIdHint": "Kinetic Theory of Gases",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Kinetic Theory",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Apply the ideal gas equation PV=μRT=NkBT and Dalton's law of partial pressures.",
+    "Derive and apply the kinetic theory pressure formula P=(1/3)nm‾v² and connect it to temperature.",
+    "State the kinetic interpretation of temperature and compute rms speed.",
+    "Apply the law of equipartition of energy to find specific heats of mono/di/polyatomic gases.",
+    "Compute the mean free path of gas molecules."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Ideal gas law → kinetic theory pressure formula → kinetic interpretation of temperature → equipartition → specific heats → mean free path.",
+    "mustKnowBullets": [
+      "Ideal gas equation: PV=μRT=NkBT=nkBT×V, where kB=R/NA=1.38×10⁻²³ J/K.",
+      "Kinetic theory pressure: P=(1/3)nm‾v² where n is number density, m is molecular mass, ‾v² is mean squared speed.",
+      "Kinetic interpretation of temperature: average KE per molecule = (3/2)kBT — depends ONLY on temperature, independent of the gas's mass, pressure, or volume.",
+      "v_rms = √(3kBT/m) — lighter molecules move faster at the same temperature.",
+      "Law of equipartition of energy: each degree of freedom contributes (1/2)kBT; each vibrational MODE contributes kBT (2 squared terms: kinetic + potential).",
+      "Degrees of freedom: monatomic f=3 (translational only); rigid diatomic f=5 (3 trans + 2 rot); polyatomic f=6 (3 trans + 3 rot), plus 2 more per vibrational mode if non-rigid.",
+      "Cv=(f/2)R, Cp=(f/2+1)R, γ=Cp/Cv=(f+2)/f — always Cp−Cv=R regardless of f.",
+      "Mean free path l=1/(√2 nπd²) — depends inversely on number density and molecular size; in gases l is ~100× the interatomic distance and ~1000× the molecular size.",
+      "Dalton's law of partial pressures: total pressure of a gas mixture = sum of the pressures each gas would exert alone in the same volume."
+    ],
+    "keyTables": [
+      {
+        "title": "Degrees of freedom and specific heats",
+        "rows": [
+          ["Gas type", "f", "Cv", "Cp", "γ=Cp/Cv"],
+          ["Monatomic", "3", "3R/2", "5R/2", "5/3 ≈ 1.67"],
+          ["Diatomic (rigid)", "5", "5R/2", "7R/2", "7/5 = 1.4"],
+          ["Diatomic (non-rigid, +1 vib mode)", "7", "7R/2", "9R/2", "9/7 ≈ 1.29"],
+          ["Polyatomic", "6", "3R", "4R", "4/3 ≈ 1.33"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "formula_intro", "section": "12.3", "text": "The perfect gas equation can be written as PV = μRT, or equivalently PV = kB NT, or P = kB nT, where kB = R/NA is the Boltzmann constant.", "whyItMatters": "Three equivalent forms of the same law — NEET questions may use any of them.", "neetRelevance": "high" },
+    { "id": "h2", "type": "statement", "section": "12.3", "text": "A gas that satisfies PV=μRT exactly at all pressures and temperatures is defined to be an ideal gas. No real gas is truly ideal — real gases approach ideal behaviour at low pressures and high temperatures.", "whyItMatters": "Frequently tested conceptual point about when the ideal gas approximation is valid.", "neetRelevance": "medium" },
+    { "id": "h3", "type": "statement", "section": "12.3", "text": "Dalton's law of partial pressures: the total pressure of a mixture of non-reactive ideal gases is the sum of the partial pressures each gas would exert if it alone occupied the same volume at the same temperature.", "whyItMatters": "Direct-recall statement, frequently tested with gas-mixture numericals.", "neetRelevance": "high" },
+    { "id": "h4", "type": "formula_intro", "section": "12.4.1", "text": "Kinetic theory gives the pressure of an ideal gas as P = (1/3) n m ‾v², where n is the number density and ‾v² is the mean of the squared speed.", "whyItMatters": "The chapter's central derived result, connecting the microscopic (molecular) picture to the macroscopic (measurable) pressure.", "neetRelevance": "high" },
+    { "id": "h5", "type": "formula_intro", "section": "12.4.2", "text": "The average kinetic energy of a molecule, ½m‾v² = (3/2)kBT, is proportional to the absolute temperature and is independent of the pressure, volume, or the nature of the gas.", "whyItMatters": "One of the most important conceptual results in the chapter — at a given temperature, ALL gases (light or heavy) have the same average KE per molecule.", "neetRelevance": "high" },
+    { "id": "h6", "type": "caution", "section": "12.4.2", "text": "At the same temperature, lighter molecules have a greater rms speed than heavier ones, since average KE (not speed) is what's equal across different gases.", "whyItMatters": "A common trap — students sometimes assume equal temperature means equal SPEED, when it's actually equal average KINETIC ENERGY.", "neetRelevance": "high" },
+    { "id": "h7", "type": "statement", "section": "12.5", "text": "The law of equipartition of energy states that in thermal equilibrium, the total energy is distributed equally among all possible energy modes, with each mode having an average energy of ½kBT.", "whyItMatters": "Foundational for deriving specific heats theoretically — directly quoted in MCQs.", "neetRelevance": "high" },
+    { "id": "h8", "type": "caution", "section": "12.5", "text": "Each translational and rotational degree of freedom contributes ½kBT to the energy, while each VIBRATIONAL mode contributes 2×½kBT=kBT, since it has both a kinetic AND a potential energy term.", "whyItMatters": "The 'vibrational modes count double' rule is a frequent source of errors in specific-heat calculations.", "neetRelevance": "high" },
+    { "id": "h9", "type": "formula_intro", "section": "12.6", "text": "For an ideal gas of any kind — monatomic, diatomic, or polyatomic — Cp − Cv = R always holds true.", "whyItMatters": "This relation from Chapter 11 is universal, independent of the gas's degrees of freedom f.", "neetRelevance": "high" },
+    { "id": "h10", "type": "formula_intro", "section": "12.7", "text": "The mean free path is the average distance a molecule travels between successive collisions: l = 1/(√2 nπd²), where n is the number density and d is the molecular diameter.", "whyItMatters": "Direct-recall formula; explains why gases can flow and diffuse (large mean free path) unlike solids/liquids.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Ideal gas", "definition": "A theoretical gas that satisfies PV=μRT exactly at all pressures and temperatures; real gases only approximate this at low pressure and high temperature.", "section": "12.3" },
+    { "id": "d2", "term": "Boltzmann constant (kB)", "definition": "kB = R/NA = 1.38×10⁻²³ J/K — the gas constant per molecule rather than per mole.", "section": "12.3" },
+    { "id": "d3", "term": "Avogadro number (NA)", "definition": "The number of molecules in one mole of any substance, NA = 6.02×10²³.", "section": "12.2" },
+    { "id": "d4", "term": "Dalton's law of partial pressures", "definition": "The total pressure of a mixture of non-reacting ideal gases equals the sum of the partial pressures each gas would exert alone in the same volume at the same temperature.", "section": "12.3" },
+    { "id": "d5", "term": "RMS (root mean square) speed", "definition": "v_rms = √(‾v²), the square root of the mean of the squared molecular speeds; v_rms=√(3kBT/m).", "section": "12.4.2" },
+    { "id": "d6", "term": "Degree of freedom", "definition": "The number of independent coordinates needed to specify the position/configuration of a molecule; monatomic gases have 3 (translational only), rigid diatomic gases have 5 (3 translational + 2 rotational).", "section": "12.5" },
+    { "id": "d7", "term": "Law of equipartition of energy", "definition": "In thermal equilibrium, the total energy is distributed equally among all available energy modes, with each mode (each quadratic term in the energy expression) carrying an average energy of ½kBT.", "section": "12.5" },
+    { "id": "d8", "term": "Mean free path", "definition": "The average distance a gas molecule travels between two successive collisions, l = 1/(√2 nπd²).", "section": "12.7" }
+  ],
+  "figures": [
+    { "id": "fig-12-4", "kind": "figure", "label": "Fig. 12.4", "ncertPage": 249, "section": "12.4.1", "caption": "Elastic collision of a gas molecule with the wall of the container, used to derive the kinetic theory pressure formula.", "placeholderText": "NCERT Physics XI · Ch 12 · Page 249 · Fig. 12.4", "src": null, "uploadHint": "Crop from keph205.pdf page 5" },
+    { "id": "fig-12-6", "kind": "figure", "label": "Fig. 12.6", "ncertPage": 252, "section": "12.5", "caption": "The two independent axes of rotation of a diatomic molecule, illustrating its rotational degrees of freedom.", "placeholderText": "NCERT Physics XI · Ch 12 · Page 252 · Fig. 12.6", "src": null, "uploadHint": "Crop from keph205.pdf page 8" },
+    { "id": "fig-12-7", "kind": "figure", "label": "Fig. 12.7", "ncertPage": 255, "section": "12.7", "caption": "The volume swept by a molecule in time Δt, in which any other molecule will collide with it — used to derive the mean free path.", "placeholderText": "NCERT Physics XI · Ch 12 · Page 255 · Fig. 12.7", "src": null, "uploadHint": "Crop from keph205.pdf page 11" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Ideal gas equation (three forms)",
+      "latex": "PV = \\mu RT = N k_B T, \\qquad k_B = \\dfrac{R}{N_A}",
+      "plain": "pressure × volume = moles × R × T = number of molecules × Boltzmann constant × T",
+      "symbols": [{ "symbol": "N", "meaning": "total number of molecules" }, { "symbol": "k_B", "meaning": "Boltzmann constant, 1.38×10⁻²³ J/K" }],
+      "whenToUse": "Any problem relating P, V, T for an ideal gas — pick whichever form matches the given data (moles vs number of molecules).",
+      "derivedFrom": "NCERT Eq. 12.3–12.4",
+      "commonMistakes": ["Forgetting T must be in Kelvin.", "Mixing up N (number of molecules) with μ (number of moles) — N=μNA."],
+      "questionPatterns": [
+        {
+          "patternName": "Find the number of molecules or moles in a gas sample",
+          "howToInterpret": "Given P, V, T, solve for μ or N using the appropriate form.",
+          "howItConnectsToFormula": "μ = PV/(RT); N = PV/(kBT).",
+          "exampleStem": "Estimate the total number of air molecules in a room of volume 25 m³ at 27°C and 1 atm.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "These are really just three ways of writing the same law — moles and R, or molecules and the Boltzmann constant. Pick whichever matches what the question gives you."
+    },
+    {
+      "id": "f2",
+      "name": "Kinetic theory pressure formula",
+      "latex": "P = \\dfrac{1}{3} n m \\overline{v^2}",
+      "plain": "pressure = one-third × number density × molecular mass × mean squared speed",
+      "symbols": [{ "symbol": "n", "meaning": "number density (molecules per unit volume)" }, { "symbol": "‾v²", "meaning": "mean of the squared molecular speed" }],
+      "whenToUse": "Connecting the molecular (kinetic) picture of a gas to its measurable pressure.",
+      "derivedFrom": "NCERT Eq. 12.14",
+      "commonMistakes": ["Confusing ‾v² (mean of the squares) with (‾v)² (square of the mean) — these are NOT equal in general."],
+      "questionPatterns": [
+        {
+          "patternName": "Find mean squared speed given pressure and density",
+          "howToInterpret": "Rearrange using density ρ=nm.",
+          "howItConnectsToFormula": "P=(1/3)ρ‾v² ⟹ ‾v²=3P/ρ.",
+          "exampleStem": "The density of a gas is 1.2 kg/m³ at a pressure of 1.0×10⁵ Pa. Find the mean squared speed of its molecules.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This formula is the bridge between the microscopic world of colliding molecules and the macroscopic pressure you can actually measure with a gauge — it comes directly from analyzing molecular collisions with a container wall."
+    },
+    {
+      "id": "f3",
+      "name": "Kinetic interpretation of temperature & rms speed",
+      "latex": "\\tfrac{1}{2} m \\overline{v^2} = \\tfrac{3}{2} k_B T, \\qquad v_{rms} = \\sqrt{\\dfrac{3k_BT}{m}}",
+      "plain": "average KE per molecule = 3/2 kT; rms speed = square root of (3kT/mass)",
+      "symbols": [{ "symbol": "v_rms", "meaning": "root mean square speed" }],
+      "whenToUse": "Finding the typical molecular speed of a gas, or comparing speeds of two different gases at the same temperature.",
+      "derivedFrom": "NCERT Eq. 12.19",
+      "commonMistakes": ["Forgetting v_rms depends on 1/√m — lighter molecules are faster at the SAME temperature, not slower.", "Using molar mass in kg/mol instead of per-molecule mass in kg when combined with kB — or equivalently using R and molar mass M₀ together consistently: v_rms=√(3RT/M₀)."],
+      "questionPatterns": [
+        {
+          "patternName": "Find rms speed of a gas at a given temperature",
+          "howToInterpret": "Identify m (per-molecule mass, via molar mass/NA) and T; substitute.",
+          "howItConnectsToFormula": "v_rms=√(3kBT/m) or equivalently √(3RT/M₀).",
+          "exampleStem": "Find the rms speed of nitrogen molecules (M=28 g/mol) at 300 K.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Compare rms speeds of two different gases at the same temperature",
+          "howToInterpret": "Since average KE is the same for both gases, the ratio of rms speeds depends only on the inverse square root of the mass ratio.",
+          "howItConnectsToFormula": "v_rms(1)/v_rms(2) = √(M₂/M₁).",
+          "exampleStem": "Uranium has isotopes of mass 235 and 238. Which moves faster on average, and estimate the percentage difference in speeds.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The key insight is that temperature measures average kinetic energy, not average speed — so at the same temperature, a light molecule must move faster than a heavy one to have the same kinetic energy."
+    },
+    {
+      "id": "f4",
+      "name": "Law of equipartition of energy",
+      "latex": "\\langle E \\rangle = \\dfrac{f}{2} k_B T \\ \\text{per molecule (translational + rotational)}",
+      "plain": "average energy per molecule = (degrees of freedom / 2) × kT, plus kT per vibrational mode",
+      "symbols": [{ "symbol": "f", "meaning": "number of degrees of freedom" }],
+      "whenToUse": "Predicting the internal energy and specific heat of a gas from its molecular structure.",
+      "derivedFrom": "NCERT Eq. 12.23–12.26",
+      "commonMistakes": ["Forgetting each vibrational MODE counts as 2 (not 1) toward the energy, since it has both a kinetic and potential energy term."],
+      "questionPatterns": [
+        {
+          "patternName": "Find total internal energy of a gas sample",
+          "howToInterpret": "Identify f for the gas type, then U=(f/2)μRT for μ moles.",
+          "howItConnectsToFormula": "U = (f/2)NkBT = (f/2)μRT.",
+          "exampleStem": "Find the internal energy of 2 moles of a diatomic (rigid) gas at 300 K.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Every independent way a molecule can store energy — moving, spinning, or vibrating — gets an equal share of kT over 2, except vibration, which gets double because it stores both kinetic and potential energy simultaneously."
+    },
+    {
+      "id": "f5",
+      "name": "Specific heats from degrees of freedom",
+      "latex": "C_v = \\dfrac{f}{2}R, \\qquad C_p = \\left(\\dfrac{f}{2}+1\\right)R, \\qquad \\gamma = \\dfrac{f+2}{f}",
+      "plain": "Cv = (f/2)R; Cp = Cv+R; gamma = (f+2)/f",
+      "symbols": [{ "symbol": "γ", "meaning": "ratio of specific heats, Cp/Cv" }],
+      "whenToUse": "Predicting/calculating specific heat capacities and γ from the molecular structure (mono/di/polyatomic).",
+      "derivedFrom": "NCERT Eq. 12.28–12.36",
+      "commonMistakes": ["Using f=5 for ALL diatomic gases even when the question specifies non-rigid (vibrating) molecules, which have f=7.", "Forgetting Cp−Cv=R holds regardless of f — it's a good self-check."],
+      "questionPatterns": [
+        {
+          "patternName": "Find Cv, Cp, γ for a given gas type",
+          "howToInterpret": "Identify monatomic (f=3), rigid diatomic (f=5), non-rigid diatomic (f=7), or polyatomic (f=6, or 6+2×vibrational modes).",
+          "howItConnectsToFormula": "Substitute f into the three formulas.",
+          "exampleStem": "Find Cv, Cp and γ for a monatomic ideal gas like helium or argon.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Heat required to raise temperature of a fixed-volume gas sample",
+          "howToInterpret": "Constant volume means use Cv, not Cp.",
+          "howItConnectsToFormula": "Q = μCvΔT.",
+          "exampleStem": "A cylinder of fixed volume 44.8 L contains helium at STP. Find the heat needed to raise its temperature by 15.0°C.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Once you know how many degrees of freedom a molecule has, both specific heats and their ratio gamma follow immediately — this is the law of equipartition doing real predictive work, and it matches experiment remarkably well at ordinary temperatures."
+    },
+    {
+      "id": "f6",
+      "name": "Mean free path",
+      "latex": "l = \\dfrac{1}{\\sqrt{2}\\, n \\pi d^2}",
+      "plain": "mean free path = 1 / (root 2 × number density × pi × diameter squared)",
+      "symbols": [{ "symbol": "d", "meaning": "diameter of a gas molecule" }],
+      "whenToUse": "Estimating how far a molecule travels between collisions — connects macroscopic gas behaviour to microscopic molecular size.",
+      "derivedFrom": "NCERT Eq. 12.40",
+      "commonMistakes": ["Forgetting the √2 factor, which comes from using the RELATIVE speed between colliding molecules rather than treating one as stationary."],
+      "questionPatterns": [
+        {
+          "patternName": "Estimate the mean free path given number density and molecular size",
+          "howToInterpret": "Find n from PV=NkBT if not given directly, then substitute d.",
+          "howItConnectsToFormula": "l = 1/(√2 nπd²).",
+          "exampleStem": "Estimate the mean free path of nitrogen molecules at 2.0 atm and 17°C, given the molecular radius is about 1.0 Å.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Mean free path tells you how far, on average, a molecule travels before it bumps into another one — it depends inversely on how crowded the gas is (number density) and how big the target molecules are."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6"],
+    "definitionViewOrder": ["d1", "d2", "d4", "d5", "d6", "d7", "d8"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["kinetic interpretation", "conceptual"],
+      "stages": {
+        "question": "At the same temperature, do hydrogen and oxygen molecules have the same average kinetic energy, or the same average speed?",
+        "interpretation": "Tests the core kinetic-theory temperature relation.",
+        "formula": "½m‾v² = (3/2)kBT",
+        "solutionSteps": ["Average KE per molecule depends only on T, not on mass — so it's the SAME for both gases", "Speed depends on mass too (v_rms=√(3kT/m)), so lighter H₂ molecules move faster than heavier O₂ molecules"],
+        "answer": "Same average kinetic energy; DIFFERENT average speeds (hydrogen, being lighter, moves faster)."
+      },
+      "audioScript": "Temperature locks in average kinetic energy, identically for every gas — but speed still depends on mass, so lighter molecules must move faster to carry that same energy."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["ideal gas law", "numerical"],
+      "stages": {
+        "question": "Estimate the total number of air molecules in a room of volume 25.0 m³ at 27°C and 1 atm pressure.",
+        "interpretation": "Direct application of PV=NkBT.",
+        "formula": "N = PV/(kBT)",
+        "solutionSteps": ["T=300K, P=1.01×10⁵ Pa, V=25 m³", "N = (1.01×10⁵×25)/(1.38×10⁻²³×300)", "N ≈ 6.1×10²⁶"],
+        "answer": "N ≈ 6.1 × 10²⁶ molecules"
+      },
+      "audioScript": "Just rearrange the molecular form of the ideal gas law and plug in — remember temperature must be in Kelvin and pressure in pascals for consistent SI units."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["specific heat", "degrees of freedom"],
+      "stages": {
+        "question": "Find Cv, Cp and γ for a monatomic ideal gas.",
+        "interpretation": "Monatomic gas has f=3 (translational only, no rotation or vibration).",
+        "formula": "Cv=(f/2)R, Cp=(f/2+1)R, γ=(f+2)/f",
+        "solutionSteps": ["f=3", "Cv = 3R/2", "Cp = 3R/2+R = 5R/2", "γ = 5/3 ≈ 1.67"],
+        "answer": "Cv=3R/2, Cp=5R/2, γ=5/3 (≈1.67)"
+      },
+      "audioScript": "Monatomic gases only have translational motion — no spinning, no vibrating — so their degrees of freedom is simply 3, giving the classic 5-thirds ratio."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["kinetic theory pressure", "numerical"],
+      "stages": {
+        "question": "The density of a gas is 1.2 kg/m³ at a pressure of 1.0×10⁵ Pa. Find the mean squared speed of its molecules.",
+        "interpretation": "Use kinetic theory pressure formula in density form.",
+        "formula": "P = (1/3)ρ‾v²",
+        "solutionSteps": ["‾v² = 3P/ρ = 3×1.0×10⁵/1.2", "‾v² ≈ 2.5×10⁵ m²/s²"],
+        "answer": "‾v² ≈ 2.5 × 10⁵ m²/s² (so v_rms ≈ 500 m/s)"
+      },
+      "audioScript": "When you're given density instead of number density and mass separately, just substitute ρ=nm directly into the kinetic theory pressure formula."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["rms speed", "comparison"],
+      "stages": {
+        "question": "Uranium has isotopes of mass 235 and 238 units. Which has the larger average speed, and estimate the percentage difference in rms speeds at any temperature.",
+        "interpretation": "Same temperature means same average KE, so use the inverse-square-root mass ratio.",
+        "formula": "v_rms(1)/v_rms(2) = √(M₂/M₁)",
+        "solutionSteps": [
+          "Lighter isotope (235) has the larger speed",
+          "v₂₃₅/v₂₃₈ = √(238/235) = √1.01277 ≈ 1.0064",
+          "Percentage difference ≈ 0.64%"
+        ],
+        "answer": "The 235 isotope (lighter) has the larger average speed, about 0.64% faster — this small difference is actually exploited in uranium enrichment via gaseous diffusion."
+      },
+      "audioScript": "Even a tiny mass difference between isotopes produces a small but real speed difference — and that's precisely the physical basis for separating uranium isotopes for nuclear applications."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["equipartition", "internal energy"],
+      "stages": {
+        "question": "Find the internal energy of 2 moles of a rigid diatomic gas at 300 K.",
+        "interpretation": "Rigid diatomic has f=5; use U=(f/2)μRT.",
+        "formula": "U = (f/2)μRT",
+        "solutionSteps": ["U = (5/2)×2×8.31×300", "U = 5×8.31×300 = 12465 J"],
+        "answer": "U ≈ 12,465 J (≈12.5 kJ)"
+      },
+      "audioScript": "With five degrees of freedom for a rigid diatomic molecule, just substitute directly into the equipartition energy formula along with the number of moles and temperature."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["mean free path", "numerical"],
+      "stages": {
+        "question": "Estimate the mean free path of nitrogen molecules at 2.0 atm and 17°C (290 K), taking the molecular radius as 1.0 Å (so d=2.0 Å).",
+        "interpretation": "First find n from the ideal gas law, then apply the mean free path formula.",
+        "formula": "l = 1/(√2 nπd²); n = P/(kBT)",
+        "solutionSteps": [
+          "n = P/(kBT) = (2×1.013×10⁵)/(1.38×10⁻²³×290) ≈ 5.06×10²⁵ m⁻³",
+          "d = 2.0×10⁻¹⁰ m, d² = 4.0×10⁻²⁰ m²",
+          "l = 1/(1.414×5.06×10²⁵×π×4.0×10⁻²⁰) ≈ 1/(9.0×10⁶) ≈ 1.1×10⁻⁷ m"
+        ],
+        "answer": "l ≈ 1.1 × 10⁻⁷ m (about 110 nm)"
+      },
+      "audioScript": "This is a two-stage calculation — first convert pressure and temperature into a number density using the ideal gas law, then feed that into the mean free path formula along with the molecular diameter."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["specific heat", "non-rigid diatomic"],
+      "stages": {
+        "question": "A diatomic gas is NOT rigid but has one additional vibrational mode. Find its Cv, Cp and γ.",
+        "interpretation": "Non-rigid diatomic: f = 5 (rigid) + 2 (one vibrational mode counts double) = 7.",
+        "formula": "Cv=(f/2)R, Cp=(f/2+1)R, γ=(f+2)/f",
+        "solutionSteps": ["f = 5+2 = 7", "Cv = 7R/2", "Cp = 7R/2+R = 9R/2", "γ = 9/7 ≈ 1.29"],
+        "answer": "Cv=7R/2, Cp=9R/2, γ=9/7≈1.29 — notice γ is SMALLER than the rigid case (1.4), since more degrees of freedom means more ways to store energy without raising temperature as much."
+      },
+      "audioScript": "Adding a vibrational mode contributes two extra degrees of freedom, not one, since vibration carries both kinetic and potential energy — and more degrees of freedom always pulls gamma closer to 1."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why does temperature depend only on average kinetic energy per molecule, not on the gas's identity?",
+      "Why does a vibrational mode contribute kBT instead of ½kBT to a molecule's average energy?",
+      "Why is Cp always greater than Cv for an ideal gas, regardless of its degrees of freedom?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Estimate the fraction of the total volume of oxygen gas actually occupied by the molecules themselves, at STP, taking the molecular diameter to be 3 Å.",
+        "interpretation": "Find molecular volume, find total volume per molecule from the ideal gas law (molar volume/NA), then take the ratio.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "Volume per molecule (occupied space) = 22.4 L/NA = 22.4×10⁻³/6.02×10²³ ≈ 3.72×10⁻²⁶ m³",
+          "Volume of one molecule = (4/3)π(1.5×10⁻¹⁰)³ ≈ 1.4×10⁻²⁹ m³",
+          "Fraction = 1.4×10⁻²⁹/3.72×10⁻²⁶ ≈ 3.8×10⁻⁴"
+        ],
+        "answer": "≈ 3.8 × 10⁻⁴, or about 0.038% — confirming gas molecules occupy a tiny fraction of the total volume",
+        "audioScript": "This calculation is exactly why gases are so compressible — the molecules themselves take up only a tiny sliver of the total space they wander through."
+      },
+      {
+        "id": "pb2",
+        "question": "What is the average thermal energy of a helium atom at room temperature (27°C)?",
+        "interpretation": "Direct application of the kinetic interpretation of temperature for a monatomic gas (purely translational, so average energy = (3/2)kBT).",
+        "formulaIds": ["f3"],
+        "steps": ["T = 300 K", "E = (3/2)kBT = 1.5×1.38×10⁻²³×300"],
+        "answer": "E ≈ 6.2 × 10⁻²¹ J",
+        "audioScript": "For a monatomic gas, all the average energy is translational, so it's a direct one-step substitution into three-halves kT."
+      },
+      {
+        "id": "pb3",
+        "question": "Two vessels of equal capacity contain gases at the same temperature and pressure. Do they necessarily have the same number of molecules?",
+        "interpretation": "Direct consequence of Avogadro's hypothesis, built into the ideal gas law.",
+        "formulaIds": ["f1"],
+        "steps": ["From PV=NkBT, if P, V, T are all equal for both vessels, then N must also be equal", "This holds regardless of which gas is in each vessel"],
+        "answer": "Yes — equal volumes of any gas at the same temperature and pressure contain the same number of molecules (Avogadro's hypothesis), regardless of the gas's identity.",
+        "audioScript": "This is Avogadro's famous hypothesis, and it falls right out of the ideal gas law once you notice that N depends only on P, V and T — not on which gas you're dealing with."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "An oxygen cylinder of volume 30 L has an initial gauge pressure of 15 atm at 27°C. After some oxygen is withdrawn, the gauge pressure drops to 11 atm and temperature to 17°C. Estimate the mass of oxygen withdrawn. (R=8.31 J/mol K, M(O₂)=32 u, atmospheric pressure=1 atm)",
+        "interpretation": "Find moles present before and after (using ABSOLUTE pressure = gauge+atmospheric), then find the mass difference.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "P₁(abs) = 16 atm = 16.2×10⁵ Pa, T₁=300K: μ₁=P₁V/(RT₁) = (16.2×10⁵×0.03)/(8.31×300) ≈ 19.5 mol",
+          "P₂(abs) = 12 atm = 12.2×10⁵ Pa, T₂=290K: μ₂=P₂V/(RT₂) = (12.2×10⁵×0.03)/(8.31×290) ≈ 15.2 mol",
+          "Δμ = 19.5−15.2 = 4.3 mol",
+          "Mass withdrawn = 4.3×32 ≈ 138 g"
+        ],
+        "answer": "≈ 138 g of oxygen withdrawn",
+        "audioScript": "Don't forget to convert gauge pressure to absolute pressure before using the ideal gas law — this is the single most common mistake in this style of problem. Then just find moles before and after, and take the difference."
+      },
+      {
+        "id": "pi2",
+        "question": "An air bubble of volume 1.0 cm³ rises from the bottom of a lake 40 m deep at 12°C, to the surface at 35°C. To what volume does it grow? (ρ_water=1000 kg/m³, g=9.8 m/s², P_atm=1.01×10⁵ Pa)",
+        "interpretation": "Use the combined gas law (PV/T=constant) between the bottom and surface states.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "P_bottom = P_atm+ρgh = 1.01×10⁵+1000×9.8×40 = 1.01×10⁵+3.92×10⁵ = 4.93×10⁵ Pa",
+          "P_surface = 1.01×10⁵ Pa (atmospheric only)",
+          "T_bottom=285K, T_surface=308K",
+          "V₂ = V₁×(P₁/P₂)×(T₂/T₁) = 1.0×(4.93/1.01)×(308/285) ≈ 1.0×4.88×1.08 ≈ 5.27 cm³"
+        ],
+        "answer": "≈ 5.27 cm³",
+        "audioScript": "Treat this exactly like a combined-gas-law problem — find the pressure at the bottom by adding the hydrostatic contribution, then use the ratio form of the ideal gas law between the two states."
+      },
+      {
+        "id": "pi3",
+        "question": "Find the average thermal energy of a helium atom at (i) room temperature 27°C, (ii) the Sun's surface temperature 6000 K, (iii) 10 million K (a star's core).",
+        "interpretation": "Direct three-part application of (3/2)kBT at different temperatures.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "(i) T=300K: E=1.5×1.38×10⁻²³×300 ≈ 6.2×10⁻²¹ J",
+          "(ii) T=6000K: E=1.5×1.38×10⁻²³×6000 ≈ 1.24×10⁻¹⁹ J",
+          "(iii) T=10⁷K: E=1.5×1.38×10⁻²³×10⁷ ≈ 2.07×10⁻¹⁶ J"
+        ],
+        "answer": "(i) ≈6.2×10⁻²¹ J (ii) ≈1.24×10⁻¹⁹ J (iii) ≈2.07×10⁻¹⁶ J — a roughly 33,000-fold increase from room temperature to a stellar core",
+        "audioScript": "Same formula, three very different scales — this really drives home just how directly temperature and average molecular energy scale together, from a comfortable room to the heart of a star."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Three vessels of equal capacity have gases at the same temperature and pressure: neon (monatomic), chlorine (diatomic), and uranium hexafluoride (polyatomic). Do the vessels have equal numbers of respective molecules? If not, in which case is v_rms the largest?",
+        "interpretation": "Combine Avogadro's hypothesis (equal N regardless of gas type) with the kinetic-energy-vs-speed distinction.",
+        "formulaIds": ["f1", "f3"],
+        "steps": [
+          "Since P, V, T are equal for all three vessels, N is equal in all three (Avogadro's hypothesis) — independent of molecular mass or structure",
+          "However, v_rms=√(3kT/m) depends on mass — neon (lightest) has the smallest molar mass among the three, so it has the LARGEST v_rms"
+        ],
+        "answer": "Yes, all three vessels contain equal numbers of molecules. v_rms is largest for neon, since it's the lightest of the three gases.",
+        "audioScript": "The number of molecules only depends on P, V, and T — completely independent of what gas it is. But once you ask about speed, mass suddenly matters a lot, and the lightest gas always wins on rms speed."
+      },
+      {
+        "id": "pa2",
+        "question": "At what temperature is the rms speed of an argon atom equal to the rms speed of a helium atom at −20°C? (M(Ar)=39.9 u, M(He)=4.0 u)",
+        "interpretation": "Set the two rms speed expressions equal and solve for the unknown temperature.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "√(3RT_Ar/M_Ar) = √(3RT_He/M_He)",
+          "T_Ar/M_Ar = T_He/M_He",
+          "T_Ar = T_He×(M_Ar/M_He) = 253×(39.9/4.0)",
+          "T_Ar ≈ 2524 K"
+        ],
+        "answer": "T_Ar ≈ 2524 K (≈2251°C) — a much higher temperature is needed for the heavier argon to match helium's speed",
+        "audioScript": "Setting the two rms-speed formulas equal and canceling the common factors leaves a simple direct proportion between temperature and molar mass — heavier gases need proportionally more heat to reach the same speed."
+      },
+      {
+        "id": "pa3",
+        "question": "Estimate the mean free path and collision frequency of a nitrogen molecule in nitrogen gas at 2.0 atm and 17°C, given molecular radius ≈1.0 Å. Compare the collision time with the time the molecule moves freely between collisions.",
+        "interpretation": "Extends the mean free path calculation to also find collision frequency (1/τ) and compare timescales.",
+        "formulaIds": ["f3", "f6"],
+        "steps": [
+          "From the earlier mean free path calculation, l ≈ 1.1×10⁻⁷ m",
+          "v_rms(N₂, 290K) = √(3RT/M) = √(3×8.31×290/0.028) ≈ 508 m/s",
+          "Time between collisions τ = l/v_rms ≈ 1.1×10⁻⁷/508 ≈ 2.2×10⁻¹⁰ s",
+          "Collision frequency = 1/τ ≈ 4.6×10⁹ collisions per second"
+        ],
+        "answer": "l ≈ 1.1×10⁻⁷ m; collision frequency ≈ 4.6 × 10⁹ per second — nitrogen molecules collide roughly 4.6 billion times every second",
+        "audioScript": "Once you have the mean free path and the rms speed, dividing one by the other gives you the average time between collisions — and its reciprocal, the staggering collision frequency, shows just how frantically active a gas is even though it looks perfectly still."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the ideal gas law with the kinetic interpretation of temperature (e.g. finding rms speed from given P, V, and mass of gas), and one that compares specific heats of two different gas types in the same numerical."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 12 — Kinetic Theory. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (ideal gas law & Dalton's law, kinetic theory pressure formula, kinetic interpretation of temperature & rms speed, equipartition & specific heats, or mean free path). First quiz me on definitions and formulas with NO calculation involved — the three forms of the ideal gas law, why average KE depends only on temperature, degrees of freedom for mono/di/polyatomic gases, and why vibrational modes count double. Then move to basic numericals tied to a single formula (finding N or moles, basic rms speed, basic Cv/Cp/γ from degrees of freedom). Then intermediate problems requiring two steps (gauge-vs-absolute pressure gas-cylinder problems, combined gas law with a pressure change from depth, comparing rms speeds of two gases). Then advanced problems that chain formulas together (mean free path with collision frequency, non-rigid diatomic specific heats, temperature needed to match rms speeds of different gases). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (ideal gas law, kinetic theory pressure, kinetic interpretation of temperature, equipartition of energy, specific heats, mean free path) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "Why do all ideal gases have the same average kinetic energy per molecule at a given temperature, regardless of their mass?", "a": "Because average KE = (3/2)kBT depends only on absolute temperature, not on the mass or identity of the gas — this is the kinetic definition of temperature itself." },
+    { "q": "How many degrees of freedom does a rigid diatomic molecule have, and what are they?", "a": "5 — three translational (motion in x, y, z) plus two rotational (about the two axes perpendicular to the bond axis; rotation about the bond axis itself is negligible)." },
+    { "q": "Why does Cp − Cv = R hold true for ANY ideal gas, regardless of its degrees of freedom f?", "a": "Because this relation comes from the First Law of Thermodynamics applied at constant pressure vs constant volume (Chapter 11), and is independent of how many degrees of freedom the molecule has — only the individual values of Cv and Cp (not their difference) depend on f." },
+    { "q": "What does a large mean free path in gases (compared to solids/liquids) explain physically?", "a": "It explains why gases can flow freely, diffuse, and disperse without a container, and why they take time to fill a room — molecules travel relatively long distances between collisions." },
+    { "q": "If two isotopes of the same element are at the same temperature, which one has the higher rms speed?", "a": "The LIGHTER isotope — since v_rms ∝ 1/√mass at a fixed temperature (same average KE, so lower mass means higher speed)." }
+  ]
+}

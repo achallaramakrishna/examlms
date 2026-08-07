@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "examTrack": "NEET",
+    "subject": "Physics",
+    "classLevel": "XI",
+    "chapterNumber": 8,
+    "chapterTitle": "Mechanical Properties of Solids",
+    "ncertCode": "keph201",
+    "topicIdHint": "Properties of Solids and Liquids",
+    "estimatedRevisionMinutes": 45,
+    "chapter": "Mechanical Properties of Solids",
+    "class": "11",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Define stress and strain and state Hooke's law and its region of validity.",
+    "Distinguish tensile/compressive, shearing, and hydraulic stress and their corresponding strains.",
+    "Read a stress–strain curve: proportional limit, yield point, ultimate strength, fracture point, permanent set.",
+    "Compute Young's modulus, shear modulus and bulk modulus, and know which states of matter each applies to.",
+    "Apply Poisson's ratio and the elastic potential energy per unit volume formula.",
+    "Use elastic-behaviour reasoning in applied contexts — ropes, beams, columns."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Stress/strain and Hooke's law, then the three elastic moduli (Y, G, B) with elastic potential energy.",
+    "mustKnowBullets": [
+      "Stress = F/A; SI unit N m⁻² or pascal (Pa); dimensional formula [ML⁻¹T⁻²].",
+      "Strain is a ratio of two lengths/volumes — dimensionless, no units.",
+      "Hooke's law: stress ∝ strain, valid only in the linear (proportional-limit) region of the curve.",
+      "Young's modulus Y = (F/A)/(ΔL/L) — defined for solids only.",
+      "Shear modulus (modulus of rigidity) G = (F/A)/θ — solids only; for most materials G ≈ Y/3.",
+      "Bulk modulus B = −p/(ΔV/V) — defined for solids, liquids AND gases; compressibility k = 1/B.",
+      "Poisson's ratio = lateral strain / longitudinal strain — dimensionless, ≈0.28–0.33 for common metals.",
+      "Elastic potential energy per unit volume u = ½ × stress × strain = ½ Y (strain)².",
+      "Beam sag under central load: δ = Wl³/(4bd³Y) — increasing depth d is far more effective than breadth b at reducing sag.",
+      "Order on the stress–strain curve: O→A proportional limit (Hooke's law holds) → B yield point → D ultimate tensile strength → E fracture point."
+    ],
+    "keyTables": [
+      {
+        "title": "Elastic moduli at a glance",
+        "rows": [
+          ["Modulus", "Formula", "Applies to", "Type of strain"],
+          ["Young's modulus (Y)", "(F/A)/(ΔL/L)", "Solids only", "Longitudinal"],
+          ["Shear modulus (G)", "(F/A)/θ", "Solids only", "Shearing"],
+          ["Bulk modulus (B)", "−p/(ΔV/V)", "Solid, liquid, gas", "Volume"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    {
+      "id": "h1",
+      "type": "definition",
+      "section": "8.1",
+      "text": "The property of a body, by virtue of which it tends to regain its original size and shape when the applied force is removed, is known as elasticity, and the deformation caused is known as elastic deformation.",
+      "whyItMatters": "Base definition — sets up the whole chapter's vocabulary.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h2",
+      "type": "definition",
+      "section": "8.2",
+      "text": "The restoring force per unit area is known as stress. If F is the force applied normal to the cross-section and A is the area of cross section, Stress = F/A.",
+      "whyItMatters": "Direct-recall NEET one-liner; SI unit Pa, dimensions [ML⁻¹T⁻²].",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h3",
+      "type": "statement",
+      "section": "8.3",
+      "text": "Stress and strain take different forms for different situations. For small deformations the stress and strain are proportional to each other — this is known as Hooke's law.",
+      "whyItMatters": "Hooke's law is only valid in the linear part of the stress-strain curve — a very common trap.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h4",
+      "type": "caution",
+      "section": "8.4",
+      "text": "In the region from A to B on the stress-strain curve, stress and strain are not proportional, yet the body still returns to its original dimension when the load is removed. Beyond B (yield point) the material shows a permanent set even when stress returns to zero.",
+      "whyItMatters": "Distinguishes 'elastic' (returns to shape) from 'obeys Hooke's law' (linear) — these are NOT the same thing.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h5",
+      "type": "formula_intro",
+      "section": "8.5.1",
+      "text": "Young's modulus Y = stress/strain = (F/A)/(ΔL/L).",
+      "whyItMatters": "Most frequently tested modulus; only defined for solids.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h6",
+      "type": "formula_intro",
+      "section": "8.5.2",
+      "text": "The ratio of shearing stress to the corresponding shearing strain is called the shear modulus, G = (F/A)/θ. It is also called the modulus of rigidity.",
+      "whyItMatters": "Shear happens only in solids; commonly confused with bulk modulus in MCQs.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h7",
+      "type": "formula_intro",
+      "section": "8.5.3",
+      "text": "The ratio of hydraulic stress to the corresponding hydraulic strain is called bulk modulus, B = −p/(ΔV/V). The reciprocal of the bulk modulus is called compressibility, k = 1/B.",
+      "whyItMatters": "Bulk modulus is the ONLY modulus defined for gases and liquids too — solids are the least compressible, gases the most.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h8",
+      "type": "statement",
+      "section": "8.5.4",
+      "text": "The ratio of the lateral strain to the longitudinal strain in a stretched wire is called Poisson's ratio. It is a ratio of two strains, and so is a pure number with no dimensions or units.",
+      "whyItMatters": "Frequently asked assertion-reason: Poisson's ratio has no units.",
+      "neetRelevance": "medium"
+    },
+    {
+      "id": "h9",
+      "type": "formula_intro",
+      "section": "8.5.5",
+      "text": "The elastic potential energy per unit volume of the wire is u = ½ σ ε (half stress times strain).",
+      "whyItMatters": "Directly testable numerical formula, derived from work done stretching a wire.",
+      "neetRelevance": "medium"
+    },
+    {
+      "id": "h10",
+      "type": "summary",
+      "section": "8.6",
+      "text": "To reduce the bending (sag) of a beam for a given load, one should use a material with a large Young's modulus, and increase the depth d rather than the breadth b — since sag is proportional to d⁻³ but only b⁻¹.",
+      "whyItMatters": "Explains why girders/rails are I-shaped — a classic applied-reasoning NEET question.",
+      "neetRelevance": "medium"
+    }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Elasticity", "definition": "The property of a body by virtue of which it tends to regain its original size and shape when the deforming force is removed.", "section": "8.1" },
+    { "id": "d2", "term": "Plasticity", "definition": "The property of a body of having no tendency to regain its previous shape on removal of the deforming force; the deformation is permanent.", "section": "8.1" },
+    { "id": "d3", "term": "Stress", "definition": "Restoring force per unit area developed inside a deformed body; Stress = F/A, SI unit Pa, dimensions [ML⁻¹T⁻²].", "section": "8.2" },
+    { "id": "d4", "term": "Longitudinal strain", "definition": "The ratio of the change in length ΔL to the original length L of a body under tensile or compressive stress.", "section": "8.2" },
+    { "id": "d5", "term": "Shearing strain", "definition": "The ratio of relative displacement of the faces Δx to the length L of the cylinder, equal to tan θ ≈ θ for small θ.", "section": "8.2" },
+    { "id": "d6", "term": "Volume (hydraulic) strain", "definition": "The ratio of change in volume ΔV to the original volume V of a body under hydraulic compression.", "section": "8.2" },
+    { "id": "d7", "term": "Hooke's law", "definition": "For small deformations, stress is directly proportional to strain: stress = k × strain, where k is the modulus of elasticity.", "section": "8.3" },
+    { "id": "d8", "term": "Yield point / yield strength", "definition": "The point B on the stress-strain curve beyond which the body no longer returns to its original dimension when the load is removed (permanent set); the corresponding stress is the yield strength σ_y.", "section": "8.4" },
+    { "id": "d9", "term": "Ultimate tensile strength", "definition": "The maximum stress (point D on the curve) beyond which additional strain is produced even by a reduced applied force, leading to fracture.", "section": "8.4" },
+    { "id": "d10", "term": "Elastomers", "definition": "Substances such as rubber and the elastic tissue of aorta, which can be stretched to cause large strains and have no well-defined plastic region, and mostly do not obey Hooke's law.", "section": "8.4" },
+    { "id": "d11", "term": "Poisson's ratio", "definition": "The ratio of lateral strain to longitudinal strain in a stretched wire; a pure dimensionless number, ≈0.28–0.30 for steel and ≈0.33 for aluminium alloys.", "section": "8.5.4" },
+    { "id": "d12", "term": "Compressibility", "definition": "The reciprocal of the bulk modulus, k = 1/B; the fractional change in volume per unit increase in pressure.", "section": "8.5.3" }
+  ],
+  "figures": [
+    {
+      "id": "fig-8-1",
+      "kind": "figure",
+      "label": "Fig. 8.1",
+      "ncertPage": 168,
+      "section": "8.2",
+      "caption": "(a) A cylindrical body under tensile stress elongates by ΔL (b) Shearing stress on a cylinder deforming it by an angle θ (c) A body subjected to shearing stress (d) A solid body under hydraulic stress.",
+      "placeholderText": "NCERT Physics XI · Ch 8 · Page 168 · Fig. 8.1",
+      "src": null,
+      "uploadHint": "Crop from keph201.pdf page 2"
+    },
+    {
+      "id": "fig-8-2",
+      "kind": "graph",
+      "label": "Fig. 8.2",
+      "ncertPage": 169,
+      "section": "8.4",
+      "caption": "A typical stress-strain curve for a metal, showing proportional limit, yield point, fracture point and permanent set.",
+      "placeholderText": "NCERT Physics XI · Ch 8 · Page 169 · Fig. 8.2",
+      "src": null,
+      "uploadHint": "Crop from keph201.pdf page 3"
+    },
+    {
+      "id": "fig-8-7",
+      "kind": "figure",
+      "label": "Fig. 8.7",
+      "ncertPage": 175,
+      "section": "8.6",
+      "caption": "Different cross-sectional shapes of a beam: (a) rectangular (b) thin bar showing buckling (c) I-shaped section commonly used to reduce weight without sacrificing strength.",
+      "placeholderText": "NCERT Physics XI · Ch 8 · Page 175 · Fig. 8.7",
+      "src": null,
+      "uploadHint": "Crop from keph201.pdf page 8"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Stress",
+      "latex": "\\text{Stress} = \\dfrac{F}{A}",
+      "plain": "stress = force / cross-sectional area",
+      "symbols": [
+        { "symbol": "F", "meaning": "restoring/applied force (N)" },
+        { "symbol": "A", "meaning": "cross-sectional area (m²)" }
+      ],
+      "whenToUse": "Whenever a body is deformed by a force normal to (tensile/compressive) or along (shearing) or all over (hydraulic) its surface.",
+      "derivedFrom": "NCERT Eq. 8.1",
+      "commonMistakes": ["Forgetting stress has units (Pa), unlike strain which is dimensionless.", "Using the deformed area instead of the original cross-sectional area."],
+      "questionPatterns": [
+        {
+          "patternName": "Find stress given force and area",
+          "howToInterpret": "Given load F and cross-section A (often circular, A = πr²), find the stress.",
+          "howItConnectsToFormula": "Direct substitution into F/A.",
+          "exampleStem": "A 100 kN force stretches a steel rod of radius 10 mm. Find the stress on the rod.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Maximum load a cable/rope can bear",
+          "howToInterpret": "Given a maximum allowed stress and the cross-sectional area, find the maximum force.",
+          "howItConnectsToFormula": "Rearrange to F = stress × A.",
+          "exampleStem": "A steel cable of radius 1.5 cm must not exceed a stress of 10⁸ N m⁻². What is the maximum load it can support?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Stress is just restoring force divided by the area it acts over. It has units of pascals, unlike strain which is a pure ratio with no units at all. Always use the original cross-sectional area, not the stretched one."
+    },
+    {
+      "id": "f2",
+      "name": "Longitudinal (tensile/compressive) strain",
+      "latex": "\\text{Strain} = \\dfrac{\\Delta L}{L}",
+      "plain": "strain = change in length / original length",
+      "symbols": [
+        { "symbol": "ΔL", "meaning": "change in length (m)" },
+        { "symbol": "L", "meaning": "original length (m)" }
+      ],
+      "whenToUse": "For tensile (stretching) or compressive stress along the length of a rod or wire.",
+      "derivedFrom": "NCERT Eq. 8.2",
+      "commonMistakes": ["Reporting strain with units — it is dimensionless.", "Confusing ΔL (change) with L (original length) in the denominator."],
+      "questionPatterns": [
+        {
+          "patternName": "Find elongation given Young's modulus",
+          "howToInterpret": "Combine with Y = (F/A)/(ΔL/L) to solve for ΔL directly.",
+          "howItConnectsToFormula": "ΔL = FL/(AY).",
+          "exampleStem": "A copper wire and a steel wire of given lengths and areas are loaded in series — find the elongation of each.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Longitudinal strain is just the fractional change in length: how much longer, divided by how long it started. It's a pure number — no units."
+    },
+    {
+      "id": "f3",
+      "name": "Shearing strain",
+      "latex": "\\text{Shearing strain} = \\dfrac{\\Delta x}{L} = \\tan\\theta \\approx \\theta",
+      "plain": "shearing strain = relative displacement of faces / length ≈ angle of shear (radians)",
+      "symbols": [
+        { "symbol": "Δx", "meaning": "relative displacement between opposite faces (m)" },
+        { "symbol": "L", "meaning": "length of the cylinder/block (m)" },
+        { "symbol": "θ", "meaning": "angular displacement from the original vertical position" }
+      ],
+      "whenToUse": "When two equal and opposite forces act tangentially/parallel to opposite faces of a solid.",
+      "derivedFrom": "NCERT Eq. 8.3–8.4",
+      "commonMistakes": ["Forgetting the small-angle approximation tan θ ≈ θ is only valid for small θ (≈1% error at θ=10°).", "Applying shear to liquids/gases — shear strain only makes sense for solids."],
+      "questionPatterns": [
+        {
+          "patternName": "Displacement of the top face under shear",
+          "howToInterpret": "Given a shearing force on the top face of a fixed block, find the horizontal displacement.",
+          "howItConnectsToFormula": "Combine with G = (F/A)/θ to solve for Δx = θL = (F/(AG)) × L.",
+          "exampleStem": "A square lead slab is riveted to the floor and a shearing force is applied to its upper face — find the displacement.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Shearing strain measures how much a solid skews sideways under a tangential force — it's the ratio of sideways displacement to length, which for small angles is just the angle of tilt itself, in radians."
+    },
+    {
+      "id": "f4",
+      "name": "Volume (hydraulic) strain",
+      "latex": "\\text{Volume strain} = \\dfrac{\\Delta V}{V}",
+      "plain": "volume strain = change in volume / original volume",
+      "symbols": [
+        { "symbol": "ΔV", "meaning": "change in volume (m³)" },
+        { "symbol": "V", "meaning": "original volume (m³)" }
+      ],
+      "whenToUse": "When a body is compressed uniformly on all sides by a fluid (hydraulic compression).",
+      "derivedFrom": "NCERT Eq. 8.5",
+      "commonMistakes": ["Sign confusion — an increase in pressure gives a decrease (negative) ΔV, which is why B = −p/(ΔV/V) carries a minus sign to keep B positive."],
+      "questionPatterns": [
+        {
+          "patternName": "Fractional compression at depth",
+          "howToInterpret": "Given depth h, density ρ of the fluid, and bulk modulus B, find ΔV/V.",
+          "howItConnectsToFormula": "First find pressure p = hρg, then ΔV/V = p/B.",
+          "exampleStem": "Find the fractional compression of water at the bottom of the ocean at a depth of 3000 m, given B(water) = 2.2 × 10⁹ N m⁻².",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Volume strain is the fractional change in volume when something is squeezed uniformly from all sides, like being deep underwater. It has no units, just like the other strains."
+    },
+    {
+      "id": "f5",
+      "name": "Young's modulus",
+      "latex": "Y = \\dfrac{F/A}{\\Delta L/L} = \\dfrac{FL}{A\\,\\Delta L}",
+      "plain": "Young's modulus = tensile/compressive stress ÷ longitudinal strain",
+      "symbols": [
+        { "symbol": "Y", "meaning": "Young's modulus (Pa)" },
+        { "symbol": "F, A, L, ΔL", "meaning": "force, area, original length, change in length" }
+      ],
+      "whenToUse": "Any tensile or compressive loading of a solid rod/wire, within the elastic (linear) limit.",
+      "derivedFrom": "NCERT Eq. 8.7–8.8",
+      "commonMistakes": ["Applying Y to liquids or gases — Young's modulus is defined only for solids.", "Mixing up which wire is 'more elastic': a material needing MORE force for the SAME strain has a LARGER Y and is considered more elastic, not less."],
+      "questionPatterns": [
+        {
+          "patternName": "Elongation of a loaded rod/wire",
+          "howToInterpret": "Given F, A, L and Y (or vice versa), solve for the missing quantity.",
+          "howItConnectsToFormula": "ΔL = FL/(AY); rearrange as needed.",
+          "exampleStem": "A structural steel rod of radius 10 mm and length 1.0 m is stretched by a 100 kN force. Find the stress, elongation, and strain.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Two wires in series carrying the same load",
+          "howToInterpret": "Both wires carry the same force (same tension), so equate stress = strain × Y for each and use the ratio of elongations.",
+          "howItConnectsToFormula": "ΔL_1/ΔL_2 = (Y_2/Y_1) × (L_1/L_2) since stress is identical for both.",
+          "exampleStem": "A copper wire and a steel wire of different lengths are connected end to end and stretched — find the individual elongations given the net elongation.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Young's modulus tells you how stiff a solid is under stretching or compression: stress divided by strain. A bigger Young's modulus means the material needs a much bigger force to produce the same tiny strain — steel has a huge Young's modulus compared to rubber."
+    },
+    {
+      "id": "f6",
+      "name": "Shear modulus (modulus of rigidity)",
+      "latex": "G = \\dfrac{F/A}{\\theta} = \\dfrac{FL}{A\\,\\Delta x}",
+      "plain": "shear modulus = shearing stress ÷ shearing strain",
+      "symbols": [
+        { "symbol": "G", "meaning": "shear modulus (Pa)" },
+        { "symbol": "θ", "meaning": "shearing strain (angle in radians)" }
+      ],
+      "whenToUse": "Tangential/shearing forces on a solid; for most materials G ≈ Y/3.",
+      "derivedFrom": "NCERT Eq. 8.10–8.12",
+      "commonMistakes": ["Confusing G with B — shear only exists in solids, but bulk modulus exists in solids, liquids and gases.", "Forgetting shear modulus is always smaller than Young's modulus for the same material."],
+      "questionPatterns": [
+        {
+          "patternName": "Deflection of a cube/slab face under shear",
+          "howToInterpret": "Given a shear force on the top face and shear modulus of the material, find the lateral displacement.",
+          "howItConnectsToFormula": "Δx = (F × L)/(A × G).",
+          "exampleStem": "An aluminium cube of edge 10 cm has one face fixed to a wall; a 100 kg mass is attached to the opposite face. Find the vertical deflection of that face given G = 25 GPa.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Shear modulus, or rigidity modulus, measures resistance to a sideways skewing force, not a stretching one. It only applies to solids, and it's usually about a third of the Young's modulus for the same material."
+    },
+    {
+      "id": "f7",
+      "name": "Bulk modulus and compressibility",
+      "latex": "B = -\\dfrac{p}{\\Delta V/V}, \\qquad k = \\dfrac{1}{B}",
+      "plain": "bulk modulus = −pressure ÷ volume strain; compressibility = 1/bulk modulus",
+      "symbols": [
+        { "symbol": "B", "meaning": "bulk modulus (Pa)" },
+        { "symbol": "p", "meaning": "hydraulic/applied pressure (Pa)" },
+        { "symbol": "k", "meaning": "compressibility (Pa⁻¹)" }
+      ],
+      "whenToUse": "Uniform compression by a fluid on all sides — the ONLY modulus that applies to solids, liquids AND gases.",
+      "derivedFrom": "NCERT Eq. 8.12–8.13",
+      "commonMistakes": ["Forgetting the negative sign is needed to keep B positive, since increasing p always decreases V.", "Assuming gases have a large bulk modulus — gases are about a million times MORE compressible than solids."],
+      "questionPatterns": [
+        {
+          "patternName": "Fractional volume change from a given pressure change",
+          "howToInterpret": "Given B and Δp, find ΔV/V (or vice versa, given volumes before/after).",
+          "howItConnectsToFormula": "ΔV/V = Δp/B, then ΔV = V × (Δp/B).",
+          "exampleStem": "Compute the bulk modulus of water given: initial volume 100.0 L, pressure increase 100.0 atm, final volume 100.5 L.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Density at depth/high pressure",
+          "howToInterpret": "Use ΔV/V = Δm=0 relation: density increases as volume decreases under pressure, ρ' = ρ/(1 − ΔV/V).",
+          "howItConnectsToFormula": "First find ΔV/V from B and Δp, then rescale the density.",
+          "exampleStem": "Find the density of water at a depth where pressure is 80.0 atm, given its surface density and bulk modulus.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Bulk modulus is the odd one out — it's the only modulus that works for solids, liquids, and even gases, because it just measures resistance to squeezing from all sides equally. Compressibility is simply its reciprocal. Remember: solids resist the most, gases resist the least — by a factor of about a million."
+    },
+    {
+      "id": "f8",
+      "name": "Elastic potential energy per unit volume",
+      "latex": "u = \\tfrac{1}{2}\\,\\sigma\\varepsilon = \\tfrac{1}{2}\\,Y\\varepsilon^2",
+      "plain": "elastic energy density = half × stress × strain = half × Young's modulus × strain²",
+      "symbols": [
+        { "symbol": "u", "meaning": "elastic potential energy per unit volume (J m⁻³)" },
+        { "symbol": "σ, ε", "meaning": "stress and strain" }
+      ],
+      "whenToUse": "Work done in stretching a wire is stored as elastic PE; used for energy-storage numericals.",
+      "derivedFrom": "NCERT Eq. 8.14",
+      "commonMistakes": ["Forgetting the factor of ½ — this comes from integrating a linearly increasing force, just like spring PE = ½kx²."],
+      "questionPatterns": [
+        {
+          "patternName": "Total elastic PE stored in a stretched wire",
+          "howToInterpret": "Find u using the formula, then multiply by the volume of the wire (A × L) to get total energy W.",
+          "howItConnectsToFormula": "W = u × A × L = ½ Y ε² × A L.",
+          "exampleStem": "A wire of Young's modulus Y, length L and area A is stretched by Δl. Find the total elastic potential energy stored.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This is exactly like spring potential energy — half k x squared — except now it's expressed per unit volume in terms of stress and strain. Multiply by the wire's volume to get total stored energy."
+    },
+    {
+      "id": "f9",
+      "name": "Beam sag (bending) formula",
+      "latex": "\\delta = \\dfrac{W l^3}{4 b d^3 Y}",
+      "plain": "sag = load × length³ ÷ (4 × breadth × depth³ × Young's modulus)",
+      "symbols": [
+        { "symbol": "δ", "meaning": "sag/deflection at the centre (m)" },
+        { "symbol": "l", "meaning": "length (span) of the beam" },
+        { "symbol": "b, d", "meaning": "breadth and depth of the beam's cross-section" },
+        { "symbol": "W", "meaning": "load at the centre" }
+      ],
+      "whenToUse": "Applied-reasoning questions about why beams/girders are I-shaped and why depth matters more than breadth.",
+      "derivedFrom": "NCERT Eq. 8.16",
+      "commonMistakes": ["Thinking breadth and depth reduce sag equally — sag ∝ 1/d³ but only 1/b, so increasing depth is far more effective."],
+      "questionPatterns": [
+        {
+          "patternName": "Conceptual: why beams are I-shaped",
+          "howToInterpret": "Recognize this as a reasoning question, not a calculation — link to the d⁻³ vs b⁻¹ dependence.",
+          "howItConnectsToFormula": "Larger d reduces δ much faster than larger b, and using less material at mid-height (where bending stress is low) saves weight — hence the I-shape.",
+          "exampleStem": "Why do girders used in bridge construction have a cross-section shaped like the letter I?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Notice depth is cubed in the denominator but breadth isn't — so making a beam deeper cuts sag far more effectively than making it wider. That's exactly why I-beams put most of their material at the top and bottom, away from the middle."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d7", "d8", "d9", "d11", "d12"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["stress", "definitions"],
+      "stages": {
+        "question": "What is the SI unit and dimensional formula of stress?",
+        "interpretation": "This is a pure recall question about stress's units.",
+        "formula": "Stress = F/A — units of force/area",
+        "solutionSteps": ["Force has SI unit N = kg m s⁻²", "Area has SI unit m²", "Stress = N/m² = Pa", "Dimensionally: [MLT⁻²]/[L²] = [ML⁻¹T⁻²]"],
+        "answer": "N m⁻² (pascal, Pa); dimensional formula [ML⁻¹T⁻²]"
+      },
+      "audioScript": "Stress is force over area, so its unit is newtons per square metre, also called the pascal. Work out the dimensions the same way — force dimensions divided by area dimensions."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["hooke's law", "elastic limit"],
+      "stages": {
+        "question": "Is Hooke's law valid throughout the entire stress-strain curve, or only part of it?",
+        "interpretation": "Tests understanding of where linearity (Hooke's law) actually holds vs. where the body is merely elastic.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["The curve has a linear region O to A (proportional limit)", "From A to B stress and strain are NOT proportional but the body is still elastic (returns to shape)", "Beyond B (yield point) the deformation becomes permanent"],
+        "answer": "Hooke's law is valid only in the linear region (O to A, the proportional limit) — not throughout the elastic region."
+      },
+      "audioScript": "Don't mix up 'elastic' with 'obeys Hooke's law'. A material can still spring back to its original shape (elastic) even in a region where stress and strain are no longer proportional — Hooke's law only covers the initial straight-line part."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["young's modulus", "numerical"],
+      "stages": {
+        "question": "A structural steel rod of radius 10 mm and length 1.0 m is stretched by a 100 kN force along its length. Y(steel) = 2.0 × 10¹¹ N m⁻². Find the stress, elongation, and strain.",
+        "interpretation": "Direct three-part numerical: stress from F/A, then elongation and strain from Young's modulus.",
+        "formula": "Stress = F/A; ΔL = (F/A)L/Y; Strain = ΔL/L",
+        "solutionSteps": [
+          "A = πr² = π(0.01)² = 3.14 × 10⁻⁴ m²",
+          "Stress = F/A = (100×10³)/(3.14×10⁻⁴) = 3.18 × 10⁸ N m⁻²",
+          "ΔL = (stress × L)/Y = (3.18×10⁸ × 1)/(2×10¹¹) = 1.59 × 10⁻³ m",
+          "Strain = ΔL/L = 1.59 × 10⁻³ = 0.16%"
+        ],
+        "answer": "Stress ≈ 3.18 × 10⁸ N m⁻²; elongation ≈ 1.59 mm; strain ≈ 0.16%"
+      },
+      "audioScript": "First find the cross-sectional area from the radius, then divide the force by that area to get stress. From there, Young's modulus links stress directly to strain, and strain times the original length gives you the elongation."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["shear modulus", "numerical"],
+      "stages": {
+        "question": "A square lead slab of side 50 cm and thickness 10 cm is subject to a shearing force of 9.0×10⁴ N on its narrow face. The lower edge is fixed. Given G(lead) = 5.6×10⁹ N m⁻², find the displacement of the upper edge.",
+        "interpretation": "Shear modulus numerical — find stress first, then use G to get strain and finally displacement.",
+        "formula": "Shearing strain = Δx/L = Stress/G",
+        "solutionSteps": [
+          "Area of the face the force acts on: A = 0.5 m × 0.1 m = 0.05 m²",
+          "Stress = F/A = 9.0×10⁴/0.05 = 1.8 × 10⁶ N m⁻²",
+          "Shearing strain = Stress/G = 1.8×10⁶/5.6×10⁹ = 3.2×10⁻⁴",
+          "Δx = strain × L = 3.2×10⁻⁴ × 0.5 m = 1.6×10⁻⁴ m"
+        ],
+        "answer": "Δx ≈ 1.6 × 10⁻⁴ m = 0.16 mm"
+      },
+      "audioScript": "Identify which face the force is parallel to — that gives you the area for stress. Divide stress by the shear modulus to get the strain, and multiply that strain by the length over which it acts to get the actual displacement."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["bulk modulus", "numerical"],
+      "stages": {
+        "question": "The average depth of the Indian Ocean is about 3000 m. Calculate the fractional compression ΔV/V at the bottom, given B(water) = 2.2×10⁹ N m⁻² and g = 10 m s⁻².",
+        "interpretation": "Two-step: find hydrostatic pressure at depth, then apply bulk modulus formula.",
+        "formula": "p = hρg;  ΔV/V = p/B",
+        "solutionSteps": [
+          "p = hρg = 3000 × 1000 × 10 = 3×10⁷ N m⁻²",
+          "ΔV/V = p/B = (3×10⁷)/(2.2×10⁹) = 1.36×10⁻²"
+        ],
+        "answer": "ΔV/V ≈ 1.36 × 10⁻² or 1.36%"
+      },
+      "audioScript": "First get the pressure at that depth using the standard hydrostatic formula, height times density times g. Then divide that pressure by the bulk modulus to get the fractional volume compression directly."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["poisson's ratio", "conceptual"],
+      "stages": {
+        "question": "Does Poisson's ratio have units? Why or why not?",
+        "interpretation": "Tests the definition of Poisson's ratio as a ratio of two strains.",
+        "formula": "Poisson's ratio = lateral strain / longitudinal strain",
+        "solutionSteps": ["Both lateral strain (Δd/d) and longitudinal strain (ΔL/L) are dimensionless ratios", "A ratio of two dimensionless quantities is itself dimensionless"],
+        "answer": "No — Poisson's ratio has no units or dimensions, since it is a ratio of two strains, and strain itself is dimensionless."
+      },
+      "audioScript": "Since strain has no units to begin with, a ratio of two strains — which is exactly what Poisson's ratio is — also has no units. This trips a lot of students up in assertion-reason questions."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["young's modulus", "series wires"],
+      "stages": {
+        "question": "A copper wire (length 2.2 m) and a steel wire (length 1.6 m), both of diameter 3.0 mm, are connected end to end and stretched by a load. The net elongation is 0.70 mm. Find the elongation of each wire given Y(copper)=1.1×10¹¹, Y(steel)=2.0×10¹¹ N m⁻².",
+        "interpretation": "Both wires carry the SAME tension (same force), so use the ratio ΔL_c/ΔL_s = (Y_s/Y_c)×(L_c/L_s), plus the constraint ΔL_c+ΔL_s = 0.70mm.",
+        "formula": "ΔL_c/ΔL_s = (Y_s/Y_c) × (L_c/L_s)",
+        "solutionSteps": [
+          "Since both wires have the same cross-sectional area and carry the same tension, stress is equal, so ΔL/L × Y is equal for both",
+          "ΔL_c/ΔL_s = (Y_s/Y_c)×(L_c/L_s) = (2.0/1.1)×(2.2/1.6) = 2.5",
+          "ΔL_c = 2.5 ΔL_s, and ΔL_c + ΔL_s = 0.70 mm ⟹ 3.5 ΔL_s = 0.70 mm",
+          "ΔL_s = 0.20 mm, ΔL_c = 0.50 mm"
+        ],
+        "answer": "Copper elongates ≈0.50 mm; steel elongates ≈0.20 mm"
+      },
+      "audioScript": "The key insight for series-connected wires is that the tension — and hence the stress if areas are equal — is the same throughout. Set up the elongation ratio from that, then use the total elongation as a second equation to solve for both unknowns."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["elastic potential energy"],
+      "stages": {
+        "question": "Derive the total elastic potential energy stored in a wire of length L, area A and Young's modulus Y, when stretched by Δl.",
+        "interpretation": "Derivation-style question — connects the energy-density formula to total stored energy.",
+        "formula": "u = ½ Y ε²;  W = u × volume",
+        "solutionSteps": [
+          "Energy density u = ½ × stress × strain = ½ Y ε² where ε = Δl/L",
+          "Volume of wire = A × L",
+          "Total energy W = u × AL = ½ Y (Δl/L)² × AL = (Y A Δl²)/(2L)"
+        ],
+        "answer": "W = (Y A Δl²)/(2L)"
+      },
+      "audioScript": "Start from the energy-per-unit-volume formula, substitute strain as delta-l over L, then multiply by the wire's volume — area times length. Two of the L's cancel, leaving Y A delta-l squared over 2L."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "State Hooke's law and the condition under which it holds.",
+      "Which elastic modulus applies to gases, and why don't Young's or shear modulus apply to them?",
+      "What is the physical meaning of the yield point on a stress-strain curve?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "A steel wire of length 4.7 m and area 3.0×10⁻⁵ m² stretches by the same amount as a copper wire of length 3.5 m and area 4.0×10⁻⁵ m² under the same load. Find the ratio Y(steel)/Y(copper).",
+        "interpretation": "Same load and same elongation for two wires — set up the Y ratio from the elongation formula.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "ΔL = FL/(AY), and both wires have the same F and ΔL",
+          "So L_steel/(A_steel Y_steel) = L_copper/(A_copper Y_copper)",
+          "Y_steel/Y_copper = (L_steel/A_steel) / (L_copper/A_copper) = (4.7/3.0×10⁻⁵)/(3.5/4.0×10⁻⁵)",
+          "= (156667)/(87500) = 1.79"
+        ],
+        "answer": "Y(steel)/Y(copper) ≈ 1.79",
+        "audioScript": "Same force, same elongation — that's the trick. Set the two ΔL expressions equal to each other and solve for the ratio of Young's moduli directly."
+      },
+      {
+        "id": "pb2",
+        "question": "The stress-strain graph for a material is linear from the origin up to stress 250×10⁶ N m⁻² at strain 0.0035, beyond which it curves. Find the Young's modulus and the approximate yield strength.",
+        "interpretation": "Read values off a straight-line region for Y, and identify the strain-hardening onset as the yield point.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "In the linear region, Y = stress/strain",
+          "Y = (250×10⁶)/(0.0035) ≈ 7.1 × 10¹⁰ N m⁻²",
+          "The yield strength is approximately the stress at which the curve stops being linear, ≈250×10⁶ N m⁻²"
+        ],
+        "answer": "Y ≈ 7.1 × 10¹⁰ N m⁻²; yield strength ≈ 250 × 10⁶ N m⁻²",
+        "audioScript": "For graph-reading questions, just pick a clearly linear point and divide stress by strain to get Young's modulus. The yield strength is simply read off as the stress where the straight line ends."
+      },
+      {
+        "id": "pb3",
+        "question": "Two stress-strain graphs, A and B, are drawn to the same scale. A rises less steeply than B but reaches a higher peak stress before dropping. Which has the greater Young's modulus, and which is the stronger material?",
+        "interpretation": "Conceptual graph-comparison — slope gives Y, peak stress gives strength.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "Young's modulus is the SLOPE of the linear part — steeper slope means larger Y",
+          "B is steeper, so B has the greater Young's modulus",
+          "'Stronger' means able to withstand more stress before fracture — measured by the ultimate tensile strength (the peak of the curve)",
+          "A reaches a higher peak stress, so A is the stronger material"
+        ],
+        "answer": "B has the greater Young's modulus; A is the stronger material",
+        "audioScript": "Don't confuse stiffness with strength. The slope near the origin tells you stiffness — Young's modulus. The highest point the curve reaches before fracture tells you strength — these can point to two different materials."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Four identical hollow cylindrical steel columns support a structure of mass 50,000 kg. Each column has inner radius 30 cm and outer radius 60 cm. Assuming uniform load distribution, find the compressional strain in each column. Y(steel) = 2.0×10¹¹ N m⁻².",
+        "interpretation": "Find load per column, then area of the hollow annular cross-section, then use Y to get strain.",
+        "formulaIds": ["f1", "f5"],
+        "steps": [
+          "Total weight = 50000 × 9.8 = 4.9×10⁵ N; per column, F = 4.9×10⁵/4 = 1.225×10⁵ N",
+          "Annular area A = π(R_out² − R_in²) = π(0.6² − 0.3²) = π(0.36−0.09) = 0.848 m²",
+          "Stress = F/A = 1.225×10⁵/0.848 = 1.44×10⁵ N m⁻²",
+          "Strain = stress/Y = 1.44×10⁵/2×10¹¹ ≈ 7.2×10⁻⁷"
+        ],
+        "answer": "Strain ≈ 7.2 × 10⁻⁷ per column",
+        "audioScript": "Split the total weight equally among the four columns first. Then compute the hollow cross-sectional area as the difference of two circles before dividing to get stress, and finally strain from Young's modulus."
+      },
+      {
+        "id": "pi2",
+        "question": "A rigid bar of mass 15 kg is supported symmetrically by three wires each 2.0 m long — the two end wires are copper, the middle one is iron. Find the ratio of their diameters if each wire is to have the same tension.",
+        "interpretation": "Equal tension in all three wires by symmetry (rigid bar, symmetric supports) — but equal tension does NOT mean equal stress, since areas can differ; the question wants equal STRAIN so the bar stays rigid/level.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "For the rigid bar to remain horizontal, all three wires must stretch by the SAME amount (equal strain), and by symmetry the two copper wires share the load equally with the iron wire carrying the rest",
+          "Equal strain with equal length (all 2.0 m) means stress ∝ Y for each wire",
+          "Since tension is required equal (given), and stress = F/A, equal F with different A means A ∝ 1/Y for equal strain: A_Cu × Y_Cu = A_Fe × Y_Fe",
+          "d²_Cu/d²_Fe = Y_Fe/Y_Cu ⟹ d_Cu/d_Fe = √(Y_Fe/Y_Cu)"
+        ],
+        "answer": "d(copper)/d(iron) = √(Y_iron/Y_copper) — plug in standard Y values (Y_Cu≈1.1×10¹¹, Y_Fe≈1.9×10¹¹) to get ≈1.32",
+        "audioScript": "This is a symmetry problem — figure out what physical condition (equal strain, for the bar to stay level) links the wires, then translate that into a relationship between their areas and hence their diameters."
+      },
+      {
+        "id": "pi3",
+        "question": "A 14.5 kg mass is fastened to a steel wire of unstretched length 1.0 m and cross-sectional area 0.065 cm², and whirled in a vertical circle with angular velocity 2 rev/s. Find the elongation of the wire when the mass is at the lowest point.",
+        "interpretation": "At the lowest point, tension must supply both the centripetal force AND support the weight — find T, then use Y to get elongation.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "ω = 2×2π = 4π rad/s; at the lowest point, T − mg = mω²r (r ≈ L = 1.0 m)",
+          "T = mg + mω²r = 14.5×9.8 + 14.5×(4π)²×1.0 ≈ 142 + 2288 ≈ 2430 N",
+          "A = 0.065×10⁻⁴ m² = 6.5×10⁻⁶ m²",
+          "ΔL = TL/(AY) = (2430×1.0)/(6.5×10⁻⁶×2×10¹¹) ≈ 1.87×10⁻³ m"
+        ],
+        "answer": "ΔL ≈ 1.87 mm",
+        "answer_note": "Numbers rounded for teaching; exact value depends on g used.",
+        "steps_note": "This problem mixes circular motion (Ch. 5/6) with elasticity — a common NEET cross-chapter pattern.",
+        "audioScript": "This problem is really two chapters in one: first do the circular-motion tension calculation at the lowest point of the loop, then feed that tension into the elasticity formula exactly like any other stretching problem."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "A crane needs to lift loads up to 10 tonnes using a steel rope, without exceeding the elastic limit. Given the yield strength of mild steel is 300×10⁶ N m⁻², estimate the minimum required radius of the rope (before applying any safety margin).",
+        "interpretation": "Set stress equal to the yield strength as the maximum allowed, and solve for area, then radius.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "W = 10000 × 9.8 = 9.8×10⁴ N",
+          "A ≥ W/σ_y = 9.8×10⁴/300×10⁶ = 3.27×10⁻⁴ m²",
+          "A = πr² ⟹ r = √(A/π) = √(3.27×10⁻⁴/π) ≈ 1.02×10⁻² m ≈ 1 cm"
+        ],
+        "answer": "Minimum radius ≈ 1 cm (before the usual ×10 safety factor used in practice, giving ≈3 cm)",
+        "audioScript": "This is a real-world design problem — you're finding the smallest safe cross-section, then working backward to a radius. Engineers then multiply this by a large safety factor before actually building the rope."
+      },
+      {
+        "id": "pa2",
+        "question": "Estimate the maximum possible height of a mountain on Earth, given the elastic limit for typical rock is about 30×10⁷ N m⁻² and the average density of rock is 3×10³ kg m⁻³ (take g=10 m s⁻²).",
+        "interpretation": "The material at the base of a mountain experiences a shear stress roughly equal to hρg (its own weight per unit area); the mountain's height is capped by when this reaches the rock's elastic limit.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "Set hρg equal to the elastic limit: h × 3×10³ × 10 = 30×10⁷",
+          "h = 30×10⁷ / (3×10⁴) = 10⁴ m = 10 km"
+        ],
+        "answer": "h ≈ 10 km — remarkably close to the height of Mt. Everest (~8.8 km), which is why no mountain on Earth is much taller.",
+        "audioScript": "This is one of the most famous applied results in this chapter — equate the self-weight shear stress at the base of a mountain to the elastic limit of rock, and you get almost exactly the height of Mount Everest."
+      },
+      {
+        "id": "pa3",
+        "question": "A wire of Young's modulus Y is stretched by an amount Δl by applying a force F. If a second identical wire is stretched by 2Δl using the same material, compare the elastic potential energy stored in the two cases, and identify what fraction of the work done by an EXTERNAL force actually converts into elastic PE.",
+        "interpretation": "Uses the u = ½Yε² relation — energy scales as the SQUARE of strain, not linearly.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "u ∝ ε², so doubling Δl (hence doubling ε, for the same L) means u increases by a factor of 2² = 4",
+          "Since the stretching force in the elastic region is itself proportional to extension (F = kx form, from Hooke's law), the work done by an external force in stretching a wire IS entirely stored as elastic PE (no dissipation) within the linear region — so 100% converts, but the amount scales as the square of the extension"
+        ],
+        "answer": "The energy stored in the second case is 4× the first (since u ∝ ε²); within the Hooke's-law region, all external work converts to elastic PE, none is dissipated.",
+        "audioScript": "The key subtlety here is that elastic energy depends on strain SQUARED, so doubling the stretch quadruples the stored energy — this is exactly analogous to how spring PE depends on x squared, not x."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines Young's modulus with either shear modulus or bulk modulus in a single multi-step scenario (e.g. a wire under both tension and hydraulic pressure)."
+  },
+  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 8 — Mechanical Properties of Solids. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak area (stress/strain basics, the three moduli, or applied reasoning like beams/mountains). First quiz me on definitions and formulas with NO calculation involved — stress, strain, Hooke's law, and the three moduli (Young's, shear, bulk) including which states of matter each applies to. Then move to basic numericals tied to a single formula (e.g. find stress or strain from given F, A, L, ΔL). Then intermediate problems requiring two steps (e.g. combining pressure-at-depth with bulk modulus, or shear force with displacement). Then advanced problems: series-connected wires with equal tension, cross-chapter problems combining circular motion with elasticity, or applied-design reasoning (crane ropes, mountain height, I-beams). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 9 formulas with when-to-use notes). Stay within this chapter's scope (stress, strain, Hooke's law, Y/G/B, Poisson's ratio, elastic PE, beam bending) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "What are the three types of stress, and which strain does each produce?", "a": "Tensile/compressive stress → longitudinal strain; shearing stress → shearing strain; hydraulic stress → volume strain." },
+    { "q": "Which modulus is defined for gases, and which two are defined only for solids?", "a": "Bulk modulus (B) applies to solids, liquids and gases. Young's modulus (Y) and shear modulus (G) apply to solids only." },
+    { "q": "Is strain a vector, scalar, or neither, and does it have units?", "a": "Strain is a pure ratio of two lengths/volumes — it is dimensionless and has no units; it is not a vector like stress-adjacent force." },
+    { "q": "Why is steel preferred over aluminium, brass or copper for heavy-duty machines and structural design?", "a": "Steel has a much higher Young's modulus, so it requires a much larger force to produce the same strain — it is more elastic and resists deformation better." },
+    { "q": "Why does increasing the depth of a beam reduce sag more effectively than increasing its breadth?", "a": "Sag δ ∝ 1/d³ but only ∝ 1/b, so depth has a much stronger (cubic) effect on reducing bending than breadth does." }
+  ]
+}
