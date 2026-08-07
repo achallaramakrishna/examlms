@@ -211,8 +211,9 @@ export function renderMathHtml(text: string): string {
 /**
  * Two calling conventions are used across the app:
  *   <MathText as="p" className="…" text={someString} />        — question/option/explanation text
- *   <MathText>{someString}</MathText>                            — Learn-page prose (children form)
- * Both go through the same renderMathHtml pipeline above.
+ *     (mixed prose + OCR'd math — scanned for \(…\)/$…$ segments and bare-TeX runs)
+ *   <MathText display>{someString}</MathText> / <MathBlock>     — Learn-page formula fields
+ *     (the ENTIRE string is pure LaTeX — sent straight to KaTeX, no delimiter scanning)
  */
 export function MathText({
   text,
@@ -228,7 +229,7 @@ export function MathText({
   className?: string;
 }) {
   const raw = text ?? (typeof children === 'string' ? children : '');
-  const html = useMemo(() => renderMathHtml(raw), [raw]);
+  const html = useMemo(() => (display ? renderLatex(raw, true) : renderMathHtml(raw)), [raw, display]);
   if (!raw) return null;
   const ResolvedTag = display ? 'div' : Tag;
   return <ResolvedTag className={className} dangerouslySetInnerHTML={{ __html: html }} />;
@@ -239,7 +240,7 @@ export function MathBlock({ children, className }: { children: string; className
   return (
     <MathText
       text={children}
-      as="div"
+      display
       className={className ? `formula-latex ${className}` : 'formula-latex'}
     />
   );
