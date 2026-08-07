@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 4,
@@ -859,7 +859,7 @@
     ],
     "transferPrompt": "Invent one NEET MCQ that uses two formulas from Laws of Motion."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 4: Laws of Motion only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Second law, Momentum, Impulse, Static friction max, Kinetic friction, Skidding level curve, Banking no friction, Connected two masses.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class 11 Chapter 4: Laws of Motion only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Second law, Momentum, Impulse, Static friction max, Kinetic friction, Skidding level curve, Banking no friction, Connected two masses.\n\nStart with my goal and one warm-up definition from this chapter.",
   "selfCheck": [
     {
       "q": "State Second law",

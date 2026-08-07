@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 10,
@@ -57,7 +57,8 @@
     { "id": "h6", "type": "formula_intro", "section": "10.9.1", "text": "Conduction: the rate of heat flow H = KA(T_C−T_D)/L, where K is the thermal conductivity of the material.", "whyItMatters": "Direct numerical formula; series/parallel rod problems are a NEET staple.", "neetRelevance": "high" },
     { "id": "h7", "type": "formula_intro", "section": "10.9.4", "text": "Stefan-Boltzmann law: for a perfect radiator (blackbody), the energy radiated per unit time is H = AσT⁴. For a body with emissivity e, H = eσAT⁴.", "whyItMatters": "Direct-recall numerical; also used to compute net heat loss H = eσA(T⁴−T_s⁴).", "neetRelevance": "high" },
     { "id": "h8", "type": "formula_intro", "section": "10.9.4", "text": "Wien's Displacement Law: λ_m T = constant (Wien's constant = 2.9×10⁻³ m K), where λ_m is the wavelength at which emission is maximum.", "whyItMatters": "Used to estimate the surface temperature of stars — a classic NEET astrophysics-adjacent question.", "neetRelevance": "high" },
-    { "id": "h9", "type": "caution", "section": "10.10", "text": "Newton's law of cooling holds good only for a small difference of temperature between the body and its surroundings.", "whyItMatters": "Common assumption-check assertion-reason trap — the law is an approximation, not exact.", "neetRelevance": "medium" }
+    { "id": "h9", "type": "caution", "section": "10.10", "text": "Newton's law of cooling holds good only for a small difference of temperature between the body and its surroundings.", "whyItMatters": "Common assumption-check assertion-reason trap — the law is an approximation, not exact.", "neetRelevance": "medium" },
+    { "id": "h10b", "type": "statement", "section": "10.9.2", "text": "Convection is a mode of heat transfer by actual movement of matter — it happens only in fluids. Natural convection arises due to a density difference (e.g. air near a heat source becomes less dense and rises); forced convection uses an external agency like a pump or fan (e.g. blood circulation, a car radiator).", "whyItMatters": "Distinguishes convection from conduction/radiation — commonly tested via the sea-breeze/land-breeze example.", "neetRelevance": "medium" }
   ],
   "definitions": [
     { "id": "d1", "term": "Heat", "definition": "The form of energy transferred between two systems (or a system and its surroundings) by virtue of a temperature difference; SI unit joule.", "section": "10.2" },
@@ -69,7 +70,8 @@
     { "id": "d7", "term": "Sublimation", "definition": "The direct change of state from solid to vapour without passing through the liquid state (e.g. dry ice, iodine).", "section": "10.8" },
     { "id": "d8", "term": "Thermal conductivity (K)", "definition": "The constant of proportionality in H = KA ΔT/L, characterising how rapidly a material conducts heat; SI unit W m⁻¹ K⁻¹.", "section": "10.9.1" },
     { "id": "d9", "term": "Blackbody / emissivity", "definition": "A blackbody is a perfect radiator/absorber (emissivity e=1). Real bodies emit only a fraction e (0<e<1) of the blackbody rate at the same temperature.", "section": "10.9.4" },
-    { "id": "d10", "term": "Newton's law of cooling", "definition": "The rate of loss of heat of a body is directly proportional to the difference in temperature between the body and its surroundings, valid only for small temperature differences.", "section": "10.10" }
+    { "id": "d10", "term": "Newton's law of cooling", "definition": "The rate of loss of heat of a body is directly proportional to the difference in temperature between the body and its surroundings, valid only for small temperature differences.", "section": "10.10" },
+    { "id": "d11", "term": "Convection", "definition": "Heat transfer by the actual bulk movement of a fluid; natural convection is driven by density differences (buoyancy), forced convection by an external pump or fan.", "section": "10.9.2" }
   ],
   "figures": [
     { "id": "fig-10-9", "kind": "graph", "label": "Fig. 10.9", "ncertPage": 210, "section": "10.8", "caption": "A plot of temperature versus time showing the changes in state of ice on heating — flat plateaus mark phase changes.", "placeholderText": "NCERT Physics XI · Ch 10 · Page 210 · Fig. 10.9", "src": null, "uploadHint": "Crop from keph203.pdf page 8" },
@@ -274,7 +276,7 @@
   ],
   "views": {
     "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],
-    "definitionViewOrder": ["d1", "d3", "d4", "d5", "d6", "d8", "d9", "d10"],
+    "definitionViewOrder": ["d1", "d3", "d4", "d5", "d6", "d8", "d9", "d10", "d11"],
     "cheatSheetFocus": ["mustKnowBullets", "formulas"]
   },
   "flashcards": [
@@ -521,7 +523,7 @@
     ],
     "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines thermal expansion (a clamped rod) with Young's modulus from Chapter 8, and one that combines Newton's law of cooling with a calorimetry setup (e.g. a hot object cooling in water rather than air)."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 10 — Thermal Properties of Matter. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (temperature scales & gas law, thermal expansion, heat capacity & calorimetry, latent heat & phase change, or conduction/radiation/Newton's cooling). First quiz me on definitions and formulas with NO calculation involved — heat vs temperature, the three expansion coefficients and their 1:2:3 ratio, specific vs latent heat, and the three modes of heat transfer. Then move to basic numericals tied to a single formula (temperature conversion, ideal gas law, simple specific-heat problems). Then intermediate problems requiring two steps (calorimetry with a calorimeter vessel included, thermal stress in a clamped rod, junction temperature of two conducting rods). Then advanced multi-stage problems (full ice-to-steam heating calculation, compound-bar conduction, Stefan-Boltzmann net heat loss). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 9 formulas with when-to-use notes). Stay within this chapter's scope (temperature, gas law, expansion, heat capacity, latent heat, conduction, radiation, Newton's cooling) unless I explicitly ask to connect to another chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class XI Chapter 10 — Thermal Properties of Matter. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (temperature scales & gas law, thermal expansion, heat capacity & calorimetry, latent heat & phase change, or conduction/radiation/Newton's cooling). First quiz me on definitions and formulas with NO calculation involved — heat vs temperature, the three expansion coefficients and their 1:2:3 ratio, specific vs latent heat, and the three modes of heat transfer. Then move to basic numericals tied to a single formula (temperature conversion, ideal gas law, simple specific-heat problems). Then intermediate problems requiring two steps (calorimetry with a calorimeter vessel included, thermal stress in a clamped rod, junction temperature of two conducting rods). Then advanced multi-stage problems (full ice-to-steam heating calculation, compound-bar conduction, Stefan-Boltzmann net heat loss). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 9 formulas with when-to-use notes). Stay within this chapter's scope (temperature, gas law, expansion, heat capacity, latent heat, conduction, radiation, Newton's cooling) unless I explicitly ask to connect to another chapter.",
   "selfCheck": [
     { "q": "What is the relationship between the coefficients of linear, area and volume expansion of the same material?", "a": "α_area = 2α_linear and α_volume = 3α_linear." },
     { "q": "Why does water have an anomalous thermal expansion behaviour near 0-4°C?", "a": "Water contracts (rather than expands) on heating from 0°C to 4°C, and has its maximum density exactly at 4°C, before expanding normally above 4°C." },

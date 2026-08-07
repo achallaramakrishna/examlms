@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 5,
@@ -859,7 +859,7 @@
     ],
     "transferPrompt": "Invent one NEET MCQ that uses two formulas from Work, Energy and Power."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 5: Work, Energy and Power only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Work (const F), Kinetic energy, Work–energy theorem, Gravitational PE, Spring PE, Mechanical energy, Power, Restitution.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class 11 Chapter 5: Work, Energy and Power only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Work (const F), Kinetic energy, Work–energy theorem, Gravitational PE, Spring PE, Mechanical energy, Power, Restitution.\n\nStart with my goal and one warm-up definition from this chapter.",
   "selfCheck": [
     {
       "q": "State Work (const F)",

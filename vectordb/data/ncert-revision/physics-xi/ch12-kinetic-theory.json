@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 12,
@@ -56,7 +56,8 @@
     { "id": "h7", "type": "statement", "section": "12.5", "text": "The law of equipartition of energy states that in thermal equilibrium, the total energy is distributed equally among all possible energy modes, with each mode having an average energy of ½kBT.", "whyItMatters": "Foundational for deriving specific heats theoretically — directly quoted in MCQs.", "neetRelevance": "high" },
     { "id": "h8", "type": "caution", "section": "12.5", "text": "Each translational and rotational degree of freedom contributes ½kBT to the energy, while each VIBRATIONAL mode contributes 2×½kBT=kBT, since it has both a kinetic AND a potential energy term.", "whyItMatters": "The 'vibrational modes count double' rule is a frequent source of errors in specific-heat calculations.", "neetRelevance": "high" },
     { "id": "h9", "type": "formula_intro", "section": "12.6", "text": "For an ideal gas of any kind — monatomic, diatomic, or polyatomic — Cp − Cv = R always holds true.", "whyItMatters": "This relation from Chapter 11 is universal, independent of the gas's degrees of freedom f.", "neetRelevance": "high" },
-    { "id": "h10", "type": "formula_intro", "section": "12.7", "text": "The mean free path is the average distance a molecule travels between successive collisions: l = 1/(√2 nπd²), where n is the number density and d is the molecular diameter.", "whyItMatters": "Direct-recall formula; explains why gases can flow and diffuse (large mean free path) unlike solids/liquids.", "neetRelevance": "high" }
+    { "id": "h10", "type": "formula_intro", "section": "12.7", "text": "The mean free path is the average distance a molecule travels between successive collisions: l = 1/(√2 nπd²), where n is the number density and d is the molecular diameter.", "whyItMatters": "Direct-recall formula; explains why gases can flow and diffuse (large mean free path) unlike solids/liquids.", "neetRelevance": "high" },
+    { "id": "h11b", "type": "formula_intro", "section": "12.6.4", "text": "Applying equipartition to a solid: each atom vibrates about its mean position with 3 vibrational degrees of freedom (each with both kinetic and potential energy), giving average energy 3kBT per atom. For one mole, U=3RT, so the molar specific heat of a solid is C=3R, independent of the solid's identity.", "whyItMatters": "This prediction agrees well with measured specific heats of most solids at room temperature (Carbon is a notable exception) — a distinct, testable result separate from the gas specific-heat formulas.", "neetRelevance": "high" }
   ],
   "definitions": [
     { "id": "d1", "term": "Ideal gas", "definition": "A theoretical gas that satisfies PV=μRT exactly at all pressures and temperatures; real gases only approximate this at low pressure and high temperature.", "section": "12.3" },
@@ -66,7 +67,8 @@
     { "id": "d5", "term": "RMS (root mean square) speed", "definition": "v_rms = √(‾v²), the square root of the mean of the squared molecular speeds; v_rms=√(3kBT/m).", "section": "12.4.2" },
     { "id": "d6", "term": "Degree of freedom", "definition": "The number of independent coordinates needed to specify the position/configuration of a molecule; monatomic gases have 3 (translational only), rigid diatomic gases have 5 (3 translational + 2 rotational).", "section": "12.5" },
     { "id": "d7", "term": "Law of equipartition of energy", "definition": "In thermal equilibrium, the total energy is distributed equally among all available energy modes, with each mode (each quadratic term in the energy expression) carrying an average energy of ½kBT.", "section": "12.5" },
-    { "id": "d8", "term": "Mean free path", "definition": "The average distance a gas molecule travels between two successive collisions, l = 1/(√2 nπd²).", "section": "12.7" }
+    { "id": "d8", "term": "Mean free path", "definition": "The average distance a gas molecule travels between two successive collisions, l = 1/(√2 nπd²).", "section": "12.7" },
+    { "id": "d9", "term": "Specific heat capacity of solids (equipartition result)", "definition": "Applying the law of equipartition to a solid's vibrating atoms gives molar specific heat C=3R, independent of the solid — matches experiment well at ordinary temperatures for most solids (carbon is a known exception).", "section": "12.6.4" }
   ],
   "figures": [
     { "id": "fig-12-4", "kind": "figure", "label": "Fig. 12.4", "ncertPage": 249, "section": "12.4.1", "caption": "Elastic collision of a gas molecule with the wall of the container, used to derive the kinetic theory pressure formula.", "placeholderText": "NCERT Physics XI · Ch 12 · Page 249 · Fig. 12.4", "src": null, "uploadHint": "Crop from keph205.pdf page 5" },
@@ -207,11 +209,31 @@
         }
       ],
       "audioScript": "Mean free path tells you how far, on average, a molecule travels before it bumps into another one — it depends inversely on how crowded the gas is (number density) and how big the target molecules are."
+    },
+    {
+      "id": "f7",
+      "name": "Specific heat capacity of solids (Dulong-Petit-type result)",
+      "latex": "U = 3RT \\ \\text{per mole}, \\qquad C = 3R",
+      "plain": "internal energy per mole of a solid = 3RT; molar specific heat = 3R",
+      "symbols": [{ "symbol": "C", "meaning": "molar specific heat capacity of the solid" }],
+      "whenToUse": "Predicting the specific heat of a solid element from equipartition — independent of which solid it is.",
+      "derivedFrom": "NCERT Eq. 12.37",
+      "commonMistakes": ["Applying gas-phase Cv/Cp formulas (with degrees of freedom f) to a solid — solids use this separate 3R result instead, since atoms in a solid vibrate about fixed positions rather than translate/rotate freely."],
+      "questionPatterns": [
+        {
+          "patternName": "Find heat required to warm a fixed quantity of a solid element",
+          "howToInterpret": "Use C=3R directly as the molar specific heat, regardless of which solid.",
+          "howItConnectsToFormula": "Q = μC ΔT = μ(3R)ΔT.",
+          "exampleStem": "Estimate the heat required to raise the temperature of 2 moles of copper by 10°C, using the equipartition prediction.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is a beautifully simple prediction — equipartition says every solid element, regardless of what it's made of, should have the same molar specific heat of three R, purely because each atom vibrates with the same six 'squared' energy terms. It matches experiment surprisingly well for most solids at room temperature."
     }
   ],
   "views": {
-    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6"],
-    "definitionViewOrder": ["d1", "d2", "d4", "d5", "d6", "d7", "d8"],
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7"],
+    "definitionViewOrder": ["d1", "d2", "d4", "d5", "d6", "d7", "d8", "d9"],
     "cheatSheetFocus": ["mustKnowBullets", "formulas"]
   },
   "flashcards": [
@@ -454,7 +476,7 @@
     ],
     "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the ideal gas law with the kinetic interpretation of temperature (e.g. finding rms speed from given P, V, and mass of gas), and one that compares specific heats of two different gas types in the same numerical."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 12 — Kinetic Theory. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (ideal gas law & Dalton's law, kinetic theory pressure formula, kinetic interpretation of temperature & rms speed, equipartition & specific heats, or mean free path). First quiz me on definitions and formulas with NO calculation involved — the three forms of the ideal gas law, why average KE depends only on temperature, degrees of freedom for mono/di/polyatomic gases, and why vibrational modes count double. Then move to basic numericals tied to a single formula (finding N or moles, basic rms speed, basic Cv/Cp/γ from degrees of freedom). Then intermediate problems requiring two steps (gauge-vs-absolute pressure gas-cylinder problems, combined gas law with a pressure change from depth, comparing rms speeds of two gases). Then advanced problems that chain formulas together (mean free path with collision frequency, non-rigid diatomic specific heats, temperature needed to match rms speeds of different gases). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (ideal gas law, kinetic theory pressure, kinetic interpretation of temperature, equipartition of energy, specific heats, mean free path) unless I explicitly ask to connect to another chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class XI Chapter 12 — Kinetic Theory. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (ideal gas law & Dalton's law, kinetic theory pressure formula, kinetic interpretation of temperature & rms speed, equipartition & specific heats, or mean free path). First quiz me on definitions and formulas with NO calculation involved — the three forms of the ideal gas law, why average KE depends only on temperature, degrees of freedom for mono/di/polyatomic gases, and why vibrational modes count double. Then move to basic numericals tied to a single formula (finding N or moles, basic rms speed, basic Cv/Cp/γ from degrees of freedom). Then intermediate problems requiring two steps (gauge-vs-absolute pressure gas-cylinder problems, combined gas law with a pressure change from depth, comparing rms speeds of two gases). Then advanced problems that chain formulas together (mean free path with collision frequency, non-rigid diatomic specific heats, temperature needed to match rms speeds of different gases). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (ideal gas law, kinetic theory pressure, kinetic interpretation of temperature, equipartition of energy, specific heats, mean free path) unless I explicitly ask to connect to another chapter.",
   "selfCheck": [
     { "q": "Why do all ideal gases have the same average kinetic energy per molecule at a given temperature, regardless of their mass?", "a": "Because average KE = (3/2)kBT depends only on absolute temperature, not on the mass or identity of the gas — this is the kinetic definition of temperature itself." },
     { "q": "How many degrees of freedom does a rigid diatomic molecule have, and what are they?", "a": "5 — three translational (motion in x, y, z) plus two rotational (about the two axes perpendicular to the bond axis; rotation about the bond axis itself is negligible)." },

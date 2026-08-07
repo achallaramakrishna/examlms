@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 11,
@@ -60,7 +60,8 @@
     { "id": "h8", "type": "formula_intro", "section": "11.8.3", "text": "In an adiabatic process, PV^γ = constant, where γ = C_p/C_v is the ratio of specific heats.", "whyItMatters": "The signature adiabatic-process formula — distinguishes it from the isothermal PV=constant.", "neetRelevance": "high" },
     { "id": "h9", "type": "statement", "section": "11.9", "text": "The Second Law of Thermodynamics: (Kelvin-Planck) no process is possible whose sole result is the absorption of heat from a reservoir and its complete conversion into work. (Clausius) no process is possible whose sole result is the transfer of heat from a colder to a hotter object.", "whyItMatters": "Both statements are frequently quoted directly as MCQ options — know them word for word.", "neetRelevance": "high" },
     { "id": "h10", "type": "caution", "section": "11.10", "text": "A process is reversible only if it is quasi-static (system in equilibrium at every stage) AND free of dissipative effects like friction and viscosity. Irreversibility is the rule in nature, not the exception.", "whyItMatters": "Commonly tested: name examples of irreversible processes (free expansion, combustion, diffusion) and WHY they can't be reversed.", "neetRelevance": "medium" },
-    { "id": "h11", "type": "formula_intro", "section": "11.11", "text": "The efficiency of a Carnot engine is η = 1 − T₂/T₁ (T in Kelvin), where T₁ is the hot reservoir and T₂ the cold reservoir. This is the MAXIMUM possible efficiency for any engine operating between these two temperatures, and is independent of the working substance.", "whyItMatters": "Direct-recall numerical formula, and the 'independent of the working substance' fact is a favourite assertion-reason.", "neetRelevance": "high" }
+    { "id": "h11", "type": "formula_intro", "section": "11.11", "text": "The efficiency of a Carnot engine is η = 1 − T₂/T₁ (T in Kelvin), where T₁ is the hot reservoir and T₂ the cold reservoir. This is the MAXIMUM possible efficiency for any engine operating between these two temperatures, and is independent of the working substance.", "whyItMatters": "Direct-recall numerical formula, and the 'independent of the working substance' fact is a favourite assertion-reason.", "neetRelevance": "high" },
+    { "id": "h12", "type": "statement", "section": "11.9", "text": "The Second Law of Thermodynamics gives a fundamental limitation to the efficiency of a heat engine and the coefficient of performance of a refrigerator: efficiency of a heat engine can never be unity, and the coefficient of performance of a refrigerator can never be infinite.", "whyItMatters": "A refrigerator/heat pump is a heat engine run in reverse — the Second Law caps its performance just as it caps engine efficiency.", "neetRelevance": "high" }
   ],
   "definitions": [
     { "id": "d1", "term": "Thermal equilibrium", "definition": "The state of a system in which its macroscopic variables (P, V, T, etc.) do not change with time; two systems in thermal contact are in thermal equilibrium when their temperatures are equal.", "section": "11.2" },
@@ -72,7 +73,8 @@
     { "id": "d7", "term": "Isothermal / Adiabatic / Isochoric / Isobaric / Cyclic process", "definition": "Processes at constant temperature / with zero heat exchange / at constant volume / at constant pressure / that returns to its initial state (ΔU=0 for the whole cycle), respectively.", "section": "11.8" },
     { "id": "d8", "term": "Second Law of Thermodynamics", "definition": "Places a fundamental restriction beyond the First Law: no heat engine can be 100% efficient (Kelvin-Planck), and heat cannot spontaneously flow from a colder to a hotter body (Clausius).", "section": "11.9" },
     { "id": "d9", "term": "Reversible process", "definition": "A process that can be exactly reversed, returning both system and surroundings to their original states with no other change anywhere — requires quasi-static conditions and no dissipative effects.", "section": "11.10" },
-    { "id": "d10", "term": "Carnot engine", "definition": "An idealised reversible heat engine operating between two temperatures via two isothermal and two adiabatic steps (the Carnot cycle), achieving the maximum possible efficiency for those two temperatures.", "section": "11.11" }
+    { "id": "d10", "term": "Carnot engine", "definition": "An idealised reversible heat engine operating between two temperatures via two isothermal and two adiabatic steps (the Carnot cycle), achieving the maximum possible efficiency for those two temperatures.", "section": "11.11" },
+    { "id": "d11", "term": "Refrigerator / heat pump and coefficient of performance", "definition": "A refrigerator is a heat engine run in reverse — work is done ON the system to extract heat Q₂ from a cold space and reject Q₁=Q₂+W to a hot reservoir. Its performance is measured by the coefficient of performance α=Q₂/W, which the Second Law forbids from ever being infinite.", "section": "11.9" }
   ],
   "figures": [
     { "id": "fig-11-1", "kind": "figure", "label": "Fig. 11.1", "ncertPage": 227, "section": "11.2", "caption": "Systems A and B separated by an adiabatic wall vs a diathermic wall — illustrating thermal equilibrium.", "placeholderText": "NCERT Physics XI · Ch 11 · Page 227 · Fig. 11.1", "src": null, "uploadHint": "Crop from keph204.pdf page 2" },
@@ -213,11 +215,31 @@
         }
       ],
       "audioScript": "Carnot efficiency depends only on the ratio of the two absolute temperatures — the colder the sink relative to the source, the more efficient the engine can possibly be, but it can never reach 100% unless the sink is at absolute zero, which is physically unattainable."
+    },
+    {
+      "id": "f7",
+      "name": "Coefficient of performance (refrigerator / heat pump)",
+      "latex": "\\alpha = \\dfrac{Q_2}{W} = \\dfrac{Q_2}{Q_1-Q_2}, \\qquad \\alpha_{Carnot} = \\dfrac{T_2}{T_1-T_2}",
+      "plain": "coefficient of performance = heat extracted from the cold space ÷ work done on the system",
+      "symbols": [{ "symbol": "α", "meaning": "coefficient of performance (no units, can exceed 1)" }, { "symbol": "Q_2", "meaning": "heat extracted from the cold reservoir (the space being cooled)" }],
+      "whenToUse": "Refrigerators, air conditioners, and heat pumps — a heat engine run in reverse.",
+      "derivedFrom": "NCERT Second Law discussion (coefficient of performance), analogous to Carnot efficiency",
+      "commonMistakes": ["Confusing this with engine efficiency η — α measures a refrigerator's performance and can be GREATER than 1, unlike η which is always less than 1.", "Forgetting W=Q₁−Q₂ (work done ON the system equals the difference between heat rejected and heat absorbed)."],
+      "questionPatterns": [
+        {
+          "patternName": "Find work needed to extract a given amount of heat",
+          "howToInterpret": "Given α and Q₂ (or the two temperatures for a Carnot refrigerator), find W.",
+          "howItConnectsToFormula": "W = Q₂/α.",
+          "exampleStem": "A Carnot refrigerator maintains a freezer at −13°C in a room at 27°C. Find its coefficient of performance.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Think of this as the mirror image of Carnot efficiency — instead of asking how much useful work you get out per unit of heat in, it asks how much heat you can pump out of a cold space per unit of work you put in, and unlike efficiency, this ratio can comfortably exceed one."
     }
   ],
   "views": {
-    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6"],
-    "definitionViewOrder": ["d2", "d3", "d4", "d5", "d6", "d8", "d9", "d10"],
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7"],
+    "definitionViewOrder": ["d2", "d3", "d4", "d5", "d6", "d8", "d9", "d10", "d11"],
     "cheatSheetFocus": ["mustKnowBullets", "formulas"]
   },
   "flashcards": [
@@ -328,6 +350,19 @@
         "answer": "ΔU=0 for any complete cycle, which means total Q = total W for the cycle — this is exactly how a heat engine converts absorbed heat into net work."
       },
       "audioScript": "This is the whole principle behind how heat engines work — because internal energy always returns to its starting value after a full cycle, whatever net heat went in during the cycle must have come back out as net work."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "intermediate",
+      "tags": ["refrigerator", "coefficient of performance", "numerical"],
+      "stages": {
+        "question": "A Carnot refrigerator maintains a freezer at −13°C (260 K) inside a room at 27°C (300 K). Find its coefficient of performance.",
+        "interpretation": "For a Carnot (reversible) refrigerator, α can be found directly from the two temperatures, analogous to Carnot efficiency.",
+        "formula": "α_Carnot = T₂/(T₁−T₂)",
+        "solutionSteps": ["T₂=260K (cold, inside freezer), T₁=300K (hot, room)", "α = 260/(300−260) = 260/40"],
+        "answer": "α = 6.5 — for every joule of work done, 6.5 joules of heat are extracted from the freezer"
+      },
+      "audioScript": "Just like Carnot efficiency has a temperature-only shortcut, so does the coefficient of performance for an ideal refrigerator — plug the two absolute temperatures directly into this ratio."
     }
   ],
   "problemLadder": {
@@ -456,7 +491,7 @@
     ],
     "transferPrompt": "After finishing the ladder, invent one new NEET-style MCQ that combines the First Law with a P-V diagram (finding work from area under a curve), and one that combines Carnot efficiency with a multi-step problem (e.g. two Carnot engines in series, or finding the temperature needed to double the efficiency)."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class XI Chapter 11 — Thermodynamics. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (Zeroth/First Law, the four special processes, C_p−C_v=R, or the Second Law & Carnot engine). First quiz me on definitions and formulas with NO calculation involved — the Zeroth Law, state variables vs path-dependent quantities, the First Law, and the Kelvin-Planck/Clausius statements word for word. Then move to basic numericals tied to a single formula (First Law rate problems, simple Carnot efficiency). Then intermediate problems requiring two steps (adiabatic pressure-ratio problems, isobaric heat-capacity calorimetry, Carnot work/heat-rejected problems). Then advanced problems that use the state-variable property of U across two different paths between the same states, or Carnot's theorem reasoning. After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (Zeroth/First/Second Law, the four special processes, Carnot engine) unless I explicitly ask to connect to another chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class XI Chapter 11 — Thermodynamics. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (Zeroth/First Law, the four special processes, C_p−C_v=R, or the Second Law & Carnot engine). First quiz me on definitions and formulas with NO calculation involved — the Zeroth Law, state variables vs path-dependent quantities, the First Law, and the Kelvin-Planck/Clausius statements word for word. Then move to basic numericals tied to a single formula (First Law rate problems, simple Carnot efficiency). Then intermediate problems requiring two steps (adiabatic pressure-ratio problems, isobaric heat-capacity calorimetry, Carnot work/heat-rejected problems). Then advanced problems that use the state-variable property of U across two different paths between the same states, or Carnot's theorem reasoning. After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 6 formulas with when-to-use notes). Stay within this chapter's scope (Zeroth/First/Second Law, the four special processes, Carnot engine) unless I explicitly ask to connect to another chapter.",
   "selfCheck": [
     { "q": "Why are Q and W not state variables, even though ΔU=ΔQ−ΔW always is?", "a": "Q and W individually depend on the specific path taken between two states, while their combination (which equals ΔU) does not, since U depends only on the current state." },
     { "q": "In which of the four special processes is no work done at all?", "a": "The isochoric (constant volume) process — since W=PΔV and ΔV=0." },

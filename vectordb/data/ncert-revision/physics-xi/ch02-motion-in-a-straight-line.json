@@ -1,6 +1,6 @@
 {
   "meta": {
-    "examTrack": "NEET",
+    "examTrack": "NEET/JEE/KCET",
     "subject": "Physics",
     "classLevel": "XI",
     "chapterNumber": 2,
@@ -1085,7 +1085,7 @@
     ],
     "transferPrompt": "Invent one new NEET-style MCQ that needs both a v–t area argument and a kinematic equation with constant a."
   },
-  "studentTutorPrompt": "You are my NEET Physics tutor for NCERT Class 11 Chapter 2: Motion in a Straight Line only.\n\nSession flow:\n1) Ask my goal: revise concepts / formula drill / weak area (graphs, free fall, signs, braking).\n2) Quiz definitions first (displacement vs path length, instantaneous v and a, area under v–t) — no heavy calculation.\n3) Basic numericals: one formula at a time (v=dx/dt, a=dv/dt, SUVAT plug-ins).\n4) Intermediate: graph areas, stopping distance, free-fall timing.\n5) Advanced: vertical throw with building height, odd-number rule, drunkard/pit, sign-convention traps.\n6) After each wrong answer show: Interpretation → Formula link → Steps.\n7) Offer flashcard mode (Q → interpretation → formula → steps → answer) and formula-view mode.\n8) Stay inside this chapter unless I ask to link to Laws of Motion or 2D motion.\n\nStart by asking my goal and one warm-up: “Does zero velocity mean zero acceleration? Why?”\n",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class 11 Chapter 2: Motion in a Straight Line only.\n\nSession flow:\n1) Ask my goal: revise concepts / formula drill / weak area (graphs, free fall, signs, braking).\n2) Quiz definitions first (displacement vs path length, instantaneous v and a, area under v–t) — no heavy calculation.\n3) Basic numericals: one formula at a time (v=dx/dt, a=dv/dt, SUVAT plug-ins).\n4) Intermediate: graph areas, stopping distance, free-fall timing.\n5) Advanced: vertical throw with building height, odd-number rule, drunkard/pit, sign-convention traps.\n6) After each wrong answer show: Interpretation → Formula link → Steps.\n7) Offer flashcard mode (Q → interpretation → formula → steps → answer) and formula-view mode.\n8) Stay inside this chapter unless I ask to link to Laws of Motion or 2D motion.\n\nStart by asking my goal and one warm-up: “Does zero velocity mean zero acceleration? Why?”\n",
   "selfCheck": [
     {
       "q": "Average speed ≥ |average velocity| — always?",
