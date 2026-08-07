@@ -100,7 +100,7 @@ export interface ChapterIndexItem {
   number: number;
   title: string;
   slug: string;
-  status: 'ready' | 'coming_soon';
+  status: 'ready' | 'coming-soon';
   ncertCode?: string;
 }
 

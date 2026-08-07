@@ -78,7 +78,7 @@ export function App() {
         <Route path="/dashboard" element={<div className="page"><Dashboard /></div>} />
         <Route path="/exams" element={<div className="page"><ExamList /></div>} />
         <Route path="/learn" element={<div className="page"><LearnHome /></div>} />
-        <Route path="/learn/:slug" element={<div className="page"><LearnChapter /></div>} />
+        <Route path="/learn/:track/:slug" element={<div className="page"><LearnChapter /></div>} />
         <Route path="/practice" element={<div className="page"><Practice /></div>} />
         <Route path="/mock-test/:examId" element={<div className="page"><MockTest /></div>} />
         <Route path="/study-plan" element={<div className="page"><StudyPlan /></div>} />

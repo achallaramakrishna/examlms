@@ -580,7 +580,7 @@ function normalizePack(raw: RevisionPack & Record<string, unknown>): RevisionPac
 }
 
 export function LearnChapter() {
-  const { slug = '' } = useParams()
+  const { track = 'physics-xi', slug = '' } = useParams()
   const [pack, setPack] = useState<RevisionPack | null>(null)
   const [error, setError] = useState('')
   const [view, setView] = useState<ViewId>('cheat')
@@ -598,12 +598,12 @@ export function LearnChapter() {
     setView('cheat')
     stopSpeaking()
     Promise.all([
-      fetch(`${import.meta.env.BASE_URL}ncert-revision/physics-xi/${slug}.json`).then(async (r) => {
+      fetch(`${import.meta.env.BASE_URL}ncert-revision/${track}/${slug}.json`).then(async (r) => {
         if (!r.ok) throw new Error(`Pack not found (${r.status})`)
         return r.json()
       }),
-      fetchFigureOverrides(slug).catch((): Record<string, { src: string }> => ({})),
-      fetchPracticePatterns(slug).catch(() => null),
+      fetchFigureOverrides(slug, track).catch((): Record<string, { src: string }> => ({})),
+      fetchPracticePatterns(slug, track).catch(() => null),
     ])
       .then(([data, overrides, patterns]) => {
         if (cancelled) return
@@ -623,13 +623,13 @@ export function LearnChapter() {
       cancelled = true
       stopSpeaking()
     }
-  }, [slug])
+  }, [track, slug])
 
   async function handleFigureUpload(figureId: string, file: File) {
     setBusyId(figureId)
     setUploadError(null)
     try {
-      const data = await uploadLearnFigure(slug, figureId, file)
+      const data = await uploadLearnFigure(slug, figureId, file, track)
       setPack((prev) => {
         if (!prev) return prev
         return {
@@ -660,11 +660,11 @@ export function LearnChapter() {
       }
     })
     try {
-      await deleteLearnFigure(slug, figureId)
+      await deleteLearnFigure(slug, figureId, track)
     } catch (err: any) {
       setUploadError(err.response?.data?.error ?? err.message ?? 'Remove failed')
       try {
-        const overrides = await fetchFigureOverrides(slug)
+        const overrides = await fetchFigureOverrides(slug, track)
         setPack((prev) => {
           if (!prev) return prev
           return {
@@ -729,7 +729,7 @@ export function LearnChapter() {
         </Link>
         <div>
           <p className="eyebrow">
-            NCERT Physics {pack.meta.classLevel} · Ch {pack.meta.chapterNumber} ·{' '}
+            NCERT {pack.meta.subject} {pack.meta.classLevel} · Ch {pack.meta.chapterNumber} ·{' '}
             {pack.meta.examTrack || 'NEET'}
           </p>
           <h1>{pack.meta.chapterTitle}</h1>
