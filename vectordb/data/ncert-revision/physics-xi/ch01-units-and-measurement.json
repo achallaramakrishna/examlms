@@ -104,6 +104,20 @@
       "neetRelevance": "high"
     },
     {
+      "type": "statement",
+      "id": "h3b",
+      "text": "Counting rule for significant figures: all non-zero digits are significant; zeros between two non-zero digits are significant; leading zeros (to the left of the first non-zero digit) are NOT significant; trailing zeros in a number WITHOUT a decimal point are not significant, but trailing zeros in a number WITH a decimal point ARE significant.",
+      "whyItMatters": "The exact counting rules NEET tests directly (e.g. 'how many significant figures in 0.007 m²'), not just the general concept of precision.",
+      "neetRelevance": "high"
+    },
+    {
+      "type": "caution",
+      "id": "h3c",
+      "text": "Rounding-off convention when the insignificant digit to be dropped is exactly 5: if the preceding digit is even, the 5 is simply dropped; if the preceding digit is odd, the preceding digit is raised by 1. (e.g. 2.745 → 2.74, but 2.735 → 2.74 as well, since 3 is odd).",
+      "whyItMatters": "A precise, often-forgotten rule distinct from ordinary '5 rounds up' rounding — frequently tested in significant-figures MCQs.",
+      "neetRelevance": "medium"
+    },
+    {
       "type": "summary",
       "id": "h4",
       "text": "Dimensional analysis checks the consistency of equations.",
