@@ -1,0 +1,697 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 4,
+    "chapterTitle": "The d- and f-Block Elements",
+    "ncertCode": "lech104",
+    "topicIdHint": "d and f Block Elements",
+    "estimatedRevisionMinutes": 65,
+    "chapter": "The d- and f-Block Elements",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Locate d- and f-block elements in the periodic table and write ground-state electronic configurations of the 3d series, including the Cr and Cu exceptions.",
+    "Explain periodic trends across the 3d series — atomic and ionic radii (lanthanoid contraction), ionisation enthalpy, oxidation states, and M2+/M and M3+/M2+ standard electrode potentials.",
+    "Apply the spin-only magnetic moment formula μ = √n(n+2) BM to calculate unpaired electrons and magnetic moments of transition-metal ions.",
+    "Describe the preparation, structure, properties and balanced redox equations of potassium dichromate (K2Cr2O7) and potassium permanganate (KMnO4) in acidic, neutral and alkaline media.",
+    "Compare lanthanoids and actinoids with respect to electronic configuration, oxidation states, contraction and chemical reactivity.",
+    "Explain characteristic transition-metal behaviours — coloured ions, complex formation, catalysis, interstitial compounds and alloy formation — with real-world applications."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Position and electronic configuration of d-/f-block elements set up periodic trends across the 3d series (size, ionisation enthalpy, oxidation states, electrode potentials, magnetism, colour) that explain the chemistry of K2Cr2O7 and KMnO4, before lanthanoids and actinoids close the chapter.",
+    "mustKnowBullets": [
+      "d-block = groups 3-12, general outer configuration (n-1)d¹⁻¹⁰ns¹⁻²; exceptions Cr = 3d⁵4s¹ and Cu = 3d¹⁰4s¹ (extra stability of half-filled and fully-filled sets); Pd is 4d¹⁰5s⁰.",
+      "Zn, Cd, Hg have a complete d¹⁰ configuration in the ground state AND in their common oxidation states, so they are NOT regarded as transition elements even though they end each d-series.",
+      "Melting points of the 3d series rise to a maximum near d⁵ (Cr) — except anomalous Mn and Tc — then fall, because the number of unpaired d electrons available for metallic bonding first rises then falls.",
+      "Lanthanoid contraction: the steady decrease in atomic/ionic radii across the 4f series (La to Lu) caused by imperfect shielding of one 4f electron by another; it makes the 4d and 5d elements of the same group (e.g. Zr 160 pm ≈ Hf 159 pm) almost identical in size and chemistry.",
+      "Ionisation enthalpy rises irregularly across a series; the extra stability of half-filled (d⁵) and fully-filled (d¹⁰) configurations causes breaks in the trend, e.g. IE1(Cr) < IE1(V) is avoided because Cr⁺ is d⁵ while Mn⁺ is d⁵4s¹.",
+      "Oxidation states of transition metals differ from each other by unity (e.g. V shows +2, +3, +4, +5), unlike the p-block where they typically differ by two; Mn shows the widest range, +2 to +7.",
+      "Maximum oxidation state of a 3d metal equals the sum of its s and d electrons, and this pattern holds up to Mn (TiIVO2, VVO2+, CrVIO4²⁻, MnVIIO4⁻); beyond group 7 no metal reaches an oxidation state equal to its group number.",
+      "Spin-only magnetic moment: μ = √n(n+2) BM, where n = number of unpaired electrons; a single unpaired electron gives μ = 1.73 BM (e.g. Ti³⁺, d¹).",
+      "Coloured ions arise from d-d electronic transitions (an electron excited to a higher-energy d orbital by visible light); ions with d⁰ or d¹⁰ configuration (Sc³⁺, Ti⁴⁺, Zn²⁺) are colourless.",
+      "K2Cr2O7 preparation: chromite ore (FeCr2O4) is fused with Na2CO3 in air to give sodium chromate, which is acidified to sodium dichromate and then converted to potassium dichromate by treatment with KCl (K2Cr2O7 is less soluble and crystallises out).",
+      "K2Cr2O7 oxidising action (acidic medium): Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O (E° = +1.33 V); it oxidises I⁻ to I2, Fe²⁺ to Fe³⁺ and Sn²⁺ to Sn⁴⁺.",
+      "KMnO4 industrial preparation: fusion of pyrolusite (MnO2) with KOH and an oxidant (air or KNO3) gives dark green K2MnO4, which is then oxidised electrolytically (or disproportionates in neutral/acidic medium) to purple MnO4⁻.",
+      "KMnO4 oxidising power depends on the medium — three balanced half-reactions: MnO4⁻ + e⁻ → MnO4²⁻ (E° = +0.56 V, strongly alkaline); MnO4⁻ + 4H⁺ + 3e⁻ → MnO2 + 2H2O (E° = +1.69 V, neutral/faintly alkaline); MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O (E° = +1.52 V, acidic).",
+      "Acidified KMnO4 oxidises iodide to iodine, Fe²⁺ to Fe³⁺, oxalate/oxalic acid to CO2, H2S to sulphur, sulphite to sulphate, and nitrite to nitrate — five-electron change to Mn²⁺ in every case.",
+      "Lanthanoids (Ce-Lu) have the general configuration 4f¹⁻¹⁴5d⁰⁻¹6s²; the most stable oxidation state is +3 (Ln³⁺ = 4fⁿ); exceptions Ce⁴⁺ (f⁰, oxidising), Eu²⁺ and Yb²⁺ (f⁷ and f¹⁴, reducing) arise from extra stability of empty, half-filled or fully-filled f subshells.",
+      "Actinoid contraction is greater and less regular than lanthanoid contraction (poorer shielding by 5f electrons); actinoids show a wider oxidation-state range (+3 to +7, since 5f, 6d and 7s are of comparable energy) and are all radioactive."
+    ],
+    "keyTables": [
+      {
+        "title": "Ground-state electronic configurations of the first (3d) transition series",
+        "rows": [
+          ["Element", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn"],
+          ["Z", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"],
+          ["Configuration", "3d¹4s²", "3d²4s²", "3d³4s²", "3d⁵4s¹", "3d⁵4s²", "3d⁶4s²", "3d⁷4s²", "3d⁸4s²", "3d¹⁰4s¹", "3d¹⁰4s²"]
+        ]
+      },
+      {
+        "title": "Common oxidation states of the first-row transition metals (bold in NCERT = most stable/common)",
+        "rows": [
+          ["Element", "Oxidation states observed"],
+          ["Sc", "+3"],
+          ["Ti", "+2, +3, +4"],
+          ["V", "+2, +3, +4, +5"],
+          ["Cr", "+2, +3, +4, +5, +6"],
+          ["Mn", "+2, +3, +4, +5, +6, +7"],
+          ["Fe", "+2, +3, +4, +5, +6"],
+          ["Co", "+2, +3, +4"],
+          ["Ni", "+2, +3, +4"],
+          ["Cu", "+1, +2"],
+          ["Zn", "+2"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "4.1", "text": "The d-block occupies the large middle section of the periodic table (groups 3-12), where d orbitals of the penultimate shell are progressively filled across the 3d, 4d, 5d and 6d series. The f-block is placed separately at the bottom, where 4f (lanthanoids) and 5f (actinoids) orbitals are progressively filled.", "whyItMatters": "Sets the map for the whole chapter — every trend discussed later is read along these rows.", "neetRelevance": "high" },
+    { "id": "h2", "type": "formula_intro", "section": "4.2", "text": "General outer electronic configuration of d-block elements: (n-1)d¹⁻¹⁰ns¹⁻², with exceptions for Cr (3d⁵4s¹) and Cu (3d¹⁰4s¹) in the 3d series, arising from the extra stability of half-filled and fully-filled orbital sets.", "whyItMatters": "The single most frequently tested configuration rule in this chapter — appears in nearly every year's paper.", "neetRelevance": "high" },
+    { "id": "h3", "type": "caution", "section": "4.2", "text": "Zn, Cd and Hg have a completely filled (n-1)d¹⁰ns² configuration both in the ground state and in their common oxidation states, so IUPAC does not classify them as transition elements, even though they are the end members of each d-series.", "whyItMatters": "A classic assertion-reason and 'which is not a transition element' trap.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "4.3.1", "text": "Melting points of the 3d, 4d and 5d series rise to a maximum around d⁵ (chromium, molybdenum, tungsten) — except for anomalous Mn and Tc — and then fall, because the number of unpaired d electrons available for strong metal-metal (interatomic) bonding first increases then decreases.", "whyItMatters": "Explains why tungsten (near d⁴, close to the peak) has the highest melting point of any metal.", "neetRelevance": "medium" },
+    { "id": "h5", "type": "statement", "section": "4.3.2", "text": "Lanthanoid contraction is the steady, cumulative decrease in atomic and ionic radii across the lanthanoid series (La to Lu), caused by imperfect shielding of nuclear charge by 4f electrons (the shielding of one 4f electron by another is even less effective than d-electron shielding).", "whyItMatters": "Root cause of one of the most tested 'consequence' questions in inorganic chemistry.", "neetRelevance": "high" },
+    { "id": "h6", "type": "statement", "section": "4.3.2", "text": "Because 4f orbitals fill before the 5d series begins, the second (4d) and third (5d) transition series end up with almost identical atomic/ionic radii for corresponding elements (e.g. Zr = 160 pm, Hf = 159 pm), giving them far more similar physical and chemical properties than ordinary family relationships would predict.", "whyItMatters": "Direct consequence of lanthanoid contraction — explains why Zr/Hf and Nb/Ta are notoriously hard to separate chemically.", "neetRelevance": "high" },
+    { "id": "h7", "type": "statement", "section": "4.3.3", "text": "Ionisation enthalpy increases across a 3d series but not steeply, and the increase is irregular; breaks in the second/third ionisation enthalpy trend occur at Mn²⁺ and Fe³⁺ (both d⁵) because of the extra exchange-energy stability of a half-filled d subshell.", "whyItMatters": "Explains why removing an electron from a d⁵ or d¹⁰ ion is comparatively hard — used to justify E° anomalies later.", "neetRelevance": "medium" },
+    { "id": "h8", "type": "statement", "section": "4.3.4", "text": "The variability of oxidation states in transition elements arises from incomplete filling of d orbitals, so their oxidation states differ from one another by unity (e.g. V shows +2, +3, +4, +5); this contrasts with non-transition (p-block) elements, whose oxidation states usually differ by a unit of two.", "whyItMatters": "A frequently asked compare-and-contrast conceptual point.", "neetRelevance": "high" },
+    { "id": "h9", "type": "formula_intro", "section": "4.3.4", "text": "The maximum oxidation state of reasonable stability corresponds in value to the sum of the s and d electrons, up to manganese: TiIVO2, VVO2⁺, CrVIO4²⁻, MnVIIO4⁻. Beyond group 7, a rather abrupt decrease in stability of higher oxidation states occurs, so no metal after Mn reaches an oxidation state equal to its group number.", "whyItMatters": "Explains why the highest possible oxidation states are seen for Cr (+6) and Mn (+7), the very elements used in K2Cr2O7 and KMnO4.", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "4.3.5", "text": "The E°(M²⁺/M) values become progressively less negative across the 3d series, related to the increasing sum of the first and second ionisation enthalpies; Cu has an unusually positive E° (+0.34 V), which explains its inability to liberate H2 from dilute acids.", "whyItMatters": "Explains a very common observation — only oxidising acids (HNO3, hot conc. H2SO4) react with copper.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "4.3.6", "text": "Among E°(M³⁺/M²⁺) values, Mn³⁺ and Co³⁺ are the strongest oxidising agents in aqueous solution (because Mn²⁺ is d⁵ and Co²⁺ is stabilised), while Ti²⁺, V²⁺ and Cr²⁺ are strong reducing agents that liberate H2 from a dilute acid.", "whyItMatters": "Directly tested via 'which ion oxidises/reduces which' style questions.", "neetRelevance": "high" },
+    { "id": "h12", "type": "formula_intro", "section": "4.3.9", "text": "Paramagnetism in first-row transition-metal compounds arises almost entirely from unpaired electron spins (orbital contribution is quenched), so the magnetic moment is given by the spin-only formula μ = √n(n+2) BM, where n is the number of unpaired electrons.", "whyItMatters": "Heavily tested numerical formula — used to determine unpaired electrons, oxidation state, or even geometry (via high-spin/low-spin comparisons) of a complex.", "neetRelevance": "high" },
+    { "id": "h13", "type": "statement", "section": "4.3.10", "text": "Coloured ions result from d-d electronic transitions, where an electron is excited from a lower-energy to a higher-energy d orbital by absorbing visible light; the colour observed is complementary to the colour absorbed. Ions with d⁰ or d¹⁰ configurations (Sc³⁺, Ti⁴⁺, Zn²⁺) show no d-d transition and are colourless.", "whyItMatters": "Explains the colours of common transition-metal salts and aqueous ions used throughout inorganic chemistry.", "neetRelevance": "high" },
+    { "id": "h14", "type": "statement", "section": "4.3.11", "text": "Transition metals readily form complex compounds (e.g. [Fe(CN)6]³⁻, [Cu(NH3)4]²⁺) because of their comparatively small ionic sizes, high ionic charges, and the availability of vacant d orbitals for coordinate bonding with ligands.", "whyItMatters": "Bridges directly into Unit 5, Coordination Compounds.", "neetRelevance": "medium" },
+    { "id": "h15", "type": "statement", "section": "4.3.12", "text": "Transition metals and their compounds are effective catalysts because of their ability to adopt multiple oxidation states and to form complexes/provide a reactive surface — e.g. V2O5 in the Contact Process, finely divided Fe in the Haber Process, Ni in catalytic hydrogenation, and the Fe³⁺/Fe²⁺ cycle catalysing the I⁻/S2O8²⁻ reaction.", "whyItMatters": "Applications question staple; the Fe³⁺ catalysis mechanism (2Fe³⁺+2I⁻→2Fe²⁺+I2; 2Fe²⁺+S2O8²⁻→2Fe³⁺+2SO4²⁻) is often asked as a worked example.", "neetRelevance": "medium" },
+    { "id": "h16", "type": "definition", "section": "4.3.13", "text": "Interstitial compounds form when small atoms like H, C or N get trapped inside the crystal lattices of metals. They are non-stoichiometric and neither typically ionic nor covalent (e.g. TiC, Mn4N, Fe3H, VH0.56, TiH1.7).", "whyItMatters": "Their four characteristic properties (high melting point, hardness, retained metallic conductivity, chemical inertness) are a common list-based recall question.", "neetRelevance": "medium" },
+    { "id": "h17", "type": "definition", "section": "4.3.14", "text": "An alloy is a homogeneous blend of metals, formed most readily when the component atoms have metallic radii within about 15 percent of each other. Ferrous alloys (steels containing Cr, V, W, Mo, Mn) and non-ferrous alloys with non-transition metals (brass = Cu-Zn, bronze = Cu-Sn) are of great industrial importance.", "whyItMatters": "Ties transition-metal similarity in size directly to a real-world application.", "neetRelevance": "medium" },
+    { "id": "h18", "type": "caution", "section": "4.4.1", "text": "Potassium dichromate is prepared from chromite ore (FeCr2O4) by fusion with sodium carbonate in free access of air, giving sodium chromate; this is filtered, acidified with sulphuric acid to sodium dichromate, which is then converted to potassium dichromate by treatment with potassium chloride, since K2Cr2O7 is less soluble and crystallises out first.", "whyItMatters": "A full multi-step preparation question appears almost every year (NCERT exercise 4.14/4.26).", "neetRelevance": "high" },
+    { "id": "h19", "type": "statement", "section": "4.4.1", "text": "Chromate ion (CrO4²⁻) is tetrahedral and yellow; dichromate ion (Cr2O7²⁻) consists of two tetrahedra sharing one corner (Cr-O-Cr bond angle 126°) and is orange. Chromate and dichromate interconvert reversibly depending on the pH of the solution: 2CrO4²⁻ + 2H⁺ ⇌ Cr2O7²⁻ + H2O.", "whyItMatters": "Tests both structural recall (tetrahedral geometry) and the pH-dependence of a common inorganic equilibrium.", "neetRelevance": "high" },
+    { "id": "h20", "type": "caution", "section": "4.4.1", "text": "KMnO4 is prepared industrially by fusing MnO2 (pyrolusite) with KOH and an oxidising agent (fused with air or KNO3) to give dark green K2MnO4, which is then oxidised electrolytically in alkaline solution to purple KMnO4. In the laboratory, a Mn(II) salt can instead be oxidised directly to permanganate using peroxodisulphate.", "whyItMatters": "The two-route preparation (industrial vs laboratory) is a classic distinguishing question.", "neetRelevance": "high" },
+    { "id": "h21", "type": "caution", "section": "4.4.1", "text": "KMnO4's oxidising power and the number of electrons transferred both depend on the medium: strongly acidic solution reduces MnO4⁻ to Mn²⁺ (5-electron change, E°=+1.52V); neutral or faintly alkaline solution reduces it to MnO2 (3-electron change, E°=+1.69V); strongly alkaline solution reduces it only to the green manganate ion MnO4²⁻ (1-electron change, E°=+0.56V).", "whyItMatters": "The single most exam-critical fact in the whole chapter — get the medium wrong and the whole balanced equation collapses.", "neetRelevance": "high" },
+    { "id": "h22", "type": "statement", "section": "4.5.1", "text": "Lanthanoid atoms have the general configuration 4fⁿ5d⁰⁻¹6s² (6s² is common to all), but the electronic configurations of all the tripositive lanthanoid ions — the most stable oxidation state — are uniformly of the form 4fⁿ (n = 1 to 14).", "whyItMatters": "Key to answering 'write the configuration of Ln³⁺' style questions quickly.", "neetRelevance": "high" },
+    { "id": "h23", "type": "statement", "section": "4.5.3", "text": "Occasionally +2 and +4 lanthanoid ions occur due to the extra stability of empty, half-filled or fully-filled f subshells: Ce⁴⁺ (f⁰) is a strong oxidant (E°=+1.74V) reverting to Ce³⁺, though the reaction is slow; Eu²⁺ (f⁷) and Yb²⁺ (f¹⁴) are reducing agents reverting to the common +3 state; Tb⁴⁺ (f⁷) is an oxidant.", "whyItMatters": "Frequently tested example set for 'which lanthanoid shows +4/+2 oxidation state and why'.", "neetRelevance": "high" },
+    { "id": "h24", "type": "statement", "section": "4.6.2/4.6.3", "text": "Actinoid contraction (the analogous steady decrease in atomic/ionic size across Th to Lr) is greater and less regular than lanthanoid contraction, because 5f electrons shield each other even less effectively than 4f electrons do. Actinoids also show a much wider range of oxidation states (+3 to +7) because the 5f, 6d and 7s levels are of comparable energy.", "whyItMatters": "The core compare/contrast fact between the two inner-transition series, tested almost every year.", "neetRelevance": "high" },
+    { "id": "h25", "type": "statement", "section": "4.6", "text": "All actinoids are radioactive; the earlier members have relatively long half-lives, while the later ones (e.g. lawrencium, Z=103) have half-lives as short as a few minutes, making their study possible only in nanogram quantities.", "whyItMatters": "Explains why actinoid chemistry is comparatively less understood than lanthanoid chemistry.", "neetRelevance": "medium" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Transition element", "definition": "As defined by IUPAC, a metal which has an incompletely filled d subshell either in its neutral atom or in any of its commonly occurring oxidation states.", "section": "4.1" },
+    { "id": "d2", "term": "Lanthanoid contraction", "definition": "The steady, cumulative decrease in atomic and ionic radii of the lanthanoid elements (La to Lu) with increasing atomic number, caused by imperfect shielding of nuclear charge by 4f electrons.", "section": "4.3.2 / 4.5.2" },
+    { "id": "d3", "term": "Spin-only magnetic moment", "definition": "The magnetic moment of a paramagnetic species arising purely from the spin of its unpaired electrons (orbital contribution ignored), given by μ = √n(n+2) Bohr magneton, where n is the number of unpaired electrons.", "section": "4.3.9" },
+    { "id": "d4", "term": "Interstitial compound", "definition": "A non-stoichiometric compound formed when small atoms such as H, C or N occupy the interstitial voids of a metal's crystal lattice; hard, high melting, metallically conducting and chemically inert.", "section": "4.3.13" },
+    { "id": "d5", "term": "Alloy", "definition": "A homogeneous blend of metals prepared by mixing their molten components, formed readily when the constituent atoms have metallic radii within about 15 percent of one another.", "section": "4.3.14" },
+    { "id": "d6", "term": "Disproportionation", "definition": "A reaction in which a species in an intermediate oxidation state is simultaneously oxidised and reduced, giving one product in a higher and another in a lower oxidation state (e.g. 3MnO4²⁻ + 4H⁺ → 2MnO4⁻ + MnO2 + 2H2O).", "section": "4.3.4" },
+    { "id": "d7", "term": "Chromate and dichromate ions", "definition": "CrO4²⁻ is a tetrahedral, yellow ion; Cr2O7²⁻ (orange) consists of two CrO4 tetrahedra sharing one oxygen corner (Cr-O-Cr angle 126°). They are interconvertible in aqueous solution depending on pH.", "section": "4.4.1" },
+    { "id": "d8", "term": "Lanthanoids", "definition": "The fourteen elements from cerium (Z=58) to lutetium (Z=71) that follow lanthanum; general symbol Ln; they resemble one another far more closely than members of an ordinary transition series.", "section": "4.5" },
+    { "id": "d9", "term": "Actinoids", "definition": "The fourteen elements from thorium (Z=90) to lawrencium (Z=103) that follow actinium; all are radioactive and show a much wider range of oxidation states than the lanthanoids.", "section": "4.6" },
+    { "id": "d10", "term": "Mischmetall", "definition": "An important lanthanoid alloy consisting of a lanthanoid metal (~95%) and iron (~5%) with traces of S, C, Ca and Al; used in Mg-based alloys to produce bullets, shells and lighter flints.", "section": "4.5.4" },
+    { "id": "d11", "term": "Actinoid contraction", "definition": "The gradual decrease in the size of atoms or M³⁺ ions across the actinoid series (analogous to lanthanoid contraction) but greater and less regular, due to poorer shielding by 5f electrons.", "section": "4.6.2" },
+    { "id": "d12", "term": "Coinage metals", "definition": "Cu, Ag and Au — the elements of group 11 — historically used to mint coins; contemporary UK coins are copper-coated steel or Cu/Ni alloy rather than the pure metals.", "section": "4.7" },
+    { "id": "d13", "term": "Ligand", "definition": "An anion or neutral molecule bound directly to a central metal ion in a complex compound, such as CN⁻, NH3 or Cl⁻ in [Fe(CN)6]³⁻, [Cu(NH3)4]²⁺ or [PtCl4]²⁻.", "section": "4.3.11" }
+  ],
+  "figures": [
+    { "id": "fig-4-1", "kind": "graph", "label": "Fig. 4.1", "ncertPage": 92, "section": "4.3.1", "caption": "Trends in melting points of the transition elements across the 3d, 4d and 5d series, showing a maximum near d⁵ (W, Mo, Cr) with anomalous dips at Mn and Tc.", "placeholderText": "NCERT Chemistry XII · Ch 4 · Page 92 · Fig. 4.1", "src": null, "uploadHint": "Crop from lech104.pdf page 4" },
+    { "id": "fig-4-3", "kind": "graph", "label": "Fig. 4.3", "ncertPage": 94, "section": "4.3.2", "caption": "Trends in atomic radii of the 3d, 4d and 5d transition series — the 4d series is larger than 3d, but the 5d series radii nearly coincide with 4d due to the lanthanoid contraction.", "placeholderText": "NCERT Chemistry XII · Ch 4 · Page 94 · Fig. 4.3", "src": null, "uploadHint": "Crop from lech104.pdf page 6" },
+    { "id": "fig-4-4", "kind": "graph", "label": "Fig. 4.4", "ncertPage": 98, "section": "4.3.5", "caption": "Observed versus calculated standard electrode potentials (M²⁺→M°) for the elements Ti to Zn, showing the general trend towards less negative E° across the series and Cu's anomalous positive value.", "placeholderText": "NCERT Chemistry XII · Ch 4 · Page 98 · Fig. 4.4", "src": null, "uploadHint": "Crop from lech104.pdf page 10" },
+    { "id": "fig-4-6", "kind": "graph", "label": "Fig. 4.6", "ncertPage": 109, "section": "4.5.2", "caption": "Trends in ionic radii of the lanthanoids (Ln³⁺), showing the steady overall decrease from La³⁺ to Lu³⁺ that constitutes the lanthanoid contraction.", "placeholderText": "NCERT Chemistry XII · Ch 4 · Page 109 · Fig. 4.6", "src": null, "uploadHint": "Crop from lech104.pdf page 21" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "General electronic configuration of d-block elements",
+      "latex": "(n-1)d^{1-10}\\,ns^{1-2}",
+      "plain": "the penultimate (n-1)d subshell holds 1 to 10 electrons while the outermost ns subshell holds 1 or 2 electrons",
+      "symbols": [
+        { "symbol": "n", "meaning": "principal quantum number of the outermost shell" },
+        { "symbol": "(n-1)d", "meaning": "the inner d orbitals being progressively filled" }
+      ],
+      "whenToUse": "Writing the ground-state configuration of any d-block atom or ion, and deciding whether an element/ion qualifies as a transition element.",
+      "derivedFrom": "NCERT Section 4.2, Table 4.1",
+      "commonMistakes": [
+        "Forgetting the Cr (3d⁵4s¹) and Cu (3d¹⁰4s¹) exceptions in the 3d series — both arise because half-filled/fully-filled sets are more stable and the 3d-4s energy gap is small.",
+        "Forgetting Pd is the one exception with 4d¹⁰5s⁰ (no electrons in 5s at all).",
+        "For transition-metal CATIONS, forgetting that ns electrons are always lost before (n-1)d electrons, e.g. Fe (3d⁶4s²) → Fe²⁺ (3d⁶), not 3d⁴4s²."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the configuration of a given transition-metal ion",
+          "howToInterpret": "Start from the neutral atom's configuration, then remove ns electrons first, then (n-1)d electrons for any further charge.",
+          "howItConnectsToFormula": "Apply the (n-1)d/ns split, remembering Cr and Cu are exceptions as neutral atoms.",
+          "exampleStem": "Write the electronic configuration of Cr³⁺ and Cu⁺ and state the number of unpaired electrons in each.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "The rule of thumb is: the outer s shell fills first as you build up the atom, but it's always the first to empty out when the atom becomes a cation. Chromium and copper break the naive pattern because nature prefers a half-full or completely full d subshell over a nearly-full one — that small extra stability is enough to pull one electron out of 4s and into 3d."
+    },
+    {
+      "id": "f2",
+      "name": "Spin-only magnetic moment",
+      "latex": "\\mu = \\sqrt{n(n+2)}\\ \\text{BM}",
+      "plain": "magnetic moment in Bohr magnetons = square root of [number of unpaired electrons × (number of unpaired electrons + 2)]",
+      "symbols": [
+        { "symbol": "n", "meaning": "number of unpaired electrons" },
+        { "symbol": "μ", "meaning": "magnetic moment, measured in Bohr magnetons (BM)" }
+      ],
+      "whenToUse": "Any question asking for the magnetic moment of a first-row transition-metal ion/complex, or asking you to deduce the number of unpaired electrons (and hence configuration or oxidation state) from an observed magnetic moment.",
+      "derivedFrom": "NCERT Section 4.3.9, Table 4.7",
+      "commonMistakes": [
+        "Using the total number of d electrons instead of only the UNPAIRED electrons.",
+        "Forgetting to first work out the correct dⁿ configuration of the ION (not the neutral atom) before counting unpaired electrons.",
+        "Assuming this formula applies to heavier (4d/5d) transition series too — the spin-only approximation is valid mainly for 3d-series compounds, where the orbital contribution is quenched."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Compute μ given the atomic number of a divalent/trivalent ion",
+          "howToInterpret": "Find the neutral atom's configuration, remove electrons to form the stated ion, count unpaired d electrons using Hund's rule.",
+          "howItConnectsToFormula": "Substitute n into μ = √n(n+2).",
+          "exampleStem": "Calculate the magnetic moment of a divalent ion in aqueous solution if its atomic number is 25.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Deduce unpaired electrons / identify ion from an observed magnetic moment",
+          "howToInterpret": "Set the observed μ equal to √n(n+2) and solve for the integer n, then match n to a plausible dⁿ configuration.",
+          "howItConnectsToFormula": "Invert μ = √n(n+2) ⟹ n² + 2n − μ² = 0, solve the quadratic for n.",
+          "exampleStem": "An aqueous complex has an observed magnetic moment of 5.9 BM. How many unpaired electrons does the central metal ion have, and which d-configuration is this consistent with?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Every unpaired electron acts like a tiny bar magnet, and this formula tells you how they add up. Since a single unpaired electron alone gives 1.73 BM, a quick sanity check is to remember the calculated values climb steeply: 1.73, 2.84, 3.87, 4.90, 5.92 for one through five unpaired electrons — memorising this short ladder makes almost every magnetic moment question in this chapter a 10-second lookup."
+    },
+    {
+      "id": "f3",
+      "name": "Maximum oxidation state rule and unity-variation of oxidation states",
+      "latex": "\\text{Maximum oxidation state} = (\\text{number of } s \\text{ electrons}) + (\\text{number of } d \\text{ electrons})\\quad (\\text{up to Mn})",
+      "plain": "for the first half of the 3d series (up to Mn), the highest stable oxidation state equals the total count of s + d valence electrons in the neutral atom",
+      "symbols": [
+        { "symbol": "s, d electrons", "meaning": "the outer 4s and inner 3d electron counts of the neutral atom" }
+      ],
+      "whenToUse": "Predicting or justifying the highest oxidation state reachable by a given 3d metal, and explaining why oxidation states of transition metals differ by ONE (not two, as in the p-block).",
+      "derivedFrom": "NCERT Section 4.3.4",
+      "commonMistakes": [
+        "Applying this rule beyond Mn — after group 7 there is an abrupt decrease in stability of higher oxidation states (e.g. no metal after Mn reaches an oxidation state equal to its group number).",
+        "Confusing this with the p-block pattern, where oxidation states typically differ by TWO due to the inert-pair effect."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict/justify the highest oxidation state of a 3d metal",
+          "howToInterpret": "Add the metal's s and d electron counts (from its neutral-atom configuration).",
+          "howItConnectsToFormula": "Ti (3d²4s²) → max +4; V (3d³4s²) → max +5; Cr (3d⁵4s¹) → max +6; Mn (3d⁵4s²) → max +7.",
+          "exampleStem": "Explain why manganese, and not iron, shows the highest oxidation state (+7) among the first-row transition metals.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Think of it as: every valence electron outside the noble-gas core is a candidate for being 'given away' in a high oxidation state, right up until you pass manganese — after that, pulling out more than two or three electrons from an already electron-poor, more-than-half-filled d subshell becomes energetically unreasonable."
+    },
+    {
+      "id": "f4",
+      "name": "Preparation of potassium dichromate from chromite ore",
+      "latex": "4\\,\\text{FeCr}_2\\text{O}_4 + 8\\,\\text{Na}_2\\text{CO}_3 + 7\\,\\text{O}_2 \\rightarrow 8\\,\\text{Na}_2\\text{CrO}_4 + 2\\,\\text{Fe}_2\\text{O}_3 + 8\\,\\text{CO}_2; \\quad 2\\text{Na}_2\\text{CrO}_4 + 2\\text{H}^+ \\rightarrow \\text{Na}_2\\text{Cr}_2\\text{O}_7 + 2\\text{Na}^+ + \\text{H}_2\\text{O}; \\quad \\text{Na}_2\\text{Cr}_2\\text{O}_7 + 2\\text{KCl} \\rightarrow \\text{K}_2\\text{Cr}_2\\text{O}_7 + 2\\text{NaCl}",
+      "plain": "chromite ore is fused with sodium carbonate in air to give sodium chromate; acidification converts it to sodium dichromate; treatment with KCl then precipitates the less-soluble potassium dichromate",
+      "symbols": [
+        { "symbol": "FeCr2O4", "meaning": "chromite ore (iron(II) chromite)" },
+        { "symbol": "Na2CrO4", "meaning": "sodium chromate (yellow, soluble)" }
+      ],
+      "whenToUse": "Describing the industrial preparation of K2Cr2O7 from its ore — a standard three-step NCERT exercise.",
+      "derivedFrom": "NCERT Section 4.4.1",
+      "commonMistakes": [
+        "Skipping the acidification step and going straight from Na2CrO4 to K2Cr2O7 — the chromate must first be converted to the dichromate (orange) form under acidic conditions.",
+        "Forgetting WHY KCl is used instead of just evaporating the sodium dichromate solution: K2Cr2O7 is less soluble than Na2Cr2O7, so it selectively crystallises out."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Describe/write equations for the preparation of K2Cr2O7 from chromite ore",
+          "howToInterpret": "Recall the three stages in order: oxidative fusion, acidification, salt metathesis with KCl.",
+          "howItConnectsToFormula": "Write the three balanced equations in sequence.",
+          "exampleStem": "Describe the preparation of potassium dichromate from iron chromite ore, writing balanced equations for each step.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Picture it as a three-stage relay: first you liberate chromium from the ore as soluble yellow sodium chromate by roasting it with soda ash in air; next, adding acid flips the equilibrium to the orange dichromate form; and finally, since potassium dichromate is the less soluble salt, simply adding potassium chloride lets it crystallise out cleanly, leaving sodium chloride behind in solution."
+    },
+    {
+      "id": "f5",
+      "name": "Oxidising action of potassium dichromate (acidic medium)",
+      "latex": "\\text{Cr}_2\\text{O}_7^{2-} + 14\\text{H}^+ + 6e^- \\rightarrow 2\\text{Cr}^{3+} + 7\\text{H}_2\\text{O} \\quad (E^{\\circ} = +1.33\\ \\text{V})",
+      "plain": "dichromate ion in acidic solution accepts 6 electrons per formula unit to give two Cr(III) ions",
+      "symbols": [
+        { "symbol": "E°", "meaning": "standard reduction potential of the dichromate/Cr³⁺ couple, +1.33 V" }
+      ],
+      "whenToUse": "Any oxidation carried out by acidified K2Cr2O7 — combine this half-reaction with the reductant's oxidation half-reaction to get the full balanced ionic equation.",
+      "derivedFrom": "NCERT Section 4.4.1",
+      "commonMistakes": [
+        "Forgetting the 14H⁺ and 7H2O (a very common source of unbalanced equations in exams).",
+        "Mixing up the number of electrons — it's 6, matching the change from Cr(+6)×2 to Cr(+3)×2."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Combine the dichromate half-reaction with a reductant to get the full ionic equation",
+          "howToInterpret": "Identify the reductant's oxidation half-reaction, balance electrons lost = electrons gained (6), then add the two half-reactions.",
+          "howItConnectsToFormula": "6I⁻ → 3I2 + 6e⁻ combined with Cr2O7²⁻+14H⁺+6e⁻→2Cr³⁺+7H2O gives Cr2O7²⁻+14H⁺+6I⁻→2Cr³⁺+3I2+7H2O.",
+          "exampleStem": "Write the balanced ionic equation for the oxidation of iron(II) to iron(III) by acidified potassium dichromate.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This half-reaction is worth memorising cold: fourteen hydrogen ions, six electrons, two chromium-three, seven waters. Once you have it locked in, every dichromate oxidation problem becomes a simple matter of balancing electrons against whatever reducing agent — iodide, tin(II), iron(II) or hydrogen sulphide — you're given."
+    },
+    {
+      "id": "f6",
+      "name": "Chromate-dichromate interconversion equilibrium",
+      "latex": "2\\text{CrO}_4^{2-} + 2\\text{H}^+ \\rightleftharpoons \\text{Cr}_2\\text{O}_7^{2-} + \\text{H}_2\\text{O}",
+      "plain": "two tetrahedral chromate ions combine under acidic conditions to give one dichromate ion, and the reverse occurs under alkaline conditions",
+      "symbols": [
+        { "symbol": "CrO4²⁻", "meaning": "chromate ion — tetrahedral, yellow" },
+        { "symbol": "Cr2O7²⁻", "meaning": "dichromate ion — two corner-shared tetrahedra, orange" }
+      ],
+      "whenToUse": "Explaining why chromium(VI) solutions change colour with pH, or predicting the dominant species at a given pH.",
+      "derivedFrom": "NCERT Section 4.4.1",
+      "commonMistakes": [
+        "Thinking this is a redox change — it is NOT; the oxidation state of chromium (+6) stays the same on both sides, only the degree of protonation/condensation changes."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict the effect of pH on a potassium dichromate solution",
+          "howToInterpret": "Recognise that adding acid drives the equilibrium towards dichromate; adding alkali drives it back towards chromate.",
+          "howItConnectsToFormula": "Le Chatelier's principle applied to the equilibrium as written.",
+          "exampleStem": "What is the effect of increasing pH on a solution of potassium dichromate?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This one trips people up because it looks like a redox reaction but isn't — chromium stays hexavalent throughout. It's really just an acid-base condensation, exactly like two phosphate ions condensing into a pyrophosphate ion when acidified."
+    },
+    {
+      "id": "f7",
+      "name": "Preparation of potassium permanganate from pyrolusite",
+      "latex": "2\\text{MnO}_2 + 4\\text{KOH} + \\text{O}_2 \\rightarrow 2\\text{K}_2\\text{MnO}_4 + 2\\text{H}_2\\text{O}; \\quad \\text{electrolytic oxidation: } \\text{MnO}_4^{2-} \\rightarrow \\text{MnO}_4^- + e^-; \\quad \\text{(lab route) } 2\\text{Mn}^{2+} + 5\\text{S}_2\\text{O}_8^{2-} + 8\\text{H}_2\\text{O} \\rightarrow 2\\text{MnO}_4^- + 10\\text{SO}_4^{2-} + 16\\text{H}^+",
+      "plain": "pyrolusite is fused with alkali and an oxidant to give green manganate, which is then oxidised electrolytically in alkaline solution to purple permanganate; alternatively a Mn(II) salt can be oxidised directly using peroxodisulphate",
+      "symbols": [
+        { "symbol": "MnO2", "meaning": "pyrolusite ore" },
+        { "symbol": "K2MnO4", "meaning": "potassium manganate (dark green, Mn in +6 state)" }
+      ],
+      "whenToUse": "Describing the industrial (fusion + electrolytic oxidation) or laboratory (peroxodisulphate) preparation of KMnO4.",
+      "derivedFrom": "NCERT Section 4.4.1",
+      "commonMistakes": [
+        "Forgetting that manganate (green, Mn⁺⁶) and permanganate (purple, Mn⁺⁷) are DIFFERENT species — one electron and one oxidation state apart.",
+        "Mixing up the disproportionation route (3MnO4²⁻+4H⁺→2MnO4⁻+MnO2+2H2O, which happens in neutral/acidic solution) with the electrolytic-oxidation route (which happens in alkaline solution and doesn't consume manganate as MnO2)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Describe the preparation of KMnO4 from pyrolusite ore",
+          "howToInterpret": "Recall the two stages: alkaline oxidative fusion to manganate, then electrolytic oxidation to permanganate.",
+          "howItConnectsToFormula": "Write the fusion equation, then state the anodic oxidation step.",
+          "exampleStem": "Describe the preparation of potassium permanganate from pyrolusite ore, and explain how commercial preparation differs from a laboratory-scale oxidation of a manganese(II) salt.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "There are really two separate 'stories' for making permanganate: the industrial route builds it up in two clean redox steps — fuse to manganate, then electrolyse to permanganate — while the laboratory shortcut jumps straight from a simple Mn2+ salt to permanganate using a powerful oxidant, peroxodisulphate, in one pot."
+    },
+    {
+      "id": "f8",
+      "name": "Medium-dependent reduction half-reactions of permanganate",
+      "latex": "\\text{MnO}_4^- + e^- \\rightarrow \\text{MnO}_4^{2-}\\ (E^\\circ=+0.56\\text{V});\\quad \\text{MnO}_4^- + 4\\text{H}^+ + 3e^- \\rightarrow \\text{MnO}_2 + 2\\text{H}_2\\text{O}\\ (E^\\circ=+1.69\\text{V});\\quad \\text{MnO}_4^- + 8\\text{H}^+ + 5e^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}\\ (E^\\circ=+1.52\\text{V})",
+      "plain": "permanganate is reduced by 1 electron to manganate in strongly alkaline medium, by 3 electrons to manganese dioxide in neutral/faintly alkaline medium, and by 5 electrons to Mn²⁺ in strongly acidic medium",
+      "symbols": [
+        { "symbol": "MnO4⁻", "meaning": "permanganate ion, Mn in +7 state" },
+        { "symbol": "MnO4²⁻", "meaning": "manganate ion, Mn in +6 state" },
+        { "symbol": "MnO2", "meaning": "manganese dioxide, Mn in +4 state" }
+      ],
+      "whenToUse": "The starting point for EVERY balanced permanganate redox equation — always identify the medium first to pick the correct half-reaction, then combine with the reductant's half-reaction.",
+      "derivedFrom": "NCERT Section 4.4.1",
+      "commonMistakes": [
+        "Using the acidic (5-electron, Mn²⁺) half-reaction by default even when the question specifies neutral or alkaline conditions.",
+        "Forgetting hydrochloric acid cannot be used to acidify KMnO4 titrations because HCl itself gets oxidised to Cl2 by permanganate, giving inaccurate results.",
+        "Not balancing H⁺/OH⁻/H2O correctly when converting between the acidic and alkaline forms of the same half-reaction."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify the correct KMnO4 reduction product from the reaction medium",
+          "howToInterpret": "Read the medium stated in the question (acidic / neutral or faintly alkaline / strongly alkaline) and select the matching half-reaction.",
+          "howItConnectsToFormula": "Match acidic→Mn²⁺(5e⁻), neutral/faintly alkaline→MnO2(3e⁻), strongly alkaline→MnO4²⁻(1e⁻).",
+          "exampleStem": "What is the reduction product of KMnO4 in (i) strongly acidic, (ii) neutral, and (iii) strongly alkaline solution? Give the half-reaction for each.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Three half-reactions, three colours, three electron counts — memorise them as a set: purple permanganate to colourless Mn-two-plus is the acidic five-electron change, purple to brown MnO2 is the neutral three-electron change, and purple to green manganate is the mildest, one-electron change under strong alkali. Get the medium right first, and the rest of the equation practically writes itself."
+    },
+    {
+      "id": "f9",
+      "name": "Full balanced ionic equations for KMnO4 oxidations with common reductants",
+      "latex": "\\text{(acidic) } 10\\text{I}^- + 2\\text{MnO}_4^- + 16\\text{H}^+ \\rightarrow 2\\text{Mn}^{2+} + 8\\text{H}_2\\text{O} + 5\\text{I}_2;\\ 5\\text{Fe}^{2+}+\\text{MnO}_4^-+8\\text{H}^+\\rightarrow \\text{Mn}^{2+}+4\\text{H}_2\\text{O}+5\\text{Fe}^{3+};\\ 5\\text{C}_2\\text{O}_4^{2-}+2\\text{MnO}_4^-+16\\text{H}^+\\rightarrow 2\\text{Mn}^{2+}+8\\text{H}_2\\text{O}+10\\text{CO}_2;\\ 5\\text{SO}_3^{2-}+2\\text{MnO}_4^-+6\\text{H}^+\\rightarrow 2\\text{Mn}^{2+}+3\\text{H}_2\\text{O}+5\\text{SO}_4^{2-};\\quad \\text{(neutral/alkaline) } 2\\text{MnO}_4^-+\\text{H}_2\\text{O}+\\text{I}^-\\rightarrow 2\\text{MnO}_2+2\\text{OH}^-+\\text{IO}_3^-",
+      "plain": "acidified KMnO4 oxidises iodide to iodine, Fe²⁺ to Fe³⁺, oxalate to CO2, sulphite to sulphate (all via the 5-electron Mn²⁺ half-reaction); in neutral/faintly alkaline medium it instead oxidises iodide only as far as iodate, itself being reduced to MnO2 (3-electron half-reaction)",
+      "symbols": [
+        { "symbol": "C2O4²⁻", "meaning": "oxalate ion" },
+        { "symbol": "IO3⁻", "meaning": "iodate ion" }
+      ],
+      "whenToUse": "Any 'write the ionic equation for the reaction of acidified/neutral KMnO4 with X' style question — the classic NEET/JEE numerical-cum-descriptive pattern.",
+      "derivedFrom": "NCERT Section 4.4.1 (list of oxidising reactions of KMnO4)",
+      "commonMistakes": [
+        "Forgetting that oxalate is oxidised only when the solution is warmed (at about 333 K) — at room temperature the reaction is slow.",
+        "Using the wrong product for iodide depending on medium — I2 in acid, but IO3⁻ in neutral/faintly alkaline solution (a very commonly confused pair).",
+        "Not doubling/quintupling the half-reactions correctly before adding — always find the LCM of electrons transferred (5 for MnO4⁻ reduction, matched to the reductant's own electron count) before adding half-reactions."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the full balanced ionic equation for a stated KMnO4 reaction",
+          "howToInterpret": "Identify the medium (acidic vs neutral/alkaline) and the reductant, find each half-reaction, balance electrons, then add.",
+          "howItConnectsToFormula": "e.g. reductant's oxidation half-reaction × k, MnO4⁻ reduction half-reaction × m, chosen so electrons cancel exactly.",
+          "exampleStem": "Write the balanced ionic equation for the oxidation of oxalic acid by acidified potassium permanganate.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Once you have the three medium-specific half-reactions memorised, this becomes pure bookkeeping: write the reductant's own oxidation half-reaction, scale both half-reactions so the electrons match exactly, and add them together, cancelling anything common to both sides. The one fact worth double-checking every time is which PRODUCT the reductant becomes — iodide famously becomes iodine in acid but only iodate in neutral or alkaline solution."
+    },
+    {
+      "id": "f10",
+      "name": "Lanthanoid contraction — quantitative trend and consequence",
+      "latex": "r(\\text{La}^{3+}) \\approx 106\\ \\text{pm} \\;\\longrightarrow\\; r(\\text{Lu}^{3+}) \\approx 86\\ \\text{pm};\\quad \\text{consequence: } r(\\text{Zr}) \\approx 160\\ \\text{pm} \\approx r(\\text{Hf}) \\approx 159\\ \\text{pm}",
+      "plain": "ionic radius of Ln³⁺ decreases steadily and cumulatively from about 106 pm (La³⁺) to about 86 pm (Lu³⁺) across the 14 lanthanoids; the accumulated decrease is just enough that Zr and Hf (and other 4d/5d pairs) end up almost the same size",
+      "symbols": [
+        { "symbol": "r(Ln³⁺)", "meaning": "ionic radius of a tripositive lanthanoid ion" }
+      ],
+      "whenToUse": "Explaining size-based consequences: near-identical 4d/5d group pairs, difficulty separating lanthanoids from one another, and increasing basicity decrease of Ln(OH)3 across the series.",
+      "derivedFrom": "NCERT Section 4.3.2 and 4.5.2, Table 4.9, Fig. 4.6",
+      "commonMistakes": [
+        "Describing the decrease as perfectly linear/regular — NCERT notes the decrease, while cumulative and steady, is not perfectly regular (e.g. slight irregularities at Eu²⁺/Sm²⁺ due to their preference for the +2 state).",
+        "Confusing lanthanoid contraction with actinoid contraction — the actinoid version is larger in magnitude and less regular."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain a consequence of lanthanoid contraction",
+          "howToInterpret": "Connect the steady radius decrease to a specific downstream effect — size similarity, separation difficulty, or basicity trend.",
+          "howItConnectsToFormula": "Cumulative Δr across 14 elements ≈ the 'extra' contraction expected purely from increasing nuclear charge is compensated by imperfect 4f shielding, extending the size-decrease into the 5d series.",
+          "exampleStem": "What is lanthanoid contraction and what are its consequences? Illustrate with the example of zirconium and hafnium.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Think of the lanthanoid series as a size 'discount' that keeps compounding across fourteen elements. By the time you reach lutetium at the end of the row, so much extra shrinkage has piled up that the next element down the group in the SAME family — hafnium — ends up almost exactly the same size as zirconium, one whole row above it. That's why zirconium and hafnium are notoriously difficult to separate chemically."
+    },
+    {
+      "id": "f11",
+      "name": "Lanthanoid variable oxidation states from stable f-configurations",
+      "latex": "\\text{Ce}^{4+}(4f^0),\\ \\text{Tb}^{4+}(4f^7) \\Rightarrow \\text{oxidising};\\qquad \\text{Eu}^{2+}(4f^7),\\ \\text{Yb}^{2+}(4f^{14}) \\Rightarrow \\text{reducing}",
+      "plain": "lanthanoid ions that would attain an empty (f⁰), half-filled (f⁷) or fully-filled (f¹⁴) f subshell are formed preferentially, even at the cost of deviating from the usual +3 state",
+      "symbols": [
+        { "symbol": "f⁰, f⁷, f¹⁴", "meaning": "empty, half-filled and fully-filled 4f subshell configurations, each with extra stability" }
+      ],
+      "whenToUse": "Predicting which lanthanoids show +2 or +4 oxidation states in addition to the usual +3, and whether that non-+3 ion behaves as an oxidant or reductant.",
+      "derivedFrom": "NCERT Section 4.5.3",
+      "commonMistakes": [
+        "Assuming EVERY lanthanoid can access +2/+4 states — only a handful do (Ce, Pr, Nd, Tb, Dy show +4; Eu, Yb, Sm show +2), and only because of proximity to a stable f⁰/f⁷/f¹⁴ configuration.",
+        "Getting oxidant/reductant backwards: an ion that GAINS extra stability by being reduced back to +3 (e.g. Ce⁴⁺→Ce³⁺) is an OXIDANT; one that gains stability by being oxidised up to +3 (e.g. Eu²⁺→Eu³⁺) is a REDUCTANT."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify which lanthanoid shows +4 or +2 and explain using f-electron count",
+          "howToInterpret": "Work out the fⁿ configuration of the proposed non-+3 ion and check if it is f⁰, f⁷ or f¹⁴.",
+          "howItConnectsToFormula": "Ce (Z=58) as Ce⁴⁺ has lost 4 electrons from [Xe]4f¹5d¹6s² to reach [Xe]4f⁰ — an empty, extra-stable subshell, hence Ce⁴⁺ is favoured as an oxidant.",
+          "exampleStem": "Why is Ce(IV) a good oxidising agent while Eu(II) is a good reducing agent? Explain using electronic configurations.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This is really the same 'extra stability of half-filled and fully-filled subshells' idea you saw with chromium and copper, just replayed one shell deeper with f-orbitals. Cerium 'wants' to lose one more electron than the usual +3 state to empty its f subshell completely, which is why Ce-four-plus is such a handy oxidising reagent — and europium and ytterbium go the opposite way, happily giving up their extra electron to reach a half-filled or fully-filled f subshell as the +2 ion, making them reducing agents."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d6", "d7", "d8", "d9", "d10", "d11", "d13"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["definitions", "d-block"],
+      "stages": {
+        "question": "Why is zinc (Z=30) not regarded as a transition element even though it is part of the d-block?",
+        "interpretation": "Tests the IUPAC definition of a transition element against zinc's actual configuration.",
+        "formula": "Transition element = incompletely filled d subshell in atom or common ion",
+        "solutionSteps": ["Zn ground state: [Ar]3d¹⁰4s² — d subshell is completely filled", "Zn's only common oxidation state is +2 (Zn²⁺ = [Ar]3d¹⁰) — still completely filled", "Since d is full in BOTH the atom and its ion, Zn fails the IUPAC definition"],
+        "answer": "Zinc has a completely filled 3d¹⁰ configuration both as the neutral atom and as Zn²⁺, so it does not satisfy the IUPAC definition of a transition element (incompletely filled d subshell)."
+      },
+      "audioScript": "The test isn't 'is it in the d-block' — it's 'is the d subshell incomplete somewhere.' Zinc fails that test at every oxidation state it actually forms, which is exactly why it's excluded despite sitting right at the end of the 3d row."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["electronic configuration", "exceptions"],
+      "stages": {
+        "question": "Why does chromium (Z=24) have the configuration 3d⁵4s¹ instead of the 'expected' 3d⁴4s²?",
+        "interpretation": "Tests understanding of the extra stability of a half-filled d subshell.",
+        "formula": "(n-1)d¹⁻¹⁰ns¹⁻² with Cr/Cu exceptions",
+        "solutionSteps": ["The energy gap between 3d and 4s orbitals is very small in this region", "A half-filled 3d⁵ set (one electron in each of the five d orbitals, all spins parallel) has extra exchange-energy stability", "This small stability gain is enough to promote one 4s electron into 3d, giving 3d⁵4s¹ rather than 3d⁴4s²"],
+        "answer": "Because the 3d-4s energy gap is small enough that the extra stability of a half-filled (3d⁵) configuration outweighs the cost of promoting one electron from 4s, giving 3d⁵4s¹."
+      },
+      "audioScript": "Nature isn't being arbitrary here — it's minimising total energy. A half-filled d⁵ set with five parallel spins gets a real energy bonus from exchange interactions, and since 3d and 4s are so close in energy for chromium, that bonus is enough to tip the balance."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["magnetic moment", "numerical"],
+      "stages": {
+        "question": "Calculate the spin-only magnetic moment of Fe³⁺ (atomic number 26).",
+        "interpretation": "Direct spin-only magnetic moment calculation — first find the ion's dⁿ configuration.",
+        "formula": "μ = √n(n+2) BM",
+        "solutionSteps": ["Fe neutral: [Ar]3d⁶4s²", "Fe³⁺: remove 2 (4s) + 1 (3d) electrons → [Ar]3d⁵", "3d⁵ (half-filled, Hund's rule) has 5 unpaired electrons, n=5", "μ = √5(5+2) = √35 ≈ 5.92 BM"],
+        "answer": "≈ 5.92 BM"
+      },
+      "audioScript": "Iron-three-plus is a d-five ion, exactly like manganese-two-plus, so all five d orbitals hold one electron each with parallel spins — the maximum possible unpaired count for a 3d ion, giving the largest spin-only value you'll see in this chapter, 5.92 Bohr magnetons."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["magnetic moment", "numerical", "identification"],
+      "stages": {
+        "question": "An aqueous first-row transition-metal ion has an observed magnetic moment of about 4.90 BM. Which dⁿ configuration(s) is this consistent with?",
+        "interpretation": "Work backwards from an observed magnetic moment to the number of unpaired electrons, then to possible configurations.",
+        "formula": "μ = √n(n+2) BM, inverted to solve for n",
+        "solutionSteps": ["Set √n(n+2) = 4.90 ⟹ n(n+2) = 24.0 ⟹ n ≈ 4", "n=4 unpaired electrons is consistent with a high-spin d⁴ or d⁶ configuration (e.g. Cr²⁺ or Mn³⁺ are d⁴; Fe²⁺ is d⁶)", "Cross-check against Table 4.7: calculated μ for d⁴/d⁶ = 4.90 BM, matching the observed value closely"],
+        "answer": "n = 4 unpaired electrons, consistent with a high-spin d⁴ ion (e.g. Cr²⁺, Mn³⁺) or a high-spin d⁶ ion (e.g. Fe²⁺)."
+      },
+      "audioScript": "Working backwards from a magnetic moment is just the forward calculation in reverse — square the given value, subtract from itself in the n(n+2) equation, and solve the small quadratic for n. Four unpaired electrons can come from either a d-four or a d-six high-spin ion, since both leave exactly four orbitals singly occupied once you fill by Hund's rule."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["K2Cr2O7", "redox", "balancing"],
+      "stages": {
+        "question": "Write the full balanced ionic equation for the oxidation of Fe²⁺ to Fe³⁺ by acidified potassium dichromate.",
+        "interpretation": "Combine the dichromate reduction half-reaction with the iron oxidation half-reaction, matching electrons.",
+        "formula": "Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O",
+        "solutionSteps": ["Reduction: Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O (6 electrons gained)", "Oxidation: 6Fe²⁺ → 6Fe³⁺ + 6e⁻ (6 electrons lost, already matched)", "Add the two half-reactions, cancelling the 6e⁻ on each side", "Cr2O7²⁻ + 14H⁺ + 6Fe²⁺ → 2Cr³⁺ + 6Fe³⁺ + 7H2O"],
+        "answer": "Cr2O7²⁻ + 14H⁺ + 6Fe²⁺ → 2Cr³⁺ + 6Fe³⁺ + 7H2O"
+      },
+      "audioScript": "Iron only ever loses one electron per ion going from plus-two to plus-three, so you need exactly six iron-two-plus ions to supply the six electrons that one dichromate ion demands — that six-to-one ratio is the whole trick to this equation."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["KMnO4", "redox", "balancing"],
+      "stages": {
+        "question": "Write the balanced ionic equation for the oxidation of oxalate ion (C2O4²⁻) by acidified potassium permanganate, warmed to about 333 K.",
+        "interpretation": "Combine the acidic permanganate half-reaction (5-electron, to Mn²⁺) with the oxalate oxidation half-reaction.",
+        "formula": "MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O",
+        "solutionSteps": ["Oxidation: C2O4²⁻ → 2CO2 + 2e⁻ (per oxalate, 2 electrons lost)", "Reduction: MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O (5 electrons gained)", "LCM of electrons = 10: multiply oxalate half-reaction by 5, permanganate half-reaction by 2", "5C2O4²⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 10CO2"],
+        "answer": "5C2O4²⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 10CO2"
+      },
+      "audioScript": "Oxalate gives up two electrons per ion while permanganate demands five, so the least common multiple is ten — that forces a five-to-two ratio between oxalate and permanganate, which is exactly the '5 and 2' you see as coefficients in the final balanced equation."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["lanthanoid contraction", "conceptual"],
+      "stages": {
+        "question": "Why do zirconium (Zr, group 4, 4d series) and hafnium (Hf, group 4, 5d series) show almost identical atomic radii and very similar chemistry, unlike most other pairs of elements one above the other in the periodic table?",
+        "interpretation": "Tests the consequence of lanthanoid contraction on the 4d/5d series.",
+        "formula": "none — conceptual, tied to lanthanoid contraction",
+        "solutionSteps": ["Normally, atomic radius increases going down a group (extra electron shell)", "But between the 4d series (ending at Cd) and the 5d series (starting at La/Hf), the entire 4f (lanthanoid) series is filled in between", "The steady lanthanoid contraction across those 14 elements nearly cancels out the expected radius increase from the extra shell", "Result: Zr (160 pm) and Hf (159 pm) end up almost the same size"],
+        "answer": "Because the lanthanoid contraction occurring between the 4d and 5d series almost exactly cancels the radius increase normally expected on descending a group, leaving Zr and Hf with nearly identical sizes and hence very similar chemical properties."
+      },
+      "audioScript": "Normally going down a group adds a whole new electron shell and the atom gets noticeably bigger. But between period 5 and period 6 in this part of the table, you first have to fill all fourteen lanthanoid elements, and the steady shrinkage across that whole row eats up almost exactly the size increase you'd otherwise expect — so hafnium ends up barely bigger than zirconium, one period 'above' it."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["KMnO4", "medium-dependence", "conceptual"],
+      "stages": {
+        "question": "Explain, with balanced half-reactions, why the number of electrons gained by MnO4⁻ is 5 in acidic medium, 3 in neutral/faintly alkaline medium, and 1 in strongly alkaline medium.",
+        "interpretation": "Tests understanding that the stable reduction PRODUCT of permanganate changes with pH, which changes the electron count.",
+        "formula": "Three medium-dependent half-reactions of MnO4⁻",
+        "solutionSteps": ["Acidic: Mn²⁺ (Mn in +2 state) is the stable product — MnO4⁻(+7) → Mn²⁺(+2) is a 5-electron change: MnO4⁻+8H⁺+5e⁻→Mn²⁺+4H2O (E°=+1.52V)", "Neutral/faintly alkaline: MnO2 (Mn in +4 state) is stable instead — MnO4⁻(+7)→MnO2(+4) is a 3-electron change: MnO4⁻+4H⁺+3e⁻→MnO2+2H2O (E°=+1.69V)", "Strongly alkaline: only MnO4²⁻ (Mn in +6 state) forms — MnO4⁻(+7)→MnO4²⁻(+6) is a 1-electron change: MnO4⁻+e⁻→MnO4²⁻ (E°=+0.56V)", "In each case, the electron count simply equals the drop in Mn's oxidation number to whichever product is thermodynamically favoured in that medium"],
+        "answer": "The electron count always equals the oxidation-number drop to the medium's stable Mn product: 7→2 (5e⁻) in acid, 7→4 (3e⁻) in neutral/faintly alkaline, and 7→6 (1e⁻) in strongly alkaline solution."
+      },
+      "audioScript": "The trick is to stop thinking of this as three unrelated equations and instead see one pattern: in each medium, manganese only drops as far down the oxidation ladder as is thermodynamically comfortable — all the way to plus-two in strong acid, only to plus-four in neutral conditions, and just one rung to plus-six in strong alkali. The electron count is nothing more than that oxidation-number drop."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "advanced",
+      "tags": ["disproportionation", "K2MnO4"],
+      "stages": {
+        "question": "Manganate ion (MnO4²⁻, Mn in +6 state) is unstable in neutral or acidic solution and disproportionates. Write the balanced ionic equation and identify the oxidation states before and after.",
+        "interpretation": "Tests the concept of disproportionation with a concrete balanced example from this chapter.",
+        "formula": "Disproportionation: one oxidation state splits into a higher and a lower one",
+        "solutionSteps": ["Starting oxidation state of Mn in MnO4²⁻ is +6", "In neutral/acidic solution it converts partly to MnO4⁻ (Mn = +7, oxidised) and partly to MnO2 (Mn = +4, reduced)", "Balanced equation: 3MnO4²⁻ + 4H⁺ → 2MnO4⁻ + MnO2 + 2H2O", "Check: Mn balances (3=2+1); charge balances (left: -6+4=-2; right: -2+0=-2)"],
+        "answer": "3MnO4²⁻ + 4H⁺ → 2MnO4⁻ + MnO2 + 2H2O — manganese(VI) disproportionates into manganese(VII) (oxidised) and manganese(IV) (reduced)."
+      },
+      "audioScript": "Disproportionation always means the same element splits its 'middle' oxidation state into a higher and a lower one simultaneously. Here manganese-six in manganate ion isn't comfortable staying put outside strongly alkaline solution, so two-thirds of it climbs up to permanganate while one-third falls down to manganese dioxide."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "advanced",
+      "tags": ["actinoid contraction", "comparison"],
+      "stages": {
+        "question": "Why is actinoid contraction both greater in magnitude and less regular than lanthanoid contraction?",
+        "interpretation": "Tests the comparative reasoning between the 4f and 5f contractions.",
+        "formula": "Actinoid contraction vs lanthanoid contraction",
+        "solutionSteps": ["Both contractions arise from imperfect shielding of nuclear charge by electrons within the same subshell being filled (4f or 5f)", "5f orbitals are less 'buried' / penetrate less into the core than 4f orbitals do, and shield each other even less effectively than 4f electrons shield one another", "This weaker mutual shielding lets the increasing nuclear charge pull the electron cloud in more strongly across the actinoid series", "Additionally, the wider range of oxidation states and greater involvement of 5f electrons in bonding across the actinoids makes the size decrease less smooth/regular than in the lanthanoids"],
+        "answer": "Because 5f electrons shield one another even less effectively than 4f electrons do, the actinoid contraction is larger per element; the actinoids' wider range of oxidation states and greater 5f participation in bonding also make the contraction less regular than the lanthanoid contraction."
+      },
+      "audioScript": "Both series contract for the same underlying reason — electrons in the orbital being filled are bad at shielding each other from the growing nuclear charge — but 5f orbitals are even worse at it than 4f orbitals, so each step across the actinoids shrinks the atom more than the equivalent step across the lanthanoids, and less smoothly too."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": ["coloured ions", "conceptual"],
+      "stages": {
+        "question": "Sc³⁺ is colourless but Ti³⁺ is purple in aqueous solution. Explain why, using their electronic configurations.",
+        "interpretation": "Tests the link between d-electron count and the possibility of a d-d electronic transition.",
+        "formula": "Colour arises from d-d transitions; requires a partially filled d subshell",
+        "solutionSteps": ["Sc³⁺: [Ar]3d⁰ — no d electrons at all, so no d-d transition is possible, hence colourless", "Ti³⁺: [Ar]3d¹ — one d electron can be excited from a lower to a higher energy d orbital by absorbing visible light", "The absorbed wavelength's complementary colour (purple) is what we observe"],
+        "answer": "Sc³⁺ has a d⁰ configuration with no d electrons available for a d-d transition, so it is colourless; Ti³⁺ has a d¹ configuration, so its single d electron can absorb visible light in a d-d transition, producing the observed purple colour."
+      },
+      "audioScript": "No d electrons, no d-to-d electron jump, no absorption of visible light, no colour — that's Sc-three-plus in a nutshell. Titanium-three-plus has exactly one d electron to promote, and the energy needed for that jump happens to fall in the visible range, which is why its solutions look purple to us."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why are Zn, Cd and Hg excluded from the transition elements despite belonging to the d-block?",
+      "Why does chromium adopt a 3d⁵4s¹ configuration instead of the 'expected' 3d⁴4s²?",
+      "Why is Mn²⁺ (d⁵) more resistant to oxidation to Mn³⁺ than Fe²⁺ (d⁶) is to oxidation to Fe³⁺ (d⁵)?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Write the ground-state electronic configuration of V³⁺ (Z=23) and state the number of unpaired electrons.",
+        "interpretation": "Apply the rule that ns electrons are removed before (n-1)d electrons when forming a cation.",
+        "formulaIds": ["f1"],
+        "steps": ["Neutral V: [Ar]3d³4s²", "V³⁺: remove 2 electrons from 4s and 1 from 3d → [Ar]3d²", "By Hund's rule, 3d² places 2 electrons in separate orbitals with parallel spin"],
+        "answer": "V³⁺ = [Ar]3d², with 2 unpaired electrons.",
+        "audioScript": "Strip the two 4s electrons first, then one more from 3d — you're left with a clean d-two ion, and Hund's rule keeps both of those electrons unpaired in separate orbitals."
+      },
+      {
+        "id": "pb2",
+        "question": "Calculate the spin-only magnetic moment of Mn²⁺ (3d⁵).",
+        "interpretation": "Direct substitution into the spin-only formula once the unpaired electron count is known.",
+        "formulaIds": ["f2"],
+        "steps": ["3d⁵ is half-filled: all 5 electrons unpaired (Hund's rule), n=5", "μ = √5(5+2) = √35"],
+        "answer": "μ ≈ 5.92 BM",
+        "audioScript": "A half-filled d-five ion always maximises unpaired electrons at five, giving the largest spin-only value commonly quoted in this chapter — worth memorising as a benchmark number."
+      },
+      {
+        "id": "pb3",
+        "question": "State the balanced half-reaction for the reduction of dichromate ion in acidic medium, along with its standard electrode potential.",
+        "interpretation": "Direct recall of the K2Cr2O7 oxidising half-reaction.",
+        "formulaIds": ["f5"],
+        "steps": ["Recall the half-reaction directly from the chapter"],
+        "answer": "Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O (E° = +1.33 V)",
+        "audioScript": "This exact half-reaction is worth having ready to write from memory — fourteen H-plus, six electrons, two Cr-three-plus, seven waters."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Combine half-reactions to write the full balanced ionic equation for the oxidation of Sn²⁺ to Sn⁴⁺ by acidified potassium dichromate.",
+        "interpretation": "Match electrons between the dichromate reduction half-reaction and the tin oxidation half-reaction.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "Reduction: Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O",
+          "Oxidation: 3Sn²⁺ → 3Sn⁴⁺ + 6e⁻ (Sn²⁺ loses 2 electrons each, so 3 ions give 6 electrons)",
+          "Add: Cr2O7²⁻ + 14H⁺ + 3Sn²⁺ → 2Cr³⁺ + 3Sn⁴⁺ + 7H2O"
+        ],
+        "answer": "Cr2O7²⁻ + 14H⁺ + 3Sn²⁺ → 2Cr³⁺ + 3Sn⁴⁺ + 7H2O",
+        "audioScript": "Tin only gives up two electrons per ion, so you need exactly three tin(II) ions to supply the six electrons dichromate demands — a three-to-one ratio, mirrored by the six-to-one ratio you'd use for a one-electron reductant like iron(II)."
+      },
+      {
+        "id": "pi2",
+        "question": "Calculate the magnetic moment of a divalent ion in aqueous solution if its atomic number is 27.",
+        "interpretation": "Identify the element (Co, Z=27), form the divalent ion, count unpaired electrons, apply the spin-only formula.",
+        "formulaIds": ["f1", "f2"],
+        "steps": [
+          "Neutral Co: [Ar]3d⁷4s²",
+          "Co²⁺: remove the 2 (4s) electrons → [Ar]3d⁷",
+          "3d⁷ by Hund's rule: 5 orbitals filled as ↑↓ ↑↓ ↑ ↑ ↑ → 3 unpaired electrons",
+          "μ = √3(3+2) = √15 ≈ 3.87 BM"
+        ],
+        "answer": "μ ≈ 3.87 BM",
+        "audioScript": "First identify the element from its atomic number, form the ion by removing the s electrons, then count how many of the seven d electrons in cobalt-two-plus stay unpaired once you've filled the five d orbitals by Hund's rule."
+      },
+      {
+        "id": "pi3",
+        "question": "Write the balanced ionic equation for the oxidation of hydrogen sulphide by acidified potassium permanganate.",
+        "interpretation": "Combine the acidic permanganate half-reaction with the H2S oxidation half-reaction (S²⁻ → S).",
+        "formulaIds": ["f8", "f9"],
+        "steps": [
+          "Oxidation: S²⁻ → S + 2e⁻ (per H2S, 2 electrons lost)",
+          "Reduction: MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O (5 electrons gained)",
+          "LCM of electrons = 10: multiply S half-reaction by 5, MnO4⁻ half-reaction by 2",
+          "5S²⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 5S"
+        ],
+        "answer": "5S²⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 5S",
+        "audioScript": "Sulphur in H2S gives up two electrons to become elemental sulphur, matching the same 5-to-2 electron-matching pattern you saw with oxalate — only the identity of the reductant changes, the bookkeeping stays the same."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Explain, with the relevant half-reactions and standard electrode potentials, why acidified KMnO4 gives Mn²⁺ while the same reagent in neutral/faintly alkaline solution gives MnO2 instead — then write the full balanced equation for excess iodide reacting with acidified KMnO4.",
+        "interpretation": "Combines the medium-dependence concept with a full worked redox equation.",
+        "formulaIds": ["f8", "f9"],
+        "steps": [
+          "Acidic: MnO4⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H2O (E°=+1.52V) — the 5-electron reduction to Mn²⁺ is favoured when H⁺ is abundant",
+          "Neutral/faintly alkaline: MnO4⁻ + 4H⁺ + 3e⁻ → MnO2 + 2H2O (E°=+1.69V) — without excess H⁺ to drive full reduction, only the 3-electron step to MnO2 is accessible",
+          "For iodide in ACID: oxidation half-reaction 10I⁻ → 5I2 + 10e⁻, matched against 2MnO4⁻ + 16H⁺ + 10e⁻ → 2Mn²⁺ + 8H2O",
+          "Full equation: 10I⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 5I2"
+        ],
+        "answer": "10I⁻ + 2MnO4⁻ + 16H⁺ → 2Mn²⁺ + 8H2O + 5I2 (acidic medium); in neutral/faintly alkaline medium the same iodide is oxidised only to iodate while MnO4⁻ is reduced to MnO2.",
+        "audioScript": "This question packs two ideas into one: first, that the AVAILABILITY of H+ determines how far manganese is willing to be reduced, and second, that once you've fixed the medium as strongly acidic, iodide is oxidised all the way to iodine, giving the classic 10-2-16-2-8-5 coefficient pattern that's worth recognising on sight."
+      },
+      {
+        "id": "pa2",
+        "question": "Using the spin-only formula, calculate the magnetic moment for Ti³⁺ (3d¹), Cr³⁺ (3d³) and Fe²⁺ (3d⁶, high-spin) and rank them in increasing order.",
+        "interpretation": "Three independent spin-only calculations followed by a comparison.",
+        "formulaIds": ["f2"],
+        "steps": [
+          "Ti³⁺ (3d¹): n=1, μ=√1×3=√3≈1.73 BM",
+          "Cr³⁺ (3d³): n=3, μ=√3×5=√15≈3.87 BM",
+          "Fe²⁺ (3d⁶, high-spin): 4 orbitals singly occupied plus 1 doubly occupied → n=4, μ=√4×6=√24≈4.90 BM",
+          "Ranking: Ti³⁺ (1.73) < Cr³⁺ (3.87) < Fe²⁺ (4.90)"
+        ],
+        "answer": "μ(Ti³⁺) ≈ 1.73 BM < μ(Cr³⁺) ≈ 3.87 BM < μ(Fe²⁺) ≈ 4.90 BM",
+        "audioScript": "Three separate ions, same recipe each time: work out the d-electron count, apply Hund's rule to find unpaired electrons, then plug into the spin-only formula. The pattern to notice is that magnetic moment doesn't increase in step with atomic number — it depends entirely on how many d electrons stay unpaired, which peaks at d5 and falls again afterward."
+      },
+      {
+        "id": "pa3",
+        "question": "Explain, with electronic configurations, why Ce⁴⁺ is a good oxidising agent while Eu²⁺ is a good reducing agent among the lanthanoids.",
+        "interpretation": "Connects the general +3 oxidation state of lanthanoids to the specific stability of empty/half-filled f subshells.",
+        "formulaIds": ["f11"],
+        "steps": [
+          "Ce (Z=58): [Xe]4f¹5d¹6s². Ce⁴⁺ loses all 4 outer electrons to reach [Xe]4f⁰ — an empty, extra-stable f subshell",
+          "Because Ce⁴⁺ (f⁰) is more stable than expected, it readily reverts to the normal Ce³⁺ (f¹) state by gaining an electron — i.e., it acts as an oxidising agent",
+          "Eu (Z=63): [Xe]4f⁷6s². Eu²⁺ retains the [Xe]4f⁷ configuration — a half-filled, extra-stable f subshell",
+          "Because Eu²⁺ (f⁷) is already extra-stable, it resists further oxidation but is easily oxidised FROM (losing an electron drives it to the normal Eu³⁺ state) — wait, the stability of Eu²⁺ itself means Eu²⁺ is reluctant to change, but it is precisely because the NORMAL +3 state is what's thermodynamically preferred overall for lanthanoids that Eu²⁺ tends to revert to Eu³⁺, releasing an electron — i.e., acting as a reducing agent"
+        ],
+        "answer": "Ce⁴⁺ (f⁰, empty and extra-stable) readily gains an electron to revert to the normal Ce³⁺ (f¹) state, so it behaves as an oxidising agent; Eu²⁺ (f⁷, half-filled and extra-stable relative to its own +3/+4 neighbours) readily loses an electron to revert to the general lanthanoid +3 state, so it behaves as a reducing agent."
+        ,
+        "audioScript": "Both ions are being pulled toward the SAME destination — the ordinary plus-three lanthanoid state — just from opposite directions. Cerium starts one electron short of plus-three's usual f-count and happily grabs an electron to get there, acting as an oxidant in the process; europium starts one electron past its most stable f-seven arrangement at plus-two and happily gives that extra stability up, releasing an electron and acting as a reductant, to settle back at plus-three."
+      }
+    ],
+    "transferPrompt": "Once you're comfortable here, try connecting this chapter's redox and colour ideas to Coordination Compounds (Unit 5) — for instance, predict how ligand field strength changes the observed magnetic moment of an octahedral complex like [Fe(CN)6]³⁻ versus [Fe(H2O)6]³⁺ even though both contain the same Fe³⁺ (d⁵) ion."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 4 — The d- and f-Block Elements. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (position and electronic configuration of d-block elements, periodic trends across the 3d series including lanthanoid contraction, oxidation states and electrode potentials, magnetic properties and the spin-only formula, coloured ions and catalysis, the preparation/structure/redox chemistry of K2Cr2O7 and KMnO4, or the lanthanoids and actinoids). First quiz me on definitions and formulas with NO calculation involved — what makes an element 'transition', why Cr and Cu are exceptions, what lanthanoid contraction is and its consequences, and the general shape of the three medium-dependent KMnO4 half-reactions. Then move to basic numericals tied to a single formula (writing an ion's electronic configuration, a straightforward spin-only magnetic moment calculation, recalling a single balanced half-reaction). Then intermediate problems requiring two steps (combining a redox half-reaction with a reductant's half-reaction to get a full balanced ionic equation for K2Cr2O7 or KMnO4, or identifying an ion from an observed magnetic moment). Then advanced problems that combine concepts (explaining WHY the electron count changes with medium for KMnO4 and then applying it, disproportionation reactions, or comparing lanthanoid and actinoid contraction). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula or half-reaction connects to it and why, (3) the solution steps, before revealing the final answer — and if I get a redox equation wrong, explicitly check electron balance and charge balance with me rather than just giving the correct equation. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all formulas and key equations with when-to-use notes). Pay special attention to drilling the KMnO4 and K2Cr2O7 balanced redox equations and the spin-only magnetic moment formula, since these are the most heavily tested items in this chapter. Stay within this chapter's scope (d-block position and configuration, periodic trends, K2Cr2O7, KMnO4, lanthanoids, actinoids) unless I explicitly ask to connect to another chapter such as Coordination Compounds.",
+  "selfCheck": [
+    { "q": "Why is Cu²⁺ (d⁹) coloured while Zn²⁺ (d¹⁰) is colourless?", "a": "Cu²⁺ has an incompletely filled d subshell, so an electron can be excited between d orbitals by absorbing visible light (a d-d transition); Zn²⁺'s completely filled d¹⁰ configuration has no accessible d-d transition, so it absorbs no visible light and appears colourless." },
+    { "q": "State the spin-only magnetic moment formula and its value for a single unpaired electron.", "a": "μ = √n(n+2) BM, where n is the number of unpaired electrons; for n=1, μ = √3 ≈ 1.73 BM." },
+    { "q": "Give the balanced half-reaction for potassium dichromate acting as an oxidising agent in acidic medium, with its standard electrode potential.", "a": "Cr2O7²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H2O, E° = +1.33 V." },
+    { "q": "Why does the number of electrons transferred by MnO4⁻ change with the medium (5, 3, or 1)?", "a": "Because the stable reduction product of manganese differs with pH — Mn²⁺ forms in strongly acidic medium (5-electron change), MnO2 forms in neutral/faintly alkaline medium (3-electron change), and MnO4²⁻ forms in strongly alkaline medium (1-electron change) — the electron count simply equals the drop in Mn's oxidation number to whichever product is favoured." },
+    { "q": "What is lanthanoid contraction and name one major consequence.", "a": "The steady decrease in atomic/ionic radii across the lanthanoid series (La to Lu) caused by imperfect shielding of nuclear charge by 4f electrons. A major consequence is that the second and third transition series elements of the same group (e.g. Zr and Hf) end up with almost identical radii and very similar chemistry, making them difficult to separate." }
+  ]
+}

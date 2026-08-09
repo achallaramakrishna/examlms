@@ -1,0 +1,41 @@
+{
+  "subject": "Chemistry",
+  "classLevel": "XII",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Solutions",
+      "slug": "ch01-solutions",
+      "status": "ready",
+      "ncertCode": "lech101"
+    },
+    {
+      "number": 2,
+      "title": "Electrochemistry",
+      "slug": "ch02-electrochemistry",
+      "status": "ready",
+      "ncertCode": "lech102"
+    },
+    {
+      "number": 3,
+      "title": "Chemical Kinetics",
+      "slug": "ch03-chemical-kinetics",
+      "status": "ready",
+      "ncertCode": "lech103"
+    },
+    {
+      "number": 4,
+      "title": "The d- and f-Block Elements",
+      "slug": "ch04-d-and-f-block-elements",
+      "status": "ready",
+      "ncertCode": "lech104"
+    },
+    {
+      "number": 5,
+      "title": "Coordination Compounds",
+      "slug": "ch05-coordination-compounds",
+      "status": "ready",
+      "ncertCode": "lech105"
+    }
+  ]
+}

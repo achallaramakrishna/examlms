@@ -13,7 +13,8 @@ interface SubjectTrack {
  * coming soon instead of hiding the subject entirely. */
 const LEARN_TRACKS: SubjectTrack[] = [
   { subject: 'Physics', track: 'physics-xi', classLevel: 'XI' },
-  { subject: 'Chemistry', track: 'chemistry-xi', classLevel: 'XI' },
+  { subject: 'Chemistry (XI)', track: 'chemistry-xi', classLevel: 'XI' },
+  { subject: 'Chemistry (XII)', track: 'chemistry-xii', classLevel: 'XII' },
   { subject: 'Mathematics', track: 'maths-xi', classLevel: 'XI' },
 ];
 

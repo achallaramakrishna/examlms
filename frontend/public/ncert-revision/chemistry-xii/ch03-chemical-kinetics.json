@@ -1,0 +1,767 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 3,
+    "chapterTitle": "Chemical Kinetics",
+    "ncertCode": "lech103",
+    "topicIdHint": "Chemical Kinetics",
+    "estimatedRevisionMinutes": 60,
+    "chapter": "Chemical Kinetics",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Distinguish average rate from instantaneous rate of a reaction and express rate in terms of change in concentration of reactants or products, including reactions where stoichiometric coefficients are unequal.",
+    "Write the rate law (differential rate equation) for a reaction from experimental data and determine the order of reaction and the rate constant, including its correct units.",
+    "Differentiate order of reaction from molecularity, and explain why order is purely experimental while molecularity applies only to elementary steps.",
+    "Derive and apply the integrated rate equations and half-life expressions for zero order and first order reactions, including pseudo-first-order reactions and gas-phase reactions monitored by pressure.",
+    "Apply the Arrhenius equation to relate rate constant, temperature and activation energy, and determine Ea and A graphically from a plot of ln k versus 1/T.",
+    "Explain collision theory, the roles of activation energy and molecular orientation in effective collisions, and how a catalyst speeds up a reaction without changing its ΔG or equilibrium constant."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Rate of reaction (average → instantaneous) → rate law & order (always experimental) → integrated rate equations & half-life for zero/first order → pseudo-first-order → Arrhenius equation & activation energy → collision theory.",
+    "mustKnowBullets": [
+      "Average rate = -Δ[R]/Δt = +Δ[P]/Δt over a finite interval; instantaneous rate = -d[R]/dt = d[P]/dt as Δt→0 (slope of the tangent on a concentration-time curve).",
+      "For aA + bB → cC + dD: Rate = -(1/a)d[A]/dt = -(1/b)d[B]/dt = +(1/c)d[C]/dt = +(1/d)d[D]/dt.",
+      "Rate law: Rate = k[A]^x[B]^y — must be found experimentally, NEVER predicted from the balanced equation or stoichiometric coefficients.",
+      "Order of reaction = x + y (sum of powers of concentration terms in the rate law); can be 0, 1, 2, 3 or even a fraction.",
+      "Molecularity = number of species colliding simultaneously in an elementary step; can only be 1, 2 or 3 and applies only to elementary reactions, never to overall complex reactions.",
+      "Units of k identify the order instantly: mol L⁻¹s⁻¹ (zero order), s⁻¹ (first order), mol⁻¹Ls⁻¹ (second order).",
+      "Zero order: [R] = [R]₀ - kt; k = ([R]₀-[R])/t; t₁/₂ = [R]₀/2k (half-life ∝ initial concentration).",
+      "First order: ln[R] = ln[R]₀ - kt, i.e. [R] = [R]₀e^(-kt); k = (2.303/t)log([R]₀/[R]); t₁/₂ = 0.693/k (half-life is CONSTANT, independent of initial concentration).",
+      "Pseudo first order reaction: an intrinsically higher-order reaction (e.g. ester hydrolysis, inversion of cane sugar) that behaves as first order because one reactant, usually water, is in large excess and its concentration stays essentially constant.",
+      "For a first order reaction, time for 99.9% completion = 10 × t₁/₂; time for 99% completion = 2 × time for 90% completion.",
+      "Arrhenius equation: k = Ae^(-Ea/RT); taking log: ln k = ln A - Ea/RT — a plot of ln k vs 1/T is a straight line with slope = -Ea/R and intercept = ln A.",
+      "Rule of thumb: for most reactions, a 10°C rise in temperature roughly doubles the rate constant k.",
+      "log(k₂/k₁) = (Ea/2.303R)[1/T₁ - 1/T₂] relates rate constants at two temperatures — used to find Ea from two (k, T) data points.",
+      "A catalyst provides an alternate pathway with LOWER activation energy; it does NOT change ΔG or the equilibrium constant, and it speeds up the forward and backward reactions equally.",
+      "Collision theory: Rate = P·Z_AB·e^(-Ea/RT), where Z_AB is collision frequency and P is the steric/probability factor for proper orientation; only 'effective collisions' (energy ≥ threshold energy AND correct orientation) form products."
+    ],
+    "keyTables": [
+      {
+        "title": "Integrated rate laws for zero and first order reactions (Table 3.4)",
+        "rows": [
+          ["Order", "Differential rate law", "Integrated rate law", "Straight-line plot", "Half-life", "Units of k"],
+          ["0", "d[R]/dt = -k", "kt = [R]₀ - [R]", "[R] vs t", "[R]₀/2k", "mol L⁻¹ s⁻¹"],
+          ["1", "d[R]/dt = -k[R]", "kt = ln([R]₀/[R]) or [R] = [R]₀e⁻ᵏᵗ", "ln[R] vs t", "0.693/k", "s⁻¹"]
+        ]
+      },
+      {
+        "title": "Units of rate constant by reaction order (Table 3.3)",
+        "rows": [
+          ["Reaction order", "Units of k"],
+          ["0 (zero order)", "mol L⁻¹ s⁻¹"],
+          ["1 (first order)", "s⁻¹"],
+          ["2 (second order)", "mol⁻¹ L s⁻¹"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "3.1", "text": "Average rate of a reaction = -Δ[R]/Δt = +Δ[P]/Δt, the change in concentration of a reactant or product divided by the time interval over which the change occurs.", "whyItMatters": "Basis for computing rate directly from a table of concentration-time data.", "neetRelevance": "high" },
+    { "id": "h2", "type": "formula_intro", "section": "3.1", "text": "Instantaneous rate is the rate at a particular moment, obtained when the time interval Δt approaches zero: r_inst = -d[R]/dt = d[P]/dt, found graphically as the slope of the tangent to the concentration-time curve at that instant.", "whyItMatters": "Tangent-slope graphical questions are a recurring exam pattern; distinguishing this from average rate is fundamental.", "neetRelevance": "high" },
+    { "id": "h3", "type": "statement", "section": "3.1", "text": "When stoichiometric coefficients of reactants and products are unequal (e.g. 2HI(g) → H₂(g) + I₂(g)), each species' rate of disappearance/appearance is divided by its own stoichiometric coefficient to obtain one common rate of reaction.", "whyItMatters": "Needed whenever the reaction isn't a simple 1:1 stoichiometry — a very common numerical setup.", "neetRelevance": "high" },
+    { "id": "h4", "type": "caution", "section": "3.2.2", "text": "Rate law for any reaction cannot be predicted merely by looking at the balanced chemical equation — it must be determined experimentally. The exponents in the rate law need not equal the stoichiometric coefficients.", "whyItMatters": "One of the most heavily tested conceptual traps in this chapter — never assume the rate law from stoichiometry.", "neetRelevance": "high" },
+    { "id": "h5", "type": "definition", "section": "3.2.3", "text": "The sum of powers of the concentration terms in the rate law expression is called the order of that chemical reaction. Order can be 0, 1, 2, 3 or even a fraction, and is always found from the experimentally derived rate law.", "whyItMatters": "Core definition; order calculations from rate expressions are a guaranteed exam question type.", "neetRelevance": "high" },
+    { "id": "h6", "type": "caution", "section": "3.2.4", "text": "Molecularity is defined only for elementary reactions and is always a small whole number (1, 2 or 3); termolecular reactions are rare and slow because the simultaneous collision of more than three molecules is highly improbable. Order, unlike molecularity, applies to elementary as well as complex reactions and can be zero or fractional.", "whyItMatters": "Order vs molecularity is a classic assertion-reason and one-word-difference question.", "neetRelevance": "high" },
+    { "id": "h7", "type": "statement", "section": "3.2.4", "text": "For a complex (multistep) reaction, the overall rate is controlled by the slowest step, called the rate determining step; the order of the overall reaction equals the order (and molecularity) of this slowest elementary step.", "whyItMatters": "Explains why an apparently high-order stoichiometric equation (e.g. the KClO₃-FeSO₄ reaction) can show simple experimental kinetics.", "neetRelevance": "medium" },
+    { "id": "h8", "type": "formula_intro", "section": "3.3.3", "text": "For a zero order reaction, t₁/₂ = [R]₀/2k (half-life is directly proportional to initial concentration); for a first order reaction, t₁/₂ = 0.693/k (half-life is completely independent of initial concentration).", "whyItMatters": "The independence of first-order half-life from [R]₀ is the standard experimental test to confirm first-order kinetics.", "neetRelevance": "high" },
+    { "id": "h9", "type": "statement", "section": "3.3.3", "text": "Reactions such as acid hydrolysis of an ester and inversion of cane sugar are intrinsically second order but behave as pseudo-first-order because one reactant (water) is present in large excess, so its concentration barely changes during the reaction.", "whyItMatters": "Pseudo-first-order identification is a frequent conceptual and numerical question (see exercise data tables with '[A]' only tabulated).", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "3.4", "text": "It has been found empirically that for a chemical reaction, a rise in temperature by 10°C nearly doubles the rate constant.", "whyItMatters": "Quick qualitative-reasoning fact, often used as a distractor or a starting assumption in Arrhenius numericals.", "neetRelevance": "medium" },
+    { "id": "h11", "type": "formula_intro", "section": "3.4", "text": "Arrhenius equation: k = Ae^(-Ea/RT), where A is the frequency (pre-exponential) factor and Ea is the activation energy. Taking natural log gives ln k = ln A - Ea/RT, a straight line when ln k is plotted against 1/T.", "whyItMatters": "The single most numerically tested formula in this chapter.", "neetRelevance": "high" },
+    { "id": "h12", "type": "caution", "section": "3.4", "text": "The factor e^(-Ea/RT) represents the fraction of molecules with kinetic energy equal to or greater than Ea. Increasing temperature increases this fraction (per the Maxwell-Boltzmann distribution), which is the molecular-level reason rate increases sharply with temperature.", "whyItMatters": "Links the Arrhenius equation to the Maxwell-Boltzmann distribution curve — a common 'explain why' conceptual question.", "neetRelevance": "medium" },
+    { "id": "h13", "type": "statement", "section": "3.4.1", "text": "A catalyst provides an alternate reaction pathway with lower activation energy (intermediate complex theory). It is not consumed, does not alter ΔG of the reaction or the equilibrium constant, and speeds up the forward and reverse reactions to the same extent — equilibrium is reached faster but is not shifted.", "whyItMatters": "A frequently tested conceptual point: catalysts change rate/kinetics, never equilibrium position or thermodynamics.", "neetRelevance": "high" },
+    { "id": "h14", "type": "formula_intro", "section": "3.5", "text": "Collision theory: for a bimolecular elementary reaction, Rate = Z_AB·e^(-Ea/RT); including the steric factor P for proper molecular orientation, Rate = P·Z_AB·e^(-Ea/RT). Only collisions with energy ≥ threshold energy AND correct orientation ('effective collisions') lead to products.", "whyItMatters": "Explains deviations of the simple Arrhenius picture for complex molecules and connects A to collision frequency.", "neetRelevance": "high" },
+    { "id": "h15", "type": "statement", "section": "3.3.2", "text": "For a gaseous reaction at constant temperature, concentration is directly proportional to partial pressure, so the rate of reaction can also be expressed as the rate of change of partial pressure of a reactant or product.", "whyItMatters": "Needed for pressure-based first-order gas decomposition numericals, a common exam pattern (e.g. N₂O₅, SO₂Cl₂ decomposition).", "neetRelevance": "medium" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Rate of a chemical reaction", "definition": "The change in concentration of a reactant or product per unit time, expressed either as the rate of decrease in concentration of a reactant or the rate of increase in concentration of a product.", "section": "3.1" },
+    { "id": "d2", "term": "Average rate", "definition": "The change in concentration of a reactant or product over a measurable time interval: r_av = -Δ[R]/Δt = +Δ[P]/Δt.", "section": "3.1" },
+    { "id": "d3", "term": "Instantaneous rate", "definition": "The rate of a reaction at a particular moment, obtained as the time interval Δt approaches zero; equal to the slope of the tangent to the concentration-time curve at that point.", "section": "3.1" },
+    { "id": "d4", "term": "Rate law (rate equation/rate expression)", "definition": "The expression that relates the rate of a reaction to the molar concentrations of reactants, each raised to some power, determined experimentally — not from the balanced equation.", "section": "3.2.2" },
+    { "id": "d5", "term": "Rate constant (k)", "definition": "The proportionality constant in the rate law; numerically equal to the rate of reaction when the concentration of each reactant is unity.", "section": "3.2.2" },
+    { "id": "d6", "term": "Order of a reaction", "definition": "The sum of the powers of the concentration terms in the rate law expression; can be zero, a whole number, or a fraction, and is always an experimentally determined quantity.", "section": "3.2.3" },
+    { "id": "d7", "term": "Molecularity of a reaction", "definition": "The number of reacting species (atoms, ions or molecules) that must collide simultaneously in an elementary reaction to bring about a chemical reaction; always a whole number from 1 to 3, and defined only for elementary steps.", "section": "3.2.4" },
+    { "id": "d8", "term": "Elementary reaction / complex reaction", "definition": "An elementary reaction takes place in a single step. When a sequence of elementary reactions (a mechanism) gives the products, the overall process is called a complex reaction.", "section": "3.2.4" },
+    { "id": "d9", "term": "Rate determining step", "definition": "The slowest step in a multistep (complex) reaction mechanism; it controls the overall rate of the reaction, just as the slowest runner controls a relay team's overall time.", "section": "3.2.4" },
+    { "id": "d10", "term": "Half-life of a reaction (t₁/₂)", "definition": "The time in which the concentration of a reactant is reduced to one half of its initial concentration.", "section": "3.3.3" },
+    { "id": "d11", "term": "Pseudo first order reaction", "definition": "A reaction that is intrinsically of higher order but follows first-order kinetics because the concentration of one reactant, present in large excess, remains effectively constant during the reaction (e.g. acid hydrolysis of an ester, inversion of cane sugar).", "section": "3.3.3" },
+    { "id": "d12", "term": "Activation energy (Ea)", "definition": "The minimum extra energy that colliding reactant molecules must possess, over and above their average energy, to form the activated complex and react successfully; appears in the Arrhenius equation k = Ae^(-Ea/RT).", "section": "3.4" },
+    { "id": "d13", "term": "Collision frequency (Z) and effective collisions", "definition": "Collision frequency is the number of collisions per second per unit volume of the reaction mixture. An effective collision is one where colliding molecules have energy equal to or greater than the threshold energy AND the correct mutual orientation, so that bonds can break and re-form to give products.", "section": "3.5" }
+  ],
+  "figures": [
+    { "id": "fig-3-1", "kind": "graph", "label": "Fig. 3.1", "ncertPage": 63, "section": "3.1", "caption": "Instantaneous and average rate of a reaction: concentration of reactant/product plotted against time; the slope of the tangent at a point gives the instantaneous rate, the slope of the chord over an interval gives the average rate.", "placeholderText": "NCERT Chemistry XII · Ch 3 · Page 63 · Fig. 3.1", "src": null, "uploadHint": "Crop from lech103.pdf page 3" },
+    { "id": "fig-3-4", "kind": "graph", "label": "Fig. 3.4 / Fig. 3.5", "ncertPage": 73, "section": "3.3.2", "caption": "Graphical test for first order kinetics: a plot of ln[R] vs t is a straight line with slope -k, and a plot of log([R]₀/[R]) vs t is a straight line with slope k/2.303.", "placeholderText": "NCERT Chemistry XII · Ch 3 · Page 73 · Fig. 3.4/3.5", "src": null, "uploadHint": "Crop from lech103.pdf page 13" },
+    { "id": "fig-3-7", "kind": "graph", "label": "Fig. 3.7", "ncertPage": 79, "section": "3.4", "caption": "Potential energy versus reaction coordinate, showing the activated complex at the peak and the activation energy (Ea) barrier that reactants must cross to form products.", "placeholderText": "NCERT Chemistry XII · Ch 3 · Page 79 · Fig. 3.7", "src": null, "uploadHint": "Crop from lech103.pdf page 19" },
+    { "id": "fig-3-10", "kind": "graph", "label": "Fig. 3.10", "ncertPage": 80, "section": "3.4", "caption": "Arrhenius plot: ln k versus 1/T is a straight line with slope = -Ea/R and intercept = ln A, used to determine Ea and A graphically from experimental (k, T) data.", "placeholderText": "NCERT Chemistry XII · Ch 3 · Page 80 · Fig. 3.10", "src": null, "uploadHint": "Crop from lech103.pdf page 20" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Average and instantaneous rate of reaction",
+      "latex": "r_{av} = -\\dfrac{\\Delta[R]}{\\Delta t} = +\\dfrac{\\Delta[P]}{\\Delta t}; \\qquad r_{inst} = -\\dfrac{d[R]}{dt} = \\dfrac{d[P]}{dt}",
+      "plain": "average rate = -(change in [reactant])/(time interval) = +(change in [product])/(time interval); instantaneous rate is the same ratio as Δt → 0 (slope of the tangent)",
+      "symbols": [
+        { "symbol": "[R], [P]", "meaning": "molar concentration of reactant and product" },
+        { "symbol": "Δt", "meaning": "finite time interval" },
+        { "symbol": "d[R]/dt", "meaning": "instantaneous rate of change of concentration" }
+      ],
+      "whenToUse": "Computing rate from a concentration-time table or graph, including reactions with unequal stoichiometric coefficients: Rate = -(1/a)d[A]/dt = -(1/b)d[B]/dt = +(1/c)d[C]/dt = +(1/d)d[D]/dt for aA+bB→cC+dD.",
+      "derivedFrom": "NCERT Eq. 3.1-3.3",
+      "commonMistakes": [
+        "Forgetting the negative sign for a reactant's rate of disappearance, which otherwise gives a negative 'rate'.",
+        "Reporting average rate over a large interval when the question specifically asks for the rate AT an instant (needs the tangent's slope, not a chord)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Compute average rate from a concentration-time table",
+          "howToInterpret": "Identify Δ[R] or Δ[P] and Δt between the two given time points.",
+          "howItConnectsToFormula": "r_av = -Δ[R]/Δt or +Δ[P]/Δt, with an appropriate unit conversion for time if needed.",
+          "exampleStem": "From concentrations of C₄H₉Cl at t=0 (0.100 mol L⁻¹) and t=50 s (0.0905 mol L⁻¹), calculate the average rate of hydrolysis.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Relate rates of different species in an unequal-coefficient reaction",
+          "howToInterpret": "Divide each species' rate of concentration change by its own stoichiometric coefficient to get one common reaction rate.",
+          "howItConnectsToFormula": "Rate = -(1/2)d[HI]/dt = d[H₂]/dt = d[I₂]/dt for 2HI(g) → H₂(g) + I₂(g).",
+          "exampleStem": "For 2HI(g) → H₂(g) + I₂(g), if H₂ forms at 4×10⁻⁴ mol L⁻¹s⁻¹, find the rate of disappearance of HI and the overall reaction rate.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Rate is just how fast concentration changes — negative for a reactant being used up, positive for a product being formed. When stoichiometric coefficients aren't equal to one, divide each term by its own coefficient first so every species gives you the same single overall reaction rate."
+    },
+    {
+      "id": "f2",
+      "name": "Rate law, rate constant and order of reaction",
+      "latex": "\\text{Rate} = k[A]^x[B]^y; \\qquad n = x + y",
+      "plain": "rate = k × [A] raised to x × [B] raised to y; overall order n = x + y",
+      "symbols": [
+        { "symbol": "k", "meaning": "rate constant (proportionality constant)" },
+        { "symbol": "x, y", "meaning": "order of reaction with respect to A and B respectively" },
+        { "symbol": "n", "meaning": "overall order of reaction" }
+      ],
+      "whenToUse": "Writing the differential rate equation, finding order from initial-rate experimental data, or identifying order from the units of k.",
+      "derivedFrom": "NCERT Eq. 3.4, 3.4a, 3.4b",
+      "commonMistakes": [
+        "Assuming x=a and y=b (the stoichiometric coefficients) — the rate law must come from EXPERIMENTAL data, not the balanced equation.",
+        "Confusing order (x+y, can be zero or fractional) with molecularity (a whole number from 1-3, elementary steps only)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Determine order from initial-rate data (doubling/comparison method)",
+          "howToInterpret": "Compare two experiments where only one concentration changes; see how the rate scales to infer that species' order.",
+          "howItConnectsToFormula": "If doubling [NO] quadruples the rate while [O₂] is constant, order wrt NO = 2; if doubling [O₂] doubles the rate, order wrt O₂ = 1, giving Rate=k[NO]²[O₂].",
+          "exampleStem": "Using initial rate data for 2NO(g)+O₂(g)→2NO₂(g) at varying [NO] and [O₂], determine the rate law.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Identify order from units of the rate constant",
+          "howToInterpret": "Match the given units of k against the standard order-unit table.",
+          "howItConnectsToFormula": "k in L mol⁻¹s⁻¹ ⇒ second order; k in s⁻¹ ⇒ first order; k in mol L⁻¹s⁻¹ ⇒ zero order.",
+          "exampleStem": "Identify the reaction order if k = 3×10⁻⁴ s⁻¹.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Overall order with fractional or negative exponents",
+          "howToInterpret": "Simply sum all exponents in the given rate law, including negative or fractional ones.",
+          "howItConnectsToFormula": "Rate = k[A]^(1/2)[B]^(3/2) ⇒ order = 1/2 + 3/2 = 2 (second order).",
+          "exampleStem": "Calculate the overall order of a reaction with rate expression Rate = k[A]^(3/2)[B]^(-1).",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "The rate law's exponents are experimental facts, not the balanced equation's coefficients — always get x and y from data, usually by comparing experiments where you vary one concentration at a time and watch how the rate scales."
+    },
+    {
+      "id": "f3",
+      "name": "Integrated rate law — zero order reaction",
+      "latex": "[R] = [R]_0 - kt; \\qquad k = \\dfrac{[R]_0-[R]}{t}; \\qquad t_{1/2} = \\dfrac{[R]_0}{2k}",
+      "plain": "concentration falls linearly with time; half-life is proportional to initial concentration",
+      "symbols": [
+        { "symbol": "[R]₀", "meaning": "initial concentration of reactant" },
+        { "symbol": "[R]", "meaning": "concentration of reactant at time t" },
+        { "symbol": "k", "meaning": "zero order rate constant, units mol L⁻¹s⁻¹" }
+      ],
+      "whenToUse": "Reactions whose rate is independent of reactant concentration — enzyme-catalysed reactions at saturation, and reactions occurring on a metal surface at high pressure/coverage (e.g. decomposition of NH₃ or HI on a hot metal catalyst).",
+      "derivedFrom": "NCERT Eq. 3.5-3.7",
+      "commonMistakes": [
+        "Forgetting zero-order half-life DEPENDS on initial concentration — many students wrongly assume all half-lives are constant like first order.",
+        "Reading the [R] vs t plot's slope as +k instead of -k."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Rate of production of a specific product for a zero order reaction",
+          "howToInterpret": "Rate = k[reactant]⁰ = k, then use stoichiometric coefficients to get individual product formation rates.",
+          "howItConnectsToFormula": "For 2NH₃(g)→N₂(g)+3H₂(g) with Rate=k, rate of N₂ formation = k and rate of H₂ formation = 3k.",
+          "exampleStem": "The decomposition of NH₃ on a platinum surface is zero order with k=2.5×10⁻⁴ mol L⁻¹s⁻¹. What are the rates of production of N₂ and H₂?",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Recognizing the straight-line graph for zero order",
+          "howToInterpret": "[R] vs t gives a straight line with slope -k and intercept [R]₀ — the standard graphical signature of a zero order reaction.",
+          "howItConnectsToFormula": "Directly compares to equation [R] = [R]₀ - kt in the form y = mx + c.",
+          "exampleStem": "Which plot, [R] vs t or ln[R] vs t, gives a straight line for a zero order reaction?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Zero order means concentration drops in a straight line at a constant rate k, no matter how much reactant is left — that's why its half-life keeps shrinking as concentration falls, the opposite of first order."
+    },
+    {
+      "id": "f4",
+      "name": "Integrated rate law — first order reaction",
+      "latex": "\\ln[R] = \\ln[R]_0 - kt; \\quad [R]=[R]_0e^{-kt}; \\quad k=\\dfrac{2.303}{t}\\log\\dfrac{[R]_0}{[R]}; \\quad t_{1/2}=\\dfrac{0.693}{k}",
+      "plain": "log of concentration falls linearly with time; half-life is constant, independent of initial concentration",
+      "symbols": [
+        { "symbol": "[R]₀", "meaning": "initial concentration of reactant" },
+        { "symbol": "[R]", "meaning": "concentration of reactant at time t" },
+        { "symbol": "k", "meaning": "first order rate constant, units s⁻¹ (or min⁻¹, etc.)" }
+      ],
+      "whenToUse": "Radioactive decay, decomposition of N₂O₅ or N₂O, hydrogenation of ethene, and confirming first-order behaviour by checking that half-life is constant.",
+      "derivedFrom": "NCERT Eq. 3.8-3.15, 3.17",
+      "commonMistakes": [
+        "Mixing natural log (ln) and base-10 log (needing the 2.303 conversion factor) without adjusting the formula.",
+        "Forgetting t₁/₂ = 0.693/k is INDEPENDENT of initial concentration — this is the quickest experimental test for first-order kinetics.",
+        "Sign errors when rearranging log([R]₀/[R]) = kt/2.303."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find k from two concentration-time data points",
+          "howToInterpret": "Identify [R]₀, [R] and the elapsed time t, then substitute directly.",
+          "howItConnectsToFormula": "k = (2.303/t)log([R]₀/[R]).",
+          "exampleStem": "The concentration of N₂O₅ was 1.24×10⁻² mol L⁻¹ at 318K, falling to 0.20×10⁻² mol L⁻¹ after 60 minutes. Calculate the rate constant.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Time for a given percentage completion",
+          "howToInterpret": "Express [R] as a fraction of [R]₀ corresponding to the stated percentage completion, then solve for t (or show the ratio is a fixed multiple of t₁/₂).",
+          "howItConnectsToFormula": "t = (2.303/k)log([R]₀/[R]); e.g. for 99.9% completion, [R]=0.001[R]₀ gives t=6.909/k=10×t₁/₂.",
+          "exampleStem": "Show that the time required for 99.9% completion of a first order reaction is 10 times its half-life.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Radioactive decay / archaeological age estimation",
+          "howToInterpret": "Radioactive decay always follows first order kinetics; use the fraction of the original isotope remaining to find elapsed time.",
+          "howItConnectsToFormula": "k=0.693/t₁/₂, then t=(2.303/k)log([R]₀/[R]) with the given remaining fraction.",
+          "exampleStem": "The half-life for radioactive decay of ¹⁴C is 5730 years. An artifact has only 80% of the ¹⁴C found in a living tree. Estimate its age.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "First order is the exponential-decay pattern — plot ln concentration against time and you get a straight line, and crucially, its half-life never changes no matter how much material you start with. That constant half-life is the signature you look for."
+    },
+    {
+      "id": "f5",
+      "name": "First order gas-phase reaction from total pressure data",
+      "latex": "k=\\dfrac{2.303}{t}\\log\\dfrac{p_i}{2p_i-p_t}",
+      "plain": "rate constant found from initial pressure and total pressure at time t, for a gas-phase reaction A(g)→B(g)+C(g)",
+      "symbols": [
+        { "symbol": "p_i", "meaning": "initial pressure of reactant A" },
+        { "symbol": "p_t", "meaning": "total pressure of the system at time t" }
+      ],
+      "whenToUse": "First-order decomposition reactions monitored via change in total pressure in a closed vessel at constant volume/temperature (e.g. N₂O₅, SO₂Cl₂, azoisopropane decomposition).",
+      "derivedFrom": "NCERT Eq. 3.16",
+      "commonMistakes": [
+        "Not setting up the pressure table (initial, change, at time t, for each species) before substituting — the formula's exact form depends on the reaction's stoichiometry.",
+        "Using the A→B+C formula blindly for a different stoichiometry (e.g. 2N₂O₅→2N₂O₄+O₂) without re-deriving the partial pressure of the reactant from the actual mole ratios."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Simple 1:1:1 gas decomposition (A→B+C)",
+          "howToInterpret": "Set up p_A = 2p_i - p_t from the pressure table, then substitute directly into the k formula.",
+          "howItConnectsToFormula": "k = (2.303/t)log[p_i/(2p_i-p_t)].",
+          "exampleStem": "The thermal decomposition of N₂O₅(g) at constant volume gives total pressure 0.5 atm at t=0 and 0.512 atm at t=100 s. Calculate the rate constant.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Different mole-ratio stoichiometry",
+          "howToInterpret": "Re-derive the reactant's partial pressure in terms of the measured total pressure using the specific stoichiometric coefficients before applying the standard first-order k formula.",
+          "howItConnectsToFormula": "k = (2.303/t)log(p_i/p_A), where p_A must be freshly derived for the given reaction.",
+          "exampleStem": "SO₂Cl₂(g) → SO₂(g) + Cl₂(g) decomposes with total pressure rising from 0.5 atm to 0.6 atm in 100 s. Calculate the rate of reaction when total pressure is 0.65 atm.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "For gas reactions monitored by total pressure, first work out how each species' pressure changes using a simple initial-change-at time table, express the reactant's own partial pressure in terms of the measured total pressure, then plug into the usual first-order k formula."
+    },
+    {
+      "id": "f6",
+      "name": "Pseudo first order reaction rate law",
+      "latex": "\\text{Rate}=k'[\\text{ester}][H_2O] \\approx k[\\text{ester}], \\qquad k = k'[H_2O]",
+      "plain": "an intrinsically higher-order reaction behaves as first order when one reactant is present in large excess and its concentration stays essentially constant throughout",
+      "symbols": [
+        { "symbol": "k'", "meaning": "true (higher-order) rate constant" },
+        { "symbol": "k", "meaning": "observed pseudo first order rate constant" },
+        { "symbol": "[H₂O]", "meaning": "concentration of the excess reactant, effectively constant" }
+      ],
+      "whenToUse": "Reactions where water (or another reactant) is present in a huge excess relative to the other reactant — acid hydrolysis of esters, inversion of cane sugar.",
+      "derivedFrom": "NCERT section 3.3.3 discussion following Eq. 3.17",
+      "commonMistakes": [
+        "Treating the reaction as genuinely first order rather than recognizing it is pseudo-first-order because a reactant's concentration barely changes.",
+        "Forgetting the true/actual order is higher (often second) even though observed kinetics fit the first-order integrated rate equation."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify and use pseudo first order behaviour",
+          "howToInterpret": "Given hydrolysis or inversion data where only one reactant's concentration is tabulated (because the other, water, is in vast excess), confirm the reaction fits the first-order integrated rate equation despite being second order overall.",
+          "howItConnectsToFormula": "Apply k=(2.303/t)log([A]₀/[A]) exactly as for a true first order reaction.",
+          "exampleStem": "In a pseudo first order hydrolysis in water, [A] falls from 0.55 to 0.085 mol L⁻¹ over 90 s (data at t=0,30,60,90 s). Calculate the average rate between 30 and 60 seconds.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Pseudo first order is a disguise — the reaction is really higher order, but because one reactant, usually water, is in such large excess that its concentration barely budges, the kinetics look exactly like a clean first-order reaction."
+    },
+    {
+      "id": "f7",
+      "name": "Arrhenius equation (exponential and logarithmic form)",
+      "latex": "k = Ae^{-E_a/RT}; \\qquad \\ln k = \\ln A - \\dfrac{E_a}{RT}; \\qquad \\log k = \\log A - \\dfrac{E_a}{2.303RT}",
+      "plain": "rate constant depends exponentially on temperature and activation energy; taking the log gives a straight-line form",
+      "symbols": [
+        { "symbol": "A", "meaning": "Arrhenius/frequency/pre-exponential factor, related to collision frequency" },
+        { "symbol": "Ea", "meaning": "activation energy, J mol⁻¹" },
+        { "symbol": "R", "meaning": "gas constant, 8.314 J K⁻¹mol⁻¹" },
+        { "symbol": "T", "meaning": "absolute temperature, K" }
+      ],
+      "whenToUse": "Relating rate constant to temperature; finding Ea and A graphically from a plot of ln k (or log k) versus 1/T.",
+      "derivedFrom": "NCERT Eq. 3.18, 3.19",
+      "commonMistakes": [
+        "Using temperature in °C instead of Kelvin.",
+        "Mixing ln and log₁₀ without applying the 2.303 conversion factor consistently.",
+        "Forgetting the negative sign in the exponent — a higher Ea means a SMALLER k at a given T."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Graphical determination of Ea and A",
+          "howToInterpret": "From a straight-line plot of ln k vs 1/T built from a k-vs-T data table, read off slope and intercept.",
+          "howItConnectsToFormula": "slope = -Ea/R ⇒ Ea = -slope×R; intercept = ln A ⇒ A = e^(intercept).",
+          "exampleStem": "Given a table of k at temperatures 0°C, 20°C, 40°C, 60°C and 80°C for N₂O₅ decomposition, draw ln k vs 1/T and calculate Ea and A.",
+          "difficulty": "advanced"
+        },
+        {
+          "patternName": "Find A given k, Ea and T",
+          "howToInterpret": "Rearrange k=Ae^(-Ea/RT) to solve for A once k, Ea, R and T are known.",
+          "howItConnectsToFormula": "A = k / e^(-Ea/RT) = k·e^(Ea/RT).",
+          "exampleStem": "A reaction has k=0.02 s⁻¹ at 500K and Ea=18230.8 J/mol. Find the value of A.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The Arrhenius equation is the master temperature-rate relationship. Take the log of both sides and it becomes a straight line — plot ln k against 1/T, and the slope directly hands you the activation energy while the intercept gives you the frequency factor A."
+    },
+    {
+      "id": "f8",
+      "name": "Relation between rate constants at two temperatures",
+      "latex": "\\log\\dfrac{k_2}{k_1}=\\dfrac{E_a}{2.303R}\\left(\\dfrac{1}{T_1}-\\dfrac{1}{T_2}\\right)=\\dfrac{E_a}{2.303R}\\left(\\dfrac{T_2-T_1}{T_1T_2}\\right)",
+      "plain": "comparing rate constants k1 and k2 at two absolute temperatures T1 and T2 lets you solve for activation energy, or for k at a new temperature",
+      "symbols": [
+        { "symbol": "k₁, k₂", "meaning": "rate constants at absolute temperatures T₁ and T₂" }
+      ],
+      "whenToUse": "Two (k, T) data points given directly — find Ea; or Ea and one (k, T) pair given — find k at a new temperature.",
+      "derivedFrom": "NCERT Eq. 3.20-3.22",
+      "commonMistakes": [
+        "Swapping T₁/T₂ or k₁/k₂ inconsistently between the two sides of the equation — the labelled pairs must stay matched.",
+        "Forgetting to convert Celsius to Kelvin for T₁ and T₂."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find Ea from two (k, T) pairs",
+          "howToInterpret": "Substitute both temperatures and rate constants directly and solve for the single unknown, Ea.",
+          "howItConnectsToFormula": "log(k₂/k₁) = (Ea/2.303R)(1/T₁ - 1/T₂), rearrange for Ea.",
+          "exampleStem": "Rate constants of a reaction at 500K and 700K are 0.02 s⁻¹ and 0.07 s⁻¹ respectively. Calculate Ea and A.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Find k2 at a new temperature given Ea and k1 at T1",
+          "howToInterpret": "Substitute the known Ea, T₁, T₂, and k₁, then solve for log k₂ and hence k₂.",
+          "howItConnectsToFormula": "log k₂ = log k₁ + (Ea/2.303R)(1/T₁ - 1/T₂).",
+          "exampleStem": "The first order rate constant for decomposition of ethyl iodide at 600K is 1.60×10⁻⁵ s⁻¹, with Ea=209 kJ/mol. Calculate the rate constant at 700K.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This two-temperature form is the Arrhenius equation's most exam-friendly version — two (rate constant, temperature) pairs are enough to solve directly for the activation energy, or for a rate constant at a brand new temperature, without ever needing to know A separately."
+    },
+    {
+      "id": "f9",
+      "name": "Collision theory rate expression",
+      "latex": "\\text{Rate} = Z_{AB}e^{-E_a/RT}; \\qquad \\text{Rate} = PZ_{AB}e^{-E_a/RT}",
+      "plain": "rate = collision frequency × fraction of molecules with energy ≥ Ea, further scaled by the steric factor P for proper orientation",
+      "symbols": [
+        { "symbol": "Z_AB", "meaning": "collision frequency of reactants A and B (collisions per second per unit volume)" },
+        { "symbol": "P", "meaning": "steric/probability factor accounting for correct molecular orientation" },
+        { "symbol": "e^(-Ea/RT)", "meaning": "fraction of molecules with kinetic energy equal to or greater than Ea" }
+      ],
+      "whenToUse": "Explaining why not every molecular collision leads to a reaction — only 'effective collisions' (sufficient energy AND correct orientation) do; also connects the Arrhenius factor A to collision frequency.",
+      "derivedFrom": "NCERT Eq. 3.23",
+      "commonMistakes": [
+        "Assuming every molecular collision results in a reaction — only effective collisions do.",
+        "Forgetting threshold energy = activation energy + the average energy already possessed by the reacting species, not simply Ea alone."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain via collision theory why rate rises sharply with temperature",
+          "howToInterpret": "Link the exponential factor to the fraction of molecules crossing the threshold energy, as illustrated by the Maxwell-Boltzmann distribution curve.",
+          "howItConnectsToFormula": "A small rise in T noticeably increases the area under the distribution curve beyond Ea, increasing e^(-Ea/RT) and hence the rate.",
+          "exampleStem": "Explain, using collision theory, why a 10°C rise in temperature can nearly double the rate of a reaction.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Role of the steric factor P in orientation-sensitive reactions",
+          "howToInterpret": "Recognize that proper orientation, not just sufficient energy, is required for bond breaking/forming to occur, which is why the simple ZAB·e^(-Ea/RT) formula overestimates rate for complex molecules.",
+          "howItConnectsToFormula": "Rate = P·Z_AB·e^(-Ea/RT), with P < 1 whenever orientation matters.",
+          "exampleStem": "For the reaction CH₃Br + OH⁻ → CH₃OH + Br⁻, explain why only certain collision orientations lead to product formation.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Collision theory says a reaction needs two things at once from a collision: enough kinetic energy to cross the activation-energy barrier, AND the right molecular orientation. Multiply collision frequency by the energy fraction, and where orientation matters, by the steric factor P, and you get the rate."
+    },
+    {
+      "id": "f10",
+      "name": "Time for a given percentage completion (first order, in multiples of half-life)",
+      "latex": "t_{99.9\\%} = \\dfrac{6.909}{k} = 10\\,t_{1/2}; \\qquad t_{99\\%} = 2 \\times t_{90\\%}",
+      "plain": "for a first order reaction, the time to reach any fixed percentage completion is always a fixed multiple of the half-life, regardless of initial concentration",
+      "symbols": [
+        { "symbol": "t₉₉.₉%", "meaning": "time for 99.9% completion" },
+        { "symbol": "t₁/₂", "meaning": "half-life of the first order reaction" }
+      ],
+      "whenToUse": "'Time required for X% completion' questions where only the percentage (not absolute concentration) is given.",
+      "derivedFrom": "NCERT Example 3.8, Exercise 3.18",
+      "commonMistakes": [
+        "Trying to bring in concentration values when only percentage completion is given — for first order kinetics the ratio [R]/[R]₀ is fixed by the percentage, so absolute concentration cancels out.",
+        "Confusing the multiple for 99.9% completion (10×t₁/₂) with that for 99% completion (a different, smaller multiple)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Show time for 99.9% completion equals 10 half-lives",
+          "howToInterpret": "Set [R] = 0.001[R]₀ (99.9% consumed) in the integrated first-order equation and compare to t₁/₂.",
+          "howItConnectsToFormula": "t = (2.303/k)log(1000) = 6.909/k = 10 × (0.693/k) = 10 × t₁/₂.",
+          "exampleStem": "Show that in a first order reaction, the time required for completion of 99.9% is 10 times the half-life of the reaction.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Compare time for 99% vs 90% completion",
+          "howToInterpret": "Set up the ratio t₉₉%/t₉₀% using log(100) and log(10) respectively.",
+          "howItConnectsToFormula": "t₉₉% = (2.303/k)log(100) = 2×(2.303/k)log(10) = 2×t₉₀%.",
+          "exampleStem": "For a first order reaction, show that the time required for 99% completion is twice the time required for 90% completion.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Because first-order kinetics only cares about the RATIO of concentrations, not their absolute values, the time to reach any fixed percentage completion is always the same multiple of the half-life — memorize that 99.9% completion always takes exactly ten half-lives."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10"],
+    "definitionViewOrder": ["d1", "d4", "d5", "d6", "d7", "d9", "d10", "d11", "d12", "d13"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["order vs molecularity", "conceptual"],
+      "stages": {
+        "question": "What is the key difference between order of a reaction and molecularity of a reaction?",
+        "interpretation": "Tests the core conceptual distinction of section 3.2.4.",
+        "formula": "none — conceptual",
+        "solutionSteps": [
+          "Order = sum of powers of concentration terms in the experimentally determined rate law; can be 0, 1, 2, 3 or even a fraction",
+          "Molecularity = number of species that collide simultaneously in an elementary step; always a whole number, 1 to 3",
+          "Order applies to elementary AND complex reactions; molecularity has meaning only for elementary reactions"
+        ],
+        "answer": "Order is an experimental quantity from the rate law and can be zero or fractional, while molecularity is a theoretical count of colliding species in one elementary step and must be a whole number from 1 to 3; molecularity is undefined for complex reactions."
+      },
+      "audioScript": "Order comes from experiment and can be any number including fractions, while molecularity comes from counting colliding species in a single mechanistic step and can only ever be 1, 2 or 3."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["average rate", "numerical"],
+      "stages": {
+        "question": "For the reaction R → P, the concentration of R changes from 0.03 M to 0.02 M in 25 minutes. Calculate the average rate in mol L⁻¹min⁻¹ and mol L⁻¹s⁻¹.",
+        "interpretation": "Direct average-rate calculation from a concentration change and time interval.",
+        "formula": "r_av = -Δ[R]/Δt",
+        "solutionSteps": [
+          "Δ[R] = 0.03-0.02 = 0.01 M over Δt = 25 min",
+          "r_av = 0.01/25 = 4×10⁻⁴ mol L⁻¹min⁻¹",
+          "25 min = 1500 s, so r_av = 0.01/1500 = 6.67×10⁻⁶ mol L⁻¹s⁻¹"
+        ],
+        "answer": "4×10⁻⁴ mol L⁻¹min⁻¹, equivalently 6.67×10⁻⁶ mol L⁻¹s⁻¹"
+      },
+      "audioScript": "Just divide the drop in concentration by the time taken, then convert minutes to seconds if the question asks for both units."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["units of k", "order identification"],
+      "stages": {
+        "question": "Identify the reaction order if the rate constant k = 3×10⁻⁴ s⁻¹.",
+        "interpretation": "Units of k uniquely identify the order of reaction.",
+        "formula": "units table: mol L⁻¹s⁻¹ (order 0), s⁻¹ (order 1), mol⁻¹Ls⁻¹ (order 2)",
+        "solutionSteps": ["k has units of s⁻¹, which matches only first order reactions"],
+        "answer": "First order reaction"
+      },
+      "audioScript": "s⁻¹ with nothing else attached is the signature unit of a first order rate constant — memorize the units table and you can answer this type instantly."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "basic",
+      "tags": ["rate law", "conceptual"],
+      "stages": {
+        "question": "Why can't the rate law of a reaction be written simply by looking at its balanced chemical equation?",
+        "interpretation": "Tests understanding that rate laws come from mechanism, not overall stoichiometry.",
+        "formula": "none — conceptual",
+        "solutionSteps": [
+          "A balanced equation shows only the overall stoichiometry of reactants consumed and products formed, not the reaction mechanism",
+          "Most reactions proceed through multiple elementary steps, and the rate law reflects only the slowest (rate-determining) step",
+          "Hence exponents in the rate law need not equal stoichiometric coefficients — they must be found experimentally"
+        ],
+        "answer": "Because the rate law depends on the reaction mechanism (specifically the rate-determining step), not on the overall stoichiometric coefficients, so it must be determined experimentally."
+      },
+      "audioScript": "The balanced equation only tells you the start and end points of a reaction, not the path it takes — and rate depends entirely on that path's slowest step, which is why you can never just read off exponents from stoichiometry."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["zero order", "numerical"],
+      "stages": {
+        "question": "The decomposition of NH₃ on a platinum surface is a zero order reaction with k=2.5×10⁻⁴ mol L⁻¹s⁻¹. What are the rates of production of N₂ and H₂?",
+        "interpretation": "Zero order rate equals k directly; use stoichiometry of 2NH₃→N₂+3H₂ to get individual product rates.",
+        "formula": "Rate = k[NH₃]⁰ = k",
+        "solutionSteps": [
+          "Rate of reaction = k = 2.5×10⁻⁴ mol L⁻¹s⁻¹",
+          "Rate = -(1/2)d[NH₃]/dt = d[N₂]/dt = (1/3)d[H₂]/dt",
+          "Rate of production of N₂ = 2.5×10⁻⁴ mol L⁻¹s⁻¹",
+          "Rate of production of H₂ = 3×2.5×10⁻⁴ = 7.5×10⁻⁴ mol L⁻¹s⁻¹"
+        ],
+        "answer": "N₂ forms at 2.5×10⁻⁴ mol L⁻¹s⁻¹; H₂ forms at 7.5×10⁻⁴ mol L⁻¹s⁻¹"
+      },
+      "audioScript": "Zero order means the reaction rate simply equals k — from there it's pure stoichiometry to scale up to each product's own formation rate."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["first order", "numerical"],
+      "stages": {
+        "question": "The concentration of N₂O₅ was 1.24×10⁻² mol L⁻¹ at 318K, and fell to 0.20×10⁻² mol L⁻¹ after 60 minutes. Calculate the rate constant of this first order reaction.",
+        "interpretation": "Direct substitution into the first order integrated rate equation.",
+        "formula": "k = (2.303/t)log([R]₀/[R])",
+        "solutionSteps": [
+          "k = (2.303/60)log(1.24×10⁻²/0.20×10⁻²)",
+          "= (2.303/60)log(6.2)",
+          "= (2.303/60)×0.792 ≈ 0.0304 min⁻¹"
+        ],
+        "answer": "k ≈ 0.0304 min⁻¹"
+      },
+      "audioScript": "Plug the initial and final concentrations straight into the first-order k formula — the 2.303 factor is just the natural-to-common-log conversion."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["pseudo first order", "conceptual"],
+      "stages": {
+        "question": "The acid hydrolysis of ethyl acetate is intrinsically a second order reaction, yet it obeys first order kinetics experimentally. Explain why.",
+        "interpretation": "Tests recognition of pseudo-first-order behaviour.",
+        "formula": "Rate = k'[ester][H₂O] ≈ k[ester]",
+        "solutionSteps": [
+          "Water is used in large excess relative to the ester (e.g. 10 mol water vs 0.01 mol ester)",
+          "Even after the reaction completes, water's concentration has changed by a negligible fraction",
+          "So [H₂O] can be absorbed into a new constant k = k'[H₂O], leaving Rate = k[ester], which looks exactly like first order kinetics"
+        ],
+        "answer": "Because water is present in such large excess that its concentration stays effectively constant, letting the true second-order rate law collapse into an apparent first-order rate law — this is called a pseudo first order reaction."
+      },
+      "audioScript": "Whenever one reactant is swamped in huge excess, its concentration is essentially frozen for the duration of the reaction, so it quietly disappears into the rate constant, and the reaction 'looks' like a lower order than it truly is."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["arrhenius equation", "numerical"],
+      "stages": {
+        "question": "The rate constants of a reaction at 500K and 700K are 0.02 s⁻¹ and 0.07 s⁻¹ respectively. Calculate the activation energy Ea and the frequency factor A.",
+        "interpretation": "Two-temperature Arrhenius relation gives Ea directly; back-substitute into k=Ae^(-Ea/RT) for A.",
+        "formula": "log(k₂/k₁) = (Ea/2.303R)(1/T₁ - 1/T₂)",
+        "solutionSteps": [
+          "log(0.07/0.02) = (Ea/(2.303×8.314))×[(700-500)/(700×500)]",
+          "0.544 = Ea × 5.714×10⁻⁴/19.15",
+          "Ea = 0.544×19.15/(5.714×10⁻⁴) ≈ 18230.8 J mol⁻¹ ≈ 18.2 kJ mol⁻¹",
+          "Using k=Ae^(-Ea/RT) at 500K: 0.02 = A×e^(-18230.8/(8.314×500))",
+          "A = 0.02/0.012 ≈ 1.61"
+        ],
+        "answer": "Ea ≈ 18.2 kJ mol⁻¹; A ≈ 1.61"
+      },
+      "audioScript": "First isolate Ea from the two-temperature comparison, then plug that Ea back into the original Arrhenius equation at either temperature to solve for the frequency factor A."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "advanced",
+      "tags": ["gas phase kinetics", "pressure", "numerical"],
+      "stages": {
+        "question": "The first order thermal decomposition of N₂O₅(g) at constant volume was studied: total pressure was 0.5 atm at t=0 and 0.512 atm at t=100 s. Calculate the rate constant.",
+        "interpretation": "Use the pressure-based first order formula, after deriving the reactant's own partial pressure from the reaction's stoichiometry (2N₂O₅→2N₂O₄+O₂).",
+        "formula": "k = (2.303/t)log(p_i/p_A)",
+        "solutionSteps": [
+          "Let N₂O₅ pressure decrease by 2x; then p_N2O4 increases by 2x and p_O2 increases by x",
+          "p_t = (0.5-2x)+2x+x = 0.5+x, so x = p_t-0.5",
+          "p_N2O5 = 0.5-2x = 1.5-2p_t; at t=100s, p_t=0.512, so p_N2O5 = 1.5-1.024 = 0.476 atm",
+          "k = (2.303/100)log(0.5/0.476) = (2.303/100)×0.0216 ≈ 4.98×10⁻⁴ s⁻¹"
+        ],
+        "answer": "k ≈ 4.98×10⁻⁴ s⁻¹"
+      },
+      "audioScript": "Build the pressure table carefully from the balanced equation first — the '2x decrease, 2x and x increase' setup is what lets you convert the measured total pressure into the reactant's own partial pressure before applying the first-order formula."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "advanced",
+      "tags": ["arrhenius equation", "collision theory", "catalyst"],
+      "stages": {
+        "question": "The first order rate constant for decomposition of ethyl iodide (C₂H₅I → C₂H₄ + HI) at 600K is 1.60×10⁻⁵ s⁻¹, with activation energy 209 kJ/mol. Calculate the rate constant at 700K, and explain qualitatively how adding a catalyst would further change k without changing Ea's role in the equation.",
+        "interpretation": "Two-temperature Arrhenius calculation, plus conceptual extension to how a catalyst works.",
+        "formula": "log k₂ = log k₁ + (Ea/2.303R)(1/T₁ - 1/T₂)",
+        "solutionSteps": [
+          "log k₂ = log(1.60×10⁻⁵) + [209000/(2.303×8.314)]×[(1/600)-(1/700)]",
+          "= -4.796 + 2.599 = -2.197",
+          "k₂ = 6.36×10⁻³ s⁻¹",
+          "A catalyst would lower Ea itself (a new, smaller Ea in a new pathway), which increases k at the SAME temperature — it does not require raising T, unlike the calculation above"
+        ],
+        "answer": "k₂ ≈ 6.36×10⁻³ s⁻¹ at 700K; a catalyst increases k by lowering Ea (opening an alternate lower-energy pathway) rather than by raising temperature."
+      },
+      "audioScript": "The numerical part is a routine two-temperature Arrhenius calculation. The conceptual twist is realizing there are two independent ways to boost k: raise T, or lower Ea via a catalyst — a catalyst achieves the same kind of rate increase without touching the temperature at all."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why is the order of a reaction an experimentally determined quantity that cannot be predicted from the balanced chemical equation alone?",
+      "Why can molecularity never be zero or a fraction, while order of reaction can be?",
+      "Why does adding a catalyst increase reaction rate without changing the equilibrium constant of the reaction?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "For the reaction R → P, concentration of R changes from 0.03 M to 0.02 M in 25 minutes. Calculate the average rate of reaction in mol L⁻¹min⁻¹ and mol L⁻¹s⁻¹.",
+        "interpretation": "Direct average-rate calculation from a concentration drop over a time interval.",
+        "formulaIds": ["f1"],
+        "steps": [
+          "Δ[R] = 0.03 - 0.02 = 0.01 M over Δt = 25 min",
+          "r_av = -Δ[R]/Δt = 0.01/25 = 4×10⁻⁴ mol L⁻¹min⁻¹",
+          "25 min = 1500 s ⟹ r_av = 0.01/1500 ≈ 6.67×10⁻⁶ mol L⁻¹s⁻¹"
+        ],
+        "answer": "4×10⁻⁴ mol L⁻¹min⁻¹ = 6.67×10⁻⁶ mol L⁻¹s⁻¹",
+        "audioScript": "Simple subtraction and division — change in concentration over change in time, then a unit conversion for seconds."
+      },
+      {
+        "id": "pb2",
+        "question": "The decomposition of NH₃ on a platinum surface is zero order with k=2.5×10⁻⁴ mol L⁻¹s⁻¹. What are the rates of production of N₂ and H₂?",
+        "interpretation": "Zero order rate equals k; scale to each product using the balanced equation 2NH₃→N₂+3H₂.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "Rate of reaction = k[NH₃]⁰ = k = 2.5×10⁻⁴ mol L⁻¹s⁻¹",
+          "Rate = d[N₂]/dt = (1/3)d[H₂]/dt = k",
+          "Rate of N₂ formation = 2.5×10⁻⁴ mol L⁻¹s⁻¹; rate of H₂ formation = 3×2.5×10⁻⁴ = 7.5×10⁻⁴ mol L⁻¹s⁻¹"
+        ],
+        "answer": "N₂: 2.5×10⁻⁴ mol L⁻¹s⁻¹; H₂: 7.5×10⁻⁴ mol L⁻¹s⁻¹",
+        "audioScript": "The zero order rate is just k itself, then multiply by each product's stoichiometric coefficient to scale up."
+      },
+      {
+        "id": "pb3",
+        "question": "A first order reaction is found to have a rate constant k=5.5×10⁻¹⁴ s⁻¹. Find the half-life of the reaction.",
+        "interpretation": "Direct substitution into the first order half-life formula.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "t₁/₂ = 0.693/k",
+          "t₁/₂ = 0.693/(5.5×10⁻¹⁴) ≈ 1.26×10¹³ s"
+        ],
+        "answer": "t₁/₂ ≈ 1.26×10¹³ s",
+        "audioScript": "First order half-life is a one-line calculation — 0.693 divided by k, no concentration values needed at all."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "A first order reaction takes 40 minutes for 30% decomposition. Calculate its half-life.",
+        "interpretation": "Find k from the given percentage decomposition, then convert to half-life.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "30% decomposed means [R] = 0.70[R]₀ remains",
+          "k = (2.303/40)log(1/0.70) = (2.303/40)×0.1549 ≈ 0.00891 min⁻¹",
+          "t₁/₂ = 0.693/k = 0.693/0.00891 ≈ 77.8 min"
+        ],
+        "answer": "t₁/₂ ≈ 77.8 minutes",
+        "audioScript": "Convert the percentage decomposed into a concentration ratio first, find k from that, then convert k to half-life with the standard 0.693/k formula."
+      },
+      {
+        "id": "pi2",
+        "question": "The rate constant for a first order reaction is 60 s⁻¹. How much time will it take to reduce the initial concentration of the reactant to its 1/16th value?",
+        "interpretation": "Recognize 1/16 = (1/2)⁴, so either use 4 half-lives or substitute directly into the k formula.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "[R]₀/[R] = 16, so log(16) ≈ 1.204",
+          "t = (2.303/k)log([R]₀/[R]) = (2.303×1.204)/60",
+          "t ≈ 0.0462 s"
+        ],
+        "answer": "t ≈ 4.62×10⁻² s",
+        "audioScript": "Since 1/16 is exactly four halvings, you could also just multiply the half-life by 4 — both routes give the same answer for a first order reaction."
+      },
+      {
+        "id": "pi3",
+        "question": "The rate constant for decomposition of a hydrocarbon is 2.418×10⁻⁵ s⁻¹ at 546K. If the energy of activation is 179.9 kJ/mol, find the value of the pre-exponential factor A.",
+        "interpretation": "Rearrange the Arrhenius equation to isolate A, using the single given (k, T) pair.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "k = Ae^(-Ea/RT) ⟹ A = k×e^(Ea/RT)",
+          "Ea/RT = 179900/(8.314×546) ≈ 39.63",
+          "A = 2.418×10⁻⁵ × e^39.63 ≈ 2.0×10¹² s⁻¹ (order of magnitude, matching the NCERT-quoted answer)"
+        ],
+        "answer": "A ≈ 2.0×10¹² s⁻¹",
+        "audioScript": "With only one (k, T) pair and a known Ea, just rearrange the Arrhenius equation algebraically to isolate A and substitute — no need for the two-temperature comparison formula here."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "The rate constants of a reaction at 500K and 700K are 0.02 s⁻¹ and 0.07 s⁻¹ respectively. Calculate the values of Ea and A.",
+        "interpretation": "Two-temperature Arrhenius relation for Ea, then back-substitute for A.",
+        "formulaIds": ["f7", "f8"],
+        "steps": [
+          "log(0.07/0.02) = [Ea/(2.303×8.314)]×[(700-500)/(700×500)]",
+          "0.544 = Ea×5.714×10⁻⁴/19.15 ⟹ Ea ≈ 18230.8 J mol⁻¹ ≈ 18.2 kJ mol⁻¹",
+          "0.02 = A×e^(-18230.8/(8.314×500)) ⟹ A ≈ 0.02/0.012 ≈ 1.61"
+        ],
+        "answer": "Ea ≈ 18.2 kJ mol⁻¹; A ≈ 1.61",
+        "audioScript": "This exact worked example is one of the most-reused NEET-style Arrhenius numericals — master this two-step pattern of finding Ea first, then A."
+      },
+      {
+        "id": "pa2",
+        "question": "Thermal decomposition of N₂O₅(g) at constant volume gives total pressure 0.5 atm at t=0 and 0.512 atm at t=100 s. Calculate the rate constant of this first order gas-phase reaction.",
+        "interpretation": "Build the pressure table from the stoichiometry 2N₂O₅→2N₂O₄+O₂, express the reactant's own partial pressure in terms of total pressure, then apply the first order pressure formula.",
+        "formulaIds": ["f5"],
+        "steps": [
+          "Let N₂O₅ pressure fall by 2x; N₂O₄ rises by 2x, O₂ rises by x",
+          "p_t = (0.5-2x)+2x+x = 0.5+x ⟹ x = p_t - 0.5",
+          "p_N2O5 = 0.5-2x = 1.5-2p_t; at t=100s: p_N2O5 = 1.5-2(0.512) = 0.476 atm",
+          "k = (2.303/100)log(0.5/0.476) ≈ 4.98×10⁻⁴ s⁻¹"
+        ],
+        "answer": "k ≈ 4.98×10⁻⁴ s⁻¹",
+        "audioScript": "This is the classic gas-phase kinetics pattern — always derive the reactant's partial pressure from a fresh ICE-style pressure table tailored to the exact stoichiometry, never reuse a memorized formula blindly."
+      },
+      {
+        "id": "pa3",
+        "question": "The first order rate constant for decomposition of ethyl iodide (C₂H₅I(g)→C₂H₄(g)+HI(g)) at 600K is 1.60×10⁻⁵ s⁻¹, with activation energy 209 kJ/mol. Calculate the rate constant of the reaction at 700K.",
+        "interpretation": "Two-temperature Arrhenius relation solved for the unknown k₂.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "log k₂ = log k₁ + (Ea/2.303R)(1/T₁ - 1/T₂)",
+          "= log(1.60×10⁻⁵) + [209000/(2.303×8.314)]×[(1/600)-(1/700)]",
+          "= -4.796 + 2.599 = -2.197",
+          "k₂ = 10^(-2.197) ≈ 6.36×10⁻³ s⁻¹"
+        ],
+        "answer": "k₂ ≈ 6.36×10⁻³ s⁻¹",
+        "audioScript": "Notice how dramatically the rate constant jumps, from about 1.6×10⁻⁵ to over 6×10⁻³, for just a 100K rise — that's the exponential sensitivity built into the Arrhenius equation."
+      }
+    ],
+    "transferPrompt": "Once comfortable with this chapter, try connecting the Arrhenius equation's activation energy concept to the Maxwell-Boltzmann distribution and to the Equilibrium chapter's Kc — for instance, explain why a catalyst speeding up both forward and reverse reactions equally leaves the equilibrium constant completely unchanged."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 3 — Chemical Kinetics. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (rate of reaction and how to express it, rate law/order/molecularity, integrated rate equations and half-life for zero and first order reactions, pseudo-first-order reactions, the Arrhenius equation and activation energy, or collision theory). First quiz me on definitions and formulas with NO calculation involved — average vs instantaneous rate, rate law vs stoichiometry, order vs molecularity, and the meaning of activation energy, frequency factor and steric factor. Then move to basic numericals tied to a single formula (average rate from a concentration-time table, zero order product-rate scaling, first order half-life from k). Then intermediate problems requiring one extra step (finding k or half-life from percentage decomposition, pseudo-first-order rate calculations, finding A from a single Arrhenius data point). Then advanced multi-step problems (two-temperature Arrhenius calculations for Ea and A, gas-phase first-order kinetics from total pressure data requiring a fresh stoichiometric pressure table, radioactive decay age-estimation problems). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 10 formulas with when-to-use notes). Stay within this chapter's scope (rate of reaction, rate law, order, molecularity, integrated rate equations, half-life, pseudo-first-order reactions, Arrhenius equation, activation energy, collision theory) unless I explicitly ask to connect to another chapter such as Equilibrium or Electrochemistry.",
+  "selfCheck": [
+    { "q": "What is the key difference between order of reaction and molecularity?", "a": "Order is an experimentally determined quantity from the rate law, can be 0, fractional or a whole number, and applies to both elementary and complex reactions; molecularity is the number of species colliding simultaneously in an elementary step, is always a whole number from 1 to 3, and has no meaning for complex/overall reactions." },
+    { "q": "Why is the half-life of a first order reaction independent of initial concentration while that of a zero order reaction is not?", "a": "For a first order reaction, t₁/₂ = 0.693/k depends only on the rate constant; for a zero order reaction, t₁/₂ = [R]₀/2k is directly proportional to the initial concentration, so a larger starting amount takes proportionally longer to halve." },
+    { "q": "State the Arrhenius equation and explain what each symbol means.", "a": "k = Ae^(-Ea/RT), where k is the rate constant, A is the frequency (pre-exponential) factor related to collision frequency, Ea is the activation energy, R is the gas constant, and T is the absolute temperature." },
+    { "q": "Why does a catalyst increase the rate of reaction without changing ΔG or the equilibrium constant?", "a": "A catalyst provides an alternate pathway with lower activation energy, speeding up the forward and reverse reactions equally, so equilibrium is reached faster but is not shifted; ΔG is a state function depending only on the initial and final states, which the catalyst does not alter." },
+    { "q": "What is a pseudo first order reaction? Give one example.", "a": "A reaction that is intrinsically of higher order but appears to follow first-order kinetics because one reactant is present in such large excess that its concentration remains effectively constant; example: acid hydrolysis of an ester such as ethyl acetate, or inversion of cane sugar." }
+  ]
+}

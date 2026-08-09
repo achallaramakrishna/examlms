@@ -1,0 +1,696 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 2,
+    "chapterTitle": "Electrochemistry",
+    "ncertCode": "lech102",
+    "topicIdHint": "Electrochemistry",
+    "estimatedRevisionMinutes": 60,
+    "chapter": "Electrochemistry",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Differentiate galvanic and electrolytic cells, write correct cell notation (anode left, cathode right), and calculate standard and non-standard cell potentials using the Nernst equation.",
+    "Relate standard cell potential to the standard Gibbs energy change and the equilibrium constant of the cell reaction.",
+    "Define resistivity, conductance, conductivity and molar conductivity of ionic solutions, and compute them from measured resistance and cell-constant data.",
+    "Explain how conductivity and molar conductivity vary with concentration for strong versus weak electrolytes, and apply Kohlrausch's law to obtain limiting molar conductivity, degree of dissociation and dissociation constant for weak electrolytes.",
+    "State and apply Faraday's laws of electrolysis to calculate charge passed, mass deposited or liberated at an electrode, and predict products of electrolysis.",
+    "Describe the working of common primary, secondary and fuel-cell batteries, and explain corrosion as a spontaneous electrochemical process."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Galvanic vs electrolytic cells and electrode potential lead into the Nernst equation, the ΔG°-E°-K relation, conductance/conductivity/molar conductivity, Kohlrausch's law, Faraday's laws of electrolysis, and finally batteries and corrosion as applied electrochemistry.",
+    "mustKnowBullets": [
+      "Cell notation: anode (oxidation, negative) on the left, cathode (reduction, positive) on the right; single line = phase boundary, double line (‖) = salt bridge; E_cell = E_right − E_left = E_cathode − E_anode.",
+      "Standard hydrogen electrode, Pt(s)|H2(g,1 bar)|H+(aq,1M), is assigned E° = 0.00 V at all temperatures — the reference for every standard electrode potential.",
+      "In Table 2.1 (standard electrode potentials), a more positive E° means a stronger oxidising agent (F2 is highest, +2.87 V); a more negative E° means a stronger reducing agent (Li is lowest, −3.05 V).",
+      "Nernst equation (electrode): E = E° − (RT/nF) ln(1/[Mⁿ⁺]); at 298 K this becomes E = E° − (0.059/n) log(1/[Mⁿ⁺]).",
+      "Nernst equation (cell), 298 K: E_cell = E°_cell − (0.059/n) log Q, where Q is the reaction quotient of the cell reaction.",
+      "At equilibrium E_cell = 0 and Q = Kc, giving E°_cell = (0.059/n) log Kc (298 K) — the bridge between electrochemistry and chemical equilibrium.",
+      "ΔrG° = −nFE°_cell = −RT ln Kc — from a single voltage measurement you can get the standard Gibbs energy AND the equilibrium constant of a reaction.",
+      "Faraday constant F = 96487 C mol⁻¹ ≈ 96500 C mol⁻¹ = charge carried by one mole of electrons (F = N_A × e).",
+      "Conductance G = 1/R (unit siemens, S); conductivity κ = 1/resistivity ρ; cell constant G* = l/A = Rκ, found using a KCl solution of known κ.",
+      "Molar conductivity Λm = κ/c; if κ is in S cm⁻¹ and c in mol L⁻¹, Λm (S cm² mol⁻¹) = κ × 1000 / molarity.",
+      "On dilution, conductivity κ ALWAYS decreases (fewer ions per unit volume) while molar conductivity Λm ALWAYS increases (larger volume contains exactly 1 mole of electrolyte) — for both strong and weak electrolytes.",
+      "Strong electrolytes: Λm rises slowly and linearly with √c — Λm = Λ°m − A√c; Λ°m is found by extrapolating the Λm vs √c plot to c → 0.",
+      "Weak electrolytes: Λm rises steeply near zero concentration (rising degree of dissociation); Λ°m CANNOT be found by extrapolation — use Kohlrausch's law instead.",
+      "Kohlrausch's law of independent migration of ions: Λ°m = ν₊λ°₊ + ν₋λ°₋. For a weak electrolyte, α = Λm/Λ°m and Ka = cα²/(1−α) = cΛm²/[Λ°m(Λ°m−Λm)].",
+      "Faraday's laws of electrolysis: mass deposited/liberated m = ZIt = (M/nF)It, where Q = It is the charge passed and M/n is the equivalent mass.",
+      "Fuel cells (e.g. H2–O2) run continuously as long as reactants are fed in, are pollution-free, and are far more efficient (~70%) than thermal power plants (~40%); corrosion (e.g. rusting of iron) is itself a spontaneous electrochemical cell process."
+    ],
+    "keyTables": [
+      {
+        "title": "Batteries at a glance — primary, secondary and fuel cells",
+        "rows": [
+          ["Battery", "Electrodes / electrolyte", "Approx. voltage", "Rechargeable?"],
+          ["Dry cell (Leclanché) — primary", "Zn container (anode) | graphite rod in MnO2 + carbon (cathode); moist NH4Cl + ZnCl2 paste", "~1.5 V", "No"],
+          ["Mercury cell — primary", "Zn–Hg amalgam (anode) | HgO + carbon (cathode); KOH + ZnO paste", "~1.35 V (constant through life)", "No"],
+          ["Lead storage battery — secondary", "Pb (anode) | PbO2 packed on lead grid (cathode); 38% H2SO4", "~2.0 V per cell", "Yes"],
+          ["Nickel–cadmium cell — secondary", "Cd (anode) | NiO(OH) (cathode)", "~1.4 V", "Yes — longer life than lead storage, costlier"],
+          ["H2–O2 fuel cell", "Porous carbon electrodes, concentrated aqueous NaOH, Pt/Pd catalyst", "~1.0–1.2 V (practical)", "Runs continuously while H2 and O2 are supplied"]
+        ]
+      },
+      {
+        "title": "Conductivity vs molar conductivity on dilution",
+        "rows": [
+          ["Quantity", "Strong electrolyte (e.g. KCl)", "Weak electrolyte (e.g. CH3COOH)"],
+          ["Conductivity κ", "Decreases steadily", "Decreases steadily"],
+          ["Molar conductivity Λm", "Increases slowly; Λm = Λ°m − A√c, linear vs √c", "Increases steeply near c → 0, due to rising degree of dissociation"],
+          ["How Λ°m is obtained", "Extrapolate the Λm vs √c line to c = 0", "Cannot extrapolate — use Kohlrausch's law: Λ°m = ν₊λ°₊ + ν₋λ°₋"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "2.1", "text": "A galvanic (voltaic) cell converts the chemical energy of a spontaneous redox reaction into electrical energy (e.g. the Daniell cell, Zn(s)+Cu²⁺(aq)→Zn²⁺(aq)+Cu(s)). An electrolytic cell does the reverse — it uses an external source of electrical energy to drive a non-spontaneous chemical reaction.", "whyItMatters": "This distinction underlies every later section — batteries and corrosion are galvanic-cell applications, while electrolysis and electroplating are electrolytic-cell applications.", "neetRelevance": "high" },
+    { "id": "h2", "type": "statement", "section": "2.2", "text": "By convention, a galvanic cell is represented with the anode (oxidation, negative electrode) on the left and the cathode (reduction, positive electrode) on the right. A single vertical line marks a phase boundary and a double vertical line (‖) marks the salt bridge. Then E_cell = E_right − E_left = E_cathode − E_anode.", "whyItMatters": "Getting the notation and subtraction order right is essential before any Nernst-equation or ΔG calculation can be attempted correctly.", "neetRelevance": "high" },
+    { "id": "h3", "type": "definition", "section": "2.2.1", "text": "The standard hydrogen electrode (SHE), Pt(s)|H2(g, 1 bar)|H⁺(aq, 1M), is assigned a potential of exactly 0.00 V at all temperatures by convention, corresponding to H⁺(aq)+e⁻→½H2(g).", "whyItMatters": "Every value in the standard electrode potential table is measured relative to this single reference electrode — it is the 'zero' of the whole electrochemical series.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "2.2.1", "text": "In the table of standard electrode potentials, species with a more positive E° (e.g. F2/F⁻ at +2.87 V) are stronger oxidising agents and get reduced more easily; species with a more negative E° (e.g. Li⁺/Li at −3.05 V) are the weakest oxidising agents but Li metal is the strongest reducing agent in aqueous solution.", "whyItMatters": "Lets you predict, without extra calculation, which combination of half-reactions is spontaneous and which metal will displace which from solution.", "neetRelevance": "high" },
+    { "id": "h5", "type": "formula_intro", "section": "2.3", "text": "The Nernst equation extends the idea of standard electrode/cell potential (valid only at unit concentration) to any concentration: E = E° − (RT/nF) ln Q.", "whyItMatters": "Almost every numerical in this chapter beyond the very simplest reduces to a correct application of this one equation.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "2.3.1", "text": "When a galvanic cell reaches equilibrium, the voltmeter reads zero (E_cell=0) and Q equals Kc, giving E°_cell = (2.303RT/nF) log Kc = (0.059/n) log Kc at 298 K.", "whyItMatters": "Provides a practical way to measure equilibrium constants — including very large ones, like 2×10³⁷ for the Daniell cell reaction — that would be nearly impossible to measure directly.", "neetRelevance": "high" },
+    { "id": "h7", "type": "formula_intro", "section": "2.3.2", "text": "The reversible electrical work of a galvanic cell equals the decrease in Gibbs energy of the reaction: ΔrG = −nFE_cell, and at standard conditions ΔrG° = −nFE°_cell = −RT ln Kc.", "whyItMatters": "Directly links three big ideas — cell potential, thermodynamics, and equilibrium — into one equation; a favourite for multi-part numerical questions.", "neetRelevance": "high" },
+    { "id": "h8", "type": "caution", "section": "2.3.2", "text": "E_cell is an intensive property (independent of how the balanced equation is written) but ΔrG is extensive: doubling every stoichiometric coefficient doubles n and therefore doubles ΔrG, even though E_cell itself stays unchanged.", "whyItMatters": "A very common trap — students often forget to use the value of n that matches the equation exactly as written in a given question.", "neetRelevance": "high" },
+    { "id": "h9", "type": "definition", "section": "2.4", "text": "Conductance G = 1/R is measured in siemens (S); conductivity (specific conductance) κ = 1/ρ is the reciprocal of resistivity. Conductivity of ionic solutions is measured with an AC source (not DC, which would change the solution's composition) using a specially designed conductivity cell on a Wheatstone bridge.", "whyItMatters": "Sets up the vocabulary (R, ρ, G, κ) used throughout the rest of the conductance section.", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "2.4.1", "text": "The cell constant G* = l/A = Rκ of a conductivity cell is first determined using a KCl solution of accurately known conductivity, then reused to find the conductivity of any unknown solution from its measured resistance: κ = G*/R.", "whyItMatters": "This two-step method (calibrate with KCl, then measure the unknown) is the basis of every conductivity/molar-conductivity numerical in this chapter.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "2.4.2", "text": "Conductivity κ always DECREASES on dilution (fewer ions per unit volume carry the current), while molar conductivity Λm always INCREASES on dilution (the larger volume of solution needed to contain exactly one mole of electrolyte more than compensates for the drop in κ).", "whyItMatters": "This opposite behaviour of κ and Λm on dilution is one of the most frequently tested conceptual points in this chapter.", "neetRelevance": "high" },
+    { "id": "h12", "type": "statement", "section": "2.4.2", "text": "For strong electrolytes, Λm increases only slowly and linearly with √c (Λm = Λ°m − A√c), so Λ°m can be found by extrapolating the straight-line plot to c → 0. For weak electrolytes, Λm rises steeply as concentration approaches zero, because the degree of dissociation increases sharply on dilution.", "whyItMatters": "Explains the shape of the Λm vs √c graph for acetic acid (steep curve) versus KCl (nearly straight line) — a classic figure-based question.", "neetRelevance": "high" },
+    { "id": "h13", "type": "statement", "section": "2.4.3", "text": "Kohlrausch's law of independent migration of ions states that the limiting molar conductivity of an electrolyte is the sum of the individual contributions of its cation and anion: Λ°m = ν₊λ°₊ + ν₋λ°₋, where ν₊ and ν₋ are the numbers of cations and anions produced per formula unit.", "whyItMatters": "This is the ONLY way to get Λ°m for a weak electrolyte (which cannot be extrapolated); it also lets you calculate the degree of dissociation α and the dissociation constant Ka of weak acids/bases.", "neetRelevance": "high" },
+    { "id": "h14", "type": "formula_intro", "section": "2.5", "text": "Faraday's first law: the amount of chemical reaction at an electrode is proportional to the charge passed. Faraday's second law: for the same charge, the amounts of different substances liberated are proportional to their equivalent weights. Together, mass deposited m = ZIt = (M/nF)It, with F = 96487 C mol⁻¹ ≈ 96500 C mol⁻¹.", "whyItMatters": "The quantitative foundation for every electrolysis and electroplating numerical, including multi-cell series-connection problems.", "neetRelevance": "high" },
+    { "id": "h15", "type": "caution", "section": "2.5.1", "text": "The actual products of electrolysis depend on which species is present, the electrode material (inert like Pt/Au vs reactive), and the relative electrode potentials of the competing oxidation/reduction reactions — including the extra 'overpotential' sometimes needed for a kinetically slow reaction like O2 evolution.", "whyItMatters": "Explains why concentrated aqueous NaCl gives Cl2 at the anode (not O2, despite O2's lower E°) — overpotential effects are a favourite twist in electrolysis-product questions.", "neetRelevance": "high" },
+    { "id": "h16", "type": "statement", "section": "2.6-2.8", "text": "Primary batteries (dry cell, mercury cell) cannot be recharged once the reactants are used up; secondary batteries (lead storage battery, nickel-cadmium cell) CAN be recharged by passing current in the reverse direction; fuel cells (e.g. H2–O2) run continuously as reactants are fed in and are far more efficient (~70%) than thermal power plants (~40%). Corrosion — such as the rusting of iron — is itself a spontaneous electrochemical process, with distinct anodic and cathodic spots on the same metal surface.", "whyItMatters": "Ties the whole chapter's theory (electrode potentials, Nernst equation, Gibbs energy) to real-world applications that are frequently tested as assertion-reason or match-the-following questions.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Galvanic (voltaic) cell", "definition": "An electrochemical cell that converts the chemical energy of a spontaneous redox reaction into electrical energy, e.g. the Daniell cell.", "section": "2.1" },
+    { "id": "d2", "term": "Electrolytic cell", "definition": "A device that uses an external source of electrical energy to bring about a non-spontaneous chemical reaction.", "section": "2.1" },
+    { "id": "d3", "term": "Half-cell / redox couple", "definition": "Each of the two portions of a galvanic cell where a single oxidation or reduction half-reaction occurs; the oxidation half-cell is the anode, the reduction half-cell is the cathode.", "section": "2.2" },
+    { "id": "d4", "term": "Electrode potential", "definition": "The potential difference that develops between an electrode and the electrolyte solution it dips into, due to the tendency of the electrode to lose or gain electrons.", "section": "2.2" },
+    { "id": "d5", "term": "Standard electrode potential (E°)", "definition": "The electrode potential when the concentration of every species involved in the half-cell reaction is unity (1 M), measured relative to the standard hydrogen electrode at 298 K.", "section": "2.2" },
+    { "id": "d6", "term": "Standard hydrogen electrode (SHE)", "definition": "The reference electrode Pt(s)|H2(g, 1 bar)|H⁺(aq, 1M), assigned E° = 0.00 V at all temperatures.", "section": "2.2.1" },
+    { "id": "d7", "term": "Cell potential / electromotive force (emf)", "definition": "The potential difference between the two electrodes of a galvanic cell when no current is drawn; equals the difference between the reduction potentials of the cathode and the anode.", "section": "2.2" },
+    { "id": "d8", "term": "Resistivity (ρ)", "definition": "The constant of proportionality relating resistance to length and cross-sectional area, R = ρl/A; SI unit ohm metre (Ω m).", "section": "2.4" },
+    { "id": "d9", "term": "Conductivity (κ)", "definition": "The reciprocal of resistivity (specific conductance); SI unit S m⁻¹, though S cm⁻¹ is also commonly used.", "section": "2.4" },
+    { "id": "d10", "term": "Molar conductivity (Λm)", "definition": "The conductance of a volume of solution containing exactly one mole of electrolyte, kept between two electrodes of unit area separated by unit distance; Λm = κ/c.", "section": "2.4.1" },
+    { "id": "d11", "term": "Limiting molar conductivity (Λ°m)", "definition": "The molar conductivity of an electrolyte at infinite dilution (concentration approaching zero), where ionic interactions vanish.", "section": "2.4.2" },
+    { "id": "d12", "term": "Faraday constant (F)", "definition": "The magnitude of charge carried by one mole of electrons, F = N_A × e ≈ 96487 C mol⁻¹ (approximated as 96500 C mol⁻¹).", "section": "2.5" },
+    { "id": "d13", "term": "Corrosion", "definition": "The spontaneous electrochemical process by which a metal surface is gradually converted into its oxide or other salt on exposure to air and moisture, e.g. the rusting of iron.", "section": "2.8" }
+  ],
+  "figures": [
+    { "id": "fig-2-1", "kind": "figure", "label": "Fig. 2.1", "ncertPage": 32, "section": "2.1", "caption": "The Daniell cell — zinc and copper electrodes dipping into solutions of their own salts, connected by a salt bridge; it converts the redox reaction Zn(s)+Cu²⁺(aq)→Zn²⁺(aq)+Cu(s) into electrical energy.", "placeholderText": "NCERT Chemistry XII · Ch 2 · Page 32 · Fig. 2.1", "src": null, "uploadHint": "Crop from lech102.pdf page 1" },
+    { "id": "fig-2-3", "kind": "figure", "label": "Fig. 2.3", "ncertPage": 34, "section": "2.2.1", "caption": "The standard hydrogen electrode (SHE) — a platinum-black-coated electrode dipped in 1 M H⁺ with hydrogen gas at 1 bar bubbled through it; assigned E°=0.00 V as the universal reference electrode.", "placeholderText": "NCERT Chemistry XII · Ch 2 · Page 34 · Fig. 2.3", "src": null, "uploadHint": "Crop from lech102.pdf page 4" },
+    { "id": "fig-2-6", "kind": "graph", "label": "Fig. 2.6", "ncertPage": 47, "section": "2.4.2", "caption": "Molar conductivity (Λm) versus √c for acetic acid (weak electrolyte, steep curve) and KCl (strong electrolyte, nearly straight line) — shows why Λ°m can be extrapolated for strong but not weak electrolytes.", "placeholderText": "NCERT Chemistry XII · Ch 2 · Page 47 · Fig. 2.6", "src": null, "uploadHint": "Crop from lech102.pdf page 16" },
+    { "id": "fig-2-13", "kind": "figure", "label": "Fig. 2.13", "ncertPage": 57, "section": "2.8", "caption": "Corrosion of iron in the atmosphere — an anodic spot (Fe oxidised to Fe²⁺) and a cathodic spot (O2 reduced in presence of H⁺) form on the same iron surface, with rust (hydrated Fe2O3) forming after further atmospheric oxidation.", "placeholderText": "NCERT Chemistry XII · Ch 2 · Page 57 · Fig. 2.13", "src": null, "uploadHint": "Crop from lech102.pdf page 26" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Cell EMF and cell notation convention",
+      "latex": "E_{cell} = E_{right} - E_{left} = E_{cathode} - E_{anode}",
+      "plain": "cell potential = potential of the right-hand (cathode) half-cell minus the left-hand (anode) half-cell",
+      "symbols": [
+        { "symbol": "E_cell", "meaning": "emf of the cell (V)" },
+        { "symbol": "E_right, E_left", "meaning": "reduction potentials of the half-cells written on the right and left in the cell notation" }
+      ],
+      "whenToUse": "Whenever you need to represent a cell from a given spontaneous reaction, or find E°_cell from two standard electrode potentials. By convention, anode is written on the left and cathode on the right.",
+      "derivedFrom": "NCERT Eq. 2.7",
+      "commonMistakes": [
+        "Writing anode on the right and cathode on the left, which violates the convention.",
+        "Subtracting in the wrong order — always E_cathode − E_anode, never the reverse.",
+        "Forgetting the double vertical line (‖) for the salt bridge between the two half-cell compartments."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Represent a galvanic cell from a given spontaneous reaction",
+          "howToInterpret": "Split the overall equation into its oxidation (anode) and reduction (cathode) half-reactions.",
+          "howItConnectsToFormula": "Write anode|electrolyte‖electrolyte|cathode, then apply E_cell=E_right−E_left using standard electrode potentials.",
+          "exampleStem": "Represent the galvanic cell for Mg(s)+2Ag⁺(aq)→Mg²⁺(aq)+2Ag(s) and calculate its standard emf, given E°(Ag⁺/Ag)=0.80 V and E°(Mg²⁺/Mg)=−2.37 V.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Think of the cell notation as a sentence you read left to right, electrons flowing from where they're released to where they're consumed. The anode always sits on the left because that's where oxidation happens, and the cathode on the right because that's where reduction happens — and the cell voltage is always cathode potential minus anode potential."
+    },
+    {
+      "id": "f2",
+      "name": "Nernst equation for electrode potential",
+      "latex": "E_{(M^{n+}/M)} = E^{\\circ}_{(M^{n+}/M)} - \\dfrac{RT}{nF}\\ln\\dfrac{1}{[M^{n+}]}",
+      "plain": "electrode potential at any concentration = standard electrode potential minus (RT/nF) times the natural log of 1 over the ion concentration",
+      "symbols": [
+        { "symbol": "R", "meaning": "gas constant, 8.314 J K⁻¹ mol⁻¹" },
+        { "symbol": "T", "meaning": "temperature in kelvin" },
+        { "symbol": "n", "meaning": "number of electrons transferred in the half-reaction" },
+        { "symbol": "F", "meaning": "Faraday constant, 96487 C mol⁻¹" },
+        { "symbol": "[M^{n+}]", "meaning": "concentration of the metal ion in solution" }
+      ],
+      "whenToUse": "Whenever a single electrode's potential must be found at a concentration other than the standard 1 M (the concentration of the pure solid M is taken as unity and drops out).",
+      "derivedFrom": "NCERT Eq. 2.8",
+      "commonMistakes": [
+        "Forgetting that a pure solid or liquid electrode has activity 1, so it never appears inside the log term.",
+        "Sign confusion between ln(1/[Mⁿ⁺]) and ln[Mⁿ⁺] — they are negatives of each other."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Potential of a single electrode at non-standard concentration",
+          "howToInterpret": "Identify the half-reaction, its E°, n, and the given ion concentration.",
+          "howItConnectsToFormula": "Substitute directly; at 298 K use E = E° − (0.059/n) log(1/[Mⁿ⁺]).",
+          "exampleStem": "Calculate the potential of a hydrogen electrode in contact with a solution whose pH is 10.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is the single-electrode version of the Nernst idea — it corrects the standard potential for whatever concentration you actually have, and since a pure solid electrode's 'concentration' is always 1, it simply disappears from the equation."
+    },
+    {
+      "id": "f3",
+      "name": "Nernst equation for the cell reaction",
+      "latex": "E_{(cell)} = E^{\\circ}_{(cell)} - \\dfrac{RT}{nF}\\ln Q = E^{\\circ}_{(cell)} - \\dfrac{0.059}{n}\\log Q \\ \\text{(at 298 K)}",
+      "plain": "cell potential at any concentration = standard cell potential minus (0.059/n) times log of the reaction quotient (at 298 K)",
+      "symbols": [
+        { "symbol": "Q", "meaning": "reaction quotient of the overall cell reaction" },
+        { "symbol": "n", "meaning": "number of electrons transferred, exactly as balanced in the overall equation used" }
+      ],
+      "whenToUse": "Finding the emf of a complete cell whose reactant/product concentrations are not all 1 M — the single most common numerical pattern in this chapter.",
+      "derivedFrom": "NCERT Eq. 2.13",
+      "commonMistakes": [
+        "Using an n that does not match how the given equation is actually balanced.",
+        "Using the 0.059/n shortcut at a temperature other than 298 K without first re-deriving the constant from 2.303RT/F."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Cell emf at given non-standard concentrations",
+          "howToInterpret": "Write the balanced overall cell reaction, identify n, and form Q from the given concentrations.",
+          "howItConnectsToFormula": "Substitute E°_cell, n and Q into E_cell = E°_cell − (0.059/n) log Q.",
+          "exampleStem": "Represent the cell in which Mg(s)+2Ag⁺(0.0001M)→Mg²⁺(0.130M)+2Ag(s) occurs and calculate E_cell if E°_cell=3.17 V.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Once you have the balanced equation and know which side is products versus reactants, this is just careful bookkeeping — form Q the same way you would for any equilibrium expression, using solid/liquid activities as 1, then plug into the log term."
+    },
+    {
+      "id": "f4",
+      "name": "Equilibrium constant from standard cell potential",
+      "latex": "E^{\\circ}_{(cell)} = \\dfrac{2.303RT}{nF}\\log K_C = \\dfrac{0.059}{n}\\log K_C \\ \\text{(at 298 K)}",
+      "plain": "standard cell potential = (0.059/n) times log of the equilibrium constant, at 298 K",
+      "symbols": [
+        { "symbol": "K_C", "meaning": "equilibrium constant of the overall cell reaction" }
+      ],
+      "whenToUse": "Calculating the equilibrium constant of a redox reaction from its measured (or calculated) standard cell potential — this reaction quotient reaches Kc exactly when the cell reaches equilibrium (voltmeter reads zero).",
+      "derivedFrom": "NCERT Eq. 2.14",
+      "commonMistakes": [
+        "Forgetting to convert log Kc back to Kc by taking the antilog (10^x), not stopping at log Kc.",
+        "Using the wrong n, which enters as a multiplier so a wrong n causes an error that compounds when exponentiated."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find Kc given E°_cell",
+          "howToInterpret": "Identify n from the balanced equation and substitute E°_cell.",
+          "howItConnectsToFormula": "log Kc = nE°_cell/0.059, then Kc = 10^(that value).",
+          "exampleStem": "Calculate the equilibrium constant of the reaction Cu(s)+2Ag⁺(aq)→Cu²⁺(aq)+2Ag(s), given E°_cell=0.46 V.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "A cell that has 'run down' to zero voltage isn't broken — it has simply reached chemical equilibrium, and this equation lets you convert that voltage measurement into the actual equilibrium constant of the reaction, however large or small."
+    },
+    {
+      "id": "f5",
+      "name": "Gibbs energy and cell potential",
+      "latex": "\\Delta_rG = -nFE_{(cell)}, \\qquad \\Delta_rG^{\\circ} = -nFE^{\\circ}_{(cell)} = -RT\\ln K_C",
+      "plain": "Gibbs energy change of the cell reaction = −(number of electrons) × Faraday constant × cell potential",
+      "symbols": [
+        { "symbol": "ΔrG", "meaning": "Gibbs energy change of the reaction (J or kJ per mole of reaction as written)" },
+        { "symbol": "ΔrG°", "meaning": "standard Gibbs energy change" }
+      ],
+      "whenToUse": "Converting a measured cell potential into a thermodynamic quantity, or vice versa; also the bridge equation connecting E°_cell directly to Kc via ΔrG°=−RT ln K.",
+      "derivedFrom": "NCERT Eq. 2.15, 2.16",
+      "commonMistakes": [
+        "Forgetting the negative sign — a spontaneous reaction has positive E_cell AND negative ΔrG, not both positive.",
+        "Mixing up units — if F is in C mol⁻¹ and E in V, ΔrG comes out in J mol⁻¹, not kJ mol⁻¹, unless you divide by 1000."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find ΔrG° given E°_cell",
+          "howToInterpret": "Identify n and E°_cell from the given reaction.",
+          "howItConnectsToFormula": "ΔrG° = −nFE°_cell, then convert J mol⁻¹ to kJ mol⁻¹ if required.",
+          "exampleStem": "The standard electrode potential for the Daniell cell is 1.1 V. Calculate the standard Gibbs energy for the reaction Zn(s)+Cu²⁺(aq)→Zn²⁺(aq)+Cu(s).",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "This equation is the electrochemist's shortcut to thermodynamics — instead of measuring enthalpy and entropy separately, you just measure a voltage with a voltmeter and multiply by n and F to get the full Gibbs energy change of the reaction."
+    },
+    {
+      "id": "f6",
+      "name": "Resistivity, conductance, conductivity and cell constant",
+      "latex": "R = \\rho\\dfrac{l}{A}, \\quad G=\\dfrac{1}{R}=\\dfrac{\\kappa A}{l}, \\quad \\kappa = \\dfrac{1}{\\rho}, \\quad G^{*}=\\dfrac{l}{A}=R\\kappa",
+      "plain": "resistance = resistivity × length / area; conductance = 1/resistance = conductivity × area / length; cell constant = length/area = resistance × conductivity",
+      "symbols": [
+        { "symbol": "ρ", "meaning": "resistivity (Ω m or Ω cm)" },
+        { "symbol": "κ", "meaning": "conductivity (S m⁻¹ or S cm⁻¹)" },
+        { "symbol": "G*", "meaning": "cell constant of the conductivity cell (length⁻¹)" }
+      ],
+      "whenToUse": "Converting between measured resistance/conductance of a conductivity cell and the actual conductivity of the solution inside it, using the cell constant (found beforehand with a standard KCl solution).",
+      "derivedFrom": "NCERT Eq. 2.17-2.20",
+      "commonMistakes": [
+        "Mixing cm and m units for l and A without converting consistently.",
+        "Using the resistance of the cell directly as if it were the resistivity or conductivity, forgetting to multiply/divide by the cell constant."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find conductivity/resistivity of a solution from its resistance and cell dimensions",
+          "howToInterpret": "Identify whether the cell constant is given directly, or must be computed from l and A, or from a reference KCl measurement.",
+          "howItConnectsToFormula": "κ = G*/R = (l/A)/R = l/(AR); or ρ = RA/l.",
+          "exampleStem": "The electrical resistance of a column of 0.05 mol L⁻¹ NaOH solution of diameter 1 cm and length 50 cm is 5.55×10³ Ω. Calculate its resistivity, conductivity and molar conductivity.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "These four quantities are really just two reciprocal pairs plumbed together through the cell's geometry — resistivity and conductivity are reciprocals of each other, and so are resistance and conductance, with the cell constant l/A converting between the 'per-cell' and 'per-unit-geometry' versions."
+    },
+    {
+      "id": "f7",
+      "name": "Molar conductivity",
+      "latex": "\\Lambda_m = \\dfrac{\\kappa}{c}, \\qquad \\Lambda_m\\,(\\text{S cm}^2\\text{mol}^{-1}) = \\dfrac{\\kappa\\,(\\text{S cm}^{-1})\\times 1000\\,(\\text{cm}^3/\\text{L})}{\\text{molarity}\\,(\\text{mol/L})}",
+      "plain": "molar conductivity = conductivity / concentration (with a factor of 1000 when mixing S cm⁻¹ with mol/L)",
+      "symbols": [
+        { "symbol": "Λm", "meaning": "molar conductivity (S m² mol⁻¹ or S cm² mol⁻¹)" },
+        { "symbol": "c", "meaning": "molar concentration of the electrolyte" }
+      ],
+      "whenToUse": "Converting a measured conductivity into the more physically meaningful molar conductivity, which accounts for the actual concentration of ions present.",
+      "derivedFrom": "NCERT Eq. 2.21",
+      "commonMistakes": [
+        "Forgetting the ×1000 conversion factor when κ is in S cm⁻¹ but c is in mol L⁻¹ (mol/dm³) rather than mol/cm³.",
+        "Confusing S m² mol⁻¹ and S cm² mol⁻¹ units — they differ by a factor of 10⁴."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Compute Λm from resistance and known conductivity of a reference solution",
+          "howToInterpret": "First get the cell constant, then the unknown conductivity, then divide by concentration.",
+          "howItConnectsToFormula": "Λm = κ×1000/molarity (when using S cm⁻¹ and mol/L).",
+          "exampleStem": "Resistance of a conductivity cell filled with 0.1 mol L⁻¹ KCl is 100 Ω; with 0.02 mol L⁻¹ KCl it is 520 Ω. Given the conductivity of 0.1 mol L⁻¹ KCl is 1.29 S/m, calculate the conductivity and molar conductivity of the 0.02 mol L⁻¹ solution.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Molar conductivity normalises conductivity per mole of electrolyte present, which is why it behaves so differently from raw conductivity as you dilute a solution — always keep the unit system consistent, since a stray missing factor of 1000 is the most common numerical slip here."
+    },
+    {
+      "id": "f8",
+      "name": "Variation of molar conductivity with concentration — strong electrolytes",
+      "latex": "\\Lambda_m = \\Lambda^{\\circ}_m - A\\sqrt{c}",
+      "plain": "molar conductivity of a strong electrolyte decreases linearly with the square root of concentration, from its limiting (infinite dilution) value",
+      "symbols": [
+        { "symbol": "Λ°m", "meaning": "limiting molar conductivity (at infinite dilution)" },
+        { "symbol": "A", "meaning": "a constant depending on the type of electrolyte (e.g. 1-1, 2-1, 2-2) and the solvent/temperature" }
+      ],
+      "whenToUse": "Only for STRONG electrolytes — plotting Λm against √c gives a straight line whose intercept is Λ°m and whose slope is −A, letting you extrapolate to zero concentration.",
+      "derivedFrom": "NCERT Eq. 2.23",
+      "commonMistakes": [
+        "Applying this linear relation to a weak electrolyte, where Λm actually rises steeply near c→0 instead of linearly.",
+        "Plotting Λm against c instead of √c, which does not give a straight line."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Determine Λ°m and A for a strong electrolyte from tabulated data",
+          "howToInterpret": "Take the square root of each given concentration, then find the intercept and slope of the Λm vs √c line.",
+          "howItConnectsToFormula": "Intercept (at √c=0) is Λ°m; the negative of the slope is A.",
+          "exampleStem": "Molar conductivity of KCl solutions at various concentrations at 298 K are given. Show that a plot of Λm against √c is a straight line and determine Λ°m and A for KCl.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "For strong electrolytes that are already fully dissociated, the small decrease in Λm at higher concentration comes purely from ion-ion interactions slowing the ions down — and it turns out this effect scales with the square root of concentration, giving you a clean straight line to extrapolate."
+    },
+    {
+      "id": "f9",
+      "name": "Kohlrausch's law of independent migration of ions",
+      "latex": "\\Lambda^{\\circ}_m = \\nu_{+}\\lambda^{\\circ}_{+} + \\nu_{-}\\lambda^{\\circ}_{-}",
+      "plain": "limiting molar conductivity of an electrolyte = (number of cations per formula unit × limiting ionic conductivity of the cation) + (number of anions per formula unit × limiting ionic conductivity of the anion)",
+      "symbols": [
+        { "symbol": "ν₊, ν₋", "meaning": "number of cations and anions produced per formula unit of the electrolyte on dissociation" },
+        { "symbol": "λ°₊, λ°₋", "meaning": "limiting molar (ionic) conductivities of the cation and anion" }
+      ],
+      "whenToUse": "Calculating Λ°m for ANY electrolyte from tabulated ionic conductivities, and — crucially — for a weak electrolyte, whose Λ°m cannot be obtained by extrapolation.",
+      "derivedFrom": "NCERT Eq. 2.24, 2.25",
+      "commonMistakes": [
+        "Forgetting to multiply λ°₋ (or λ°₊) by the stoichiometric number of ions, e.g. using λ°(Cl⁻) once instead of twice for CaCl2.",
+        "Trying to measure Λ°m of a weak electrolyte directly at very low concentration — its conductivity there is too small to measure accurately, which is exactly why this law is needed."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find Λ°m of a salt from tabulated ionic conductivities",
+          "howToInterpret": "Identify the ions and their stoichiometric numbers from the formula.",
+          "howItConnectsToFormula": "Λ°m = ν₊λ°₊ + ν₋λ°₋ using the given/tabulated λ° values.",
+          "exampleStem": "Given λ°(Ca²⁺)=119.0 and λ°(Cl⁻)=76.3 S cm² mol⁻¹, calculate Λ°m for CaCl2.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Find Λ°m of a weak electrolyte from strong-electrolyte data sharing common ions",
+          "howToInterpret": "Combine the Λ°m values of strong electrolytes that share ions with the target weak electrolyte, adding and subtracting so the unwanted ions cancel.",
+          "howItConnectsToFormula": "e.g. Λ°m(CH3COOH) = Λ°m(HCl) + Λ°m(CH3COONa) − Λ°m(NaCl).",
+          "exampleStem": "Λ°m for NaCl, HCl and CH3COONa are 126.4, 425.9 and 91.0 S cm² mol⁻¹ respectively. Calculate Λ°m for acetic acid.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Kohlrausch's insight was that each ion contributes its own fixed amount to the total conductivity at infinite dilution, completely independent of what its partner ion is — so you can mix and match data from different strong electrolytes, adding and cancelling ions like an algebraic equation, to reach a value you could never measure directly for a weak electrolyte."
+    },
+    {
+      "id": "f10",
+      "name": "Degree of dissociation and dissociation constant for weak electrolytes",
+      "latex": "\\alpha = \\dfrac{\\Lambda_m}{\\Lambda^{\\circ}_m}, \\qquad K_a = \\dfrac{c\\alpha^2}{1-\\alpha} = \\dfrac{c\\Lambda_m^2}{\\Lambda^{\\circ}_m\\left(\\Lambda^{\\circ}_m-\\Lambda_m\\right)}",
+      "plain": "degree of dissociation = molar conductivity at that concentration / limiting molar conductivity; dissociation constant follows the usual Ostwald dilution law form",
+      "symbols": [
+        { "symbol": "α", "meaning": "degree of dissociation at concentration c" },
+        { "symbol": "Ka", "meaning": "dissociation (ionisation) constant of the weak electrolyte" }
+      ],
+      "whenToUse": "Finding how much a weak acid/base has dissociated at a given concentration, and its dissociation constant, once Λm (at that concentration) and Λ°m (from Kohlrausch's law) are both known.",
+      "derivedFrom": "NCERT Eq. 2.26, 2.27",
+      "commonMistakes": [
+        "Using this α=Λm/Λ°m approximation for a STRONG electrolyte, where it is not meaningful (strong electrolytes are already fully dissociated).",
+        "Forgetting Λ°m itself must come from Kohlrausch's law for a weak electrolyte, not from extrapolating that same electrolyte's own Λm data."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find α and Ka of a weak acid from its measured conductivity",
+          "howToInterpret": "First compute Λm from the given κ and c, then α from Λm/Λ°m, then Ka.",
+          "howItConnectsToFormula": "Λm=κ×1000/c → α=Λm/Λ°m → Ka=cα²/(1−α).",
+          "exampleStem": "The conductivity of 0.001028 mol L⁻¹ acetic acid is 4.95×10⁻⁵ S cm⁻¹. Calculate its dissociation constant if Λ°m for acetic acid is 390.5 S cm² mol⁻¹.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This is the conductance version of the same Ostwald dilution law idea from ionic equilibrium — the ratio of actual to limiting molar conductivity stands in for the fraction of molecules that have actually dissociated, which then plugs straight into the familiar cα²/(1−α) expression."
+    },
+    {
+      "id": "f11",
+      "name": "Faraday's laws of electrolysis",
+      "latex": "Q = It, \\qquad m = ZIt = \\dfrac{M}{nF}It, \\qquad F = N_A e \\approx 96487\\ \\text{C mol}^{-1} \\approx 96500\\ \\text{C mol}^{-1}",
+      "plain": "charge passed = current × time; mass deposited/liberated = (molar mass / number of electrons / Faraday constant) × current × time",
+      "symbols": [
+        { "symbol": "Q", "meaning": "charge passed, in coulombs" },
+        { "symbol": "I, t", "meaning": "current (A) and time (s)" },
+        { "symbol": "Z", "meaning": "electrochemical equivalent (mass deposited per coulomb)" },
+        { "symbol": "M, n", "meaning": "molar mass of the substance and number of electrons in its electrode reaction" }
+      ],
+      "whenToUse": "Any electrolysis numerical: mass of metal deposited/liberated, time needed, current required, or charge/Faraday equivalents needed for a given amount of product.",
+      "derivedFrom": "NCERT Eq. 2.28-2.32 (Faraday's first and second laws)",
+      "commonMistakes": [
+        "Using the wrong n for the electrode reaction (e.g. n=1 for Cu²⁺→Cu instead of the correct n=2).",
+        "In cells connected in series, forgetting that the SAME charge (and hence the same number of moles of electrons) passes through every cell — only the moles of each metal deposited differ, via each metal's own n."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Mass deposited from current and time",
+          "howToInterpret": "Compute Q=It, then convert Q to moles of electrons (Q/F), then to moles and mass of the substance using n.",
+          "howItConnectsToFormula": "m = (M/nF)×I×t.",
+          "exampleStem": "A solution of CuSO4 is electrolysed for 10 minutes with a current of 1.5 amperes. What is the mass of copper deposited at the cathode?",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Multiple electrolytic cells connected in series",
+          "howToInterpret": "Recognise that the same charge (and same moles of electrons) flows through every cell in the series, even though the metals and their n values differ.",
+          "howItConnectsToFormula": "Find moles of electrons from one cell's known deposit, then apply that same mole count to find masses deposited in the other cells.",
+          "exampleStem": "Three electrolytic cells A, B, C containing ZnSO4, AgNO3 and CuSO4 respectively are connected in series. A steady current of 1.5 A is passed until 1.45 g of silver is deposited at the cathode of cell B. How long did the current flow, and what masses of copper and zinc were deposited?",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Faraday's laws are really just a unit-conversion chain — current times time gives you charge, charge divided by the Faraday constant gives you moles of electrons, and moles of electrons divided by n gives you moles of the substance, which you then convert to mass using its molar mass."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11"],
+    "definitionViewOrder": ["d1", "d2", "d5", "d6", "d7", "d9", "d10", "d11", "d12", "d13"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["cell notation", "standard cell potential"],
+      "stages": {
+        "question": "Represent the galvanic cell for Mg(s)+2Ag⁺(aq)→Mg²⁺(aq)+2Ag(s) and calculate E°_cell, given E°(Ag⁺/Ag)=0.80 V and E°(Mg²⁺/Mg)=−2.37 V.",
+        "interpretation": "Identify the oxidation (anode) and reduction (cathode) half-reactions, then apply the cell-notation convention.",
+        "formula": "E°_cell = E°_cathode − E°_anode",
+        "solutionSteps": ["Mg is oxidised (anode): Mg(s)→Mg²⁺(aq)+2e⁻", "Ag⁺ is reduced (cathode): 2Ag⁺(aq)+2e⁻→2Ag(s)", "Cell: Mg(s)|Mg²⁺(aq)‖Ag⁺(aq)|Ag(s)", "E°_cell = 0.80 − (−2.37) = 3.17 V"],
+        "answer": "Mg(s)|Mg²⁺(aq)‖Ag⁺(aq)|Ag(s); E°_cell = 3.17 V"
+      },
+      "audioScript": "Spot which metal loses electrons — that's your anode, written on the left — and which ion gains them — your cathode, on the right — then just subtract the anode's potential from the cathode's."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["nernst equation", "pH", "electrode potential"],
+      "stages": {
+        "question": "Calculate the potential of a hydrogen electrode in contact with a solution whose pH is 10.",
+        "interpretation": "Apply the Nernst equation to the hydrogen electrode reaction H⁺+e⁻→½H2, whose E°=0.",
+        "formula": "E = E° − 0.059 × pH (since n=1 and log(1/[H⁺]) = pH)",
+        "solutionSteps": ["E = 0 − 0.059 × log(1/[H⁺])", "log(1/[H⁺]) = pH = 10", "E = −0.059 × 10 = −0.59 V"],
+        "answer": "E ≈ −0.59 V"
+      },
+      "audioScript": "For the hydrogen electrode, the Nernst equation collapses into a beautifully simple form — the electrode potential is just −0.059 volts times the pH, since log(1/[H⁺]) is literally the definition of pH."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["conductivity", "molar conductivity", "conceptual"],
+      "stages": {
+        "question": "Why does the conductivity of an electrolytic solution always decrease on dilution, while its molar conductivity always increases?",
+        "interpretation": "Tests the distinction between total conductivity (per unit volume) and molar conductivity (per mole of electrolyte).",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Conductivity κ depends on the number of ions per unit volume — dilution reduces this, so κ falls.", "Molar conductivity Λm=κ/c is defined per mole of electrolyte — the volume containing one mole grows faster than κ falls, so Λm rises."],
+        "answer": "Dilution always reduces the ion density (so κ drops), but it increases the volume that contains exactly one mole of electrolyte faster than κ falls, so Λm (=κ/c) rises."
+      },
+      "audioScript": "Don't let the opposite trends confuse you — conductivity is a 'per unit volume' quantity while molar conductivity is a 'per mole' quantity, and dilution genuinely increases the volume you need to contain one mole faster than it dilutes the ion concentration."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["equilibrium constant", "nernst equation"],
+      "stages": {
+        "question": "Calculate the equilibrium constant of the reaction Cu(s)+2Ag⁺(aq)→Cu²⁺(aq)+2Ag(s), given E°_cell=0.46 V.",
+        "interpretation": "Use the relation between E°_cell and Kc at equilibrium (n=2 electrons transferred).",
+        "formula": "E°_cell = (0.059/n) log Kc",
+        "solutionSteps": ["0.46 = (0.059/2) log Kc", "log Kc = 0.46×2/0.059 = 15.6", "Kc = 10^15.6 ≈ 3.92×10¹⁵"],
+        "answer": "Kc ≈ 3.92 × 10¹⁵"
+      },
+      "audioScript": "Rearrange for log Kc first, then take the antilog — a modest cell potential like 0.46 V, once exponentiated, corresponds to an enormous equilibrium constant, showing how sensitive Kc is to E°_cell."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["gibbs energy", "numerical"],
+      "stages": {
+        "question": "The standard electrode potential for the Daniell cell is 1.1 V. Calculate the standard Gibbs energy for Zn(s)+Cu²⁺(aq)→Zn²⁺(aq)+Cu(s).",
+        "interpretation": "Direct application of ΔrG°=−nFE°_cell with n=2.",
+        "formula": "ΔrG° = −nFE°_cell",
+        "solutionSteps": ["n=2, F=96487 C mol⁻¹, E°_cell=1.1 V", "ΔrG° = −2×96487×1.1 = −212271.4 J mol⁻¹", "ΔrG° ≈ −212.27 kJ mol⁻¹"],
+        "answer": "ΔrG° ≈ −212.27 kJ mol⁻¹"
+      },
+      "audioScript": "Multiply n, F and E°_cell together and flip the sign — a positive cell potential always converts into a negative, spontaneity-confirming Gibbs energy."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["conductivity", "resistivity", "numerical"],
+      "stages": {
+        "question": "The electrical resistance of a column of 0.05 mol L⁻¹ NaOH solution, diameter 1 cm and length 50 cm, is 5.55×10³ Ω. Calculate its resistivity, conductivity and molar conductivity.",
+        "interpretation": "Use R=ρl/A to find ρ, then invert for κ, then divide by concentration for Λm.",
+        "formula": "ρ = RA/l; κ = 1/ρ; Λm = κ×1000/c",
+        "solutionSteps": ["A = πr² = π×0.5² = 0.785 cm², l = 50 cm", "ρ = (5.55×10³×0.785)/50 ≈ 87.135 Ω cm", "κ = 1/87.135 ≈ 0.01148 S cm⁻¹", "Λm = 0.01148×1000/0.05 ≈ 229.6 S cm² mol⁻¹"],
+        "answer": "ρ ≈ 87.14 Ω cm; κ ≈ 0.01148 S cm⁻¹; Λm ≈ 229.6 S cm² mol⁻¹"
+      },
+      "audioScript": "Work through it in order — resistivity from resistance and geometry, then flip it for conductivity, then divide by the molarity (with the ×1000 unit fix) to land on molar conductivity."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["kohlrausch's law", "numerical"],
+      "stages": {
+        "question": "Λ°m for NaCl, HCl and CH3COONa are 126.4, 425.9 and 91.0 S cm² mol⁻¹ respectively. Calculate Λ°m for acetic acid (CH3COOH).",
+        "interpretation": "Combine strong-electrolyte data sharing ions with acetic acid, using Kohlrausch's law of independent migration.",
+        "formula": "Λ°m(CH3COOH) = Λ°m(HCl) + Λ°m(CH3COONa) − Λ°m(NaCl)",
+        "solutionSteps": ["Λ°m(CH3COOH) = 425.9 + 91.0 − 126.4", "= 390.5 S cm² mol⁻¹"],
+        "answer": "Λ°m(CH3COOH) ≈ 390.5 S cm² mol⁻¹"
+      },
+      "audioScript": "Add HCl and sodium acetate, then subtract sodium chloride — the sodium and chloride ions cancel out algebraically, leaving exactly the H⁺ and acetate ion contributions you need for acetic acid."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["dissociation constant", "degree of dissociation", "numerical"],
+      "stages": {
+        "question": "The conductivity of 0.001028 mol L⁻¹ acetic acid is 4.95×10⁻⁵ S cm⁻¹. Calculate its dissociation constant if Λ°m for acetic acid is 390.5 S cm² mol⁻¹.",
+        "interpretation": "First find Λm from κ and c, then α from Λm/Λ°m, then Ka.",
+        "formula": "Λm=κ×1000/c; α=Λm/Λ°m; Ka=cα²/(1−α)",
+        "solutionSteps": ["Λm = (4.95×10⁻⁵×1000)/0.001028 ≈ 48.15 S cm² mol⁻¹", "α = 48.15/390.5 ≈ 0.1233", "Ka = (0.001028×0.1233²)/(1−0.1233) ≈ 1.78×10⁻⁵"],
+        "answer": "Ka ≈ 1.78 × 10⁻⁵ mol L⁻¹"
+      },
+      "audioScript": "This is a three-step chain — molar conductivity from the raw data, degree of dissociation as a simple ratio to the limiting value, then the familiar cα² over (1−α) expression for the dissociation constant."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "advanced",
+      "tags": ["faraday's laws", "numerical"],
+      "stages": {
+        "question": "A solution of CuSO4 is electrolysed for 10 minutes with a current of 1.5 amperes. What is the mass of copper deposited at the cathode?",
+        "interpretation": "Convert time and current to charge, then charge to moles of electrons, then to moles and mass of copper (n=2).",
+        "formula": "m = (M/nF)It",
+        "solutionSteps": ["t = 600 s; Q = It = 1.5×600 = 900 C", "Cu²⁺+2e⁻→Cu, so 2F (2×96487 C) deposits 1 mol (63 g) of Cu", "m = (63×900)/(2×96487) ≈ 0.294 g"],
+        "answer": "≈ 0.294 g of copper"
+      },
+      "audioScript": "Chain the units through: current times time gives coulombs, coulombs divided by 2 Faradays gives moles of copper, and moles times atomic mass gives the final mass deposited."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "advanced",
+      "tags": ["kohlrausch's law", "conceptual", "weak electrolyte"],
+      "stages": {
+        "question": "Why can Λ°m for a strong electrolyte be found by simple extrapolation, but Λ°m for a weak electrolyte cannot?",
+        "interpretation": "Tests understanding of why the Λm vs √c graph behaves so differently for strong versus weak electrolytes near c→0.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["For strong electrolytes, dissociation is already complete at all measurable concentrations, so Λm vs √c is linear and can be extrapolated to c=0.", "For weak electrolytes, the degree of dissociation itself keeps increasing as c→0, making Λm shoot up steeply near zero concentration.", "At such low concentrations the conductivity is too small to measure accurately, so direct extrapolation is unreliable — Kohlrausch's law of independent migration must be used instead."],
+        "answer": "Because a weak electrolyte's Λm rises steeply (not linearly) as c→0 due to increasing dissociation, and its conductivity becomes too small to measure accurately at such low concentrations — so Λ°m must instead be calculated using Kohlrausch's law from strong-electrolyte data."
+      },
+      "audioScript": "The core issue is that a weak electrolyte's degree of dissociation is itself changing as you dilute it, so the Λm vs √c curve bends sharply instead of staying straight — which is precisely the situation Kohlrausch's law was designed to work around."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "basic",
+      "tags": ["batteries", "conceptual"],
+      "stages": {
+        "question": "What is the key difference between a primary battery and a secondary battery, and where does a fuel cell fit in?",
+        "interpretation": "Tests the classification of electrochemical cells used as practical energy sources.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Primary battery (e.g. dry cell, mercury cell): the cell reaction occurs once; the battery is dead once reactants are consumed and cannot be recharged.", "Secondary battery (e.g. lead storage battery, Ni-Cd cell): can be recharged by passing current in the reverse direction, reversing the cell reaction.", "Fuel cell (e.g. H2-O2): reactants are continuously fed in and products continuously removed, so it runs as long as fuel is supplied — it is neither 'primary' nor 'recharged' in the usual sense, and is more efficient (~70%) than a thermal power plant (~40%)."],
+        "answer": "Primary batteries can only be used once and discarded; secondary batteries can be recharged and reused many times; fuel cells instead run continuously by continuously supplying reactants (fuel and oxidant), rather than being charged or discarded."
+      },
+      "audioScript": "Picture it as one-shot versus rechargeable versus continuously-fed — a primary battery is a one-time energy store, a secondary battery is a rechargeable energy store, and a fuel cell isn't really a store at all, it's a continuous converter as long as you keep feeding it fuel."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "In the cell notation Zn(s)|Zn²⁺(aq)‖Cu²⁺(aq)|Cu(s), which electrode is written on the left and why, and what does the double vertical line represent?",
+      "Why does the conductivity of an electrolytic solution always decrease on dilution, while its molar conductivity always increases?",
+      "Why is it impossible to obtain the limiting molar conductivity (Λ°m) of a weak electrolyte like acetic acid by extrapolating a Λm vs √c plot to zero concentration?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Write the Nernst equation and calculate the emf of the cell Fe(s)|Fe²⁺(0.001M)‖H⁺(1M)|H2(g,1bar)|Pt(s) at 298 K, given E°(Fe²⁺/Fe) = −0.44 V.",
+        "interpretation": "Overall reaction: Fe(s)+2H⁺(aq)→Fe²⁺(aq)+H2(g); n=2, and E°_cell = E°(H⁺/H2) − E°(Fe²⁺/Fe).",
+        "formulaIds": ["f1", "f3"],
+        "steps": [
+          "E°_cell = 0 − (−0.44) = 0.44 V",
+          "Q = [Fe²⁺]/[H⁺]² (H2 at 1 bar and solid Fe both taken as 1) = 0.001/1² = 0.001",
+          "E_cell = 0.44 − (0.059/2) log(0.001) = 0.44 − (0.0295×(−3)) = 0.44 + 0.0885"
+        ],
+        "answer": "E_cell ≈ 0.53 V",
+        "audioScript": "Build the overall equation first, identify n=2, form Q from the given concentrations with H⁺ and H2 both effectively at standard values, and plug into the Nernst equation."
+      },
+      {
+        "id": "pb2",
+        "question": "The conductivity of a 0.20 M KCl solution at 298 K is 0.0248 S cm⁻¹. Calculate its molar conductivity.",
+        "interpretation": "Direct application of the molar conductivity formula with the unit conversion factor.",
+        "formulaIds": ["f7"],
+        "steps": ["Λm = κ×1000/c = 0.0248×1000/0.20"],
+        "answer": "Λm = 124 S cm² mol⁻¹",
+        "audioScript": "This is a one-line substitution once you remember the ×1000 conversion factor between S cm⁻¹ and mol L⁻¹ units."
+      },
+      {
+        "id": "pb3",
+        "question": "How much charge is required to reduce 1 mol of Al³⁺ to Al?",
+        "interpretation": "Al³⁺ + 3e⁻ → Al requires 3 mol of electrons, i.e. 3 Faradays, per mole of Al³⁺.",
+        "formulaIds": ["f11"],
+        "steps": ["Charge = 3 × F = 3 × 96487 C mol⁻¹"],
+        "answer": "≈ 2.895 × 10⁵ C (3 F)",
+        "audioScript": "Just count the electrons in the balanced half-reaction — three electrons per Al³⁺ ion means three moles of electrons, i.e. three Faradays, per mole of aluminium reduced."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Given E°(Cr³⁺/Cr) = −0.74 V and E°(Cd²⁺/Cd) = −0.40 V, calculate the standard cell potential, ΔrG° and Kc for 2Cr(s)+3Cd²⁺(aq)→2Cr³⁺(aq)+3Cd(s) at 298 K.",
+        "interpretation": "Six electrons are transferred as balanced (2×3 for Cr, 3×2 for Cd), so n=6; Cd²⁺/Cd is the cathode (reduction) and Cr³⁺/Cr is the anode (oxidation).",
+        "formulaIds": ["f1", "f4", "f5"],
+        "steps": [
+          "E°_cell = E°_cathode − E°_anode = −0.40 − (−0.74) = 0.34 V",
+          "ΔrG° = −nFE°_cell = −6×96487×0.34 ≈ −196874 J mol⁻¹ ≈ −196.87 kJ mol⁻¹",
+          "log Kc = nE°_cell/0.059 = 6×0.34/0.059 ≈ 34.58 ⟹ Kc ≈ 3.8×10³⁴"
+        ],
+        "answer": "E°_cell ≈ 0.34 V; ΔrG° ≈ −196.9 kJ mol⁻¹; Kc ≈ 3.8×10³⁴",
+        "audioScript": "First nail down n from the fully balanced equation — here it's 6, not 2 or 3 — then use the same E°_cell in both the Gibbs energy formula and the Kc formula, since they share the identical n and F."
+      },
+      {
+        "id": "pi2",
+        "question": "Using λ°(Ca²⁺)=119.0, λ°(Cl⁻)=76.3, λ°(Mg²⁺)=106.0 and λ°(SO4²⁻)=160.0 S cm² mol⁻¹, calculate Λ°m for CaCl2 and MgSO4.",
+        "interpretation": "Apply Kohlrausch's law with the correct stoichiometric numbers of each ion.",
+        "formulaIds": ["f9"],
+        "steps": [
+          "Λ°m(CaCl2) = λ°(Ca²⁺) + 2λ°(Cl⁻) = 119.0 + 2(76.3) = 119.0 + 152.6",
+          "Λ°m(MgSO4) = λ°(Mg²⁺) + λ°(SO4²⁻) = 106.0 + 160.0"
+        ],
+        "answer": "Λ°m(CaCl2) ≈ 271.6 S cm² mol⁻¹; Λ°m(MgSO4) ≈ 266.0 S cm² mol⁻¹",
+        "audioScript": "CaCl2 gives 2 chloride ions per formula unit, so double λ°(Cl⁻); MgSO4 is a simple 1:1 salt, so just add the two ionic values directly."
+      },
+      {
+        "id": "pi3",
+        "question": "Conductivity of 0.00241 M acetic acid is 7.896×10⁻⁵ S cm⁻¹. If Λ°m for acetic acid is 390.5 S cm² mol⁻¹, calculate the molar conductivity and dissociation constant.",
+        "interpretation": "Three-step chain: κ→Λm, Λm→α, then α→Ka.",
+        "formulaIds": ["f7", "f10"],
+        "steps": [
+          "Λm = (7.896×10⁻⁵×1000)/0.00241 ≈ 32.77 S cm² mol⁻¹",
+          "α = 32.77/390.5 ≈ 0.0839",
+          "Ka = (0.00241×0.0839²)/(1−0.0839) ≈ 1.85×10⁻⁵"
+        ],
+        "answer": "Λm ≈ 32.77 S cm² mol⁻¹; Ka ≈ 1.85×10⁻⁵ mol L⁻¹",
+        "audioScript": "Work top to bottom — molar conductivity from the given data, degree of dissociation as a ratio, then substitute into the cα² over 1−α expression exactly as you would in ionic equilibrium."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Three electrolytic cells A, B, C containing solutions of ZnSO4, AgNO3 and CuSO4 respectively are connected in series. A steady current of 1.5 A is passed until 1.45 g of silver deposits at the cathode of cell B. How long did the current flow, and what masses of copper and zinc were deposited?",
+        "interpretation": "Cells in series carry the SAME charge (same moles of electrons); use cell B's silver deposit to find that charge, then apply it to Cu and Zn using their own n values.",
+        "formulaIds": ["f11"],
+        "steps": [
+          "Moles of Ag = 1.45/108 ≈ 0.01343 mol (n=1 for Ag⁺+e⁻→Ag) ⟹ moles of electrons = 0.01343 mol",
+          "Charge Q = 0.01343×96487 ≈ 1295.6 C; t = Q/I = 1295.6/1.5 ≈ 863.7 s ≈ 14.4 min",
+          "Cu (n=2): moles Cu = 0.01343/2 ≈ 0.006713; mass = 0.006713×63.5 ≈ 0.426 g",
+          "Zn (n=2): moles Zn = 0.006713; mass = 0.006713×65.4 ≈ 0.439 g"
+        ],
+        "answer": "t ≈ 864 s (≈14.4 min); mass Cu ≈ 0.426 g; mass Zn ≈ 0.439 g",
+        "audioScript": "The key insight in a series circuit is that every cell sees exactly the same charge and hence the same moles of electrons — use the one piece of data you're given (silver deposited) to find that shared charge, then apply it independently to each other metal using its own n."
+      },
+      {
+        "id": "pa2",
+        "question": "Molar conductivities of KCl solutions at 298 K are: c=0.000198→148.61, c=0.000309→148.29, c=0.000521→147.81, c=0.000989→147.09 (all S cm² mol⁻¹). Show that Λm vs √c is a straight line and determine Λ°m and A.",
+        "interpretation": "Take square roots of each concentration, plot/inspect Λm against √c, and read off the intercept and slope.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "√c values: 0.01407, 0.01758, 0.02283, 0.03145",
+          "Plotting Λm against √c gives a straight line (Λm decreases as √c increases)",
+          "Extrapolating to √c=0 (the intercept) gives Λ°m ≈ 150.0 S cm² mol⁻¹",
+          "The magnitude of the slope gives A ≈ 87.46 S cm² mol⁻¹ / (mol L⁻¹)^{1/2}"
+        ],
+        "answer": "Λ°m ≈ 150.0 S cm² mol⁻¹; A ≈ 87.46 S cm² mol⁻¹ (mol L⁻¹)⁻¹ᐟ²",
+        "audioScript": "This is the strong-electrolyte extrapolation in action — take the square root of every concentration, notice the near-perfect straight line, and read the intercept as Λ°m and the slope's magnitude as A."
+      },
+      {
+        "id": "pa3",
+        "question": "For the cell Ni(s)|Ni²⁺(aq)‖Ag⁺(aq)|Ag(s) with E°_cell=1.05 V: (a) calculate E_cell when [Ni²⁺]=0.160 M and [Ag⁺]=0.002 M, (b) calculate the equilibrium constant Kc, and (c) calculate ΔrG° for the reaction at 298 K.",
+        "interpretation": "Chains three formulas together on the same reaction: Ni(s)+2Ag⁺(aq)→Ni²⁺(aq)+2Ag(s), n=2.",
+        "formulaIds": ["f3", "f4", "f5"],
+        "steps": [
+          "(a) Q = [Ni²⁺]/[Ag⁺]² = 0.160/(0.002)² = 40000; E_cell = 1.05 − (0.059/2) log(40000) = 1.05 − 0.0295×4.602 ≈ 0.91 V",
+          "(b) log Kc = nE°_cell/0.059 = 2×1.05/0.059 ≈ 35.59 ⟹ Kc ≈ 3.9×10³⁵",
+          "(c) ΔrG° = −nFE°_cell = −2×96487×1.05 ≈ −202623 J mol⁻¹ ≈ −202.6 kJ mol⁻¹"
+        ],
+        "answer": "E_cell ≈ 0.91 V; Kc ≈ 3.9×10³⁵; ΔrG° ≈ −202.6 kJ mol⁻¹",
+        "audioScript": "Notice all three parts reuse the same n and E°_cell — first correct for the given concentrations with the Nernst equation, then use the UNCORRECTED standard potential (not the Nernst-corrected one) for both the Kc and ΔrG° calculations, since those are properties of the standard state."
+      }
+    ],
+    "transferPrompt": "Once you're comfortable with this ladder, try combining the Nernst equation with the equilibrium chapter's Le Chatelier reasoning — predict qualitatively how E_cell of a cell shifts if you increase the concentration of a product ion, then confirm your prediction by direct substitution into the Nernst equation."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 2 — Electrochemistry. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (galvanic vs electrolytic cells and cell notation, the Nernst equation, the ΔG°-E°-Kc relation, conductance/conductivity/molar conductivity, Kohlrausch's law and weak-electrolyte dissociation, Faraday's laws of electrolysis, or batteries and corrosion). First quiz me on definitions and formulas with NO calculation involved — galvanic vs electrolytic cell, standard hydrogen electrode, cell notation convention, and why conductivity decreases but molar conductivity increases on dilution. Then move to basic numericals tied to a single formula (Nernst equation for a single electrode, molar conductivity from conductivity and concentration, simple Faraday's-law charge calculations). Then intermediate problems requiring two steps (E°_cell/ΔrG°/Kc calculations together, Kohlrausch's law combining several electrolytes, degree of dissociation and dissociation constant from conductivity data). Then advanced multi-stage problems (electrolytic cells connected in series, extrapolating a Λm vs √c plot, or a single cell problem chaining the Nernst equation, Kc and ΔrG° together). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 11 formulas with when-to-use notes). Stay within this chapter's scope (electrochemical cells, electrode potential, Nernst equation, conductance, Kohlrausch's law, electrolysis, batteries, corrosion) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "What is the difference between a galvanic cell and an electrolytic cell?", "a": "A galvanic cell converts the chemical energy of a spontaneous redox reaction into electrical energy; an electrolytic cell uses an external source of electrical energy to drive a non-spontaneous chemical reaction." },
+    { "q": "State Kohlrausch's law of independent migration of ions and give one of its applications.", "a": "The limiting molar conductivity of an electrolyte equals the sum of the individual contributions of its cation and anion, Λ°m = ν₊λ°₊ + ν₋λ°₋. It is used to calculate Λ°m for weak electrolytes (which cannot be obtained by extrapolation) and hence their degree of dissociation and dissociation constant." },
+    { "q": "How are the standard cell potential, standard Gibbs energy and equilibrium constant of a cell reaction related?", "a": "ΔrG° = −nFE°_cell = −RT ln Kc, so E°_cell = (0.059/n) log Kc at 298 K — measuring a cell's standard potential gives you both its standard Gibbs energy change and its equilibrium constant." },
+    { "q": "Why can't the limiting molar conductivity of a weak electrolyte be obtained by extrapolating its Λm vs √c plot?", "a": "Because a weak electrolyte's degree of dissociation itself keeps rising as concentration approaches zero, so Λm shoots up steeply near c=0 rather than following a straight line, and its conductivity becomes too small to measure accurately at such low concentrations." },
+    { "q": "State Faraday's two laws of electrolysis.", "a": "First law: the amount of chemical reaction at an electrode is proportional to the quantity of electricity (charge) passed through the electrolyte. Second law: for a given quantity of electricity, the amounts of different substances liberated/deposited are proportional to their chemical equivalent weights." }
+  ]
+}

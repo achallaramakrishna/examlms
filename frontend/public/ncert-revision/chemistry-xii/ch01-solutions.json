@@ -1,0 +1,712 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 1,
+    "chapterTitle": "Solutions",
+    "ncertCode": "lech101",
+    "topicIdHint": "Solutions",
+    "estimatedRevisionMinutes": 55,
+    "chapter": "Solutions",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Classify solutions by physical state of solute and solvent, and express concentration using mass %, volume %, mass/volume %, ppm, mole fraction, molarity and molality.",
+    "State Henry's law, interpret the Henry's law constant K_H, and apply it to gas solubility, scuba diving, high-altitude physiology and carbonated drinks.",
+    "State Raoult's law for volatile liquid-liquid solutions and for solutions of non-volatile solutes in a volatile solvent, and relate it to Dalton's law of partial pressures.",
+    "Distinguish ideal from non-ideal solutions, explain positive and negative deviations from Raoult's law at the molecular level, and identify minimum- and maximum-boiling azeotropes.",
+    "Derive and apply the four colligative properties — relative lowering of vapour pressure, elevation of boiling point, depression of freezing point, and osmotic pressure — to calculate the molar mass of a solute.",
+    "Use the van't Hoff factor i to handle abnormal molar masses arising from solute association or dissociation, and connect i to the degree of dissociation/association."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Types of solutions and concentration units → solubility (Henry's law for gases) → vapour pressure of solutions (Raoult's law, ideal/non-ideal, azeotropes) → colligative properties (ΔP, ΔTb, ΔTf, π) → van't Hoff factor for abnormal molar mass.",
+    "mustKnowBullets": [
+      "Mass % = (mass of component/total mass of solution)×100; ppm = (parts of component/total parts)×10⁶; both are temperature-independent.",
+      "Mole fraction x_i = n_i/Σn_i (temperature-independent); Molarity M = moles of solute/litre of solution (temperature-dependent, since volume changes with T); Molality m = moles of solute/kg of solvent (temperature-independent).",
+      "Henry's law: p = K_H·x — partial pressure of a gas over a solution is directly proportional to its mole fraction in solution. Higher K_H ⇒ lower solubility.",
+      "Henry's law explains: bottling soft drinks under CO₂ pressure, bends in scuba divers (N₂ bubbles on ascent), anoxia at high altitude, and why aquatic life prefers colder water (gas solubility falls as T rises).",
+      "Raoult's law (volatile liquid-liquid solution): p_total = p1°x1 + p2°x2. The vapour phase is always richer in the more volatile component.",
+      "Raoult's law for a non-volatile solute is a special case of Henry's law where K_H = p1° (the pure solvent's vapour pressure).",
+      "Ideal solutions obey Raoult's law at all concentrations, with Δ_mixH = 0 and Δ_mixV = 0 (e.g. n-hexane + n-heptane, benzene + toluene).",
+      "Positive deviation (A–B forces weaker than A–A/B–B; e.g. ethanol+acetone, acetone+CS₂) → minimum boiling azeotrope (ethanol-water, ~95% ethanol). Negative deviation (A–B forces stronger; e.g. phenol+aniline, chloroform+acetone via H-bonding) → maximum boiling azeotrope (HNO₃-water, 68%:32%, bp 393.5 K).",
+      "Relative lowering of vapour pressure = (p1°−p1)/p1° = x2 = n2/(n1+n2) — this IS Raoult's law restated for a non-volatile solute; used to find solute molar mass.",
+      "Elevation of boiling point: ΔTb = Kb·m (Kb = molal elevation/ebullioscopic constant, units K kg mol⁻¹); for water Kb = 0.52 K kg mol⁻¹.",
+      "Depression of freezing point: ΔTf = Kf·m (Kf = molal depression/cryoscopic constant); for water Kf = 1.86 K kg mol⁻¹.",
+      "Osmotic pressure: π = CRT = (n2/V)RT, where C is molarity — osmosis is the flow of solvent through a semipermeable membrane from dilute to concentrated solution; π is the excess pressure needed to just stop this flow.",
+      "Isotonic solutions have equal π at a given T (no net osmosis across a membrane between them); a solution more concentrated than the cell is hypertonic (cell shrinks), less concentrated is hypotonic (cell swells). Normal saline = 0.9% (mass/volume) NaCl.",
+      "Reverse osmosis: applying pressure GREATER than π on the concentrated side pushes pure solvent out through the membrane — used for seawater desalination (cellulose acetate membrane).",
+      "van't Hoff factor i = normal molar mass/abnormal molar mass = observed colligative property/calculated colligative property = total moles of particles after association or dissociation/moles before. i > 1 for dissociation (e.g. i≈2 for NaCl/KCl, i≈3 for K₂SO₄), i < 1 for association (e.g. i≈0.5 for ethanoic acid dimerising in benzene).",
+      "With van't Hoff factor, every colligative formula gets an i: (p1°−p1)/p1° = i·x2; ΔTb = i·Kb·m; ΔTf = i·Kf·m; π = i·CRT."
+    ],
+    "keyTables": [
+      {
+        "title": "Concentration units at a glance",
+        "rows": [
+          ["Unit", "Formula", "Temperature dependent?"],
+          ["Mass %", "(mass of component/total mass)×100", "No"],
+          ["Volume %", "(volume of component/total volume)×100", "No"],
+          ["Mass/Volume %", "mass of solute (g) per 100 mL solution", "Yes (volume-based)"],
+          ["ppm", "(parts of component/total parts)×10⁶", "No"],
+          ["Mole fraction (x)", "moles of component/total moles", "No"],
+          ["Molarity (M)", "moles of solute/litre of solution", "Yes"],
+          ["Molality (m)", "moles of solute/kg of solvent", "No"]
+        ]
+      },
+      {
+        "title": "Colligative properties — quick formula map",
+        "rows": [
+          ["Property", "Ideal formula", "With van't Hoff factor"],
+          ["Relative lowering of vapour pressure", "(p1°−p1)/p1° = x2", "= i·x2"],
+          ["Elevation of boiling point", "ΔTb = Kb·m", "ΔTb = i·Kb·m"],
+          ["Depression of freezing point", "ΔTf = Kf·m", "ΔTf = i·Kf·m"],
+          ["Osmotic pressure", "π = CRT", "π = i·CRT"]
+        ]
+      },
+      {
+        "title": "Molal elevation (Kb) and depression (Kf) constants for common solvents (K kg mol⁻¹)",
+        "rows": [
+          ["Solvent", "Kb", "Kf"],
+          ["Water", "0.52", "1.86"],
+          ["Ethanol", "1.20", "1.99"],
+          ["Cyclohexane", "2.79", "20.00"],
+          ["Benzene", "2.53", "5.12"],
+          ["Chloroform", "3.63", "4.79"],
+          ["Carbon tetrachloride", "5.03", "31.8"],
+          ["Carbon disulphide", "2.34", "3.83"],
+          ["Diethyl ether", "2.02", "1.79"],
+          ["Acetic acid", "2.93", "3.90"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "1.1", "text": "A solution is a homogeneous mixture of two or more components whose composition and properties are uniform throughout. The component present in the largest quantity is the solvent; the rest are solutes. This chapter deals with binary (two-component) solutions, which can be any combination of gas, liquid or solid solute and solvent.", "whyItMatters": "Sets up the whole chapter — every later formula assumes a binary solution with a defined solvent and solute(s).", "neetRelevance": "high" },
+    { "id": "h2", "type": "formula_intro", "section": "1.2", "text": "Seven ways to express concentration: mass % (w/w), volume % (v/v), mass by volume % (w/V), parts per million (ppm), mole fraction (x), molarity (M, mol per litre of solution) and molality (m, mol per kg of solvent).", "whyItMatters": "Molarity and molality look similar but behave very differently — molarity changes with temperature (volume expands/contracts) while molality, mass %, ppm and mole fraction do not, since mass is temperature-independent. This distinction is a favourite assertion-reason trap.", "neetRelevance": "high" },
+    { "id": "h3", "type": "statement", "section": "1.3.1", "text": "Solubility of a solid in a liquid follows 'like dissolves like' — polar solutes dissolve in polar solvents, non-polar in non-polar. Dissolution and crystallisation reach dynamic equilibrium at the saturated solution. Because this equilibrium follows Le Chatelier's principle, solubility rises with temperature if dissolution is endothermic and falls if exothermic. Pressure has negligible effect on the solubility of solids in liquids, since solids and liquids are nearly incompressible.", "whyItMatters": "Distinguishes solid solubility (pressure-independent) from gas solubility (strongly pressure-dependent) — a common comparison question.", "neetRelevance": "medium" },
+    { "id": "h4", "type": "formula_intro", "section": "1.3.2", "text": "Henry's law: at constant temperature, the partial pressure of a gas in the vapour phase (p) is directly proportional to its mole fraction (x) in the solution: p = K_H·x. Equivalently, solubility of a gas in a liquid is directly proportional to the partial pressure of the gas above the solution.", "whyItMatters": "Direct-recall numerical law; K_H is gas- and temperature-specific, and a HIGHER K_H at a given pressure means LOWER solubility — an inverse relationship that is frequently tested.", "neetRelevance": "high" },
+    { "id": "h5", "type": "caution", "section": "1.3.2", "text": "Solubility of a gas in a liquid decreases as temperature rises (dissolution of a gas is exothermic, like condensation, so Le Chatelier's principle predicts — and experiment confirms — falling solubility with rising T). This is why aquatic life is more comfortable in cold water, and why gas solubility problems must never assume solubility increases with heating.", "whyItMatters": "Opposite trend to solid solubility, and directly explains real biological phenomena (fish needing cold, oxygenated water) that NEET loves to test as applied reasoning.", "neetRelevance": "high" },
+    { "id": "h6", "type": "statement", "section": "1.3.2", "text": "Applications of Henry's law: (i) soft drinks/soda water are bottled under high CO₂ pressure to increase its solubility; (ii) scuba divers breathing high-pressure air absorb more N₂ in blood, and rapid ascent releases it as bubbles in capillaries — a painful, dangerous condition called 'bends' (tanks are diluted with helium to reduce this risk); (iii) at high altitudes, low partial pressure of O₂ causes low blood oxygen, weakness and poor thinking — a condition called anoxia.", "whyItMatters": "Three classic applied-Henry's-law scenarios that appear almost every year in some form across NEET/JEE/KCET.", "neetRelevance": "high" },
+    { "id": "h7", "type": "formula_intro", "section": "1.4.1", "text": "Raoult's law for a solution of two volatile liquids: the partial vapour pressure of each component is directly proportional to its mole fraction, p1 = p1°x1 and p2 = p2°x2. By Dalton's law, p_total = p1 + p2 = p1° + (p2°−p1°)x2, which is linear in mole fraction.", "whyItMatters": "The foundational law for the whole vapour-pressure/colligative-properties section; total vapour pressure calculations are a direct-numerical NEET staple (Example 1.5 type).", "neetRelevance": "high" },
+    { "id": "h8", "type": "statement", "section": "1.4.1", "text": "At equilibrium, the vapour phase is always richer in the more volatile component than the liquid phase is (i.e. y_i for the more volatile component exceeds x_i in the liquid). This is the basis of fractional distillation.", "whyItMatters": "Conceptual link to separation techniques (fractional distillation) taught elsewhere — frequently combined into cross-topic questions.", "neetRelevance": "medium" },
+    { "id": "h9", "type": "statement", "section": "1.4.2", "text": "Raoult's law for a non-volatile solute (p1 = x1·p1°) is mathematically identical in form to Henry's law (p = K_H·x) — the only difference is that the proportionality constant K_H is replaced by p1°, the vapour pressure of the pure solvent. Raoult's law is thus a special case of Henry's law.", "whyItMatters": "A conceptual unifying idea that examiners like to test directly ('Raoult's law is a special case of ___').", "neetRelevance": "medium" },
+    { "id": "h10", "type": "definition", "section": "1.5.1", "text": "Ideal solutions obey Raoult's law over the ENTIRE range of concentration, with zero enthalpy of mixing (Δ_mixH = 0) and zero volume change on mixing (Δ_mixV = 0). This happens when A–A, B–B and A–B intermolecular forces are all comparable in strength. Examples: n-hexane + n-heptane, bromoethane + chloroethane, benzene + toluene.", "whyItMatters": "Ideal-solution assumptions underlie every colligative-property derivation later in the chapter.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "1.5.2", "text": "Non-ideal solutions deviate from Raoult's law. Positive deviation (vapour pressure higher than predicted; A–B forces weaker than A–A/B–B) occurs in ethanol+acetone and acetone+CS₂. Negative deviation (vapour pressure lower; A–B forces stronger, e.g. via hydrogen bonding) occurs in phenol+aniline and chloroform+acetone. Large positive deviations give a minimum-boiling azeotrope (ethanol-water, ~95% ethanol by volume); large negative deviations give a maximum-boiling azeotrope (HNO₃-water, 68% HNO₃:32% water, b.p. 393.5 K).", "whyItMatters": "Azeotropes cannot be separated by simple fractional distillation — a key practical consequence and a very common conceptual question.", "neetRelevance": "high" },
+    { "id": "h12", "type": "formula_intro", "section": "1.6.1", "text": "Relative lowering of vapour pressure: (p1°−p1)/p1° = x2 (for dilute solutions, ≈ n2/n1). This is Raoult's law rearranged and gives a direct route to the solute's molar mass: (p1°−p1)/p1° = (w2×M1)/(M2×w1).", "whyItMatters": "The first of the four colligative properties, and the one most directly derived from Raoult's law itself.", "neetRelevance": "high" },
+    { "id": "h13", "type": "formula_intro", "section": "1.6.2", "text": "Elevation of boiling point ΔTb = Kb·m, and depression of freezing point ΔTf = Kf·m, where m is molality and Kb, Kf are solvent-specific constants (K kg mol⁻¹). Both constants can also be computed thermodynamically: Kb = R·M1·Tb²/(1000·Δ_vapH) and Kf = R·M1·Tf²/(1000·Δ_fusH).", "whyItMatters": "Both properties are used identically to determine an unknown solute's molar mass via M2 = (Kb or Kf)×1000×w2/(ΔT×w1) — one of the most frequently numerically tested formula pairs in this chapter.", "neetRelevance": "high" },
+    { "id": "h14", "type": "formula_intro", "section": "1.6.4", "text": "Osmosis is the spontaneous flow of solvent through a semipermeable membrane from pure solvent (or a dilute solution) into a more concentrated solution. Osmotic pressure π is the excess pressure that must be applied on the solution side to just stop this flow, and for dilute solutions π = CRT (C = molarity). Two solutions with equal π are isotonic; a solution with higher π than a cell is hypertonic (cell shrinks by losing water); one with lower π is hypotonic (cell swells).", "whyItMatters": "Osmotic pressure is used to determine molar masses of large biomolecules (proteins, polymers) since even very dilute solutions give a measurably large π — and isotonic/hypertonic/hypotonic vocabulary is essential for physiology-adjacent NEET questions (IV saline, blood cells, plant water uptake).", "neetRelevance": "high" },
+    { "id": "h15", "type": "caution", "section": "1.7", "text": "Colligative-property formulas assume the solute neither dissociates nor associates. Real electrolytes (e.g. KCl → K⁺ + Cl⁻) dissociate, giving MORE particles than expected, so the experimentally determined (abnormal) molar mass comes out LOWER than the true value. Solutes that associate (e.g. ethanoic acid dimerising in benzene via hydrogen bonding) give FEWER particles, so the abnormal molar mass comes out HIGHER than the true value. The van't Hoff factor i = normal molar mass/abnormal molar mass corrects for this in every colligative-property formula.", "whyItMatters": "This is the single most common source of error in colligative-property numericals — forgetting to include i for electrolytes or associating solutes gives a wrong answer even with correct formula setup.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Solution / Solute / Solvent", "definition": "A solution is a homogeneous mixture of two or more substances; the component present in the largest amount is the solvent (determines the physical state of the solution), and the other component(s) are solute(s).", "section": "1.1" },
+    { "id": "d2", "term": "Saturated solution / Solubility", "definition": "A saturated solution is one in dynamic equilibrium with undissolved solute, where dissolution and crystallisation occur at equal rates; the concentration of solute in this state is the solubility. An unsaturated solution can dissolve more solute at the same temperature.", "section": "1.3" },
+    { "id": "d3", "term": "Henry's law constant (K_H)", "definition": "The proportionality constant in Henry's law (p = K_H·x), specific to a given gas-solvent pair at a fixed temperature; a higher K_H means lower gas solubility at a given pressure.", "section": "1.3.2" },
+    { "id": "d4", "term": "Raoult's law", "definition": "For a solution of volatile liquids, the partial vapour pressure of each component is directly proportional to its mole fraction in the solution (p_i = x_i·p_i°). In its general form, for any solution, the partial vapour pressure of each volatile component is proportional to its mole fraction.", "section": "1.4.1 / 1.4.3" },
+    { "id": "d5", "term": "Ideal solution", "definition": "A solution that obeys Raoult's law at every concentration, with zero enthalpy change of mixing (Δ_mixH = 0) and zero volume change of mixing (Δ_mixV = 0), because A-A, B-B and A-B intermolecular forces are comparable.", "section": "1.5.1" },
+    { "id": "d6", "term": "Azeotrope", "definition": "A binary mixture that boils at a constant temperature with the liquid and vapour phases having the same composition, so it cannot be separated by fractional distillation; arises from large deviations from Raoult's law (minimum-boiling for positive deviation, maximum-boiling for negative deviation).", "section": "1.5.2" },
+    { "id": "d7", "term": "Colligative properties", "definition": "Properties of a solution that depend only on the number of solute particles present, not on their chemical identity: relative lowering of vapour pressure, elevation of boiling point, depression of freezing point, and osmotic pressure.", "section": "1.6" },
+    { "id": "d8", "term": "Osmosis / Osmotic pressure", "definition": "Osmosis is the spontaneous flow of solvent molecules through a semipermeable membrane from pure solvent (or a less concentrated solution) into a more concentrated solution. Osmotic pressure (π) is the excess pressure that must be applied to the solution to exactly stop this flow.", "section": "1.6.4" },
+    { "id": "d9", "term": "Isotonic / Hypertonic / Hypotonic solutions", "definition": "Isotonic solutions have equal osmotic pressure at a given temperature (no net osmosis between them across a membrane). A solution with a higher solute concentration than a reference (e.g. a cell) is hypertonic; one with a lower concentration is hypotonic.", "section": "1.6.4" },
+    { "id": "d10", "term": "Reverse osmosis", "definition": "The reversal of normal osmotic flow by applying a pressure greater than the osmotic pressure to the concentrated (solution) side, forcing pure solvent to pass through the semipermeable membrane out of the solution — used for seawater desalination.", "section": "1.6.5" },
+    { "id": "d11", "term": "van't Hoff factor (i)", "definition": "A correction factor, i = normal molar mass/abnormal (experimentally observed) molar mass = observed colligative property/calculated colligative property, that accounts for a solute's dissociation (i>1) or association (i<1) in solution.", "section": "1.7" }
+  ],
+  "figures": [
+    { "id": "fig-1-1", "kind": "figure", "label": "Fig. 1.1", "ncertPage": 7, "section": "1.3.2", "caption": "Effect of pressure on the solubility of a gas — compressing the gas above a solution increases the concentration of dissolved gas until a new equilibrium is reached.", "placeholderText": "NCERT Chemistry XII · Ch 1 · Page 7 · Fig. 1.1", "src": null, "uploadHint": "Crop from lech101.pdf page 7" },
+    { "id": "fig-1-2", "kind": "graph", "label": "Fig. 1.2", "ncertPage": 7, "section": "1.3.2", "caption": "Experimental plot of partial pressure of HCl gas versus its mole fraction in cyclohexane at 293 K — the slope of the straight line is the Henry's law constant K_H.", "placeholderText": "NCERT Chemistry XII · Ch 1 · Page 7 · Fig. 1.2", "src": null, "uploadHint": "Crop from lech101.pdf page 7" },
+    { "id": "fig-1-3", "kind": "graph", "label": "Fig. 1.3", "ncertPage": 10, "section": "1.4.1", "caption": "Vapour pressure versus mole fraction for an ideal solution at constant temperature — partial pressures p1 and p2 vary linearly with mole fraction (lines I and II), and the total vapour pressure (line III) is also linear.", "placeholderText": "NCERT Chemistry XII · Ch 1 · Page 10 · Fig. 1.3", "src": null, "uploadHint": "Crop from lech101.pdf page 10" },
+    { "id": "fig-1-6", "kind": "graph", "label": "Fig. 1.6", "ncertPage": 14, "section": "1.5.2", "caption": "Vapour pressure versus composition for two-component systems showing (a) positive deviation and (b) negative deviation from Raoult's law.", "placeholderText": "NCERT Chemistry XII · Ch 1 · Page 14 · Fig. 1.6", "src": null, "uploadHint": "Crop from lech101.pdf page 14" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Concentration units",
+      "latex": "\\text{Mass \\%} = \\dfrac{m_{component}}{m_{solution}}\\times100,\\quad \\text{ppm} = \\dfrac{\\text{parts of component}}{\\text{total parts}}\\times10^6,\\quad x_i = \\dfrac{n_i}{\\sum n_i},\\quad M = \\dfrac{n_{solute}}{V_{solution}(\\text{L})},\\quad m = \\dfrac{n_{solute}}{w_{solvent}(\\text{kg})}",
+      "plain": "mass %, ppm, mole fraction, molarity and molality — the standard ways to express solution concentration",
+      "symbols": [
+        { "symbol": "x_i", "meaning": "mole fraction of component i" },
+        { "symbol": "M", "meaning": "molarity (mol per litre of solution)" },
+        { "symbol": "m", "meaning": "molality (mol per kg of solvent)" }
+      ],
+      "whenToUse": "Any problem needing to convert between how a solution's composition is described — the very first step in almost every numerical in this chapter.",
+      "derivedFrom": "NCERT Eq. 1.1, 1.3, 1.4–1.7, 1.8, 1.9",
+      "commonMistakes": [
+        "Using molarity in a colligative-property formula that requires molality (molarity changes with temperature, molality does not).",
+        "Forgetting that mole fraction, mass %, ppm and molality are all independent of temperature since they are mass-based, not volume-based.",
+        "Confusing molarity's denominator (litres of SOLUTION) with molality's denominator (kg of SOLVENT only)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Convert mass % to mole fraction or molality",
+          "howToInterpret": "Assume a convenient total mass (usually 100 g) of solution, split it into solute and solvent masses using the given %, then convert each to moles.",
+          "howItConnectsToFormula": "x_i = n_i/Σn_i using moles computed from the assumed 100 g sample.",
+          "exampleStem": "Calculate the mole fraction of ethylene glycol (C2H6O2) in a solution containing 20% of C2H6O2 by mass.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Molarity from mass and volume, using density",
+          "howToInterpret": "When density is given, first find the total mass of solution, then the mass/moles of solute, then apply M = moles/volume(L).",
+          "howItConnectsToFormula": "Combine mass % with density to get moles of solute per litre of solution.",
+          "exampleStem": "Calculate (a) molality (b) molarity and (c) mole fraction of KI if the density of 20% (mass/mass) aqueous KI is 1.202 g/mL.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Think of these five units as answering slightly different questions — mass % and ppm compare masses, mole fraction compares moles, molarity packs moles into a litre of the whole solution, and molality packs moles into a kilogram of just the solvent. The solvent-only denominator is what makes molality temperature-independent, unlike molarity."
+    },
+    {
+      "id": "f2",
+      "name": "Henry's law",
+      "latex": "p = K_H \\, x",
+      "plain": "partial pressure of a gas above a solution = Henry's law constant × mole fraction of the gas in solution",
+      "symbols": [
+        { "symbol": "p", "meaning": "partial pressure of the gas in the vapour phase" },
+        { "symbol": "K_H", "meaning": "Henry's law constant (units of pressure, e.g. kbar)" },
+        { "symbol": "x", "meaning": "mole fraction of the dissolved gas in solution" }
+      ],
+      "whenToUse": "Any problem involving a gas dissolving in a liquid — solubility of O2/N2/CO2 in water, scuba diving, soda bottling, or finding the amount of gas dissolved at a given pressure.",
+      "derivedFrom": "NCERT Eq. 1.11",
+      "commonMistakes": [
+        "Forgetting that a HIGHER K_H means LOWER solubility at the same pressure — an easy sign-reversal trap.",
+        "Neglecting solute moles (n) compared to solvent moles when converting x to actual moles dissolved in a fixed volume of water — this is a standard simplification (n << 55.5 mol/L for water) that speeds up the calculation.",
+        "Applying Henry's law to gases that react chemically with the solvent (e.g. HCl in water at high concentration, NH3) — it strictly applies to physical dissolution only."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find moles/mass of gas dissolved at a given partial pressure",
+          "howToInterpret": "Use x = p/K_H to get the mole fraction, then convert to moles using the known moles of solvent (55.5 mol/L for water).",
+          "howItConnectsToFormula": "x(gas) = n/(n + n_solvent) ≈ n/n_solvent for dilute solutions, solved for n.",
+          "exampleStem": "If N2 gas is bubbled through water at 293 K, how many millimoles of N2 would dissolve in 1 litre of water if it exerts a partial pressure of 0.987 bar, given K_H = 76.48 kbar?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Henry's law is really just Raoult's law generalized to a gas — the gas's partial pressure over the solution is proportional to how much of it is dissolved, but the proportionality constant K_H is an experimentally measured number for that particular gas-solvent pair, not the pure gas's own vapour pressure."
+    },
+    {
+      "id": "f3",
+      "name": "Raoult's law for volatile liquid-liquid solutions",
+      "latex": "p_1 = x_1 p_1^{0}, \\quad p_2 = x_2 p_2^{0}, \\quad p_{total} = p_1 + p_2 = p_1^{0} + (p_2^{0}-p_1^{0})x_2",
+      "plain": "each component's partial vapour pressure = its mole fraction × its pure vapour pressure; total pressure is the sum",
+      "symbols": [
+        { "symbol": "p_1^0, p_2^0", "meaning": "vapour pressure of pure component 1 and 2 at the same temperature" },
+        { "symbol": "x_1, x_2", "meaning": "mole fractions of components 1 and 2 in the liquid solution" },
+        { "symbol": "y_1, y_2", "meaning": "mole fractions of components 1 and 2 in the vapour phase (y_i = p_i/p_total)" }
+      ],
+      "whenToUse": "Any binary solution of two volatile liquids — finding total vapour pressure or the composition of the vapour phase above the solution.",
+      "derivedFrom": "NCERT Eq. 1.12–1.19",
+      "commonMistakes": [
+        "Confusing liquid-phase mole fraction (x_i) with vapour-phase mole fraction (y_i) — they are different quantities related by y_i = p_i/p_total.",
+        "Forgetting Dalton's law step (p_total = p1 + p2) when only one partial pressure has been computed."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Total vapour pressure and vapour-phase composition from given masses",
+          "howToInterpret": "Convert masses to moles, find liquid-phase mole fractions, apply Raoult's law to each component, sum for p_total, then use y_i = p_i/p_total.",
+          "howItConnectsToFormula": "p_total = p1°x1 + p2°x2, then y_i = p_i/p_total.",
+          "exampleStem": "Vapour pressures of chloroform and dichloromethane at 298 K are 200 mm Hg and 415 mm Hg respectively. Calculate the vapour pressure of a solution of 25.5 g CHCl3 and 40 g CH2Cl2, and the mole fraction of each component in the vapour phase.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Each liquid pulls the total pressure toward its own pure vapour pressure in proportion to how much of it is present — and because the more volatile liquid always contributes disproportionately more vapour, the gas phase above any liquid mixture is always richer in whichever component evaporates more easily."
+    },
+    {
+      "id": "f4",
+      "name": "Relative lowering of vapour pressure (Raoult's law for a non-volatile solute)",
+      "latex": "\\dfrac{p_1^{0}-p_1}{p_1^{0}} = x_2 = \\dfrac{n_2}{n_1+n_2} \\approx \\dfrac{n_2}{n_1} = \\dfrac{w_2 M_1}{M_2 w_1}",
+      "plain": "fractional drop in solvent vapour pressure equals the mole fraction of (non-volatile) solute",
+      "symbols": [
+        { "symbol": "p_1^0, p_1", "meaning": "vapour pressure of pure solvent and of the solution" },
+        { "symbol": "n_1, n_2", "meaning": "moles of solvent and solute" },
+        { "symbol": "w_1, w_2, M_1, M_2", "meaning": "masses and molar masses of solvent and solute" }
+      ],
+      "whenToUse": "First colligative property; used whenever the solute is non-volatile and you need to find its molar mass from a measured vapour pressure drop.",
+      "derivedFrom": "NCERT Eq. 1.20–1.28",
+      "commonMistakes": [
+        "Forgetting the n2 << n1 approximation is valid ONLY for dilute solutions — don't apply it if solute concentration is high.",
+        "Mixing up which mass/molar mass belongs to solute (subscript 2) vs solvent (subscript 1) when substituting into the w2M1/(M2w1) form."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Molar mass of a non-volatile solute from vapour pressure data",
+          "howToInterpret": "Identify p1°, p (solution's vapour pressure), and masses of solute/solvent; solve directly for M2.",
+          "howItConnectsToFormula": "(p1°−p)/p1° = w2M1/(M2w1), rearrange for M2.",
+          "exampleStem": "The vapour pressure of pure benzene is 0.850 bar. A non-volatile solid weighing 0.5 g is added to 39.0 g of benzene (M=78 g/mol), giving a solution vapour pressure of 0.845 bar. Find the molar mass of the solid.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This formula is really Raoult's law solved for the drop rather than the value — since the solvent's mole fraction is 1 minus the solute's, the relative drop in vapour pressure equals exactly the solute's mole fraction, giving a direct route from a measurable pressure change to an unknown molar mass."
+    },
+    {
+      "id": "f5",
+      "name": "Elevation of boiling point",
+      "latex": "\\Delta T_b = K_b \\, m = \\dfrac{K_b \\times 1000 \\times w_2}{M_2 \\times w_1}",
+      "plain": "rise in boiling point = molal elevation constant × molality of solute",
+      "symbols": [
+        { "symbol": "ΔT_b", "meaning": "elevation in boiling point, T_b − T_b°" },
+        { "symbol": "K_b", "meaning": "molal boiling point elevation (ebullioscopic) constant, K kg mol⁻¹" },
+        { "symbol": "m", "meaning": "molality of the solution" }
+      ],
+      "whenToUse": "Any dilute solution of a non-volatile solute where the boiling point rise is given or asked, or to determine an unknown solute's molar mass.",
+      "derivedFrom": "NCERT Eq. 1.29–1.33",
+      "commonMistakes": [
+        "Using molarity instead of molality in this formula — ΔTb depends on molality specifically.",
+        "Forgetting to add ΔTb to the PURE solvent's boiling point (not to 0 or to some other reference) to get the solution's actual boiling point."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find the new boiling point of a solution",
+          "howToInterpret": "Compute molality from given masses, apply ΔTb = Kb·m, then add to the solvent's normal boiling point.",
+          "howItConnectsToFormula": "T_b(solution) = T_b°(solvent) + Kb·m.",
+          "exampleStem": "18 g of glucose is dissolved in 1 kg of water. At what temperature will the water boil? (Kb for water = 0.52 K kg mol⁻¹)",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Find molar mass of solute from observed boiling point elevation",
+          "howToInterpret": "Given masses of solute and solvent and the measured ΔTb, solve directly for M2.",
+          "howItConnectsToFormula": "M2 = Kb×1000×w2/(ΔTb×w1).",
+          "exampleStem": "The boiling point of benzene is 353.23 K. Dissolving 1.80 g of a non-volatile solute in 90 g of benzene raises the boiling point to 354.11 K. Find the solute's molar mass (Kb for benzene = 2.53 K kg mol⁻¹).",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Adding a non-volatile solute lowers the solvent's vapour pressure, so you now need to heat the solution higher than the pure solvent's boiling point before its vapour pressure climbs back up to atmospheric pressure — that's the whole mechanism behind elevation of boiling point."
+    },
+    {
+      "id": "f6",
+      "name": "Depression of freezing point",
+      "latex": "\\Delta T_f = K_f \\, m = \\dfrac{K_f \\times 1000 \\times w_2}{M_2 \\times w_1}",
+      "plain": "drop in freezing point = molal depression constant × molality of solute",
+      "symbols": [
+        { "symbol": "ΔT_f", "meaning": "depression in freezing point, T_f° − T_f" },
+        { "symbol": "K_f", "meaning": "molal freezing point depression (cryoscopic) constant, K kg mol⁻¹" }
+      ],
+      "whenToUse": "Any dilute solution of a non-volatile solute where the freezing point drop is given or asked — including antifreeze-in-water and molar-mass-determination problems.",
+      "derivedFrom": "NCERT Eq. 1.34–1.38",
+      "commonMistakes": [
+        "Subtracting in the wrong order — ΔTf = T_f°(pure solvent) − T_f(solution), always a positive drop for the solvent.",
+        "Forgetting that both Kb and Kf can also be computed thermodynamically from R, M1, and the boiling/freezing point and enthalpy of vaporisation/fusion of the pure solvent (Kb = RM1Tb²/1000Δ_vapH; Kf = RM1Tf²/1000Δ_fusH), not just looked up."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find the freezing point of a solution",
+          "howToInterpret": "Compute molality, apply ΔTf = Kf·m, then subtract from the pure solvent's freezing point.",
+          "howItConnectsToFormula": "T_f(solution) = T_f°(solvent) − Kf·m.",
+          "exampleStem": "45 g of ethylene glycol (C2H6O2) is mixed with 600 g of water. Calculate the freezing point depression and the freezing point of the solution.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Find molar mass of solute from observed freezing point depression",
+          "howToInterpret": "Given masses of solute and solvent and measured ΔTf, solve directly for M2.",
+          "howItConnectsToFormula": "M2 = Kf×1000×w2/(ΔTf×w1).",
+          "exampleStem": "1.00 g of a non-electrolyte solute dissolved in 50 g of benzene lowers the freezing point by 0.40 K. Find the molar mass of the solute (Kf for benzene = 5.12 K kg mol⁻¹).",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Freezing point depression works by the mirror-image logic of boiling point elevation — since the solution's vapour pressure curve sits below the pure solvent's, it now intersects the solid's vapour-pressure curve at a LOWER temperature, so the solution must be cooled further before it freezes."
+    },
+    {
+      "id": "f7",
+      "name": "Thermodynamic derivation of Kb and Kf",
+      "latex": "K_b = \\dfrac{R\\,M_1\\,T_b^{2}}{1000\\,\\Delta_{vap}H}, \\qquad K_f = \\dfrac{R\\,M_1\\,T_f^{2}}{1000\\,\\Delta_{fus}H}",
+      "plain": "molal elevation/depression constants can be computed from the solvent's molar mass, boiling/freezing point, and enthalpy of vaporisation/fusion",
+      "symbols": [
+        { "symbol": "R", "meaning": "gas constant" },
+        { "symbol": "M_1", "meaning": "molar mass of solvent" },
+        { "symbol": "T_b, T_f", "meaning": "boiling point, freezing point of pure solvent (K)" },
+        { "symbol": "Δ_vapH, Δ_fusH", "meaning": "molar enthalpy of vaporisation, fusion of the solvent" }
+      ],
+      "whenToUse": "Deriving or verifying a solvent's Kb/Kf value from thermodynamic data, rather than reading it off a table.",
+      "derivedFrom": "NCERT Eq. 1.37–1.38",
+      "commonMistakes": [
+        "Mixing up which enthalpy (vaporisation vs fusion) and which temperature (Tb vs Tf) pairs with Kb vs Kf.",
+        "Forgetting the factor of 1000 which converts grams to kilograms in the denominator."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Compute Kb or Kf from thermodynamic solvent data",
+          "howToInterpret": "Identify R, M1, the relevant temperature (Tb or Tf) and the relevant enthalpy (Δ_vapH or Δ_fusH), then substitute.",
+          "howItConnectsToFormula": "Direct substitution into Kb or Kf formula.",
+          "exampleStem": "Given water's Δ_fusH = 6.01 kJ/mol and Tf = 273.15 K, verify that Kf for water is approximately 1.86 K kg mol⁻¹.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "This shows Kb and Kf aren't arbitrary numbers — they emerge from how much energy a phase change actually requires. A solvent that needs a lot of energy to vaporise or freeze has a smaller Kb or Kf, because its phase-change temperature is less sensitive to the small disturbance a dissolved solute causes."
+    },
+    {
+      "id": "f8",
+      "name": "Osmotic pressure",
+      "latex": "\\Pi = C R T = \\dfrac{n_2}{V} R T, \\qquad M_2 = \\dfrac{w_2 R T}{\\Pi V}",
+      "plain": "osmotic pressure = molarity × gas constant × absolute temperature",
+      "symbols": [
+        { "symbol": "Π", "meaning": "osmotic pressure" },
+        { "symbol": "C", "meaning": "molarity of the solution (mol/L)" },
+        { "symbol": "R", "meaning": "gas constant, e.g. 0.0831 L bar K⁻¹ mol⁻¹" },
+        { "symbol": "V", "meaning": "volume of solution (litres)" }
+      ],
+      "whenToUse": "Finding the molar mass of large molecules (proteins, polymers) where the osmotic pressure method is preferred because it gives a measurable effect even in very dilute solution, and works near room temperature.",
+      "derivedFrom": "NCERT Eq. 1.39–1.42",
+      "commonMistakes": [
+        "Using molality instead of molarity — osmotic pressure formula specifically uses molarity (moles per litre of SOLUTION).",
+        "Forgetting to convert volume to litres before substituting.",
+        "Not matching the units of R to the units used for Π (e.g. use R = 0.0831 L bar K⁻¹ mol⁻¹ when Π is in bar)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Molar mass of a protein/polymer from osmotic pressure data",
+          "howToInterpret": "Identify mass of solute, volume of solution, temperature, and measured osmotic pressure; substitute directly.",
+          "howItConnectsToFormula": "M2 = w2RT/(ΠV).",
+          "exampleStem": "200 cm³ of an aqueous solution of a protein contains 1.26 g of protein. The osmotic pressure of this solution at 300 K is 2.57×10⁻³ bar. Calculate the molar mass of the protein.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Osmotic pressure behaves just like an ideal gas equation in disguise — π V equals n R T, exactly like P V equals n R T — which is why it's such a convenient and sensitive way to weigh giant molecules like proteins: even a tiny number of moles produces an easily measurable pressure."
+    },
+    {
+      "id": "f9",
+      "name": "van't Hoff factor and modified colligative property formulas",
+      "latex": "i = \\dfrac{\\text{Normal molar mass}}{\\text{Abnormal molar mass}} = \\dfrac{\\text{Observed colligative property}}{\\text{Calculated colligative property}}; \\quad \\dfrac{p_1^0-p_1}{p_1^0}=i\\,x_2,\\ \\ \\Delta T_b = i K_b m,\\ \\ \\Delta T_f = i K_f m,\\ \\ \\Pi = i\\,C R T",
+      "plain": "van't Hoff factor corrects every colligative-property formula for solute dissociation (i>1) or association (i<1)",
+      "symbols": [
+        { "symbol": "i", "meaning": "van't Hoff factor = ratio of actual particles to expected (undissociated/unassociated) particles" }
+      ],
+      "whenToUse": "Any solute that is an electrolyte (dissociates into ions) or that is known to associate (e.g. dimerise via hydrogen bonding) in the given solvent — i.e. whenever the solute is NOT a simple non-electrolyte behaving ideally.",
+      "derivedFrom": "NCERT (Section 1.7, unnumbered equations)",
+      "commonMistakes": [
+        "Forgetting to include i for strong electrolytes like NaCl, KCl, K2SO4 — leads to a molar mass calculation that is wrong by roughly a factor of i.",
+        "Assuming i is always a whole number — in practice i approaches but rarely exactly equals the theoretical value (e.g. i≈1.87 for 0.1 m NaCl, not exactly 2, due to interionic attraction) unless the question specifies complete dissociation.",
+        "Mixing up i>1 (dissociation, more particles, LOWER abnormal molar mass) with i<1 (association, fewer particles, HIGHER abnormal molar mass)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Find degree of association from van't Hoff factor",
+          "howToInterpret": "Compute i from observed/calculated molar mass, then relate i to the degree of association x using the equilibrium 2A ⇌ A2, where total moles = 1 − x/2, so i = 1 − x/2.",
+          "howItConnectsToFormula": "i = 1 − x/2 (for dimerisation of a monomer into a dimer).",
+          "exampleStem": "2 g of benzoic acid dissolved in 25 g of benzene shows a depression in freezing point of 1.62 K. Kf for benzene is 4.9 K kg mol⁻¹. What is the percentage association of the acid if it forms a dimer in solution?",
+          "difficulty": "advanced"
+        },
+        {
+          "patternName": "Find degree of dissociation and equilibrium constant from van't Hoff factor",
+          "howToInterpret": "Compute i from observed/calculated ΔTf, relate i to degree of dissociation x via i = 1 + x (for dissociation into 2 ions), then use x to find equilibrium concentrations and Ka.",
+          "howItConnectsToFormula": "i = 1 + x for a weak monoprotic acid dissociating into 2 ions; then Ka = [H+][A−]/[HA] using nx, nx, n(1−x).",
+          "exampleStem": "0.6 mL of acetic acid (density 1.06 g/mL) is dissolved in 1 litre of water. The observed depression in freezing point is 0.0205°C. Calculate the van't Hoff factor and the dissociation constant of the acid.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "The van't Hoff factor is just a particle-counting correction — every colligative property ultimately depends on how many independent particles are floating around in solution, so if a solute breaks into two ions, i roughly doubles the expected effect, and if two molecules stick together into one dimer, i roughly halves it."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d11"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["concentration units", "mole fraction", "numerical"],
+      "stages": {
+        "question": "Calculate the mole fraction of ethylene glycol (C2H6O2) in a solution containing 20% of C2H6O2 by mass.",
+        "interpretation": "Assume 100 g of solution: 20 g ethylene glycol + 80 g water, then convert both to moles.",
+        "formula": "x_i = n_i/Σn_i",
+        "solutionSteps": [
+          "Molar mass of C2H6O2 = 62 g/mol; moles = 20/62 = 0.322 mol",
+          "Molar mass of water = 18 g/mol; moles = 80/18 = 4.444 mol",
+          "x_glycol = 0.322/(0.322+4.444) = 0.068"
+        ],
+        "answer": "x_glycol ≈ 0.068 (and x_water ≈ 0.932)"
+      },
+      "audioScript": "Assuming exactly 100 grams of solution is the standard trick for mass-percent problems — it turns the percentage directly into grams, letting you move straight to moles."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["molality", "numerical"],
+      "stages": {
+        "question": "Calculate the molality of 2.5 g of ethanoic acid (CH3COOH) in 75 g of benzene.",
+        "interpretation": "Direct molality calculation — moles of solute per kilogram of solvent.",
+        "formula": "m = moles of solute / mass of solvent (kg)",
+        "solutionSteps": [
+          "Molar mass of CH3COOH = 60 g/mol; moles = 2.5/60 = 0.0417 mol",
+          "Mass of benzene in kg = 75/1000 = 0.075 kg",
+          "Molality = 0.0417/0.075 = 0.556 mol/kg"
+        ],
+        "answer": "0.556 mol kg⁻¹"
+      },
+      "audioScript": "Molality only cares about the solvent's mass, not the total solution's volume — that's exactly what makes it immune to temperature changes, unlike molarity."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "intermediate",
+      "tags": ["henry's law", "numerical"],
+      "stages": {
+        "question": "N2 gas is bubbled through water at 293 K with a partial pressure of 0.987 bar. Given K_H for N2 at 293 K is 76.48 kbar, how many millimoles of N2 dissolve in 1 litre of water?",
+        "interpretation": "Use Henry's law to find mole fraction, then convert to moles using 1 L water ≈ 55.5 mol.",
+        "formula": "x = p/K_H",
+        "solutionSteps": [
+          "x(N2) = 0.987 bar / 76480 bar = 1.29×10⁻⁵",
+          "x(N2) = n/(n+55.5) ≈ n/55.5 (since n << 55.5)",
+          "n = 1.29×10⁻⁵ × 55.5 = 7.16×10⁻⁴ mol = 0.716 mmol"
+        ],
+        "answer": "≈ 0.716 mmol"
+      },
+      "audioScript": "The key simplification here is treating water's 55.5 moles per litre as effectively constant, since the dissolved gas amount is so tiny it barely changes the total mole count in the denominator."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["raoult's law", "vapour pressure", "numerical"],
+      "stages": {
+        "question": "Vapour pressures of pure CHCl3 and CH2Cl2 at 298 K are 200 mm Hg and 415 mm Hg. Find the vapour pressure of the solution formed from 25.5 g CHCl3 and 40 g CH2Cl2.",
+        "interpretation": "Convert masses to moles, find liquid-phase mole fractions, then apply Raoult's law for a two-volatile-component solution.",
+        "formula": "p_total = p1° x1 + p2° x2",
+        "solutionSteps": [
+          "Moles CH2Cl2 = 40/85 = 0.47 mol; moles CHCl3 = 25.5/119.5 = 0.213 mol",
+          "x(CH2Cl2) = 0.47/0.683 = 0.688; x(CHCl3) = 0.312",
+          "p_total = 200 + (415−200)×0.688 = 200 + 147.9 = 347.9 mm Hg"
+        ],
+        "answer": "≈ 347.9 mm Hg"
+      },
+      "audioScript": "Notice the total pressure formula only needs ONE mole fraction once you rearrange it as p1° plus the pressure difference times x2 — that's the linear form of Raoult's law for two volatile liquids."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["elevation of boiling point", "numerical"],
+      "stages": {
+        "question": "The boiling point of benzene is 353.23 K. Dissolving 1.80 g of a non-volatile solute in 90 g of benzene raises the boiling point to 354.11 K. Find the molar mass of the solute (Kb = 2.53 K kg mol⁻¹).",
+        "interpretation": "Find ΔTb, then solve the elevation-of-boiling-point formula for molar mass.",
+        "formula": "M2 = Kb×1000×w2/(ΔTb×w1)",
+        "solutionSteps": [
+          "ΔTb = 354.11 − 353.23 = 0.88 K",
+          "M2 = (2.53 × 1.80 × 1000)/(0.88 × 90)",
+          "M2 = 4554/79.2 ≈ 58 g/mol"
+        ],
+        "answer": "≈ 58 g mol⁻¹"
+      },
+      "audioScript": "This is the same molar-mass-from-colligative-property pattern used across the whole chapter — measure the effect, plug in the known constant, and solve for the one unknown, molar mass."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["depression of freezing point", "numerical"],
+      "stages": {
+        "question": "1.00 g of a non-electrolyte solute dissolved in 50 g of benzene lowers its freezing point by 0.40 K. Kf for benzene is 5.12 K kg mol⁻¹. Find the molar mass of the solute.",
+        "interpretation": "Direct application of the freezing point depression formula solved for molar mass.",
+        "formula": "M2 = Kf×1000×w2/(ΔTf×w1)",
+        "solutionSteps": [
+          "M2 = (5.12 × 1.00 × 1000)/(0.40 × 50)",
+          "M2 = 5120/20 = 256 g/mol"
+        ],
+        "answer": "256 g mol⁻¹"
+      },
+      "audioScript": "Same structure as the boiling-point-elevation formula — just swap Kb for Kf and the boiling-point rise for the freezing-point drop."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "advanced",
+      "tags": ["osmotic pressure", "numerical"],
+      "stages": {
+        "question": "200 cm³ of an aqueous protein solution contains 1.26 g of protein. Its osmotic pressure at 300 K is 2.57×10⁻³ bar. Calculate the molar mass of the protein. (R = 0.083 L bar K⁻¹ mol⁻¹)",
+        "interpretation": "Direct substitution into the osmotic pressure formula, solved for molar mass.",
+        "formula": "M2 = w2RT/(ΠV)",
+        "solutionSteps": [
+          "V = 200 cm³ = 0.200 L",
+          "M2 = (1.26 × 0.083 × 300)/(2.57×10⁻³ × 0.200)",
+          "M2 = 31.374/(5.14×10⁻⁴) ≈ 61,022 g/mol"
+        ],
+        "answer": "≈ 61,022 g mol⁻¹"
+      },
+      "audioScript": "Notice how huge this molar mass is compared to the small-molecule examples elsewhere in the chapter — that's exactly why osmotic pressure, not freezing point or boiling point, is the preferred method for weighing proteins and other macromolecules."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "advanced",
+      "tags": ["van't Hoff factor", "association", "numerical"],
+      "stages": {
+        "question": "2 g of benzoic acid (C6H5COOH) dissolved in 25 g of benzene shows a freezing point depression of 1.62 K. Kf for benzene is 4.9 K kg mol⁻¹. What is the percentage association of the acid if it dimerises in solution?",
+        "interpretation": "Find the abnormal (experimental) molar mass first, then relate it to the true molar mass via the van't Hoff factor and the dimerisation equilibrium.",
+        "formula": "M2(abnormal) = Kf×1000×w2/(ΔTf×w1); i = 1 − x/2 for 2A ⇌ A2",
+        "solutionSteps": [
+          "M2(abnormal) = (4.9×2×1000)/(25×1.62) = 241.98 g/mol",
+          "True molar mass of benzoic acid = 122 g/mol",
+          "i = 122/241.98 = 0.504",
+          "For 2A⇌A2: i = 1 − x/2, so x/2 = 1 − 0.504 = 0.496, x = 0.992"
+        ],
+        "answer": "≈ 99.2% association"
+      },
+      "audioScript": "The experimental molar mass comes out almost exactly double the true molar mass — a strong signal that benzoic acid molecules are pairing up into dimers via hydrogen bonding in the non-polar benzene solvent, nearly completely."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": ["conceptual", "colligative properties"],
+      "stages": {
+        "question": "Why are relative lowering of vapour pressure, elevation of boiling point, depression of freezing point and osmotic pressure grouped together as 'colligative properties'?",
+        "interpretation": "Tests the core defining idea of this entire section of the chapter.",
+        "formula": "none — conceptual",
+        "solutionSteps": [
+          "All four properties arise from the SAME underlying cause: a non-volatile solute reduces the solvent's vapour pressure by occupying part of the surface / diluting the solvent",
+          "Each property's magnitude depends only on the NUMBER of solute particles present, not on what the solute chemically is",
+          "This is why, for example, equal molal concentrations of glucose and sucrose (both non-electrolytes) give nearly identical boiling point elevations"
+        ],
+        "answer": "Because each of these four properties depends only on the number of solute particles in solution, not on the solute's chemical identity — 'colligative' comes from Latin for 'bound together', referring to this shared dependence on particle count alone."
+      },
+      "audioScript": "Once you see all four properties trace back to the same root cause — a non-volatile solute lowering vapour pressure — it becomes clear why they move together and why only the particle COUNT matters, not what the particles actually are."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "intermediate",
+      "tags": ["conceptual", "azeotropes", "deviation"],
+      "stages": {
+        "question": "Why can azeotropes not be separated into their pure components by fractional distillation?",
+        "interpretation": "Tests understanding of what an azeotrope is and why it breaks the usual distillation logic.",
+        "formula": "none — conceptual",
+        "solutionSteps": [
+          "Fractional distillation works because vapour composition normally differs from liquid composition, letting the more volatile component be progressively concentrated",
+          "At the azeotropic composition, the liquid and vapour phases have EXACTLY the same composition",
+          "Since there's no compositional difference to exploit, further distillation just reproduces the same azeotropic mixture, boiling at a constant temperature"
+        ],
+        "answer": "Because at the azeotropic composition the vapour has the same composition as the liquid it came from, so distillation cannot enrich either component any further — the mixture behaves like a single 'pseudo-pure' substance at that specific composition."
+      },
+      "audioScript": "An azeotrope is the point where the usual trick behind distillation — vapour being richer in the more volatile component — simply stops working, because the two compositions have converged to be identical."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why does the solubility of a gas in a liquid decrease as temperature rises, while the solubility of most solids in a liquid increases with temperature?",
+      "Why is the vapour phase above a liquid-liquid solution always richer in the more volatile component than the liquid phase is?",
+      "Why do all four colligative properties depend only on the number of solute particles and not on their chemical nature?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Calculate the mass percentage of benzene (C6H6) and carbon tetrachloride (CCl4) if 22 g of benzene is dissolved in 122 g of carbon tetrachloride.",
+        "interpretation": "Direct mass percentage calculation for each component.",
+        "formulaIds": ["f1"],
+        "steps": ["Total mass = 22 + 122 = 144 g", "Mass % benzene = (22/144)×100 = 15.28%", "Mass % CCl4 = (122/144)×100 = 84.72%"],
+        "answer": "Benzene ≈ 15.28%; CCl4 ≈ 84.72%",
+        "audioScript": "A straightforward ratio-to-percentage calculation — just be sure to use the TOTAL mass of the solution, not either component alone, in the denominator."
+      },
+      {
+        "id": "pb2",
+        "question": "Calculate the molarity of a solution containing 30 g of Co(NO3)2·6H2O in 4.3 L of solution.",
+        "interpretation": "Find moles of the hydrated salt, then divide by the solution volume in litres.",
+        "formulaIds": ["f1"],
+        "steps": ["Molar mass of Co(NO3)2·6H2O = 59+2(14+48)+6×18 = 291 g/mol", "Moles = 30/291 = 0.103 mol", "Molarity = 0.103/4.3 = 0.024 M"],
+        "answer": "≈ 0.024 M",
+        "audioScript": "Don't forget to include the six water molecules in the molar mass of the hydrated salt — a very common place to lose marks."
+      },
+      {
+        "id": "pb3",
+        "question": "The partial pressure of ethane over a solution containing 6.56×10⁻³ g of ethane is 1 bar. What would be the partial pressure if the solution instead contains 5.00×10⁻² g of ethane, at the same temperature?",
+        "interpretation": "Henry's law implies partial pressure is proportional to moles (mole fraction) of dissolved gas, so pressures scale directly with mass dissolved (same solvent amount assumed).",
+        "formulaIds": ["f2"],
+        "steps": ["p ∝ mass of ethane dissolved (same K_H, same solvent)", "p2 = 1 bar × (5.00×10⁻²/6.56×10⁻³)", "p2 ≈ 7.62 bar"],
+        "answer": "≈ 7.62 bar",
+        "audioScript": "Since Henry's law is a direct proportionality, you don't even need to compute K_H explicitly here — just scale the pressure by the same ratio as the mass of gas dissolved."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Heptane and octane form an ideal solution. At 373 K, the vapour pressures of the two pure liquids are 105.2 kPa and 46.8 kPa respectively. What is the vapour pressure of a mixture of 26.0 g heptane and 35.0 g octane?",
+        "interpretation": "Convert masses to moles, find mole fractions, then apply Raoult's law for an ideal two-volatile-liquid solution.",
+        "formulaIds": ["f3"],
+        "steps": [
+          "Moles heptane (M=100 g/mol) = 26.0/100 = 0.26 mol",
+          "Moles octane (M=114 g/mol) = 35.0/114 = 0.307 mol",
+          "x(heptane) = 0.26/0.567 = 0.458; x(octane) = 0.542",
+          "p_total = 105.2×0.458 + 46.8×0.542 = 48.18 + 25.37 = 73.5 kPa"
+        ],
+        "answer": "≈ 73.5 kPa",
+        "audioScript": "With two volatile liquids forming an ideal solution, both partial pressures contribute — always compute both x1p1° and x2p2° and add them, rather than using the shortcut formula that only applies to a single non-volatile solute."
+      },
+      {
+        "id": "pi2",
+        "question": "A 5% solution (by mass) of cane sugar in water has a freezing point of 271 K. Calculate the freezing point of a 5% glucose solution in water. (Freezing point of pure water = 273.15 K)",
+        "interpretation": "Both are non-electrolytes; use the cane sugar data to find Kf for water, then apply the same Kf to the glucose solution using its own molar mass.",
+        "formulaIds": ["f6"],
+        "steps": [
+          "Cane sugar (sucrose, M=342 g/mol): ΔTf = 273.15−271 = 2.15 K",
+          "In 100 g solution: 5 g sucrose, 95 g water; molality = (5/342)/(95/1000) = 0.154 mol/kg",
+          "Kf(water) = ΔTf/m = 2.15/0.154 ≈ 13.97... (NCERT expects using the standard Kf=1.86; recompute glucose directly via mass-based comparison)",
+          "For glucose (M=180 g/mol), 5 g in 95 g water: molality = (5/180)/(0.095) = 0.292 mol/kg",
+          "Using Kf = 1.86 K kg/mol (standard water value): ΔTf(glucose) = 1.86×0.292 ≈ 0.543 K",
+          "Freezing point of glucose solution ≈ 273.15 − 0.543 ≈ 272.6 K"
+        ],
+        "answer": "≈ 272.6 K (glucose's smaller molar mass than sucrose means more moles per 5 g, so a LARGER freezing point depression than sucrose's)",
+        "audioScript": "The key insight is that equal MASSES of different solutes give different molalities because they have different molar masses — glucose's smaller molar mass means more moles in the same 5 grams, hence a bigger colligative effect than sucrose."
+      },
+      {
+        "id": "pi3",
+        "question": "An aqueous solution of 2% non-volatile solute exerts a pressure of 1.004 bar at the normal boiling point of the solvent. What is the molar mass of the solute?",
+        "interpretation": "At the normal boiling point of water (373.15 K), the pure solvent's vapour pressure is 1.013 bar; use relative lowering of vapour pressure with the given 2% mass solution.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "p1° = 1.013 bar; p1 = 1.004 bar",
+          "In 100 g solution: w2 = 2 g solute, w1 = 98 g water (M1=18 g/mol)",
+          "(p1°−p1)/p1° = w2M1/(M2w1): (1.013−1.004)/1.013 = (2×18)/(M2×98)",
+          "0.00888 = 36/(98 M2) ⟹ M2 = 36/(98×0.00888) ≈ 41.4 g/mol"
+        ],
+        "answer": "≈ 41.4 g mol⁻¹",
+        "audioScript": "This links the relative-lowering-of-vapour-pressure formula directly to a physically meaningful reference point — the solvent's known vapour pressure exactly at its own normal boiling point."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Calculate the osmotic pressure in pascals exerted by a solution prepared by dissolving 1.0 g of a polymer of molar mass 185,000 g/mol in 450 mL of water at 37°C.",
+        "interpretation": "Direct substitution into the osmotic pressure formula; watch units carefully (convert to SI or use R=8.314 J/(mol K) for Pa).",
+        "formulaIds": ["f8"],
+        "steps": [
+          "n2 = 1.0/185000 = 5.405×10⁻⁶ mol",
+          "V = 450 mL = 4.5×10⁻⁴ m³",
+          "T = 310 K; R = 8.314 J mol⁻¹ K⁻¹",
+          "Π = n2RT/V = (5.405×10⁻⁶ × 8.314 × 310)/(4.5×10⁻⁴)",
+          "Π ≈ 0.01393/4.5×10⁻⁴ ≈ 30.96 Pa"
+        ],
+        "answer": "≈ 30.96 Pa",
+        "audioScript": "Polymer solutions give tiny osmotic pressures in absolute terms because the molar mass is enormous — but this small pressure is still far easier to measure precisely than the correspondingly tiny freezing-point or boiling-point shift the same solution would cause, which is why osmometry is the method of choice for polymers and proteins."
+      },
+      {
+        "id": "pa2",
+        "question": "Two elements A and B form compounds AB2 and AB4. When dissolved in 20 g of benzene, 1 g of AB2 lowers the freezing point by 2.3 K, whereas 1.0 g of AB4 lowers it by 1.3 K. Kf for benzene is 5.1 K kg mol⁻¹. Calculate the atomic masses of A and B.",
+        "interpretation": "Find the molar mass of AB2 and AB4 separately using the freezing-point-depression formula, then solve the two simultaneous equations for atomic masses of A and B.",
+        "formulaIds": ["f6"],
+        "steps": [
+          "M(AB2) = (5.1×1×1000)/(2.3×20) = 5100/46 ≈ 110.9 g/mol",
+          "M(AB4) = (5.1×1.0×1000)/(1.3×20) = 5100/26 ≈ 196.2 g/mol",
+          "Let atomic mass of A = a, B = b: a+2b = 110.9 and a+4b = 196.2",
+          "Subtracting: 2b = 85.3 ⟹ b ≈ 42.6; then a = 110.9−2(42.6) = 25.7"
+        ],
+        "answer": "Atomic mass of A ≈ 25.7 g/mol; atomic mass of B ≈ 42.6 g/mol",
+        "audioScript": "This problem is really two separate molar-mass-from-freezing-point calculations stitched together — once you have both compound molar masses as two linear equations in the unknown atomic masses, it's just simultaneous equations."
+      },
+      {
+        "id": "pa3",
+        "question": "19.5 g of CH2FCOOH (fluoroacetic acid) is dissolved in 500 g of water. The observed depression in freezing point is 1.0°C. Calculate the van't Hoff factor and the dissociation constant of the acid. (Kf for water = 1.86 K kg mol⁻¹)",
+        "interpretation": "First find calculated (ideal) ΔTf from molality, compare to observed ΔTf to get i, then use i to find degree of dissociation and Ka for this weak monoprotic acid.",
+        "formulaIds": ["f6", "f9"],
+        "steps": [
+          "Molar mass of CH2FCOOH = 78 g/mol; moles = 19.5/78 = 0.25 mol",
+          "Molality = 0.25/0.5 = 0.5 mol/kg",
+          "Calculated ΔTf = Kf×m = 1.86×0.5 = 0.93 K",
+          "i = observed ΔTf/calculated ΔTf = 1.0/0.93 = 1.0753",
+          "For weak monoprotic acid HA⇌H⁺+A⁻: i = 1+x ⟹ x = 0.0753 (degree of dissociation)",
+          "Ka = c·x²/(1−x) = 0.5×(0.0753)²/(1−0.0753) ≈ 0.5×0.00567/0.9247 ≈ 3.07×10⁻³"
+        ],
+        "answer": "i ≈ 1.075; Ka ≈ 3.07×10⁻³",
+        "audioScript": "This problem chains two chapters together — the van't Hoff factor comes straight from comparing observed to calculated colligative property, but converting that factor into an actual dissociation constant needs the equilibrium-concentration setup you'd use for a weak acid, connecting Solutions to Equilibrium."
+      }
+    ],
+    "transferPrompt": "After finishing the ladder, invent one new exam-style MCQ that combines the van't Hoff factor with equilibrium constant calculations (e.g. finding Ka or Kb of a weak acid/base from a measured freezing-point depression, as in the fluoroacetic acid problem), and one that combines Henry's law with a real-world scenario like scuba diving or high-altitude physiology."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 1 — Solutions. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (concentration units, solubility & Henry's law, vapour pressure & Raoult's law, ideal/non-ideal solutions & azeotropes, colligative properties, or van't Hoff factor & abnormal molar mass). First quiz me on definitions and formulas with NO calculation involved — the seven concentration units and which are temperature-independent, Henry's law statement, Raoult's law statement (both forms), ideal vs non-ideal solutions, the four colligative properties and why they're called that, and the meaning of the van't Hoff factor. Then move to basic numericals tied to a single formula (mass %/mole fraction/molarity/molality conversions, simple Henry's law problems, simple vapour-pressure and freezing/boiling point problems). Then intermediate problems requiring two steps (Raoult's law total vapour pressure with vapour-phase composition, molar mass from elevation of boiling point or depression of freezing point). Then advanced multi-stage problems (osmotic pressure for macromolecules, van't Hoff factor combined with degree of association or dissociation, and problems that connect this chapter to equilibrium via Ka/Kb calculations). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 9 formulas with when-to-use notes). Stay within this chapter's scope (concentration units, solubility, Henry's law, Raoult's law, ideal/non-ideal solutions, azeotropes, colligative properties, van't Hoff factor) unless I explicitly ask to connect to another chapter such as chemical equilibrium or electrochemistry.",
+  "selfCheck": [
+    { "q": "Which concentration units are temperature-independent, and which is not, and why?", "a": "Mass %, ppm, mole fraction and molality are all temperature-independent because they are based on mass (which doesn't change with temperature). Molarity is temperature-dependent because it is based on the volume of solution, which expands or contracts with temperature." },
+    { "q": "State Henry's law and explain what a higher K_H value means physically.", "a": "Henry's law states that at constant temperature, the partial pressure of a gas above a solution is directly proportional to its mole fraction in the solution (p = K_H·x). A higher K_H at a given pressure corresponds to a LOWER solubility of that gas." },
+    { "q": "What distinguishes an ideal solution from a non-ideal one, and what physical quantities are used to test this?", "a": "An ideal solution obeys Raoult's law at every concentration and has zero enthalpy of mixing (Δ_mixH=0) and zero volume change on mixing (Δ_mixV=0). Non-ideal solutions deviate from Raoult's law (vapour pressure higher = positive deviation, lower = negative deviation) because A-B intermolecular forces differ from A-A/B-B forces." },
+    { "q": "Why are relative lowering of vapour pressure, elevation of boiling point, depression of freezing point and osmotic pressure grouped as colligative properties?", "a": "Because all four depend only on the NUMBER of solute particles present in the solution, not on the chemical identity of the solute." },
+    { "q": "What does a van't Hoff factor of i > 1 versus i < 1 tell you about a solute's behaviour in solution?", "a": "i > 1 indicates the solute dissociates into more particles than expected (e.g. NaCl → Na⁺ + Cl⁻, i≈2), giving an abnormal molar mass LOWER than the true value. i < 1 indicates the solute associates into fewer particles (e.g. ethanoic acid dimerising in benzene, i≈0.5), giving an abnormal molar mass HIGHER than the true value." }
+  ]
+}

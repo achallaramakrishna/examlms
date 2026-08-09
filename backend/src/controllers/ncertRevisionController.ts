@@ -26,6 +26,11 @@ const SLUG_TO_TOPICS: Record<string, string[]> = {
   'ch12-kinetic-theory': ['Kinetic Theory of Gases', 'Kinetic Theory'],
   'ch13-oscillations': ['Oscillations and Waves', 'Oscillations'],
   'ch14-waves': ['Oscillations and Waves', 'Waves'],
+  'ch01-solutions': ['Solutions', 'Solid State and Solutions'],
+  'ch02-electrochemistry': ['Electrochemistry'],
+  'ch03-chemical-kinetics': ['Chemical Kinetics'],
+  'ch04-d-and-f-block-elements': ['d and f Block Elements', 'The d- and f-Block Elements'],
+  'ch05-coordination-compounds': ['Coordination Compounds'],
 };
 
 type FigureOverrides = Record<string, { src: string; updatedAt: string }>;
