@@ -80,6 +80,30 @@
       "text": "Work–energy theorem, conservation of mechanical energy, collisions, power.",
       "whyItMatters": "High-yield for NEET revision.",
       "neetRelevance": "high"
+    },
+    {
+      "id": "h7",
+      "type": "formula_intro",
+      "section": "5.11.2",
+      "text": "For a 1D elastic collision of m1 (moving at v1i) with stationary m2: v1f = [(m1−m2)/(m1+m2)]v1i and v2f = [2m1/(m1+m2)]v1i.",
+      "whyItMatters": "The actual result formulas for head-on elastic collisions — the single most tested collision calculation in NEET, distinct from just stating that momentum/KE are conserved.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h8b",
+      "type": "caution",
+      "section": "5.11.2",
+      "text": "Special cases of the elastic collision result: if m1=m2, then v1f=0 and v2f=v1i (the first mass stops completely, transferring all its velocity to the second). If m2≫m1, then v1f≈−v1i and v2f≈0 (the light mass bounces back, the heavy mass is undisturbed).",
+      "whyItMatters": "Both special cases are extremely frequently tested as standalone conceptual MCQs.",
+      "neetRelevance": "high"
+    },
+    {
+      "id": "h9b",
+      "type": "statement",
+      "section": "5.11.3",
+      "text": "When two objects of EQUAL mass undergo a glancing (oblique) elastic collision with one initially at rest, after the collision they always move off at right angles (90°) to each other.",
+      "whyItMatters": "A classic, frequently tested billiards/carrom-style result for 2D elastic collisions.",
+      "neetRelevance": "high"
     }
   ],
   "definitions": [
@@ -130,6 +154,12 @@
       "term": "Coefficient of restitution",
       "definition": "e = (speed of separation)/(speed of approach) along line of impact.",
       "section": "5"
+    },
+    {
+      "id": "d9",
+      "term": "Oblique elastic collision (equal masses)",
+      "definition": "When two equal-mass objects undergo a glancing (oblique) elastic collision with one initially at rest, they always move off at exactly 90° to each other after the collision.",
+      "section": "5.11.3"
     }
   ],
   "figures": [
@@ -410,6 +440,38 @@
         }
       ],
       "audioScript": "Restitution: 1D collision. Use it when the problem matches its assumptions in Work, Energy and Power."
+    },
+    {
+      "id": "F9",
+      "name": "Elastic collision (1D, target initially at rest)",
+      "latex": "v_{1f} = \\dfrac{m_1-m_2}{m_1+m_2}v_{1i}, \\qquad v_{2f} = \\dfrac{2m_1}{m_1+m_2}v_{1i}",
+      "plain": "final velocities of both masses after a head-on elastic collision, in terms of the incoming mass's initial velocity",
+      "symbols": [
+        { "symbol": "m_1, v_1i", "meaning": "mass and initial velocity of the incoming object" },
+        { "symbol": "m_2", "meaning": "mass of the initially-stationary target" }
+      ],
+      "whenToUse": "Any 1D (head-on) elastic collision where one object starts at rest — derived from simultaneously conserving momentum and kinetic energy.",
+      "commonMistakes": [
+        "Forgetting these formulas assume m2 starts at REST — if both masses are moving, the derivation needs to be redone (or use relative-velocity method instead).",
+        "Mixing up which formula belongs to which mass — v1f can be negative (rebounds) if m2>m1."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Special case: equal masses",
+          "howToInterpret": "Substitute m1=m2 directly into both formulas.",
+          "howItConnectsToFormula": "v1f=0, v2f=v1i — the incoming mass stops dead, transferring all velocity to the target.",
+          "exampleStem": "A moving billiard ball strikes an identical stationary ball head-on elastically. Describe the motion after collision.",
+          "difficulty": "basic"
+        },
+        {
+          "patternName": "Neutron moderation (light nucleus slows a fast neutron)",
+          "howToInterpret": "A fast neutron (m1) elastically strikes a stationary light nucleus (m2); find the fractional kinetic energy lost.",
+          "howItConnectsToFormula": "Fractional KE remaining = [(m1−m2)/(m1+m2)]², so fractional KE lost = 1 − that, maximised when m1≈m2.",
+          "exampleStem": "A neutron collides elastically with a stationary deuterium nucleus (mass ≈2× the neutron). What fraction of the neutron's kinetic energy is transferred to the deuterium?",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "These two formulas are the actual payoff of combining momentum and energy conservation for a head-on collision — memorize the equal-mass special case especially, since a moving ball hitting an identical stationary one and stopping dead is one of the most visually memorable and frequently tested results in this chapter."
     }
   ],
   "views": {
@@ -421,7 +483,8 @@
       "F5",
       "F6",
       "F7",
-      "F8"
+      "F8",
+      "F9"
     ],
     "definitionViewOrder": [
       "d1",
@@ -431,7 +494,8 @@
       "d5",
       "d6",
       "d7",
-      "d8"
+      "d8",
+      "d9"
     ],
     "cheatSheetFocus": [
       "mustKnowBullets",
@@ -660,6 +724,22 @@
         "answer": "Both momentum and kinetic energy conserved."
       },
       "audioScript": "Elastic collision: Both momentum and kinetic energy conserved."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "intermediate",
+      "tags": ["elastic collision", "equal masses", "numerical"],
+      "stages": {
+        "question": "A neutron of mass m moving at speed v collides elastically head-on with a stationary deuterium nucleus of mass 2m. Find the fraction of the neutron's kinetic energy transferred to the deuterium.",
+        "interpretation": "Use the elastic collision result formula for v2f, then compute the fraction of KE transferred.",
+        "formula": "v2f = 2m1v1i/(m1+m2); fraction transferred = 4m1m2/(m1+m2)²",
+        "solutionSteps": [
+          "m1=m, m2=2m",
+          "Fraction of KE transferred to m2 = 4m1m2/(m1+m2)² = 4×m×2m/(3m)² = 8m²/9m²"
+        ],
+        "answer": "8/9 ≈ 0.89, so about 89% of the neutron's kinetic energy is transferred to the deuterium — this is exactly why 'heavy water' (deuterium) is used as a neutron moderator in nuclear reactors."
+      },
+      "audioScript": "This is the real-world payoff of the elastic collision formulas — plugging mass ratios into the energy-transfer fraction explains directly why nuclear reactors use light nuclei like deuterium or carbon as moderators instead of heavy ones like lead."
     }
   ],
   "problemLadder": {

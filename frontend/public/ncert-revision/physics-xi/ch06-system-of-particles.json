@@ -7,867 +7,646 @@
     "chapterTitle": "System of Particles and Rotational Motion",
     "ncertCode": "keph106",
     "topicIdHint": "System of Particles and Rotational Motion",
-    "estimatedRevisionMinutes": 50,
+    "estimatedRevisionMinutes": 70,
     "chapter": "System of Particles and Rotational Motion",
     "class": "11",
     "board": "NCERT",
     "year": "2026-27"
   },
   "learningOutcomes": [
-    "Recall core definitions of System of Particles and Rotational Motion.",
-    "Use the chapter’s key formulas with correct assumptions.",
-    "Solve basic → intermediate → advanced NEET-style problems.",
-    "Avoid common sign/unit/assumption traps."
+    "Locate the centre of mass of discrete and continuous (symmetric) bodies, and use Newton's second law for a system of particles, MA = F_ext.",
+    "Compute the vector (cross) product of two vectors and use it to define torque and angular momentum.",
+    "Apply v = ω × r, τ = r × F and l = r × p, and relate torque to the rate of change of angular momentum, dL/dt = τ.",
+    "State the conditions for translational and rotational equilibrium of a rigid body, apply the principle of moments (levers), and locate the centre of gravity.",
+    "Compute moment of inertia using the parallel axis theorem and the standard results table, and apply τ = Iα and L = Iω for rotation about a fixed axis.",
+    "Apply the rotational kinematics equations and rolling-without-slipping condition, including the total kinetic energy of a rolling body."
   ],
   "cheatSheet": {
-    "oneLiner": "Centre of mass, torque, angular momentum, rigid-body rotation about a fixed axis.",
+    "oneLiner": "Centre of mass & momentum of a system → vector products, torque & angular momentum → equilibrium & centre of gravity → moment of inertia → rotational kinematics/dynamics → rolling motion.",
     "mustKnowBullets": [
-      "CM: R_cm = Σ m_i r_i / M; for continuous bodies use integrals / symmetry.",
-      "External F_net = M a_cm.",
-      "Torque τ = r × F; τ = Iα about fixed axis.",
-      "Moment of inertia I = Σ m r²; parallel-axis: I = I_cm + Md².",
-      "Angular momentum L = r × p; for rigid body about fixed axis L = Iω.",
-      "τ_ext = dL/dt; if τ_ext = 0, L conserved.",
-      "Rolling without slipping: v = ωR; a = αR.",
-      "Rotational KE = ½ Iω²; total KE rolling = ½ mv² + ½ Iω²."
+      "Centre of mass: R = Σm_i r_i / M (discrete); X=(1/M)∫x dm etc. for continuous bodies; coincides with the geometric centre for uniform symmetric bodies.",
+      "Motion of CM: M A = F_ext — the CM moves as if all the mass were concentrated there and all external forces acted there; internal forces never affect it.",
+      "Total momentum P = MV; if F_ext = 0, P is conserved and the CM moves with constant velocity (or stays at rest).",
+      "Vector product: a×b has magnitude ab sinθ, direction by the right-hand screw rule; a×b = −(b×a) (NOT commutative); a×a = 0.",
+      "v = ω × r relates the linear velocity of a particle of a rotating rigid body to its angular velocity and position vector.",
+      "Torque τ = r × F; torque vanishes if r=0, F=0, or θ=0°/180° (force line passes through the origin).",
+      "Angular momentum of a particle l = r × p; dl/dt = τ (rotational analogue of F=dp/dt).",
+      "For a system: dL/dt = τ_ext (internal torques cancel in pairs by Newton's third law); if τ_ext=0, L is conserved — classic examples: ice skater/diver pulling in arms speeds up spin.",
+      "Rigid body equilibrium needs BOTH: ΣF=0 (translational) AND Στ=0 (rotational) — a couple has ΣF=0 but Στ≠0, so it rotates without translating.",
+      "Principle of moments (lever): d₁F₁ = d₂F₂; Mechanical Advantage = F₁/F₂ = d₂/d₁.",
+      "Centre of gravity is the point where the total gravitational torque is zero; it coincides with the centre of mass whenever g is uniform over the body.",
+      "Moment of inertia I = Σm_i r_i²  (r_i ⊥ distance from axis); radius of gyration k defined by I = Mk².",
+      "Parallel axis theorem: I = I_cm + Md² (d = distance between the two parallel axes).",
+      "Rotational kinematics (constant α): ω=ω₀+αt, θ=ω₀t+½αt², ω²=ω₀²+2αθ — exact analogues of the linear equations with x→θ, v→ω, a→α.",
+      "Rotational dynamics: τ=Iα (Newton's 2nd law for rotation); Work W=τΔθ; Power P=τω; Rotational KE K=½Iω².",
+      "Rolling without slipping: v_cm=ωR, a_cm=αR; total KE = ½mv² + ½Iω² (translation + rotation, NEVER just one term)."
+    ],
+    "keyTables": [
+      {
+        "title": "Moment of inertia of common bodies (Table 6.1)",
+        "rows": [
+          ["Body", "Axis", "I"],
+          ["Thin ring, radius R", "⊥ to plane, at centre", "MR²"],
+          ["Thin ring, radius R", "diameter", "MR²/2"],
+          ["Thin rod, length L", "⊥ to rod, at midpoint", "ML²/12"],
+          ["Circular disc, radius R", "⊥ to disc, at centre", "MR²/2"],
+          ["Circular disc, radius R", "diameter", "MR²/4"],
+          ["Hollow cylinder, radius R", "axis of cylinder", "MR²"],
+          ["Solid cylinder, radius R", "axis of cylinder", "MR²/2"],
+          ["Solid sphere, radius R", "diameter", "2MR²/5"]
+        ]
+      },
+      {
+        "title": "Translation ↔ Rotation analogy (Table 6.2)",
+        "rows": [
+          ["Linear motion", "Rotational motion (fixed axis)"],
+          ["Displacement x", "Angular displacement θ"],
+          ["Velocity v = dx/dt", "Angular velocity ω = dθ/dt"],
+          ["Acceleration a = dv/dt", "Angular acceleration α = dω/dt"],
+          ["Mass M", "Moment of inertia I"],
+          ["Force F = Ma", "Torque τ = Iα"],
+          ["Work dW = F dx", "Work dW = τ dθ"],
+          ["Kinetic energy K = Mv²/2", "Kinetic energy K = Iω²/2"],
+          ["Power P = Fv", "Power P = τω"],
+          ["Linear momentum p = Mv", "Angular momentum L = Iω"]
+        ]
+      }
     ]
   },
   "highlights": [
-    {
-      "id": "h1",
-      "type": "definition",
-      "section": "6",
-      "text": "Point that moves as if all mass and net external force acted there.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    },
-    {
-      "id": "h2",
-      "type": "statement",
-      "section": "6",
-      "text": "CM: R_cm = Σ m_i r_i / M; for continuous bodies use integrals / symmetry.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    },
-    {
-      "id": "h3",
-      "type": "statement",
-      "section": "6",
-      "text": "External F_net = M a_cm.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    },
-    {
-      "id": "h4",
-      "type": "formula_intro",
-      "section": "6",
-      "text": "Torque τ = r × F; τ = Iα about fixed axis.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    },
-    {
-      "id": "h5",
-      "type": "caution",
-      "section": "6",
-      "text": "Apply sign convention and assumptions before substituting.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    },
-    {
-      "id": "h6",
-      "type": "summary",
-      "section": "6",
-      "text": "Centre of mass, torque, angular momentum, rigid-body rotation about a fixed axis.",
-      "whyItMatters": "High-yield for NEET revision.",
-      "neetRelevance": "high"
-    }
+    { "id": "h1", "type": "definition", "section": "6.2", "text": "The centre of mass of a system of particles is the point at which the total mass of the system may be thought to be concentrated for describing its translational motion. For a symmetric homogeneous body it coincides with the geometric centre.", "whyItMatters": "Foundation for treating extended bodies as an effective single particle for translational purposes.", "neetRelevance": "high" },
+    { "id": "h2", "type": "caution", "section": "6.2", "text": "The centre of mass need not lie inside the body — e.g. for a ring, a horseshoe, or an L-shaped lamina it can fall outside the material itself.", "whyItMatters": "Classic assertion-reason / conceptual trap question.", "neetRelevance": "medium" },
+    { "id": "h3", "type": "statement", "section": "6.3", "text": "The centre of mass of a system moves as though all the mass of the system is concentrated there and all the external forces act at that point: M A = F_ext. Internal forces (action-reaction pairs) never affect the motion of the centre of mass.", "whyItMatters": "Explains why an exploding projectile's fragments' CM continues along the original parabolic path, and why a person walking on a frictionless trolley shifts their own position but the trolley+person CM stays fixed.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "6.4", "text": "Total linear momentum of a system P = MV. If the total external force on a system is zero, the total linear momentum is conserved, i.e. P = constant — this is the law of conservation of momentum for a system of particles, generalising the two-body case.", "whyItMatters": "Basis of binary-star, radioactive-decay-recoil and explosion-in-flight problems where internal forces are large but external forces are absent/negligible.", "neetRelevance": "high" },
+    { "id": "h5", "type": "caution", "section": "6.5", "text": "The vector (cross) product is NOT commutative: a×b = −(b×a). Both a×b and b×a have the same magnitude but opposite directions.", "whyItMatters": "A very common sign-error trap in torque/angular-momentum MCQs.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "6.6", "text": "For rotation of a rigid body about a fixed axis, every particle's linear velocity is v = ω × r, where r is measured from any point on the axis; v is tangent to the particle's circular path and perpendicular to both ω and r.", "whyItMatters": "Bridges angular and linear kinematics for any particle of a rotating rigid body — foundational for all rolling/rotation problems.", "neetRelevance": "high" },
+    { "id": "h7", "type": "formula_intro", "section": "6.7.1", "text": "Moment of force (torque) about a point: τ = r × F. Its magnitude is τ = rF sinθ = r_⊥F, where r_⊥ = r sinθ is the perpendicular distance of the line of action of F from the origin (also called the moment arm).", "whyItMatters": "Direct-recall definition; explains why force applied along the hinge line of a door produces zero torque.", "neetRelevance": "high" },
+    { "id": "h8", "type": "formula_intro", "section": "6.7.2", "text": "Angular momentum of a particle about a point: l = r × p. Differentiating, dl/dt = τ — the rotational analogue of F = dp/dt. For a system, dL/dt = τ_ext, since internal torques cancel in equal-and-opposite pairs (Newton's third law, forces along the line joining the particles).", "whyItMatters": "Sets up the conservation law below; a required derivation-type question in board/competitive exams.", "neetRelevance": "high" },
+    { "id": "h9", "type": "statement", "section": "6.7.2", "text": "Conservation of angular momentum: if the total external torque on a system is zero, L = constant. Classic demonstrations: a skater or acrobat spins faster when pulling their arms/legs closer to the body (I decreases, so ω increases to keep L=Iω fixed); a spinning top and an oscillating table fan illustrate rotation about a fixed point versus a fixed line.", "whyItMatters": "One of the most frequently tested conceptual + numerical ideas in this chapter (ballet dancer/ice-skater question is a NEET perennial).", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "6.8", "text": "A rigid body is in mechanical equilibrium only if BOTH conditions hold: (1) translational equilibrium, ΣF_i = 0, and (2) rotational equilibrium, Στ_i = 0. A body can be in partial equilibrium — e.g. a couple has zero net force (so it satisfies translational equilibrium) but non-zero net torque, so it rotates without any translation.", "whyItMatters": "Distinguishes translational vs rotational equilibrium — a frequent assertion-reason trap (zero force does NOT imply zero torque, and vice versa).", "neetRelevance": "high" },
+    { "id": "h11", "type": "formula_intro", "section": "6.8.1", "text": "Principle of moments for a lever: d₁F₁ = d₂F₂ (load-arm × load = effort-arm × effort). The Mechanical Advantage M.A. = F₁/F₂ = d₂/d₁; M.A. > 1 means a small effort can lift a large load.", "whyItMatters": "Direct numerical formula for lever/see-saw/beam-balance problems.", "neetRelevance": "high" },
+    { "id": "h12", "type": "definition", "section": "6.8.2", "text": "The centre of gravity (CG) of a body is the point where the total gravitational torque on the body is zero. The CG coincides with the centre of mass whenever the gravitational field g does not vary from one part of the body to another (true for all everyday-sized objects).", "whyItMatters": "Clarifies CG vs CM are conceptually different but numerically identical except for extremely large bodies where g varies.", "neetRelevance": "medium" },
+    { "id": "h13", "type": "formula_intro", "section": "6.9", "text": "Moment of inertia I = Σm_i r_i², where r_i is the perpendicular distance of the i-th particle from the axis. I plays the role of mass in rotational motion: K = ½Iω² and τ=Iα. Unlike mass, I depends on the axis chosen, not just on the body itself.", "whyItMatters": "Central quantity of the whole chapter; every rotational-dynamics formula involves I.", "neetRelevance": "high" },
+    { "id": "h14", "type": "caution", "section": "6.9", "text": "The parallel axis theorem I = I_cm + Md² applies to ANY axis parallel to one through the centre of mass, for ANY shaped body (not just symmetric ones). d is the perpendicular distance between the two parallel axes.", "whyItMatters": "Most-used formula for finding I about a non-central axis (e.g. a rod pivoted at one end: I = ML²/12 + M(L/2)² = ML²/3).", "neetRelevance": "high" },
+    { "id": "h15", "type": "statement", "section": "6.11", "text": "For rolling without slipping, the velocity of the point of contact with the surface is instantaneously zero. The centre's speed v_cm = ωR and acceleration a_cm = αR. The total kinetic energy of a rolling body is the SUM of translational and rotational kinetic energy: K = ½Mv_cm² + ½I_cmω².", "whyItMatters": "The single most tested numerical idea of the chapter — races between rolling ring/disc/sphere down an incline depend entirely on this total-KE split via I_cm = Mk².", "neetRelevance": "high" }
   ],
   "definitions": [
-    {
-      "id": "d1",
-      "term": "Centre of mass",
-      "definition": "Point that moves as if all mass and net external force acted there.",
-      "section": "6"
-    },
-    {
-      "id": "d2",
-      "term": "Torque",
-      "definition": "Turning effect of force; τ = rF sinθ.",
-      "section": "6"
-    },
-    {
-      "id": "d3",
-      "term": "Moment of inertia",
-      "definition": "Measure of rotational inertia about an axis.",
-      "section": "6"
-    },
-    {
-      "id": "d4",
-      "term": "Angular momentum",
-      "definition": "L = r × p; rotational analogue of momentum.",
-      "section": "6"
-    },
-    {
-      "id": "d5",
-      "term": "Rigid body",
-      "definition": "Body with fixed relative distances between particles.",
-      "section": "6"
-    },
-    {
-      "id": "d6",
-      "term": "Rolling without slipping",
-      "definition": "Point of contact instantaneously at rest relative to surface.",
-      "section": "6"
-    },
-    {
-      "id": "d7",
-      "term": "Parallel axis theorem",
-      "definition": "I = I_cm + Md² for axis parallel to one through CM.",
-      "section": "6"
-    },
-    {
-      "id": "d8",
-      "term": "Angular acceleration",
-      "definition": "α = dω/dt.",
-      "section": "6"
-    }
+    { "id": "d1", "term": "Centre of mass", "definition": "The point at which the entire mass of a system may be considered concentrated for describing its translational motion; R = Σm_i r_i/M for a discrete system.", "section": "6.2" },
+    { "id": "d2", "term": "Rigid body", "definition": "An idealised body with a perfectly definite and unchanging shape — the distance between any two particles of the body never changes, however large the forces on it.", "section": "6.1" },
+    { "id": "d3", "term": "Vector (cross) product", "definition": "a×b is a vector c with magnitude ab sinθ, perpendicular to the plane of a and b, with direction given by the right-hand screw rule; it is NOT commutative, a×b = −(b×a).", "section": "6.5" },
+    { "id": "d4", "term": "Torque (moment of force)", "definition": "The rotational analogue of force: τ = r × F, magnitude τ = rF sinθ = r_⊥F. Its SI unit is the newton metre (N m) — dimensionally the same as energy but a distinct vector quantity.", "section": "6.7.1" },
+    { "id": "d5", "term": "Angular momentum", "definition": "The rotational analogue of linear momentum: l = r × p for a particle; for a system, L = Σ(r_i × p_i). Its SI unit is kg m² s⁻¹ (equivalently J s).", "section": "6.7.2" },
+    { "id": "d6", "term": "Couple", "definition": "A pair of equal and opposite forces with different lines of action, applied to a rigid body. A couple produces rotation without translation — net force zero, net torque non-zero.", "section": "6.8" },
+    { "id": "d7", "term": "Centre of gravity", "definition": "The point of an extended body where the total gravitational torque is zero; coincides with the centre of mass when g is uniform over the body.", "section": "6.8.2" },
+    { "id": "d8", "term": "Moment of inertia (I)", "definition": "I = Σm_i r_i² — the rotational analogue of mass, characterising a body's resistance to a change in its rotational motion about a specific axis; depends on the mass distribution AND the chosen axis.", "section": "6.9" },
+    { "id": "d9", "term": "Radius of gyration (k)", "definition": "The distance from the axis at which the whole mass of the body could be concentrated to give the same moment of inertia; defined by I = Mk².", "section": "6.9" },
+    { "id": "d10", "term": "Flywheel", "definition": "A disc-shaped rotating machine part with a deliberately large moment of inertia, used to resist sudden speed changes and provide a smooth, gradual change in rotational speed (e.g. steam/automobile engines).", "section": "6.9" },
+    { "id": "d11", "term": "Rolling without slipping", "definition": "A combination of translation and rotation in which the point of contact between the rolling body and the surface is instantaneously at rest; v_cm = ωR.", "section": "6.11" }
   ],
   "figures": [
-    {
-      "id": "fig-6-1",
-      "kind": "figure",
-      "label": "Fig. 6.1",
-      "ncertPage": 1,
-      "section": "6",
-      "caption": "Centre of mass of a system",
-      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.1 — Centre of mass of a system",
-      "src": null,
-      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
-    },
-    {
-      "id": "fig-6-2",
-      "kind": "figure",
-      "label": "Fig. 6.2",
-      "ncertPage": 2,
-      "section": "6",
-      "caption": "Torque as r × F",
-      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.2 — Torque as r × F",
-      "src": null,
-      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
-    },
-    {
-      "id": "fig-6-3",
-      "kind": "table",
-      "label": "Fig. 6.3",
-      "ncertPage": 3,
-      "section": "6",
-      "caption": "Moment of inertia of common bodies",
-      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.3 — Moment of inertia of common bodies",
-      "src": null,
-      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
-    },
-    {
-      "id": "fig-6-4",
-      "kind": "figure",
-      "label": "Fig. 6.4",
-      "ncertPage": 4,
-      "section": "6",
-      "caption": "Rolling without slipping",
-      "placeholderText": "NCERT Physics XI · Ch 6 · Fig. 6.4 — Rolling without slipping",
-      "src": null,
-      "uploadHint": "Crop from keph106.pdf (match figure in chapter)"
-    }
+    { "id": "fig-6-11", "kind": "figure", "label": "Fig. 6.11", "ncertPage": 100, "section": "6.4", "caption": "The centre of mass of the fragments of an exploding projectile continues along the same parabolic path it would have followed without the explosion.", "placeholderText": "NCERT Physics XI · Ch 6 · Page 100 · Fig. 6.11", "src": null, "uploadHint": "Crop from keph106.pdf page 8" },
+    { "id": "fig-6-15", "kind": "figure", "label": "Fig. 6.15", "ncertPage": 102, "section": "6.5", "caption": "The right-handed screw rule and the right-hand rule for the direction of a vector (cross) product.", "placeholderText": "NCERT Physics XI · Ch 6 · Page 102 · Fig. 6.15", "src": null, "uploadHint": "Crop from keph106.pdf page 10" },
+    { "id": "fig-6-20", "kind": "figure", "label": "Fig. 6.20", "ncertPage": 110, "section": "6.8", "caption": "A light rod with two equal, parallel forces at its ends — illustrating rotational equilibrium without translational equilibrium, and a couple.", "placeholderText": "NCERT Physics XI · Ch 6 · Page 110 · Fig. 6.20", "src": null, "uploadHint": "Crop from keph106.pdf page 18" },
+    { "id": "fig-6-28", "kind": "table", "label": "Table 6.1", "ncertPage": 116, "section": "6.9", "caption": "Moment of inertia of regular-shaped bodies (ring, rod, disc, cylinder, sphere) about specific axes.", "placeholderText": "NCERT Physics XI · Ch 6 · Page 116 · Table 6.1", "src": null, "uploadHint": "Crop from keph106.pdf page 24" }
   ],
   "formulas": [
     {
       "id": "F1",
       "name": "Centre of mass",
-      "latex": "\\vec R_{\\mathrm{cm}} = \\dfrac{\\sum m_i\\vec r_i}{M}",
-      "plain": "discrete system",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "latex": "\\vec{R} = \\dfrac{\\sum m_i \\vec{r}_i}{M}, \\qquad X=\\dfrac{1}{M}\\int x\\,dm,\\ Y=\\dfrac{1}{M}\\int y\\,dm,\\ Z=\\dfrac{1}{M}\\int z\\,dm",
+      "plain": "position of the centre of mass = mass-weighted average position of all particles (discrete sum, or integral for a continuous body)",
+      "symbols": [{ "symbol": "M", "meaning": "total mass of the system" }, { "symbol": "m_i, r_i", "meaning": "mass and position vector of the i-th particle" }],
+      "whenToUse": "Locating the effective point for translational motion of any discrete system or continuous rigid body; for uniform symmetric bodies (rod, ring, disc, sphere) it is simply the geometric centre by symmetry.",
+      "derivedFrom": "NCERT Eq. 6.3a-6.4d, 6.5a-6.6",
+      "commonMistakes": ["Assuming the centre of mass always lies inside the material of the body — it can lie outside for a ring, L-shape or horseshoe.", "Forgetting to use PERPENDICULAR (⊥) distances for continuous-body integrals when symmetry allows a shortcut instead."],
       "questionPatterns": [
         {
-          "patternName": "Basic Centre of mass",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Centre of mass and substitute.",
-          "exampleStem": "NEET-style numerical using Centre of mass.",
+          "patternName": "Locate CM of a discrete 2-3 particle system",
+          "howToInterpret": "Set up coordinates, list each mass and its position, apply the weighted-average formula per axis.",
+          "howItConnectsToFormula": "X = Σm_ix_i/Σm_i, similarly for Y.",
+          "exampleStem": "Find the centre of mass of three particles of masses 100 g, 150 g and 200 g placed at the vertices of an equilateral triangle of side 0.5 m.",
           "difficulty": "basic"
         },
         {
-          "patternName": "Mixed Centre of mass",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Centre of mass.",
+          "patternName": "CM of a composite/asymmetric lamina",
+          "howToInterpret": "Split the lamina into simple shapes (squares/rectangles), treat each piece's mass as concentrated at its own geometric centre.",
+          "howItConnectsToFormula": "Apply X=Σm_ix_i/Σm_i, Y=Σm_iy_i/Σm_i using the sub-shapes' centres as the 'particles'.",
+          "exampleStem": "Find the centre of mass of a uniform L-shaped lamina (three 1 m × 1 m squares) of total mass 3 kg.",
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Centre of mass: discrete system. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "Think of centre of mass as a weighted average position — each particle's location gets weighted by how much mass it carries. For symmetric uniform shapes, this always lands exactly at the geometric centre, but for a composite or oddly-shaped body you split it into simple pieces first."
     },
     {
       "id": "F2",
-      "name": "Torque",
-      "latex": "\\vec\\tau = \\vec r\\times\\vec F",
-      "plain": "moment of force",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Motion of the centre of mass / momentum of a system",
+      "latex": "M\\vec{A} = \\vec{F}_{ext}, \\qquad \\vec{P}=M\\vec{V}, \\qquad \\text{if } \\vec{F}_{ext}=0 \\Rightarrow \\vec{P}=\\text{constant}",
+      "plain": "total mass × acceleration of CM = total external force; total momentum is conserved when external force is zero",
+      "symbols": [{ "symbol": "A, V", "meaning": "acceleration and velocity of the centre of mass" }, { "symbol": "P", "meaning": "total linear momentum of the system" }],
+      "whenToUse": "Any system of particles/rigid body under external forces, INCLUDING cases with internal explosions, collisions or radioactive decay where internal forces are large but irrelevant to the CM's motion.",
+      "derivedFrom": "NCERT Eq. 6.9-6.11, 6.15-6.18a",
+      "commonMistakes": ["Trying to track individual fragment trajectories after an explosion instead of just the simpler CM motion, which is unaffected by the internal explosion forces.", "Forgetting this needs ONLY external forces — internal action-reaction pairs cancel out completely and contribute nothing to Eq. 6.11."],
       "questionPatterns": [
         {
-          "patternName": "Basic Torque",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Torque and substitute.",
-          "exampleStem": "NEET-style numerical using Torque.",
+          "patternName": "Exploding projectile / decaying nucleus",
+          "howToInterpret": "Recognize the explosion/decay forces are entirely internal, so the CM continues exactly as if nothing happened.",
+          "howItConnectsToFormula": "The CM keeps following the original trajectory (e.g. the same parabola) since F_ext (gravity) is unchanged by the internal explosion.",
+          "exampleStem": "A projectile explodes mid-air into two fragments of unequal mass. Describe the subsequent motion of the centre of mass of the fragments.",
           "difficulty": "basic"
         },
         {
-          "patternName": "Mixed Torque",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Torque.",
+          "patternName": "Person walking on a frictionless trolley",
+          "howToInterpret": "With F_ext=0 horizontally (frictionless floor), the CM of (person+trolley) stays fixed even as the person moves relative to the trolley.",
+          "howItConnectsToFormula": "Use m₁Δx₁ + m₂Δx₂ = 0 (CM displacement zero) to relate the trolley's shift to the person's own displacement.",
+          "exampleStem": "A child of mass 20 kg sits at one end of a 10 kg trolley moving at speed V on a smooth floor. If the child gets up and walks to the other end, what happens to the speed of the CM of the (child+trolley) system?",
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Torque: moment of force. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "This is Newton's second law scaled up to a whole system — no matter how complicated the internal forces are, whether it's an explosion, a collision, or people walking around inside, the centre of mass only cares about the NET EXTERNAL force. If that's zero, momentum is conserved and the CM just cruises along unaffected."
     },
     {
       "id": "F3",
-      "name": "Newton 2 rotation",
-      "latex": "\\tau = I\\alpha",
-      "plain": "fixed axis",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Vector (cross) product",
+      "latex": "\\vec{a}\\times\\vec{b} = (a_yb_z-a_zb_y)\\hat{i} + (a_zb_x-a_xb_z)\\hat{j} + (a_xb_y-a_yb_x)\\hat{k} = \\begin{vmatrix}\\hat{i}&\\hat{j}&\\hat{k}\\\\a_x&a_y&a_z\\\\b_x&b_y&b_z\\end{vmatrix}",
+      "plain": "the vector product in component/determinant form; magnitude = ab sinθ, direction by the right-hand screw rule",
+      "symbols": [{ "symbol": "θ", "meaning": "angle between a and b (smaller angle, <180°)" }],
+      "whenToUse": "Computing torque (τ=r×F) or angular momentum (l=r×p) when vectors are given in component (î,ĵ,k̂) form.",
+      "derivedFrom": "NCERT Section 6.5, Example 6.4",
+      "commonMistakes": ["Forgetting a×b = −(b×a) — order matters, unlike the dot product.", "Sign errors expanding the determinant — always expand along the top row with alternating signs."],
       "questionPatterns": [
         {
-          "patternName": "Basic Newton 2 rotation",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Newton 2 rotation and substitute.",
-          "exampleStem": "NEET-style numerical using Newton 2 rotation.",
+          "patternName": "Compute a×b given components",
+          "howToInterpret": "Set up the 3×3 determinant with î,ĵ,k̂ in the top row and the two vectors' components below.",
+          "howItConnectsToFormula": "Expand the determinant to get the resultant vector.",
+          "exampleStem": "Find a×b where a = 3î−4ĵ+5k̂ and b = −2î+ĵ+3k̂.",
           "difficulty": "basic"
-        },
-        {
-          "patternName": "Mixed Newton 2 rotation",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Newton 2 rotation.",
-          "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Newton 2 rotation: fixed axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "The determinant trick is the fastest way to compute a cross product by hand — write î, ĵ, k̂ on top, the first vector's components in the middle row, the second vector's in the bottom row, then expand like any 3×3 determinant."
     },
     {
       "id": "F4",
-      "name": "Moment of inertia",
-      "latex": "I = \\sum m_i r_i^2",
-      "plain": "definition",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Linear velocity of a particle in rigid-body rotation",
+      "latex": "\\vec{v} = \\vec{\\omega}\\times\\vec{r}",
+      "plain": "linear velocity = angular velocity × position vector (from a point on the axis)",
+      "symbols": [{ "symbol": "ω", "meaning": "angular velocity vector, directed along the fixed axis" }, { "symbol": "r", "meaning": "position vector of the particle from the axis" }],
+      "whenToUse": "Relating the speed of any point of a spinning rigid body to its distance from the axis; foundation of rolling-motion problems.",
+      "derivedFrom": "NCERT Eq. 6.20",
+      "commonMistakes": ["Using the position vector from the wrong origin — for rotation about a fixed axis with one point also fixed, r must be measured from that fixed point, not from the axis's foot alone."],
       "questionPatterns": [
         {
-          "patternName": "Basic Moment of inertia",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Moment of inertia and substitute.",
-          "exampleStem": "NEET-style numerical using Moment of inertia.",
+          "patternName": "Speed of a point at radius r on a rotating body",
+          "howToInterpret": "Since ω⊥r for a fixed axis, |v| = ωr directly.",
+          "howItConnectsToFormula": "v = ωr for points at perpendicular distance r from the axis; points ON the axis (r=0) are stationary.",
+          "exampleStem": "A wheel of radius 0.5 m rotates at 10 rad/s. Find the linear speed of a point on its rim and a point midway between the centre and the rim.",
           "difficulty": "basic"
-        },
-        {
-          "patternName": "Mixed Moment of inertia",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Moment of inertia.",
-          "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Moment of inertia: definition. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "Every particle of a spinning rigid body shares the same angular velocity ω, but their linear speeds scale with how far they are from the axis — v=ωr — which is exactly what the cross product v=ω×r captures automatically, including direction."
     },
     {
       "id": "F5",
-      "name": "Parallel axis",
-      "latex": "I = I_{\\mathrm{cm}} + Md^2",
-      "plain": "parallel axes",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Torque (moment of force)",
+      "latex": "\\vec{\\tau} = \\vec{r}\\times\\vec{F}, \\qquad \\tau = rF\\sin\\theta = r_{\\perp}F",
+      "plain": "torque = position vector × force; magnitude = force × perpendicular distance from the pivot to the line of action",
+      "symbols": [{ "symbol": "r_⊥", "meaning": "perpendicular distance of the line of action of F from the origin (moment arm)" }],
+      "whenToUse": "Any problem about the turning/rotating effect of a force — door-opening, spanner, lever, rigid-body equilibrium problems.",
+      "derivedFrom": "NCERT Eq. 6.23-6.24c",
+      "commonMistakes": ["Using r (the full distance) instead of r_⊥=r sinθ (perpendicular distance) when computing magnitude by the scalar formula.", "Forgetting torque is zero when F passes through the chosen origin/pivot (θ=0° or r=0)."],
       "questionPatterns": [
         {
-          "patternName": "Basic Parallel axis",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Parallel axis and substitute.",
-          "exampleStem": "NEET-style numerical using Parallel axis.",
+          "patternName": "Torque of a given force about the origin",
+          "howToInterpret": "Identify r (position vector of the point of application) and F, then take the cross product.",
+          "howItConnectsToFormula": "τ = r × F, evaluated via the determinant method (see F3).",
+          "exampleStem": "Find the torque of a force 7î+3ĵ−5k̂ about the origin, acting on a particle at position î−ĵ+k̂.",
           "difficulty": "basic"
-        },
-        {
-          "patternName": "Mixed Parallel axis",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Parallel axis.",
-          "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Parallel axis: parallel axes. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "Torque only cares about the perpendicular distance from the pivot to the line along which the force acts — that's why pushing a door far from its hinges, at right angles to it, gives you the most turning effect for the least force."
     },
     {
       "id": "F6",
-      "name": "Angular momentum",
-      "latex": "L = I\\omega",
-      "plain": "rigid, fixed axis",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Angular momentum of a particle; dl/dt = τ",
+      "latex": "\\vec{l} = \\vec{r}\\times\\vec{p}, \\qquad \\dfrac{d\\vec{l}}{dt}=\\vec{\\tau}",
+      "plain": "angular momentum = position vector × linear momentum; its rate of change equals the torque",
+      "symbols": [{ "symbol": "p", "meaning": "linear momentum, p=mv" }],
+      "whenToUse": "The rotational analogue of F=dp/dt — used to derive angular momentum conservation and to find l directly for a particle in circular or general motion.",
+      "derivedFrom": "NCERT Eq. 6.25a, 6.27",
+      "commonMistakes": ["Forgetting l need not be along the rotation axis for a general particle — only for symmetric rigid bodies rotating about a symmetry axis does L align with ω."],
       "questionPatterns": [
         {
-          "patternName": "Basic Angular momentum",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Angular momentum and substitute.",
-          "exampleStem": "NEET-style numerical using Angular momentum.",
-          "difficulty": "basic"
-        },
-        {
-          "patternName": "Mixed Angular momentum",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Angular momentum.",
+          "patternName": "Show angular momentum is conserved for straight-line motion at constant velocity",
+          "howToInterpret": "For a particle moving in a straight line, the perpendicular distance from any point O to the line (OM = r sinθ) stays constant even though r and θ individually change.",
+          "howItConnectsToFormula": "l = mvr sinθ = mv×(constant perpendicular distance) = constant, and since v is constant and there's no external torque, l stays constant.",
+          "exampleStem": "Show that the angular momentum of a particle moving with constant velocity, about any fixed point, remains constant throughout its motion.",
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Angular momentum: rigid, fixed axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "This is the rotational twin of Newton's second law — instead of force changing momentum, torque changes angular momentum. If there's no torque about a point, angular momentum about that point simply cannot change."
     },
     {
       "id": "F7",
-      "name": "Rolling condition",
-      "latex": "v = \\omega R",
-      "plain": "no slip",
-      "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "name": "Angular momentum for a system; conservation of angular momentum",
+      "latex": "\\vec{L}=\\sum_i \\vec{l}_i, \\qquad \\dfrac{d\\vec{L}}{dt}=\\vec{\\tau}_{ext}, \\qquad \\tau_{ext}=0 \\Rightarrow \\vec{L}=\\text{constant}",
+      "plain": "total angular momentum's rate of change equals only the external torque (internal torques cancel in pairs); if external torque is zero, L is conserved",
+      "symbols": [{ "symbol": "L", "meaning": "total angular momentum of the system about a chosen point" }],
+      "whenToUse": "Any system with no external torque about the chosen axis — spinning skaters/divers, planets in orbit, collapsing/expanding rotating systems.",
+      "derivedFrom": "NCERT Eq. 6.28a-6.29b",
+      "commonMistakes": ["Confusing conservation of L (needs τ_ext=0) with conservation of linear momentum P (needs F_ext=0) — these are independent conditions; a couple has F_ext=0 but τ_ext≠0.", "Forgetting L conservation for a symmetric rigid body about its symmetry axis becomes Iω=constant, which is what lets I and ω trade off against each other."],
       "questionPatterns": [
         {
-          "patternName": "Basic Rolling condition",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Rolling condition and substitute.",
-          "exampleStem": "NEET-style numerical using Rolling condition.",
-          "difficulty": "basic"
-        },
-        {
-          "patternName": "Mixed Rolling condition",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Rolling condition.",
+          "patternName": "Skater/diver pulling in arms and legs",
+          "howToInterpret": "No external torque about the spin axis ⟹ L=Iω is conserved; pulling arms in reduces I, so ω must increase.",
+          "howItConnectsToFormula": "I₁ω₁ = I₂ω₂.",
+          "exampleStem": "A ballet dancer spinning with her arms outstretched has moment of inertia 5 kg m² and angular speed 2 rad/s. If she pulls her arms in to reduce her moment of inertia to 2 kg m², find her new angular speed.",
           "difficulty": "intermediate"
         }
       ],
-      "audioScript": "Rolling condition: no slip. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "Whenever there's no twisting force acting from outside, the total angular momentum is locked in — so if a spinning body somehow rearranges its own mass to have a smaller moment of inertia, its spin rate must shoot up to compensate, exactly like a figure skater pulling in their arms."
     },
     {
       "id": "F8",
-      "name": "Rotational KE",
-      "latex": "K = \\tfrac12 I\\omega^2",
-      "plain": "about axis",
+      "name": "Equilibrium of a rigid body",
+      "latex": "\\sum_{i=1}^{n}\\vec{F}_i = 0 \\quad (\\text{translational}), \\qquad \\sum_{i=1}^{n}\\vec{\\tau}_i = 0 \\quad (\\text{rotational})",
+      "plain": "a rigid body is in mechanical equilibrium only if the net external force AND the net external torque are both zero",
       "symbols": [],
-      "whenToUse": "Core NCERT formula for System of Particles and Rotational Motion.",
-      "commonMistakes": [
-        "Wrong units/signs",
-        "Using formula outside its assumptions"
-      ],
+      "whenToUse": "Ladders, beams, rods on knife-edges/supports, hinged doors — any statics problem with a rigid body at rest.",
+      "derivedFrom": "NCERT Eq. 6.30a, 6.30b",
+      "commonMistakes": ["Checking only one of the two conditions (force OR torque) — both must hold for full mechanical equilibrium; a body can be in translational equilibrium but NOT rotational (a couple), or vice versa is impossible unless forces are concurrent.", "Forgetting the choice of pivot point for taking moments is arbitrary IF the body is already in translational equilibrium — but a poor choice makes the algebra harder, not wrong."],
       "questionPatterns": [
         {
-          "patternName": "Basic Rotational KE",
-          "howToInterpret": "Identify given quantities and the unknown.",
-          "howItConnectsToFormula": "Map symbols in Rotational KE and substitute.",
-          "exampleStem": "NEET-style numerical using Rotational KE.",
+          "patternName": "Rod/beam on two supports with a load",
+          "howToInterpret": "Apply ΣF=0 vertically to relate the two support reactions, then Στ=0 about one support to solve for each reaction individually.",
+          "howItConnectsToFormula": "R₁+R₂=W+W_load (translational); take moments about one knife-edge to eliminate one unknown reaction.",
+          "exampleStem": "A uniform 70 cm, 4 kg metal bar rests on two knife-edges placed 10 cm from each end, with a 6 kg load hung 30 cm from one end. Find the reaction forces at the two knife-edges.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Ladder leaning against a frictionless wall",
+          "howToInterpret": "The wall (frictionless) can only push horizontally; the floor supplies both a normal reaction and friction; use both equilibrium conditions.",
+          "howItConnectsToFormula": "ΣF_x=0, ΣF_y=0, and Στ=0 about the foot of the ladder (this eliminates the unknown floor reactions from the torque equation).",
+          "exampleStem": "A 3 m ladder weighing 20 kg leans against a frictionless wall, its foot 1 m from the wall on a rough floor. Find the reaction forces of the wall and the floor.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Statics problems always need two separate equations — one from balancing forces, one from balancing torques — because a body can easily have zero net force while still wanting to spin, or vice versa. Choosing WHERE to take torques cleverly, usually at an unknown-reaction point, is the trick that makes the algebra manageable."
+    },
+    {
+      "id": "F9",
+      "name": "Principle of moments (lever) and centre of gravity",
+      "latex": "d_1F_1 = d_2F_2, \\qquad \\text{M.A.} = \\dfrac{F_1}{F_2}=\\dfrac{d_2}{d_1}, \\qquad \\sum \\vec{\\tau}_g = \\sum \\vec{r}_i\\times m_i\\vec{g} = 0 \\ \\text{(defines CG)}",
+      "plain": "load-arm × load = effort-arm × effort; mechanical advantage = effort arm / load arm; centre of gravity is where total gravity torque vanishes",
+      "symbols": [{ "symbol": "d_1, F_1", "meaning": "load arm and load" }, { "symbol": "d_2, F_2", "meaning": "effort arm and effort" }],
+      "whenToUse": "Levers, see-saws, beam balances, and finding the CG of an irregular body by suspension from different points.",
+      "derivedFrom": "NCERT Eq. 6.32a, 6.32b, 6.33",
+      "commonMistakes": ["Mixing up which arm goes with load vs effort in the M.A. ratio — M.A. = effort arm/load arm, so a LONGER effort arm gives GREATER mechanical advantage.", "Assuming CG always equals CM — true only when g is uniform over the body, which holds for all everyday objects but not for astronomically large bodies."],
+      "questionPatterns": [
+        {
+          "patternName": "See-saw / lever balance problem",
+          "howToInterpret": "Identify the fulcrum, then set load-arm×load equal to effort-arm×effort.",
+          "howItConnectsToFormula": "d₁F₁=d₂F₂; solve for the unknown force or distance.",
+          "exampleStem": "A see-saw has a 20 kg child sitting 1.5 m from the pivot. Where must a 25 kg child sit on the other side to balance it?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "A lever is just a torque-balance problem in disguise — the load's turning effect on one side must exactly cancel the effort's turning effect on the other, which is why a longer effort arm lets a small force lift a much larger load."
+    },
+    {
+      "id": "F10",
+      "name": "Moment of inertia and radius of gyration",
+      "latex": "I=\\sum_i m_i r_i^2, \\qquad I = Mk^2 \\ \\text{(defines radius of gyration } k\\text{)}, \\qquad I=I_{cm}+Md^2 \\ \\text{(parallel axis theorem)}",
+      "plain": "moment of inertia = Σ(mass × perpendicular-distance²); radius of gyration k satisfies I=Mk²; parallel axis theorem shifts I to a parallel axis",
+      "symbols": [{ "symbol": "k", "meaning": "radius of gyration" }, { "symbol": "d", "meaning": "distance between the parallel axis and the axis through the CM" }],
+      "whenToUse": "Any rotational-dynamics or rolling problem — first step is almost always finding I about the relevant axis, often via the parallel axis theorem plus Table 6.1's standard results.",
+      "derivedFrom": "NCERT Eq. 6.34, Table 6.1, Section 6.9",
+      "commonMistakes": ["Using the standard-body I formula (about the CM axis) directly when the actual axis is NOT through the CM — must add Md² via the parallel axis theorem first.", "Confusing radius of gyration k (depends on axis, like I) with the body's actual geometric radius R (fixed property of the shape)."],
+      "questionPatterns": [
+        {
+          "patternName": "I of a rod about its end (not centre)",
+          "howToInterpret": "Start from the standard result about the CM (perpendicular axis at midpoint), then shift using the parallel axis theorem.",
+          "howItConnectsToFormula": "I_end = I_cm + Md² = ML²/12 + M(L/2)² = ML²/3.",
+          "exampleStem": "Find the moment of inertia of a uniform rod of mass M and length L about an axis perpendicular to the rod through one end.",
           "difficulty": "basic"
         },
         {
-          "patternName": "Mixed Rotational KE",
-          "howToInterpret": "May need a second relation from the chapter.",
-          "howItConnectsToFormula": "Combine with another formula from this chapter.",
-          "exampleStem": "Two-step problem involving Rotational KE.",
-          "difficulty": "intermediate"
+          "patternName": "Balancing a metre stick with unequal added masses",
+          "howToInterpret": "Not a rotational-inertia question per se, but uses the same idea as centre of mass/torque balance — find where two added point masses plus the stick's own CG combine to a new balance point.",
+          "howItConnectsToFormula": "Treat the stick's own weight as acting at its 50 cm mark, add torque contributions of the coins, and set the total torque about the new balance point to zero.",
+          "exampleStem": "A metre stick is balanced on a knife edge at its centre. When two 5 g coins are placed one on top of the other at the 12 cm mark, the stick balances at 45 cm. Find the mass of the metre stick.",
+          "difficulty": "advanced"
         }
       ],
-      "audioScript": "Rotational KE: about axis. Use it when the problem matches its assumptions in System of Particles and Rotational Motion."
+      "audioScript": "Moment of inertia is never a fixed property of a body the way mass is — it depends entirely on which axis you spin it about, which is exactly why the parallel axis theorem is so heavily used: it lets you shift a known result from the easy central axis to whatever axis the problem actually needs."
+    },
+    {
+      "id": "F11",
+      "name": "Rotational kinematics and dynamics (fixed axis)",
+      "latex": "\\omega=\\omega_0+\\alpha t,\\quad \\theta=\\omega_0 t+\\tfrac12\\alpha t^2,\\quad \\omega^2=\\omega_0^2+2\\alpha\\theta; \\qquad \\tau=I\\alpha,\\quad W=\\tau\\Delta\\theta,\\quad P=\\tau\\omega,\\quad K=\\tfrac12 I\\omega^2",
+      "plain": "the exact rotational analogues of the linear kinematics/dynamics equations, with θ↔x, ω↔v, α↔a, I↔M, τ↔F",
+      "symbols": [{ "symbol": "ω₀", "meaning": "initial angular velocity" }, { "symbol": "θ", "meaning": "angular displacement (rad)" }],
+      "whenToUse": "Any fixed-axis rotation with constant angular acceleration (flywheels, motors, wheels speeding up/slowing down uniformly) — solve exactly like a 1D kinematics problem, just relabelling the symbols.",
+      "derivedFrom": "NCERT Eq. 6.36-6.38, 6.39-6.41",
+      "commonMistakes": ["Forgetting to convert rev/min to rad/s (× 2π/60) before substituting into these equations.", "Using τ=Iα with a torque that isn't the NET external torque along the fixed axis — only axis-aligned torque components matter for fixed-axis rotation."],
+      "questionPatterns": [
+        {
+          "patternName": "Angular acceleration and revolutions of a speeding-up wheel",
+          "howToInterpret": "Convert given rpm values to rad/s, then apply the rotational kinematics equations exactly as in 1D linear kinematics.",
+          "howItConnectsToFormula": "α=(ω−ω₀)/t; θ=ω₀t+½αt²; revolutions = θ/2π.",
+          "exampleStem": "The angular speed of a motor wheel increases from 1200 rpm to 3120 rpm in 16 s. Find its angular acceleration and the number of revolutions it makes in that time.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Work-energy on a flywheel pulled by a cord",
+          "howToInterpret": "Use τ=Iα to get α, then either the work-energy theorem (W=ΔK) or direct kinematics to connect angular displacement, work done, and final KE.",
+          "howItConnectsToFormula": "τ=FR=Iα; W=Fd (linear, on the cord) should equal K=½Iω² gained (no friction).",
+          "exampleStem": "A 20 kg, 20 cm-radius flywheel on a frictionless axle is pulled by a steady 25 N force via a cord wound on its rim. Find the angular acceleration, work done as 2 m of cord unwinds, and the kinetic energy gained.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Once you notice the exact one-to-one correspondence with ordinary straight-line kinematics — angle instead of distance, angular velocity instead of speed — every equation you already know for constant acceleration transfers over unchanged, just with new symbols."
+    },
+    {
+      "id": "F12",
+      "name": "Rolling motion",
+      "latex": "v_{cm}=\\omega R, \\qquad a_{cm}=\\alpha R, \\qquad K_{total}=\\tfrac12 M v_{cm}^2 + \\tfrac12 I_{cm}\\omega^2",
+      "plain": "for rolling without slipping, the centre's speed equals ωR; total kinetic energy is translational PLUS rotational",
+      "symbols": [{ "symbol": "R", "meaning": "radius of the rolling body" }],
+      "whenToUse": "Any ring/disc/cylinder/sphere rolling without slipping — down an incline, or with a given speed on a level surface.",
+      "derivedFrom": "NCERT Section 6.11, Eq. 6.44",
+      "commonMistakes": ["Using only ½Mv² (ignoring rotational KE) or only ½Iω² (ignoring translational KE) — rolling KE is always the SUM of both.", "Forgetting that different bodies (ring, disc, sphere) with the same mass and radius reach the bottom of an incline at different times/speeds because their I_cm = Mk² differs — a race down a ramp is not a tie."]
+      ,
+      "questionPatterns": [
+        {
+          "patternName": "Ratio of translational to rotational KE for a rolling body",
+          "howToInterpret": "Write I_cm = Mk² (using the standard-body result), then form the ratio using v=ωR.",
+          "howItConnectsToFormula": "K_trans/K_rot = (½Mv²)/(½Iω²) = MR²/I = R²/k².",
+          "exampleStem": "A solid sphere rolls without slipping. Find the ratio of its translational kinetic energy to its rotational kinetic energy.",
+          "difficulty": "intermediate"
+        },
+        {
+          "patternName": "Speed of a rolling body at the bottom of an incline",
+          "howToInterpret": "Use energy conservation: loss in PE = total KE gained (translational + rotational), with v=ωR eliminating ω.",
+          "howItConnectsToFormula": "Mgh = ½Mv²(1 + k²/R²), solve for v.",
+          "exampleStem": "A solid cylinder of mass M and radius R rolls without slipping down an incline of height h. Find its speed at the bottom, and compare it with the speed of a solid sphere of the same mass and radius released from the same height.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Rolling motion always splits its kinetic energy budget into two pots — one for the centre of mass moving forward, one for the spin about that centre — and how that budget splits between the two pots depends entirely on the body's shape through its radius of gyration, which is exactly why a solid sphere always beats a hollow ring down the same ramp."
     }
   ],
   "views": {
-    "formulaViewOrder": [
-      "F1",
-      "F2",
-      "F3",
-      "F4",
-      "F5",
-      "F6",
-      "F7",
-      "F8"
-    ],
-    "definitionViewOrder": [
-      "d1",
-      "d2",
-      "d3",
-      "d4",
-      "d5",
-      "d6",
-      "d7",
-      "d8"
-    ],
-    "cheatSheetFocus": [
-      "mustKnowBullets",
-      "formulas"
-    ]
+    "formulaViewOrder": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d11"],
+    "cheatSheetFocus": ["mustKnowBullets", "keyTables", "formulas"]
   },
   "flashcards": [
     {
       "id": "fc1",
       "difficulty": "basic",
-      "tags": [
-        "centre"
-      ],
+      "tags": ["centre of mass", "conceptual"],
       "stages": {
-        "question": "State / recall: Centre of mass",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "\\vec R_{\\mathrm{cm}} = \\dfrac{\\sum m_i\\vec r_i}{M}",
-        "solutionSteps": [
-          "Write Centre of mass",
-          "Identify symbols",
-          "Meaning: discrete system"
-        ],
-        "answer": "discrete system"
+        "question": "Does the centre of mass of a body always lie within the material of the body?",
+        "interpretation": "Tests the misconception that CM must be 'inside' the object.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["Consider a uniform ring or an L-shaped lamina", "By symmetry, the CM of a ring is at its centre — empty space, not material", "So the CM can lie outside the body's material"],
+        "answer": "No — e.g. a ring's centre of mass is at its centre, which is empty space, not part of the ring itself."
       },
-      "audioScript": "Recall Centre of mass: discrete system."
+      "audioScript": "The centre of mass is a purely geometric/mass-weighted point — it has no obligation to sit on actual material, as a ring or a horseshoe shape makes obvious."
     },
     {
       "id": "fc2",
       "difficulty": "basic",
-      "tags": [
-        "torque"
-      ],
+      "tags": ["cross product", "numerical"],
       "stages": {
-        "question": "State / recall: Torque",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "\\vec\\tau = \\vec r\\times\\vec F",
-        "solutionSteps": [
-          "Write Torque",
-          "Identify symbols",
-          "Meaning: moment of force"
-        ],
-        "answer": "moment of force"
+        "question": "Find a×b where a=3î−4ĵ+5k̂ and b=−2î+ĵ+3k̂.",
+        "interpretation": "Direct determinant-form cross product.",
+        "formula": "a×b via 3×3 determinant",
+        "solutionSteps": ["î component: (−4)(3)−(5)(1) = −17", "ĵ component: −[(3)(3)−(5)(−2)] = −19", "k̂ component: (3)(1)−(−4)(−2) = −5"],
+        "answer": "a×b = −17î − 19ĵ − 5k̂"
       },
-      "audioScript": "Recall Torque: moment of force."
+      "audioScript": "Expand the 3×3 determinant with î, ĵ, k̂ on top — remember the middle (ĵ) term picks up a minus sign from the cofactor expansion."
     },
     {
       "id": "fc3",
-      "difficulty": "intermediate",
-      "tags": [
-        "newton"
-      ],
+      "difficulty": "basic",
+      "tags": ["torque", "numerical"],
       "stages": {
-        "question": "State / recall: Newton 2 rotation",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "\\tau = I\\alpha",
-        "solutionSteps": [
-          "Write Newton 2 rotation",
-          "Identify symbols",
-          "Meaning: fixed axis"
-        ],
-        "answer": "fixed axis"
+        "question": "Find the torque about the origin of a force 7î+3ĵ−5k̂ acting on a particle at position î−ĵ+k̂.",
+        "interpretation": "Direct τ=r×F via determinant.",
+        "formula": "τ = r × F",
+        "solutionSteps": ["r=(1,−1,1), F=(7,3,−5)", "î: (−1)(−5)−(1)(3) = 2", "ĵ: −[(1)(−5)−(1)(7)] = 12", "k̂: (1)(3)−(−1)(7) = 10"],
+        "answer": "τ = 2î + 12ĵ + 10k̂ N m"
       },
-      "audioScript": "Recall Newton 2 rotation: fixed axis."
+      "audioScript": "Same determinant method as any cross product — just plug r and F into the middle and bottom rows in that order, since order matters for torque's sign."
     },
     {
       "id": "fc4",
-      "difficulty": "intermediate",
-      "tags": [
-        "moment"
-      ],
+      "difficulty": "basic",
+      "tags": ["equilibrium", "conceptual"],
       "stages": {
-        "question": "State / recall: Moment of inertia",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "I = \\sum m_i r_i^2",
-        "solutionSteps": [
-          "Write Moment of inertia",
-          "Identify symbols",
-          "Meaning: definition"
-        ],
-        "answer": "definition"
+        "question": "A couple acts on a rigid body. Is the body in translational equilibrium? Is it in rotational equilibrium?",
+        "interpretation": "Tests the independence of the two equilibrium conditions.",
+        "formula": "none — conceptual",
+        "solutionSteps": ["A couple = two equal, opposite, parallel forces with different lines of action", "Net force = 0, so YES translational equilibrium", "Net torque ≠ 0 (both moments add, don't cancel), so NO rotational equilibrium"],
+        "answer": "Yes translational equilibrium (net force zero); No rotational equilibrium (net torque non-zero) — the body undergoes pure rotation."
       },
-      "audioScript": "Recall Moment of inertia: definition."
+      "audioScript": "A couple is the textbook example that these two equilibrium conditions are completely independent — you can have zero net force while the body still spins, because the two forces' torques add instead of cancelling."
     },
     {
       "id": "fc5",
-      "difficulty": "advanced",
-      "tags": [
-        "parallel"
-      ],
+      "difficulty": "intermediate",
+      "tags": ["angular momentum conservation", "numerical"],
       "stages": {
-        "question": "State / recall: Parallel axis",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "I = I_{\\mathrm{cm}} + Md^2",
-        "solutionSteps": [
-          "Write Parallel axis",
-          "Identify symbols",
-          "Meaning: parallel axes"
-        ],
-        "answer": "parallel axes"
+        "question": "A ballet dancer spinning with arms outstretched has I=5 kg m² and ω=2 rad/s. She pulls her arms in, reducing I to 2 kg m². Find her new angular speed.",
+        "interpretation": "No external torque about the spin axis, so L=Iω is conserved.",
+        "formula": "I₁ω₁ = I₂ω₂",
+        "solutionSteps": ["5×2 = 2×ω₂", "ω₂ = 10/2 = 5 rad/s"],
+        "answer": "5 rad/s"
       },
-      "audioScript": "Recall Parallel axis: parallel axes."
+      "audioScript": "Since nothing external is twisting her, Iω must stay fixed — shrink the moment of inertia and the angular speed has to grow to compensate, exactly proportionally."
     },
     {
       "id": "fc6",
-      "difficulty": "advanced",
-      "tags": [
-        "angular"
-      ],
+      "difficulty": "intermediate",
+      "tags": ["moment of inertia", "parallel axis"],
       "stages": {
-        "question": "State / recall: Angular momentum",
-        "interpretation": "Core relation in System of Particles and Rotational Motion.",
-        "formula": "L = I\\omega",
-        "solutionSteps": [
-          "Write Angular momentum",
-          "Identify symbols",
-          "Meaning: rigid, fixed axis"
-        ],
-        "answer": "rigid, fixed axis"
+        "question": "Find the moment of inertia of a uniform rod of mass M and length L about an axis perpendicular to the rod through one end.",
+        "interpretation": "Shift the standard central-axis result using the parallel axis theorem.",
+        "formula": "I_end = I_cm + Md²",
+        "solutionSteps": ["I_cm (through midpoint, ⊥ to rod) = ML²/12", "d = L/2 (distance from midpoint to end)", "I_end = ML²/12 + M(L/2)² = ML²/12 + ML²/4 = ML²/3"],
+        "answer": "I = ML²/3"
       },
-      "audioScript": "Recall Angular momentum: rigid, fixed axis."
+      "audioScript": "Always start from the easy central-axis value from the standard-bodies table, then shift outward using the parallel axis theorem — here that turns ML²/12 into ML²/3, three times bigger."
     },
     {
       "id": "fc7",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
+      "difficulty": "intermediate",
+      "tags": ["lever", "numerical"],
       "stages": {
-        "question": "Define: Centre of mass",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
-        "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
-        ],
-        "answer": "Point that moves as if all mass and net external force acted there."
+        "question": "A see-saw has a 20 kg child sitting 1.5 m from the pivot. Where must a 25 kg child sit on the other side to balance it?",
+        "interpretation": "Principle of moments — load arm × load = effort arm × effort.",
+        "formula": "d₁F₁ = d₂F₂",
+        "solutionSteps": ["20×1.5 = 25×d₂", "d₂ = 30/25 = 1.2 m"],
+        "answer": "1.2 m from the pivot"
       },
-      "audioScript": "Centre of mass: Point that moves as if all mass and net external force acted there."
+      "audioScript": "Balance the two turning effects directly — the heavier child needs a proportionally shorter arm to produce the same torque as the lighter child farther out."
     },
     {
       "id": "fc8",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
+      "difficulty": "advanced",
+      "tags": ["equilibrium", "knife-edge", "numerical"],
       "stages": {
-        "question": "Define: Torque",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
+        "question": "A uniform 70 cm, 4 kg metal bar rests on two knife-edges 10 cm from each end. A 6 kg load hangs 30 cm from the left end. Find the reactions R₁ (left) and R₂ (right). (g=9.8 m/s²)",
+        "interpretation": "Two-equation statics problem: force balance plus torque balance about one knife-edge.",
+        "formula": "R₁+R₂=W+W_load; take moments about G (centre)",
         "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
+          "W=4×9.8=39.2 N, W_load=6×9.8=58.8 N; R₁+R₂=98.0 N",
+          "Knife edges at 10 cm and 60 cm from left end; centre G at 35 cm; load at 30 cm (5 cm left of G)",
+          "Taking moments about G: R₂ acts 25 cm right of G, R₁ acts 25 cm left of G, load acts 5 cm left of G",
+          "−R₁(25)+58.8(5)+R₂(25)=0 ⟹ R₁−R₂=11.76",
+          "Solving with R₁+R₂=98.0: R₁≈54.9 N, R₂≈43.1 N"
         ],
-        "answer": "Turning effect of force; τ = rF sinθ."
+        "answer": "R₁ ≈ 55 N, R₂ ≈ 43 N (NCERT Example 6.8)"
       },
-      "audioScript": "Torque: Turning effect of force; τ = rF sinθ."
+      "audioScript": "The key move in any beam-on-two-supports problem is picking a smart pivot point for the torque equation — usually the body's own centre of gravity or one of the supports — so that one of the two unknown reactions drops out of that equation entirely."
     },
     {
       "id": "fc9",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
+      "difficulty": "advanced",
+      "tags": ["rolling motion", "energy", "numerical"],
       "stages": {
-        "question": "Define: Moment of inertia",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
+        "question": "A solid sphere and a hollow ring, of the same mass and radius, are released from rest from the same height on a frictionless-for-sliding-but-rolling-without-slipping incline. Which reaches the bottom first, and why?",
+        "interpretation": "Compare their final speeds using energy conservation with different k²/R² ratios.",
+        "formula": "v² = 2gh/(1+k²/R²)",
         "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
+          "Solid sphere: k²/R² = 2/5, so v² = 2gh/(1.4) ≈ 1.43gh",
+          "Ring: k²/R² = 1, so v² = 2gh/2 = gh",
+          "Sphere's v² is larger ⟹ sphere accelerates faster and reaches the bottom first"
         ],
-        "answer": "Measure of rotational inertia about an axis."
+        "answer": "The solid sphere reaches the bottom first — a smaller k²/R² means less of the available energy is 'used up' spinning it, leaving more for forward speed."
       },
-      "audioScript": "Moment of inertia: Measure of rotational inertia about an axis."
-    },
-    {
-      "id": "fc10",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
-      "stages": {
-        "question": "Define: Angular momentum",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
-        "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
-        ],
-        "answer": "L = r × p; rotational analogue of momentum."
-      },
-      "audioScript": "Angular momentum: L = r × p; rotational analogue of momentum."
-    },
-    {
-      "id": "fc11",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
-      "stages": {
-        "question": "Define: Rigid body",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
-        "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
-        ],
-        "answer": "Body with fixed relative distances between particles."
-      },
-      "audioScript": "Rigid body: Body with fixed relative distances between particles."
-    },
-    {
-      "id": "fc12",
-      "difficulty": "basic",
-      "tags": [
-        "definition"
-      ],
-      "stages": {
-        "question": "Define: Rolling without slipping",
-        "interpretation": "NCERT definition check.",
-        "formula": "none — definition",
-        "solutionSteps": [
-          "Recall NCERT wording",
-          "State essential features"
-        ],
-        "answer": "Point of contact instantaneously at rest relative to surface."
-      },
-      "audioScript": "Rolling without slipping: Point of contact instantaneously at rest relative to surface."
+      "audioScript": "The smaller a body's radius of gyration relative to its actual radius, the less of its gravitational PE gets diverted into spin, and the faster it accelerates down the slope — which is why a solid sphere always beats a hollow ring in this classic race, regardless of their common mass or radius."
     }
   ],
   "problemLadder": {
     "conceptWarmup": [
-      "What is the key idea of System of Particles and Rotational Motion?",
-      "Name one formula you must not mix up."
+      "Why can the centre of mass of a body lie outside the material of the body itself?",
+      "Why is the vector product NOT commutative, unlike the ordinary scalar product?",
+      "Why can a rigid body be in translational equilibrium (zero net force) but NOT in rotational equilibrium?"
     ],
     "basic": [
       {
         "id": "pb1",
-        "question": "Basic drill: apply Centre of mass with clean numbers.",
-        "interpretation": "Single-formula substitution.",
-        "formulaIds": [
-          "F1"
-        ],
-        "steps": [
-          "List given",
-          "Write formula",
-          "Substitute",
-          "Check units"
-        ],
-        "answer": "Numerical as per data",
-        "audioScript": "Use Centre of mass directly after listing knowns."
+        "question": "Find the centre of mass of three particles of masses 100 g, 150 g and 200 g placed at (0,0), (0.5,0) and (0.25, 0.25√3) m respectively.",
+        "interpretation": "Direct weighted-average CM calculation for a discrete system.",
+        "formulaIds": ["F1"],
+        "steps": ["X = [100(0)+150(0.5)+200(0.25)]/450 = 125/450 = 5/18 m", "Y = [100(0)+150(0)+200(0.25√3)]/450 = 1/(3√3) m"],
+        "answer": "(5/18, 1/(3√3)) m ≈ (0.28, 0.19) m",
+        "audioScript": "Apply the weighted-average formula separately along x and y — each mass pulls the centre of mass toward itself in proportion to how heavy it is."
       },
       {
         "id": "pb2",
-        "question": "Basic drill: apply Torque with clean numbers.",
-        "interpretation": "Single-formula substitution.",
-        "formulaIds": [
-          "F2"
-        ],
-        "steps": [
-          "List given",
-          "Write formula",
-          "Substitute",
-          "Check units"
-        ],
-        "answer": "Numerical as per data",
-        "audioScript": "Use Torque directly after listing knowns."
+        "question": "A wheel of radius 0.5 m rotates at 10 rad/s. Find the linear speed of a point on the rim.",
+        "interpretation": "Direct v=ωr application at the rim.",
+        "formulaIds": ["F4"],
+        "steps": ["v = ωr = 10 × 0.5"],
+        "answer": "5 m/s",
+        "audioScript": "Just multiply the angular speed by the radius — this is the most direct application of the angular-to-linear velocity relation."
       },
       {
         "id": "pb3",
-        "question": "Basic drill: apply Newton 2 rotation with clean numbers.",
-        "interpretation": "Single-formula substitution.",
-        "formulaIds": [
-          "F3"
-        ],
-        "steps": [
-          "List given",
-          "Write formula",
-          "Substitute",
-          "Check units"
-        ],
-        "answer": "Numerical as per data",
-        "audioScript": "Use Newton 2 rotation directly after listing knowns."
-      },
-      {
-        "id": "pb4",
-        "question": "Basic drill: apply Moment of inertia with clean numbers.",
-        "interpretation": "Single-formula substitution.",
-        "formulaIds": [
-          "F4"
-        ],
-        "steps": [
-          "List given",
-          "Write formula",
-          "Substitute",
-          "Check units"
-        ],
-        "answer": "Numerical as per data",
-        "audioScript": "Use Moment of inertia directly after listing knowns."
+        "question": "The angular speed of a motor wheel increases from 1200 rpm to 3120 rpm in 16 s. Find its angular acceleration.",
+        "interpretation": "Convert rpm to rad/s, then use the constant-α rotational kinematics equation.",
+        "formulaIds": ["F11"],
+        "steps": ["ω₀=2π(1200)/60=40π rad/s, ω=2π(3120)/60=104π rad/s", "α=(ω−ω₀)/t=(104π−40π)/16=64π/16=4π rad/s²"],
+        "answer": "α = 4π ≈ 12.6 rad/s²",
+        "audioScript": "Convert both speeds to rad/s first — this is the single most common place to lose marks in this type of problem — then it's a one-line subtraction divided by time."
       }
     ],
     "intermediate": [
       {
         "id": "pi1",
-        "question": "Intermediate: two-step problem involving Centre of mass.",
-        "interpretation": "Need an intermediate quantity first.",
-        "formulaIds": [
-          "F1"
-        ],
-        "steps": [
-          "Find intermediate",
-          "Apply main formula",
-          "Interpret result"
-        ],
-        "answer": "As computed",
-        "audioScript": "Bridge to Centre of mass with one extra relation from the chapter."
+        "question": "A child of mass 20 kg sits at one end of a 10 kg, 2 m long trolley at rest on a frictionless floor. The child walks to the other end. How far does the trolley move?",
+        "interpretation": "External horizontal force is zero, so the CM of (child+trolley) stays fixed even as the child moves relative to the trolley.",
+        "formulaIds": ["F2"],
+        "steps": ["Let the trolley shift by d (opposite to the child's motion relative to ground)", "CM-fixed condition: 20(2−d) = 10×d (child's displacement relative to ground vs trolley's)", "Actually use: m_child × (child's ground displacement) = −m_trolley × d, with child's ground displacement = (2−d)", "20(2−d)=10d ⟹ 40−20d=10d ⟹ d=40/30=4/3 m"],
+        "answer": "The trolley shifts back by 4/3 ≈ 1.33 m (child moves forward by 2−4/3 = 2/3 m relative to ground)",
+        "audioScript": "Even though the child physically walks the trolley's whole 2 m length relative to the trolley, the combined centre of mass can't move at all — so the trolley itself must slide backward to compensate, in inverse proportion to the two masses."
       },
       {
         "id": "pi2",
-        "question": "Intermediate: two-step problem involving Torque.",
-        "interpretation": "Need an intermediate quantity first.",
-        "formulaIds": [
-          "F2"
-        ],
-        "steps": [
-          "Find intermediate",
-          "Apply main formula",
-          "Interpret result"
-        ],
-        "answer": "As computed",
-        "audioScript": "Bridge to Torque with one extra relation from the chapter."
+        "question": "Find the centre of mass of a uniform L-shaped lamina made of three 1 m × 1 m squares (as in NCERT Fig. 6.11), total mass 3 kg.",
+        "interpretation": "Split into 3 unit squares, each 1 kg concentrated at its own geometric centre.",
+        "formulaIds": ["F1"],
+        "steps": ["Squares centred at (0.5,0.5), (1.5,0.5), (0.5,1.5) [one possible L layout], each mass 1 kg", "X=(0.5+1.5+0.5)/3=2.5/3=5/6 m", "Y=(0.5+0.5+1.5)/3=2.5/3=5/6 m"],
+        "answer": "(5/6, 5/6) m — lies on the diagonal line of symmetry of the L-shape, NOT inside the 'missing' corner square",
+        "audioScript": "Split any composite shape into simple pieces you already know the centre of mass of, treat each piece's mass as if concentrated at its own centre, and average — this is exactly how the NCERT L-lamina example works."
       },
       {
         "id": "pi3",
-        "question": "Intermediate: two-step problem involving Newton 2 rotation.",
-        "interpretation": "Need an intermediate quantity first.",
-        "formulaIds": [
-          "F3"
-        ],
-        "steps": [
-          "Find intermediate",
-          "Apply main formula",
-          "Interpret result"
-        ],
-        "answer": "As computed",
-        "audioScript": "Bridge to Newton 2 rotation with one extra relation from the chapter."
-      },
-      {
-        "id": "pi4",
-        "question": "Intermediate: two-step problem involving Moment of inertia.",
-        "interpretation": "Need an intermediate quantity first.",
-        "formulaIds": [
-          "F4"
-        ],
-        "steps": [
-          "Find intermediate",
-          "Apply main formula",
-          "Interpret result"
-        ],
-        "answer": "As computed",
-        "audioScript": "Bridge to Moment of inertia with one extra relation from the chapter."
+        "question": "Find the ratio of translational to rotational kinetic energy for a solid cylinder rolling without slipping.",
+        "interpretation": "Use I_cm=MR²/2 for a solid cylinder, then form the KE ratio using v=ωR.",
+        "formulaIds": ["F12"],
+        "steps": ["K_trans/K_rot = MR²/I_cm = MR²/(MR²/2) = 2"],
+        "answer": "2 : 1 (translational KE is twice the rotational KE for a solid cylinder)",
+        "audioScript": "This ratio only depends on the shape's radius of gyration relative to its radius — for a solid cylinder that ratio works out to a clean 2:1 split in favour of translation."
       }
     ],
     "advanced": [
       {
         "id": "pa1",
-        "question": "Advanced NEET-style mix using Centre of mass.",
-        "interpretation": "Trap options + concept check.",
-        "formulaIds": [
-          "F1"
-        ],
+        "question": "A 3 m ladder weighing 20 kg leans against a frictionless wall, its foot 1 m from the wall on a rough floor. Find the reaction forces of the wall and the floor. (g=9.8 m/s²)",
+        "interpretation": "Full rigid-body statics: translational equilibrium in both directions plus rotational equilibrium about the foot.",
+        "formulaIds": ["F8"],
         "steps": [
-          "Spot assumptions",
-          "Choose formula set",
-          "Eliminate traps"
+          "BC=√(3²−1²)=2√2 m (height reached on wall)",
+          "Vertical: N=W=20×9.8=196.0 N",
+          "Torque about foot A: F₁(2√2) = W(0.5) [W acts at midpoint, 0.5 m horizontal from foot]",
+          "F₁=196.0×0.5/(2√2)=98/(2√2)≈34.6 N",
+          "Horizontal: F(friction)=F₁≈34.6 N",
+          "Total floor reaction F₂=√(F²+N²)=√(34.6²+196²)≈199.0 N, at angle tan⁻¹(196/34.6)≈80° to horizontal"
         ],
-        "answer": "Correct option after analysis",
-        "audioScript": "Advanced use of Centre of mass: watch assumptions and option traps."
+        "answer": "Wall reaction ≈ 34.6 N (horizontal); Floor reaction ≈ 199.0 N at ≈80° to the horizontal (NCERT Example 6.9)",
+        "audioScript": "Take torques about the ladder's foot specifically, since that makes both unknown floor-reaction components drop out of the torque equation entirely, leaving a single equation for the wall's reaction alone."
       },
       {
         "id": "pa2",
-        "question": "Advanced NEET-style mix using Torque.",
-        "interpretation": "Trap options + concept check.",
-        "formulaIds": [
-          "F2"
-        ],
+        "question": "A cord of negligible mass is wound round a 20 kg, 20 cm-radius flywheel on a frictionless axle. A steady 25 N pull is applied. Find (a) the angular acceleration, (b) work done as 2 m of cord unwinds, (c) the kinetic energy gained, assuming it starts from rest.",
+        "interpretation": "Chain τ=Iα for angular acceleration, then either direct work W=Fd or the rotational work-energy route, to show both give the same KE.",
+        "formulaIds": ["F10", "F11"],
         "steps": [
-          "Spot assumptions",
-          "Choose formula set",
-          "Eliminate traps"
+          "I=MR²/2=20×0.2²/2=0.4 kg m²",
+          "τ=FR=25×0.2=5.0 N m; α=τ/I=5.0/0.4=12.5 rad/s²",
+          "Work by the pull = F×d = 25×2 = 50 J",
+          "θ=d/R=2/0.2=10 rad; ω²=0+2αθ=2×12.5×10=250 (rad/s)²",
+          "K=½Iω²=½×0.4×250=50 J — matches the work done, confirming no energy loss"
         ],
-        "answer": "Correct option after analysis",
-        "audioScript": "Advanced use of Torque: watch assumptions and option traps."
+        "answer": "α=12.5 rad/s²; Work=50 J; KE gained=50 J (equal, since the axle is frictionless)",
+        "audioScript": "This problem is really a check that the work-energy theorem holds for rotation just as it does for translation — every joule of work done unwinding the cord shows up exactly as kinetic energy of the spinning flywheel, with nothing lost to friction."
       },
       {
         "id": "pa3",
-        "question": "Advanced NEET-style mix using Newton 2 rotation.",
-        "interpretation": "Trap options + concept check.",
-        "formulaIds": [
-          "F3"
-        ],
+        "question": "A solid cylinder of mass M and radius R rolls without slipping down an incline of height h, starting from rest. Find its speed at the bottom, and compare with a solid sphere of the same mass and radius released from the same height.",
+        "interpretation": "Energy conservation with rolling KE split between translation and rotation, parameterised by k²/R² for each shape.",
+        "formulaIds": ["F12"],
         "steps": [
-          "Spot assumptions",
-          "Choose formula set",
-          "Eliminate traps"
+          "General: Mgh = ½Mv²(1+k²/R²) ⟹ v=√[2gh/(1+k²/R²)]",
+          "Cylinder: k²/R²=1/2 ⟹ v_cyl=√(2gh/1.5)=√(4gh/3)",
+          "Sphere: k²/R²=2/5 ⟹ v_sph=√(2gh/1.4)=√(10gh/7)",
+          "Compare: 4/3≈1.333 vs 10/7≈1.429 — sphere's v² coefficient is larger"
         ],
-        "answer": "Correct option after analysis",
-        "audioScript": "Advanced use of Newton 2 rotation: watch assumptions and option traps."
-      },
-      {
-        "id": "pa4",
-        "question": "Advanced NEET-style mix using Moment of inertia.",
-        "interpretation": "Trap options + concept check.",
-        "formulaIds": [
-          "F4"
-        ],
-        "steps": [
-          "Spot assumptions",
-          "Choose formula set",
-          "Eliminate traps"
-        ],
-        "answer": "Correct option after analysis",
-        "audioScript": "Advanced use of Moment of inertia: watch assumptions and option traps."
+        "answer": "v_cylinder=√(4gh/3); v_sphere=√(10gh/7) — the sphere is faster because more of its available energy goes into translation (smaller k²/R²)",
+        "audioScript": "Neither mass nor radius actually matters for who wins this race — only the shape's k²/R² ratio does, since it alone decides what fraction of the falling energy is diverted from forward motion into spin."
       }
     ],
-    "transferPrompt": "Invent one NEET MCQ that uses two formulas from System of Particles and Rotational Motion."
+    "transferPrompt": "After finishing the ladder, invent one NEET-style MCQ that combines conservation of angular momentum (a spinning platform) with the parallel axis theorem (a person moving their arms changes I about the spin axis), and one that connects the rolling-motion energy split here with the earlier Work-Energy chapter's KE formula."
   },
-  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class 11 Chapter 6: System of Particles and Rotational Motion only.\n\nFlow: (1) ask goal (2) quiz definitions (3) basic formula drills (4) intermediate multi-step (5) advanced exam traps (6) after wrong answers: Interpretation → Formula → Steps (7) offer flashcard / formula-view modes (8) stay in this chapter.\n\nKey formulas: Centre of mass, Torque, Newton 2 rotation, Moment of inertia, Parallel axis, Angular momentum, Rolling condition, Rotational KE.\n\nStart with my goal and one warm-up definition from this chapter.",
+  "studentTutorPrompt": "You are my Physics tutor for NEET, JEE and KCET for NCERT Class XI Chapter 6 — System of Particles and Rotational Motion. Start by asking whether I want to revise definitions, practice numericals, or focus on a weak sub-topic (centre of mass & momentum of a system, vector products, torque & angular momentum, equilibrium & centre of gravity, moment of inertia, rotational kinematics/dynamics, or rolling motion). First quiz me on definitions and formulas with NO calculation involved — centre of mass vs centre of gravity, torque vs angular momentum, translational vs rotational equilibrium, and moment of inertia vs radius of gyration. Then move to basic numericals tied to a single formula (locating a CM, v=ωr, torque of a given force, rotational kinematics). Then intermediate problems requiring two steps (composite-lamina CM, angular momentum conservation for a spinning skater, parallel-axis-theorem moment of inertia, lever/see-saw balance). Then advanced multi-stage problems (ladder-against-a-wall statics, rod-on-two-knife-edges statics, flywheel work-energy, rolling-body race down an incline). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which formula connects to it and why, (3) the solution steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula → steps → answer) and a formula-view mode (list all 12 formulas with when-to-use notes). Stay within this chapter's scope (centre of mass, vector products, torque, angular momentum, equilibrium, moment of inertia, rotational kinematics/dynamics, rolling motion) unless I explicitly ask to connect to another chapter.",
   "selfCheck": [
-    {
-      "q": "State Centre of mass",
-      "a": "discrete system"
-    },
-    {
-      "q": "Define Centre of mass",
-      "a": "Point that moves as if all mass and net external force acted there."
-    }
+    { "q": "What two conditions must BOTH hold for a rigid body to be in mechanical equilibrium?", "a": "Zero net external force (translational equilibrium) AND zero net external torque (rotational equilibrium) — both are independently required." },
+    { "q": "State the parallel axis theorem.", "a": "I = I_cm + Md², where I_cm is the moment of inertia about a parallel axis through the centre of mass and d is the distance between the two parallel axes." },
+    { "q": "Under what condition is the total angular momentum of a system conserved?", "a": "When the total external torque acting on the system is zero — internal torques always cancel in equal-and-opposite pairs by Newton's third law." },
+    { "q": "Why does a solid sphere roll down an incline faster than a hollow ring of the same mass and radius?", "a": "The sphere has a smaller radius of gyration (k²/R²=2/5 vs 1 for the ring), so less of its gravitational PE is diverted into rotational KE, leaving more available for translational speed." },
+    { "q": "What is the total kinetic energy of a body rolling without slipping?", "a": "The SUM of translational and rotational kinetic energy: K = ½Mv_cm² + ½I_cmω², never just one term alone." }
   ]
 }
