@@ -36,6 +36,41 @@
       "slug": "ch05-coordination-compounds",
       "status": "ready",
       "ncertCode": "lech105"
+    },
+    {
+      "number": 6,
+      "title": "Haloalkanes and Haloarenes",
+      "slug": "ch06-haloalkanes-and-haloarenes",
+      "status": "ready",
+      "ncertCode": "lech201"
+    },
+    {
+      "number": 7,
+      "title": "Alcohols, Phenols and Ethers",
+      "slug": "ch07-alcohols-phenols-and-ethers",
+      "status": "ready",
+      "ncertCode": "lech202"
+    },
+    {
+      "number": 8,
+      "title": "Aldehydes, Ketones and Carboxylic Acids",
+      "slug": "ch08-aldehydes-ketones-and-carboxylic-acids",
+      "status": "ready",
+      "ncertCode": "lech203"
+    },
+    {
+      "number": 9,
+      "title": "Amines",
+      "slug": "ch09-amines",
+      "status": "ready",
+      "ncertCode": "lech204"
+    },
+    {
+      "number": 10,
+      "title": "Biomolecules",
+      "slug": "ch10-biomolecules",
+      "status": "ready",
+      "ncertCode": "lech205"
     }
   ]
 }

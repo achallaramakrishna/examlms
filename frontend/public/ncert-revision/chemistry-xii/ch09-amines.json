@@ -1,0 +1,632 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 9,
+    "chapterTitle": "Amines",
+    "ncertCode": "lech204",
+    "topicIdHint": "Amines",
+    "estimatedRevisionMinutes": 60,
+    "chapter": "Amines",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Describe amines as pyramidal, sp3-hybridised nitrogen derivatives of ammonia, and classify a given amine as primary, secondary or tertiary, and as simple or mixed, aliphatic or aromatic.",
+    "Assign correct common and IUPAC names to alkylamines and arylamines, including locants for N-substituents and for amines with more than one -NH2 group.",
+    "Select the correct method - reduction of nitro compounds/nitriles/amides, ammonolysis, Gabriel phthalimide synthesis, or Hofmann bromamide degradation - to prepare a target primary amine, and explain why each has particular scope or limitations.",
+    "Explain and correctly apply the basicity order of amines, distinguishing the gas-phase order (purely inductive) from the aqueous-phase order (inductive plus steric plus solvation), and compare aliphatic versus aromatic amines using resonance and substituent effects.",
+    "Use the carbylamine (isocyanide) test and Hinsberg's test to distinguish primary, secondary and tertiary amines, and predict the products formed when 1 degree, 2 degree and 3 degree aliphatic and aromatic amines react with nitrous acid.",
+    "Describe diazotisation and the full set of diazonium-salt reactions - Sandmeyer, Gattermann, Balz-Schiemann and azo-coupling - and explain why they are indispensable for synthesising aromatic compounds not accessible by direct electrophilic substitution."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Amines - pyramidal sp3-N derivatives of ammonia classified as 1 degree/2 degree/3 degree - are named, prepared by six routes, compared on basicity (gas-phase vs aqueous-phase order) and physical properties, distinguished by the carbylamine and Hinsberg tests, taken through electrophilic substitution on the aromatic ring, and finally converted (for aromatic primary amines) into diazonium salts that unlock Sandmeyer, Gattermann, Balz-Schiemann and azo-coupling reactions.",
+    "mustKnowBullets": [
+      "Amines are derivatives of NH3 with one, two or three H atoms replaced by alkyl/aryl groups; N is sp3 hybridised and pyramidal, with a lone pair on the fourth orbital; the C-N-E bond angle is compressed below 109.5 degrees (108 degrees in trimethylamine, Fig. 9.1) by lone-pair repulsion.",
+      "Classification: 1 degree amine RNH2/ArNH2, 2 degree amine R2NH or RNHR', 3 degree amine R3N or RNR'R''; 'simple' when all substituent groups are identical, 'mixed' when they differ.",
+      "IUPAC nomenclature: primary amines are named as alkanamines (replace 'e' of alkane with 'amine', e.g. CH3NH2 = methanamine); locants number the position of -NH2 on the chain (H2N-CH2CH2-NH2 = ethane-1,2-diamine); secondary/tertiary amines use the locant 'N' for substituents on nitrogen (CH3NHCH2CH3 = N-methylethanamine); aniline (C6H5NH2) is also the accepted IUPAC name, alternatively benzenamine.",
+      "Six methods of preparation: (i) reduction of nitro compounds (H2/Pd/ethanol, or Sn+HCl/Fe+HCl); (ii) ammonolysis of alkyl/benzyl halides (excess ethanolic NH3, sealed tube, 373 K - gives a mixture of 1 degree/2 degree/3 degree amines plus quaternary ammonium salt, reactivity RI > RBr > RCl); (iii) reduction of nitriles (LiAlH4 or H2/Ni - adds one carbon relative to the starting nitrile); (iv) reduction of amides (LiAlH4); (v) Gabriel phthalimide synthesis; (vi) Hofmann bromamide degradation.",
+      "Gabriel phthalimide synthesis gives ONLY pure primary amines and works ONLY for aliphatic amines - aryl halides cannot undergo the required nucleophilic substitution with the phthalimide anion, so aromatic primary amines cannot be made this way.",
+      "Hofmann bromamide degradation converts an amide RCONH2 + Br2 + 4NaOH into a primary amine RNH2 with ONE CARBON LESS than the amide (alkyl/aryl group migrates from carbonyl carbon to nitrogen) - the reverse relationship to Gabriel synthesis and nitrile reduction, which add carbons.",
+      "Boiling point of isomeric amines: 1 degree > 2 degree > 3 degree (more N-H bonds available for intermolecular H-bonding in 1 degree amines; 3 degree amines have none). Lower aliphatic amines are water-soluble via H-bonding with water; solubility drops as the hydrophobic alkyl part grows; amines are less polar than alcohols of comparable mass (N less electronegative than O), so amines have lower boiling points than isomeric-mass alcohols.",
+      "Amines are Lewis bases due to the N lone pair; basic strength is measured by Kb (larger Kb / smaller pKb = stronger base).",
+      "Gas-phase basicity order (pure inductive +I effect, no solvation): 3 degree amine > 2 degree amine > 1 degree amine > NH3 - more alkyl groups push more electron density onto N and better disperse the positive charge on the ammonium cation.",
+      "Aqueous-phase basicity order is NOT regular because bulkier cations are solvated (H-bonded to water) less effectively - steric hindrance competes with the inductive effect: for methyl amines, (CH3)2NH > CH3NH2 > (CH3)3N > NH3; for ethyl amines, (C2H5)2NH > (C2H5)3N > C2H5NH2 > NH3.",
+      "Aromatic amines are weaker bases than ammonia: the -NH2 lone pair on aniline is delocalised into the ring by resonance (aniline has 5 resonance structures vs only 2 for the anilinium cation), so aniline is more stabilised relative to its conjugate acid and less willing to accept a proton; electron-donating ring substituents (-OCH3, -CH3) increase basicity, electron-withdrawing ones (-NO2, -SO3H, -COOH, halogens) decrease it.",
+      "Carbylamine (isocyanide) test: only 1 degree amines (aliphatic AND aromatic) plus CHCl3 plus alcoholic KOH, heat, give a foul-smelling isocyanide (R-NC); 2 degree and 3 degree amines give NO reaction - the definitive positive test for a primary amine.",
+      "Hinsberg's test (benzenesulfonyl chloride = Hinsberg's reagent): 1 degree amine gives N-alkylbenzenesulfonamide, whose N-H is acidic (strong -SO2- withdrawal) and DISSOLVES in alkali; 2 degree amine gives N,N-dialkylbenzenesulfonamide with NO N-H, remains INSOLUBLE in alkali; 3 degree amine does NOT react with the reagent at all (recovered unchanged, soluble only in dilute acid).",
+      "Reaction with nitrous acid (NaNO2 + HCl, generated in situ): 1 degree aliphatic amine forms an unstable alkyl diazonium salt that decomposes to an alcohol with N2 gas evolved quantitatively (basis of amino-acid/protein nitrogen estimation); 1 degree aromatic amine (aniline), kept at 273-278 K, forms a stable-for-a-short-time arenediazonium salt (the gateway to the diazonium-salt chemistry below).",
+      "Aniline's -NH2 is a powerful activating, ortho/para-directing group: bromine water at room temperature (no catalyst) gives a white precipitate of 2,4,6-tribromoaniline directly; to isolate a mono-substituted product, first protect -NH2 by acetylation (acetic anhydride/pyridine to give acetanilide), carry out the substitution, then hydrolyse back to the free amine. Aniline does NOT undergo Friedel-Crafts alkylation/acylation because it forms a salt with the AlCl3 catalyst, converting -NH2 into a deactivating, positively charged group.",
+      "Diazotisation: ArNH2 + NaNO2 + 2HCl at 273-278 K gives ArN2+Cl- + NaCl + 2H2O. Arenediazonium ions are resonance-stabilised (unlike unstable alkyldiazonium salts) but are still not stored - used immediately. Diazonium salts undergo two broad classes of reaction: (A) displacement of N2 by Cl-/Br-/CN- (Sandmeyer, Cu2X2-catalysed; Gattermann, Cu powder, lower yield), by I- (direct with KI), by F (via isolable diazonium fluoroborate, heat gives the Balz-Schiemann reaction), by H (H3PO2 or ethanol, mild reduction/deamination), by OH (warm aqueous hydrolysis to phenol), and by -NO2 (fluoroborate plus NaNO2/Cu); (B) retention of the diazo group in coupling reactions with phenols (alkaline medium, para position) or aromatic amines (mildly acidic medium) to form coloured azo dyes (-N=N- linked, extended conjugation) - e.g. p-hydroxyazobenzene (orange) and p-aminoazobenzene (yellow). Diazonium chemistry is the only practical route to aryl fluorides, aryl iodides, and several other substituted aromatics not accessible by direct electrophilic substitution."
+    ],
+    "keyTables": [
+      {
+        "title": "Distinguishing 1 degree/2 degree/3 degree amines (Hinsberg's test, carbylamine test)",
+        "rows": [
+          ["Test / reagent", "1 degree amine", "2 degree amine", "3 degree amine"],
+          ["Carbylamine test - CHCl3 + alc. KOH, heat", "Positive - foul-smelling isocyanide (R-NC or Ar-NC) forms", "No reaction", "No reaction"],
+          ["Hinsberg's test - C6H5SO2Cl (Hinsberg's reagent) + aq./alc. NaOH", "N-alkylbenzenesulfonamide forms; has acidic N-H (strong -SO2- withdrawal) - DISSOLVES in excess alkali, reprecipitates on acidification", "N,N-dialkylbenzenesulfonamide forms; NO N-H present - remains INSOLUBLE in alkali", "No reaction with the reagent; free amine recovered unchanged - insoluble in the alkaline mixture but dissolves in dilute HCl"],
+          ["Reaction with HNO2 (NaNO2 + HCl, 273-278 K)", "Aliphatic: unstable diazonium salt decomposes to alcohol + N2 gas (brisk effervescence). Aromatic (aniline): stable-for-a-short-time arenediazonium salt at low temperature (no gas evolved)", "N-nitrosamine forms (yellow, oily liquid) - no N2 evolved", "Aliphatic 3 degree amine forms a water-soluble N-nitroso ammonium salt; aromatic 3 degree amine (e.g. N,N-dimethylaniline) undergoes ring C-nitrosation at the para position"]
+        ]
+      },
+      {
+        "title": "Diazonium salt reactions summary",
+        "rows": [
+          ["Reaction name", "Reagents / conditions on ArN2+X-", "Product", "Notes"],
+          ["Sandmeyer reaction", "Cu2Cl2/HCl, Cu2Br2/HBr, or CuCN/KCN", "ArCl, ArBr, or ArCN", "Cu(I)-catalysed nucleophilic displacement of N2; generally better yield than Gattermann"],
+          ["Gattermann reaction", "Cu powder + HCl, or Cu powder + HBr", "ArCl or ArBr", "Alternative to Sandmeyer using copper powder directly; typically lower yield"],
+          ["Iodo-replacement", "KI (no catalyst needed)", "ArI", "Iodine cannot be introduced into the ring by direct iodination, so this is the standard route to aryl iodides"],
+          ["Balz-Schiemann reaction", "HBF4 to precipitate ArN2+BF4-, then heat", "ArF + BF3 + N2", "The only practical route to aryl fluorides - direct fluorination of arenes is not feasible"],
+          ["Fluoroborate to nitro", "ArN2+BF4- + aq. NaNO2, Cu powder, heat", "ArNO2", "Replaces the diazonium/fluoroborate group by -NO2"],
+          ["Reductive deamination", "H3PO2 + H2O, or C2H5OH", "ArH (plus N2, plus H3PO3 or CH3CHO)", "Mild reducing agents remove the diazo group as H, restoring an unsubstituted ring position"],
+          ["Hydrolysis", "Warm H2O (allow temperature to rise to about 283 K)", "ArOH (phenol)", "Diazonium group replaced by -OH on gentle warming"],
+          ["Coupling with phenol", "Phenol, dilute NaOH (alkaline medium)", "p-Hydroxyazobenzene (orange dye)", "Diazo group is RETAINED; electrophilic substitution at the para position of phenol"],
+          ["Coupling with aromatic amine", "Aniline, mildly acidic medium", "p-Aminoazobenzene (yellow dye)", "Diazo group RETAINED; azo dyes have extended conjugation through the -N=N- bond"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "9.1", "text": "Like ammonia, the nitrogen atom of an amine is trivalent with an unshared electron pair, so nitrogen is sp3 hybridised and the geometry of amines is pyramidal. The C-N-E bond angle (E = C or H) is less than 109.5 degrees; it is 108 degrees in trimethylamine (Fig. 9.1).", "whyItMatters": "This pyramidal geometry with an exposed lone pair on nitrogen is the structural reason amines act as nucleophiles and Lewis bases throughout the rest of the chapter.", "neetRelevance": "high" },
+    { "id": "h2", "type": "statement", "section": "9.2", "text": "Amines are classified as primary (1 degree, RNH2/ArNH2), secondary (2 degree, R2NH or RNHR') or tertiary (3 degree, R3N or RNR'R'') depending on how many hydrogens of ammonia are replaced by alkyl/aryl groups. They are called 'simple' when the substituent groups are the same and 'mixed' when they differ.", "whyItMatters": "Sets the vocabulary that every later test and reaction (carbylamine, Hinsberg, nitrous acid, basicity trends) is organised around - the class of the amine decides the outcome.", "neetRelevance": "high" },
+    { "id": "h3", "type": "statement", "section": "9.3", "text": "In common nomenclature, alkylamines are named by prefixing the alkyl group to 'amine' as one word. In IUPAC nomenclature, primary amines are alkanamines (replace 'e' of alkane with 'amine', e.g. methanamine); secondary/tertiary amines use the locant N to show substituents on nitrogen (N-methylethanamine); aniline is C6H5NH2, also acceptable as benzenamine in IUPAC.", "whyItMatters": "Naming questions and correctly parsing a name into a structure (or vice versa) are prerequisite skills for every conversion and mechanism question in the chapter.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "9.4", "text": "Nitro compounds are reduced to primary amines by H2/Pd (or Pt or Ni) in ethanol, or by reduction with Sn+HCl or Fe+HCl. Iron scrap with HCl is preferred industrially because the FeCl2 formed hydrolyses to regenerate HCl, so only a small amount of acid needs to be added to start the reaction.", "whyItMatters": "The standard route from nitrobenzene to aniline; appears repeatedly as the first step of multi-step aromatic synthesis problems.", "neetRelevance": "high" },
+    { "id": "h5", "type": "caution", "section": "9.4", "text": "Ammonolysis of an alkyl/benzyl halide with ethanolic NH3 (sealed tube, 373 K) does not stop at the primary amine - the primary amine formed is itself a nucleophile and reacts further with more RX to give secondary, tertiary amines and finally a quaternary ammonium salt. Large excess of ammonia is used to favour the primary amine as the major product; halide reactivity follows RI > RBr > RCl.", "whyItMatters": "A very common trap - students assume ammonolysis cleanly gives only the primary amine, when in fact it always gives a mixture unless conditions are pushed with excess NH3.", "neetRelevance": "high" },
+    { "id": "h6", "type": "statement", "section": "9.4", "text": "Nitriles are reduced by LiAlH4 or catalytic hydrogenation (H2/Ni) to primary amines with ONE CARBON MORE than the nitrile chain - used for ascent of the amine series. Amides are reduced by LiAlH4 to primary amines with the same number of carbons as the amide.", "whyItMatters": "Distinguishes the carbon-adding nitrile route from the carbon-removing Hofmann degradation route - a frequent point of confusion in conversion problems.", "neetRelevance": "high" },
+    { "id": "h7", "type": "caution", "section": "9.4", "text": "Gabriel phthalimide synthesis gives a pure primary amine by alkylating the potassium salt of phthalimide with R-X, then hydrolysing the N-alkylphthalimide. Aromatic primary amines CANNOT be prepared this way because aryl halides do not undergo the required nucleophilic substitution with the phthalimide anion.", "whyItMatters": "A frequently tested limitation/exception (Exercise 9.12) - students must know Gabriel synthesis is restricted to aliphatic primary amines.", "neetRelevance": "high" },
+    { "id": "h8", "type": "formula_intro", "section": "9.4", "text": "Hofmann developed a method for preparing primary amines by treating an amide with bromine in aqueous or ethanolic NaOH. In this degradation reaction, an alkyl or aryl group migrates from the carbonyl carbon of the amide to the nitrogen atom, giving an amine with ONE CARBON LESS than the starting amide.", "whyItMatters": "A key mechanism-based rule for descent-of-series conversions; frequently paired with questions asking you to identify the parent amide for a given target amine.", "neetRelevance": "high" },
+    { "id": "h9", "type": "statement", "section": "9.5", "text": "Among isomeric amines, boiling point order is primary > secondary > tertiary, because primary amines have two N-H bonds available for intermolecular hydrogen bonding, secondary amines have one, and tertiary amines have none. Lower amines are water soluble via H-bonding with water, but amines are less polar than alcohols of similar mass (N is less electronegative than O), so an amine has a lower boiling point than an alcohol of comparable molar mass.", "whyItMatters": "Table 9.2 style comparisons (amine vs alcohol vs alkane of similar mass) are a classic physical-property question.", "neetRelevance": "medium" },
+    { "id": "h10", "type": "formula_intro", "section": "9.6.1", "text": "Amines behave as Lewis bases because of the unshared electron pair on nitrogen. Basic strength is expressed through Kb (or pKb = -log Kb); a larger Kb or smaller pKb means a stronger base. pKb of ammonia is 4.75; aliphatic amines are stronger bases than ammonia (pKb about 3 to 4.22), while aromatic amines are weaker bases than ammonia (e.g. benzenamine pKb 9.38).", "whyItMatters": "Sets up the quantitative scale (Table 9.3) used for every basicity-ordering question in the chapter.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "9.6.1", "text": "In the gas phase, where there is no solvation to complicate things, basicity of amines follows the purely inductive order: tertiary amine > secondary amine > primary amine > NH3, because more alkyl groups donate more electron density to nitrogen and better disperse the positive charge of the resulting ammonium cation.", "whyItMatters": "This is the idealised inductive-effect order that many students wrongly assume also applies in aqueous solution - it sets up the contrast with the next point.", "neetRelevance": "high" },
+    { "id": "h12", "type": "caution", "section": "9.6.1", "text": "In aqueous solution the trend is NOT regular. Substituted ammonium cations are stabilised both by the +I effect of alkyl groups AND by solvation (H-bonding with water); bulkier ions are solvated less effectively. For methyl-substituted amines the aqueous order is (CH3)2NH > CH3NH2 > (CH3)3N > NH3; for ethyl-substituted amines it is (C2H5)2NH > (C2H5)3N > C2H5NH2 > NH3.", "whyItMatters": "The single most commonly confused/tested point in this chapter - you must know both the gas-phase and the aqueous-phase order, and which one a question is actually asking about.", "neetRelevance": "high" },
+    { "id": "h13", "type": "statement", "section": "9.6.1", "text": "Aniline is a resonance hybrid of five structures (the -NH2 lone pair delocalised into the ring), while the anilinium ion formed by protonation has only two Kekule resonance structures. Because aniline is stabilised more (relative to its conjugate acid) than an aliphatic amine is, it is a weaker base than ammonia. Electron-releasing ring substituents (-OCH3, -CH3) increase basic strength of an arylamine; electron-withdrawing ones (-NO2, -SO3H, -COOH, halogens) decrease it.", "whyItMatters": "Explains why pKb of aniline (9.38) is so much higher than methanamine (3.38) - the classic 'account for' exercise question.", "neetRelevance": "high" },
+    { "id": "h14", "type": "definition", "section": "9.6.4", "text": "Aliphatic and aromatic primary amines, on heating with chloroform and ethanolic potassium hydroxide, form isocyanides (carbylamines), which are foul smelling. Secondary and tertiary amines do not show this reaction. This is called the carbylamine reaction or isocyanide test.", "whyItMatters": "The go-to test whenever a question asks for a chemical test to identify or confirm a primary amine.", "neetRelevance": "high" },
+    { "id": "h15", "type": "statement", "section": "9.6.6", "text": "Benzenesulfonyl chloride (Hinsberg's reagent) reacts with a primary amine to give N-alkylbenzenesulfonamide, whose remaining N-H is strongly acidic (due to the electron-withdrawing sulfonyl group) and so dissolves in alkali; with a secondary amine it gives N,N-dialkylbenzenesulfonamide, which has no acidic N-H and stays insoluble in alkali; tertiary amines do not react with the reagent at all. p-Toluenesulfonyl chloride is commonly used instead today.", "whyItMatters": "The single most reliable test to distinguish AND separate a mixture of primary, secondary and tertiary amines - very frequently examined.", "neetRelevance": "high" },
+    { "id": "h16", "type": "statement", "section": "9.6.7", "text": "The -NH2 group is a powerful activating, ortho/para-directing group, so aniline reacts with bromine water at room temperature (no catalyst) to give a white precipitate of 2,4,6-tribromoaniline directly. To isolate a mono-brominated or mono-nitrated product, the amino group is first protected by acetylation (acetic anhydride/pyridine, giving acetanilide), the substitution is carried out, and the acetamide is then hydrolysed back to the free amine. Direct nitration of aniline also gives tarry products plus a meta isomer (about 2%) because aniline is protonated in strongly acidic medium to the meta-directing anilinium ion; aniline does not undergo Friedel-Crafts reaction at all because it forms a salt with the AlCl3 catalyst, turning -NH2 into a deactivating group.", "whyItMatters": "Shows how a strong o/p-director can misbehave under strongly acidic conditions due to protonation - a favourite conceptual trap in exercises 9.3(iv) and 9.3(v).", "neetRelevance": "high" },
+    { "id": "h17", "type": "statement", "section": "9.9", "text": "Reactions of diazonium salts fall into two broad classes: (A) reactions involving displacement of nitrogen, where the diazonium group is replaced by Cl, Br, CN, I, F, H, OH or NO2 with N2 gas escaping as a by-product; and (B) reactions involving retention of the diazo group, i.e. coupling reactions with phenols or aromatic amines that give coloured azo dyes.", "whyItMatters": "Ties together the entire Sandmeyer/Gattermann/Balz-Schiemann/coupling toolkit as one coherent synthetic strategy for building aromatic compounds that cannot be made by direct electrophilic substitution.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Amine", "definition": "An organic compound derived from ammonia by replacing one, two or all three hydrogen atoms with alkyl and/or aryl group(s).", "section": "9.1" },
+    { "id": "d2", "term": "Primary (1 degree) amine", "definition": "An amine of the form R-NH2 or Ar-NH2, formed by replacing one hydrogen atom of ammonia with an alkyl or aryl group.", "section": "9.2" },
+    { "id": "d3", "term": "Secondary (2 degree) amine", "definition": "An amine of the form R2NH or R-NH-R', formed by replacing two hydrogen atoms of ammonia with alkyl/aryl groups, which may be the same (simple) or different (mixed).", "section": "9.2" },
+    { "id": "d4", "term": "Tertiary (3 degree) amine", "definition": "An amine of the form R3N or R-NR'R'', formed by replacing all three hydrogen atoms of ammonia with alkyl/aryl groups.", "section": "9.2" },
+    { "id": "d5", "term": "Aniline (benzenamine)", "definition": "C6H5NH2, the simplest aromatic amine, in which -NH2 is attached directly to the benzene ring; both 'aniline' and 'benzenamine' are accepted names.", "section": "9.3" },
+    { "id": "d6", "term": "Ammonolysis", "definition": "The nucleophilic substitution reaction in which the carbon-halogen bond of an alkyl or benzyl halide is cleaved by ammonia, replacing the halogen with an amino group; carried out in a sealed tube at 373 K.", "section": "9.4" },
+    { "id": "d7", "term": "Gabriel phthalimide synthesis", "definition": "A method for preparing pure primary aliphatic amines: the potassium salt of phthalimide is alkylated with an alkyl halide, and the resulting N-alkylphthalimide is hydrolysed with aqueous NaOH to release the primary amine.", "section": "9.4" },
+    { "id": "d8", "term": "Hofmann bromamide degradation reaction", "definition": "A reaction in which an amide is treated with bromine in aqueous/ethanolic NaOH; an alkyl or aryl group migrates from the carbonyl carbon to nitrogen, giving a primary amine with one carbon less than the amide.", "section": "9.4" },
+    { "id": "d9", "term": "Carbylamine reaction (isocyanide test)", "definition": "A test in which a primary amine, on heating with chloroform and ethanolic KOH, forms a foul-smelling isocyanide (carbylamine); secondary and tertiary amines give no reaction.", "section": "9.6.4" },
+    { "id": "d10", "term": "Hinsberg's reagent / Hinsberg's test", "definition": "Benzenesulfonyl chloride (C6H5SO2Cl); its reaction with primary amines gives an alkali-soluble N-alkylbenzenesulfonamide, with secondary amines gives an alkali-insoluble N,N-dialkylbenzenesulfonamide, and it does not react with tertiary amines - used to distinguish and separate the three classes.", "section": "9.6.6" },
+    { "id": "d11", "term": "Diazotisation", "definition": "The conversion of a primary aromatic amine into a diazonium salt by treatment with nitrous acid (generated in situ from NaNO2 + HCl) at 273-278 K.", "section": "9.7" },
+    { "id": "d12", "term": "Diazonium salt", "definition": "A compound of the general formula R-N2+X- (R = aryl for stable salts; X- = Cl-, Br-, HSO4-, BF4-, etc.), named by suffixing 'diazonium' to the parent hydrocarbon name followed by the anion name, e.g. benzenediazonium chloride.", "section": "9.7" },
+    { "id": "d13", "term": "Sandmeyer reaction", "definition": "The reaction of an arenediazonium salt with a cuprous halide or cuprous cyanide (Cu2Cl2/HCl, Cu2Br2/HBr, or CuCN/KCN) that replaces the diazonium group with Cl, Br or CN respectively, releasing N2.", "section": "9.9" },
+    { "id": "d14", "term": "Balz-Schiemann reaction", "definition": "The conversion of an arenediazonium chloride to the diazonium fluoroborate with HBF4, followed by heating to decompose it into the aryl fluoride, BF3 and N2 - the standard route to aryl fluorides.", "section": "9.9" },
+    { "id": "d15", "term": "Coupling reaction (azo dye)", "definition": "An electrophilic substitution in which an arenediazonium ion reacts with a phenol (alkaline medium) or an aromatic amine (mildly acidic medium) at the para position, retaining the diazo group as an -N=N- (azo) linkage, to give a coloured, highly conjugated azo dye.", "section": "9.9" }
+  ],
+  "figures": [
+    { "id": "fig-9-1", "kind": "figure", "label": "Fig. 9.1", "ncertPage": 260, "section": "9.1", "caption": "Pyramidal shape of trimethylamine - the three sp3 orbitals of nitrogen overlap with the three CH3 groups while the fourth orbital holds the unshared electron pair; the C-N-C bond angle is compressed to 108 degrees.", "placeholderText": "NCERT Chemistry XII . Ch 9 . Page 260 . Fig. 9.1", "src": null, "uploadHint": "Crop from lech204.pdf page 2" },
+    { "id": "fig-9-2", "kind": "figure", "label": "Fig. 9.2", "ncertPage": 266, "section": "9.5", "caption": "Intermolecular hydrogen bonding in primary amines - each R-NH2 molecule can both donate and accept N-H...N hydrogen bonds, giving primary amines a higher boiling point than secondary or tertiary isomers.", "placeholderText": "NCERT Chemistry XII . Ch 9 . Page 266 . Fig. 9.2", "src": null, "uploadHint": "Crop from lech204.pdf page 8" },
+    { "id": "fig-9-3", "kind": "figure", "label": "Resonance structures of aniline and the anilinium ion", "ncertPage": 269, "section": "9.6.1", "caption": "Aniline is a resonance hybrid of five structures (lone pair delocalised into the ring at ortho and para positions), while the protonated anilinium ion has only two Kekule resonance structures - explaining why aniline is a weaker base than ammonia.", "placeholderText": "NCERT Chemistry XII . Ch 9 . Page 269 . Resonance structures of aniline", "src": null, "uploadHint": "Crop from lech204.pdf page 11" },
+    { "id": "fig-9-4", "kind": "figure", "label": "Azo-coupling reactions of benzenediazonium chloride", "ncertPage": 276, "section": "9.9", "caption": "Benzenediazonium chloride coupling with phenol (dilute NaOH) to give orange p-hydroxyazobenzene, and with aniline (H+) to give yellow p-aminoazobenzene - both retain the -N=N- azo linkage.", "placeholderText": "NCERT Chemistry XII . Ch 9 . Page 276 . Coupling reactions", "src": null, "uploadHint": "Crop from lech204.pdf page 18" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Reduction of nitro compounds to primary amines",
+      "latex": "Ar\\text{-}NO_2 \\xrightarrow[\\text{Ethanol}]{H_2/Pd} Ar\\text{-}NH_2 \\qquad Ar\\text{-}NO_2 \\xrightarrow{Sn+HCl \\ \\text{or} \\ Fe+HCl} Ar\\text{-}NH_2",
+      "plain": "A nitro compound is reduced to the corresponding primary amine by catalytic hydrogenation (H2/Pd, Pt or Ni) or by reduction with metal plus acid (Sn/Fe + HCl).",
+      "symbols": [
+        { "symbol": "Ar-NO2", "meaning": "aromatic (or aliphatic R-NO2) nitro compound" },
+        { "symbol": "H2/Pd", "meaning": "catalytic hydrogenation conditions" },
+        { "symbol": "Sn+HCl or Fe+HCl", "meaning": "metal/acid reduction conditions" }
+      ],
+      "whenToUse": "The standard route from nitrobenzene (or nitroalkanes) to the corresponding primary amine; iron scrap plus HCl is preferred industrially because the FeCl2 formed hydrolyses to regenerate HCl, so only a small amount of acid is needed to start the reaction.",
+      "derivedFrom": "NCERT Section 9.4, method 1",
+      "commonMistakes": [
+        "Assuming H2/Pd and Fe+HCl give different products - both give the same primary amine, just via different reducing conditions.",
+        "Forgetting this method only gives primary amines, never secondary or tertiary."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Convert nitrobenzene/nitroalkane to primary amine",
+          "howToInterpret": "Identify the nitro group being reduced.",
+          "howItConnectsToFormula": "Apply H2/Pd/ethanol or Sn (or Fe) + HCl to reduce -NO2 to -NH2.",
+          "exampleStem": "How will you convert nitrobenzene to aniline?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This is the most direct way into the amine world - take the nitro group already sitting on the ring or chain, and simply add hydrogen across it, whether by a metal catalyst or by an acidic metal reduction; either way, six electrons and six protons turn -NO2 into -NH2 plus two waters."
+    },
+    {
+      "id": "f2",
+      "name": "Ammonolysis of alkyl/benzyl halides",
+      "latex": "R\\text{-}X + NH_3 \\xrightarrow{373\\,K,\\ \\text{sealed tube}} R\\text{-}NH_2 \\xrightarrow{RX} R_2NH \\xrightarrow{RX} R_3N \\xrightarrow{RX} R_4N^+X^-",
+      "plain": "An alkyl or benzyl halide reacts with excess ethanolic ammonia in a sealed tube at 373 K by nucleophilic substitution; the primary amine formed can itself act as a nucleophile toward more R-X, giving successively secondary and tertiary amines and finally a quaternary ammonium salt.",
+      "symbols": [
+        { "symbol": "R-X", "meaning": "alkyl or benzyl halide" },
+        { "symbol": "373 K, sealed tube", "meaning": "reaction conditions for cleavage of the C-X bond by NH3" }
+      ],
+      "whenToUse": "Preparing amines from alkyl/benzyl halides when a mixture of products is acceptable, with excess ammonia used to favour the primary amine; not a clean route to a single pure amine.",
+      "derivedFrom": "NCERT Section 9.4, method 2",
+      "commonMistakes": [
+        "Expecting a pure primary amine - ammonolysis inherently gives a mixture of primary, secondary, tertiary amine and quaternary salt.",
+        "Forgetting the halide reactivity order RI > RBr > RCl.",
+        "Forgetting the free amine can be recovered from its ammonium salt by treatment with a strong base like NaOH."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the full ammonolysis sequence for a given alkyl halide",
+          "howToInterpret": "Recognise that NH3 and each successive amine product act as nucleophiles toward the same alkyl halide.",
+          "howItConnectsToFormula": "Apply the RX-addition sequence RNH2 to R2NH to R3N to R4N+X-.",
+          "exampleStem": "Write chemical equations for the reaction of ethanolic NH3 with C2H5Cl, and the further reaction of the amine formed with excess C2H5Cl.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Think of ammonia as a nucleophile stepping onto an escalator it cannot get off of - once it displaces one halide it becomes a primary amine, which is itself just as nucleophilic, so it keeps climbing to secondary, tertiary, and finally a quaternary salt unless you flood the pot with excess ammonia to stop it early."
+    },
+    {
+      "id": "f3",
+      "name": "Reduction of nitriles and amides (LiAlH4 routes)",
+      "latex": "R\\text{-}C\\equiv N \\xrightarrow{H_2/Ni \\ \\text{or} \\ LiAlH_4} R\\text{-}CH_2\\text{-}NH_2 \\qquad R\\text{-}CO\\text{-}NH_2 \\xrightarrow[\\text{(ii) } H_2O]{\\text{(i) } LiAlH_4} R\\text{-}CH_2\\text{-}NH_2",
+      "plain": "Nitriles are reduced (catalytic hydrogenation or LiAlH4) to primary amines with one carbon MORE than the starting amine chain; amides are reduced by LiAlH4 to primary amines with the SAME carbon count as the amide.",
+      "symbols": [
+        { "symbol": "R-C(triple bond)N", "meaning": "alkyl/aryl nitrile" },
+        { "symbol": "R-CO-NH2", "meaning": "amide" },
+        { "symbol": "LiAlH4", "meaning": "lithium aluminium hydride, a strong reducing agent" }
+      ],
+      "whenToUse": "Nitrile reduction is used specifically for 'ascent of the amine series' - building an amine with one carbon more than a given starting material (e.g. via cyanide displacement then reduction). Amide reduction with LiAlH4 returns the amine with the same carbon count as the amide.",
+      "derivedFrom": "NCERT Section 9.4, methods 3 and 4",
+      "commonMistakes": [
+        "Confusing nitrile reduction (adds a carbon relative to the halide it was made from) with Hofmann degradation (removes a carbon from the amide).",
+        "Forgetting nitrile reduction only yields primary amines."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Ascent of amine series via nitrile",
+          "howToInterpret": "An alkyl halide is first converted to nitrile (NaCN, ethanolic), then reduced.",
+          "howItConnectsToFormula": "R-X to R-C(triple bond)N (via NaCN) to R-CH2-NH2 (via H2/Ni or LiAlH4) - net gain of one carbon.",
+          "exampleStem": "Convert chloroethane into propan-1-amine.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The nitrile route is your carbon-lengthening move - cyanide first bolts on an extra carbon as the nitrile group, then reduction turns that triple bond into a fresh -CH2-NH2, so the product amine always has one more carbon than the halide you started with."
+    },
+    {
+      "id": "f4",
+      "name": "Gabriel phthalimide synthesis",
+      "latex": "\\text{Phthalimide} \\xrightarrow{KOH} \\text{K-phthalimide} \\xrightarrow{R\\text{-}X} \\text{N-alkylphthalimide} \\xrightarrow{NaOH(aq),\\ \\Delta} R\\text{-}NH_2 + \\text{sodium phthalate}",
+      "plain": "Phthalimide is deprotonated by ethanolic KOH to its potassium salt, which is alkylated by R-X to give N-alkylphthalimide; alkaline hydrolysis then releases the pure primary amine and sodium phthalate.",
+      "symbols": [
+        { "symbol": "Phthalimide", "meaning": "cyclic imide of phthalic acid" },
+        { "symbol": "R-X", "meaning": "alkyl halide (must be aliphatic)" }
+      ],
+      "whenToUse": "Whenever a PURE primary aliphatic amine (free of secondary/tertiary contamination) is required. Cannot be used for aromatic primary amines because aryl halides do not undergo nucleophilic substitution with the phthalimide anion.",
+      "derivedFrom": "NCERT Section 9.4, method 5",
+      "commonMistakes": [
+        "Attempting to use this method to prepare aniline or other aromatic primary amines - it only works for aliphatic R-X.",
+        "Forgetting the final alkaline hydrolysis step that actually releases the free amine from the N-alkylphthalimide."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain why aromatic primary amines cannot be made by Gabriel synthesis",
+          "howToInterpret": "Recall that the phthalimide anion is a nucleophile and aryl halides resist nucleophilic substitution.",
+          "howItConnectsToFormula": "The alkylation step R-X + phthalimide anion to N-alkylphthalimide requires an SN2-reactive alkyl halide; Ar-X does not react this way.",
+          "exampleStem": "Why cannot aromatic primary amines be prepared by Gabriel phthalimide synthesis?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Gabriel synthesis is prized because it never lets the amine over-alkylate - the phthalimide nitrogen is locked up as an imide until the very last hydrolysis step, so whatever alkyl group you attach comes off as a clean, single primary amine, provided you started with a reactive aliphatic halide."
+    },
+    {
+      "id": "f5",
+      "name": "Hofmann bromamide degradation reaction",
+      "latex": "R\\text{-}CO\\text{-}NH_2 + Br_2 + 4NaOH \\longrightarrow R\\text{-}NH_2 + Na_2CO_3 + 2NaBr + 2H_2O",
+      "plain": "An amide is treated with bromine in aqueous/ethanolic NaOH; the alkyl/aryl group migrates from the carbonyl carbon to nitrogen, giving a primary amine with ONE carbon less than the amide.",
+      "symbols": [
+        { "symbol": "R-CO-NH2", "meaning": "amide" },
+        { "symbol": "Br2 + 4NaOH", "meaning": "bromine in excess sodium hydroxide" }
+      ],
+      "whenToUse": "Preparing a primary amine (aliphatic or aromatic) with one fewer carbon atom than an available amide - a descent-of-series method, useful when the required amine is hard to access directly.",
+      "derivedFrom": "NCERT Section 9.4, method 6",
+      "commonMistakes": [
+        "Forgetting the product has ONE CARBON LESS than the amide (opposite direction to nitrile reduction).",
+        "Miscounting carbons - e.g. benzamide (7 carbons: ring plus carbonyl carbon) degrades to aniline (6 carbons: ring only), not to a substituted aniline."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify the amide needed to get a target amine by Hofmann degradation",
+          "howToInterpret": "Add one carbon (as a -CONH2 group) to the target amine's structure to find the parent amide.",
+          "howItConnectsToFormula": "Target amine (n carbons) is obtained from an amide with (n+1) carbons via Br2/NaOH.",
+          "exampleStem": "Write the structure and IUPAC name of the amide which gives propan-1-amine by Hofmann bromamide reaction.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Hofmann degradation is the mirror image of the nitrile route - instead of adding a carbon, you strip one away, as the alkyl or aryl group migrates off the carbonyl carbon onto nitrogen, leaving that carbon behind as carbonate; always count one carbon fewer in the product than you started with in the amide."
+    },
+    {
+      "id": "f6",
+      "name": "Basicity order of amines - gas phase vs aqueous phase",
+      "latex": "\\text{Gas phase: } 3^{\\circ} > 2^{\\circ} > 1^{\\circ} > NH_3 \\qquad \\text{Aqueous (methyl series): } (CH_3)_2NH > CH_3NH_2 > (CH_3)_3N > NH_3",
+      "plain": "In the gas phase (no solvation), basicity rises purely with the number of alkyl groups (+I effect): tertiary > secondary > primary > NH3. In aqueous solution, solvation of the ammonium cation by H-bonding to water competes with this inductive effect, so bulky tertiary cations are stabilised less well and the observed order becomes irregular.",
+      "symbols": [
+        { "symbol": "Kb, pKb", "meaning": "base dissociation constant and its negative log; smaller pKb means a stronger base" },
+        { "symbol": "+I effect", "meaning": "electron-donating inductive effect of alkyl groups, stabilises the ammonium cation" }
+      ],
+      "whenToUse": "Whenever a question asks to arrange amines in order of basic strength - first check whether it specifies gas phase or aqueous solution, since the orders differ.",
+      "derivedFrom": "NCERT Section 9.6.1, structure-basicity relationship of amines",
+      "commonMistakes": [
+        "Applying the simple 'more alkyl groups means more basic' inductive rule to aqueous-phase questions without accounting for steric hindrance to solvation.",
+        "Not noticing that both the methylamine and ethylamine aqueous orders place the tertiary amine LOWER than expected from inductive effect alone, while the secondary amine sits highest.",
+        "Forgetting that for aromatic amines, resonance (not solvation/sterics) is the dominant factor."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Arrange amines and ammonia in increasing/decreasing basic strength in aqueous solution",
+          "howToInterpret": "Identify whether all the amines are aliphatic methyl-substituted, ethyl-substituted, or a mix that also includes an aromatic amine.",
+          "howItConnectsToFormula": "For aliphatic-only sets sharing the same alkyl group, use the aqueous order (secondary highest, then primary, then tertiary, then NH3); if an aromatic amine is present, it sits at the weak end, below NH3.",
+          "exampleStem": "Arrange in decreasing order of basic strength: C2H5NH2, C6H5NHCH3, (C2H5)2NH and C6H5NH2.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Keep two separate mental shelves for this topic - the clean gas-phase order that inductive effect alone predicts, and the messier aqueous-phase order where a bulky tertiary amine's cation cannot get properly hugged by water molecules, so it loses ground to the leaner secondary and primary amines."
+    },
+    {
+      "id": "f7",
+      "name": "Carbylamine reaction (isocyanide test)",
+      "latex": "R\\text{-}NH_2 + CHCl_3 + 3KOH \\xrightarrow{\\Delta} R\\text{-}NC + 3KCl + 3H_2O",
+      "plain": "A primary amine, heated with chloroform and alcoholic potassium hydroxide, is converted into a foul-smelling isocyanide (carbylamine); secondary and tertiary amines give no reaction.",
+      "symbols": [
+        { "symbol": "R-NH2", "meaning": "primary amine (aliphatic or aromatic)" },
+        { "symbol": "CHCl3 + 3KOH", "meaning": "chloroform and alcoholic potassium hydroxide, heated" },
+        { "symbol": "R-NC", "meaning": "isocyanide / carbylamine, foul smelling" }
+      ],
+      "whenToUse": "The definitive chemical test to confirm the presence of a PRIMARY amine (aliphatic or aromatic) and to distinguish it from secondary/tertiary amines, which give no reaction.",
+      "derivedFrom": "NCERT Section 9.6.4",
+      "commonMistakes": [
+        "Thinking secondary or tertiary amines also react - only primary amines give this test.",
+        "Confusing this test with Hinsberg's test, which distinguishes all three classes but by a different mechanism (sulfonamide acidity, not isocyanide formation)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Distinguish a pair of amines using one chemical test",
+          "howToInterpret": "Check if one member of the pair is primary and the other is secondary/tertiary or a non-amine.",
+          "howItConnectsToFormula": "Only the primary amine gives the foul-smelling isocyanide with CHCl3/alcoholic KOH.",
+          "exampleStem": "Give one chemical test to distinguish between methylamine and dimethylamine.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "This test is memorable for the wrong reasons - a genuinely foul, fishy-plus-rotten smell tells you unambiguously that you started with a primary amine, because only a primary N-H2 group has the right architecture to be converted into an isocyanide by chloroform under basic conditions."
+    },
+    {
+      "id": "f8",
+      "name": "Reaction of primary amines with nitrous acid",
+      "latex": "R\\text{-}NH_2 + HNO_2 \\longrightarrow [R\\text{-}N_2^+Cl^-] \\xrightarrow{H_2O} R\\text{-}OH + N_2\\uparrow + HCl \\qquad C_6H_5NH_2 \\xrightarrow[273\\text{-}278\\,K]{NaNO_2+2HCl} C_6H_5N_2^+Cl^-",
+      "plain": "A primary aliphatic amine forms an unstable alkyldiazonium salt in situ, which decomposes immediately to an alcohol with quantitative evolution of N2 gas. A primary aromatic amine (aniline), kept cold at 273-278 K, forms a diazonium salt that is stable enough to use directly (the arenediazonium ion is resonance stabilised).",
+      "symbols": [
+        { "symbol": "HNO2", "meaning": "nitrous acid, generated in situ from NaNO2 plus a mineral acid (HCl)" },
+        { "symbol": "R-N2+Cl-", "meaning": "unstable alkyldiazonium salt" },
+        { "symbol": "273-278 K", "meaning": "low temperature needed to keep the arenediazonium salt from decomposing" }
+      ],
+      "whenToUse": "Distinguishing aliphatic vs aromatic primary amines (gas evolution vs no immediate gas evolution at low temperature) and as the essential first step (diazotisation) before any diazonium-salt chemistry.",
+      "derivedFrom": "NCERT Section 9.6.5",
+      "commonMistakes": [
+        "Expecting aniline to evolve N2 gas immediately like an aliphatic amine - at 273-278 K the arenediazonium salt is comparatively stable and does not immediately liberate N2.",
+        "Forgetting that quantitative N2 evolution from aliphatic primary amines is used practically to estimate amino acids/proteins."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Distinguish an aliphatic primary amine from an aromatic primary amine using HNO2",
+          "howToInterpret": "Aliphatic amines evolve N2 gas briskly at room temperature; aromatic amines need to be cooled to 273-278 K to form an isolable diazonium salt without vigorous gas evolution.",
+          "howItConnectsToFormula": "R-NH2 + HNO2 gives ROH + N2 (aliphatic) versus ArNH2 + HNO2 at 273-278 K gives ArN2+Cl- (aromatic).",
+          "exampleStem": "Write the reactions of (i) aromatic and (ii) aliphatic primary amines with nitrous acid.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "The same reagent, nitrous acid, produces two completely different outcomes - an aliphatic amine essentially self-destructs into an alcohol with a fizz of nitrogen gas, while an aromatic amine, kept on ice, forms a diazonium salt stable enough to actually put to work in the next set of reactions."
+    },
+    {
+      "id": "f9",
+      "name": "Reaction with arylsulphonyl chloride - Hinsberg's test",
+      "latex": "C_6H_5SO_2Cl + R\\text{-}NH_2 \\longrightarrow C_6H_5SO_2NHR\\ (\\text{soluble in alkali}) \\qquad C_6H_5SO_2Cl + R_2NH \\longrightarrow C_6H_5SO_2NR_2\\ (\\text{insoluble in alkali})",
+      "plain": "Benzenesulfonyl chloride (Hinsberg's reagent) reacts with a primary amine to give an N-alkylbenzenesulfonamide that still has an acidic N-H (soluble in alkali); with a secondary amine it gives an N,N-dialkylbenzenesulfonamide with no N-H (insoluble in alkali); it does not react with tertiary amines at all.",
+      "symbols": [
+        { "symbol": "C6H5SO2Cl", "meaning": "benzenesulfonyl chloride, Hinsberg's reagent (p-toluenesulfonyl chloride is used in practice today)" },
+        { "symbol": "N-H acidity", "meaning": "the strongly electron-withdrawing -SO2- group makes the remaining N-H in the primary amine's sulfonamide product acidic enough to dissolve in aqueous alkali" }
+      ],
+      "whenToUse": "The most reliable single test to distinguish AND separate a mixture of primary, secondary and tertiary amines - solubility in alkali (primary dissolves, secondary does not) plus no reaction at all for tertiary amines together give an unambiguous classification.",
+      "derivedFrom": "NCERT Section 9.6.6",
+      "commonMistakes": [
+        "Forgetting that the key distinguishing feature is the presence/absence of an acidic N-H in the sulfonamide PRODUCT, not in the amine itself.",
+        "Assuming tertiary amines react to give some sulfonamide product - they do not react with the reagent at all.",
+        "Mixing this up with the carbylamine test, which distinguishes primary from secondary/tertiary but not secondary from tertiary."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Distinguish secondary and tertiary amines using one test",
+          "howToInterpret": "Use Hinsberg's reagent and observe whether a sulfonamide precipitate forms (secondary) or the amine is recovered unreacted (tertiary).",
+          "howItConnectsToFormula": "Secondary amine plus C6H5SO2Cl gives an insoluble N,N-dialkylsulfonamide; tertiary amine plus C6H5SO2Cl gives no reaction.",
+          "exampleStem": "Give one chemical test to distinguish between secondary and tertiary amines.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Hinsberg's test is really a solubility puzzle - once the sulfonyl group attaches, ask whether there is still a hydrogen left on nitrogen; a primary amine's product keeps one acidic N-H and dissolves away in alkali, a secondary amine's product has none and stays put as a precipitate, and a tertiary amine never even reacts in the first place."
+    },
+    {
+      "id": "f10",
+      "name": "Diazonium salt reactions - displacement of N2 by halide/cyanide (Sandmeyer and Gattermann reactions)",
+      "latex": "ArN_2^+X^- \\xrightarrow{Cu_2Cl_2/HCl} ArCl+N_2 \\qquad ArN_2^+X^- \\xrightarrow{Cu_2Br_2/HBr} ArBr+N_2 \\qquad ArN_2^+X^- \\xrightarrow{CuCN/KCN} ArCN+N_2 \\qquad (\\text{Gattermann: } Cu/HCl \\text{ or } Cu/HBr \\text{ replacing } Cu_2X_2)",
+      "plain": "An arenediazonium salt, treated with cuprous chloride/bromide/cyanide (Sandmeyer reaction) or with copper powder and the corresponding halogen acid (Gattermann reaction), loses N2 and the diazonium group is replaced by Cl, Br or CN on the ring.",
+      "symbols": [
+        { "symbol": "ArN2+X-", "meaning": "arenediazonium salt" },
+        { "symbol": "Cu2Cl2, Cu2Br2, CuCN", "meaning": "cuprous salts used as catalysts in the Sandmeyer reaction" },
+        { "symbol": "Cu powder", "meaning": "copper powder used in the Gattermann variant" }
+      ],
+      "whenToUse": "Introducing Cl, Br or CN onto an aromatic ring at a position where direct electrophilic substitution would be difficult to control or impossible (e.g. installing CN, which cannot be introduced by nucleophilic substitution on chlorobenzene).",
+      "derivedFrom": "NCERT Section 9.9(A), point 1",
+      "commonMistakes": [
+        "Forgetting Sandmeyer needs the cuprous (Cu(I)) salt (Cu2Cl2, Cu2Br2, CuCN) while Gattermann uses copper powder directly with the acid.",
+        "Assuming the two give different products - both give the same ArCl/ArBr, Gattermann just tends to give lower yield.",
+        "Forgetting iodide replacement needs neither Sandmeyer nor Gattermann conditions - simple KI is enough."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Convert a diazonium salt to an aryl halide or nitrile",
+          "howToInterpret": "Identify which nucleophile (Cl-, Br-, CN-) is needed and match it to the correct cuprous salt.",
+          "howItConnectsToFormula": "ArN2+Cl- plus CuCN/KCN gives ArCN plus N2 (Sandmeyer reaction).",
+          "exampleStem": "Accomplish the conversion of benzoic acid to aniline to benzonitrile via the diazonium salt.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Sandmeyer and Gattermann are really the same idea with different copper sources - the diazonium group is a superb leaving group, and a copper(I) species, whether from a cuprous salt or plain copper powder plus acid, helps swap it out cleanly for chloride, bromide or cyanide while nitrogen gas bubbles away."
+    },
+    {
+      "id": "f11",
+      "name": "Balz-Schiemann reaction (diazonium salt to aryl fluoride)",
+      "latex": "ArN_2^+Cl^- + HBF_4 \\longrightarrow ArN_2^+BF_4^- \\xrightarrow{\\Delta} Ar\\text{-}F + BF_3 + N_2",
+      "plain": "The diazonium chloride is first converted to the diazonium fluoroborate by treatment with fluoroboric acid (HBF4); this salt is isolable, and on heating it decomposes to give the aryl fluoride.",
+      "symbols": [
+        { "symbol": "HBF4", "meaning": "fluoroboric acid" },
+        { "symbol": "ArN2+BF4-", "meaning": "arenediazonium fluoroborate, a stable, isolable solid" }
+      ],
+      "whenToUse": "The only practical way to introduce fluorine onto an aromatic ring - aryl fluorides cannot be made by direct halogenation of arenes.",
+      "derivedFrom": "NCERT Section 9.9(A), point 3",
+      "commonMistakes": [
+        "Trying to add F directly via a halogenating agent - direct fluorination of arenes is not a viable reaction.",
+        "Forgetting the two-step nature: first precipitate the fluoroborate salt, THEN heat it to release ArF."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Convert aniline (or a substituted aniline) to the corresponding fluoroarene",
+          "howToInterpret": "Route through diazotisation, then fluoroborate formation, then thermal decomposition.",
+          "howItConnectsToFormula": "ArNH2 (NaNO2/HCl, 273-278 K) gives ArN2+Cl-, then (HBF4) gives ArN2+BF4-, then (heat) gives ArF.",
+          "exampleStem": "Convert aniline into 2,4,6-tribromofluorobenzene.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Fluorine is too reactive to install directly on a benzene ring, so chemists smuggle it in via a two-step detour - swap the diazonium counter-ion for fluoroborate to get a salt stable enough to isolate, then apply heat to kick out nitrogen and boron trifluoride, leaving the aryl fluoride behind."
+    },
+    {
+      "id": "f12",
+      "name": "Coupling reactions of diazonium salts (azo dye formation)",
+      "latex": "ArN_2^+Cl^- + C_6H_5\\text{-}OH \\xrightarrow{\\text{dil. NaOH}} Ar\\text{-}N=N\\text{-}C_6H_4\\text{-}OH\\,(p) \\qquad ArN_2^+Cl^- + C_6H_5NH_2 \\xrightarrow{H^+} Ar\\text{-}N=N\\text{-}C_6H_4\\text{-}NH_2\\,(p)",
+      "plain": "The diazonium ion acts as a weak electrophile and couples with phenols (in mildly alkaline solution) or aromatic amines (in mildly acidic solution) at their para position, retaining the -N=N- (azo) linkage to give a highly conjugated, coloured azo compound.",
+      "symbols": [
+        { "symbol": "-N=N-", "meaning": "azo linkage joining the two aromatic rings, responsible for the colour via extended conjugation" },
+        { "symbol": "p-Hydroxyazobenzene", "meaning": "orange dye from coupling with phenol" },
+        { "symbol": "p-Aminoazobenzene", "meaning": "yellow dye from coupling with aniline" }
+      ],
+      "whenToUse": "Synthesising azo dyes; recognise this as the one class of diazonium reaction where the diazo group is RETAINED (not displaced) and nitrogen gas is NOT evolved.",
+      "derivedFrom": "NCERT Section 9.9(B)",
+      "commonMistakes": [
+        "Confusing coupling (retention of the -N=N- group, gives a coloured azo compound) with the displacement reactions (Sandmeyer etc., which lose N2 as gas).",
+        "Forgetting coupling occurs preferentially at the PARA position (or ortho if para is blocked) of the phenol/amine being coupled to.",
+        "Mixing up the required pH - phenols couple best in mildly alkaline medium, aromatic amines in mildly acidic medium."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict the product and colour of a diazonium plus phenol/amine coupling reaction",
+          "howToInterpret": "Identify the coupling partner (phenol or aromatic amine) and its para position.",
+          "howItConnectsToFormula": "ArN2+ plus phenol/aniline gives an azo compound with the -N=N- linkage installed at the para position.",
+          "exampleStem": "What is formed when benzenediazonium chloride reacts with phenol in the presence of dilute NaOH? Name the product and its colour.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Coupling is the one diazonium reaction where nitrogen survives intact - instead of leaving as gas, the whole -N=N- unit becomes a permanent bridge between two aromatic rings, and that long conjugated bridge is exactly what gives azo dyes their vivid orange and yellow colours."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10", "d11", "d12", "d13", "d14", "d15"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["gabriel synthesis", "primary amine", "preparation"],
+      "stages": {
+        "question": "Write the Gabriel phthalimide synthesis route to prepare propan-1-amine (n-propylamine) from phthalimide.",
+        "interpretation": "Gabriel synthesis alkylates the potassium salt of phthalimide with an alkyl halide, then hydrolyses to release the pure primary amine.",
+        "formula": "Phthalimide to K-phthalimide (KOH) to N-alkylphthalimide (R-X) to R-NH2 (NaOH aq, heat)",
+        "solutionSteps": ["Phthalimide + ethanolic KOH gives potassium phthalimide", "Potassium phthalimide + CH3CH2CH2Br gives N-propylphthalimide", "N-propylphthalimide + aqueous NaOH, heat, gives propan-1-amine + sodium phthalate"],
+        "answer": "Propan-1-amine (CH3CH2CH2NH2), obtained pure with no secondary/tertiary contamination."
+      },
+      "audioScript": "Lock the nitrogen inside the imide ring first, attach your alkyl group, then unlock it at the very end with hydrolysis - that locking mechanism is exactly why Gabriel synthesis never over-alkylates."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["hofmann degradation", "amide", "preparation"],
+      "stages": {
+        "question": "Write the structure and IUPAC name of the amide which gives propan-1-amine by the Hofmann bromamide reaction.",
+        "interpretation": "Hofmann degradation removes one carbon; the target amine has 3 carbons, so the parent amide must have 4 carbons.",
+        "formula": "R-CO-NH2 + Br2 + 4NaOH gives R-NH2 (one carbon less) + Na2CO3 + 2NaBr + 2H2O",
+        "solutionSteps": ["Target amine: CH3CH2CH2NH2 (3 carbons)", "Add one carbon back as the carbonyl carbon of the amide", "Amide required: CH3CH2CH2CONH2, butanamide"],
+        "answer": "Butanamide, CH3CH2CH2CONH2"
+      },
+      "audioScript": "Work backwards from the amine - since Hofmann degradation always trims one carbon, just tack a carbonyl carbon back onto your target amine's chain to find the amide you actually need to start from."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["carbylamine test", "distinguishing test", "primary vs secondary"],
+      "stages": {
+        "question": "Give one chemical test to distinguish between methylamine and dimethylamine.",
+        "interpretation": "Methylamine is primary, dimethylamine is secondary; the carbylamine test is positive only for primary amines.",
+        "formula": "R-NH2 + CHCl3 + 3KOH, heat, gives R-NC (foul smell) + 3KCl + 3H2O",
+        "solutionSteps": ["Heat both amines separately with chloroform and alcoholic KOH", "Methylamine (1 degree) forms methyl isocyanide - a foul, distinctive smell is detected", "Dimethylamine (2 degree) shows no reaction, no foul smell"],
+        "answer": "The carbylamine (isocyanide) test: methylamine gives a positive test (foul-smelling isocyanide), dimethylamine gives no reaction."
+      },
+      "audioScript": "Whenever a question pairs a primary amine against a secondary or tertiary one and asks for a single distinguishing test, the carbylamine test is almost always the fastest correct answer - only the primary amine stinks."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["hinsberg's test", "distinguishing test", "secondary vs tertiary"],
+      "stages": {
+        "question": "Give one chemical test to distinguish between secondary and tertiary amines.",
+        "interpretation": "Hinsberg's reagent reacts differently with secondary vs tertiary amines based on whether an acidic N-H remains in the product.",
+        "formula": "R2NH + C6H5SO2Cl gives C6H5SO2NR2 (no N-H, insoluble in alkali); R3N + C6H5SO2Cl gives no reaction",
+        "solutionSteps": ["Treat both amines with benzenesulfonyl chloride (Hinsberg's reagent) and NaOH", "Secondary amine forms N,N-dialkylbenzenesulfonamide - a precipitate with no acidic N-H, insoluble in excess alkali", "Tertiary amine does not react at all - it is recovered unchanged, dissolves only in dilute HCl"],
+        "answer": "Hinsberg's test: secondary amine gives an alkali-insoluble sulfonamide precipitate; tertiary amine gives no reaction at all with the reagent."
+      },
+      "audioScript": "This is where carbylamine test falls short - it can't tell secondary from tertiary, so you need Hinsberg's reagent instead, and the key clue is whether a solid sulfonamide forms in the first place, not just whether it dissolves in alkali."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["basicity", "aqueous phase", "ordering"],
+      "stages": {
+        "question": "Arrange the following in decreasing order of their basic strength: C6H5NH2, C2H5NH2, (C2H5)2NH, NH3.",
+        "interpretation": "This mixes an aromatic amine (weakest, due to resonance) with aliphatic ethyl amines in aqueous solution, where the secondary amine outranks the primary due to solvation effects.",
+        "formula": "Aqueous order for ethyl amines: (C2H5)2NH > C2H5NH2 > NH3 > C6H5NH2",
+        "solutionSteps": ["Aromatic amine is weakest because the lone pair is delocalised into the ring by resonance", "Among aliphatic amines and NH3, the aqueous-phase order for ethylamines places secondary above primary above NH3", "Combine: aniline is weaker than even NH3"],
+        "answer": "(C2H5)2NH > C2H5NH2 > NH3 > C6H5NH2"
+      },
+      "audioScript": "Sort the aromatic amine out first and park it at the very bottom below ammonia, because resonance delocalisation is a much bigger effect than any inductive or solvation nuance among the aliphatic amines above it."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["basicity", "gas phase", "ordering"],
+      "stages": {
+        "question": "Arrange the following in decreasing order of basic strength in the gas phase: C2H5NH2, (C2H5)2NH, (C2H5)3N and NH3.",
+        "interpretation": "In the gas phase there is no solvation to disrupt the trend, so basicity increases purely with the number of electron-donating alkyl groups.",
+        "formula": "Gas phase: 3 degree > 2 degree > 1 degree > NH3",
+        "solutionSteps": ["No water molecules are present to solvate the cations, so only the +I inductive effect matters", "More ethyl groups on nitrogen means more electron density pushed onto N and better dispersal of positive charge on the cation", "Order follows directly: (C2H5)3N > (C2H5)2NH > C2H5NH2 > NH3"],
+        "answer": "(C2H5)3N > (C2H5)2NH > C2H5NH2 > NH3"
+      },
+      "audioScript": "Take away the water and the answer becomes the simple, intuitive one you might have guessed first - each extra alkyl group is purely helpful in the gas phase, so the tertiary amine wins outright."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["aniline basicity", "resonance", "account for"],
+      "stages": {
+        "question": "Account for the fact that pKb of aniline is more than that of methylamine.",
+        "interpretation": "A larger pKb means a weaker base; this asks why aniline is a much weaker base than methylamine.",
+        "formula": "Basicity depends on availability of the N lone pair for protonation; resonance delocalisation reduces that availability",
+        "solutionSteps": ["In aniline, the -NH2 lone pair is conjugated with the benzene ring, giving 5 resonance structures", "This delocalisation makes the lone pair far less available to accept a proton than in methylamine, where the lone pair is fully localised on N", "The anilinium ion formed on protonation has only 2 resonance structures, so protonation destroys most of aniline's resonance stabilisation - making the process less favourable", "Hence aniline is a much weaker base (higher pKb, 9.38) than methylamine (pKb 3.38)"],
+        "answer": "Aniline's nitrogen lone pair is delocalised into the aromatic ring by resonance, making it far less available for protonation than the fully localised lone pair in methylamine; protonation also destroys most of that resonance stabilisation, so aniline is the weaker base."
+      },
+      "audioScript": "Every time you see this classic account-for question, the answer is resonance - draw out those five contributing structures of aniline in your head, notice how much stabilisation gets thrown away the moment you protonate, and the higher pKb makes complete sense."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "intermediate",
+      "tags": ["electrophilic substitution", "aniline", "bromination", "protection"],
+      "stages": {
+        "question": "How would you obtain a monobromo derivative of aniline, given that direct bromination of aniline with bromine water gives 2,4,6-tribromoaniline?",
+        "interpretation": "The strongly activating -NH2 group must be temporarily deactivated (protected) so the ring reacts only once instead of at all three activated positions.",
+        "formula": "Protect -NH2 as -NHCOCH3 (acetylation), brominate, then hydrolyse back to -NH2",
+        "solutionSteps": ["Treat aniline with acetic anhydride/pyridine to form acetanilide (protects -NH2 as a milder activator -NHCOCH3)", "Brominate acetanilide with Br2/CH3COOH - substitution occurs mainly at the para position (major product)", "Hydrolyse the acetamido product with dilute acid or base to regenerate the free amine, giving p-bromoaniline"],
+        "answer": "Acetylate aniline to acetanilide, brominate (gives p-bromoacetanilide as major product), then hydrolyse to obtain p-bromoaniline."
+      },
+      "audioScript": "Whenever a question wants a single substitution on aniline instead of the usual triple hit, think 'protect, react, deprotect' - acetylation dials down the activating power of -NH2 just enough to get a clean monosubstituted product."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": ["diazotisation", "diazonium salt", "preparation"],
+      "stages": {
+        "question": "Write the equation for the preparation of benzenediazonium chloride from aniline, and state the temperature range required.",
+        "interpretation": "Diazotisation converts a primary aromatic amine to an arenediazonium salt using nitrous acid generated in situ, at low temperature to prevent decomposition.",
+        "formula": "ArNH2 + NaNO2 + 2HCl, at 273-278 K, gives ArN2+Cl- + NaCl + 2H2O",
+        "solutionSteps": ["Dissolve aniline in HCl and cool the solution to 273-278 K (0-5 degrees C)", "Add aqueous sodium nitrite slowly, which generates HNO2 in situ", "Aniline is diazotised to benzenediazonium chloride"],
+        "answer": "C6H5NH2 + NaNO2 + 2HCl at 273-278 K gives C6H5N2+Cl- + NaCl + 2H2O"
+      },
+      "audioScript": "Diazotisation always needs an ice bath first - keep the temperature down at 273-278 K before adding the nitrite, or the diazonium salt you are trying to form will decompose as fast as it is made."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "intermediate",
+      "tags": ["sandmeyer reaction", "diazonium salt", "aryl halide"],
+      "stages": {
+        "question": "How would you convert benzenediazonium chloride into bromobenzene and into benzonitrile?",
+        "interpretation": "Both are displacement-of-nitrogen reactions on the diazonium salt using the Sandmeyer reaction with the appropriate cuprous salt.",
+        "formula": "ArN2+Cl- + Cu2Br2/HBr gives ArBr + N2; ArN2+Cl- + CuCN/KCN gives ArCN + N2",
+        "solutionSteps": ["Treat benzenediazonium chloride with Cu2Br2/HBr to substitute the diazonium group with Br, releasing N2 - gives bromobenzene", "Treat benzenediazonium chloride with CuCN/KCN to substitute the diazonium group with CN, releasing N2 - gives benzonitrile"],
+        "answer": "C6H5N2+Cl- with Cu2Br2/HBr gives C6H5Br + N2 (bromobenzene); C6H5N2+Cl- with CuCN/KCN gives C6H5CN + N2 (benzonitrile)."
+      },
+      "audioScript": "Sandmeyer reaction is your go-to whenever a diazonium salt needs to become an aryl halide or nitrile - just remember to pair the right cuprous salt with the right nucleophile, bromide with bromide, cyanide with cyanide."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "advanced",
+      "tags": ["balz-schiemann reaction", "aryl fluoride", "multi-step synthesis"],
+      "stages": {
+        "question": "How will you convert aniline into fluorobenzene?",
+        "interpretation": "Aryl fluorides cannot be made by direct fluorination, so the diazonium salt route (Balz-Schiemann reaction) must be used.",
+        "formula": "ArNH2 to ArN2+Cl- (diazotisation) to ArN2+BF4- (HBF4) to ArF (heat)",
+        "solutionSteps": ["Diazotise aniline: C6H5NH2 + NaNO2 + 2HCl at 273-278 K gives C6H5N2+Cl-", "Treat with HBF4 to precipitate the diazonium fluoroborate, C6H5N2+BF4-", "Heat the dry fluoroborate salt: it decomposes to fluorobenzene, BF3 and N2"],
+        "answer": "Aniline to benzenediazonium chloride (NaNO2/HCl, 273-278 K) to benzenediazonium fluoroborate (HBF4) to fluorobenzene (heat) - the Balz-Schiemann reaction."
+      },
+      "audioScript": "Fluorobenzene from aniline is a three-step relay - diazotise, swap the counter-ion for fluoroborate so the salt becomes isolable, then simply apply heat and let it fall apart into the aryl fluoride you actually wanted."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "intermediate",
+      "tags": ["coupling reaction", "azo dye", "diazonium salt"],
+      "stages": {
+        "question": "What is formed when benzenediazonium chloride reacts with phenol in the presence of dilute NaOH? Name the product and its colour.",
+        "interpretation": "This is a coupling reaction - the diazo group is retained and the diazonium ion acts as an electrophile toward the activated phenol ring.",
+        "formula": "ArN2+Cl- + C6H5OH, dilute NaOH, gives Ar-N=N-C6H4-OH (para)",
+        "solutionSteps": ["Phenol is activated toward electrophilic attack by its -OH group, especially at the para position", "In mildly alkaline medium, the diazonium ion couples at the para position of phenol", "The -N=N- azo linkage is retained (no N2 gas evolved), giving an extensively conjugated coloured product"],
+        "answer": "p-Hydroxyazobenzene is formed - an orange-coloured azo dye."
+      },
+      "audioScript": "Coupling reactions are the payoff of the whole diazonium story - instead of losing nitrogen as gas, you keep the -N=N- bridge intact and gain a vividly coloured azo dye, orange with phenol, yellow with aniline."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Classify (C2H5)2NH as primary, secondary or tertiary, and give its IUPAC name.",
+      "State, with a one-line reason, whether the lone pair on nitrogen in an amine or the lone pair on oxygen in an alcohol is more available for donation to a proton.",
+      "State whether Gabriel phthalimide synthesis can be used to prepare aniline directly from bromobenzene, and why."
+    ],
+    "basic": [
+      "Write IUPAC names of (CH3)3CNH2 and m-BrC6H4NH2, and classify each as primary, secondary or tertiary.",
+      "Give one chemical test to distinguish between ethylamine and aniline.",
+      "Complete the reaction: C6H5NH2 + CHCl3 + alcoholic KOH, heat, gives what product?"
+    ],
+    "intermediate": [
+      "Arrange in increasing order of basic strength (aqueous solution): C6H5NH2, NH3, C6H5CH2NH2, C2H5NH2, (C2H5)2NH.",
+      "How will you convert benzene into m-bromophenol?",
+      "Identify products A, B and C: CH3CH2I with NaCN gives A; A with partial hydrolysis (OH-) gives B; B with NaOH + Br2 gives C."
+    ],
+    "advanced": [
+      "An aromatic compound A, on treatment with aqueous ammonia and heating, forms compound B, which on heating with Br2 and KOH forms compound C of molecular formula C6H7N. Identify A, B and C, and name the reaction that converts B to C.",
+      "Accomplish the conversion: aniline to 2,4,6-tribromofluorobenzene.",
+      "Explain why p-nitroaniline is an even weaker base than aniline itself, using the resonance/substituent-effect principles established for aromatic amine basicity."
+    ],
+    "transferPrompt": "A newly reported aromatic amine has a bulky secondary amino group attached to a benzene ring that also carries a strong electron-withdrawing substituent para to the nitrogen. Without looking up its measured pKb, predict: (a) whether it will give a positive carbylamine test, (b) what its Hinsberg's-test product will look like and whether that product dissolves in alkali, and (c) how its basicity is likely to compare with aniline and with ethylamine. Justify each prediction purely from first principles - N-H count on nitrogen, resonance/inductive effect of the ring substituent, and steric/solvation reasoning - rather than from memorised numbers."
+  },
+  "studentTutorPrompt": "You are tutoring a Class XII student through the Amines chapter for exam revision. Treat this as an organic chemistry chapter built around six 'named methods' (reduction of nitro compounds, ammonolysis, reduction of nitriles/amides, Gabriel phthalimide synthesis, and Hofmann bromamide degradation) that create amines, followed by a set of chemical tests and trends (basicity in gas phase vs aqueous phase, the carbylamine test, Hinsberg's test, reaction with nitrous acid, and electrophilic substitution on aniline) that let you tell amines apart and predict their reactivity, and finally the diazonium-salt toolkit (diazotisation, Sandmeyer, Gattermann, Balz-Schiemann and coupling reactions) that turns aromatic amines into almost any other substituted arene. When the student asks a question, first identify which of these three zones (preparation, distinguishing/reactivity, or diazonium chemistry) it falls into, then walk through the relevant equation or resonance argument step by step rather than jumping to the final answer - for basicity questions always ask the student whether the comparison is in the gas phase or in aqueous solution before answering, since the correct order is genuinely different in each case, and for any 'convert X to Y' synthesis question insist on writing out every intermediate structure so the student sees exactly where each functional-group interconversion (nitro to amine, amide to amine with one carbon lost, amine to diazonium to aryl halide) is happening. Push back gently on common misconceptions such as assuming ammonolysis gives a single clean product, assuming Gabriel synthesis works for aromatic amines, or assuming the inductive-effect-only basicity order applies in water. Keep answers exam-focused, mechanistically grounded, and precise about reagents and conditions (temperatures, catalysts, stoichiometry) since these are exactly what distinguish full-mark answers from partial ones in this chapter.",
+  "selfCheck": [
+    { "q": "Why can Gabriel phthalimide synthesis not be used to prepare aniline?", "a": "Because aryl halides do not undergo the nucleophilic substitution reaction with the phthalimide anion that this method requires - Gabriel synthesis works only for aliphatic primary amines." },
+    { "q": "What is the basicity order of methylamine, dimethylamine, trimethylamine and ammonia in aqueous solution?", "a": "(CH3)2NH > CH3NH2 > (CH3)3N > NH3 - the secondary amine is the strongest base because its cation is stabilised by both the inductive effect and effective solvation, while the bulky tertiary amine's cation is solvated less well." },
+    { "q": "Which chemical test distinguishes a primary amine from both secondary and tertiary amines in one step, and what is the visible/olfactory sign of a positive result?", "a": "The carbylamine (isocyanide) test - heating with chloroform and alcoholic KOH gives a foul-smelling isocyanide only with a primary amine; secondary and tertiary amines show no reaction." },
+    { "q": "Why does aniline give 2,4,6-tribromoaniline directly with bromine water, but needs to be acetylated first to obtain a mono-bromo product?", "a": "The -NH2 group is a powerful activating, ortho/para-director, making all three available o/p ring positions highly reactive toward electrophilic bromination at once; acetylating -NH2 to -NHCOCH3 reduces its activating power enough that substitution can be controlled to occur mainly at one position (usually para)." },
+    { "q": "Name the reaction and reagents used to convert an arenediazonium salt directly into an aryl fluoride, and explain why this route is necessary.", "a": "The Balz-Schiemann reaction: the diazonium chloride is treated with HBF4 to precipitate the diazonium fluoroborate, which on heating decomposes to the aryl fluoride, BF3 and N2. It is necessary because aryl fluorides cannot be made by direct fluorination of an aromatic ring." }
+  ]
+}

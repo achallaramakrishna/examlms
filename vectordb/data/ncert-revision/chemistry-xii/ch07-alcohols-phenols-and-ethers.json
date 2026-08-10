@@ -1,0 +1,721 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 7,
+    "chapterTitle": "Alcohols, Phenols and Ethers",
+    "ncertCode": "lech202",
+    "topicIdHint": "Alcohols Phenols and Ethers",
+    "estimatedRevisionMinutes": 65,
+    "chapter": "Alcohols, Phenols and Ethers",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Classify and name alcohols, phenols and ethers by the IUPAC system, and distinguish primary/secondary/tertiary, allylic, benzylic and vinylic alcohols and mono-/di-/trihydric compounds.",
+    "Describe and compare the methods of preparing alcohols — acid-catalysed hydration and hydroboration-oxidation of alkenes, reduction of carbonyl compounds/carboxylic acids/esters, and addition of Grignard reagents to carbonyl compounds.",
+    "Describe the four routes to phenol — from haloarenes, benzenesulphonic acid, diazonium salts and the cumene process — and explain why the cumene process is the preferred industrial method.",
+    "Explain the boiling-point and solubility trends of alcohols and phenols in terms of intermolecular hydrogen bonding, and explain quantitatively (using pKa data) why phenols are far more acidic than alcohols and water.",
+    "Predict the products, reagents and mechanisms of the key reactions of alcohols (halide formation, dehydration by Saytzeff's rule, oxidation with PCC/CrO3/KMnO4/K2Cr2O7, esterification) and of phenols (electrophilic substitution, Kolbe's reaction, Reimer-Tiemann reaction, oxidation to quinone).",
+    "Describe the preparation of ethers by Williamson synthesis and acid-catalysed dehydration of alcohols, and predict the products/regiochemistry of ether cleavage by hydrogen halides and of electrophilic substitution on aromatic ethers."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Alcohols (–OH on sp3 C) and phenols (–OH on aromatic sp2 C) are classified and named, prepared from alkenes/carbonyls/Grignards or from haloarenes/cumene, show hydrogen-bonded boiling points and markedly different acidities (phenol much greater than alcohol, via phenoxide resonance), then react through O–H cleavage (esterification, Kolbe's, Reimer-Tiemann) or C–O cleavage (halide formation, dehydration, oxidation) — while ethers, made by Williamson synthesis, cleave with HX and undergo ring-activated electrophilic substitution.",
+    "mustKnowBullets": [
+      "An alcohol has –OH on an sp3-hybridised carbon (aliphatic); a phenol has –OH directly attached to an sp2-hybridised aromatic-ring carbon — this single structural difference is what makes phenols far more acidic.",
+      "Alcohols/phenols are mono-, di-, tri- or polyhydric by the number of –OH groups; monohydric alcohols are further primary/secondary/tertiary (–OH on 1°/2°/3° carbon), plus allylic (–OH on sp3 C adjacent to C=C) and benzylic (–OH on sp3 C adjacent to an aromatic ring) subtypes; vinylic alcohols have –OH directly on the double-bond (sp2) carbon.",
+      "IUPAC naming: alcohols replace the alkane's terminal 'e' with 'ol' with lowest locant to –OH (polyhydric keep the 'e' and add di/tri-ol, e.g. propane-1,2,3-triol); phenol keeps 'phenol' as both common and IUPAC name (ortho/meta/para for disubstituted); ethers are named as alkoxy/aryloxy-substituted hydrocarbons (larger group as parent) or as two alkyl/aryl groups plus 'ether' (common), and are simple/symmetrical if both groups match or mixed/unsymmetrical if they differ.",
+      "Alcohols from alkenes: acid-catalysed hydration (H3O+/H2O) follows Markovnikov's rule via a 3-step carbocation mechanism (protonation, then nucleophilic attack by water, then deprotonation); hydroboration-oxidation (B2H6 then H2O2/NaOH) gives the anti-Markovnikov product in excellent yield with no carbocation/rearrangement.",
+      "Alcohols from carbonyls: NaBH4 or LiAlH4 (or catalytic H2/Pd-Ni-Pt) reduce aldehydes to 1° alcohols and ketones to 2° alcohols; LiAlH4 also reduces carboxylic acids directly to 1° alcohols (commercially, acids are esterified first, then the ester is hydrogenated).",
+      "Grignard reagents (RMgX) add to the carbonyl group then hydrolyse to give alcohols: methanal (HCHO) gives a 1° alcohol, any other aldehyde gives a 2° alcohol, a ketone gives a 3° alcohol.",
+      "Phenol is prepared from (i) chlorobenzene fused with NaOH at 623 K/300 atm then acidified, (ii) benzenesulphonic acid fused with NaOH then acidified, (iii) hydrolysis of a benzenediazonium salt with warm water, and (iv) industrially from cumene: cumene, with O2, gives cumene hydroperoxide, which with dilute acid/H3O+ gives phenol plus acetone (byproduct).",
+      "Boiling points of alcohols/phenols are much higher than ethers/hydrocarbons of similar molar mass because of intermolecular H-bonding; b.p. rises with chain length (more van der Waals contact) but falls with branching (less surface area).",
+      "Alcohols and phenols are Bronsted acids (donate H+ from O-H) but weaker than water; alcohol acid strength decreases 1° > 2° > 3° because alkyl groups are electron-releasing (+I) and destabilise the alkoxide.",
+      "Phenol (pKa about 10) is about a million times more acidic than ethanol (pKa about 16) because the phenoxide ion's negative charge is delocalised onto the ring by resonance (no charge separation in the contributing structures), while phenol itself has resonance structures WITH charge separation, so ionisation is strongly favoured; an alkoxide ion has no such delocalisation at all.",
+      "Electron-withdrawing substituents (e.g. -NO2) at ortho/para positions raise phenol's acidity further (extra resonance delocalisation of the phenoxide charge onto the group); electron-releasing groups (e.g. alkyl, as in cresols) lower it below phenol's own acidity; a meta substituent acts mainly inductively, with little resonance contribution.",
+      "Alcohols react with HX (reactivity/Lucas test: 3° > 2° > 1°, based on turbidity speed with conc. HCl + anhydrous ZnCl2) or PX3/SOCl2 to give alkyl halides; dehydration (conc. H2SO4/H3PO4, heat) removes H2O via an E1 carbocation mechanism, ease 3° > 2° > 1°, and follows Saytzeff's rule (the more substituted alkene is the major product).",
+      "Oxidation: PCC (pyridinium chlorochromate) or anhydrous CrO3 stops a 1° alcohol cleanly at the aldehyde stage; strong oxidants (acidified KMnO4, hot K2Cr2O7) push a 1° alcohol all the way to a carboxylic acid; a 2° alcohol gives a ketone with either type of oxidant; 3° alcohols resist oxidation (they lack an alpha C-H) and only fragment under forcing conditions.",
+      "Reactions unique to phenols: ring-activated electrophilic substitution (nitration, halogenation, sulphonation) directed ortho/para; Kolbe's reaction (phenoxide ion plus CO2, then H3O+) gives salicylic acid; Reimer-Tiemann reaction (CHCl3 plus aq. NaOH via a dichlorocarbene intermediate, then H3O+) gives salicylaldehyde; phenol is also reduced to benzene by Zn dust and oxidised (Na2Cr2O7/H2SO4) to benzoquinone.",
+      "Ethers form by (i) dehydration of a primary, unhindered alcohol with H2SO4 via SN2 attack of one alcohol molecule on a protonated alcohol, or (ii) Williamson synthesis: R-X + R'-O-Na+ gives R-O-R' (SN2); a tertiary alkyl halide gives exclusively an alkene (elimination) instead of an ether because alkoxides are also strong bases.",
+      "Ethers cleave only under drastic conditions with excess conc. HI/HBr/HX (reactivity HI > HBr > HCl); a dialkyl ether gives an alkyl halide plus alcohol (then a second alkyl halide with excess acid); an alkyl aryl ether cleaves ONLY at the alkyl-O bond (giving phenol plus alkyl halide) since the aryl-O bond has partial double-bond character and the sp2 ring carbon resists nucleophilic attack."
+    ],
+    "keyTables": [
+      {
+        "title": "Acidity order: alcohols vs phenols vs water (pKa)",
+        "rows": [
+          ["Compound", "Formula", "pKa", "Why"],
+          ["p-Nitrophenol", "p-O2N-C6H4-OH", "7.1", "EWG at para — full resonance delocalisation of phenoxide charge onto -NO2"],
+          ["o-Nitrophenol", "o-O2N-C6H4-OH", "7.2", "EWG at ortho — strong resonance plus inductive boost"],
+          ["m-Nitrophenol", "m-O2N-C6H4-OH", "8.3", "meta — inductive effect only, weaker boost than o/p"],
+          ["Phenol", "C6H5-OH", "10.0", "reference — phenoxide stabilised by ring resonance"],
+          ["m-Cresol", "m-CH3-C6H4-OH", "10.1", "ER alkyl group at meta"],
+          ["o-Cresol / p-Cresol", "o- or p-CH3-C6H4-OH", "10.2", "ER alkyl group — slightly less acidic than phenol"],
+          ["Water", "H-OH", "~15.7", "reference acid, stronger than any simple alcohol"],
+          ["Ethanol", "C2H5-OH", "15.9", "weakest — no resonance stabilisation of ethoxide, +I effect of ethyl"]
+        ]
+      },
+      {
+        "title": "Named reactions summary",
+        "rows": [
+          ["Reaction", "Reagents / conditions", "Key product", "Notes"],
+          ["Kolbe's reaction", "(i) NaOH (ii) CO2, heat and pressure (iii) H3O+", "Salicylic acid (o-hydroxybenzoic acid)", "Aspirin-synthesis link; phenoxide attacks weak electrophile CO2"],
+          ["Reimer-Tiemann reaction", "CHCl3 + aq. NaOH (dichlorocarbene), then H3O+", "Salicylaldehyde (o-hydroxybenzaldehyde)", "Introduces -CHO ortho to -OH"],
+          ["Williamson synthesis", "R-X + R'-O-Na+ (SN2)", "Ether R-O-R'", "Best with 1° R-X; 3° R-X gives alkene instead"],
+          ["Lucas test", "conc. HCl + anhydrous ZnCl2", "Turbidity: immediate (3°), few min (2°), none at RT (1°)", "Distinguishes 1°/2°/3° alcohols"],
+          ["Cumene process", "(i) O2 (ii) dil. H2SO4/H3O+", "Phenol + acetone (byproduct)", "Industrial route to both phenol and acetone"],
+          ["FeCl3 test", "neutral aqueous FeCl3", "Violet/purple colouration", "Qualitative test for phenolic -OH"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "7.1", "text": "An alcohol has -OH on an sp3-hybridised carbon of an aliphatic system (e.g. CH3OH); a phenol has -OH directly attached to an sp2-hybridised aromatic-ring carbon (e.g. C6H5OH).", "whyItMatters": "This single structural difference — sp3 vs sp2 carbon bearing the -OH — is the root cause of every major property difference between alcohols and phenols covered later, especially acidity.", "neetRelevance": "high" },
+    { "id": "h2", "type": "statement", "section": "7.1.1", "text": "Alcohols and phenols are classified as mono-, di-, tri- or polyhydric by the number of -OH groups; monohydric alcohols are further primary/secondary/tertiary depending on whether -OH sits on a 1°/2°/3° carbon, with allylic (-OH on sp3 C adjacent to C=C) and benzylic (-OH on sp3 C adjacent to an aromatic ring) as important subtypes, while vinylic alcohols have -OH directly on an sp2 (C=C) carbon.", "whyItMatters": "Classification questions (identify allylic/benzylic/1°/2°/3°) are a very common opening question type before any reaction chemistry is tested.", "neetRelevance": "high" },
+    { "id": "h3", "type": "statement", "section": "7.1.3 / 7.2", "text": "Ethers are simple/symmetrical if both groups on oxygen are identical, mixed/unsymmetrical if different; IUPAC names alcohols by changing alkane 'e' to 'ol' with the lowest locant to -OH, phenol retains 'phenol' as its own IUPAC name (with ortho/meta/para for disubstituted derivatives), and ethers are named as alkoxy/aryloxy-substituted hydrocarbons with the larger group as parent.", "whyItMatters": "Naming and structure-from-name conversion is tested directly (NCERT Example 7.1, Tables 7.1/7.2) and is a prerequisite for every later reaction question.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "7.3", "text": "The C-O-H bond angle in alcohols is slightly LESS than the tetrahedral angle (109°28') due to lone-pair repulsion; the C-O bond in phenol (136 pm) is shorter than in methanol because the ring carbon is sp2 and its oxygen lone pair partially conjugates with the aromatic ring; the C-O-C bond angle in ethers is slightly MORE than tetrahedral due to steric repulsion between the two bulky R groups.", "whyItMatters": "Explains structural-trend reasoning questions such as why phenol's C-O bond is shorter than an alcohol's C-O bond.", "neetRelevance": "medium" },
+    { "id": "h5", "type": "formula_intro", "section": "7.4.1", "text": "Acid-catalysed hydration of an alkene proceeds through a 3-step carbocation mechanism (protonation, then nucleophilic attack by water, then deprotonation) and follows Markovnikov's rule, so -OH ends up on the MORE substituted carbon.", "whyItMatters": "One of two exam-important alkene-to-alcohol routes; its mechanism (with possible carbocation rearrangement) is frequently asked to be written out in full.", "neetRelevance": "high" },
+    { "id": "h6", "type": "formula_intro", "section": "7.4.1", "text": "Hydroboration-oxidation (B2H6 then H2O2/NaOH) adds boron to the LESS substituted carbon with syn addition and no carbocation intermediate, giving the anti-Markovnikov alcohol in excellent yield with no rearrangement.", "whyItMatters": "The direct contrast with acid hydration (opposite regiochemistry, no rearrangement) is a favourite 'compare the two methods' question.", "neetRelevance": "high" },
+    { "id": "h7", "type": "statement", "section": "7.4.1", "text": "Aldehydes and ketones are reduced to 1° and 2° alcohols respectively by NaBH4, LiAlH4, or catalytic hydrogenation (Pt/Pd/Ni); LiAlH4 alone among these also reduces carboxylic acids directly to 1° alcohols; Grignard reagents add to HCHO (1° alcohol), other aldehydes (2° alcohol) or ketones (3° alcohol) after aqueous work-up.", "whyItMatters": "Covers essentially every non-alkene route to an alcohol tested in this chapter; the '1°/2°/3° depending on carbonyl class' pattern recurs constantly.", "neetRelevance": "high" },
+    { "id": "h8", "type": "statement", "section": "7.4.2", "text": "Phenol is prepared from (i) chlorobenzene fused with NaOH at 623 K/300 atm then acidified, (ii) benzenesulphonic acid fused with NaOH then acidified, (iii) hydrolysis of a benzenediazonium salt with warm water, and (iv) industrially, from cumene.", "whyItMatters": "All four routes have appeared as direct 'give equations for the preparation of phenol from X' exam questions (NCERT Exercises 7.9-7.12).", "neetRelevance": "high" },
+    { "id": "h9", "type": "caution", "section": "7.4.2", "text": "The cumene process is TWO separate steps: air oxidation of cumene (isopropylbenzene) to cumene hydroperoxide, THEN a separate dilute-acid step that cleaves the hydroperoxide to phenol plus acetone. Acetone is a genuine industrial by-product, not an impurity.", "whyItMatters": "Students often merge the two steps into one or forget acetone entirely — this is the single most industrially important preparation in the chapter.", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "7.4.3", "text": "Boiling points of alcohols/phenols are much higher than ethers or hydrocarbons of similar molar mass because of intermolecular hydrogen bonding; within alcohols, b.p. rises with chain length but falls with branching (less surface area, weaker van der Waals contact); solubility in water (also H-bond driven) falls as the alkyl/aryl group grows larger.", "whyItMatters": "Classic NCERT Example 7.3-style ranking questions (arrange by increasing boiling point) depend entirely on this rule.", "neetRelevance": "high" },
+    { "id": "h11", "type": "statement", "section": "7.4.4(a)", "text": "Alcohols and phenols are Bronsted acids but are WEAKER acids than water; among alcohols, acid strength decreases 1° > 2° > 3° because electron-releasing alkyl groups (+I effect) increase electron density on oxygen and destabilise the alkoxide ion.", "whyItMatters": "Sets the baseline (alcohols weaker than water) before the much larger jump to phenol's acidity is introduced.", "neetRelevance": "high" },
+    { "id": "h12", "type": "formula_intro", "section": "7.4.4(a)", "text": "Phenol (pKa about 10.0) is roughly a MILLION times more acidic than ethanol (pKa about 15.9) because the phenoxide ion is resonance-stabilised — its negative charge delocalises onto the ortho/para ring carbons in structures with NO charge separation — while phenol itself has resonance structures WITH charge separation (positive oxygen), making phenoxide comparatively far more stable than phenol itself; an alkoxide ion has no delocalisation option at all.", "whyItMatters": "The single most heavily tested conceptual explanation in the entire chapter — always asked as 'explain why phenol is more acidic than an alcohol' with full resonance structures expected.", "neetRelevance": "high" },
+    { "id": "h13", "type": "caution", "section": "7.4.4(a)", "text": "Electron-withdrawing groups (e.g. -NO2) INCREASE phenol's acidity, most strongly at ortho/para (direct resonance delocalisation onto the substituent); electron-releasing groups (e.g. alkyl, as in cresols, pKa about 10.1-10.2) DECREASE it below phenol's own pKa 10.0; a meta substituent acts mainly through the weaker inductive effect only, since it cannot join the ring's resonance system with the phenoxide oxygen.", "whyItMatters": "Explains why o-/p-nitrophenol (pKa 7.1-7.2) are far more acidic than m-nitrophenol (pKa 8.3), a frequently tested ranking/reasoning pattern.", "neetRelevance": "high" },
+    { "id": "h14", "type": "statement", "section": "7.4.4(a)", "text": "Alcohols and phenols undergo esterification with carboxylic acids (H+, reversible — water removed to drive completion), acid anhydrides, or acid chlorides (with pyridine to neutralise the HCl by-product); acetylation of salicylic acid with acetic anhydride gives aspirin (acetylsalicylic acid).", "whyItMatters": "Aspirin synthesis is a classic applied example connecting esterification to a well-known drug.", "neetRelevance": "medium" },
+    { "id": "h15", "type": "statement", "section": "7.4.4(b)", "text": "Reactions involving C-O bond cleavage occur ONLY in alcohols (phenols show this only with zinc dust): alcohols react with HX (reactivity/Lucas test 3°>2°>1°) or PX3/SOCl2 to form alkyl halides; dehydration (conc. H2SO4/H3PO4, heat) proceeds via an E1 carbocation mechanism (ease 3°>2°>1°) and gives the more substituted alkene as major product (Saytzeff's rule); oxidation gives an aldehyde (PCC/CrO3, 1° alcohol) or carries through to a carboxylic acid (strong oxidants), a ketone (2° alcohol, any oxidant), while 3° alcohols resist oxidation entirely (no alpha-H).", "whyItMatters": "Groups together the four major alcohol-only reaction types most likely to appear as 'write the equation/product' questions.", "neetRelevance": "high" },
+    { "id": "h16", "type": "statement", "section": "7.4.4(c)", "text": "Reactions unique to phenols: the ring-activating, ortho/para-directing -OH group drives electrophilic aromatic substitution (nitration, halogenation, sulphonation); the more nucleophilic phenoxide ion undergoes Kolbe's reaction with CO2 to give salicylic acid, and the Reimer-Tiemann reaction with CHCl3/NaOH (via dichlorocarbene) to give salicylaldehyde; phenol is reduced to benzene by Zn dust and oxidised (Na2Cr2O7/H2SO4) to benzoquinone.", "whyItMatters": "This is the densest, most frequently tested block of named reactions in the whole chapter — Kolbe's and Reimer-Tiemann especially recur across NCERT exercises and past exams.", "neetRelevance": "high" },
+    { "id": "h17", "type": "statement", "section": "7.6", "text": "Ethers form by dehydration of a primary, unhindered alcohol with H2SO4 via an SN2 mechanism, or by Williamson synthesis (R-X + R'-O-Na+ gives R-O-R', SN2) — which fails for tertiary alkyl halides (elimination dominates instead); ethers cleave only with excess hot concentrated HX (reactivity HI>HBr>HCl), with alkyl aryl ethers ALWAYS cleaving at the alkyl-O bond (never aryl-O, since the ring carbon is sp2 and resists nucleophilic attack), giving phenol plus alkyl halide.", "whyItMatters": "Covers the full life cycle of ethers (formation, both cleavage regiochemistries) in one place — essential for 'predict the product of ether plus HI' style questions.", "neetRelevance": "high" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Alcohol", "definition": "An organic compound containing one or more -OH groups directly bonded to an sp3-hybridised carbon of an aliphatic system, e.g. CH3OH.", "section": "7.1" },
+    { "id": "d2", "term": "Phenol", "definition": "An organic compound in which -OH is directly bonded to an sp2-hybridised carbon of an aromatic ring, e.g. C6H5OH.", "section": "7.1.2" },
+    { "id": "d3", "term": "Ether", "definition": "A compound in which oxygen is bonded to two alkyl/aryl groups (R-O-R'); simple/symmetrical if both groups are identical, mixed/unsymmetrical if different.", "section": "7.1.3" },
+    { "id": "d4", "term": "Monohydric / dihydric / trihydric alcohol", "definition": "Alcohols classified by the number of -OH groups they contain: one (monohydric, e.g. ethanol), two (dihydric, e.g. ethane-1,2-diol) or three (trihydric, e.g. propane-1,2,3-triol).", "section": "7.1.1" },
+    { "id": "d5", "term": "Primary, secondary, tertiary alcohol", "definition": "Alcohols in which the -OH-bearing carbon is attached to one, two or three other carbon atoms respectively.", "section": "7.1.1" },
+    { "id": "d6", "term": "Allylic alcohol", "definition": "An alcohol in which -OH is attached to an sp3-hybridised carbon adjacent to a carbon-carbon double bond.", "section": "7.1.1" },
+    { "id": "d7", "term": "Benzylic alcohol", "definition": "An alcohol in which -OH is attached to an sp3-hybridised carbon adjacent to an aromatic ring.", "section": "7.1.1" },
+    { "id": "d8", "term": "Vinylic alcohol", "definition": "An alcohol in which -OH is attached directly to a carbon of a carbon-carbon double bond (sp2 carbon), e.g. CH2=CH-OH.", "section": "7.1.1" },
+    { "id": "d9", "term": "Markovnikov's rule", "definition": "In the addition of an unsymmetrical reagent (like H-OH) to an unsymmetrical alkene, the negative/nucleophilic part (OH) attaches to the more substituted carbon, via the more stable carbocation intermediate.", "section": "7.4.1" },
+    { "id": "d10", "term": "Hydroboration-oxidation", "definition": "A two-step method (B2H6 addition, then H2O2/NaOH oxidation) that converts an alkene to the anti-Markovnikov alcohol with syn addition and no carbocation rearrangement.", "section": "7.4.1" },
+    { "id": "d11", "term": "Lucas reagent / Lucas test", "definition": "A mixture of concentrated HCl and anhydrous ZnCl2 used to distinguish 1°, 2° and 3° alcohols by the differing speed at which they form insoluble, turbid alkyl chlorides (3° fastest, 1° slowest/no reaction at RT).", "section": "7.4.4(b)" },
+    { "id": "d12", "term": "Kolbe's reaction", "definition": "The electrophilic aromatic substitution of sodium phenoxide with CO2 (heat and pressure), followed by acidification, to give salicylic acid (o-hydroxybenzoic acid).", "section": "7.4.4(c)" },
+    { "id": "d13", "term": "Reimer-Tiemann reaction", "definition": "The reaction of phenol with chloroform and aqueous NaOH (via a dichlorocarbene electrophile) followed by hydrolysis and acidification, giving salicylaldehyde (o-hydroxybenzaldehyde).", "section": "7.4.4(c)" },
+    { "id": "d14", "term": "Williamson synthesis", "definition": "The SN2 reaction of an alkyl halide with a sodium alkoxide or phenoxide to form an ether, R-X + R'-O-Na+ giving R-O-R' + NaX; fails for tertiary alkyl halides, which undergo elimination instead.", "section": "7.6.1" },
+    { "id": "d15", "term": "Denaturation of alcohol", "definition": "Making commercial ethanol unfit for drinking by adding substances such as copper sulphate (for colour) and pyridine (for a foul smell).", "section": "7.5" }
+  ],
+  "figures": [
+    { "id": "fig-7-1", "kind": "figure", "label": "Fig. 7.1", "ncertPage": 198, "section": "7.3", "caption": "Structures of methanol, phenol and methoxymethane, showing bond angles and bond lengths — the C-O-H angle in methanol is slightly less than tetrahedral, phenol's C-O bond (136 pm) is shorter due to conjugation with the ring, and the ether's C-O-C angle is slightly more than tetrahedral.", "placeholderText": "NCERT Chemistry XII, Ch 7, Page 198, Fig. 7.1", "src": null, "uploadHint": "Crop from lech202.pdf page 6" },
+    { "id": "fig-7-2", "kind": "figure", "label": "Hydrogen bonding diagram (unnumbered)", "ncertPage": 203, "section": "7.4.3", "caption": "Intermolecular hydrogen bonding among alcohol and phenol molecules (R-O-H...O-H...) responsible for their unusually high boiling points compared to ethers and hydrocarbons of similar molecular mass.", "placeholderText": "NCERT Chemistry XII, Ch 7, Page 203, H-bonding diagram", "src": null, "uploadHint": "Crop from lech202.pdf page 11" },
+    { "id": "fig-7-3", "kind": "figure", "label": "Phenoxide resonance structures (unnumbered)", "ncertPage": 206, "section": "7.4.4(a)", "caption": "The five resonance structures (I-V) of the phenoxide ion, showing the negative charge delocalised over oxygen and the ortho/para ring carbons with no charge separation — the key structural reason phenol is far more acidic than an alcohol.", "placeholderText": "NCERT Chemistry XII, Ch 7, Page 206, resonance structures", "src": null, "uploadHint": "Crop from lech202.pdf page 14" },
+    { "id": "fig-7-4", "kind": "figure", "label": "Cumene process flow (unnumbered)", "ncertPage": 202, "section": "7.4.2", "caption": "Reaction scheme for the industrial cumene process: cumene is air-oxidised to cumene hydroperoxide, then cleaved by dilute acid to give phenol and acetone.", "placeholderText": "NCERT Chemistry XII, Ch 7, Page 202, cumene process", "src": null, "uploadHint": "Crop from lech202.pdf page 10" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Acid-catalysed hydration of alkenes (Markovnikov addition)",
+      "latex": "C{=}C + H_2O \\xrightarrow{H_3O^+} {-}C(OH){-}C(H){-} \\;\\; \\text{(OH on more substituted carbon)}",
+      "plain": "An alkene is protonated by H3O+ to form the more stable carbocation (step 1), water attacks the carbocation as a nucleophile (step 2), and the resulting oxonium ion loses a proton to give the alcohol (step 3) — overall addition follows Markovnikov's rule, so -OH ends up on the more substituted carbon.",
+      "symbols": [
+        { "symbol": "H3O+", "meaning": "acid catalyst / proton source (e.g. dilute H2SO4)" },
+        { "symbol": "carbocation", "meaning": "intermediate formed in the rate-determining protonation step; the more substituted (more stable) carbocation forms preferentially" }
+      ],
+      "whenToUse": "Converting an unsymmetrical alkene to the Markovnikov alcohol (e.g. propene to propan-2-ol), and for writing/explaining the 3-step electrophilic addition mechanism.",
+      "derivedFrom": "NCERT Section 7.4.1(1)(i)",
+      "commonMistakes": [
+        "Putting -OH on the less substituted carbon (that is the hydroboration-oxidation/anti-Markovnikov outcome, not acid hydration).",
+        "Forgetting that the mechanism goes through a carbocation, so rearrangement (hydride/methyl shift) is possible with unsymmetrical alkenes."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict Markovnikov product of alkene hydration",
+          "howToInterpret": "Identify the more substituted carbon of the C=C.",
+          "howItConnectsToFormula": "H adds to the carbon already bearing more H's; OH adds to the more substituted carbon via the more stable carbocation.",
+          "exampleStem": "Predict the product of the reaction of propene with water in the presence of dilute H2SO4.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Think of acid hydration as the water molecule chasing whichever carbon can hold a positive charge best — protonate the alkene to make the most stable carbocation, then let water's oxygen lone pair attack it, and finally kick off a proton to reveal the alcohol."
+    },
+    {
+      "id": "f2",
+      "name": "Hydroboration-oxidation (anti-Markovnikov, syn addition)",
+      "latex": "3\\,C{=}C + (BH_3)_2 \\rightarrow 2\\,R_3B \\xrightarrow[NaOH]{H_2O_2} 3\\,R{-}CH_2{-}CH_2{-}OH + B(OH)_3",
+      "plain": "Diborane adds across the double bond so boron attaches to the LESS substituted (less hindered) carbon; oxidation of the resulting trialkylborane with alkaline H2O2 replaces B with OH with retention of configuration, giving the anti-Markovnikov alcohol in excellent yield.",
+      "symbols": [
+        { "symbol": "B2H6", "meaning": "diborane, generated/used as BH3" },
+        { "symbol": "H2O2/NaOH(aq)", "meaning": "oxidising step that converts trialkylborane to alcohol" }
+      ],
+      "whenToUse": "Getting the anti-Markovnikov alcohol from an alkene without any carbocation rearrangement — e.g. converting propene to propan-1-ol instead of propan-2-ol.",
+      "derivedFrom": "NCERT Section 7.4.1(1)(ii)",
+      "commonMistakes": [
+        "Confusing this with acid hydration and predicting the Markovnikov product instead.",
+        "Forgetting that this reaction proceeds with NO carbocation intermediate, so it never rearranges — a key advantage over acid-catalysed hydration."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict anti-Markovnikov product of hydroboration-oxidation",
+          "howToInterpret": "Identify the less substituted carbon of C=C — that is where OH ends up.",
+          "howItConnectsToFormula": "Boron (later OH) bonds to the carbon bearing more H atoms.",
+          "exampleStem": "What is the product formed when propene is treated with diborane followed by hydrogen peroxide/NaOH?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Hydroboration-oxidation is the mirror image of acid hydration — boron is electron-poor and lands on the carbon that's already crowded with hydrogens, so when oxidation swaps boron for OH, the alcohol ends up exactly opposite to where Markovnikov's rule would have put it."
+    },
+    {
+      "id": "f3",
+      "name": "Reduction of aldehydes, ketones, acids and esters to alcohols",
+      "latex": "RCHO \\xrightarrow{NaBH_4\\;or\\;H_2/Pd} RCH_2OH; \\quad RCOR' \\xrightarrow{NaBH_4} RCH(OH)R'; \\quad RCOOH \\xrightarrow[(ii)\\,H_2O]{(i)\\,LiAlH_4} RCH_2OH",
+      "plain": "Catalytic hydrogenation (H2/Pt-Pd-Ni) or hydride reducing agents (NaBH4, or the stronger LiAlH4) reduce a carbonyl group to the alcohol: aldehydes give primary alcohols, ketones give secondary alcohols; LiAlH4 (expensive) also reduces carboxylic acids directly to primary alcohols, but commercially acids are first esterified, then the ester is catalytically hydrogenated.",
+      "symbols": [
+        { "symbol": "NaBH4", "meaning": "sodium borohydride, a mild selective hydride reducing agent" },
+        { "symbol": "LiAlH4", "meaning": "lithium aluminium hydride, a strong reducing agent (reduces acids too, but expensive)" }
+      ],
+      "whenToUse": "Converting a given aldehyde/ketone/carboxylic acid/ester into the corresponding alcohol, and predicting whether the product is 1° or 2°.",
+      "derivedFrom": "NCERT Section 7.4.1(2)",
+      "commonMistakes": [
+        "Assuming NaBH4 can reduce a carboxylic acid — it cannot; only LiAlH4 does that directly.",
+        "Mixing up which carbonyl type gives which class of alcohol — aldehyde to 1°, ketone to 2°, never the reverse."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify alcohol product from a given carbonyl reduction",
+          "howToInterpret": "Classify the carbonyl (aldehyde/ketone/acid/ester) and its substituents.",
+          "howItConnectsToFormula": "Apply RCHO to RCH2OH (1°) or RCOR' to RCH(OH)R' (2°) or RCOOH to RCH2OH via LiAlH4.",
+          "exampleStem": "What is the product of catalytic reduction of butanal?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Whatever carbonyl you start with keeps its carbon skeleton exactly — the only thing that changes is the C=O becoming C-OH with an extra hydrogen, so an aldehyde (one R group) becomes a primary alcohol and a ketone (two R groups) becomes a secondary alcohol."
+    },
+    {
+      "id": "f4",
+      "name": "Grignard reagent addition to carbonyl compounds",
+      "latex": "HCHO + RMgX \\rightarrow RCH_2OMgX \\xrightarrow{H_2O} RCH_2OH\\,(1^{\\circ}); \\quad R'CHO + RMgX \\rightarrow RCH(OH)R'\\,(2^{\\circ}); \\quad R'COR'' + RMgX \\rightarrow RC(OH)(R')(R'')\\,(3^{\\circ})",
+      "plain": "A Grignard reagent's carbanion-like R-MgX adds as a nucleophile to the electrophilic carbonyl carbon to form a magnesium alkoxide adduct, which is hydrolysed (H2O/dil. acid) to the alcohol; methanal always gives a primary alcohol, any other aldehyde gives a secondary alcohol, and a ketone gives a tertiary alcohol.",
+      "symbols": [
+        { "symbol": "RMgX", "meaning": "Grignard reagent (R = alkyl/aryl, X = halogen)" },
+        { "symbol": "adduct", "meaning": "the magnesium alkoxide intermediate, hydrolysed by water to give the alcohol plus Mg(OH)X" }
+      ],
+      "whenToUse": "Building a new C-C bond while installing an -OH group — choose the carbonyl (HCHO/other aldehyde/ketone) based on whether a 1°, 2° or 3° alcohol is needed.",
+      "derivedFrom": "NCERT Section 7.4.1(3)",
+      "commonMistakes": [
+        "Forgetting the mandatory aqueous work-up (hydrolysis) step to liberate the free alcohol from the magnesium alkoxide adduct.",
+        "Mixing up which carbonyl gives which alcohol class — this is the single most-tested pattern for Grignard plus carbonyl questions."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Choose correct carbonyl plus Grignard combination for a target alcohol",
+          "howToInterpret": "Work backward from the target alcohol's class (1°/2°/3°) to the required carbonyl type.",
+          "howItConnectsToFormula": "1° target needs HCHO + RMgX; 2° target needs R'CHO + RMgX; 3° target needs a ketone + RMgX.",
+          "exampleStem": "Give the structure and IUPAC name of the product formed from the reaction of propanone with methylmagnesium bromide followed by hydrolysis.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The Grignard reagent behaves like a carbon-based nucleophile attacking the carbonyl carbon — count how many carbon groups are already sitting on that carbonyl carbon and you'll know instantly whether hydrolysis will hand you a primary, secondary, or tertiary alcohol."
+    },
+    {
+      "id": "f5",
+      "name": "Cumene process — industrial preparation of phenol",
+      "latex": "C_6H_5CH(CH_3)_2 \\xrightarrow{O_2} C_6H_5C(CH_3)_2OOH \\xrightarrow[H_2O]{H^+} C_6H_5OH + CH_3COCH_3",
+      "plain": "Cumene (isopropylbenzene) is air-oxidised to cumene hydroperoxide, which on treatment with dilute acid rearranges and cleaves to give phenol and acetone as a valuable by-product — this is the dominant industrial route to both compounds worldwide.",
+      "symbols": [
+        { "symbol": "O2", "meaning": "air oxidation step, forms the hydroperoxide" },
+        { "symbol": "H+/H2O", "meaning": "acid-catalysed hydrolytic cleavage step giving phenol plus acetone" }
+      ],
+      "whenToUse": "Whenever asked for the industrial/large-scale preparation of phenol, or for a reaction that also explains why acetone is cheaply available as a co-product.",
+      "derivedFrom": "NCERT Section 7.4.2(4)",
+      "commonMistakes": [
+        "Forgetting acetone is a co-product, not a side impurity — it is actually manufactured in bulk by this same process.",
+        "Confusing the two steps: O2 gives the hydroperoxide, and it is the SEPARATE acid-catalysed step that cleaves it to phenol plus acetone."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the two-step equation for cumene to phenol",
+          "howToInterpret": "Recall that cumene has an isopropyl group on benzene; oxidation occurs at the benzylic/tertiary C-H.",
+          "howItConnectsToFormula": "Step 1: O2 gives cumene hydroperoxide; Step 2: dilute acid gives phenol plus acetone.",
+          "exampleStem": "Give the equations of reactions for the preparation of phenol from cumene.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Remember cumene as isopropylbenzene doing double duty — air quietly converts its weak benzylic C-H into a hydroperoxide, and a splash of dilute acid then splits that peroxide apart into phenol on one side and acetone on the other, both useful industrial chemicals from a single feedstock."
+    },
+    {
+      "id": "f6",
+      "name": "Acidity of phenols — resonance stabilisation of the phenoxide ion",
+      "latex": "C_6H_5OH \\rightleftharpoons C_6H_5O^- + H^+ \\quad (pK_a \\approx 10, \\text{ vs ethanol } pK_a \\approx 15.9)",
+      "plain": "Phenol ionises far more than an alcohol because the phenoxide ion's negative charge is delocalised over the ring by resonance into structures with NO charge separation, making it markedly more stable than a localised alkoxide ion; phenol itself also has resonance structures, but they carry charge separation (positive O), so phenol is less stabilised than its own conjugate base — net effect: ionisation is strongly favoured.",
+      "symbols": [
+        { "symbol": "C6H5O-", "meaning": "phenoxide ion — 5 resonance structures (I-V), with negative charge delocalised at ortho and para ring carbons and on oxygen" },
+        { "symbol": "pKa", "meaning": "phenol about 10.0, ethanol about 15.9 — phenol is roughly a million times more acidic" }
+      ],
+      "whenToUse": "Explaining/justifying WHY phenol is more acidic than an alcohol or water — a conceptual explanation question, not a calculation.",
+      "derivedFrom": "NCERT Section 7.4.4(a)(iii), Table 7.3",
+      "commonMistakes": [
+        "Saying simply 'phenol has resonance' without specifying that it is the PHENOXIDE ION's charge-delocalised (no charge separation) resonance that matters most, not phenol's own charge-separated resonance.",
+        "Forgetting the sp2 hybridisation of the ring carbon bonded to O also increases the O-H bond's polarity via higher electronegativity, reinforcing the resonance argument."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain why phenol is more acidic than an alcohol",
+          "howToInterpret": "Compare the stability of the two conjugate bases (phenoxide vs alkoxide).",
+          "howItConnectsToFormula": "Draw the 5 resonance structures of the phenoxide ion and note the lack of charge separation compared to phenol's own resonance structures.",
+          "exampleStem": "Explain, with resonance structures, why phenol is a much stronger acid than ethanol.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "The trick is to compare stabilities of the CONJUGATE BASES, not the parent molecules — an alkoxide ion has nowhere to spread its negative charge, but a phenoxide ion can smear that charge across three ring carbons through resonance, and because none of those resonance forms need to separate charge, the phenoxide is unusually happy, which pulls the equilibrium toward ionisation."
+    },
+    {
+      "id": "f7",
+      "name": "Dehydration of alcohols — Saytzeff's rule, E1 mechanism",
+      "latex": "{-}CH(H){-}C(OH){-} \\xrightarrow[\\text{Heat}]{H^+} C{=}C + H_2O \\quad \\text{(more substituted alkene = major product)}",
+      "plain": "Protonation of -OH (fast) gives an oxonium ion; loss of water forms a carbocation (slow, rate-determining, so the reaction is easiest for alcohols that give the most stable carbocation, i.e. 3° > 2° > 1°); loss of a proton from a beta-carbon gives the alkene, with the MORE substituted (more stable) alkene forming as the major product (Saytzeff's/Zaitsev's rule).",
+      "symbols": [
+        { "symbol": "H+ (conc. H2SO4/H3PO4)", "meaning": "acid catalyst, protonates -OH to make it a better leaving group (as water)" },
+        { "symbol": "ease of dehydration", "meaning": "3° > 2° > 1°, tracking carbocation stability" }
+      ],
+      "whenToUse": "Predicting the major alkene product and relative rate when an alcohol is dehydrated with a protic acid and heat.",
+      "derivedFrom": "NCERT Section 7.4.4(b)(3)",
+      "commonMistakes": [
+        "Predicting the LESS substituted (Hofmann) alkene as major — dehydration of alcohols under acid conditions follows Saytzeff's rule, giving the MORE substituted alkene.",
+        "Forgetting that secondary alcohols especially can undergo carbocation rearrangement (hydride/methyl shift) to a more stable carbocation before elimination."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict major alkene from acid dehydration of a given alcohol",
+          "howToInterpret": "Identify the possible beta-hydrogens and the alkenes each elimination pathway would give.",
+          "howItConnectsToFormula": "Choose the elimination pathway that gives the most substituted (Saytzeff) alkene as major.",
+          "exampleStem": "Predict the major product formed on acid-catalysed dehydration of butan-2-ol.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Dehydration is elimination running through the same carbocation logic as substitution — the slow step is always losing water to form the most comfortable (most substituted) carbocation, and once that cation exists, it sheds a proton from whichever neighbouring carbon gives the most substituted, most stable alkene."
+    },
+    {
+      "id": "f8",
+      "name": "Oxidation of alcohols — PCC/CrO3 vs KMnO4/K2Cr2O7",
+      "latex": "RCH_2OH \\xrightarrow{PCC} RCHO\\,(\\text{stops here}); \\quad RCH_2OH \\xrightarrow{KMnO_4/H^+} RCOOH; \\quad R_2CHOH \\xrightarrow{CrO_3} R_2C{=}O",
+      "plain": "A mild, controlled oxidant — PCC (pyridinium chlorochromate) or anhydrous CrO3 — stops the oxidation of a primary alcohol cleanly at the aldehyde; strong oxidants (acidified KMnO4, hot K2Cr2O7) carry a primary alcohol all the way to the carboxylic acid via the aldehyde. A secondary alcohol is oxidised to a ketone by either type of reagent. A tertiary alcohol has no alpha-hydrogen on the carbinol carbon and so resists oxidation; only under drastic conditions (strong oxidant plus heat) does C-C bond cleavage occur, giving a mixture of smaller carboxylic acids.",
+      "symbols": [
+        { "symbol": "PCC", "meaning": "pyridinium chlorochromate — CrO3 complexed with pyridine and HCl; a mild, selective oxidant that halts at the aldehyde" },
+        { "symbol": "KMnO4/K2Cr2O7 (acidic, hot)", "meaning": "strong oxidants that push oxidation through to the carboxylic acid" }
+      ],
+      "whenToUse": "Predicting the correct oxidation product (and choosing the correct reagent) for a given alcohol — a very frequently tested distinction.",
+      "derivedFrom": "NCERT Section 7.4.4(b)(4)",
+      "commonMistakes": [
+        "Using KMnO4/K2Cr2O7 when the question specifically wants the aldehyde stopped at — those strong oxidants over-oxidise a 1° alcohol straight to the acid; PCC is the correct choice to stop at the aldehyde.",
+        "Assuming a tertiary alcohol can be oxidised to a ketone or acid under normal conditions — it cannot, because there is no H on the carbinol carbon to remove."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Choose the reagent/product for oxidising a given alcohol",
+          "howToInterpret": "Classify the alcohol as 1°/2°/3° and identify whether the aldehyde or the acid stage is wanted.",
+          "howItConnectsToFormula": "1° with PCC gives aldehyde; 1° with strong oxidant gives acid; 2° with any oxidant gives ketone; 3° resists oxidation.",
+          "exampleStem": "Give equations of oxidation of propan-1-ol with (a) PCC and (b) alkaline KMnO4 followed by acidification.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Picture oxidation as removing hydrogens two at a time from the O-H and the C-H on the same carbon — a primary alcohol can lose that pair once (to an aldehyde) or, if you keep going with a strong oxidant, a second time (to an acid), while PCC is specifically the 'stop after one round' reagent; a tertiary alcohol simply has no C-H there to remove, so it's a dead end for oxidation."
+    },
+    {
+      "id": "f9",
+      "name": "Esterification of alcohols and phenols",
+      "latex": "ROH + R'COOH \\xrightleftharpoons{H^+} R'COOR + H_2O; \\quad ROH + (R'CO)_2O \\rightarrow R'COOR + R'COOH; \\quad ROH + R'COCl \\xrightarrow{\\text{pyridine}} R'COOR + HCl",
+      "plain": "Alcohols and phenols react with carboxylic acids (acid-catalysed, reversible — water is removed to drive the equilibrium), acid anhydrides, or acid chlorides (in the presence of pyridine to mop up the HCl formed) to introduce an acyl group and form an ester; the acetyl (CH3CO-) group specifically is called acetylation, e.g. acetylation of salicylic acid gives aspirin.",
+      "symbols": [
+        { "symbol": "H+ (conc. H2SO4)", "meaning": "catalyst for the reversible acid-esterification; small amount used, water removed as formed" },
+        { "symbol": "pyridine", "meaning": "base used with acid chlorides, neutralises the HCl by-product and shifts equilibrium to the right" }
+      ],
+      "whenToUse": "Converting an alcohol/phenol into an ester, or explaining the synthesis of a specific named ester such as aspirin (acetylsalicylic acid).",
+      "derivedFrom": "NCERT Section 7.4.4(a) — Esterification",
+      "commonMistakes": [
+        "Forgetting the reaction with a carboxylic acid is reversible — omitting the need to remove water to push it to completion.",
+        "Forgetting pyridine's role with acid chlorides is simply to neutralise HCl, not to act as a catalyst for the acylation itself."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify reagents/product for a named ester synthesis",
+          "howToInterpret": "Identify whether the acylating agent is an acid, anhydride, or acid chloride.",
+          "howItConnectsToFormula": "Match the acylating agent to the correct mechanism/by-product (H2O, RCOOH, or HCl respectively).",
+          "exampleStem": "Salicylic acid is acetylated using acetic anhydride in the presence of a trace of concentrated H2SO4. Identify the product and name it.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Esterification is just acylation of the O-H — whichever acyl-transfer reagent you use (acid, anhydride, or acid chloride), the alcohol or phenol's oxygen ends up bonded to a C=O group, and the difference between the three reagents is really just what leaves as the by-product: water, a carboxylic acid, or HCl."
+    },
+    {
+      "id": "f10",
+      "name": "Kolbe's reaction",
+      "latex": "C_6H_5OH \\xrightarrow{NaOH} C_6H_5O^-Na^+ \\xrightarrow[\\text{heat, pressure}]{(i)\\,CO_2\\;\\;(ii)\\,H^+} o\\text{-}HOC_6H_4COOH \\;(\\text{salicylic acid})",
+      "plain": "Sodium phenoxide (formed from phenol plus NaOH) is a much better nucleophile than phenol itself, so it undergoes electrophilic aromatic substitution even with the weak electrophile CO2, attacking preferentially at the ortho position; acidification of the resulting salt gives ortho-hydroxybenzoic acid (salicylic acid) as the main product.",
+      "symbols": [
+        { "symbol": "C6H5O-Na+", "meaning": "sodium phenoxide — the reactive nucleophile/electron-rich aromatic ring" },
+        { "symbol": "CO2", "meaning": "weak electrophile that phenoxide (but not phenol) is reactive enough to attack" }
+      ],
+      "whenToUse": "Preparing salicylic acid (the aspirin precursor) from phenol, or explaining why phenoxide reacts with electrophiles that phenol itself cannot.",
+      "derivedFrom": "NCERT Section 7.4.4(c)(2)",
+      "commonMistakes": [
+        "Trying to react phenol directly with CO2 — the reaction only proceeds via the more nucleophilic phenoxide ion, so NaOH treatment must come first.",
+        "Forgetting the product is the ORTHO isomer (salicylic acid), not para."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the equation/steps of Kolbe's reaction",
+          "howToInterpret": "Recall that phenol must first be converted to its sodium salt.",
+          "howItConnectsToFormula": "Phenol with NaOH gives phenoxide; phenoxide with CO2 (heat, pressure) gives sodium salicylate; acidification (H+) gives salicylic acid.",
+          "exampleStem": "Explain Kolbe's reaction with an example, and name the industrially important product it is used to make.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Kolbe's reaction is proof that a phenoxide ion is a much hungrier nucleophile than phenol — hungry enough to attack even carbon dioxide, a famously weak electrophile — and it always bites at the ortho position, setting you up perfectly for salicylic acid and, from there, aspirin."
+    },
+    {
+      "id": "f11",
+      "name": "Reimer-Tiemann reaction",
+      "latex": "C_6H_5OH \\xrightarrow[(\\text{dichlorocarbene})]{CHCl_3 + aq.\\,NaOH} o\\text{-}HOC_6H_4CHCl_2 \\xrightarrow[(ii)\\,H^+]{(i)\\,NaOH} o\\text{-}HOC_6H_4CHO\\;(\\text{salicylaldehyde})",
+      "plain": "Chloroform reacts with NaOH to generate the reactive electrophile dichlorocarbene (:CCl2), which attacks the electron-rich phenoxide ring at the ortho position to give a benzal chloride intermediate (o-hydroxybenzal chloride); alkaline hydrolysis of this intermediate followed by acidification gives salicylaldehyde (o-hydroxybenzaldehyde).",
+      "symbols": [
+        { "symbol": ":CCl2", "meaning": "dichlorocarbene, generated in situ from CHCl3 plus strong base — the actual electrophile that attacks the ring" },
+        { "symbol": "intermediate", "meaning": "o-hydroxybenzal chloride (-CHCl2), hydrolysed by aqueous NaOH to the aldehyde" }
+      ],
+      "whenToUse": "Introducing a -CHO group specifically at the ortho position of phenol — the standard laboratory route to salicylaldehyde.",
+      "derivedFrom": "NCERT Section 7.4.4(c)(3)",
+      "commonMistakes": [
+        "Forgetting the actual electrophile is dichlorocarbene (:CCl2), not chloroform itself.",
+        "Missing the intermediate benzal chloride step and jumping straight from phenol to the aldehyde without the hydrolysis step."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Write the equation/mechanism of the Reimer-Tiemann reaction",
+          "howToInterpret": "Recall the reagent combination (CHCl3 plus aq. NaOH) and that the electrophile is generated in situ.",
+          "howItConnectsToFormula": "Phenol to phenoxide, attack by :CCl2 at ortho, benzal chloride, hydrolysis (NaOH), salicylaldehyde (after H+).",
+          "exampleStem": "Write the equation involved in the Reimer-Tiemann reaction of phenol.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Reimer-Tiemann is Kolbe's reaction's cousin for making an aldehyde instead of an acid — chloroform and strong base quietly manufacture dichlorocarbene as the attacking electrophile, it lands ortho on the phenoxide ring exactly like CO2 does in Kolbe's reaction, and a hydrolysis step then unmasks the aldehyde."
+    },
+    {
+      "id": "f12",
+      "name": "Williamson ether synthesis",
+      "latex": "R{-}X + R'{-}O^-Na^+ \\xrightarrow{S_N2} R{-}O{-}R' + NaX",
+      "plain": "An alkyl halide is attacked by an alkoxide (or phenoxide) ion in an SN2 reaction, displacing the halide and forming the ether; the method works best with primary, unhindered alkyl halides. If the alkyl halide is secondary or, especially, tertiary, the strongly basic alkoxide instead favours E2 elimination, so a tertiary alkyl halide gives ONLY an alkene, no ether.",
+      "symbols": [
+        { "symbol": "R-X", "meaning": "alkyl halide — should be primary/unhindered for best SN2 yield" },
+        { "symbol": "R'-O-Na+", "meaning": "sodium alkoxide or phenoxide, the nucleophile" }
+      ],
+      "whenToUse": "Preparing a symmetrical or unsymmetrical ether (including aryl alkyl ethers, using phenoxide) — the standard laboratory method for ether synthesis; also for choosing WHICH alkyl halide/alkoxide combination to use to avoid elimination.",
+      "derivedFrom": "NCERT Section 7.6.1(2)",
+      "commonMistakes": [
+        "Choosing a tertiary alkyl halide as the electrophile — elimination will dominate and no ether forms; instead pair a tertiary alkoxide with a PRIMARY alkyl halide.",
+        "Forgetting that phenol can also be converted to an aryl alkyl ether this way — but only by using phenol/phenoxide as the O-nucleophile with an alkyl halide, never using a haloarene as the electrophile (aryl halides don't undergo SN2)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Choose the correct combination of alkoxide plus alkyl halide to avoid elimination",
+          "howToInterpret": "Identify which of the two possible pairings (alkoxide from the bulkier group vs. from the smaller group) keeps the alkyl halide primary.",
+          "howItConnectsToFormula": "Always pick the pairing where R-X is 1°, even if that means the alkoxide is bulky/tertiary.",
+          "exampleStem": "The reaction C2H5ONa + (CH3)3C-Cl is not an appropriate reaction for preparing t-butyl ethyl ether. Explain why, and suggest a better combination.",
+          "difficulty": "advanced"
+        }
+      ],
+      "audioScript": "Williamson synthesis is a simple SN2 substitution, and SN2 has one uncompromising demand — an unhindered, primary electrophile; so whenever a tertiary group is involved, always make IT the alkoxide half and keep the alkyl halide half primary, otherwise the strongly basic alkoxide will just rip off a proton and hand you an alkene instead."
+    },
+    {
+      "id": "f13",
+      "name": "Cleavage of ethers by hydrogen halides (HI/HX)",
+      "latex": "R{-}O{-}R' + HX \\xrightarrow[\\text{excess, heat}]{} R{-}X + R'{-}OH; \\quad Ar{-}O{-}R + HX \\rightarrow Ar{-}OH + R{-}X",
+      "plain": "Ethers are the least reactive functional-group class and cleave only under forcing conditions with excess concentrated HX (reactivity HI > HBr > HCl); a dialkyl ether gives an alkyl halide plus an alcohol (which can react further with excess acid to give a second alkyl halide); an alkyl aryl ether ALWAYS cleaves at the alkyl-oxygen bond (never the aryl-oxygen bond), giving phenol plus an alkyl halide, because the aryl-O bond has partial double-bond character (sp2 ring carbon, resists nucleophilic attack).",
+      "symbols": [
+        { "symbol": "HI, HBr, HCl", "meaning": "reactivity order HI > HBr > HCl for ether cleavage" },
+        { "symbol": "oxonium ion", "meaning": "protonated ether intermediate; the halide ion then attacks the less hindered/more accessible alkyl carbon by SN2 (or the more stable carbocation carbon by SN1, if it's tertiary)" }
+      ],
+      "whenToUse": "Predicting the products of an ether treated with excess hot concentrated HX, especially for distinguishing dialkyl vs alkyl aryl ethers, and 1°/2° (SN2) vs 3° (SN1) alkyl groups.",
+      "derivedFrom": "NCERT Section 7.6.3(1)",
+      "commonMistakes": [
+        "Predicting cleavage of the aryl-O bond in an alkyl aryl ether — this NEVER happens; only the alkyl-O bond breaks.",
+        "Forgetting that with a tertiary alkyl group, the mechanism switches to SN1 (via a stable tertiary carbocation), so the halide ends up on the tertiary carbon instead of the smaller alkyl group."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Predict products of ether plus excess HI/HX",
+          "howToInterpret": "Identify whether the ether is dialkyl or alkyl aryl, and whether any alkyl group is tertiary.",
+          "howItConnectsToFormula": "Alkyl aryl ether gives phenol plus R-X (alkyl-O breaks); dialkyl ether with 1°/2° groups gives the smaller/less-hindered group forming R-I via SN2; a tertiary group forms R-I via SN1.",
+          "exampleStem": "What are the major products formed when anisole (methyl phenyl ether) is heated with excess concentrated HI?",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Ether cleavage always starts the same way — protonate the oxygen to make a good leaving group — but which piece becomes the halide depends entirely on mechanism: primary and secondary alkyl groups get displaced by iodide via SN2, tertiary groups leave as a carbocation and get trapped via SN1, and an aryl group essentially never leaves at all, because breaking that aryl-oxygen bond would require attacking an sp2 ring carbon, which nucleophiles can't do."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12", "f13"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d5", "d9", "d10", "d11", "d12", "d13", "d14"],
+    "cheatSheetFocus": ["mustKnowBullets", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["nomenclature", "IUPAC"],
+      "stages": {
+        "question": "Give the IUPAC name of: CH3-CH(Cl)-CH(CH3)-CH(CH3)-CH2OH",
+        "interpretation": "Identify the longest chain containing -OH, number from the end nearest -OH, and locate substituents.",
+        "formula": "Alkane 'e' to 'ol'; lowest locant to -OH",
+        "solutionSteps": ["Longest chain = pentane, numbered from the CH2OH end (C1) so -OH gets locant 1.", "Substituents: Cl on C4, CH3 on C2 and C3.", "Name: 4-chloro-2,3-dimethylpentan-1-ol."],
+        "answer": "4-Chloro-2,3-dimethylpentan-1-ol"
+      },
+      "audioScript": "Find the longest chain that includes the OH carbon, number from whichever end gives OH the lowest possible locant, then list every substituent alphabetically with its own locant."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["classification", "allylic", "benzylic"],
+      "stages": {
+        "question": "Classify CH2=CH-CH2-OH and C6H5-CH(OH)-CH3 as allylic/benzylic and as primary/secondary/tertiary.",
+        "interpretation": "Check whether -OH is on an sp3 carbon adjacent to a C=C (allylic) or adjacent to an aromatic ring (benzylic), and count the number of carbons attached to the carbinol carbon.",
+        "formula": "none — conceptual classification",
+        "solutionSteps": ["CH2=CH-CH2-OH: the OH carbon is attached to one other carbon and two H's, and sits next to the double bond, so it is a primary allylic alcohol.", "C6H5-CH(OH)-CH3: the OH carbon is attached to the ring carbon, one CH3 group and one H, so it is a secondary benzylic alcohol."],
+        "answer": "CH2=CH-CH2-OH is a primary allylic alcohol; C6H5-CH(OH)-CH3 is a secondary benzylic alcohol."
+      },
+      "audioScript": "Two questions in one — is the OH-bearing carbon next to a double bond (allylic) or next to a benzene ring (benzylic), and separately, how many carbon groups sit directly on that same carbon (1 degree, 2 degree or 3 degree)."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["hydration", "hydroboration-oxidation", "markovnikov"],
+      "stages": {
+        "question": "Propene is treated separately with (a) dilute H2SO4/H2O and (b) B2H6 followed by H2O2/NaOH. Name the two alcohol products and explain the difference.",
+        "interpretation": "Route (a) is acid-catalysed hydration (Markovnikov, via a carbocation); route (b) is hydroboration-oxidation (anti-Markovnikov, no carbocation).",
+        "formula": "f1 (hydration), f2 (hydroboration-oxidation)",
+        "solutionSteps": ["(a) Protonation gives the more stable 2° carbocation on C2; water attacks there, giving propan-2-ol.", "(b) Boron bonds to the less hindered terminal carbon (C1); oxidation replaces B with OH, giving propan-1-ol."],
+        "answer": "(a) Propan-2-ol (Markovnikov); (b) Propan-1-ol (anti-Markovnikov)."
+      },
+      "audioScript": "Same starting alkene, opposite regiochemistry — acid hydration chases the more stable carbocation so OH lands on the middle carbon, while hydroboration's boron atom prefers the least crowded carbon, so after oxidation OH ends up on the end carbon instead."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["cumene process", "industrial preparation", "phenol"],
+      "stages": {
+        "question": "Outline the industrial preparation of phenol from cumene, naming the intermediate and the by-product.",
+        "interpretation": "Two-step process: air oxidation to a hydroperoxide, then acid-catalysed cleavage.",
+        "formula": "f5",
+        "solutionSteps": ["Cumene (isopropylbenzene) is oxidised by air (O2) to cumene hydroperoxide.", "Treatment with dilute acid cleaves the hydroperoxide to give phenol and acetone."],
+        "answer": "Cumene, with O2, gives cumene hydroperoxide; with dilute acid this gives phenol plus acetone; acetone is the valuable by-product."
+      },
+      "audioScript": "Two clean steps — oxygen slowly builds up a hydroperoxide on cumene's benzylic carbon, and a shot of dilute acid then breaks that peroxide bond apart, handing you phenol and acetone in one industrially efficient move."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "intermediate",
+      "tags": ["acidity", "resonance", "phenoxide"],
+      "stages": {
+        "question": "Explain, using resonance, why phenol (pKa about 10) is about a million times more acidic than ethanol (pKa about 15.9).",
+        "interpretation": "Compare the stability of the conjugate bases: phenoxide ion (delocalised, no charge separation) vs ethoxide ion (localised charge, no delocalisation).",
+        "formula": "f6",
+        "solutionSteps": ["Ethoxide ion has the negative charge fixed entirely on oxygen — no resonance delocalisation possible.", "Phenoxide ion has 5 resonance structures, with the negative charge delocalised onto the ortho and para ring carbons as well as oxygen, all without any charge separation.", "This extra delocalisation stabilises phenoxide far more than phenol itself is stabilised (phenol's own resonance structures DO involve charge separation), so ionisation of phenol is strongly favoured relative to an alcohol."],
+        "answer": "Because the phenoxide ion is resonance-stabilised (charge delocalised over the ring with no charge separation) while an ethoxide ion has no such stabilisation — phenol's equilibrium lies much further toward ionisation."
+      },
+      "audioScript": "Always judge acidity by how comfortable the conjugate base is — an ethoxide ion is stuck holding its full negative charge alone on oxygen, but a phenoxide ion gets to share that charge across the ring through resonance, and since none of those shared forms cost any charge separation, phenoxide is unusually stable and phenol ionises far more readily."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "basic",
+      "tags": ["lucas test", "1 2 3 distinction"],
+      "stages": {
+        "question": "What is the Lucas test, and how does it distinguish primary, secondary and tertiary alcohols?",
+        "interpretation": "Tests the relative rate of the SN1 reaction of an alcohol with HCl, catalysed by ZnCl2.",
+        "formula": "none — qualitative test, related to f7's carbocation-stability logic",
+        "solutionSteps": ["Lucas reagent is concentrated HCl plus anhydrous ZnCl2.", "Alcohols are soluble in Lucas reagent but their alkyl chloride products are not (turbidity/cloudiness signals reaction).", "Tertiary alcohols react immediately (fast carbocation formation); secondary alcohols show turbidity within a few minutes; primary alcohols show no turbidity at room temperature."],
+        "answer": "3° alcohols turn turbid immediately, 2° alcohols within a few minutes, 1° alcohols show no reaction at room temperature — because carbocation (hence alkyl chloride) formation rate follows 3° > 2° > 1°."
+      },
+      "audioScript": "The Lucas test is really a race to form a carbocation — the more substituted the alcohol, the faster it forms one and precipitates as an insoluble, cloudy alkyl chloride, so timing the turbidity tells you instantly whether you have a primary, secondary or tertiary alcohol."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["dehydration", "saytzeff's rule", "elimination"],
+      "stages": {
+        "question": "Predict the major product of acid-catalysed dehydration of butan-2-ol.",
+        "interpretation": "Two possible beta-hydrogens can be lost, giving but-1-ene or but-2-ene; Saytzeff's rule favours the more substituted alkene.",
+        "formula": "f7",
+        "solutionSteps": ["Protonation of -OH, then loss of water gives a 2° carbocation at C2.", "Loss of a beta-H from C1 gives but-1-ene (less substituted); loss of a beta-H from C3 gives but-2-ene (more substituted).", "Saytzeff's rule: the more substituted alkene, but-2-ene, is the major product."],
+        "answer": "But-2-ene is the major product (with some but-1-ene as minor product)."
+      },
+      "audioScript": "Once the carbocation forms, it has a choice of which neighbouring hydrogen to lose — and it always prefers the path that builds the more substituted, more stable double bond, which here means but-2-ene wins over but-1-ene."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "intermediate",
+      "tags": ["oxidation", "pcc", "kmno4"],
+      "stages": {
+        "question": "Propan-1-ol is treated separately with (a) PCC and (b) acidified KMnO4. What is the product in each case?",
+        "interpretation": "PCC is a mild, selective oxidant that halts at the aldehyde stage; acidified KMnO4 is a strong oxidant that continues to the carboxylic acid.",
+        "formula": "f8",
+        "solutionSteps": ["(a) PCC oxidises the 1° alcohol only as far as the aldehyde: propan-1-ol to propanal.", "(b) Acidified KMnO4 fully oxidises the 1° alcohol through the aldehyde to the carboxylic acid: propan-1-ol to propanoic acid."],
+        "answer": "(a) Propanal (with PCC); (b) Propanoic acid (with acidified KMnO4)."
+      },
+      "audioScript": "Same starting alcohol, two very different destinations — PCC is deliberately mild and stops exactly at the aldehyde, while acidified KMnO4 is a much stronger oxidant that keeps going until it reaches the carboxylic acid."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "intermediate",
+      "tags": ["kolbe's reaction", "salicylic acid", "phenoxide"],
+      "stages": {
+        "question": "Describe Kolbe's reaction and identify its major industrial significance.",
+        "interpretation": "Phenoxide ion (more nucleophilic than phenol) attacks CO2 as a weak electrophile, substituting ortho on the ring.",
+        "formula": "f10",
+        "solutionSteps": ["Phenol plus NaOH gives sodium phenoxide.", "Sodium phenoxide plus CO2, under heat and pressure, gives sodium salicylate (ortho substitution).", "Acidification (H3O+) gives salicylic acid (o-hydroxybenzoic acid)."],
+        "answer": "Kolbe's reaction converts phenol to salicylic acid via sodium phenoxide plus CO2 (then acidification); salicylic acid is the key starting material for synthesising aspirin (acetylsalicylic acid)."
+      },
+      "audioScript": "Phenoxide is so much more reactive than phenol that it will even attack carbon dioxide, and it always does so at the ortho position — acidify the resulting salt and you get salicylic acid, the direct precursor of aspirin."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "intermediate",
+      "tags": ["reimer-tiemann reaction", "salicylaldehyde", "dichlorocarbene"],
+      "stages": {
+        "question": "Describe the Reimer-Tiemann reaction, naming the reactive intermediate and the final product.",
+        "interpretation": "CHCl3 plus strong base generates dichlorocarbene, an electrophile that substitutes ortho on the phenoxide ring.",
+        "formula": "f11",
+        "solutionSteps": ["CHCl3 plus aq. NaOH generates dichlorocarbene (:CCl2), the actual electrophile.", "Dichlorocarbene attacks the phenoxide ring at the ortho position to give an intermediate (o-hydroxybenzal chloride, -CHCl2).", "Hydrolysis with aqueous NaOH, then acidification, gives salicylaldehyde (o-hydroxybenzaldehyde)."],
+        "answer": "Salicylaldehyde (o-hydroxybenzaldehyde), formed via the electrophile dichlorocarbene (:CCl2) attacking phenoxide at the ortho position."
+      },
+      "audioScript": "Chloroform under strong base quietly transforms into dichlorocarbene, a small but potent electrophile, and just like Kolbe's reaction it always attacks ortho on the electron-rich phenoxide ring — hydrolyse the resulting dichloromethyl intermediate and you unmask an aldehyde instead of an acid."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "advanced",
+      "tags": ["williamson synthesis", "sn2", "elimination", "limitation"],
+      "stages": {
+        "question": "Sodium ethoxide (C2H5O-Na+) is reacted with tert-butyl chloride, (CH3)3C-Cl, intending to make t-butyl ethyl ether. Explain why this fails and suggest the correct combination of reactants.",
+        "interpretation": "Williamson synthesis is an SN2 reaction — a tertiary alkyl halide favours E2 elimination with a strong base/nucleophile like an alkoxide instead.",
+        "formula": "f12",
+        "solutionSteps": ["C2H5O- is both a good nucleophile and a strong base.", "With a tertiary substrate, elimination (E2) is much faster than SN2 substitution because of steric hindrance at the tertiary carbon.", "The major product is actually 2-methylprop-1-ene (isobutylene) plus C2H5OH, not the ether.", "Correct combination: use the primary alkyl halide (ethyl chloride/bromide, C2H5X) with sodium tert-butoxide, (CH3)3C-O-Na+, so the SN2 attack occurs at the unhindered primary carbon."],
+        "answer": "The reaction gives mainly 2-methylprop-1-ene (elimination), not the ether, because tertiary substrates favour E2 with a strong base like ethoxide. Instead, react sodium tert-butoxide with ethyl chloride/bromide (C2H5X) to get t-butyl ethyl ether via SN2 at the primary carbon."
+      },
+      "audioScript": "Whenever a tertiary alkyl halide meets an alkoxide, elimination almost always wins the race against substitution — so the fix is simply to swap roles: make the bulky group the alkoxide and keep the alkyl halide primary, so SN2 has an unhindered carbon to attack."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "intermediate",
+      "tags": ["ether cleavage", "HI", "regiochemistry"],
+      "stages": {
+        "question": "Anisole (methyl phenyl ether) is heated with excess concentrated HI. What are the products, and why does cleavage occur where it does?",
+        "interpretation": "Alkyl aryl ethers cleave ONLY at the alkyl-oxygen bond because the aryl-oxygen bond has partial double-bond character and the ring carbon is sp2 (resists nucleophilic attack).",
+        "formula": "f13",
+        "solutionSteps": ["Protonation of the ether oxygen gives a methylphenyloxonium ion.", "Iodide ion attacks the LESS hindered, sp3-hybridised methyl carbon (SN2), not the aromatic ring carbon.", "Products: phenol (C6H5OH) plus methyl iodide (CH3I)."],
+        "answer": "Phenol plus CH3I; cleavage always occurs at the alkyl-O bond because the aryl-O bond (partial double-bond character, sp2 carbon) cannot undergo nucleophilic substitution."
+      },
+      "audioScript": "Iodide has only one realistic target in a protonated aryl alkyl ether — the small, sp3 methyl carbon — because the aryl-oxygen bond is reinforced by conjugation with the ring and simply isn't available for nucleophilic attack, so the ring always ends up as phenol while the alkyl group leaves as the iodide."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "Why is phenol classified separately from alcohols even though both contain an -OH group?",
+      "Why do alcohols and phenols have far higher boiling points than ethers or hydrocarbons of similar molecular mass?",
+      "Why can tertiary alcohols not be oxidised to a ketone or carboxylic acid under ordinary conditions?"
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Predict the major product when propene undergoes acid-catalysed hydration in dilute H2SO4.",
+        "interpretation": "Markovnikov addition — a carbocation forms at the more substituted carbon.",
+        "formulaIds": ["f1"],
+        "steps": ["Protonation gives the more stable secondary carbocation on C2.", "Water attacks C2, then loses a proton."],
+        "answer": "Propan-2-ol",
+        "audioScript": "Follow the carbocation — it forms on the middle carbon of propene, so that's exactly where the incoming water (and hence the -OH) ends up."
+      },
+      {
+        "id": "pb2",
+        "question": "Give the structure and name of the product formed when methanal reacts with methylmagnesium bromide followed by hydrolysis.",
+        "interpretation": "HCHO plus RMgX always gives a primary alcohol.",
+        "formulaIds": ["f4"],
+        "steps": ["CH3MgBr adds to HCHO to give CH3CH2OMgBr.", "Hydrolysis (H2O) gives CH3CH2OH."],
+        "answer": "Ethanol (CH3CH2OH), a primary alcohol",
+        "audioScript": "Methanal has no carbon substituents of its own, so whatever Grignard reagent you add, the product is always a primary alcohol — here, ethanol."
+      },
+      {
+        "id": "pb3",
+        "question": "Arrange propan-1-ol, propan-2-ol and 2-methylpropan-2-ol in increasing order of ease of acid-catalysed dehydration.",
+        "interpretation": "Ease of dehydration tracks carbocation stability: 3° > 2° > 1°.",
+        "formulaIds": ["f7"],
+        "steps": ["1° alcohols form the least stable carbocation and dehydrate slowest.", "3° alcohols form the most stable carbocation and dehydrate fastest."],
+        "answer": "propan-1-ol < propan-2-ol < 2-methylpropan-2-ol",
+        "audioScript": "The rate-determining step of dehydration is carbocation formation, so ranking ease of dehydration is exactly the same as ranking carbocation stability: primary slowest, tertiary fastest."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Predict the products of acid-catalysed dehydration of butan-2-ol and state which is major.",
+        "interpretation": "Elimination can remove a beta-H from either C1 or C3, giving but-1-ene or but-2-ene; Saytzeff's rule picks the more substituted alkene.",
+        "formulaIds": ["f7"],
+        "steps": ["Protonation and loss of water gives a secondary carbocation at C2.", "Loss of H from C1 gives but-1-ene (minor); loss of H from C3 gives but-2-ene (major, more substituted)."],
+        "answer": "But-2-ene (major, Saytzeff product) and but-1-ene (minor)",
+        "audioScript": "Two elimination pathways compete from the same carbocation, and the one that builds the more substituted double bond — but-2-ene — always wins out as the major product."
+      },
+      {
+        "id": "pi2",
+        "question": "Arrange in increasing order of acid strength: propan-1-ol, 4-methylphenol, phenol, 3-nitrophenol, 4-nitrophenol.",
+        "interpretation": "Compare based on resonance/inductive effects of substituents on the phenoxide ion; the alcohol is weakest, and an EWG at para gives the strongest boost.",
+        "formulaIds": ["f6"],
+        "steps": ["An alcohol has no ring resonance at all, so it is the weakest acid.", "An alkyl (ER) group at para in cresol slightly REDUCES acidity below phenol.", "Phenol is the reference.", "NO2 at meta acts mainly inductively, giving a moderate boost.", "NO2 at para gives full resonance delocalisation onto O, the strongest boost."],
+        "answer": "propan-1-ol < 4-methylphenol < phenol < 3-nitrophenol < 4-nitrophenol",
+        "audioScript": "Walk the substituents from most electron-donating to most electron-withdrawing-by-resonance, and acidity climbs in exactly that order — plain alcohol at the bottom, para-nitrophenol at the top."
+      },
+      {
+        "id": "pi3",
+        "question": "Write the sequence of reagents needed to convert phenol into (a) salicylic acid and (b) salicylaldehyde.",
+        "interpretation": "(a) is Kolbe's reaction; (b) is the Reimer-Tiemann reaction — both proceed via the phenoxide ion attacking an electrophile at the ortho position.",
+        "formulaIds": ["f10", "f11"],
+        "steps": ["(a) NaOH, then CO2 (heat, pressure), then H3O+ gives salicylic acid (Kolbe's reaction).", "(b) CHCl3 plus aq. NaOH (dichlorocarbene attack), then H3O+ gives salicylaldehyde (Reimer-Tiemann reaction)."],
+        "answer": "(a) NaOH, then CO2/heat/pressure, then H+ gives salicylic acid; (b) CHCl3/NaOH, then H+ gives salicylaldehyde.",
+        "audioScript": "Both routes start by turning phenol into the more reactive phenoxide ion, then hand it a different electrophile — carbon dioxide for the acid, dichlorocarbene for the aldehyde — and both land ortho to the OH."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "Methyl tert-butyl ether, CH3-O-C(CH3)3, is heated with excess concentrated HI. Predict the major products and explain why the mechanism switches from SN2 to SN1 for this substrate.",
+        "interpretation": "One alkyl group is tertiary, so after protonation of the ether oxygen, the ether cleaves via the more stable tertiary carbocation (SN1) rather than iodide directly displacing at a crowded tertiary carbon (SN2).",
+        "formulaIds": ["f13"],
+        "steps": ["Protonation of the ether oxygen gives an oxonium ion.", "The weaker, more strained O-C(CH3)3 bond breaks heterolytically to give the more stable tertiary carbocation (CH3)3C+ and CH3OH — an SN1 pathway, since backside SN2 attack at a tertiary carbon is sterically blocked.", "Iodide ion rapidly traps the tertiary carbocation."],
+        "answer": "Methanol (CH3OH) plus tert-butyl iodide ((CH3)3C-I); the mechanism is SN1 because the tertiary carbocation is far more stable and SN2 attack at a tertiary carbon is sterically impossible.",
+        "audioScript": "Whenever one side of an ether is tertiary, the mechanism quietly switches gears from SN2 to SN1 — the tertiary carbon simply can't be approached from the back for a direct substitution, so instead the C-O bond breaks first to release a comfortable tertiary carbocation, which iodide then grabs."
+      },
+      {
+        "id": "pa2",
+        "question": "p-Cresol (4-methylphenol) is treated with excess bromine water. Predict the major product and explain why only a dibromo derivative forms, unlike phenol itself which forms a tribromo product.",
+        "interpretation": "The -OH group still directs Br2 to ortho/para positions exactly as in phenol, but in p-cresol the para position is already occupied by the methyl group.",
+        "formulaIds": [],
+        "steps": ["The -OH group activates and directs Br2 to ortho/para positions, exactly as in phenol.", "In p-cresol, the para position (C4) is already occupied by -CH3, so it cannot be brominated.", "Bromination therefore occurs at both positions ortho to -OH (C2 and C6)."],
+        "answer": "2,6-Dibromo-4-methylphenol — only two bromines add (both ortho to -OH) because the para position is blocked by the methyl group, unlike unsubstituted phenol which forms 2,4,6-tribromophenol.",
+        "audioScript": "This is the classic 'blocked para' twist — the -OH group still directs bromine to ortho and para exactly like in phenol, but with the para seat already taken by a methyl group, bromine can only fill both ortho positions, capping the reaction at a dibromo product instead of the usual tribromo."
+      },
+      {
+        "id": "pa3",
+        "question": "Explain, using resonance structures, why p-nitrophenol is markedly more acidic than phenol, while m-nitrophenol is only slightly more acidic.",
+        "interpretation": "A nitro group at ortho/para can directly conjugate with and stabilise the negative charge of the phenoxide ion through resonance; a nitro group at meta cannot participate in this resonance and acts only inductively.",
+        "formulaIds": ["f6"],
+        "steps": ["In p-nitrophenoxide, one resonance structure places the negative charge directly on a nitro-group oxygen — a very stable, fully conjugated form.", "In m-nitrophenoxide, no resonance structure can place the negative charge on the ring carbon bonded to -NO2, so -NO2 only withdraws electron density inductively (a weaker effect).", "This is why p-nitrophenol (pKa 7.1) and o-nitrophenol (pKa 7.2) are much stronger acids than phenol (pKa 10.0), while m-nitrophenol (pKa 8.3) is only moderately stronger."],
+        "answer": "Because -NO2 at ortho/para positions can resonance-delocalise (and thus stabilise) the phenoxide's negative charge directly onto its own oxygen atoms, while at the meta position it can only act inductively (a much weaker, through-bond-only effect) — hence o-/p-nitrophenol are far more acidic than phenol, but m-nitrophenol only slightly more.",
+        "audioScript": "The rule of thumb is that resonance beats induction — a substituent that can join the ring's resonance system by sitting ortho or para pulls charge away far more effectively than one that's stuck at meta and can only tug inductively through sigma bonds."
+      }
+    ],
+    "transferPrompt": "Once you're comfortable with this ladder, connect it to the aldehydes/ketones/carboxylic acids chapter — trace how PCC-oxidation of an alcohol gives exactly the aldehyde a Grignard reagent could reduce back to, or how the ester formed by esterifying an alcohol here is the same functional group that LiAlH4 reduces back to two alcohols in that chapter."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 7 — Alcohols, Phenols and Ethers. Start by asking whether I want to revise definitions/classification, practice reaction/product-prediction questions, or focus on a weak sub-topic (nomenclature and classification of alcohols/phenols/ethers; preparation of alcohols from alkenes, carbonyl compounds and Grignard reagents; preparation of phenols including the cumene process; physical properties and the resonance explanation for phenol's acidity; chemical reactions of alcohols — halide formation, dehydration, oxidation, esterification; chemical reactions of phenols — electrophilic substitution, Kolbe's reaction, Reimer-Tiemann reaction; or preparation and reactions of ethers — Williamson synthesis and cleavage). First quiz me on definitions and classification with no reaction mechanism involved — primary/secondary/tertiary/allylic/benzylic/vinylic alcohols, monohydric/dihydric/trihydric compounds, and simple/mixed ethers. Then move to basic single-step product-prediction questions (Markovnikov hydration of a simple alkene, a Grignard-plus-carbonyl combination, a straightforward IUPAC name). Then intermediate two-concept questions (Saytzeff's rule for a dehydration major product, PCC versus KMnO4 oxidation outcomes, acid-strength ordering of substituted phenols and alcohols using the resonance argument, or the Kolbe's/Reimer-Tiemann reaction sequence). Then advanced multi-step or 'why does this fail' questions (Williamson synthesis limitations with tertiary halides, ether cleavage regiochemistry with a tertiary alkyl group switching SN2 to SN1, or explaining ortho/para versus meta substituent effects on phenol acidity through resonance). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which named reaction or rule connects to it and why, (3) the mechanism/solution steps, before revealing the final answer or product. Offer a flashcard mode (test me stage by stage: question, then interpretation, then formula/rule, then steps, then answer) and a formula-view mode (list all 13 named reactions/rules with when-to-use notes). Always double-check that I have specified reagents and conditions correctly (e.g. PCC vs KMnO4, dilute vs concentrated acid, HI vs HBr) since exam questions frequently hinge on exactly this detail. Stay within this chapter's scope (alcohols, phenols and ethers) unless I explicitly ask to connect to another chapter such as haloalkanes/haloarenes or aldehydes, ketones and carboxylic acids.",
+  "selfCheck": [
+    { "q": "Why is phenol a much stronger acid than ethanol?", "a": "Because the phenoxide ion formed by phenol's ionisation is stabilised by resonance delocalisation of its negative charge over the aromatic ring (without any charge separation), while an ethoxide ion has no such delocalisation — phenol's pKa (about 10) is far lower than ethanol's (about 15.9)." },
+    { "q": "What is Kolbe's reaction? Give its product.", "a": "Sodium phenoxide (from phenol plus NaOH) reacts with CO2 under heat and pressure, then is acidified, to give ortho-hydroxybenzoic acid (salicylic acid) — the phenoxide ion is nucleophilic enough to attack even the weak electrophile CO2." },
+    { "q": "What is the Reimer-Tiemann reaction and what is its product?", "a": "Phenol treated with CHCl3 and aqueous NaOH generates dichlorocarbene, which substitutes at the ortho position; hydrolysis and acidification give salicylaldehyde (o-hydroxybenzaldehyde)." },
+    { "q": "State the Williamson ether synthesis and its main limitation.", "a": "An alkyl halide reacts with a sodium alkoxide/phenoxide via SN2 to form an ether, R-X plus R'-O-Na+ gives R-O-R'. It fails with tertiary alkyl halides because the strongly basic alkoxide favours E2 elimination over substitution, giving an alkene instead of the ether." },
+    { "q": "Describe the cumene process for the industrial preparation of phenol.", "a": "Cumene (isopropylbenzene) is air-oxidised to cumene hydroperoxide, which on treatment with dilute acid cleaves to give phenol and acetone as a valuable by-product." }
+  ]
+}

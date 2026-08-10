@@ -33,6 +33,15 @@ const SLUG_TO_TOPICS: Record<string, string[]> = {
   'ch05-coordination-compounds': ['Coordination Compounds'],
 };
 
+const CHEMISTRY_XII_PART2_TOPICS: Record<string, string[]> = {
+  'ch06-haloalkanes-and-haloarenes': ['Haloalkanes and Haloarenes'],
+  'ch07-alcohols-phenols-and-ethers': ['Alcohols, Phenols and Ethers', 'Alcohols Phenols and Ethers'],
+  'ch08-aldehydes-ketones-and-carboxylic-acids': ['Aldehydes, Ketones and Carboxylic Acids', 'Aldehydes Ketones and Carboxylic Acids'],
+  'ch09-amines': ['Amines'],
+  'ch10-biomolecules': ['Biomolecules'],
+};
+Object.assign(SLUG_TO_TOPICS, CHEMISTRY_XII_PART2_TOPICS);
+
 type FigureOverrides = Record<string, { src: string; updatedAt: string }>;
 
 function safeSeg(value: string): string {

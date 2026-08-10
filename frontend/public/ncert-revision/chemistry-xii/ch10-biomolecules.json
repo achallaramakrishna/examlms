@@ -1,0 +1,714 @@
+{
+  "meta": {
+    "examTrack": "NEET/JEE/KCET",
+    "subject": "Chemistry",
+    "classLevel": "XII",
+    "chapterNumber": 10,
+    "chapterTitle": "Biomolecules",
+    "ncertCode": "lech205",
+    "topicIdHint": "Biomolecules",
+    "estimatedRevisionMinutes": 65,
+    "chapter": "Biomolecules",
+    "class": "12",
+    "board": "NCERT",
+    "year": "2026-27"
+  },
+  "learningOutcomes": [
+    "Classify carbohydrates into monosaccharides, oligosaccharides and polysaccharides, distinguish reducing from non-reducing sugars, and describe the open-chain and cyclic (pyranose/furanose) structures of glucose and fructose, including anomers and mutarotation.",
+    "Explain glycosidic-linkage formation and hydrolysis in sucrose, maltose and lactose, and compare the structures and roles of starch (amylose/amylopectin), cellulose and glycogen.",
+    "Classify amino acids as acidic/basic/neutral and essential/non-essential, explain zwitterion formation and the amphoteric behaviour of amino acids, and describe peptide-bond formation and the naming of di-, tri- and polypeptides.",
+    "Describe the four levels of protein structure (primary, secondary, tertiary, quaternary), distinguish fibrous from globular proteins, and explain denaturation of proteins.",
+    "Explain the mechanism of enzyme action (lowering activation energy) and classify vitamins by solubility, correctly matching each vitamin to its principal deficiency disease.",
+    "Differentiate DNA from RNA in terms of sugar, nitrogenous bases, strand structure and biological function; describe nucleoside/nucleotide formation, the phosphodiester backbone, Watson-Crick base pairing, and give a brief overview of hormones as biomolecules."
+  ],
+  "cheatSheet": {
+    "oneLiner": "Biomolecules moves from carbohydrate classification and the open-chain/cyclic structures of glucose and fructose, through glycosidic-linked di- and polysaccharides, to amino acids and the four levels of protein structure, enzymes as biocatalysts, vitamins classified by solubility with their deficiency diseases, and finally nucleic acids (DNA vs RNA) with a brief look at hormones.",
+    "mustKnowBullets": [
+      "Carbohydrates are optically active polyhydroxy aldehydes or ketones (or compounds that yield such units on hydrolysis); classified as monosaccharides (cannot be hydrolysed further, e.g. glucose, fructose, ribose), oligosaccharides (yield 2-10 monosaccharide units on hydrolysis — disaccharides are the commonest), and polysaccharides (yield a large number of units, not sweet, hence also called non-sugars).",
+      "All monosaccharides, whether aldose or ketose, are reducing sugars (they reduce Fehling's solution and Tollens' reagent). Among disaccharides, sucrose is non-reducing (both reducing groups of glucose and fructose are tied up in the glycosidic bond) while maltose and lactose are reducing (a free aldehyde group is still available).",
+      "Glucose is an aldohexose, D-(+)-glucose; its open-chain structure was established by six classic reactions: prolonged HI heating gives n-hexane (confirms a straight 6-carbon chain); reaction with NH2OH gives an oxime and with HCN gives a cyanohydrin (confirms a >C=O group); mild oxidation with bromine water gives gluconic acid, a 6-carbon acid (confirms the carbonyl is an aldehyde, not a ketone); oxidation with HNO3 gives the dicarboxylic saccharic acid (confirms a terminal primary -CH2OH); and acetylation with acetic anhydride gives glucose pentaacetate (confirms five -OH groups, each on a different carbon).",
+      "D/L notation is assigned by comparing the configuration at the lowest (highest-numbered) asymmetric carbon of a sugar to D(+)- or L(-)-glyceraldehyde — it is unrelated to the actual sign of optical rotation, which is shown separately as (+) or (-); D-glucose and D-glyceraldehyde both have -OH on the right at the reference carbon.",
+      "The open-chain structure could not explain: the absence of Schiff's test, no bisulphite-addition product with NaHSO3, an unreactive pentaacetate towards hydroxylamine, and the existence of two crystalline forms (α, m.p. 419 K, from concentrated solution at 303 K; β, m.p. 423 K, from hot saturated solution at 371 K). This is resolved by a cyclic hemiacetal: the C-5 -OH adds to the -CHO, forming a six-membered pyranose ring (named by analogy with pyran).",
+      "α-D-(+)-glucose and β-D-(+)-glucose differ only in the configuration at C-1 (the anomeric carbon, i.e. the aldehyde carbon before cyclisation) — such isomers are called anomers. The spontaneous interconversion of the two anomers through the open-chain form, with the optical rotation drifting from its initial value to a constant equilibrium value, is called mutarotation.",
+      "Fructose is an important ketohexose, D-(-)-fructose (laevorotatory); its cyclic form is a five-membered furanose ring (named by analogy with furan), formed by addition of the C-5 -OH to the C-2 keto group; it also shows α and β anomeric forms.",
+      "Sucrose is formed by a glycosidic linkage between C1 of α-D-glucose and C2 of β-D-fructose; since BOTH reducing groups are used in bond formation, sucrose is non-reducing. On hydrolysis it gives dextrorotatory glucose (+52.5°) and strongly laevorotatory fructose (-92.4°); since the laevorotation dominates, the product mixture is laevorotatory overall — the sign of rotation inverts from + to -, so the hydrolysis product is called invert sugar.",
+      "Maltose is two α-D-glucose units joined C1-C4; the free -CHO regenerated at C1 of the second unit makes it a reducing sugar. Lactose (milk sugar) is β-D-galactose joined to β-D-glucose via C1(galactose)-C4(glucose); it is also a reducing sugar (free -CHO at C-1 of the glucose unit).",
+      "Starch, the main storage polysaccharide of plants and the most important dietary carbohydrate, has two components: amylose (15-20%, water-soluble, a long UNBRANCHED chain of 200-1000 α-D-(+)-glucose units joined by C1-C4 linkages) and amylopectin (80-85%, water-insoluble, a BRANCHED chain of α-D-glucose units — chain formed by C1-C4 linkages, branching by C1-C6 linkages).",
+      "Cellulose is the most abundant organic substance in the plant kingdom and a predominant constituent of plant cell walls; it is a straight-chain polysaccharide made ONLY of β-D-glucose units joined by C1-C4 glycosidic linkages (β-links, unlike the α-links of starch). Glycogen ('animal starch') is stored in liver, muscles and brain, structurally similar to amylopectin but MORE highly branched; enzymes break it down to glucose when the body needs energy.",
+      "Amino acids contain both -NH2 and -COOH groups; only α-amino acids (amino group on the carbon next to -COOH) occur on hydrolysis of proteins. They are classified as acidic, basic or neutral by the relative number of amino and carboxyl groups, and as essential (cannot be synthesised in the body, must come from diet, e.g. valine, leucine, lysine) or non-essential (body can synthesise them, e.g. glycine, alanine).",
+      "In aqueous solution, amino acids exist predominantly as a dipolar zwitterion (-NH3+ and -COO- on the same molecule) — overall neutral but carrying both charges; this explains their salt-like behaviour (high melting points, water solubility unlike simple amines/acids) and their amphoteric behaviour (react with both acids and bases). Except glycine, all naturally occurring α-amino acids are optically active (chiral α-carbon) and mostly exist in the L-configuration.",
+      "A peptide bond (peptide linkage) is the amide -CO-NH- formed between the -COOH of one amino acid and the -NH2 of another, with loss of a water molecule. Two amino acids give a dipeptide; three give a tripeptide; up to ten give tetra-/penta-/hexapeptides etc.; more than ten give a polypeptide. A polypeptide with >100 amino-acid residues and molecular mass >10,000 u is called a protein, though the polypeptide/protein distinction is not sharp (e.g. insulin, only 51 amino acids, is called a protein because it has a well-defined conformation).",
+      "Proteins have four structural levels: primary (the specific sequence of amino acids — any change here gives a different protein), secondary (α-helix or β-pleated sheet, arising from regular H-bonding between >C=O and -NH- of the peptide backbone), tertiary (overall 3-D folding of the secondary structure, giving fibrous or globular shape, stabilised by H-bonds, disulphide linkages, van der Waals forces and electrostatic forces of attraction), and quaternary (spatial arrangement of two or more polypeptide sub-units with respect to each other).",
+      "Denaturation is the loss of biological activity that occurs when a native protein (unique 3-D structure) is subjected to physical change (e.g. heat) or chemical change (e.g. pH change): hydrogen bonds are disturbed, globules unfold and helices uncoil. Secondary and tertiary structures are destroyed but the PRIMARY STRUCTURE REMAINS INTACT. Classic examples: coagulation of egg white on boiling, and curdling of milk by bacterially produced lactic acid.",
+      "Enzymes are biocatalysts, and almost all enzymes are globular proteins; they are highly specific for a particular substrate/reaction and are generally named after the substrate (ending in -ase, e.g. maltase hydrolyses maltose) or after the reaction catalysed (e.g. oxidoreductases). They work by lowering the activation energy needed for the reaction — e.g. acid hydrolysis of sucrose needs 6.22 kJ mol⁻¹ of activation energy, but only 2.15 kJ mol⁻¹ when catalysed by the enzyme sucrase.",
+      "Vitamins are organic compounds required in small amounts in the diet to perform specific biological functions for normal growth and maintenance; most cannot be synthesised in the body (though plants can make most of them, and gut bacteria supply some). They are classified by solubility as fat-soluble (A, D, E, K — soluble in fat/oil, insoluble in water, stored in liver and adipose tissue) or water-soluble (B-complex and C — must be supplied regularly in the diet since they are readily excreted in urine and NOT stored, except vitamin B12). Excess vitamin intake is also harmful, so vitamin pills should not be taken without medical advice.",
+      "DNA has β-D-2-deoxyribose as its sugar and contains the bases adenine (A), guanine (G), cytosine (C) and thymine (T); RNA has β-D-ribose as its sugar and contains A, G, C but has URACIL (U) in place of thymine. DNA exists as the Watson-Crick double helix (two complementary, not identical, strands wound about each other and held by H-bonds between specific base pairs), while RNA is typically single-stranded (sometimes folding back on itself), occurring as three types — mRNA, rRNA and tRNA — that together carry out protein synthesis in the cell.",
+      "Base pairing in the DNA double helix is specific: adenine always pairs with thymine, and cytosine always pairs with guanine, via hydrogen bonds between the two strands. This complementary pairing is the structural basis of DNA replication (each strand acts as a template for an identical copy) and of the genetic code.",
+      "A nucleoside is a base attached to the 1'-position of a pentose sugar; a nucleotide is a nucleoside further linked to phosphoric acid at the sugar's 5'-position. Nucleotides join together via a phosphodiester linkage between the 3' and 5' carbons of adjacent sugars to build the polynucleotide chain (the primary structure of a nucleic acid)."
+    ],
+    "keyTables": [
+      {
+        "title": "Vitamins and deficiency diseases (Table 10.3)",
+        "rows": [
+          ["Vitamin", "Sources", "Deficiency disease(s)"],
+          ["Vitamin A", "Fish liver oil, carrots, butter and milk", "Xerophthalmia (hardening of cornea of eye); night blindness"],
+          ["Vitamin B1 (Thiamine)", "Yeast, milk, green vegetables and cereals", "Beri beri (loss of appetite, retarded growth)"],
+          ["Vitamin B2 (Riboflavin)", "Milk, eggwhite, liver, kidney", "Cheilosis (fissuring at corners of mouth and lips), digestive disorders, burning sensation of the skin"],
+          ["Vitamin B6 (Pyridoxine)", "Yeast, milk, egg yolk, cereals and grams", "Convulsions"],
+          ["Vitamin B12", "Meat, fish, egg and curd", "Pernicious anaemia (RBC deficient in haemoglobin)"],
+          ["Vitamin C (Ascorbic acid)", "Citrus fruits, amla and green leafy vegetables", "Scurvy (bleeding gums)"],
+          ["Vitamin D", "Exposure to sunlight, fish and egg yolk", "Rickets (bone deformities in children) and osteomalacia (soft bones and joint pain in adults)"],
+          ["Vitamin E", "Vegetable oils like wheat germ oil, sunflower oil, etc.", "Increased fragility of RBCs and muscular weakness"],
+          ["Vitamin K", "Green leafy vegetables", "Increased blood clotting time"]
+        ]
+      },
+      {
+        "title": "DNA vs RNA",
+        "rows": [
+          ["Feature", "DNA", "RNA"],
+          ["Pentose sugar", "β-D-2-deoxyribose", "β-D-ribose"],
+          ["Nitrogenous bases", "Adenine, guanine, cytosine, thymine", "Adenine, guanine, cytosine, uracil (uracil replaces thymine)"],
+          ["Strands", "Double stranded (double helix, Watson-Crick model)", "Single stranded (sometimes folds back on itself)"],
+          ["Base pairing", "A pairs with T, G pairs with C, via H-bonds between two complementary strands", "No fixed complementary second strand; on hydrolysis the four bases are not obtained in fixed ratios"],
+          ["Types", "One type (chromosomal DNA)", "Three types — messenger RNA (m-RNA), ribosomal RNA (r-RNA), transfer RNA (t-RNA)"],
+          ["Principal biological function", "Chemical basis of heredity; stores and transmits genetic information; capable of self-duplication during cell division", "Carries out protein synthesis in the cell using the coded message present in DNA"]
+        ]
+      },
+      {
+        "title": "Classification of monosaccharides by carbon number (Table 10.1)",
+        "rows": [
+          ["Carbon atoms", "General term", "Aldehyde (aldose)", "Ketone (ketose)"],
+          ["3", "Triose", "Aldotriose", "Ketotriose"],
+          ["4", "Tetrose", "Aldotetrose", "Ketotetrose"],
+          ["5", "Pentose", "Aldopentose", "Ketopentose"],
+          ["6", "Hexose", "Aldohexose", "Ketohexose"],
+          ["7", "Heptose", "Aldoheptose", "Ketoheptose"]
+        ]
+      }
+    ]
+  },
+  "highlights": [
+    { "id": "h1", "type": "definition", "section": "10.1", "text": "Carbohydrates may be defined as optically active polyhydroxy aldehydes or ketones, or compounds that produce such units on hydrolysis. Fitting the general formula Cx(H2O)y is neither necessary (rhamnose, C6H12O5, is a carbohydrate but does not fit) nor sufficient (acetic acid, CH3COOH, fits C2(H2O)2 but is not a carbohydrate).", "whyItMatters": "This is the precise chemical definition examiners expect, going beyond the loose 'hydrate of carbon' naming origin.", "neetRelevance": "high" },
+    { "id": "h2", "type": "statement", "section": "10.1.1", "text": "Carbohydrates are classified into monosaccharides (cannot be hydrolysed further), oligosaccharides (yield 2-10 monosaccharide units on hydrolysis; disaccharides are the most common), and polysaccharides (yield a large number of monosaccharide units; not sweet, hence also called non-sugars).", "whyItMatters": "This three-way classification by hydrolysis behaviour is the backbone of the entire carbohydrates section.", "neetRelevance": "high" },
+    { "id": "h3", "type": "caution", "section": "10.1.1", "text": "All monosaccharides, whether aldose or ketose, are reducing sugars (they reduce Fehling's solution and Tollens' reagent). Among disaccharides, sucrose alone is non-reducing; maltose and lactose are reducing sugars.", "whyItMatters": "A very common trap: students assume only aldehydes reduce Fehling's/Tollens', but ketoses (like fructose) are reducing too, via base-catalysed isomerisation.", "neetRelevance": "high" },
+    { "id": "h4", "type": "statement", "section": "10.1.2", "text": "Monosaccharides are further classified by carbon count (triose to heptose) and by functional group — an aldehyde-containing monosaccharide is an aldose, a keto-containing one is a ketose (Table 10.1), e.g. glucose is an aldohexose, fructose is a ketohexose.", "whyItMatters": "Sets up the vocabulary used throughout — 'aldohexose' and 'ketohexose' appear repeatedly for glucose and fructose.", "neetRelevance": "medium" },
+    { "id": "h5", "type": "statement", "section": "10.1.2.1", "text": "Glucose's open-chain structure was established by six classic pieces of evidence: (1) molecular formula C6H12O6; (2) prolonged heating with HI gives n-hexane, showing all 6 carbons form a straight chain; (3) it forms an oxime with NH2OH and a cyanohydrin with HCN, confirming a >C=O group; (4) mild oxidation with bromine water gives gluconic acid (a 6-carbon acid), confirming the carbonyl is an aldehyde, not a ketone; (5) oxidation with HNO3 gives the dicarboxylic saccharic acid, confirming a terminal primary -CH2OH; (6) acetylation with acetic anhydride gives glucose pentaacetate, confirming five -OH groups each on a different carbon.", "whyItMatters": "This sequence of reasoning is a classic 'structure elucidation' exercise and each individual reaction is separately quizzable (e.g. 'what does HI + Δ prove?').", "neetRelevance": "high" },
+    { "id": "h6", "type": "definition", "section": "10.1.2.1", "text": "The D/L notation of a sugar is assigned by comparing the configuration at its lowest (highest-numbered) asymmetric carbon with D(+)- or L(-)-glyceraldehyde — this is unrelated to the actual sign of optical rotation, which is written separately as (+) or (-). Glucose is correctly named D-(+)-glucose.", "whyItMatters": "A frequently confused pair of concepts — D/L is about relative configuration, (+)/(-) is about the measured optical rotation; they are independent labels.", "neetRelevance": "high" },
+    { "id": "h7", "type": "caution", "section": "10.1.2.1", "text": "Four experimental facts could NOT be explained by glucose's open-chain structure: it does not give Schiff's test, does not form a hydrogensulphite addition product with NaHSO3, its pentaacetate does not react with hydroxylamine (no free -CHO), and it exists in two crystalline forms — α-glucose (m.p. 419 K, from concentrated solution at 303 K) and β-glucose (m.p. 423 K, from hot saturated solution at 371 K).", "whyItMatters": "These four anomalies are exactly what motivate the cyclic hemiacetal structure — a favourite 'explain why' question.", "neetRelevance": "high" },
+    { "id": "h8", "type": "definition", "section": "10.1.2.1", "text": "The cyclic hemiacetal forms when the -OH at C-5 adds to the -CHO group, giving a six-membered ring called the pyranose form (named by analogy with pyran). C-1, the former aldehyde carbon, becomes the anomeric carbon; α-D-glucose and β-D-glucose differ only in configuration at this C-1 and are called anomers.", "whyItMatters": "Explains the absence of free -CHO reactions and the existence of two distinct crystalline forms in one stroke.", "neetRelevance": "high" },
+    { "id": "h9", "type": "statement", "section": "10.1.2.1", "text": "Mutarotation is the spontaneous interconversion of the α- and β-anomeric forms of glucose through the open-chain form, in equilibrium, accompanied by a gradual change in optical rotation until a constant equilibrium value is reached.", "whyItMatters": "Explains why a freshly prepared solution of pure α- or pure β-glucose shows a changing optical rotation over time before settling — classic conceptual/numerical hook.", "neetRelevance": "high" },
+    { "id": "h10", "type": "statement", "section": "10.1.2.2", "text": "Fructose is an important ketohexose, correctly written as D-(-)-fructose (laevorotatory); its cyclic form is a five-membered furanose ring (named by analogy with furan), formed by addition of the C-5 -OH to the C-2 keto group, and it too exists as α- and β-anomers.", "whyItMatters": "Parallels glucose's cyclic structure but with a five-membered ring instead of six — pyranose vs furanose is a common matching question.", "neetRelevance": "medium" },
+    { "id": "h11", "type": "statement", "section": "10.1.3", "text": "Sucrose forms via a glycosidic linkage between C1 of α-D-glucose and C2 of β-D-fructose. Because BOTH reducing groups (the aldehyde of glucose and the ketone of fructose) are consumed in this bond, sucrose is non-reducing. Hydrolysis gives dextrorotatory glucose (+52.5°) and strongly laevorotatory fructose (-92.4°); since fructose's laevorotation dominates, the mixture is laevorotatory overall — the sign of rotation inverts from + to -, so the product is called invert sugar.", "whyItMatters": "Explains both why sucrose is non-reducing AND the origin of the term 'invert sugar' in one connected story — a very frequently tested pairing of facts.", "neetRelevance": "high" },
+    { "id": "h12", "type": "statement", "section": "10.1.3", "text": "Maltose is composed of two α-D-glucose units joined C1 (unit I) to C4 (unit II); the free -CHO regenerated at C1 of unit II makes it a reducing sugar. Lactose (milk sugar) is β-D-galactose linked to β-D-glucose via C1(galactose)-C4(glucose); it is also reducing, via the free -CHO at C-1 of the glucose unit.", "whyItMatters": "Both maltose and lactose are C1-C4 linked disaccharides but with different monosaccharide components — a classic point of confusion with sucrose's C1-C2 linkage.", "neetRelevance": "high" },
+    { "id": "h13", "type": "statement", "section": "10.1.4", "text": "Starch, the main storage polysaccharide of plants and the most important dietary carbohydrate for humans, is a mixture of amylose (15-20%, water-soluble, an UNBRANCHED chain of 200-1000 α-D-(+)-glucose units joined by C1-C4 linkages) and amylopectin (80-85%, water-insoluble, a BRANCHED polymer of α-D-glucose — the chain formed by C1-C4 linkages, and branching occurring via C1-C6 linkages).", "whyItMatters": "The amylose/amylopectin percentages and their branching pattern (C1-C4 chain, C1-C6 branch) are a very frequently tested detail.", "neetRelevance": "high" },
+    { "id": "h14", "type": "statement", "section": "10.1.5", "text": "Cellulose is the most abundant organic substance in the plant kingdom, a predominant constituent of plant cell walls, and a straight-chain polysaccharide made ONLY of β-D-glucose units joined by C1-C4 β-glycosidic linkages (unlike starch's α-linkages). Glycogen ('animal starch') is stored in liver, muscles and brain, structurally similar to amylopectin but even MORE highly branched; enzymes break glycogen down to glucose when the body needs it.", "whyItMatters": "The α-link (starch, digestible by humans) vs β-link (cellulose, indigestible by humans) distinction is a key structural/biological point frequently tested.", "neetRelevance": "high" },
+    { "id": "h15", "type": "definition", "section": "10.2.1", "text": "Amino acids contain both an amino (-NH2) group and a carboxyl (-COOH) group; only α-amino acids (amino group on the carbon adjacent to -COOH) are obtained on hydrolysis of proteins. They are classified as acidic, basic or neutral according to the relative numbers of amino and carboxyl groups, and as essential (must be obtained through diet, e.g. valine, leucine, lysine, marked with * in NCERT Table 10.2) or non-essential (can be synthesised in the body, e.g. glycine, alanine).", "whyItMatters": "Both classification schemes (acidic/basic/neutral, and essential/non-essential) are commonly tested, and confusing them is a frequent mistake.", "neetRelevance": "high" },
+    { "id": "h16", "type": "statement", "section": "10.2.2", "text": "In aqueous solution the carboxyl group can lose a proton and the amino group can accept one, giving rise to a dipolar zwitterion — neutral overall but carrying both positive and negative charge. This explains the salt-like properties of amino acids (high melting points, water solubility, unlike simple amines or carboxylic acids) and their amphoteric behaviour (react with both acids and bases). Except glycine, all naturally occurring α-amino acids are optically active (chiral α-carbon) and mostly exist in the L-configuration.", "whyItMatters": "The zwitterion concept explains several otherwise-puzzling physical properties of amino acids in one shot, and amphoteric behaviour is frequently tested.", "neetRelevance": "high" },
+    { "id": "h17", "type": "definition", "section": "10.2.3", "text": "A peptide bond (peptide linkage) is the amide -CO-NH- formed between the -COOH of one amino acid and the -NH2 of another, with loss of a water molecule. Two amino acids give a dipeptide; a third addition gives a tripeptide; up to ten give tetra-/penta-/hexapeptides; beyond ten, the product is a polypeptide. A polypeptide of more than 100 amino-acid residues with molecular mass above 10,000 u is called a protein, although the polypeptide/protein distinction is not sharp (insulin, only 51 amino acids, is still called a protein because it has a well-defined conformation).", "whyItMatters": "The naming ladder (dipeptide→tripeptide→...→polypeptide→protein) and the insulin exception are both classic short-answer questions.", "neetRelevance": "high" },
+    { "id": "h18", "type": "statement", "section": "10.2.3", "text": "Proteins are classified by molecular shape into fibrous proteins (polypeptide chains run parallel, held by hydrogen and disulphide bonds, generally insoluble in water, e.g. keratin in hair/wool/silk, myosin in muscles) and globular proteins (chains coil into a spherical shape, usually water-soluble, e.g. insulin, albumins).", "whyItMatters": "This shape-based classification is distinct from (and easily confused with) the four levels of structural organisation covered next.", "neetRelevance": "high" },
+    { "id": "h19", "type": "formula_intro", "section": "10.2.3", "text": "Protein structure and shape are studied at four levels of increasing complexity: primary structure (the specific sequence of amino acids in each polypeptide chain — any change here creates a different protein), secondary structure (α-helix or β-pleated sheet, arising from regular hydrogen bonding between >C=O and -NH- of the peptide backbone), tertiary structure (overall 3-D folding of the secondary structure, giving rise to fibrous or globular shapes, stabilised by hydrogen bonds, disulphide linkages, van der Waals forces and electrostatic forces of attraction), and quaternary structure (the spatial arrangement of two or more polypeptide sub-units with respect to each other, e.g. in haemoglobin).", "whyItMatters": "This four-level hierarchy is one of the most heavily tested topics in the whole chapter — expect direct definition questions on each level plus the stabilising-forces question for tertiary/quaternary structure.", "neetRelevance": "high" },
+    { "id": "h20", "type": "caution", "section": "10.2.4", "text": "A native protein has a unique 3-D structure and biological activity. Denaturation occurs when this native form is subjected to physical change (e.g. heat) or chemical change (e.g. change in pH): hydrogen bonds are disturbed, globules unfold, and helices uncoil, so the protein loses its biological activity. Only the secondary and tertiary structures are destroyed — the PRIMARY STRUCTURE (amino acid sequence) remains intact. Classic examples: coagulation of egg white on boiling, and curdling of milk caused by lactic acid produced by bacteria.", "whyItMatters": "The 'primary structure remains intact' detail is the single most commonly missed fact about denaturation in exam answers.", "neetRelevance": "high" },
+    { "id": "h21", "type": "statement", "section": "10.3", "text": "Enzymes are biocatalysts, and almost all enzymes are globular proteins. They are highly specific for a particular reaction or substrate, and are generally named after the substrate/class of compound they act on (ending in -ase, e.g. maltase catalyses hydrolysis of maltose to glucose) or after the type of reaction catalysed (e.g. oxidoreductase enzymes catalyse simultaneous oxidation of one substrate and reduction of another).", "whyItMatters": "The -ase naming convention and the maltase example are commonly quoted in short-answer questions.", "neetRelevance": "medium" },
+    { "id": "h22", "type": "formula_intro", "section": "10.3.1", "text": "Enzymes act as biocatalysts by lowering the activation energy required for a reaction, similar in principle to ordinary chemical catalysts, but needed only in small quantities. Example: the activation energy for acid hydrolysis of sucrose is 6.22 kJ mol⁻¹, but only 2.15 kJ mol⁻¹ when the same hydrolysis is catalysed by the enzyme sucrase.", "whyItMatters": "The sucrose hydrolysis activation-energy comparison is the specific numerical example given in NCERT and is worth remembering directly.", "neetRelevance": "high" },
+    { "id": "h23", "type": "definition", "section": "10.4", "text": "Vitamins are organic compounds required in small amounts in the diet to perform specific biological functions for normal growth, maintenance and health of the organism. Most cannot be synthesised in the body (though plants can synthesise almost all of them, and gut bacteria supply some). They are designated by letters (A, B, C, D...) with further numbered sub-groups (B1, B2, B6, B12). Excess vitamin intake is also harmful, so vitamin pills should not be taken without medical advice.", "whyItMatters": "Establishes the definition precisely as tested, and the 'excess is also harmful' caution is a common true/false trap.", "neetRelevance": "high" },
+    { "id": "h24", "type": "statement", "section": "10.4.1", "text": "Vitamins are classified by solubility: fat-soluble vitamins (A, D, E, K) are soluble in fat and oils but insoluble in water, and are stored in the liver and adipose (fat-storing) tissue; water-soluble vitamins (the B-group and vitamin C) must be supplied regularly in the diet because they are readily excreted in urine and CANNOT be stored in the body, except vitamin B12.", "whyItMatters": "The 'B12 is the one water-soluble vitamin that CAN be stored' exception is a frequently tested trick detail.", "neetRelevance": "high" },
+    { "id": "h25", "type": "definition", "section": "10.5", "text": "Nucleic acids are polymers of nucleotides (hence also called polynucleotides), found in the chromosomes of the cell nucleus along with proteins, and are responsible for heredity — the transmission of inherited characters from one generation to the next. There are two types: deoxyribonucleic acid (DNA) and ribonucleic acid (RNA).", "whyItMatters": "Frames nucleic acids as the chemical basis of heredity before getting into structural detail.", "neetRelevance": "high" },
+    { "id": "h26", "type": "statement", "section": "10.5.1", "text": "Complete hydrolysis of DNA (or RNA) yields a pentose sugar, phosphoric acid, and nitrogen-containing heterocyclic bases. In DNA the sugar is β-D-2-deoxyribose; in RNA it is β-D-ribose. DNA contains four bases — adenine (A), guanine (G), cytosine (C) and thymine (T); RNA also contains four bases, the first three the same as DNA, but the fourth is uracil (U) instead of thymine. Adenine and guanine are purines; cytosine, thymine and uracil are pyrimidines.", "whyItMatters": "The sugar and base differences are the single most commonly tested DNA-vs-RNA fact in this chapter.", "neetRelevance": "high" },
+    { "id": "h27", "type": "definition", "section": "10.5.2", "text": "A nucleoside is formed when a base attaches to the 1'-position of a sugar. A nucleotide is formed when a nucleoside is further linked to phosphoric acid at the 5'-position of the sugar. Nucleotides join together via a phosphodiester linkage between the 3' and 5' carbon atoms of adjacent pentose sugars, building up the polynucleotide chain; the sequence of nucleotides in this chain is called the primary structure of the nucleic acid.", "whyItMatters": "Nucleoside vs nucleotide (base+sugar vs base+sugar+phosphate) is one of the most commonly confused pairs of terms in this chapter.", "neetRelevance": "high" },
+    { "id": "h28", "type": "formula_intro", "section": "10.5.2", "text": "James Watson and Francis Crick proposed the double helix secondary structure for DNA: two polynucleotide chains wound about each other and held together by hydrogen bonds between specific, complementary pairs of bases — adenine pairs with thymine, and cytosine pairs with guanine. Because the pairing is fixed, the two strands are complementary to each other, not identical, which is what allows DNA to be copied faithfully during replication. RNA's secondary structure is typically a single-stranded helix, which sometimes folds back on itself; RNA occurs as three types — messenger RNA (m-RNA), ribosomal RNA (r-RNA) and transfer RNA (t-RNA) — that perform different functions in protein synthesis.", "whyItMatters": "The complementary (not identical) strand relationship, the specific base-pairing rule, and the three RNA types are all separately and frequently examined.", "neetRelevance": "high" },
+    { "id": "h29", "type": "statement", "section": "10.5.3", "text": "DNA is the chemical basis of heredity and is exclusively responsible for maintaining the identity of different species of organisms over millions of years. A DNA molecule is capable of self-duplication during cell division, with identical DNA strands transferred to the daughter cells. DNA also carries the coded message for protein synthesis, but the actual proteins are synthesised by RNA molecules in the cell, not DNA directly.", "whyItMatters": "The precise division of labour — DNA stores/carries the message, RNA carries it out — is a frequently tested distinction.", "neetRelevance": "high" },
+    { "id": "h30", "type": "statement", "section": "10.6", "text": "Hormones are molecules that act as intercellular messengers: they are produced by endocrine glands and poured directly into the bloodstream, which transports them to their site of action. Chemically, some hormones are steroids (e.g. estrogens, androgens), some are polypeptides (e.g. insulin, endorphins), and some are amino-acid derivatives (e.g. epinephrine, norepinephrine, thyroxine). Insulin lowers and glucagon raises blood glucose level — together they regulate blood glucose within a narrow limit; low dietary iodine can lead to hypothyroidism (enlarged thyroid, lethargy, obesity), while increased thyroxine causes hyperthyroidism.", "whyItMatters": "Gives the essential overview of hormones as a distinct biomolecule class, with the insulin/glucagon and thyroxine examples being the most commonly quoted specifics.", "neetRelevance": "medium" }
+  ],
+  "definitions": [
+    { "id": "d1", "term": "Monosaccharide", "definition": "A carbohydrate that cannot be hydrolysed further into a simpler polyhydroxy aldehyde or ketone; about 20 occur in nature, e.g. glucose, fructose, ribose.", "section": "10.1.1" },
+    { "id": "d2", "term": "Oligosaccharide", "definition": "A carbohydrate that yields two to ten monosaccharide units on hydrolysis; further classified as disaccharides, trisaccharides, tetrasaccharides, etc. by the number of units produced. Disaccharides are the most common.", "section": "10.1.1" },
+    { "id": "d3", "term": "Polysaccharide", "definition": "A carbohydrate that yields a large number of monosaccharide units on hydrolysis, e.g. starch, cellulose, glycogen; not sweet in taste, hence also called non-sugars.", "section": "10.1.1" },
+    { "id": "d4", "term": "Reducing sugar", "definition": "A carbohydrate that reduces Fehling's solution and Tollens' reagent (i.e. has a free aldehyde or ketone group available). All monosaccharides are reducing sugars; among disaccharides, maltose and lactose are reducing but sucrose is not.", "section": "10.1.1" },
+    { "id": "d5", "term": "Glycosidic linkage", "definition": "An oxide (C-O-C) linkage formed between two monosaccharide units, through an oxygen atom, with loss of a water molecule; joins the monosaccharides in disaccharides and polysaccharides.", "section": "10.1.3" },
+    { "id": "d6", "term": "Anomers", "definition": "A pair of cyclic stereoisomers of a sugar that differ only in the configuration at the anomeric carbon (C-1 for an aldose), i.e. the carbon that was the carbonyl carbon before ring closure; e.g. α-D-glucose and β-D-glucose.", "section": "10.1.2.1" },
+    { "id": "d7", "term": "Mutarotation", "definition": "The spontaneous interconversion of the α- and β-anomeric forms of a sugar (via the open-chain form) accompanied by a change in optical rotation until a constant equilibrium value is reached.", "section": "10.1.2.1" },
+    { "id": "d8", "term": "Invert sugar", "definition": "The equimolar mixture of glucose and fructose obtained on hydrolysis of sucrose; called 'invert' because the sign of optical rotation inverts from dextrorotatory (sucrose, +) to laevorotatory (mixture, -), since fructose's laevorotation exceeds glucose's dextrorotation.", "section": "10.1.3" },
+    { "id": "d9", "term": "Zwitterion", "definition": "The dipolar ionic form of an amino acid in aqueous solution, formed when the carboxyl group loses a proton and the amino group gains one; overall neutral but carries both a positive and a negative charge, giving amino acids their amphoteric behaviour.", "section": "10.2.2" },
+    { "id": "d10", "term": "Essential amino acid", "definition": "An amino acid that cannot be synthesised in the body and must be obtained through the diet, e.g. valine, leucine, isoleucine, lysine (marked with * in NCERT Table 10.2); contrasted with non-essential amino acids, which the body can synthesise itself.", "section": "10.2.2" },
+    { "id": "d11", "term": "Peptide bond (peptide linkage)", "definition": "The amide linkage -CO-NH- formed between the -COOH group of one amino acid and the -NH2 group of another, with elimination of a water molecule.", "section": "10.2.3" },
+    { "id": "d12", "term": "Denaturation of proteins", "definition": "The loss of a protein's biological activity when its native 3-D structure is disrupted by a physical change (e.g. heat) or chemical change (e.g. pH); the secondary and tertiary structures are destroyed but the primary structure (amino acid sequence) remains unchanged.", "section": "10.2.4" },
+    { "id": "d13", "term": "Enzyme", "definition": "A biocatalyst, almost always a globular protein, that speeds up a specific biochemical reaction by lowering its activation energy; usually named after its substrate (ending in -ase) or after the type of reaction it catalyses.", "section": "10.3" },
+    { "id": "d14", "term": "Vitamin", "definition": "An organic compound required in small amounts in the diet to perform specific biological functions for normal growth, maintenance and health; classified as fat-soluble (A, D, E, K) or water-soluble (B-complex and C).", "section": "10.4" },
+    { "id": "d15", "term": "Nucleoside", "definition": "A unit formed by the attachment of a nitrogenous base to the 1'-position of a pentose sugar (no phosphate group present).", "section": "10.5.2" },
+    { "id": "d16", "term": "Nucleotide", "definition": "A unit formed when a nucleoside is linked to phosphoric acid at the 5'-position of its sugar; nucleotides are the monomer units of nucleic acids, joined by phosphodiester linkages.", "section": "10.5.2" },
+    { "id": "d17", "term": "Hormone", "definition": "A molecule that acts as an intercellular messenger, produced by an endocrine gland and released directly into the bloodstream to act at a distant site; chemically may be a steroid, a polypeptide, or an amino-acid derivative.", "section": "10.6" }
+  ],
+  "figures": [
+    { "id": "fig-10-1", "kind": "figure", "label": "Cyclic (Haworth) structure of glucose", "ncertPage": 286, "section": "10.1.2.1", "caption": "The six-membered pyranose (Haworth) structures of α-D-(+)-glucopyranose and β-D-(+)-glucopyranose, showing the anomeric carbon C-1 and the ring oxygen linking C-1 to C-5 — the cyclic hemiacetal form that explains glucose's failure to give Schiff's test and its existence as two distinct crystalline anomers.", "placeholderText": "NCERT Chemistry XII · Ch 10 · Page 286 · Cyclic structure of glucose", "src": null, "uploadHint": "Crop from lech205.pdf page 6 (α/β-D-(+)-Glucopyranose Haworth structures)" },
+    { "id": "fig-10-2", "kind": "figure", "label": "Fig. 10.1", "ncertPage": 293, "section": "10.2.3", "caption": "α-Helix structure of proteins — a polypeptide chain twisted into a right-handed screw (helix), with the -NH group of each amino acid residue hydrogen bonded to the >C=O group of an adjacent turn of the helix, one of the two common secondary-structure motifs.", "placeholderText": "NCERT Chemistry XII · Ch 10 · Page 293 · Fig. 10.1", "src": null, "uploadHint": "Crop from lech205.pdf page 13 (Fig. 10.1: α-Helix structure of proteins)" },
+    { "id": "fig-10-3", "kind": "figure", "label": "Fig. 10.3", "ncertPage": 294, "section": "10.2.3", "caption": "Diagrammatic representation of the four levels of protein structure — primary (linear sequence), secondary (coiled/pleated), tertiary (folded globule) and quaternary (two sub-units of two types assembled together) — with each coloured ball representing one amino acid.", "placeholderText": "NCERT Chemistry XII · Ch 10 · Page 294 · Fig. 10.3", "src": null, "uploadHint": "Crop from lech205.pdf page 14 (Fig. 10.3: primary/secondary/tertiary/quaternary structure diagram)" },
+    { "id": "fig-10-4", "kind": "figure", "label": "Fig. 10.7", "ncertPage": 299, "section": "10.5.2", "caption": "The Watson-Crick double strand helix structure of DNA — two polynucleotide chains wound about a common axis and held together by hydrogen bonds between complementary base pairs (A with T, C with G), running from the 5' end to the 3' end of each strand.", "placeholderText": "NCERT Chemistry XII · Ch 10 · Page 299 · Fig. 10.7", "src": null, "uploadHint": "Crop from lech205.pdf page 19 (Fig. 10.7: Double strand helix structure for DNA)" }
+  ],
+  "formulas": [
+    {
+      "id": "f1",
+      "name": "Reducing sugar test (Tollens' / Fehling's reagent)",
+      "latex": "\\text{Sugar (free -CHO or free }>C=O\\text{)} + \\text{Tollens'/Fehling's reagent} \\rightarrow \\text{silver mirror / red-brown Cu}_2\\text{O precipitate}",
+      "plain": "A sugar with a free aldehyde or ketone group reduces Tollens' reagent (silver mirror) and Fehling's solution (red-brown Cu2O precipitate) and is called a reducing sugar",
+      "symbols": [
+        { "symbol": "Tollens' reagent", "meaning": "ammoniacal silver nitrate solution, reduced to metallic Ag (silver mirror)" },
+        { "symbol": "Fehling's solution", "meaning": "alkaline Cu²⁺ complex solution, reduced to red-brown Cu2O precipitate" }
+      ],
+      "whenToUse": "To classify any given carbohydrate as reducing or non-reducing — the deciding factor is whether a free reducing group (aldehyde/ketone) is available or is tied up in a glycosidic bond.",
+      "derivedFrom": "NCERT Section 10.1.1",
+      "commonMistakes": [
+        "Assuming only aldoses (not ketoses) are reducing — ALL monosaccharides, aldose or ketose, are reducing sugars.",
+        "Forgetting that in sucrose BOTH reducing groups (glucose's -CHO and fructose's >C=O) are used up in the glycosidic bond, which is why sucrose alone among the common disaccharides is non-reducing."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify reducing vs non-reducing sugar",
+          "howToInterpret": "Check whether a free anomeric (potentially reducing) carbon is present after glycosidic bond formation.",
+          "howItConnectsToFormula": "If the glycosidic bond uses up both monosaccharides' reducing groups (as in sucrose), the disaccharide is non-reducing; otherwise (as in maltose, lactose) it is reducing.",
+          "exampleStem": "Classify glucose, fructose, sucrose, maltose and lactose as reducing or non-reducing sugars, with reasons.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "The simple test is: is there a free aldehyde or ketone group left over after any bonds are formed? Every single monosaccharide has one, so they're all reducing. For disaccharides, only sucrose ties up both reducing groups in its glycosidic bond, making it the odd one out as non-reducing."
+    },
+    {
+      "id": "f2",
+      "name": "Cyclic hemiacetal (pyranose/furanose) ring formation",
+      "latex": "\\text{Open-chain sugar (}-CHO\\text{ or }>C=O\\text{)} \\; \\rightleftharpoons \\; \\text{Cyclic hemiacetal (pyranose, 6-membered; furanose, 5-membered)}",
+      "plain": "an -OH group elsewhere in the chain adds across the carbonyl group to form a cyclic hemiacetal — a six-membered pyranose ring (C-5 OH onto C-1 CHO, as in glucose) or a five-membered furanose ring (C-5 OH onto C-2 keto group, as in fructose)",
+      "symbols": [
+        { "symbol": "Pyranose", "meaning": "six-membered cyclic hemiacetal, one ring oxygen and five ring carbons, named by analogy with pyran" },
+        { "symbol": "Furanose", "meaning": "five-membered cyclic hemiacetal, one ring oxygen and four ring carbons, named by analogy with furan" },
+        { "symbol": "Anomeric carbon", "meaning": "the former carbonyl carbon, which becomes a new stereocentre (C-1 in glucose, C-2 in fructose) on ring closure" }
+      ],
+      "whenToUse": "To explain any behaviour of glucose/fructose that the open-chain (straight-chain) formula cannot account for — absence of Schiff's test, no bisulphite addition, unreactive pentaacetate towards NH2OH, and the existence of two distinct crystalline (α, β) forms.",
+      "derivedFrom": "NCERT Section 10.1.2.1",
+      "commonMistakes": [
+        "Thinking glucose has NO carbonyl group at all — the open-chain -CHO still exists in a small equilibrium proportion; it is simply mostly tied up as the cyclic hemiacetal.",
+        "Mixing up pyranose (six-membered, glucose) with furanose (five-membered, fructose)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain a reaction/property of glucose that the open-chain structure cannot account for",
+          "howToInterpret": "Identify which of the four classic anomalies (Schiff's test, bisulphite addition, pentaacetate + NH2OH, two crystalline forms) the question is pointing to.",
+          "howItConnectsToFormula": "All four are explained by the fact that glucose exists predominantly as the cyclic pyranose hemiacetal, not the open-chain aldehyde.",
+          "exampleStem": "Enumerate the reactions of D-glucose which cannot be explained by its open-chain structure.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Picture the sugar chain curling around and one of its own hydroxyl groups reaching back to attack the carbonyl carbon — that single intramolecular addition explains why the 'missing' aldehyde behaviour and the mysterious two melting points both make sense at once."
+    },
+    {
+      "id": "f3",
+      "name": "Mutarotation",
+      "latex": "\\alpha\\text{-D-glucose} \\; \\underset{\\text{open-chain form}}{\\rightleftharpoons} \\; \\beta\\text{-D-glucose}, \\quad [\\alpha]_D \\text{ drifts to a constant equilibrium value}",
+      "plain": "the two cyclic anomers interconvert through the small equilibrium amount of open-chain form present in solution, and the measured optical rotation drifts from its starting value to a fixed equilibrium value",
+      "symbols": [
+        { "symbol": "[α]_D", "meaning": "specific optical rotation of the solution, measured with a polarimeter" },
+        { "symbol": "α-form / β-form", "meaning": "the two anomers of the cyclic sugar, differing at the anomeric carbon" }
+      ],
+      "whenToUse": "Whenever a question describes a sugar's optical rotation changing over time after dissolving a pure crystalline anomer in water.",
+      "derivedFrom": "NCERT Section 10.1.2.1",
+      "commonMistakes": [
+        "Thinking mutarotation means the sugar is decomposing — it is simply re-equilibrating between its two ring forms via the open-chain intermediate.",
+        "Forgetting that BOTH pure α- and pure β-glucose, dissolved separately, will drift to the SAME final equilibrium rotation."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain why a freshly dissolved sugar's optical rotation changes with time",
+          "howToInterpret": "Recognise the sugar started as a single pure anomer and is equilibrating with its counterpart anomer.",
+          "howItConnectsToFormula": "The open-chain form acts as the bridge allowing interconversion between α- and β- ring forms until equilibrium proportions (and hence a constant rotation) are reached.",
+          "exampleStem": "A freshly prepared solution of pure α-D-glucose shows a specific rotation that changes gradually with time before becoming constant. Explain this observation.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Think of the open-chain form as a revolving door between the two ring shapes — molecules pass back and forth through it until the mixture settles into a fixed α:β ratio, at which point the rotation you measure stops changing."
+    },
+    {
+      "id": "f4",
+      "name": "Glycosidic linkage — formation and hydrolysis",
+      "latex": "\\text{Monosaccharide}_1\\text{-OH} + \\text{HO-Monosaccharide}_2 \\; \\xrightarrow[-H_2O]{} \\; \\text{Monosaccharide}_1\\text{-O-Monosaccharide}_2 \\; \\xrightarrow[H^+/\\text{enzyme}, +H_2O]{\\text{hydrolysis}} \\; \\text{Monosaccharide}_1 + \\text{Monosaccharide}_2",
+      "plain": "two monosaccharide -OH groups condense with loss of water to form a C-O-C glycosidic (oxide) linkage; dilute acid or the specific enzyme hydrolyses this bond back to the free monosaccharides",
+      "symbols": [
+        { "symbol": "Glycosidic linkage", "meaning": "the C-O-C bond joining two monosaccharide units, specified by the carbon numbers involved, e.g. C1→C4 or C1→C2" }
+      ],
+      "whenToUse": "Writing the formation/hydrolysis of any disaccharide or polysaccharide, and specifying exactly which carbons of which anomeric forms are linked (e.g. sucrose: α-D-glucose C1 to β-D-fructose C2; maltose: α-D-glucose C1 to α-D-glucose C4; lactose: β-D-galactose C1 to β-D-glucose C4; starch amylose: α-D-glucose C1 to C4; starch amylopectin branching: C1 to C6; cellulose: β-D-glucose C1 to C4).",
+      "derivedFrom": "NCERT Sections 10.1.3, 10.1.4",
+      "commonMistakes": [
+        "Not specifying the exact carbon numbers and anomeric (α/β) form involved — 'a glycosidic bond' alone is an incomplete answer for full marks.",
+        "Confusing sucrose's unusual C1-C2 (head-to-head) linkage with the more common C1-C4 linkage seen in maltose, lactose, starch and cellulose."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Identify the glycosidic linkage in a named di-/polysaccharide",
+          "howToInterpret": "Identify the two monosaccharide units and which carbon of each is joined.",
+          "howItConnectsToFormula": "Match against the specific linkages: sucrose (α1→2β), maltose (α1→4α), lactose (β1→4β), amylose (α1→4), amylopectin branch (α1→6), cellulose (β1→4).",
+          "exampleStem": "What do you understand by the term glycosidic linkage? Give the glycosidic linkage present in maltose and in sucrose.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Every glycosidic linkage is the same basic chemistry — a condensation losing water between two -OH groups — but the exam-relevant detail is always WHICH carbons and WHICH anomeric forms are joined, since that's what makes sucrose, maltose, lactose, starch and cellulose all structurally distinct from each other."
+    },
+    {
+      "id": "f5",
+      "name": "Zwitterion formation and amphoteric behaviour of amino acids",
+      "latex": "R-CH(NH_2)-COOH \\; \\rightleftharpoons \\; R-CH(NH_3^{+})-COO^{-} \\quad (\\text{zwitterion})",
+      "plain": "the neutral amino acid form is in equilibrium with its zwitterion form, in which the carboxyl group has lost a proton (-COO-) and the amino group has gained one (-NH3+)",
+      "symbols": [
+        { "symbol": "R", "meaning": "the side chain, distinguishing one amino acid from another" },
+        { "symbol": "Zwitterion", "meaning": "the dipolar ion form, overall neutral but bearing both a positive and a negative charge" }
+      ],
+      "whenToUse": "Explaining the physical properties of amino acids (high melting point, water solubility, salt-like behaviour) and their amphoteric behaviour (reacting with both acids and bases). The pH at which an amino acid exists predominantly as the neutral zwitterion, with no net charge, is its isoelectric point.",
+      "derivedFrom": "NCERT Section 10.2.2",
+      "commonMistakes": [
+        "Describing the zwitterion as 'charged overall' — it is net neutral, just internally dipolar.",
+        "Forgetting that this zwitterionic (salt-like) character, not the simple -NH2/-COOH form, is why amino acids behave like ionic solids rather than typical organic amines or acids."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain the amphoteric behaviour / physical properties of amino acids",
+          "howToInterpret": "Connect the observed property (e.g. high melting point, or reaction with both HCl and NaOH) to the underlying zwitterion structure.",
+          "howItConnectsToFormula": "In acid, the -COO- of the zwitterion accepts a proton back; in base, the -NH3+ donates a proton — hence reaction with both acids and bases.",
+          "exampleStem": "How do you explain the amphoteric behaviour of amino acids?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Don't picture an amino acid as a neutral molecule sitting quietly — in solution it's actually a small internal tug-of-war, with the acidic end handing off a proton to the basic end on the same molecule, which is exactly why it can turn around and react with either an acid or a base you add to it."
+    },
+    {
+      "id": "f6",
+      "name": "Peptide bond (peptide linkage) formation",
+      "latex": "H_2N-CHR_1-COOH + H_2N-CHR_2-COOH \\; \\xrightarrow[-H_2O]{} \\; H_2N-CHR_1-CO-NH-CHR_2-COOH \\quad (\\text{dipeptide})",
+      "plain": "the carboxyl group of one amino acid condenses with the amino group of another, losing a water molecule, to form the amide (-CO-NH-) peptide bond",
+      "symbols": [
+        { "symbol": "-CO-NH-", "meaning": "the peptide bond (peptide linkage) itself, an amide functional group" },
+        { "symbol": "R1, R2", "meaning": "side chains of the two amino acids involved" }
+      ],
+      "whenToUse": "Building di-, tri- or polypeptides from individual amino acids, or naming a peptide from its constituent amino acids (e.g. glycine + alanine → glycylalanine, Gly-Ala).",
+      "derivedFrom": "NCERT Section 10.2.3",
+      "commonMistakes": [
+        "Forgetting that peptide naming is directional — the -COOH end of the first-named amino acid joins the -NH2 end of the second, so Gly-Ala and Ala-Gly are different dipeptides.",
+        "Not counting linkages correctly — n amino acids joined in a chain have (n-1) peptide bonds, not n."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Form and name a dipeptide from two given amino acids",
+          "howToInterpret": "Identify which -COOH reacts with which -NH2, and write the resulting -CO-NH- bond explicitly.",
+          "howItConnectsToFormula": "Apply the condensation directly and name the product using the '-yl' + full name convention (e.g. glycylalanine for Gly + Ala).",
+          "exampleStem": "Write the structure and name of the dipeptide formed when the carboxyl group of glycine combines with the amino group of alanine.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Every peptide bond is the same simple move — one amino acid's acid end shakes hands with the next one's amine end, kicking out a water molecule — and repeating that handshake down a chain is literally how every protein in your body is built."
+    },
+    {
+      "id": "f7",
+      "name": "Levels of protein structure",
+      "latex": "\\text{Primary (sequence)} \\rightarrow \\text{Secondary (}\\alpha\\text{-helix / }\\beta\\text{-sheet)} \\rightarrow \\text{Tertiary (3-D folding)} \\rightarrow \\text{Quaternary (sub-unit assembly)}",
+      "plain": "protein structure is described at four increasingly complex levels — the amino acid sequence, the local folding pattern from backbone hydrogen bonding, the overall 3-D fold, and (for multi-chain proteins) the arrangement of sub-units",
+      "symbols": [
+        { "symbol": "α-helix", "meaning": "right-handed helical secondary structure, backbone -NH of each residue H-bonded to >C=O of the residue one turn ahead" },
+        { "symbol": "β-pleated sheet", "meaning": "extended, side-by-side peptide chains held together by intermolecular hydrogen bonds, resembling pleated drapery" }
+      ],
+      "whenToUse": "Whenever a question asks you to define, distinguish, or identify which stabilising forces operate at a given level of protein structure.",
+      "derivedFrom": "NCERT Section 10.2.3",
+      "commonMistakes": [
+        "Saying 'hydrogen bonds' stabilise ALL four levels equally — hydrogen bonds are central to secondary structure, but tertiary/quaternary structure is stabilised by H-bonds PLUS disulphide linkages, van der Waals forces and electrostatic forces together.",
+        "Confusing the shape-based classification (fibrous vs globular, arising mainly from tertiary structure) with the four-level structural hierarchy itself — they are related but distinct ideas."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Define/identify a given level of protein structure",
+          "howToInterpret": "Determine whether the question is about the amino acid sequence (primary), local backbone folding (secondary), overall 3-D shape (tertiary), or multi-chain assembly (quaternary).",
+          "howItConnectsToFormula": "Match the description to the correct level and cite its defining feature and stabilising interaction(s).",
+          "exampleStem": "What are the common types of secondary structure of proteins? What type of bonding helps in stabilising the α-helix structure of proteins?",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Think of it as zooming out one step at a time — first just the order of beads on a string (primary), then how a short stretch of that string coils or pleats locally (secondary), then how the whole string balls up into a working 3-D shape (tertiary), and finally, only for some proteins, how multiple separate balled-up strings come together as a team (quaternary)."
+    },
+    {
+      "id": "f8",
+      "name": "Base-pairing rule and strand complementarity in DNA",
+      "latex": "\\text{Adenine} \\underset{\\text{2 H-bonds}}{=} \\text{Thymine}, \\qquad \\text{Guanine} \\underset{\\text{3 H-bonds}}{\\equiv} \\text{Cytosine}",
+      "plain": "in the DNA double helix, adenine on one strand always hydrogen-bonds specifically with thymine on the other strand, and guanine always hydrogen-bonds specifically with cytosine — so the two strands carry complementary, not identical, base sequences",
+      "symbols": [
+        { "symbol": "A=T", "meaning": "adenine-thymine base pair, joined by two hydrogen bonds" },
+        { "symbol": "G≡C", "meaning": "guanine-cytosine base pair, joined by three hydrogen bonds" }
+      ],
+      "whenToUse": "Predicting the base sequence of the complementary strand given one DNA strand's sequence, or explaining how DNA replication produces two identical daughter DNA molecules from one parent molecule.",
+      "derivedFrom": "NCERT Section 10.5.2",
+      "commonMistakes": [
+        "Saying the two DNA strands are 'identical' — they are complementary (A opposite T, G opposite C on the partner strand), not identical in sequence.",
+        "Applying the A-T pairing rule to RNA, which has uracil instead of thymine (A pairs with U where relevant, e.g. during transcription/translation, not within RNA's own single strand)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Explain why DNA's two strands are complementary rather than identical",
+          "howToInterpret": "Focus on the fixed pairing rule (A with T, G with C) that governs which base sits opposite which on the two strands.",
+          "howItConnectsToFormula": "Because each base pairs with only one specific partner, knowing one strand's sequence automatically fixes the other strand's sequence — but that fixed partner sequence is different from (complementary to), not the same as, the original.",
+          "exampleStem": "The two strands in DNA are not identical but are complementary. Explain.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Think of the two DNA strands as a photograph and its negative rather than two identical prints — wherever one strand shows an A, the other strand is locked into showing a T at that exact position, and wherever one shows a G, the other must show a C, so the strands mirror each other perfectly without ever being the same sequence."
+    },
+    {
+      "id": "f9",
+      "name": "Nucleotide (phosphodiester) backbone formation",
+      "latex": "\\text{Sugar}_1(3'\\text{-OH}) + \\text{Phosphate-O-Sugar}_2(5') \\; \\xrightarrow[-H_2O]{} \\; \\text{Sugar}_1(3')-O-P(=O)(O^-)-O-(5')\\text{Sugar}_2 \\quad (\\text{phosphodiester linkage})",
+      "plain": "a nucleotide's phosphate group (attached at the sugar's 5' position) condenses with the 3'-OH of the next sugar, losing water, to form the phosphodiester bond that links nucleotides into a polynucleotide chain",
+      "symbols": [
+        { "symbol": "5' end", "meaning": "the end of a polynucleotide chain terminating in a free (or phosphorylated) 5'-carbon of the sugar" },
+        { "symbol": "3' end", "meaning": "the end of a polynucleotide chain terminating in a free 3'-OH of the sugar" }
+      ],
+      "whenToUse": "Describing how individual nucleotides are joined into the sugar-phosphate backbone of DNA or RNA, and identifying the 5' and 3' ends of a polynucleotide strand.",
+      "derivedFrom": "NCERT Section 10.5.2, Fig. 10.5-10.6",
+      "commonMistakes": [
+        "Confusing a nucleoside (base + sugar only) with a nucleotide (base + sugar + phosphate) when describing the repeating unit of the backbone.",
+        "Forgetting that the phosphodiester linkage specifically joins the 3'-carbon of one sugar to the 5'-carbon of the next, giving the chain directionality (a 5' end and a distinct 3' end)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Describe how nucleotides are joined into a nucleic acid chain",
+          "howItConnectsToFormula": "Each new nucleotide's 5'-phosphate condenses with the growing chain's free 3'-OH, extending the backbone one unit at a time.",
+          "howToInterpret": "Identify the sugar, base and phosphate components, and track which carbon positions (3' and 5') form the new bond.",
+          "exampleStem": "What is the difference between a nucleoside and a nucleotide? Describe how nucleotides are linked together in a nucleic acid chain.",
+          "difficulty": "intermediate"
+        }
+      ],
+      "audioScript": "Picture the sugar-phosphate backbone as a chain of paperclips linked end to end — each link is one phosphodiester bond, always connecting the 3' position of one sugar to the 5' position of the next, which is exactly why every polynucleotide strand has a distinct 5' end and 3' end and a built-in direction."
+    },
+    {
+      "id": "f10",
+      "name": "Classification of vitamins by solubility",
+      "latex": "\\text{Fat-soluble: A, D, E, K (stored in liver/adipose tissue)} \\; \\big| \\; \\text{Water-soluble: B-complex, C (excreted in urine, not stored except B}_{12}\\text{)}",
+      "plain": "vitamins split into two solubility classes with opposite storage behaviour — fat-soluble vitamins accumulate in fatty tissue, while water-soluble vitamins are not stored (except B12) and must be replenished through diet regularly",
+      "symbols": [
+        { "symbol": "Fat-soluble (A, D, E, K)", "meaning": "soluble in fats/oils, insoluble in water; stored in liver and adipose tissue" },
+        { "symbol": "Water-soluble (B-complex, C)", "meaning": "soluble in water; excreted readily in urine, so not stored in the body, with the sole exception of vitamin B12" }
+      ],
+      "whenToUse": "Deciding whether a given vitamin needs to be consumed daily (water-soluble) or can build up to toxic levels if over-consumed (fat-soluble, since it accumulates in tissue), and pairing each vitamin with its correct deficiency disease from Table 10.3.",
+      "derivedFrom": "NCERT Section 10.4.1, Table 10.3",
+      "commonMistakes": [
+        "Forgetting vitamin B12 is the single exception among water-soluble vitamins that CAN be stored in the body.",
+        "Mixing up deficiency diseases across the vitamin B sub-group (thiamine→beri beri, riboflavin→cheilosis, pyridoxine→convulsions, B12→pernicious anaemia are all easy to swap under exam pressure)."
+      ],
+      "questionPatterns": [
+        {
+          "patternName": "Classify a named vitamin and state its deficiency disease",
+          "howToInterpret": "First decide fat-soluble or water-soluble by checking if it's A/D/E/K or B-group/C, then recall its specific deficiency disease from the table.",
+          "howItConnectsToFormula": "Match against Table 10.3 exactly — sources and deficiency diseases are both commonly asked together.",
+          "exampleStem": "How are vitamins classified? Name the vitamin responsible for the coagulation of blood, and state what its deficiency causes.",
+          "difficulty": "basic"
+        }
+      ],
+      "audioScript": "Two rules cover almost every vitamin question: A-D-E-K are fat-soluble and can be stockpiled in fat tissue, so overdosing is a real risk with them, while B-group and C are water-soluble, flushed out daily, and need to be replenished at every meal — except B12, which quietly breaks that second rule and can be stored."
+    }
+  ],
+  "views": {
+    "formulaViewOrder": ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10"],
+    "definitionViewOrder": ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10", "d11", "d12", "d13", "d14", "d15", "d16", "d17"],
+    "cheatSheetFocus": ["mustKnowBullets", "keyTables", "formulas"]
+  },
+  "flashcards": [
+    {
+      "id": "fc1",
+      "difficulty": "basic",
+      "tags": ["carbohydrates", "classification"],
+      "stages": {
+        "question": "Classify the following into monosaccharides and disaccharides: ribose, maltose, galactose, lactose.",
+        "interpretation": "A carbohydrate is a monosaccharide if it cannot be hydrolysed into a simpler unit; it is a disaccharide if it yields exactly two monosaccharide units on hydrolysis.",
+        "formula": "Monosaccharide = no further hydrolysis possible; Disaccharide = hydrolyses to exactly two monosaccharide units",
+        "solutionSteps": ["Ribose is a single pentose sugar — cannot be hydrolysed further, so it is a monosaccharide.", "Galactose is a single hexose sugar — also a monosaccharide.", "Maltose hydrolyses to two units of glucose — a disaccharide.", "Lactose hydrolyses to one unit of galactose and one unit of glucose — a disaccharide."],
+        "answer": "Monosaccharides: ribose, galactose. Disaccharides: maltose, lactose."
+      },
+      "audioScript": "Ask yourself one question for each: does hydrolysis split it into two pieces, or is it already the smallest unit? Ribose and galactose are already single sugar units; maltose and lactose each break down into two."
+    },
+    {
+      "id": "fc2",
+      "difficulty": "basic",
+      "tags": ["reducing sugar", "sucrose", "conceptual"],
+      "stages": {
+        "question": "Why is sucrose a non-reducing sugar while maltose and lactose are reducing sugars?",
+        "interpretation": "Whether a disaccharide is reducing depends on whether a free aldehyde/ketone (reducing) group remains after the glycosidic bond forms.",
+        "formula": "Non-reducing if BOTH monosaccharides' reducing groups are used in the glycosidic bond; reducing if at least one free reducing group remains.",
+        "solutionSteps": ["In sucrose, the glycosidic bond forms between C1 of α-D-glucose (its aldehyde carbon) and C2 of β-D-fructose (its keto carbon) — BOTH reducing groups are consumed, leaving none free.", "In maltose, the bond is C1(glucose I)-C4(glucose II) — the -CHO at C1 of the second glucose unit remains free.", "In lactose, the bond is C1(galactose)-C4(glucose) — the -CHO at C1 of the glucose unit remains free."],
+        "answer": "Sucrose's glycosidic bond ties up both glucose's aldehyde and fructose's ketone group, leaving no free reducing group, so it is non-reducing. Maltose and lactose each still have one free anomeric -CHO after bond formation, so they are reducing."
+      },
+      "audioScript": "It all comes down to bookkeeping the reducing ends — sucrose spends both of its sugars' reactive ends on the single bond holding it together, while maltose and lactose only spend one, leaving the other free to react and reduce Fehling's or Tollens' reagent."
+    },
+    {
+      "id": "fc3",
+      "difficulty": "basic",
+      "tags": ["mutarotation", "glucose", "conceptual"],
+      "stages": {
+        "question": "What is mutarotation, and why does the optical rotation of a freshly dissolved sample of pure α-D-glucose change with time?",
+        "interpretation": "Tests understanding of anomeric interconversion through the open-chain form.",
+        "formula": "α-anomer ⇌ open-chain form ⇌ β-anomer, with rotation drifting to a fixed equilibrium value",
+        "solutionSteps": ["Pure α-D-glucose dissolved in water is initially all in the α-form, with its own characteristic rotation.", "In solution, a small amount opens up to the open-chain form, which can then re-close as either the α- or β-anomer.", "Over time this interconversion continues until a fixed equilibrium mixture of α- and β-forms (and a tiny amount of open-chain form) is reached, at which point the rotation stops changing."],
+        "answer": "Mutarotation is the spontaneous interconversion of the α- and β-anomeric forms of a sugar through the open-chain form, with the optical rotation drifting from its initial value to a constant equilibrium value; it happens because the ring can open and re-close as either anomer until equilibrium proportions are reached."
+      },
+      "audioScript": "The pure α-form isn't stable in solution on its own — it keeps sneaking through the open-chain 'doorway' and coming back as either anomer, and this shuffling continues until the α:β ratio settles down, which is exactly when the rotation you'd measure stops drifting."
+    },
+    {
+      "id": "fc4",
+      "difficulty": "intermediate",
+      "tags": ["sucrose", "glycosidic linkage", "invert sugar"],
+      "stages": {
+        "question": "Describe the glycosidic linkage in sucrose, and explain why the hydrolysis product is called invert sugar.",
+        "interpretation": "Combines the specific structural linkage in sucrose with the optical-rotation reasoning behind the term 'invert sugar'.",
+        "formula": "Sucrose = α-D-glucose(C1)–O–(C2)β-D-fructose; hydrolysis gives glucose (+52.5°) + fructose (−92.4°)",
+        "solutionSteps": ["Sucrose is formed by a glycosidic bond between C1 of α-D-glucose and C2 of β-D-fructose.", "Sucrose itself is dextrorotatory.", "On hydrolysis it gives dextrorotatory glucose (+52.5°) and laevorotatory fructose (−92.4°).", "Because fructose's laevorotation is larger in magnitude than glucose's dextrorotation, the resulting mixture is net laevorotatory — the sign of rotation has inverted from + to −."],
+        "answer": "The glycosidic linkage is between C1 of α-D-glucose and C2 of β-D-fructose. Hydrolysis inverts the sign of optical rotation from dextrorotatory (sucrose) to laevorotatory (glucose+fructose mixture, since fructose's −92.4° outweighs glucose's +52.5°), which is why the product is called invert sugar."
+      },
+      "audioScript": "Sucrose starts out rotating light to the right, but once hydrolysed, fructose's strong left-rotation overpowers glucose's weaker right-rotation, flipping the overall sign — that literal inversion of the rotation sign is where the name 'invert sugar' comes from."
+    },
+    {
+      "id": "fc5",
+      "difficulty": "basic",
+      "tags": ["amino acids", "zwitterion", "amphoteric"],
+      "stages": {
+        "question": "What is a zwitterion, and how does it explain the amphoteric behaviour of amino acids?",
+        "interpretation": "Tests the link between the zwitterion structure and the dual acid/base reactivity of amino acids.",
+        "formula": "R-CH(NH2)-COOH ⇌ R-CH(NH3+)-COO− (zwitterion)",
+        "solutionSteps": ["In aqueous solution, the -COOH group of an amino acid loses a proton and the -NH2 group gains one.", "This produces a dipolar zwitterion, overall neutral but bearing both a positive (-NH3+) and negative (-COO-) charge.", "In the presence of an acid, the -COO- end can accept a proton back; in the presence of a base, the -NH3+ end can donate a proton — so the zwitterion reacts with both acids and bases."],
+        "answer": "A zwitterion is the dipolar ionic form of an amino acid (-NH3+ and -COO- on the same molecule), neutral overall. Because it carries both an acidic (-NH3+) and basic (-COO-) site, it can react with both acids and bases — this is the amphoteric behaviour of amino acids."
+      },
+      "audioScript": "An amino acid in solution isn't really the textbook -NH2/-COOH structure — it's already ionised internally into a plus end and a minus end on the same molecule, and having both ends ready to react is precisely why it can face either an acid or a base and still respond."
+    },
+    {
+      "id": "fc6",
+      "difficulty": "intermediate",
+      "tags": ["peptide bond", "dipeptide", "proteins"],
+      "stages": {
+        "question": "Write the structure of the dipeptide formed when the carboxyl group of glycine combines with the amino group of alanine, and name it.",
+        "interpretation": "Direct application of peptide-bond condensation between two named amino acids, in a specified direction.",
+        "formula": "H2N-CH2-COOH + H2N-CH(CH3)-COOH → H2N-CH2-CO-NH-CH(CH3)-COOH + H2O",
+        "solutionSteps": ["Glycine's -COOH condenses with alanine's -NH2, losing a water molecule.", "This forms the peptide bond -CO-NH- between the two residues.", "The product is named by combining glycine ('glycyl-') as the first residue and alanine as the second: glycylalanine (Gly-Ala)."],
+        "answer": "H2N-CH2-CO-NH-CH(CH3)-COOH, named glycylalanine (Gly-Ala) — a dipeptide."
+      },
+      "audioScript": "Whichever amino acid's carboxyl group is specified as reacting goes first in the name, and whichever contributes its amino group goes second — here it's glycine's acid end meeting alanine's amine end, giving glycylalanine."
+    },
+    {
+      "id": "fc7",
+      "difficulty": "intermediate",
+      "tags": ["protein structure", "levels", "conceptual"],
+      "stages": {
+        "question": "Name the four levels of protein structure and state what stabilises the tertiary structure.",
+        "interpretation": "Recall the four-level hierarchy and the specific set of non-covalent and covalent forces that hold the tertiary (and quaternary) fold together.",
+        "formula": "Primary → Secondary (α-helix/β-sheet) → Tertiary (3-D fold) → Quaternary (sub-unit assembly)",
+        "solutionSteps": ["Primary structure: the specific sequence of amino acids in the polypeptide chain(s).", "Secondary structure: α-helix or β-pleated sheet, from regular H-bonding of the peptide backbone.", "Tertiary structure: overall 3-D folding of the secondary structure, giving fibrous or globular shape.", "Quaternary structure: spatial arrangement of two or more polypeptide sub-units."],
+        "answer": "Primary, secondary, tertiary and quaternary. Tertiary structure is stabilised by hydrogen bonds, disulphide linkages, van der Waals forces and electrostatic forces of attraction."
+      },
+      "audioScript": "Zoom out one level at a time — sequence, then local coiling, then overall 3-D shape, then multi-chain assembly — and remember tertiary structure isn't held together by just one kind of force, it's a team effort of hydrogen bonds, disulphide bridges, van der Waals attractions and electrostatic forces all at once."
+    },
+    {
+      "id": "fc8",
+      "difficulty": "basic",
+      "tags": ["vitamins", "deficiency disease", "table"],
+      "stages": {
+        "question": "Name the deficiency disease caused by a lack of each of the following: (a) vitamin A, (b) vitamin B1, (c) vitamin C, (d) vitamin D.",
+        "interpretation": "Direct recall from the vitamin deficiency-disease table (Table 10.3) — one of the most frequently tested tables in the chapter.",
+        "formula": "Vitamin → deficiency disease, from Table 10.3",
+        "solutionSteps": ["Vitamin A deficiency → xerophthalmia (hardening of cornea) and night blindness.", "Vitamin B1 (thiamine) deficiency → beri beri (loss of appetite, retarded growth).", "Vitamin C (ascorbic acid) deficiency → scurvy (bleeding gums).", "Vitamin D deficiency → rickets in children, osteomalacia in adults."],
+        "answer": "(a) Xerophthalmia and night blindness; (b) beri beri; (c) scurvy; (d) rickets (children) / osteomalacia (adults)."
+      },
+      "audioScript": "Run through the alphabet of vitamins and pin one signature disease to each — A for eyes (night blindness), B1 for beri beri, C for scurvy's bleeding gums, D for weak bones — these four are the most classic pairings to have instantly ready."
+    },
+    {
+      "id": "fc9",
+      "difficulty": "basic",
+      "tags": ["vitamins", "deficiency disease", "table"],
+      "stages": {
+        "question": "Which vitamin's deficiency causes each of the following: (a) pernicious anaemia, (b) cheilosis, (c) convulsions, (d) increased blood clotting time?",
+        "interpretation": "Reverse-lookup on the vitamin deficiency-disease table — going from disease to vitamin instead of vitamin to disease.",
+        "formula": "Deficiency disease → vitamin, from Table 10.3",
+        "solutionSteps": ["Pernicious anaemia (RBC deficient in haemoglobin) is caused by vitamin B12 deficiency.", "Cheilosis (fissuring at corners of mouth/lips) is caused by vitamin B2 (riboflavin) deficiency.", "Convulsions are caused by vitamin B6 (pyridoxine) deficiency.", "Increased blood clotting time is caused by vitamin K deficiency."],
+        "answer": "(a) Vitamin B12; (b) vitamin B2 (riboflavin); (c) vitamin B6 (pyridoxine); (d) vitamin K."
+      },
+      "audioScript": "This is the same table read backwards, which is exactly how examiners like to flip the question — B12 for pernicious anaemia, B2 for cracked lips, B6 for convulsions, and K for blood that won't clot properly."
+    },
+    {
+      "id": "fc10",
+      "difficulty": "intermediate",
+      "tags": ["DNA", "RNA", "comparison"],
+      "stages": {
+        "question": "State the main structural differences between DNA and RNA in terms of sugar, bases and number of strands.",
+        "interpretation": "Direct recall of the DNA vs RNA comparison table — the most frequently tested nucleic-acids fact in this chapter.",
+        "formula": "DNA vs RNA comparison table",
+        "solutionSteps": ["Sugar: DNA has β-D-2-deoxyribose; RNA has β-D-ribose.", "Bases: both have adenine, guanine, cytosine; DNA's fourth base is thymine, RNA's fourth base is uracil.", "Strands: DNA is double-stranded (double helix); RNA is typically single-stranded (may fold back on itself)."],
+        "answer": "DNA: deoxyribose sugar, bases A/G/C/T, double-stranded helix. RNA: ribose sugar, bases A/G/C/U, single-stranded."
+      },
+      "audioScript": "Three quick checkpoints separate them every time — deoxyribose versus ribose for the sugar, thymine versus uracil for the fourth base, and double-stranded versus single-stranded for the overall shape."
+    },
+    {
+      "id": "fc11",
+      "difficulty": "intermediate",
+      "tags": ["DNA", "base pairing", "complementarity"],
+      "stages": {
+        "question": "The two strands in DNA are not identical but are complementary. Explain.",
+        "interpretation": "Tests understanding of the specific base-pairing rule (A-T, G-C) underlying the Watson-Crick double helix.",
+        "formula": "A pairs only with T (2 H-bonds); G pairs only with C (3 H-bonds)",
+        "solutionSteps": ["The two DNA strands are held together by hydrogen bonds between specific base pairs.", "Adenine on one strand always pairs with thymine on the other; guanine always pairs with cytosine.", "Because each base has one fixed partner, the sequence on the second strand is completely determined by (and different from) the sequence on the first strand — the two are complementary mirror sequences, not copies of each other."],
+        "answer": "Because base pairing is specific (A with T, G with C via hydrogen bonds), the sequence of one strand fixes but does not duplicate the sequence of the other — the two strands run in a fixed complementary relationship rather than being identical, which is what allows accurate replication of the DNA molecule."
+      },
+      "audioScript": "Complementary means 'matching partner', not 'identical twin' — wherever strand one has an A, strand two is locked into a T at that spot, and wherever strand one has a G, strand two must have a C, so the two strands fit together perfectly without ever reading the same sequence."
+    },
+    {
+      "id": "fc12",
+      "difficulty": "advanced",
+      "tags": ["denaturation", "proteins", "conceptual"],
+      "stages": {
+        "question": "Egg white becomes a solid, opaque mass on boiling and cannot be reversed to its original liquid form. Explain this observation in terms of protein structure, and state which structural levels are affected and which remain intact.",
+        "interpretation": "Tests understanding of denaturation — what physically happens to a protein's structure and which levels survive.",
+        "formula": "Denaturation: native protein --(heat/pH change)--> loss of secondary+tertiary structure, biological activity lost; primary structure intact",
+        "solutionSteps": ["Egg white protein (albumin) has a unique native 3-D structure that gives it its original soluble, liquid form and biological activity.", "Boiling (a physical/heat change) disturbs the hydrogen bonds holding the secondary (α-helix/β-sheet) and tertiary (overall fold) structures together.", "The globules unfold and helices uncoil, so the protein loses its native shape and biological activity — this is denaturation, seen as coagulation into a solid opaque mass.", "The primary structure — the actual sequence of amino acids — is NOT broken; only the higher-level folding is destroyed, which is why it cannot simply refold back to the original liquid form on cooling."],
+        "answer": "Boiling denatures the egg-white protein: hydrogen bonds are disrupted, so its secondary and tertiary structures unfold and it loses its native shape and biological activity (seen as coagulation). Its primary structure (amino acid sequence) remains intact, but because the higher-level folding is destroyed, the change is not reversed simply by cooling."
+      },
+      "audioScript": "Boiling doesn't break the protein's amino acid chain apart — it only shakes loose the delicate hydrogen bonds holding its folded shape together, so the chain itself survives perfectly intact while the elaborate 3-D structure it depended on for biological activity collapses, permanently, into a tangled solid mass."
+    }
+  ],
+  "problemLadder": {
+    "conceptWarmup": [
+      "What is the difference between an aldose and a ketose? Classify glucose and fructose accordingly.",
+      "Why is sucrose classified as a non-reducing sugar while maltose and lactose are classified as reducing sugars?",
+      "What is the difference between essential and non-essential amino acids? Give one example of each."
+    ],
+    "basic": [
+      {
+        "id": "pb1",
+        "question": "Classify the following into monosaccharides and disaccharides: ribose, 2-deoxyribose, maltose, galactose, fructose and lactose.",
+        "interpretation": "A monosaccharide cannot be hydrolysed further; a disaccharide hydrolyses into exactly two monosaccharide units.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "Ribose, 2-deoxyribose, galactose and fructose are each a single sugar unit — monosaccharides.",
+          "Maltose hydrolyses into two units of glucose — a disaccharide.",
+          "Lactose hydrolyses into one unit of galactose and one unit of glucose — a disaccharide."
+        ],
+        "answer": "Monosaccharides: ribose, 2-deoxyribose, galactose, fructose. Disaccharides: maltose, lactose.",
+        "audioScript": "Check each sugar against a single test — does it split into two pieces on hydrolysis, or is it already a single unit? Four of these are already single units; only maltose and lactose split into pairs."
+      },
+      {
+        "id": "pb2",
+        "question": "Which vitamin deficiency causes each of the following: (a) night blindness, (b) beri beri, (c) scurvy, (d) rickets?",
+        "interpretation": "Direct recall from the vitamin-deficiency table.",
+        "formulaIds": ["f10"],
+        "steps": [
+          "Night blindness (and xerophthalmia) is caused by vitamin A deficiency.",
+          "Beri beri (loss of appetite, retarded growth) is caused by vitamin B1 (thiamine) deficiency.",
+          "Scurvy (bleeding gums) is caused by vitamin C deficiency.",
+          "Rickets (bone deformities in children) is caused by vitamin D deficiency."
+        ],
+        "answer": "(a) Vitamin A; (b) vitamin B1 (thiamine); (c) vitamin C; (d) vitamin D.",
+        "audioScript": "These four are the most classic vitamin-disease pairs in the whole table — A for vision, B1 for beri beri, C for scurvy, D for bone health — worth knowing instantly without hesitation."
+      },
+      {
+        "id": "pb3",
+        "question": "What are the hydrolysis products of (i) sucrose and (ii) lactose?",
+        "interpretation": "Break each disaccharide down into its two constituent monosaccharides based on its known composition.",
+        "formulaIds": ["f4"],
+        "steps": [
+          "Sucrose is composed of α-D-glucose and β-D-fructose joined by a glycosidic bond.",
+          "Lactose is composed of β-D-galactose and β-D-glucose joined by a glycosidic bond."
+        ],
+        "answer": "(i) Sucrose → D-glucose + D-fructose (equimolar mixture, called invert sugar). (ii) Lactose → D-galactose + D-glucose.",
+        "audioScript": "Just recall each disaccharide's two named building blocks — sucrose is glucose plus fructose, lactose is galactose plus glucose — hydrolysis simply liberates them as free monosaccharides."
+      }
+    ],
+    "intermediate": [
+      {
+        "id": "pi1",
+        "question": "Explain why glucose does not give Schiff's test and does not form a bisulphite addition product with NaHSO3, even though its open-chain formula shows a free -CHO group.",
+        "interpretation": "Tests understanding of why the cyclic hemiacetal (pyranose) structure, not the open-chain form, is the predominant form of glucose in solution.",
+        "formulaIds": ["f2"],
+        "steps": [
+          "In solution, the C-5 -OH of glucose adds intramolecularly across the C-1 aldehyde, forming a six-membered cyclic hemiacetal (pyranose ring).",
+          "This ring closure converts the free -CHO into a cyclic hemiacetal carbon (the anomeric carbon, C-1), which behaves differently from a normal aldehyde.",
+          "Because the open-chain -CHO form is present only in a very small equilibrium amount, glucose does not give the characteristic aldehyde tests (Schiff's test, bisulphite addition) that require a persistently free carbonyl group."
+        ],
+        "answer": "Glucose exists predominantly as a cyclic hemiacetal (pyranose form), not the open-chain aldehyde, because the C-5 -OH has added across the C-1 -CHO. With only a tiny equilibrium amount of free -CHO present, glucose fails to give Schiff's test or the NaHSO3 addition reaction that a normal, persistently free aldehyde would give.",
+        "audioScript": "The key is that glucose isn't 'hiding' its aldehyde group by breaking it — it's simply tucking it away by reacting it with its own C-5 hydroxyl to close a ring, so at any given moment almost none of the molecules actually have a free, reactive -CHO available for these classic aldehyde tests."
+      },
+      {
+        "id": "pi2",
+        "question": "Explain the four levels of protein structure (primary, secondary, tertiary, quaternary) with one distinguishing feature for each.",
+        "interpretation": "Requires stating the defining feature of each of the four hierarchical levels of protein organisation.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "Primary structure: the specific linear sequence of amino acids in the polypeptide chain(s); any change here gives a different protein.",
+          "Secondary structure: the local folding pattern of the backbone — either the α-helix (right-handed coil, intramolecular H-bonding) or the β-pleated sheet (extended chains side by side, intermolecular H-bonding).",
+          "Tertiary structure: the overall 3-D folding of the secondary structure into a compact fibrous or globular shape, stabilised by H-bonds, disulphide linkages, van der Waals forces and electrostatic forces.",
+          "Quaternary structure: the spatial arrangement of two or more independent polypeptide sub-units relative to each other, seen only in multi-chain proteins (e.g. haemoglobin)."
+        ],
+        "answer": "Primary = amino acid sequence; Secondary = α-helix/β-pleated sheet from backbone H-bonding; Tertiary = overall 3-D fold stabilised by H-bonds, disulphide bonds, van der Waals and electrostatic forces; Quaternary = spatial arrangement of multiple polypeptide sub-units.",
+        "audioScript": "Walk through it as four zoom levels — the raw sequence of beads, how a short stretch of that string coils or pleats, how the whole string folds into a working 3-D shape, and, only for some proteins, how several folded strings team up together."
+      },
+      {
+        "id": "pi3",
+        "question": "State the base-pairing rule in DNA and explain why the two strands of the double helix are described as complementary rather than identical.",
+        "interpretation": "Connects the fixed A-T, G-C pairing rule to the broader concept of strand complementarity.",
+        "formulaIds": ["f8"],
+        "steps": [
+          "In the DNA double helix, adenine on one strand always pairs (via 2 hydrogen bonds) with thymine on the other strand.",
+          "Guanine on one strand always pairs (via 3 hydrogen bonds) with cytosine on the other strand.",
+          "Because each base has exactly one fixed pairing partner, the base sequence on one strand completely determines the sequence on the other strand — but that determined sequence is the 'partner' sequence, not a copy, so the two strands are complementary, not identical."
+        ],
+        "answer": "A pairs with T (2 H-bonds) and G pairs with C (3 H-bonds). Since each base has only one fixed partner, knowing one strand's sequence fixes the other strand's sequence completely, but as a mirror-partner sequence rather than an identical copy — hence the strands are complementary, not identical.",
+        "audioScript": "Every base has exactly one designated dance partner across the helix, so once you know one strand's sequence, the other strand's sequence is fully determined — but 'determined' here means 'the fixed complementary partner', never 'an exact copy'."
+      }
+    ],
+    "advanced": [
+      {
+        "id": "pa1",
+        "question": "A nucleotide isolated from DNA, on complete hydrolysis, gives deoxyribose, phosphoric acid and thymine. (a) What would be the corresponding nucleoside (name its components)? (b) If the same base-containing unit were isolated from RNA instead, what two differences would you expect in its hydrolysis products?",
+        "interpretation": "Tests the nucleoside/nucleotide distinction together with the DNA-vs-RNA sugar and base differences.",
+        "formulaIds": ["f9"],
+        "steps": [
+          "(a) A nucleoside is the base attached to the sugar only (no phosphate); here it would be thymine attached to deoxyribose — this specific nucleoside is called thymidine (deoxythymidine).",
+          "(b) In RNA, the sugar would be β-D-ribose instead of β-D-2-deoxyribose.",
+          "(b, continued) Also, RNA does not contain thymine — its corresponding base at that position would be uracil, so the nucleotide would yield ribose, phosphoric acid and uracil instead."
+        ],
+        "answer": "(a) The nucleoside is thymine + deoxyribose (thymidine). (b) An equivalent RNA nucleotide would differ in two ways: the sugar would be ribose (not deoxyribose), and thymine would be replaced by uracil.",
+        "audioScript": "Strip away the phosphate first to get the nucleoside — just base plus sugar — then, to translate from DNA to RNA, swap deoxyribose for ribose and swap thymine for uracil; those are the only two building-block differences between the two nucleic acids."
+      },
+      {
+        "id": "pa2",
+        "question": "Write the important structural and functional differences between DNA and RNA.",
+        "interpretation": "Requires a complete comparison across sugar, bases, strand number and biological function — the single most exam-favoured summary question in this chapter.",
+        "formulaIds": ["f8", "f9"],
+        "steps": [
+          "Sugar: DNA has β-D-2-deoxyribose; RNA has β-D-ribose.",
+          "Bases: both have adenine, guanine and cytosine; DNA's fourth base is thymine, RNA's is uracil.",
+          "Strands: DNA is double-stranded (Watson-Crick double helix, complementary base-paired strands); RNA is typically single-stranded, sometimes folding back on itself.",
+          "Function: DNA is the chemical basis of heredity — it stores genetic information and is capable of self-duplication during cell division; RNA carries out protein synthesis, occurring as three functional types (m-RNA, r-RNA, t-RNA)."
+        ],
+        "answer": "DNA: deoxyribose sugar, bases A/G/C/T, double helix (complementary strands), stores/transmits genetic information and self-duplicates. RNA: ribose sugar, bases A/G/C/U, single strand (may fold back on itself), carries out protein synthesis via three types — m-RNA, r-RNA, t-RNA.",
+        "audioScript": "Cover all four angles in your answer every time — the sugar, the fourth base, the number of strands, and the job each molecule does — DNA is the long-term genetic archive that copies itself, while RNA is the working molecule that actually builds proteins."
+      },
+      {
+        "id": "pa3",
+        "question": "A protein loses its biological activity when boiled or when the pH is changed drastically, even though its amino acid sequence remains unchanged. Explain this phenomenon, name the process, and state which structural levels are affected and which remain intact.",
+        "interpretation": "Requires connecting the denaturation phenomenon to the specific structural levels it disrupts versus preserves.",
+        "formulaIds": ["f7"],
+        "steps": [
+          "A native protein has a unique, biologically active 3-D structure held together partly by hydrogen bonds.",
+          "Heat or a drastic pH change disturbs these hydrogen bonds, causing globules to unfold and helices to uncoil.",
+          "This process is called denaturation; it destroys the secondary structure (α-helix/β-sheet) and tertiary structure (overall 3-D fold) of the protein, so it loses its biological activity.",
+          "The primary structure — the actual amino acid sequence — is NOT affected, since denaturation involves only the breaking of non-covalent (and some covalent, e.g. disulphide) folding interactions, not the peptide bonds of the backbone chain itself."
+        ],
+        "answer": "The phenomenon is denaturation. Heat or pH change disrupts the hydrogen bonds (and other stabilising interactions) holding the protein's fold together, destroying its secondary and tertiary structure and hence its biological activity, while the primary structure (amino acid sequence) remains unchanged.",
+        "audioScript": "The protein's 'sentence' of amino acids is never rewritten during denaturation — only the way that sentence was folded up into a working 3-D shape gets shaken apart, which is why the sequence survives perfectly even as the biologically active structure collapses for good."
+      }
+    ],
+    "transferPrompt": "Once you're comfortable classifying carbohydrates, proteins and nucleic acids by their monomer units and linkages, try connecting this chapter's polymer-building logic (monosaccharides joined by glycosidic bonds, amino acids joined by peptide bonds, nucleotides joined by phosphodiester bonds) to the general idea of condensation polymerisation — in each case a small molecule (water) is lost at every linkage, and the reverse hydrolysis reaction breaks the same bond type to regenerate the monomers."
+  },
+  "studentTutorPrompt": "You are my Chemistry tutor for NEET, JEE and KCET for NCERT Class XII Chapter 10 — Biomolecules. Start by asking whether I want to revise definitions and classifications, practice matching-and-recall questions (especially the vitamin deficiency-disease table and the DNA-vs-RNA comparison), or focus on a weak sub-topic (carbohydrate classification and glucose/fructose structure, glycosidic linkages in di- and polysaccharides, amino acids and the four levels of protein structure, enzymes, vitamins, or nucleic acids and hormones). First quiz me on pure definitions with no multi-part recall involved — monosaccharide vs oligosaccharide vs polysaccharide, reducing vs non-reducing sugar, zwitterion, peptide bond, denaturation, nucleoside vs nucleotide. Then move to single-fact recall questions tied to one table or rule (which vitamin deficiency causes a named disease, which glycosidic linkage a named disaccharide has, which level of protein structure a described feature belongs to). Then intermediate questions requiring two connected facts (why glucose's open-chain structure fails to explain its cyclic-form behaviour, why the two strands of DNA are complementary not identical, why sucrose is invert sugar). Then advanced questions requiring you to combine several facts into one explanation (full structural and functional differences between DNA and RNA, the complete denaturation story linking structure levels to biological activity, or tracing a nucleotide's components between DNA and RNA). After every wrong answer, walk me through: (1) what is actually being asked (Interpretation), (2) which definition, rule or table connects to it and why, (3) the reasoning steps, before revealing the final answer. Offer a flashcard mode (test me stage by stage: question → interpretation → formula/rule → steps → answer) and a table-view mode (show the full vitamin deficiency-disease table and the DNA-vs-RNA table together for quick revision). Stay within this chapter's scope (carbohydrates, proteins, enzymes, vitamins, nucleic acids, hormones) unless I explicitly ask to connect to another chapter.",
+  "selfCheck": [
+    { "q": "What is the difference between a monosaccharide and a disaccharide?", "a": "A monosaccharide cannot be hydrolysed further into a simpler polyhydroxy aldehyde or ketone (e.g. glucose, fructose). A disaccharide is an oligosaccharide that yields exactly two monosaccharide units on hydrolysis (e.g. sucrose gives glucose + fructose)." },
+    { "q": "Why is sucrose called invert sugar after hydrolysis?", "a": "Sucrose is dextrorotatory, but hydrolysis gives dextrorotatory glucose (+52.5°) and more strongly laevorotatory fructose (−92.4°); since fructose's laevorotation dominates, the product mixture is net laevorotatory, so the sign of rotation has 'inverted' from + to −, giving the name invert sugar." },
+    { "q": "What are essential and non-essential amino acids? Give one example of each.", "a": "Essential amino acids cannot be synthesised in the body and must be obtained from the diet, e.g. valine, leucine. Non-essential amino acids can be synthesised by the body itself, e.g. glycine, alanine." },
+    { "q": "What happens to a protein's structure during denaturation, and which level survives?", "a": "Heat or a drastic pH change disrupts the hydrogen bonds holding the protein's fold together, destroying its secondary structure (α-helix/β-sheet) and tertiary structure (3-D fold), so it loses biological activity — e.g. egg white coagulating on boiling. The primary structure (the amino acid sequence) remains intact." },
+    { "q": "State two key structural differences between DNA and RNA.", "a": "DNA contains β-D-2-deoxyribose sugar and the base thymine, and exists as a double-stranded helix; RNA contains β-D-ribose sugar and the base uracil (in place of thymine), and is typically single-stranded." }
+  ]
+}
